@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags - CTR Optimized for Yacht Charter -->
+    <title>Yacht Charter Amalfi Coast | Elite Luxury Yacht Charter & Rental</title>
+    <meta name="description" content="Experience the ultimate Yacht Charter Amalfi Coast. Bespoke luxury yacht rentals with full crew, Michelin-tier catering, and professional concierge coordination.">
+    <link rel="canonical" href="https://eliteluxurybookings.com/yacht-charter-amalfi-coast/">
+
+    <!-- Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --deep-black: #050505;
+            --graphene: #1A1A1A;
+            --glass-bg: rgba(255, 255, 255, 0.02);
+            --glass-border: rgba(212, 175, 55, 0.15);
+            --text-main: #FFFFFF;
+            --text-muted: rgba(255, 255, 255, 0.6);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: var(--deep-black); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
+        h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond', serif; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .gold-text { color: var(--primary-gold); }
+        .glass-panel { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 20px; }
+
+        .hero { padding: 120px 0 60px; text-align: center; position: relative; background: radial-gradient(circle at center, rgba(212, 175, 55, 0.05) 0%, var(--deep-black) 70%); }
+        .hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 300; margin-bottom: 1.5rem; line-height: 1.1; }
+        .hero-sub { font-size: 1.2rem; color: var(--text-muted); max-width: 800px; margin: 0 auto 3rem; }
+
+        .form-section { padding: 4rem 0 8rem; }
+        .form-wrapper { max-width: 900px; margin: 0 auto; padding: 4rem; border-radius: 30px; background: rgba(26, 26, 26, 0.6); border: 1px solid var(--glass-border); text-align: left; }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .form-group { display: flex; flex-direction: column; gap: 0.8rem; }
+        .form-group.full { grid-column: 1 / -1; }
+        .form-group label { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold); }
+        .form-control { background: transparent; border: none; border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding: 1rem 0; color: #fff; font-family: 'Inter', sans-serif; font-size: 1.1rem; transition: var(--transition); }
+        .form-control:focus { outline: none; border-bottom-color: var(--primary-gold); background: rgba(255, 255, 255, 0.02); }
+        
+        select.form-control { appearance: none; background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D4AF37' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e"); background-repeat: no-repeat; background-position: right 0 center; background-size: 1em; padding-right: 2rem; }
+        select.form-control option { background-color: var(--deep-black); color: #fff; }
+
+        /* Calendar Icon Visibility Fix */
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+            cursor: pointer;
+            opacity: 0.6;
+            transition: var(--transition);
+        }
+        input[type="date"]::-webkit-calendar-picker-indicator:hover {
+            opacity: 1;
+        }
+
+        .section-padding { padding: 8rem 0; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: flex-start; }
+        .seo-content { font-size: 1.05rem; color: #ddd; line-height: 1.8; }
+        .seo-content p { margin-bottom: 1.5rem; }
+        .seo-content h2 { font-size: 3rem; margin: 3rem 0 1.5rem; color: var(--primary-gold); }
+        .seo-content h3 { font-size: 2.2rem; margin: 2rem 0 1rem; color: #fff; }
+
+        .luxury-list { list-style: none; margin: 2rem 0; }
+        .luxury-list li { position: relative; padding-left: 2.5rem; margin-bottom: 1.5rem; color: #ddd; }
+        .luxury-list li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-gold); font-weight: 900; font-size: 1.2rem; }
+
+        .btn { display: inline-block; padding: 1.2rem 2.5rem; border-radius: 8px; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; text-decoration: none; transition: var(--transition); cursor: pointer; text-align: center; border: none; }
+        .btn-gold { background: linear-gradient(135deg, var(--primary-gold), #B8860B); color: #000; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2); }
+
+        .tag-strip { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap; }
+        .tag-item { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold); font-weight: 600; }
+
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+
+        @media (max-width: 1024px) { .grid-2 { grid-template-columns: 1fr; gap: 3rem; } .form-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) {
+            .section-padding { padding: 4rem 0; }
+            .hero h1 { font-size: clamp(2.2rem, 8vw, 3.5rem); }
+            .form-wrapper { padding: 2.5rem 1.5rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <div class="tag-strip">
+                <span class="tag-item">Global Yacht Network</span>
+                <span class="tag-item">5-Star Crewed Charters</span>
+                <span class="tag-item">Confidential Coordination</span>
+            </div>
+
+            <h1>Yacht Charter Amalfi Coast</h1>
+            <p class="hero-sub">Experience the pinnacle of maritime luxury. Our bespoke <strong>Yacht Charter Amalfi Coast</strong> services offer discrete, Michelin-tier transitions across the world's most exclusive waters.</p>
+
+            <div class="form-wrapper glass-panel">
+                <div id="form-container">
+                    <form id="leadForm" onsubmit="submitLead(event)">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="fullName" class="form-control" placeholder="Hon. John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Private Email *</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="client@exclusive.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="whatsapp">WhatsApp Number *</label>
+                                <input type="tel" id="whatsapp" name="phone" class="form-control" placeholder="+1 234 567 8900" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Service Interested</label>
+                                <select id="service" name="services" class="form-control">
+                                    <option value="Luxury Yacht Charter" selected>Luxury Yacht Charter</option>
+                                    <option value="Private Jet Charter">Private Jet Charter</option>
+                                    <option value="Private Villa Rental">Private Villa Rental</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Estimated Date</label>
+                                <input type="date" id="date" name="travelDate" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Number of Guests</label>
+                                <input type="number" id="guests" name="passengers" class="form-control" min="1" placeholder="e.g. 4">
+                            </div>
+                            <div class="form-group full">
+                                <label for="budget">Estimated Budget Range</label>
+                                <select id="budget" name="budget" class="form-control">
+                                    <option value="">Select Range</option>
+                                    <option value="50k+">$50,000+</option>
+                                    <option value="100k+">$100,000+</option>
+                                    <option value="250k+">$250,000+</option>
+                                    <option value="500k+">$500,000+</option>
+                                </select>
+                            </div>
+                            <div class="form-group full">
+                                <label for="requirements">Additional Requirements</label>
+                                <textarea id="requirements" name="requirements" class="form-control" style="resize:vertical; min-height:80px;" placeholder="Destinations, catering rules, security needs..."></textarea>
+                            </div>
+                            <div class="form-group full" style="margin-top: 1.5rem;">
+                                <button type="submit" id="submitBtn" class="btn btn-gold" style="width: 100%; padding: 1.5rem;">Secure My Private Proposal</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="formMsg" style="display:none; text-align:center; padding: 2rem 0;">
+                    <h3 class="serif gold-text" style="font-size: 2.5rem; margin-bottom: 1rem;">Proposal Requested</h3>
+                    <p style="color: #fff; font-size: 1.1rem; margin-bottom: 2rem;">A senior concierge will contact you shortly via WhatsApp for immediate coordination.</p>
+                    <a href="https://wa.me/918801079030" class="btn btn-gold" target="_blank">Speak Instantly with Concierge</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-padding" style="background: rgba(212, 175, 55, 0.02); border-bottom: 1px solid var(--glass-border);">
+        <div class="container">
+            <div class="grid-2">
+                <div class="seo-content">
+                    <h2 class="serif">Bespoke Excellence: Yacht Charter Amalfi Coast Guide</h2>
+                    <p>Securing a <strong>Yacht Charter Amalfi Coast</strong> is more than a transaction; it is the coordination of a world-class maritime experience. Our fleet selection is curated for those who demand absolute discretion and Michelin-tier standards on the water.</p>
+                    <p>From the Balearics to the Amalfi Coast, every itinerary is tailored to your specific requirements, ensuring your time at sea is as productive or as relaxing as you desire.</p>
+                </div>
+                <div class="glass-panel" style="padding: 3rem;">
+                    <h3 class="serif gold-text" style="margin-top:0; font-size: 2rem;">Charter Standards</h3>
+                    <ul class="luxury-list">
+                        <li><strong>Professional Crew:</strong> Fully vetted, multi-lingual elite staff.</li>
+                        <li><strong>Onboard Culinary:</strong> Private chefs trained in Michelin-starred environments.</li>
+                        <li><strong>Worldwide Access:</strong> From hidden coves to the world's most exclusive marinas.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SILO TARGET -->
+    <div id="yacht-silo-placeholder">
+        <section class="section-padding" style="background: #000; border-top: 1px solid var(--glass-border);">
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 4rem;">
+            <h2 class="serif" style="font-size: 3.5rem; color: var(--primary-gold);">Global Yacht Network</h2>
+            <p style="color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">Elite Maritime Corridors Across 5 Continental Hubs</p>
+        </div>
+
+        <style>
+            .yacht-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+            .yacht-hub { background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); padding: 2.5rem; border-radius: 15px; transition: var(--transition); }
+            .yacht-hub:hover { border-color: var(--primary-gold); transform: translateY(-5px); }
+            .yacht-hub-title { color: var(--primary-gold); font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px; }
+            .yacht-list { list-style: none; padding: 0; }
+            .yacht-list li { margin-bottom: 0.8rem; }
+            .yacht-list a { color: #ddd; text-decoration: none; font-size: 0.95rem; transition: var(--transition); display: block; }
+            .yacht-list a:hover { color: var(--primary-gold); transform: translateX(5px); }
+            @media (max-width: 1024px) { .yacht-grid { grid-template-columns: repeat(2, 1fr); } }
+            @media (max-width: 600px) { .yacht-grid { grid-template-columns: 1fr; } }
+        </style>
+
+        <div class="yacht-grid">
+            <!-- HUB 1: BALEARIC ISLANDS -->
+            <div class="yacht-hub">
+                <h3 class="yacht-hub-title">The Balearics</h3>
+                <ul class="yacht-list">
+                    <li><a href="/yacht-charter-ibiza/">Yacht Charter Ibiza</a></li>
+                    <li><a href="/yacht-rental-mallorca/">Yacht Rental Mallorca</a></li>
+                    <li><a href="/yacht-charter-formentera/">Yacht Charter Formentera</a></li>
+                    <li><a href="/ibiza-to-formentera-yacht-charter/">Ibiza to Formentera</a></li>
+                    <li><a href="/mallorca-to-ibiza-yacht-charter/">Mallorca to Ibiza</a></li>
+                </ul>
+            </div>
+
+            <!-- HUB 2: FRENCH RIVIERA & MONACO -->
+            <div class="yacht-hub">
+                <h3 class="yacht-hub-title">French Riviera</h3>
+                <ul class="yacht-list">
+                    <li><a href="/luxury-yacht-monaco/">Luxury Yacht Monaco</a></li>
+                    <li><a href="/yacht-charter-cannes/">Yacht Charter Cannes</a></li>
+                    <li><a href="/yacht-rental-nice-france/">Yacht Rental Nice</a></li>
+                    <li><a href="/monaco-to-saint-tropez-yacht-charter/">Monaco to St. Tropez</a></li>
+                    <li><a href="/yacht-charter-french-riviera/">Riviera Master Guide</a></li>
+                </ul>
+            </div>
+
+            <!-- HUB 3: ITALIAN COAST -->
+            <div class="yacht-hub">
+                <h3 class="yacht-hub-title">Italian Coast</h3>
+                <ul class="yacht-list">
+                    <li><a href="/yacht-charter-amalfi-coast/">Amalfi Coast Charter</a></li>
+                    <li><a href="/yacht-rental-capri/">Yacht Rental Capri</a></li>
+                    <li><a href="/yacht-charter-positano/">Yacht Charter Positano</a></li>
+                    <li><a href="/yacht-charter-sardinia/">Yacht Charter Sardinia</a></li>
+                    <li><a href="/amalfi-coast-to-capri-yacht-charter/">Amalfi to Capri</a></li>
+                </ul>
+            </div>
+
+            <!-- HUB 4: GREECE & MIDDLE EAST -->
+            <div class="yacht-hub">
+                <h3 class="yacht-hub-title">Aegean & Dubai</h3>
+                <ul class="yacht-list">
+                    <li><a href="/yacht-charter-mykonos/">Yacht Charter Mykonos</a></li>
+                    <li><a href="/yacht-charter-santorini/">Yacht Charter Santorini</a></li>
+                    <li><a href="/mykonos-to-santorini-yacht-charter/">Mykonos to Santorini</a></li>
+                    <li><a href="/yacht-charter-dubai/">Yacht Charter Dubai</a></li>
+                    <li><a href="/dubai-marina-to-palm-jumeirah-yacht/">Dubai Marina to Palm</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem;">
+            <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 600px; margin: 0 auto;">
+                Elite Luxury Bookings coordinates bespoke itineraries across 500+ global coves. If your destination is not listed, our 24/7 maritime desk provides immediate availability.
+            </p>
+        </div>
+    </div>
+</section>
+
+    </div>
+
+    <footer class="section-padding" style="background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center;">
+        <div class="container">
+            <div class="serif" style="font-size: 2.2rem; margin-bottom: 2rem;">Elite Luxury Bookings</div>
+            <p style="color: var(--text-muted); margin-bottom: 3rem;">Global Maritime Intelligence. Michelin-Tier Standards.</p>
+            <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;">
+                <a href="/private-jet-charter/" style="color: var(--text-muted); text-decoration: none;">Aviation Services</a>
+                <a href="/luxury-yacht-rentals/" style="color: var(--text-muted); text-decoration: none;">Yacht Charter</a>
+                <a href="/luxury-villa-rentals/" style="color: var(--text-muted); text-decoration: none;">Villa Rentals</a>
+            </div>
+            <p style="color: #444; font-size: 0.8rem; margin-top: 4rem;">© 2026 Elite Luxury Bookings. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const endpoint = 'https://script.google.com/macros/s/AKfycbxwH6b82MCg90tYS-yTwUMWw1ePx2S3oBdn3BC5U1UAt2uQRCB2bq03bzPP52ygUGU6UA/exec';
+
+        async function submitLead(event) {
+            event.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const form = document.getElementById('leadForm');
+            const msg = document.getElementById('formMsg');
+
+            btn.innerText = 'SECURELY SENDING...';
+            btn.disabled = true;
+
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => data[key] = value);
+            
+            // Add Page Context
+            data['Source_Keyword'] = "Yacht Charter Amalfi Coast";
+
+            try {
+                await fetch(endpoint, {
+                    method: 'POST', mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                form.style.display = 'none';
+                msg.style.display = 'block';
+            } catch (error) {
+                console.error(error);
+                alert('Connection issue. Please connect directly with your concierge via WhatsApp.');
+            } finally {
+                btn.innerText = 'Secure My Private Proposal';
+                btn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>
