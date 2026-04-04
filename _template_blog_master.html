@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags - CTR Optimized for Elite Authority -->
+    <title>{{TITLE}} | Elite Luxury Blog</title>
+    <meta name="description" content="{{EXCERPT}}">
+    <link rel="canonical" href="https://eliteluxurybookings.com/blog/{{SLUG}}/">
+
+    <!-- Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --deep-black: #050505;
+            --graphene: #1A1A1A;
+            --glass-bg: rgba(255, 255, 255, 0.02);
+            --glass-border: rgba(212, 175, 55, 0.15);
+            --text-main: #FFFFFF;
+            --text-muted: rgba(255, 255, 255, 0.6);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: var(--deep-black); color: var(--text-main); line-height: 1.8; overflow-x: hidden; }
+        h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond', serif; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+        .gold-text { color: var(--primary-gold); }
+        
+        .blog-header { padding: 120px 0 60px; text-align: center; }
+        .blog-meta { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 3px; color: var(--primary-gold); margin-bottom: 1.5rem; }
+        .blog-header h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300; line-height: 1.1; margin-bottom: 2rem; }
+        
+        .blog-content { font-size: 1.15rem; color: #ddd; }
+        .blog-content p { margin-bottom: 2rem; }
+        .blog-content h2 { font-size: 2.5rem; margin: 3rem 0 1.5rem; color: var(--primary-gold); }
+        .blog-content h3 { font-size: 2rem; margin: 2rem 0 1rem; color: #fff; }
+        .blog-content img { width: 100%; border-radius: 20px; margin: 3rem 0; border: 1px solid var(--glass-border); }
+        
+        .cta-box { background: var(--graphene); border: 1px solid var(--glass-border); padding: 4rem; border-radius: 30px; margin-top: 6rem; text-align: center; }
+        .btn { display: inline-block; padding: 1.2rem 2.5rem; border-radius: 8px; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; text-decoration: none; transition: var(--transition); cursor: pointer; text-align: center; border: none; }
+        .btn-gold { background: linear-gradient(135deg, var(--primary-gold), #B8860B); color: #000; margin-top: 2rem; }
+
+        .author-card { display: flex; align-items: center; gap: 1.5rem; padding: 3rem 0; border-top: 1px solid var(--glass-border); margin-top: 4rem; }
+        .author-img { width: 60px; height: 60px; border-radius: 50%; background: var(--primary-gold); }
+        .author-info { font-style: italic; color: var(--text-muted); }
+
+        footer { padding: 8rem 0; background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; }
+    </style>
+</head>
+
+<body>
+
+    <article class="container">
+        <header class="blog-header">
+            <div class="blog-meta">Elite Authority Insights • {{DATE}}</div>
+            <h1>{{TITLE}}</h1>
+            <div class="author-card">
+                <div class="author-img"></div>
+                <div class="author-info">Curated by the Elite Luxury Concierge Team</div>
+            </div>
+        </header>
+
+        <section class="blog-content">
+            {{CONTENT}}
+        </section>
+
+        <!-- Dynamic Conversion Logic -->
+        <div class="cta-box">
+            <h2 class="serif gold-text">Planning an Elite Transition?</h2>
+            <p>Our global coordination team is available 24/7 for bespoke travel planning across private aviation, yachting, and villa retreats.</p>
+            <a href="https://wa.me/918801079030" class="btn btn-gold">Connect with a Senior Concierge</a>
+        </div>
+    </article>
+
+    <footer>
+        <div class="container">
+            <div class="serif" style="font-size: 2.2rem; margin-bottom: 2rem;">Elite Luxury Bookings</div>
+            <p style="color: var(--text-muted); margin-bottom: 3rem;">Global Maritime Intelligence. Michelin-Tier Standards.</p>
+            <p style="color: #444; font-size: 0.8rem;">© 2026 Elite Luxury Bookings. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

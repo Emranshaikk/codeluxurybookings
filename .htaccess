@@ -1,5 +1,5 @@
 # Elite Luxury Bookings - Premium URL Engine
-# Removes .html extension for a professional, clean look
+# Removes .html extension and handles trailing slashes for a professional, clean look
 
 RewriteEngine On
 
@@ -7,7 +7,11 @@ RewriteEngine On
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
 RewriteRule ^(.*)\.html$ /$1 [R=301,L]
 
-# 2. Silently serve page.html when /page is requested
+# 2. Redirect /page/ to /page (Remove Trailing Slash for Canonical URL)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [R=301,L]
+
+# 3. Silently serve page.html when /page is requested
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
