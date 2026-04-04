@@ -19,3 +19,10 @@ RewriteRule ^(.*)\.html$ /$1/ [R=301,L]
 # 3. Handle Root Index requests
 # Ensures that index.html is served from directories automatically (Apache Default)
 DirectoryIndex index.html
+
+# 4. PHP Blocking Shield (Prevents Legacy WordPress Database Errors)
+# This forces the server to NEVER look for .php files, ensuring the static site stays live.
+<FilesMatch "\.(php|php5|php4|php3|phtml|phps)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
