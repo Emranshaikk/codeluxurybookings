@@ -3,5 +3,8 @@
 
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/ccgaumtb/public_html/
+    - export DEPLOYPATH=/home/ccgaumtb/public_html
+    - # 1. Clean the root of old .html files (except index) to enable folders
+    - find $DEPLOYPATH -maxdepth 1 -name "*.html" -not -name "index.html" -delete
+    - # 2. Synchronize premium Folder Architecture
     - /bin/cp -R * $DEPLOYPATH
