@@ -1,10 +1,26 @@
-# Elite Luxury Bookings - Automated Deployment
-# This file tells cPanel exactly where to "Push" your code.
+# Elite Luxury Bookings - Master Static Migration & WordPress Decommissioning
+# This file performs a "Scorched Earth" cleanup when you push to GitHub.
+# It automatically deletes WordPress core files to ensure 100% static performance.
 
 deployment:
   tasks:
     - export DEPLOYPATH=/home/ccgaumtb/public_html
-    - # 1. Clean the root of old .html files (except index) to enable folders
+    
+    - # 1. DECOMMISSION WORDREPRESS (Force Delete Core Folders)
+    - rm -rf $DEPLOYPATH/wp-admin
+    - rm -rf $DEPLOYPATH/wp-includes
+    - rm -rf $DEPLOYPATH/wp-content
+    
+    - # 2. DELETE WORDPRESS SYSTEM FILES (Root Files)
+    - rm -f $DEPLOYPATH/index.php
+    - rm -f $DEPLOYPATH/wp-*.php
+    - rm -f $DEPLOYPATH/xmlrpc.php
+    - rm -f $DEPLOYPATH/license.txt
+    - rm -f $DEPLOYPATH/readme.html
+    
+    - # 3. CLEAN UP LEGACY HTML (Loose root files)
     - find $DEPLOYPATH -maxdepth 1 -name "*.html" -not -name "index.html" -delete
-    - # 2. Synchronize premium Folder Architecture
+    
+    - # 4. SYNCHRONIZE MASTER STATIC NETWORK
     - /bin/cp -R * $DEPLOYPATH
+    - Write-Host "Final Static Migration Complete: WordPress Decommissioned."
