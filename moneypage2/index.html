@@ -763,7 +763,7 @@
                 font-size: 0.75rem !important;
             }
         }
-                /* ===== UPGRADED FOOTER CSS ===== */
+                        /* ===== UPGRADED FOOTER CSS ===== */
     footer { background: #000; border-top: 1px solid rgba(255,255,255,0.05); }
     @media (max-width: 900px) {
         footer > div > div:first-child { justify-content: flex-start !important; gap: 2rem !important; }
@@ -777,6 +777,58 @@
 </head>
 
 <body>
+    <!-- GLOBAL NAVIGATION -->
+    <nav class="global-nav" id="globalNav">
+        <div class="container global-nav-inner">
+            <a href="/" class="nav-brand">Elite Luxury <span class="nav-gold">Bookings</span></a>
+            <ul class="nav-links">
+                <li class="nav-dropdown">
+                    <a href="/elite-private-jet-charter/">Private Jets</a>
+                    <div class="dropdown-menu">
+                        <a href="/elite-private-jet-charter/">Jet Charters Overview</a>
+                        <a href="/private-jet-rental-prices/">Rental Prices</a>
+                        <a href="/types-of-private-jets/">Types of Jets</a>
+                        <a href="/empty-leg-flights-discount/">Empty Leg Deals</a>
+                        <a href="/private-jet-for-business-travel/">Business Travel</a>
+                    </div>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="/luxury-yacht-rentals/">Luxury Yachts</a>
+                    <div class="dropdown-menu">
+                        <a href="/luxury-yacht-rentals/">Yacht Charter Overview</a>
+                        <a href="/renting-catamaran/">Catamaran Rentals</a>
+                        <a href="/best-sailing-yacht-charter/">Sailing Yachts</a>
+                        <a href="/bareboat-charter-guide/">Bareboat Guide</a>
+                        <a href="/guide-to-mediterranean-yacht-charter/">Mediterranean Guide</a>
+                    </div>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="/luxury-villa-rentals/">Exclusive Villas</a>
+                    <div class="dropdown-menu">
+                        <a href="/luxury-villa-rentals/">Villa Rentals Overview</a>
+                        <a href="/luxury-villas/">Luxury Villa Guide</a>
+                    </div>
+                </li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="/contact/" class="btn btn-outline">Contact Us</a>
+                <a href="https://wa.me/918801079030" class="btn btn-gold" target="_blank">WhatsApp</a>
+            </div>
+            <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/elite-private-jet-charter/">[Jet] Private Jets</a>
+        <a href="/luxury-yacht-rentals/">[Yacht] Luxury Yachts</a>
+        <a href="/luxury-villa-rentals/">[Villa] Exclusive Villas</a>
+        <a href="/blog/">[Blog] Blog</a>
+        <a href="/contact/">[Contact] Contact</a>
+        <a href="https://wa.me/918801079030" class="mobile-cta" target="_blank">WhatsApp Concierge</a>
+    </div>
     <!-- 1. BREADCRUMBS -->
     <div class="container" style="padding-top: 25px; position: absolute; z-index: 10; left: 0; right: 0;">
         <nav style="font-size: 0.9rem; color: #ccc;">

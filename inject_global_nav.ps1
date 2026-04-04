@@ -1,13 +1,12 @@
-
 # inject_global_nav.ps1
 # Injects the premium global navigation bar and mobile menu into all blog post HTML files
-# Skips: homepage (index.html at root), blog/index.html, contact/index.html (already have nav)
+# Updates: Fixed brand name to "Elite Luxury Bookings", improved CSS/HTML injection logic
 
 $navHTML = @"
     <!-- GLOBAL NAVIGATION -->
     <nav class="global-nav" id="globalNav">
         <div class="container global-nav-inner">
-            <a href="/" class="nav-brand">Elite <span class="nav-gold">Luxury</span></a>
+            <a href="/" class="nav-brand">Elite Luxury <span class="nav-gold">Bookings</span></a>
             <ul class="nav-links">
                 <li class="nav-dropdown">
                     <a href="/elite-private-jet-charter/">Private Jets</a>
@@ -99,44 +98,40 @@ $navJS = @"
     </script>
 "@
 
-# Get all blog post index.html files — skip root, blog/, contact/ which already have nav
-$skipDirs = @("blog", "contact", "_template_blog_master", "moneypage1", "moneypage2", "global-route-silo")
-$rootIndex = Join-Path (Get-Location) "index.html"
+$rootDir = (Get-Location).Path
 
-$htmlFiles = Get-ChildItem -Path . -Filter "index.html" -Recurse | Where-Object {
-    $dir = $_.DirectoryName
-    $rootDir = (Get-Location).Path
-    # Skip root index
-    if ($dir -eq $rootDir) { return $false }
-    # Skip specified dirs
-    foreach ($skip in $skipDirs) {
-        if ($dir -like "*\$skip*") { return $false }
-    }
-    return $true
-}
+$htmlFiles = Get-ChildItem -Path . -Filter "index.html" -Recurse
 
 $count = 0
 foreach ($file in $htmlFiles) {
-    $content = Get-Content -Path $file.FullName -Raw -Encoding UTF8
+    # Skip root
+    if ($file.DirectoryName -eq $rootDir) { continue }
+    
+    $content = [System.IO.File]::ReadAllText($file.FullName, [System.Text.Encoding]::UTF8)
 
-    # Skip if nav already injected
+    # Replace nav brand specifically if it already exists
     if ($content -like "*global-nav*") {
-        Write-Host "SKIP (already has nav): $($file.FullName)"
-        continue
+        # Update existing nav block with re-runnable replacement
+        $content = $content -replace '(?s)<nav class="global-nav" id="globalNav">.*?</nav>', $navHTML
+    } else {
+        # Initial injection
+        $content = $content -replace '<body>', "<body>`n$navHTML"
     }
 
-    # Inject CSS into <style> block (before closing </style>)
-    $newContent = $content -replace '</style>', "$navCSS`n    </style>"
+    # Handle CSS/JS similarly
+    if ($content -like "*GLOBAL NAVIGATION (Injected)*") {
+        $content = $content -replace '(?s)/\* ===== GLOBAL NAVIGATION \(Injected\) ===== \*/.*?\}(?=\n\s*</style>|\s*</style>)', $navCSS
+    } else {
+        $content = $content -replace '</style>', "$navCSS`n    </style>"
+    }
 
-    # Inject nav HTML after <body>
-    $newContent = $newContent -replace '<body>', "<body>`n$navHTML"
+    if ($content -notlike "*toggleMobileMenu*") {
+        $content = $content -replace '</body>', "$navJS`n</body>"
+    }
 
-    # Inject JS before </body>
-    $newContent = $newContent -replace '</body>', "$navJS`n</body>"
-
-    Set-Content -Path $file.FullName -Value $newContent -Encoding UTF8
+    [System.IO.File]::WriteAllText($file.FullName, $content, (New-Object System.Text.UTF8Encoding $false))
     $count++
-    Write-Host "Injected nav -> $($file.FullName)"
+    Write-Host "Nav fixed -> $($file.FullName)"
 }
 
-Write-Host "`nDone. Global nav injected into $count pages."
+Write-Host "`nDone. Header fixed in $count pages."
