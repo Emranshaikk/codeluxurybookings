@@ -221,6 +221,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://eliteluxurybookings.com/elite-private-jet-charter/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://eliteluxurybookings.com/empty-leg-flights-discount/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -526,6 +531,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://eliteluxurybookings.com/luxury-villa-rentals/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://eliteluxurybookings.com/luxury-villas/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -552,6 +562,11 @@
   </url>
   <url>
     <loc>https://eliteluxurybookings.com/luxury-yacht-monaco/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://eliteluxurybookings.com/luxury-yacht-rentals/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -652,21 +667,6 @@
   </url>
   <url>
     <loc>https://eliteluxurybookings.com/monaco-yacht-charter/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://eliteluxurybookings.com/moneypage1/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://eliteluxurybookings.com/moneypage2/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://eliteluxurybookings.com/moneypage3/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
