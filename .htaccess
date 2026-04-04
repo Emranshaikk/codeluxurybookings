@@ -3,6 +3,9 @@
 
 RewriteEngine On
 
+# 0. Global Error Handling
+ErrorDocument 404 /404.html
+
 # 1. Enforce Trailing Slash (Global)
 # If a request doesn't end in a slash, and it's not a file, redirect it.
 RewriteCond %{REQUEST_FILENAME} !-f
