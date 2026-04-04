@@ -91,6 +91,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://eliteluxurybookings.com/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://eliteluxurybookings.com/boat-rental-mallorca-luxury/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -147,6 +152,11 @@
   </url>
   <url>
     <loc>https://eliteluxurybookings.com/chicago-to-newyork-private-jet-cost/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://eliteluxurybookings.com/contact/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

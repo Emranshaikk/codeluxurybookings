@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -588,6 +588,12 @@
                 font-size: 1rem !important;
             }
         }
+        /* ===== UPGRADED FOOTER CSS ===== */
+    footer { background: #000; border-top: 1px solid rgba(255,255,255,0.05); }
+    @media (max-width: 768px) {
+        footer > div > div:first-child { flex-direction: column; }
+        footer > div > div:last-child { flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
     </style>
 
     <!-- Google Analytics (GA4) -->
@@ -1385,7 +1391,13 @@
                 .route-list a:hover { color: var(--primary-gold); transform: translateX(5px); }
                 @media (max-width: 1024px) { .global-grid { grid-template-columns: repeat(2, 1fr); } }
                 @media (max-width: 600px) { .global-grid { grid-template-columns: 1fr; } }
-            </style>
+                /* ===== UPGRADED FOOTER CSS ===== */
+    footer { background: #000; border-top: 1px solid rgba(255,255,255,0.05); }
+    @media (max-width: 768px) {
+        footer > div > div:first-child { flex-direction: column; }
+        footer > div > div:last-child { flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+    </style>
 
             <div class="global-grid">
                 <!-- HUB 1: UK & EUROPE -->
