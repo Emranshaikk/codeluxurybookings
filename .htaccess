@@ -1,18 +1,18 @@
-# Elite Luxury Bookings - Premium URL Engine
-# Removes .html extension and handles trailing slashes for a professional, clean look
+# Elite Luxury Bookings - Premium Folder URL Engine
+# This configuration ensures a professional directory-based look for SEO.
 
 RewriteEngine On
 
-# 1. Redirect /page.html to /page (Clean SEO)
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
-RewriteRule ^(.*)\.html$ /$1 [R=301,L]
-
-# 2. Redirect /page/ to /page (Remove Trailing Slash for Canonical URL)
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)/$ /$1 [R=301,L]
-
-# 3. Silently serve page.html when /page is requested
+# 1. Enforce Trailing Slash (Global)
+# If a request doesn't end in a slash, and it's not a file, redirect it.
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*)$ $1.html [L]
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ %{REQUEST_URI}/ [L,R=301]
+
+# 2. Redirect /page.html to /page/ (Clean SEO Migration)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
+RewriteRule ^(.*)\.html$ /$1/ [R=301,L]
+
+# 3. Handle Root Index requests
+# Ensures that index.html is served from directories automatically (Apache Default)
+DirectoryIndex index.html
