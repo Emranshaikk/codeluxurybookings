@@ -1,6 +1,5 @@
-# inject_global_nav.ps1
-# Injects the premium global navigation bar and mobile menu into all blog post HTML files
-# Updates: Fixed brand name to "Elite Luxury Bookings", improved CSS/HTML injection logic
+
+# Injected Nav Engine
 
 $navHTML = @"
     <!-- GLOBAL NAVIGATION -->
@@ -36,10 +35,8 @@ $navHTML = @"
                     </div>
                 </li>
                 <li><a href="/blog/">Blog</a></li>
-                <li><a href="/contact/">Contact</a></li>
             </ul>
             <div class="nav-cta">
-                <a href="/contact/" class="btn btn-outline">Contact Us</a>
                 <a href="https://wa.me/918801079030" class="btn btn-gold" target="_blank">WhatsApp</a>
             </div>
             <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()">
@@ -48,12 +45,12 @@ $navHTML = @"
         </div>
     </nav>
     <div class="mobile-menu" id="mobileMenu">
-        <a href="/elite-private-jet-charter/">[Jet] Private Jets</a>
-        <a href="/luxury-yacht-rentals/">[Yacht] Luxury Yachts</a>
-        <a href="/luxury-villa-rentals/">[Villa] Exclusive Villas</a>
-        <a href="/blog/">[Blog] Blog</a>
-        <a href="/contact/">[Contact] Contact</a>
-        <a href="https://wa.me/918801079030" class="mobile-cta" target="_blank">WhatsApp Concierge</a>
+        <a href="/elite-private-jet-charter/">&#9992; Private Jets</a>
+        <a href="/luxury-yacht-rentals/">&#9973; Luxury Yachts</a>
+        <a href="/luxury-villa-rentals/">&#127963; Exclusive Villas</a>
+        <a href="/blog/">&#128214; Blog</a>
+        <a href="/contact/">&#128233; Contact</a>
+        <a href="https://wa.me/918801079030" class="mobile-cta" target="_blank">WhatsApp Concierge &#8594;</a>
     </div>
 "@
 
@@ -83,8 +80,7 @@ $navCSS = @"
     .mobile-menu a { color:rgba(255,255,255,0.6); text-decoration:none; font-size:1rem; text-transform:uppercase; letter-spacing:2px; padding:0.75rem 0; border-bottom:1px solid rgba(255,255,255,0.05); transition:all 0.4s; }
     .mobile-menu a:hover { color:#D4AF37; }
     .mobile-cta { margin-top:1rem; text-align:center; background:linear-gradient(135deg,#D4AF37,#B8860B); color:#000 !important; border-radius:8px; padding:1rem; font-weight:600; letter-spacing:2px; border-bottom:none !important; }
-    @media (max-width:900px) { .nav-links { display:none; } .nav-cta .btn-outline { display:none; } .nav-hamburger { display:flex; } }
-    /* Push body content below fixed nav */
+    @media (max-width:900px) { .nav-links { display:none; } .nav-cta { display:flex; } .btn-outline { display:none; } .nav-hamburger { display:flex; } }
     body { padding-top: 72px !important; }
 "@
 
@@ -98,40 +94,37 @@ $navJS = @"
     </script>
 "@
 
-$rootDir = (Get-Location).Path
+$cleanupNavRegex = '(?s)(<!-- GLOBAL NAVIGATION -->\s*)?<nav class="global-nav".*?</nav>\s*(<div class="mobile-menu".*?</div>)?'
+$cleanupCSSRegex = '(?s)/\*\s*===== GLOBAL NAVIGATION \(Injected\) =====\s*\*/.*?\}(?=\n\s*</style>|\s*</style>)'
+$cleanupJSRegex = '(?s)<script>\s*function toggleMobileMenu\(\).*?</script>'
+$cleanupStickyBarRegex = '(?s)<div class="sticky-bar".*?</div>'
 
 $htmlFiles = Get-ChildItem -Path . -Filter "index.html" -Recurse
-
 $count = 0
 foreach ($file in $htmlFiles) {
-    # Skip root
-    if ($file.DirectoryName -eq $rootDir) { continue }
-    
     $content = [System.IO.File]::ReadAllText($file.FullName, [System.Text.Encoding]::UTF8)
+    $content = $content -replace $cleanupNavRegex, ""
+    $content = $content -replace $cleanupCSSRegex, ""
+    $content = $content -replace $cleanupJSRegex, ""
+    $content = $content -replace $cleanupStickyBarRegex, ""
+    $content = $content -replace '<!-- GLOBAL NAVIGATION -->', ""
+    $content = $content -replace '(?s)<nav class="global-nav" id="globalNav">.*?</nav>', ""
+    $content = $content -replace '(?s)<div class="mobile-menu" id="mobileMenu">.*?</div>', ""
 
-    # Replace nav brand specifically if it already exists
-    if ($content -like "*global-nav*") {
-        # Update existing nav block with re-runnable replacement
-        $content = $content -replace '(?s)<nav class="global-nav" id="globalNav">.*?</nav>', $navHTML
-    } else {
-        # Initial injection
-        $content = $content -replace '<body>', "<body>`n$navHTML"
+    if ($content -match '</style>') {
+        $regex = [regex]'</style>'
+        $content = $regex.Replace($content, "`n$navCSS`n    </style>", 1)
     }
-
-    # Handle CSS/JS similarly
-    if ($content -like "*GLOBAL NAVIGATION (Injected)*") {
-        $content = $content -replace '(?s)/\* ===== GLOBAL NAVIGATION \(Injected\) ===== \*/.*?\}(?=\n\s*</style>|\s*</style>)', $navCSS
-    } else {
-        $content = $content -replace '</style>', "$navCSS`n    </style>"
+    if ($content -match '<body[^>]*>') {
+        $content = $content -replace '(<body[^>]*>)', "`$1`n$navHTML"
     }
-
-    if ($content -notlike "*toggleMobileMenu*") {
-        $content = $content -replace '</body>', "$navJS`n</body>"
+    if ($content -match '</body>') {
+        $content = $content -replace '</body>', "`n$navJS`n</body>"
     }
-
-    [System.IO.File]::WriteAllText($file.FullName, $content, (New-Object System.Text.UTF8Encoding $false))
+    $utf8WithoutBom = New-Object System.Text.UTF8Encoding $false
+    [System.IO.File]::WriteAllText($file.FullName, $content, $utf8WithoutBom)
     $count++
-    Write-Host "Nav fixed -> $($file.FullName)"
+    Write-Host "Processed ($count): $($file.Name)"
 }
 
-Write-Host "`nDone. Header fixed in $count pages."
+Write-Host "`nSuccess: Global navigation harmonized across $count pages."
