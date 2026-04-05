@@ -1,0 +1,20 @@
+f0fc5fd HEAD@{0}: commit: fixed 12 changes
+60cc17e HEAD@{1}: commit: feat: add new landing page template for Aspen to Miami private jet cost analysis
+730c0d7 HEAD@{2}: commit: errors fixed
+896347f HEAD@{3}: commit: blog error fixed
+80cf91f HEAD@{4}: commit: sidebar widget
+a76053e HEAD@{5}: commit: dublicate text remove
+03c0c5e HEAD@{6}: commit: integrating the yacht widget on blog posts
+0556a47 HEAD@{7}: commit: deleted dublicate section
+418bee8 HEAD@{8}: commit: fixed the alignment
+45d4bc6 HEAD@{9}: commit: broken link fixed
+8dfbcba HEAD@{10}: commit: inject global
+00e9014 HEAD@{11}: commit: trying to solve inject global prob
+49c58b3 HEAD@{12}: commit: header menu fixed again
+ac1274b HEAD@{13}: commit: final edit of homepage
+1a7c595 HEAD@{14}: commit: menu bar fixed
+6bc064b HEAD@{15}: commit: hero images
+e18cc0b HEAD@{16}: commit: fix: Apply PHP Shield to .htaccess to prevent legacy WP database errors
+f76848b HEAD@{17}: commit: chore: Finalize Static Migration & Decommission WordPress core
+f0d4e8b HEAD@{18}: commit: fix: Final branding and quote cleanup across network
+86ef592 HEAD@{19}: commit: fix: Footer brand name, alignment, and encoding issues across network
