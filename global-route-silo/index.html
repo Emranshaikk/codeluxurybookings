@@ -1,3 +1,27 @@
+<style>
+    .hub-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+    .internal-link {
+        color: var(--text-main);
+        text-decoration: none;
+        transition: var(--transition);
+        font-size: 0.95rem;
+    }
+    .internal-link:hover {
+        color: var(--primary-gold);
+        padding-left: 5px;
+    }
+    @media (max-width: 1024px) {
+        .hub-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 2rem; }
+    }
+    @media (max-width: 768px) {
+        .hub-grid { grid-template-columns: 1fr !important; gap: 1.5rem; }
+    }
+</style>
+
 <section class="section-padding" style="background: rgba(212, 175, 55, 0.02); border-top: 1px solid var(--glass-border);">
     <div class="container">
         <h2 class="serif" style="font-size: 3rem; text-align: center; margin-bottom: 4rem;">Global <span class="gold-text">Aviation Network</span></h2>
@@ -65,27 +89,3 @@
         </div>
     </div>
 </section>
-
-<style>
-    .hub-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
-    }
-    .internal-link {
-        color: var(--text-main);
-        text-decoration: none;
-        transition: var(--transition);
-        font-size: 0.95rem;
-    }
-    .internal-link:hover {
-        color: var(--primary-gold);
-        padding-left: 5px;
-    }
-    @media (max-width: 1024px) {
-        .hub-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 2rem; }
-    }
-    @media (max-width: 768px) {
-        .hub-grid { grid-template-columns: 1fr !important; gap: 1.5rem; }
-    }
-</style>
