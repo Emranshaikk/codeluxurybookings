@@ -17,6 +17,23 @@ $repairs[([char]0xE2 + [char]0x80 + [char]0x94)] = [char]0x2014
 # Pound/Symbol artifacts (Â£)
 $repairs[([char]0xC2 + [char]0xA3)] = [char]0x00A3
 
+# 3. City Mappings for SEO-friendly Titles
+$cityMappings = @{
+    "newyork"        = "New York"
+    "sanfrancisco"   = "San Francisco"
+    "losangeles"     = "Los Angeles"
+    "hongkong"       = "Hong Kong"
+    "lasvegas"       = "Las Vegas"
+    "goldcoast"      = "Gold Coast"
+    "abudhabi"       = "Abu Dhabi"
+    "turksandcaicos" = "Turks and Caicos"
+    "frenchriviera"  = "French Riviera"
+    "maritima"       = "French Riviera"
+    "rinitolondon"   = "London"
+    "kyo"            = "Tokyo"
+    "londonto"       = "London"
+}
+
 $navHTML = @"
 <!-- ELB_NAV_START -->
     <nav class="global-nav">
@@ -95,26 +112,38 @@ $navJS = @"
 "@
 
 $htmlFiles = Get-ChildItem -Path . -Filter "index.html" -Recurse
+$count = 0
+
 foreach ($file in $htmlFiles) {
-    if ($file.FullName -match '\.git' -or $file.FullName -match 'node_modules') { continue }
+    if ($file.FullName -match '\\.git' -or $file.FullName -match 'node_modules') { continue }
     $content = [System.IO.File]::ReadAllText($file.FullName, [System.Text.Encoding]::UTF8)
 
-    # 1. Clean legacy markers
+    # 1. Clean legacy markers and redundant blocks
     $content = $content -replace '(?s)<!--\s*ELB_NAV_START\s*-->.*?<!--\s*ELB_NAV_END\s*-->', ''
     $content = $content -replace '(?s)/\*\s*ELB_CSS_START\s*\*/.*?/\*\s*ELB_CSS_END\s*\*/', ''
     $content = $content -replace '(?s)<!--\s*ELB_JS_START\s*-->.*?<!--\s*ELB_JS_END\s*-->', ''
+    $content = $content -replace '(?s)<nav class="global-nav".*?</nav>', ""
+    $content = $content -replace '(?s)<div class="mobile-menu".*?</div>', ""
     $content = $content -replace '(?s)<style>\s*</style>', ''
 
-    # 2. Repair Routes direction and capitalization
+    # 2. Repair Routes direction and capitalization using City Mappings
     $folder = $file.Directory.Name
     if ($folder -match "^([^-]+)-to-([^-]+)") {
-        $c1 = $Matches[1]; $c2 = $Matches[2]; $c1T = (Get-Culture).TextInfo.ToTitleCase($c1); $c2T = (Get-Culture).TextInfo.ToTitleCase($c2)
+        $c1 = $Matches[1]; $c2 = $Matches[2]
+        
+        $c1T = if ($cityMappings.ContainsKey($c1)) { $cityMappings[$c1] } else { (Get-Culture).TextInfo.ToTitleCase($c1) }
+        $c2T = if ($cityMappings.ContainsKey($c2)) { $cityMappings[$c2] } else { (Get-Culture).TextInfo.ToTitleCase($c2) }
+        
         $route = "$c1T to $c2T"
         $content = $content -replace "(?i)$c2 to $c1", $route -replace "(?i)$c1 to $c2", $route
     }
 
     # 3. Aggressive Encoding Repair
     foreach ($k in $repairs.Keys) { $content = $content.Replace($k, $repairs[$k]) }
+    # Catch-all for common dash and pound artifacts
+    $content = $content -replace "â\s?–", [char]0x2013
+    $content = $content -replace "â€[^\w<]?", [char]0x2013
+    $content = $content -replace "Â£", [char]0x00A3
 
     # 4. Standardized Injection
     $navStyleBlock = "<style>`n$navCSS`n</style>"
@@ -123,5 +152,127 @@ foreach ($file in $htmlFiles) {
     $content = $content -replace '</body>', ("`n" + $navJS + "`n</body>")
 
     [System.IO.File]::WriteAllText($file.FullName, $content, (New-Object System.Text.UTF8Encoding $false))
+    $count++
+    Write-Host "Injected nav -> $($file.FullName)"
 }
-Write-Host "Site-wide Harmonization v5.5 Complete. Pure-ASCII Verified."
+
+Write-Host "`nSite-wide Harmonization Complete. Global nav injected into $count pages."
+
+# 1. Broad Cleanup (Regex matches BOTH old HTML comments and new CSS comments, even if split across lines)
+$content = $content -replace '(?s)<!--\s*ELB_NAV_START\s*-->.*?<!--\s*ELB_NAV_END\s*-->', ""
+    
+# Handle CSS markers (HTML comments OR CSS comments)
+$content = $content -replace '(?s)<!--\s*ELB_CSS_START\s*-->.*?<!--\s*ELB_CSS_END\s*-->', ""
+$content = $content -replace '(?s)/\*\s*ELB_CSS_START\s*\*/.*?/\*\s*ELB_CSS_END\s*\*/', ""
+    
+# Handle JS markers
+$content = $content -replace '(?s)<!--\s*ELB_JS_START\s*-->.*?<!--\s*ELB_JS_END\s*-->', ""
+    
+# Generic cleanup of orphan components
+$content = $content -replace '(?s)<nav class="global-nav".*?</nav>', ""
+$content = $content -replace '(?s)<div class="mobile-menu".*?</div>', ""
+$content = $content -replace '(?s)/\* ===== GLOBAL NAVIGATION.*?\}', ""
+$content = $content -replace '(?s)<script>\s*function toggleMobileMenu\(\).*?</script>', ""
+    
+# Cleanup broken script tags
+$content = $content -replace '(?s)<script>\s*function toggleMobileMenu\(\).*?</script>', ""
+
+# 2. Cleanup specific duplicate CTA buttons
+$content = $content -replace '(?s)<a href="#quote" style="position: fixed;.*?Get Quote</a>', ""
+$content = $content -replace '(?s)<!-- 7\. STICKY CTA BUTTON -->.*?</a>', ""
+
+# 3. Injection
+$content = $content -replace '</head>', "`n$($navCSS)`n</head>"
+# Common City Mapping for squashed URL names
+$cityMappings = @{
+    "newyork"        = "New York"
+    "sanfrancisco"   = "San Francisco"
+    "losangeles"     = "Los Angeles"
+    "hongkong"       = "Hong Kong"
+    "lasvegas"       = "Las Vegas"
+    "goldcoast"      = "Gold Coast"
+    "abudhabi"       = "Abu Dhabi"
+    "turksandcaicos" = "Turks and Caicos"
+    "frenchriviera"  = "French Riviera"
+    "maritima"       = "French Riviera"
+    "rinitolondon"   = "London" # Handle that corrupted name I saw
+    "kyo"            = "Tokyo"
+    "londonto"       = "London"
+}
+        
+if ($cityMappings.ContainsKey($city1)) { $City1Title = $cityMappings[$city1] }
+$content = $content -replace [regex]::Escape($bad_plane), $airplane -replace [regex]::Escape($bad_boat), $boat -replace [regex]::Escape($bad_villas), $villas -replace [regex]::Escape($bad_blog), $blog -replace [regex]::Escape($bad_email), $emailIcon -replace [regex]::Escape($bad_arrow), $arrow -replace [regex]::Escape($bad_check), $check
+$content = $content -replace [regex]::Escape($bad_dash1), [char]0x2013
+$content = $content -replace [regex]::Escape($bad_dash2), [char]0x2014
+$content = $content -replace [regex]::Escape($bad_dash3), [char]0x2013
+$content = $content -replace [regex]::Escape($bad_pound1), [char]0x00A3
+# Broad catch-all for dash artifacts
+$content = $content -replace "â\s?–", [char]0x2013
+$content = $content -replace "â€[^\w<]?", [char]0x2013
+$content = $content -replace [regex]::Escape($bad_pound2), [char]0x00A3 -replace [regex]::Escape($bad_pound3), [char]0x00A3 -replace [regex]::Escape($bad_pound4), [char]0x00A3
+        
+$content = $content -replace '</body>', "`n$($navJS)`n</body>"
+$count++
+Write-Host "Injected nav -> $($file.FullName)"
+
+
+Write-Host "`nDone. Global nav injected into $count pages."
+# 1. Broad Cleanup (Regex matches BOTH old HTML comments and new CSS comments, even if split across lines)
+$content = $content -replace '(?s)<!--\s*ELB_NAV_START\s*-->.*?<!--\s*ELB_NAV_END\s*-->', ""
+    
+# Handle CSS markers (HTML comments OR CSS comments)
+$content = $content -replace '(?s)<!--\s*ELB_CSS_START\s*-->.*?<!--\s*ELB_CSS_END\s*-->', ""
+$content = $content -replace '(?s)/\*\s*ELB_CSS_START\s*\*/.*?/\*\s*ELB_CSS_END\s*\*/', ""
+    
+# Handle JS markers
+$content = $content -replace '(?s)<!--\s*ELB_JS_START\s*-->.*?<!--\s*ELB_JS_END\s*-->', ""
+    
+# Generic cleanup of orphan components
+$content = $content -replace '(?s)<nav class="global-nav".*?</nav>', ""
+$content = $content -replace '(?s)<div class="mobile-menu".*?</div>', ""
+$content = $content -replace '(?s)/\* ===== GLOBAL NAVIGATION.*?\}', ""
+$content = $content -replace '(?s)<script>\s*function toggleMobileMenu\(\).*?</script>', ""
+    
+# Cleanup broken script tags
+$content = $content -replace '(?s)<script>\s*function toggleMobileMenu\(\).*?</script>', ""
+
+# 2. Cleanup specific duplicate CTA buttons
+$content = $content -replace '(?s)<a href="#quote" style="position: fixed;.*?Get Quote</a>', ""
+$content = $content -replace '(?s)<!-- 7\. STICKY CTA BUTTON -->.*?</a>', ""
+
+# 3. Injection
+$content = $content -replace '</head>', "`n$($navCSS)`n</head>"
+# Common City Mapping for squashed URL names
+$cityMappings = @{
+    "newyork"        = "New York"
+    "sanfrancisco"   = "San Francisco"
+    "losangeles"     = "Los Angeles"
+    "hongkong"       = "Hong Kong"
+    "lasvegas"       = "Las Vegas"
+    "goldcoast"      = "Gold Coast"
+    "abudhabi"       = "Abu Dhabi"
+    "turksandcaicos" = "Turks and Caicos"
+    "frenchriviera"  = "French Riviera"
+    "maritima"       = "French Riviera"
+    "rinitolondon"   = "London" # Handle that corrupted name I saw
+    "kyo"            = "Tokyo"
+    "londonto"       = "London"
+}
+        
+if ($cityMappings.ContainsKey($city1)) { $City1Title = $cityMappings[$city1] }
+$content = $content -replace [regex]::Escape($bad_plane), $airplane -replace [regex]::Escape($bad_boat), $boat -replace [regex]::Escape($bad_villas), $villas -replace [regex]::Escape($bad_blog), $blog -replace [regex]::Escape($bad_email), $emailIcon -replace [regex]::Escape($bad_arrow), $arrow -replace [regex]::Escape($bad_check), $check
+$content = $content -replace [regex]::Escape($bad_dash1), [char]0x2013
+$content = $content -replace [regex]::Escape($bad_dash2), [char]0x2014
+$content = $content -replace [regex]::Escape($bad_dash3), [char]0x2013
+$content = $content -replace [regex]::Escape($bad_pound1), [char]0x00A3
+# Broad catch-all for dash artifacts
+$content = $content -replace "â\s?–", [char]0x2013
+$content = $content -replace "â€[^\w<]?", [char]0x2013
+$content = $content -replace [regex]::Escape($bad_pound2), [char]0x00A3 -replace [regex]::Escape($bad_pound3), [char]0x00A3 -replace [regex]::Escape($bad_pound4), [char]0x00A3
+        
+$content = $content -replace '</body>', "`n$($navJS)`n</body>"
+$count++
+Write-Host "Injected nav -> $($file.FullName)"
+}
+
+Write-Host "`nDone. Global nav injected into $count pages."
