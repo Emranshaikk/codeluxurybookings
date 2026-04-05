@@ -182,25 +182,55 @@
         @keyframes ping { 75%, 100% { transform: scale(2); opacity: 0; } }
         @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
-        /* MOBILE EXCELLENCE */
-        @media (max-width: 1024px) {
-            .grid-2 { grid-template-columns: 1fr; gap: 3rem; }
-            .hero h1 { font-size: 3rem; }
-            .form-grid { grid-template-columns: repeat(2, 1fr); }
+        /* HOW IT WORKS */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4rem;
+            text-align: center;
+            margin-top: 5rem;
         }
 
-        @media (max-width: 768px) {
-            .section-padding { padding: 3rem 0; }
-            .hero h1 { font-size: clamp(2rem, 8vw, 3.5rem); line-height: 1.2; }
-            .hero-sub { font-size: 1.1rem; padding: 0 1rem; }
-            .form-wrapper { padding: 1.25rem !important; border-radius: 15px; }
-            .container { padding: 0 1rem; }
-            .grid-2 { gap: 1.5rem; }
-            .benefit-card { padding: 1.25rem; }
-            .form-grid { grid-template-columns: 1fr; gap: 0.75rem; }
-            .form-group.full { grid-column: span 1; }
-            h2 { font-size: 2.2rem !important; }
-            .btn { width: 100%; margin-bottom: 1rem; }
+        .step-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 5rem;
+            color: var(--primary-gold);
+            opacity: 0.2;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .process-steps>div:hover .step-num {
+            opacity: 0.6;
+            transform: translateY(-5px);
+        }
+
+        .step-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .step-desc {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .exp-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        .trust-micro {
+            font-size: 0.85rem;
+            color: var(--primary-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 1rem;
         }
     </style>
 <style>
@@ -209,6 +239,7 @@
     .global-nav { position:fixed; top:0; left:0; right:0; background:rgba(5,5,5,0.98); backdrop-filter:blur(24px); border-bottom:1px solid rgba(212,175,55,0.2); z-index:99999; }
     .global-nav-inner { display:flex; align-items:center; justify-content:space-between; height:72px; gap:1rem; max-width:1400px; margin:0 auto; padding:0 2rem; box-sizing: border-box; }
     .nav-brand { font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:600; color:#fff !important; text-decoration:none !important; }
+    .nav-gold { color:#D4AF37 !important; }
     .nav-links { display:flex; align-items:center; gap:0.25rem; list-style:none; flex:1; justify-content:center; margin:0; padding:0; }
     .nav-links a { color:rgba(255,255,255,0.7) !important; text-decoration:none !important; font-size:0.82rem; text-transform:uppercase; letter-spacing:1.5px; padding:0.5rem 0.9rem; border-radius:6px; transition:all 0.4s; font-family: 'Inter', sans-serif !important; }
     .nav-links a:hover { color:#D4AF37 !important; }
@@ -224,6 +255,7 @@
     .mobile-cta { margin-top:2rem; text-align:center; background:linear-gradient(135deg,#D4AF37,#B8860B); color:#000 !important; border-radius:8px; padding:1.2rem !important; font-weight:700; }
     @media (max-width:1024px) { .nav-links { display:none !important; } .nav-hamburger { display:flex !important; } }
     body { padding-top: 72px !important; }
+    .luxury-list li::before { content: '✓' !important; }
 /* ELB_STYLE_END */
 
 </style>
@@ -233,7 +265,7 @@
 <!-- ELB_NAV_START -->
     <nav class="global-nav">
         <div class="container global-nav-inner">
-            <a href="/" class="nav-brand" style="display: flex; align-items: center;"><img src="/assets/images/elb-logo.png" alt="Elite Luxury Bookings" style="height: 48px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 5px rgba(212,175,55,0.2));"></a>
+            <a href="/" class="nav-brand"><span class="nav-gold">Elite</span> Luxury Bookings</a>
             <ul class="nav-links">
                 <li class="nav-dropdown"><a href="/elite-private-jet-charter/">Private Jets</a>
                     <div class="dropdown-menu">
@@ -354,6 +386,51 @@
                 </div>
             </div>
         </div>
+        <!-- HOW IT WORKS SECTION -->
+    <section class="section-padding bg-dark" style="border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <span class="trust-micro">Seamless Aviation</span>
+                <h2 class="serif" style="font-size: 3.5rem;">The Elite Standard of Deployment</h2>
+            </div>
+            
+            <div class="process-steps">
+                <div>
+                    <div class="step-num">01</div>
+                    <h3 class="step-title gold-text">Strategic Brief</h3>
+                    <p class="step-desc">Your dedicated aviation advisor manages the logistics for your group size, nautical range, and specific tarmac requirements.</p>
+                </div>
+                <div>
+                    <div class="step-num">02</div>
+                    <h3 class="step-title gold-text">Audited Selection</h3>
+                    <p class="step-desc">Access only ARGUS/Wyvern audited aircraft. We source the finest off-market options positioned for your departure window.</p>
+                </div>
+                <div>
+                    <div class="step-num">03</div>
+                    <h3 class="step-title gold-text">Instant Dispatch</h3>
+                    <p class="step-desc">Position your aircraft within 60 minutes. Complete manifest discretion and seamless ground coordination included as standard.</p>
+                </div>
+            </div>
+
+            <!-- Route Specific Testimonials -->
+            <div style="margin-top: 6rem; background: rgba(20, 20, 20, 0.8); padding: 4rem; border-radius: 15px; border: 1px solid rgba(212, 175, 55, 0.15);">
+                <div class="exp-grid">
+                    <div style="border-left: 1px solid var(--primary-gold); padding-left: 2rem;">
+                        <p style="font-style: italic; color: #ddd; margin-bottom: 1.5rem;">"The {{FROM_P}} to {{TO_P}} mission was flawlessly executed. Terminal arrival to takeoff in under 12 minutes."</p>
+                        <span style="color: var(--primary-gold); font-weight: 600; font-size: 0.85rem; letter-spacing: 1px;">— PRIVATE ADVISOR, LONDON HUB</span>
+                    </div>
+                    <div style="border-left: 1px solid var(--primary-gold); padding-left: 2rem;">
+                        <p style="font-style: italic; color: #ddd; margin-bottom: 1.5rem;">"We utilize ELB for all our regional shuttle runs. Their aircraft availability is consistently superior."</p>
+                        <span style="color: var(--primary-gold); font-weight: 600; font-size: 0.85rem; letter-spacing: 1px;">— CHIEF PILOT, GLOBAL AIRLINES</span>
+                    </div>
+                    <div style="border-left: 1px solid var(--primary-gold); padding-left: 2rem;">
+                        <p style="font-style: italic; color: #ddd; margin-bottom: 1.5rem;">"A seamless experience. The onboard catering was Michelin-standard and the crew was exceptionally professional."</p>
+                        <span style="color: var(--primary-gold); font-weight: 600; font-size: 0.85rem; letter-spacing: 1px;">— CEO, NEW YORK TECH CORP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     </header>
 
     <section class="section-padding" style="background: rgba(212, 175, 55, 0.02); border-bottom: 1px solid var(--glass-border);">
@@ -380,7 +457,7 @@
 <!-- ELB_FOOTER_START -->
     <footer class="section-padding" style="background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; margin-top: 5rem;">
         <div class="container">
-            <a href="/" style="display: block; margin-bottom: 2rem;"><img src="/assets/images/elb-logo.png" alt="Elite Luxury Bookings" style="height: 50px; width: auto; object-fit: contain; margin: 0 auto;"></a>
+            <a href="/" style="display: block; margin-bottom: 2rem; font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:600; color:#fff; text-decoration:none;"><span style="color:#D4AF37;">Elite</span> Luxury Bookings</a>
             <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 2rem;">
                 <a href="/elite-private-jet-charter/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Aviation Services</a>
                 <a href="/luxury-yacht-rentals/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Yacht Charter</a>

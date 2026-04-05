@@ -1,30 +1,9 @@
+import os
+import re
 
+# Define the Perfect Snippets from index.html
 
-<style>
-    .hub-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
-    }
-    .internal-link {
-        color: var(--text-main);
-        text-decoration: none;
-        transition: var(--transition);
-        font-size: 0.95rem;
-    }
-    .internal-link:hover {
-        color: var(--primary-gold);
-        padding-left: 5px;
-    }
-    @media (max-width: 1024px) {
-        .hub-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 2rem; }
-    }
-    @media (max-width: 768px) {
-        .hub-grid { grid-template-columns: 1fr !important; gap: 1.5rem; }
-    }
-</style>
-<style>
-
+PERFECT_STYLE = """<style>
 /* ELB_STYLE_START */
     .global-nav { position:fixed; top:0; left:0; right:0; background:rgba(5,5,5,0.98); backdrop-filter:blur(24px); border-bottom:1px solid rgba(212,175,55,0.2); z-index:99999; }
     .global-nav-inner { display:flex; align-items:center; justify-content:space-between; height:72px; gap:1rem; max-width:1400px; margin:0 auto; padding:0 2rem; box-sizing: border-box; }
@@ -47,11 +26,9 @@
     body { padding-top: 72px !important; }
     .luxury-list li::before { content: '✓' !important; }
 /* ELB_STYLE_END */
+</style>"""
 
-</style>
-</head>
-<body>
-<!-- ELB_NAV_START -->
+PERFECT_NAV = """<!-- ELB_NAV_START -->
     <nav class="global-nav">
         <div class="container global-nav-inner">
             <a href="/" class="nav-brand"><span class="nav-gold">Elite</span> Luxury Bookings</a>
@@ -93,13 +70,9 @@
         <a href="/contact/">Contact Us</a>
         <a href="https://wa.me/918801079030" class="mobile-cta">WhatsApp Concierge</a>
     </div>
-<!-- ELB_NAV_END -->
+<!-- ELB_NAV_END -->"""
 
-
-
-
-
-<!-- ELB_FOOTER_START -->
+PERFECT_FOOTER = """<!-- ELB_FOOTER_START -->
     <footer class="section-padding" style="background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; margin-top: 5rem;">
         <div class="container">
             <a href="/" style="display: block; margin-bottom: 2rem; font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:600; color:#fff; text-decoration:none;"><span style="color:#D4AF37;">Elite</span> Luxury Bookings</a>
@@ -113,12 +86,53 @@
             <p style="color: #444; font-size: 0.8rem;">© 2026 Elite Luxury Bookings. All rights reserved.</p>
         </div>
     </footer>
-<!-- ELB_FOOTER_END -->
+<!-- ELB_FOOTER_END -->"""
 
-
-<!-- ELB_JS_START -->
+PERFECT_JS = """<!-- ELB_JS_START -->
     <script>function toggleMobileMenu(){var m=document.getElementById('elbMobileMenu'),b=document.getElementById('navHamburger');if(m&&b){m.classList.toggle('open');b.classList.toggle('open');}}</script>
-<!-- ELB_JS_END -->
+<!-- ELB_JS_END -->"""
 
-</body>
-</html>
+def standardize_file(filepath):
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+    except Exception:
+        return False
+
+    original = content
+    
+    # 1. Replace Style Block (with tags)
+    content = re.sub(r'<style>\s*/\* ELB_STYLE_START \*/.*?/\* ELB_STYLE_END \*/\s*</style>', PERFECT_STYLE, content, flags=re.DOTALL)
+    # Fallback if tags are already messed up or missing
+    content = re.sub(r'/\* ELB_STYLE_START \*/.*?/\* ELB_STYLE_END \*/', PERFECT_STYLE.replace('<style>','').replace('</style>',''), content, flags=re.DOTALL)
+    
+    # 2. Replace Nav, Footer, JS Blocks
+    content = re.sub(r'<!-- ELB_NAV_START -->.*?<!-- ELB_NAV_END -->', PERFECT_NAV, content, flags=re.DOTALL)
+    content = re.sub(r'<!-- ELB_FOOTER_START -->.*?<!-- ELB_FOOTER_END -->', PERFECT_FOOTER, content, flags=re.DOTALL)
+    content = re.sub(r'<!-- ELB_JS_START -->.*?<!-- ELB_JS_END -->', PERFECT_JS, content, flags=re.DOTALL)
+    
+    # 3. Cleanup Loose Styles
+    parts = re.split(r'(<style>.*?</style>)', content, flags=re.DOTALL)
+    new_parts = []
+    for part in parts:
+        if part.startswith('<style>'):
+            # If it contains global-nav or nav-links but is NOT the ELB block, drop it
+            if ('global-nav' in part or 'nav-links' in part) and 'ELB_STYLE_START' not in part:
+                continue 
+        new_parts.append(part)
+    content = "".join(new_parts)
+
+    if content != original:
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(content)
+        return True
+    return False
+
+root = r'c:\Users\imran\OneDrive\Desktop\ELB code'
+count = 0
+for r, d, files in os.walk(root):
+    for f in files:
+        if f.endswith('.html'):
+            if standardize_file(os.path.join(r, f)):
+                count += 1
+print(f'Standardized {count} files.')

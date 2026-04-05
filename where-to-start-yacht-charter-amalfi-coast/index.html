@@ -25,120 +25,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <style>
-        :root {
-            --primary-gold: #D4AF37;
-            --deep-black: #050505;
-            --graphene: #1A1A1A;
-            --glass-bg: rgba(255, 255, 255, 0.02);
-            --glass-border: rgba(212, 175, 55, 0.15);
-            --text-main: #FFFFFF;
-            --text-muted: rgba(255, 255, 255, 0.6);
-            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; background: var(--deep-black); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
-        h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond', serif; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        .gold-text { color: var(--primary-gold); }
-        .glass-panel { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 20px; }
-
-        .hero { padding: 120px 0 60px; text-align: center; position: relative; background: radial-gradient(circle at center, rgba(212, 175, 55, 0.05) 0%, var(--deep-black) 70%); }
-        .hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 300; margin-bottom: 1.5rem; line-height: 1.1; }
-        .hero-sub { font-size: 1.2rem; color: var(--text-muted); max-width: 800px; margin: 0 auto 3rem; }
-
-        .form-section { padding: 4rem 0 8rem; }
-        .form-wrapper { max-width: 900px; margin: 0 auto; padding: 4rem; border-radius: 30px; background: rgba(26, 26, 26, 0.6); border: 1px solid var(--glass-border); text-align: left; }
-        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-        .form-group { display: flex; flex-direction: column; gap: 0.8rem; }
-        .form-group.full { grid-column: 1 / -1; }
-        .form-group label { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold); }
-        .form-control { background: transparent; border: none; border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding: 1rem 0; color: #fff; font-family: 'Inter', sans-serif; font-size: 1.1rem; transition: var(--transition); }
-        .form-control:focus { outline: none; border-bottom-color: var(--primary-gold); background: rgba(255, 255, 255, 0.02); }
-        
-        select.form-control { appearance: none; background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http:/www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D4AF37' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e"); background-repeat: no-repeat; background-position: right 0 center; background-size: 1em; padding-right: 2rem; }
-        select.form-control option { background-color: var(--deep-black); color: #fff; }
-
-        /* Calendar Icon Visibility Fix */
-        input[type="date"]::-webkit-calendar-picker-indicator {
-            filter: invert(1);
-            cursor: pointer;
-            opacity: 0.6;
-            transition: var(--transition);
-        }
-        input[type="date"]::-webkit-calendar-picker-indicator:hover {
-            opacity: 1;
-        }
-
-        .section-padding { padding: 8rem 0; }
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: flex-Start; }
-        .seo-content { font-size: 1.05rem; color: #ddd; line-height: 1.8; }
-        .seo-content p { margin-bottom: 1.5rem; }
-        .seo-content h2 { font-size: 3rem; margin: 3rem 0 1.5rem; color: var(--primary-gold); }
-        .seo-content h3 { font-size: 2.2rem; margin: 2rem 0 1rem; color: #fff; }
-
-        .luxury-list { list-style: none; margin: 2rem 0; }
-        .luxury-list li { position: relative; padding-left: 2.5rem; margin-bottom: 1.5rem; color: #ddd; }
-        .luxury-list li::before { content: 'âœ“'; position: absolute; left: 0; color: var(--primary-gold); font-weight: 900; font-size: 1.2rem; }
-
-        .btn { display: inline-block; padding: 1.2rem 2.5rem; border-radius: 8px; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; text-decoration: none; transition: var(--transition); cursor: pointer; text-align: center; border: none; }
-        .btn-gold { background: linear-gradient(135deg, var(--primary-gold), #B8860B); color: #000; }
-        .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2); }
-
-        .tag-strip { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap; }
-        .tag-item { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold); font-weight: 600; }
-
-        @keyframes fadeUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
-
-        @media (max-width: 1024px) { .grid-2 { grid-template-columns: 1fr; gap: 3rem; } .form-grid { grid-template-columns: 1fr; } }
-        @media (max-width: 768px) {
-            .section-padding { padding: 4rem 0; }
-            .hero h1 { font-size: clamp(2.2rem, 8vw, 3.5rem); }
-            .form-wrapper { padding: 2.5rem 1.5rem; }
-        }
-                        
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    .global-nav-inner { display:flex; align-items:center; justify-content:space-between; height:72px; gap:1rem; max-width:1400px; margin:0 auto; padding:0 2rem; }
-    .nav-brand { font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:600; color:#fff; text-decoration:none; white-space:nowrap; flex-shrink:0; }
-    .nav-gold { color:#D4AF37; }
-    .nav-links { display:flex; align-items:center; gap:0.25rem; list-style:none; flex:1; justify-content:center; }
-    .nav-links a { color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.82rem; text-transform:uppercase; letter-spacing:1.5px; padding:0.5rem 0.9rem; border-radius:6px; transition:all 0.4s; white-space:nowrap; }
-    .nav-links a:hover { color:#D4AF37; }
-    .nav-dropdown { position:relative; }
-    .nav-dropdown > a::after { content:' '; font-size:0.7rem; }
-    .dropdown-menu { position:absolute; top:calc(100% + 8px); left:0; background:#0f0f0f; border:1px solid rgba(212,175,55,0.15); border-radius:12px; padding:0.75rem; min-width:220px; opacity:0; visibility:hidden; transform:translateY(-8px); transition:all 0.4s; box-shadow:0 20px 40px rgba(0,0,0,0.6); z-index:100; }
-    .nav-dropdown:hover .dropdown-menu { opacity:1; visibility:visible; transform:translateY(0); }
-    .dropdown-menu a { display:block; padding:0.6rem 1rem; color:rgba(255,255,255,0.6) !important; border-radius:8px; font-size:0.82rem; letter-spacing:1px; }
-    .dropdown-menu a:hover { color:#D4AF37 !important; background:rgba(212,175,55,0.06); }
-    .nav-cta { display:flex; gap:0.6rem; align-items:center; flex-shrink:0; }
-    .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:0.5rem; }
-    .nav-hamburger span { display:block; width:24px; height:2px; background:rgba(255,255,255,0.6); border-radius:2px; transition:all 0.4s; }
-    .nav-hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); background:#D4AF37; }
-    .nav-hamburger.open span:nth-child(2) { opacity:0; }
-    .nav-hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); background:#D4AF37; }
-    .mobile-menu { display:none; position:fixed; top:72px; left:0; right:0; background:rgba(5,5,5,0.98); backdrop-filter:blur(24px); border-bottom:1px solid rgba(212,175,55,0.15); padding:2rem; z-index:1999; flex-direction:column; gap:1rem; }
-    .mobile-menu.open { display:flex; }
-    .mobile-menu a { color:rgba(255,255,255,0.6); text-decoration:none; font-size:1rem; text-transform:uppercase; letter-spacing:2px; padding:0.75rem 0; border-bottom:1px solid rgba(255,255,255,0.05); transition:all 0.4s; }
-    .mobile-menu a:hover { color:#D4AF37; }
-    .mobile-cta { margin-top:1rem; text-align:center; background:linear-gradient(135deg,#D4AF37,#B8860B); color:#000 !important; border-radius:8px; padding:1rem; font-weight:600; letter-spacing:2px; border-bottom:none !important; }
-    @media (max-width:900px) { .nav-links { display:none; } .nav-cta { display:flex; } .btn-outline { display:none; } .nav-hamburger { display:flex; } }
-    body { padding-top: 85px !important; }
-    </style>
 
 
 
@@ -170,35 +57,14 @@
 
 
 
-<style>
-/* ELB_CSS_START */
-    .global-nav { position:fixed; top:0; left:0; right:0; background:rgba(5,5,5,0.98); backdrop-filter:blur(24px); border-bottom:1px solid rgba(212,175,55,0.2); z-index:99999; }
-    .global-nav-inner { display:flex; align-items:center; justify-content:space-between; height:72px; gap:1rem; max-width:1400px; margin:0 auto; padding:0 2rem; box-sizing: border-box; }
-    .nav-brand { font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:600; color:#fff !important; text-decoration:none !important; }
-    .nav-gold { color:#D4AF37 !important; }
-    .nav-links { display:flex; align-items:center; gap:0.25rem; list-style:none; flex:1; justify-content:center; margin:0; padding:0; }
-    .nav-links a { color:rgba(255,255,255,0.7) !important; text-decoration:none !important; font-size:0.82rem; text-transform:uppercase; letter-spacing:1.5px; padding:0.5rem 0.9rem; border-radius:6px; transition:all 0.4s; font-family: 'Inter', sans-serif !important; }
-    .nav-dropdown { position:relative; }
-    .dropdown-menu { position:absolute; top:calc(100% + 8px); left:0; background:#0a0a0a; border:1px solid rgba(212,175,55,0.15); border-radius:12px; padding:0.75rem; min-width:240px; opacity:0; visibility:hidden; transform:translateY(-8px); transition:all 0.4s; box-shadow:0 20px 40px rgba(0,0,0,0.8); z-index:100; }
-    .nav-dropdown:hover .dropdown-menu { opacity:1 !important; visibility:visible !important; transform:translateY(0) !important; }
-    .dropdown-menu a { display:block !important; padding:0.7rem 1.2rem !important; color:rgba(255,255,255,0.7) !important; border-radius:8px; font-size:0.85rem !important; text-transform: none !important; }
-    .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:0.5rem; z-index:100001; }
-    .nav-hamburger span { display:block; width:24px; height:2px; background:rgba(255,255,255,0.8); border-radius:2px; transition:all 0.4s; }
-    .mobile-menu { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:#050505; padding:72px 2rem 2rem; z-index:100000; flex-direction:column; gap:0.5rem; overflow-y: auto; }
-    .mobile-menu.open { display:flex !important; }
-    .mobile-menu a { color:rgba(255,255,255,0.8) !important; text-decoration:none !important; font-size:1.1rem; text-transform:uppercase; letter-spacing:2px; padding:1.2rem 0; border-bottom:1px solid rgba(255,255,255,0.05); }
-    .mobile-cta { margin-top:2rem; text-align:center; background:linear-gradient(135deg,#D4AF37,#B8860B); color:#000 !important; border-radius:8px; padding:1.2rem !important; font-weight:700; }
-    @media (max-width:1024px) { .nav-links { display:none !important; } .nav-hamburger { display:flex !important; } }
-    body { padding-top: 72px !important; }
-    .luxury-list li::before { content: '✓' !important; }
-/* ELB_CSS_END */
-</style>
+
 <style>
 
 /* ELB_STYLE_START */
     .global-nav { position:fixed; top:0; left:0; right:0; background:rgba(5,5,5,0.98); backdrop-filter:blur(24px); border-bottom:1px solid rgba(212,175,55,0.2); z-index:99999; }
     .global-nav-inner { display:flex; align-items:center; justify-content:space-between; height:72px; gap:1rem; max-width:1400px; margin:0 auto; padding:0 2rem; box-sizing: border-box; }
     .nav-brand { font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:600; color:#fff !important; text-decoration:none !important; }
+    .nav-gold { color:#D4AF37 !important; }
     .nav-links { display:flex; align-items:center; gap:0.25rem; list-style:none; flex:1; justify-content:center; margin:0; padding:0; }
     .nav-links a { color:rgba(255,255,255,0.7) !important; text-decoration:none !important; font-size:0.82rem; text-transform:uppercase; letter-spacing:1.5px; padding:0.5rem 0.9rem; border-radius:6px; transition:all 0.4s; font-family: 'Inter', sans-serif !important; }
     .nav-links a:hover { color:#D4AF37 !important; }
@@ -214,6 +80,7 @@
     .mobile-cta { margin-top:2rem; text-align:center; background:linear-gradient(135deg,#D4AF37,#B8860B); color:#000 !important; border-radius:8px; padding:1.2rem !important; font-weight:700; }
     @media (max-width:1024px) { .nav-links { display:none !important; } .nav-hamburger { display:flex !important; } }
     body { padding-top: 72px !important; }
+    .luxury-list li::before { content: '✓' !important; }
 /* ELB_STYLE_END */
 
 </style>
@@ -223,7 +90,7 @@
 <!-- ELB_NAV_START -->
     <nav class="global-nav">
         <div class="container global-nav-inner">
-            <a href="/" class="nav-brand" style="display: flex; align-items: center;"><img src="/assets/images/elb-logo.png" alt="Elite Luxury Bookings" style="height: 48px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 5px rgba(212,175,55,0.2));"></a>
+            <a href="/" class="nav-brand"><span class="nav-gold">Elite</span> Luxury Bookings</a>
             <ul class="nav-links">
                 <li class="nav-dropdown"><a href="/elite-private-jet-charter/">Private Jets</a>
                     <div class="dropdown-menu">
@@ -389,7 +256,7 @@
     <!-- ELB_FOOTER_START -->
     <footer class="section-padding" style="background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; margin-top: 5rem;">
         <div class="container">
-            <a href="/" style="display: block; margin-bottom: 2rem;"><img src="/assets/images/elb-logo.png" alt="Elite Luxury Bookings" style="height: 50px; width: auto; object-fit: contain; margin: 0 auto;"></a>
+            <a href="/" style="display: block; margin-bottom: 2rem; font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:600; color:#fff; text-decoration:none;"><span style="color:#D4AF37;">Elite</span> Luxury Bookings</a>
             <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 2rem;">
                 <a href="/elite-private-jet-charter/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Aviation Services</a>
                 <a href="/luxury-yacht-rentals/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Yacht Charter</a>

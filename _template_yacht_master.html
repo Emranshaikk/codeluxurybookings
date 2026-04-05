@@ -105,6 +105,7 @@
     .global-nav { position:fixed; top:0; left:0; right:0; background:rgba(5,5,5,0.98); backdrop-filter:blur(24px); border-bottom:1px solid rgba(212,175,55,0.2); z-index:99999; }
     .global-nav-inner { display:flex; align-items:center; justify-content:space-between; height:72px; gap:1rem; max-width:1400px; margin:0 auto; padding:0 2rem; box-sizing: border-box; }
     .nav-brand { font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:600; color:#fff !important; text-decoration:none !important; }
+    .nav-gold { color:#D4AF37 !important; }
     .nav-links { display:flex; align-items:center; gap:0.25rem; list-style:none; flex:1; justify-content:center; margin:0; padding:0; }
     .nav-links a { color:rgba(255,255,255,0.7) !important; text-decoration:none !important; font-size:0.82rem; text-transform:uppercase; letter-spacing:1.5px; padding:0.5rem 0.9rem; border-radius:6px; transition:all 0.4s; font-family: 'Inter', sans-serif !important; }
     .nav-links a:hover { color:#D4AF37 !important; }
@@ -120,6 +121,7 @@
     .mobile-cta { margin-top:2rem; text-align:center; background:linear-gradient(135deg,#D4AF37,#B8860B); color:#000 !important; border-radius:8px; padding:1.2rem !important; font-weight:700; }
     @media (max-width:1024px) { .nav-links { display:none !important; } .nav-hamburger { display:flex !important; } }
     body { padding-top: 72px !important; }
+    .luxury-list li::before { content: '✓' !important; }
 /* ELB_STYLE_END */
 
 </style>
@@ -129,7 +131,7 @@
 <!-- ELB_NAV_START -->
     <nav class="global-nav">
         <div class="container global-nav-inner">
-            <a href="/" class="nav-brand" style="display: flex; align-items: center;"><img src="/assets/images/elb-logo.png" alt="Elite Luxury Bookings" style="height: 48px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 5px rgba(212,175,55,0.2));"></a>
+            <a href="/" class="nav-brand"><span class="nav-gold">Elite</span> Luxury Bookings</a>
             <ul class="nav-links">
                 <li class="nav-dropdown"><a href="/elite-private-jet-charter/">Private Jets</a>
                     <div class="dropdown-menu">
@@ -270,7 +272,7 @@
 <!-- ELB_FOOTER_START -->
     <footer class="section-padding" style="background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; margin-top: 5rem;">
         <div class="container">
-            <a href="/" style="display: block; margin-bottom: 2rem;"><img src="/assets/images/elb-logo.png" alt="Elite Luxury Bookings" style="height: 50px; width: auto; object-fit: contain; margin: 0 auto;"></a>
+            <a href="/" style="display: block; margin-bottom: 2rem; font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:600; color:#fff; text-decoration:none;"><span style="color:#D4AF37;">Elite</span> Luxury Bookings</a>
             <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 2rem;">
                 <a href="/elite-private-jet-charter/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Aviation Services</a>
                 <a href="/luxury-yacht-rentals/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Yacht Charter</a>
