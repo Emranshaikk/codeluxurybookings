@@ -39,7 +39,7 @@
         html { scroll-behavior: smooth; }
         body { font-family: 'Inter', sans-serif; background: var(--deep-black); color: var(--text-main); line-height: 1.8; overflow-x: hidden; }
         h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond', serif; }
-        .container { max-width: 900px; margin: 0 auto; padding: 1.1rem 2rem; }
+        .container { max-width: 1300px; padding-top: 2rem; margin: 0 auto; padding: 1.1rem 2rem; }
         .gold-text { color: var(--primary-gold); }
         
         .glass-panel { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 20px; }
@@ -117,7 +117,22 @@
     .mobile-cta { margin-top:1rem; text-align:center; background:linear-gradient(135deg,#D4AF37,#B8860B); color:#000 !important; border-radius:8px; padding:1rem; font-weight:600; letter-spacing:2px; border-bottom:none !important; }
     @media (max-width:900px) { .nav-links { display:none; } .nav-cta { display:flex; } .btn-outline { display:none; } .nav-hamburger { display:flex; } }
     body { padding-top: 85px !important; }
-    </style>
+    
+
+/* ELB_BLOG_SIDEBAR_START */
+@media (min-width: 1100px) {
+    .blog-main-layout { display: flex; gap: 4rem; align-items: flex-start; max-width: 1300px; margin: 0 auto; padding-top: 100px; }
+    .blog-content-area { flex: 1; min-width: 0; }
+    .blog-sidebar { width: 320px; flex-shrink: 0; position: sticky; top: 120px; }
+}
+@media (max-width: 1099px) {
+    .blog-sidebar { margin: 4rem auto; text-align: center; }
+    .yacht-widget-container { display: inline-block; max-width: 320px; }
+}
+.yacht-widget-container { border-radius: 20px; overflow: hidden; border: 1px solid var(--glass-border); background: var(--graphene); box-shadow: 0 15px 35px rgba(0,0,0,0.4); }
+/* ELB_BLOG_SIDEBAR_END */
+
+</style>
 
 
 
@@ -171,6 +186,21 @@
     body { padding-top: 72px !important; }
     .luxury-list li::before { content: '✓' !important; }
 /* ELB_CSS_END */
+
+
+/* ELB_BLOG_SIDEBAR_START */
+@media (min-width: 1100px) {
+    .blog-main-layout { display: flex; gap: 4rem; align-items: flex-start; max-width: 1300px; margin: 0 auto; padding-top: 100px; }
+    .blog-content-area { flex: 1; min-width: 0; }
+    .blog-sidebar { width: 320px; flex-shrink: 0; position: sticky; top: 120px; }
+}
+@media (max-width: 1099px) {
+    .blog-sidebar { margin: 4rem auto; text-align: center; }
+    .yacht-widget-container { display: inline-block; max-width: 320px; }
+}
+.yacht-widget-container { border-radius: 20px; overflow: hidden; border: 1px solid var(--glass-border); background: var(--graphene); box-shadow: 0 15px 35px rgba(0,0,0,0.4); }
+/* ELB_BLOG_SIDEBAR_END */
+
 </style>
 </head>
 
@@ -248,7 +278,11 @@
             
             
 
-    <article class="container">
+    
+<div class="blog-main-layout">
+    <div class="blog-content-area">
+        <article class="container" style="max-width: 900px; padding: 0;">
+            
         <header class="blog-header">
             <div class="blog-meta">Elite Riviera Insights â€¢ April 4, 2026</div>
             <h1>Italian Riviera Yacht Charter: Portofino to Cinque Terre</h1>
@@ -310,7 +344,23 @@
                 <a href="/" class="btn btn-outline">Return to Excellence</a>
             </div>
         </div>
-    </article>
+    
+        </article>
+    </div>
+    
+<!-- ELB_YACHTING_WIDGET_START -->
+<aside class="blog-sidebar">
+    <div class="yacht-widget-container">
+        <a href="https://www.yachting.com/en-gb?AffiliateID=elbookings&amp;BannerID=1729a6e6" target="_top">
+            <img src="//affiliate.yachting.com/accounts/default1/ne6ayxbkog/1729a6e6.png" alt="Exclusive Yacht Charter" title="Book Premium Yachts" width="320" height="1200" style="width:100%; height:auto; display:block;" />
+        </a>
+        <img style="border:0" src="https://affiliate.yachting.com/scripts/ne6ayxikog?AffiliateID=elbookings&amp;BannerID=1729a6e6" width="1" height="1" alt="" />
+    </div>
+</aside>
+<!-- ELB_YACHTING_WIDGET_END -->
+
+</div>
+
 
                         <!-- SINGLE SILO -->
 
@@ -436,7 +486,22 @@
     .mobile-cta { margin-top:1rem; text-align:center; background:linear-gradient(135deg,#D4AF37,#B8860B); color:#000 !important; border-radius:8px; padding:1rem; font-weight:600; letter-spacing:2px; border-bottom:none !important; }
     @media (max-width:900px) { .nav-links { display:none; } .nav-cta { display:flex; } .btn-outline { display:none; } .nav-hamburger { display:flex; } }
     body { padding-top: 85px !important; }
-    </style>
+    
+
+/* ELB_BLOG_SIDEBAR_START */
+@media (min-width: 1100px) {
+    .blog-main-layout { display: flex; gap: 4rem; align-items: flex-start; max-width: 1300px; margin: 0 auto; padding-top: 100px; }
+    .blog-content-area { flex: 1; min-width: 0; }
+    .blog-sidebar { width: 320px; flex-shrink: 0; position: sticky; top: 120px; }
+}
+@media (max-width: 1099px) {
+    .blog-sidebar { margin: 4rem auto; text-align: center; }
+    .yacht-widget-container { display: inline-block; max-width: 320px; }
+}
+.yacht-widget-container { border-radius: 20px; overflow: hidden; border: 1px solid var(--glass-border); background: var(--graphene); box-shadow: 0 15px 35px rgba(0,0,0,0.4); }
+/* ELB_BLOG_SIDEBAR_END */
+
+</style>
 </div>
 
 
@@ -561,7 +626,22 @@
     .mobile-cta { margin-top:1rem; text-align:center; background:linear-gradient(135deg,#D4AF37,#B8860B); color:#000 !important; border-radius:8px; padding:1rem; font-weight:600; letter-spacing:2px; border-bottom:none !important; }
     @media (max-width:900px) { .nav-links { display:none; } .nav-cta { display:flex; } .btn-outline { display:none; } .nav-hamburger { display:flex; } }
     body { padding-top: 85px !important; }
-    </style>
+    
+
+/* ELB_BLOG_SIDEBAR_START */
+@media (min-width: 1100px) {
+    .blog-main-layout { display: flex; gap: 4rem; align-items: flex-start; max-width: 1300px; margin: 0 auto; padding-top: 100px; }
+    .blog-content-area { flex: 1; min-width: 0; }
+    .blog-sidebar { width: 320px; flex-shrink: 0; position: sticky; top: 120px; }
+}
+@media (max-width: 1099px) {
+    .blog-sidebar { margin: 4rem auto; text-align: center; }
+    .yacht-widget-container { display: inline-block; max-width: 320px; }
+}
+.yacht-widget-container { border-radius: 20px; overflow: hidden; border: 1px solid var(--glass-border); background: var(--graphene); box-shadow: 0 15px 35px rgba(0,0,0,0.4); }
+/* ELB_BLOG_SIDEBAR_END */
+
+</style>
 </div>
 <div id="footer-silo-placeholder">
 <section class="section-padding" style="background: rgba(212, 175, 55, 0.02); border-top: 1px solid var(--glass-border);">
@@ -654,6 +734,21 @@
     @media (max-width: 768px) {
         .hub-grid { grid-template-columns: 1fr !important; gap: 1.5rem; }
     }
+
+
+/* ELB_BLOG_SIDEBAR_START */
+@media (min-width: 1100px) {
+    .blog-main-layout { display: flex; gap: 4rem; align-items: flex-start; max-width: 1300px; margin: 0 auto; padding-top: 100px; }
+    .blog-content-area { flex: 1; min-width: 0; }
+    .blog-sidebar { width: 320px; flex-shrink: 0; position: sticky; top: 120px; }
+}
+@media (max-width: 1099px) {
+    .blog-sidebar { margin: 4rem auto; text-align: center; }
+    .yacht-widget-container { display: inline-block; max-width: 320px; }
+}
+.yacht-widget-container { border-radius: 20px; overflow: hidden; border: 1px solid var(--glass-border); background: var(--graphene); box-shadow: 0 15px 35px rgba(0,0,0,0.4); }
+/* ELB_BLOG_SIDEBAR_END */
+
 </style>
 </div>
 <footer>
