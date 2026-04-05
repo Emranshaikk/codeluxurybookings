@@ -13,10 +13,10 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Meta Tags - CTR Optimized for Yacht Charter -->
+    <!-- SEO Meta Tags - CTR Optimized for Elite Authority -->
     <title>Yacht Charter Ibiza | Elite Luxury Yacht Charter & Rental</title>
     <meta name="description" content="Experience the ultimate Yacht Charter Ibiza. Bespoke luxury yacht rentals with full crew, Michelin-tier catering, and professional concierge coordination.">
-    <link rel="canonical" href="https://eliteluxurybookings.com/yacht-charter-ibiza/">
+    <link rel="canonical" href="https://eliteluxurybookings.com/blog/{{SLUG}}/">
 
     <!-- Premium Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,65 +37,99 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
         html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; background: var(--deep-black); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
+        body { font-family: 'Inter', sans-serif; background: var(--deep-black); color: var(--text-main); line-height: 1.8; overflow-x: hidden; }
         h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond', serif; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
         .gold-text { color: var(--primary-gold); }
+        
         .glass-panel { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 20px; }
 
-        .hero { padding: 120px 0 60px; text-align: center; position: relative; background: radial-gradient(circle at center, rgba(212, 175, 55, 0.05) 0%, var(--deep-black) 70%); }
-        .hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 300; margin-bottom: 1.5rem; line-height: 1.1; }
-        .hero-sub { font-size: 1.2rem; color: var(--text-muted); max-width: 800px; margin: 0 auto 3rem; }
-
-        .form-section { padding: 4rem 0 8rem; }
-        .form-wrapper { max-width: 900px; margin: 0 auto; padding: 4rem; border-radius: 30px; background: rgba(26, 26, 26, 0.6); border: 1px solid var(--glass-border); text-align: left; }
-        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-        .form-group { display: flex; flex-direction: column; gap: 0.8rem; }
-        .form-group.full { grid-column: 1 / -1; }
-        .form-group label { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold); }
-        .form-control { background: transparent; border: none; border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding: 1rem 0; color: #fff; font-family: 'Inter', sans-serif; font-size: 1.1rem; transition: var(--transition); }
-        .form-control:focus { outline: none; border-bottom-color: var(--primary-gold); background: rgba(255, 255, 255, 0.02); }
+        .blog-header { padding: 120px 0 60px; text-align: center; }
+        .blog-meta { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 3px; color: var(--primary-gold); margin-bottom: 1.5rem; }
+        .blog-header h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300; line-height: 1.1; margin-bottom: 2rem; }
         
-        select.form-control { appearance: none; background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http:/www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D4AF37' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e"); background-repeat: no-repeat; background-position: right 0 center; background-size: 1em; padding-right: 2rem; }
-        select.form-control option { background-color: var(--deep-black); color: #fff; }
+        .hero-image-container { margin: 3rem 0; border-radius: 30px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .blog-hero-img { width: 100%; height: auto; display: block; transform: scale(1.02); transition: transform 0.8s ease; }
+        .hero-image-container:hover .blog-hero-img { transform: scale(1); }
+        
+        .blog-content { font-size: 1.15rem; color: #ddd; }
+        .blog-content p { margin-bottom: 2rem; }
+        .blog-content h2 { font-size: 2.5rem; margin: 3rem 0 1.5rem; color: var(--primary-gold); }
+        .blog-content h3 { font-size: 2rem; margin: 2rem 0 1rem; color: #fff; }
+        .blog-content img { width: 100%; border-radius: 20px; margin: 3rem 0; border: 1px solid var(--glass-border); }
+        
+        .affiliate-widget { margin: 4rem 0; padding: 3rem; border-radius: 25px; background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.pexels.com/photos/163236/luxury-yacht-boat-speed-water-163236.jpeg?auto=compress&cs=tinysrgb&w=1200'); background-size: cover; border: 1px solid var(--glass-border); text-align: center; }
+        .affiliate-widget h3 { font-size: 2.2rem; color: var(--primary-gold); margin-bottom: 1rem; }
+        .affiliate-widget p { color: #fff; margin-bottom: 2rem; font-size: 1.1rem; }
 
-        /* Calendar Icon Visibility Fix */
-        input[type="date"]::-webkit-calendar-picker-indicator {
-            filter: invert(1);
-            cursor: pointer;
-            opacity: 0.6;
-            transition: var(--transition);
-        }
-        input[type="date"]::-webkit-calendar-picker-indicator:hover {
-            opacity: 1;
-        }
-
-        .section-padding { padding: 8rem 0; }
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: flex-start; }
-        .seo-content { font-size: 1.05rem; color: #ddd; line-height: 1.8; }
-        .seo-content p { margin-bottom: 1.5rem; }
-        .seo-content h2 { font-size: 3rem; margin: 3rem 0 1.5rem; color: var(--primary-gold); }
-        .seo-content h3 { font-size: 2.2rem; margin: 2rem 0 1rem; color: #fff; }
-
-        .luxury-list { list-style: none; margin: 2rem 0; }
-        .luxury-list li { position: relative; padding-left: 2.5rem; margin-bottom: 1.5rem; color: #ddd; }
-        .luxury-list li::before { content: 'âœ“'; position: absolute; left: 0; color: var(--primary-gold); font-weight: 900; font-size: 1.2rem; }
-
+        .cta-box { background: var(--graphene); border: 1px solid var(--glass-border); padding: 4rem; border-radius: 30px; margin-top: 6rem; text-align: center; }
         .btn { display: inline-block; padding: 1.2rem 2.5rem; border-radius: 8px; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; text-decoration: none; transition: var(--transition); cursor: pointer; text-align: center; border: none; }
-        .btn-gold { background: linear-gradient(135deg, var(--primary-gold), #B8860B); color: #000; }
-        .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2); }
+        .btn-gold { background: linear-gradient(135deg, var(--primary-gold), #B8860B); color: #000; margin-top: 2rem; }
+        .btn-outline { background: transparent; color: var(--primary-gold); border: 1px solid var(--primary-gold); margin-top: 1rem; }
 
-        .tag-strip { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap; }
-        .tag-item { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold); font-weight: 600; }
+        .author-card { display: flex; align-items: center; gap: 1.5rem; padding: 3rem 0; border-top: 1px solid var(--glass-border); margin-top: 4rem; }
+        .author-img { width: 60px; height: 60px; border-radius: 50%; background: var(--primary-gold); }
+        .author-info { font-style: italic; color: var(--text-muted); }
 
-        @keyframes fadeUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        footer { padding: 8rem 0; background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; }
+        .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: #fff; margin-bottom: 1.5rem; }
+        .footer-links { display: flex; justify-content: center; gap: 3rem; margin-bottom: 2rem; }
+        .footer-links a { color: var(--text-muted); text-decoration: none; transition: var(--transition); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-links a:hover { color: var(--primary-gold); }
+    </style>
+</head>
 
-        @media (max-width: 1024px) { .grid-2 { grid-template-columns: 1fr; gap: 3rem; } .form-grid { grid-template-columns: 1fr; } }
-        @media (max-width: 768px) {
-            .section-padding { padding: 4rem 0; }
-            .hero h1 { font-size: clamp(2.2rem, 8vw, 3.5rem); }
-            .form-wrapper { padding: 2.5rem 1.5rem; }
-        }
+<body>
+
+    <article class="container">
+        <header class="blog-header">
+            <div class="blog-meta">Elite Authority Insights â€¢ {{DATE}}</div>
+            <h1>{{TITLE}}</h1>
+            
+            {{#if HERO_IMAGE}}
+            <div class="hero-image-container">
+                <img src="{{HERO_IMAGE}}" alt="{{TITLE}}" class="blog-hero-img">
+            </div>
+            {{/if}}
+
+            <div class="author-card">
+                <div class="author-img"></div>
+                <div class="author-info">Curated by the Elite Luxury Concierge Team</div>
+            </div>
+        </header>
+
+<style>
+    .hub-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+    .internal-link {
+        color: var(--text-main);
+        text-decoration: none;
+        transition: var(--transition);
+        font-size: 0.95rem;
+    }
+    .internal-link:hover {
+        color: var(--primary-gold);
+        padding-left: 5px;
+    }
+    @media (max-width: 1024px) {
+        .hub-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 2rem; }
+    }
+    @media (max-width: 768px) {
+        .hub-grid { grid-template-columns: 1fr !important; gap: 1.5rem; }
+    }
+                    /* ===== UPGRADED FOOTER CSS ===== */
+    footer { background: #000; border-top: 1px solid rgba(255,255,255,0.05); }
+    @media (max-width: 900px) {
+        footer > div > div:first-child { justify-content: flex-start !important; gap: 2rem !important; }
+    }
+    @media (max-width: 600px) {
+        footer > div > div:first-child { flex-direction: column !important; align-items: center !important; text-align: center !important; }
+        footer > div > div:first-child > div { width: 100% !important; max-width: 100% !important; }
+        footer > div > div:last-child { flex-direction: column !important; text-align: center !important; }
+    }
 
     .global-nav-inner { display:flex; align-items:center; justify-content:space-between; height:72px; gap:1rem; max-width:1400px; margin:0 auto; padding:0 2rem; }
     .nav-brand { font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:600; color:#fff; text-decoration:none; white-space:nowrap; flex-shrink:0; }
@@ -123,171 +157,7 @@
     @media (max-width:900px) { .nav-links { display:none; } .nav-cta { display:flex; } .btn-outline { display:none; } .nav-hamburger { display:flex; } }
     body { padding-top: 85px !important; }
     </style>
-
-<style>
-/* ELB_CSS_START */
-    .global-nav { position:fixed; top:0; left:0; right:0; background:rgba(5,5,5,0.98); backdrop-filter:blur(24px); border-bottom:1px solid rgba(212,175,55,0.2); z-index:99999; }
-    .global-nav-inner { display:flex; align-items:center; justify-content:space-between; height:72px; gap:1rem; max-width:1400px; margin:0 auto; padding:0 2rem; box-sizing: border-box; }
-    .nav-brand { font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:600; color:#fff !important; text-decoration:none !important; }
-    .nav-gold { color:#D4AF37 !important; }
-    .nav-links { display:flex; align-items:center; gap:0.25rem; list-style:none; flex:1; justify-content:center; margin:0; padding:0; }
-    .nav-links a { color:rgba(255,255,255,0.7) !important; text-decoration:none !important; font-size:0.82rem; text-transform:uppercase; letter-spacing:1.5px; padding:0.5rem 0.9rem; border-radius:6px; transition:all 0.4s; font-family: 'Inter', sans-serif !important; }
-    .nav-dropdown { position:relative; }
-    .dropdown-menu { position:absolute; top:calc(100% + 8px); left:0; background:#0a0a0a; border:1px solid rgba(212,175,55,0.15); border-radius:12px; padding:0.75rem; min-width:240px; opacity:0; visibility:hidden; transform:translateY(-8px); transition:all 0.4s; box-shadow:0 20px 40px rgba(0,0,0,0.8); z-index:100; }
-    .nav-dropdown:hover .dropdown-menu { opacity:1 !important; visibility:visible !important; transform:translateY(0) !important; }
-    .dropdown-menu a { display:block !important; padding:0.7rem 1.2rem !important; color:rgba(255,255,255,0.7) !important; border-radius:8px; font-size:0.85rem !important; text-transform: none !important; }
-    .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:0.5rem; z-index:100001; }
-    .nav-hamburger span { display:block; width:24px; height:2px; background:rgba(255,255,255,0.8); border-radius:2px; transition:all 0.4s; }
-    .mobile-menu { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:#050505; padding:72px 2rem 2rem; z-index:100000; flex-direction:column; gap:0.5rem; overflow-y: auto; }
-    .mobile-menu.open { display:flex !important; }
-    .mobile-menu a { color:rgba(255,255,255,0.8) !important; text-decoration:none !important; font-size:1.1rem; text-transform:uppercase; letter-spacing:2px; padding:1.2rem 0; border-bottom:1px solid rgba(255,255,255,0.05); }
-    .mobile-cta { margin-top:2rem; text-align:center; background:linear-gradient(135deg,#D4AF37,#B8860B); color:#000 !important; border-radius:8px; padding:1.2rem !important; font-weight:700; }
-    @media (max-width:1024px) { .nav-links { display:none !important; } .nav-hamburger { display:flex !important; } }
-    body { padding-top: 72px !important; }
-    .luxury-list li::before { content: '✓' !important; }
-/* ELB_CSS_END */
-</style>
-</head>
-
-<body>
-<!-- ELB_NAV_START -->
-    <nav class="global-nav">
-        <div class="container global-nav-inner">
-            <a href="/" class="nav-brand">Elite Luxury <span class="nav-gold">Bookings</span></a>
-            <ul class="nav-links">
-                <li class="nav-dropdown"><a href="/elite-private-jet-charter/">Private Jets</a>
-                    <div class="dropdown-menu">
-                        <a href="/elite-private-jet-charter/">Jet Charters Overview</a>
-                        <a href="/private-jet-rental-prices/">Rental Prices</a>
-                        <a href="/types-of-private-jets/">Types of Jets</a>
-                        <a href="/empty-leg-flights-discount/">Empty Leg Deals</a>
-                        <a href="/private-jet-for-business-travel/">Business Travel</a>
-                    </div>
-                </li>
-                <li class="nav-dropdown"><a href="/luxury-yacht-rentals/">Luxury Yachts</a>
-                    <div class="dropdown-menu">
-                        <a href="/luxury-yacht-rentals/">Yacht Charter Overview</a>
-                        <a href="/luxury-yacht-rentals/renting-catamaran/">Catamaran Rentals</a>
-                        <a href="/luxury-yacht-rentals/best-sailing-yacht-charter/">Sailing Yachts</a>
-                        <a href="/luxury-yacht-rentals/bareboat-charter-guide/">Bareboat Guide</a>
-                        <a href="/luxury-yacht-rentals/guide-to-mediterranean-yacht-charter/">Mediterranean Guide</a>
-                    </div>
-                </li>
-                <li class="nav-dropdown"><a href="/luxury-villa-rentals/">Exclusive Villas</a>
-                    <div class="dropdown-menu">
-                        <a href="/luxury-villa-rentals/">Villa Rentals Overview</a>
-                        <a href="/luxury-villas/">Luxury Villa Guide</a>
-                    </div>
-                </li>
-                <li><a href="/blog/index.html">Blog</a></li>
-            </ul>
-            <div class="nav-cta"><a href="https://wa.me/918801079030" class="btn btn-gold" target="_blank">WhatsApp</a></div>
-            <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></div>
-        </div>
-    </nav>
-    <div class="mobile-menu" id="elbMobileMenu">
-        <a href="/elite-private-jet-charter/">✈ Private Jets</a>
-        <a href="/luxury-yacht-rentals/">⛵ Luxury Yachts</a>
-        <a href="/luxury-villa-rentals/">🏛 Exclusive Villas</a>
-        <a href="/blog/index.html">📖 Blog</a>
-        <a href="/contact/">📧 Contact</a>
-        <a href="https://wa.me/918801079030" class="mobile-cta" target="_blank">WhatsApp Concierge →</a>
-    </div>
-<!-- ELB_NAV_END -->
-
-    <header class="hero">
-        <div class="container">
-            <div class="tag-strip">
-                <span class="tag-item">Global Yacht Network</span>
-                <span class="tag-item">5-Star Crewed Charters</span>
-                <span class="tag-item">Confidential Coordination</span>
-            </div>
-
-            <h1>Yacht Charter Ibiza</h1>
-            <p class="hero-sub">Experience the pinnacle of maritime luxury. Our bespoke <strong>Yacht Charter Ibiza</strong> services offer discrete, Michelin-tier transitions across the world's most exclusive waters.</p>
-
-            <div class="form-wrapper glass-panel">
-                <div id="form-container">
-                    <form id="leadForm" onsubmit="submitLead(event)">
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="name">Full Name *</label>
-                                <input type="text" id="name" name="fullName" class="form-control" placeholder="Hon. John Doe" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Private Email *</label>
-                                <input type="email" id="email" name="email" class="form-control" placeholder="client@exclusive.com" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="whatsapp">WhatsApp Number *</label>
-                                <input type="tel" id="whatsapp" name="phone" class="form-control" placeholder="+1 234 567 8900" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="service">Service Interested</label>
-                                <select id="service" name="services" class="form-control">
-                                    <option value="Luxury Yacht Charter" selected>Luxury Yacht Charter</option>
-                                    <option value="Private Jet Charter">Private Jet Charter</option>
-                                    <option value="Private Villa Rental">Private Villa Rental</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="date">Estimated Date</label>
-                                <input type="date" id="date" name="travelDate" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="guests">Number of Guests</label>
-                                <input type="number" id="guests" name="passengers" class="form-control" min="1" placeholder="e.g. 4">
-                            </div>
-                            <div class="form-group full">
-                                <label for="budget">Estimated Budget Range</label>
-                                <select id="budget" name="budget" class="form-control">
-                                    <option value="">Select Range</option>
-                                    <option value="50k+">$50,000+</option>
-                                    <option value="100k+">$100,000+</option>
-                                    <option value="250k+">$250,000+</option>
-                                    <option value="500k+">$500,000+</option>
-                                </select>
-                            </div>
-                            <div class="form-group full">
-                                <label for="requirements">Additional Requirements</label>
-                                <textarea id="requirements" name="requirements" class="form-control" style="resize:vertical; min-height:80px;" placeholder="Destinations, catering rules, security needs..."></textarea>
-                            </div>
-                            <div class="form-group full" style="margin-top: 1.5rem;">
-                                <button type="submit" id="submitBtn" class="btn btn-gold" style="width: 100%; padding: 1.5rem;">Secure My Private Proposal</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div id="formMsg" style="display:none; text-align:center; padding: 2rem 0;">
-                    <h3 class="serif gold-text" style="font-size: 2.5rem; margin-bottom: 1rem;">Proposal Requested</h3>
-                    <p style="color: #fff; font-size: 1.1rem; margin-bottom: 2rem;">A senior concierge will contact you shortly via WhatsApp for immediate coordination.</p>
-                    <a href="https://wa.me/918801079030" class="btn btn-gold" target="_blank">Speak Instantly with Concierge</a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section class="section-padding" style="background: rgba(212, 175, 55, 0.02); border-bottom: 1px solid var(--glass-border);">
-        <div class="container">
-            <div class="grid-2">
-                <div class="seo-content">
-                    <h2 class="serif">Bespoke Excellence: Yacht Charter Ibiza Guide</h2>
-                    <p>Securing a <strong>Yacht Charter Ibiza</strong> is more than a transaction; it is the coordination of a world-class maritime experience. Our fleet selection is curated for those who demand absolute discretion and Michelin-tier standards on the water.</p>
-                    <p>From the Balearics to the Amalfi Coast, every itinerary is tailored to your specific requirements, ensuring your time at sea is as productive or as relaxing as you desire.</p>
-                </div>
-                <div class="glass-panel" style="padding: 3rem;">
-                    <h3 class="serif gold-text" style="margin-top:0; font-size: 2rem;">Charter Standards</h3>
-                    <ul class="luxury-list">
-                        <li><strong>Professional Crew:</strong> Fully vetted, multi-lingual elite staff.</li>
-                        <li><strong>Onboard Culinary:</strong> Private chefs trained in Michelin-starred environments.</li>
-                        <li><strong>Worldwide Access:</strong> From hidden coves to the world's most exclusive marinas.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SILO TARGET -->
+</div>
 
             <!-- Column 2: The Americas Hub -->
 
@@ -320,110 +190,17 @@
 </section>
 
 <footer>
-        <div class="container" style="max-width:1300px; margin:0 auto; padding:0 2rem;">
-
-            <!-- Footer Top: Brand + Nav -->
-            <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:4rem; padding:5rem 0 3rem; border-bottom:1px solid rgba(212,175,55,0.1); text-align:left;">
-
-                <!-- Brand Column -->
-                <div style="flex:1; min-width:280px; margin-bottom:2rem;">
-                    <div style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; color:#fff; margin-bottom:1rem; line-height:1.2;">Elite Luxury <span style="color:#D4AF37;">Bookings</span></div>
-                    <p style="color:rgba(255,255,255,0.5); font-size:0.95rem; line-height:1.8; max-width:300px;">Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
-                    <a href="https://wa.me/918801079030" target="_blank" style="display:inline-flex; align-items:center; gap:0.6rem; margin-top:2rem; background:#25D366; color:#fff; padding:0.9rem 1.8rem; border-radius:12px; text-decoration:none; font-size:0.85rem; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; transition:all 0.3s; box-shadow: 0 10px 20px rgba(37,211,102,0.15);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 15px 30px rgba(37,211,102,0.25)'" onmouseout="this.style.transform=''; this.style.boxShadow='0 10px 20px rgba(37,211,102,0.15)'">
-                        <svg xmlns="http:/www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326z"/></svg>
-                        WhatsApp Concierge
-                    </a>
-                </div>
-
-                <!-- Services Column -->
-                <div style="min-width:160px; margin-bottom:2rem;">
-                    <div style="font-size:0.8rem; text-transform:uppercase; letter-spacing:2.5px; color:#D4AF37; margin-bottom:1.5rem; font-weight:700;">Services</div>
-                    <ul style="list-style:none; display:flex; flex-direction:column; gap:1rem; padding:0; margin:0;">
-                        <li><a href="/elite-private-jet-charter/" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Private Jets</a></li>
-                        <li><a href="/luxury-yacht-rentals/" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Luxury Yachts</a></li>
-                        <li><a href="/luxury-villa-rentals/" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Exclusive Villas</a></li>
-                    </ul>
-                </div>
-
-                <!-- Popular Guides Column -->
-                <div style="min-width:180px; margin-bottom:2rem;">
-                    <div style="font-size:0.8rem; text-transform:uppercase; letter-spacing:2.5px; color:#D4AF37; margin-bottom:1.5rem; font-weight:700;">Popular Guides</div>
-                    <ul style="list-style:none; display:flex; flex-direction:column; gap:1rem; padding:0; margin:0;">
-                        <li><a href="/private-jet-rental-prices/" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Jet Rental Prices</a></li>
-                        <li><a href="/empty-leg-flights-discount/" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Empty Leg Deals</a></li>
-                        <li><a href="/types-of-private-jets/" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Types of Jets</a></li>
-                        <li><a href="/guide-to-mediterranean-yacht-charter/" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Mediterranean Charter</a></li>
-                        <li><a href="/luxury-villas/" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Luxury Villa Guide</a></li>
-                    </ul>
-                </div>
-
-                <!-- Company Column -->
-                <div style="min-width:140px; margin-bottom:2rem;">
-                    <div style="font-size:0.8rem; text-transform:uppercase; letter-spacing:2.5px; color:#D4AF37; margin-bottom:1.5rem; font-weight:700;">Company</div>
-                    <ul style="list-style:none; display:flex; flex-direction:column; gap:1rem; padding:0; margin:0;">
-                        <li><a href="/blog/index.html" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Blog</a></li>
-                        <li><a href="/contact/" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Contact Us</a></li>
-                        <li><a href="https://wa.me/918801079030" target="_blank" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">WhatsApp</a></li>
-                    </ul>
-                </div>
-
+        <div class="container">
+            <div class="footer-brand">Elite Luxury Bookings</div>
+            <div class="footer-links">
+                <a href="/elite-private-jet-charter/">Private Jets</a>
+                <a href="/luxury-yacht-rentals/">Luxury Yachts</a>
+                <a href="/luxury-villa-rentals/">Exclusive Villas</a>
             </div>
-
-            <!-- Footer Bottom: Copyright -->
-            <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; padding:3rem 0; gap:1.5rem;">
-                <p style="color:rgba(255,255,255,0.35); font-size:0.85rem; letter-spacing:0.5px;">&copy; 2026 Elite Luxury Bookings. All rights reserved. Global Concierge Service.</p>
-                <div style="display:flex; gap:2rem; flex-wrap:wrap;">
-                    <a href="/elite-private-jet-charter/" style="color:rgba(255,255,255,0.35); text-decoration:none; font-size:0.8rem; text-transform:uppercase; letter-spacing:1.5px;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Private Jets</a>
-                    <a href="/luxury-yacht-rentals/" style="color:rgba(255,255,255,0.35); text-decoration:none; font-size:0.8rem; text-transform:uppercase; letter-spacing:1.5px;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Yachts</a>
-                    <a href="/blog/index.html" style="color:rgba(255,255,255,0.35); text-decoration:none; font-size:0.8rem; text-transform:uppercase; letter-spacing:1.5px;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Blog</a>
-                    <a href="/contact/" style="color:rgba(255,255,255,0.35); text-decoration:none; font-size:0.8rem; text-transform:uppercase; letter-spacing:1.5px;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Contact</a>
-                </div>
-            </div>
-
+            <p style="color: var(--text-muted); font-size: 0.9rem; letter-spacing: 0.5px;">Â© 2026 Elite Luxury Bookings. All rights reserved. Global Concierge Service.</p>
         </div>
     </footer>
 
-    <script>
-        const endpoint = 'https://script.google.com/macros/s/AKfycbxwH6b82MCg90tYS-yTwUMWw1ePx2S3oBdn3BC5U1UAt2uQRCB2bq03bzPP52ygUGU6UA/exec';
-
-        async function submitLead(event) {
-            event.preventDefault();
-            const btn = document.getElementById('submitBtn');
-            const form = document.getElementById('leadForm');
-            const msg = document.getElementById('formMsg');
-
-            btn.innerText = 'SECURELY SENDING...';
-            btn.disabled = true;
-
-            const formData = new FormData(form);
-            const data = {};
-            formData.forEach((value, key) => data[key] = value);
-            
-            / Add Page Context
-            data['Source_Keyword'] = "Yacht Charter Ibiza";
-
-            try {
-                await fetch(endpoint, {
-                    method: 'POST', mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
-                });
-
-                form.style.display = 'none';
-                msg.style.display = 'block';
-            } catch (error) {
-                console.error(error);
-                alert('Connection issue. Please connect directly with your concierge via WhatsApp.');
-            } finally {
-                btn.innerText = 'Secure My Private Proposal';
-                btn.disabled = false;
-            }
-        }
-    </script>
-
-<!-- ELB_JS_START -->
-    <script>function toggleMobileMenu(){var m=document.getElementById('elbMobileMenu'),b=document.getElementById('navHamburger');if(m&&b){m.classList.toggle('open');b.classList.toggle('open');}}</script>
-<!-- ELB_JS_END -->
 </body>
 </html>
 

@@ -606,12 +606,12 @@
     .nav-links a { color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.82rem; text-transform:uppercase; letter-spacing:1.5px; padding:0.5rem 0.9rem; border-radius:6px; transition:all 0.4s; white-space:nowrap; }
     .nav-links a:hover { color:#D4AF37; }
     .nav-dropdown { position:relative; }
-    .nav-dropdown > a::after { content:' \u25be'; font-size:0.7rem; }
+    .nav-dropdown > a::after {  font-size:0.7rem; }
     .dropdown-menu { position:absolute; top:calc(100% + 8px); left:0; background:#0f0f0f; border:1px solid rgba(212,175,55,0.15); border-radius:12px; padding:0.75rem; min-width:220px; opacity:0; visibility:hidden; transform:translateY(-8px); transition:all 0.4s; box-shadow:0 20px 40px rgba(0,0,0,0.6); z-index:100; }
     .nav-dropdown:hover .dropdown-menu { opacity:1; visibility:visible; transform:translateY(0); }
     .dropdown-menu a { display:block; padding:0.6rem 1rem; color:rgba(255,255,255,0.6) !important; border-radius:8px; font-size:0.82rem; letter-spacing:1px; }
     .dropdown-menu a:hover { color:#D4AF37 !important; background:rgba(212,175,55,0.06); }
-    .nav-cta { display:flex; gap:0.6rem; align-items:center; flex-shrink:0; }
+    .nav-cta { display:flex; gap:0.6rem; align-items:center; flex-shrink:0; justify-content:center; }
     .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:0.5rem; }
     .nav-hamburger span { display:block; width:24px; height:2px; background:rgba(255,255,255,0.6); border-radius:2px; transition:all 0.4s; }
     .nav-hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); background:#D4AF37; }
@@ -1505,6 +1505,23 @@
     </div>
 </section>
 
+
+    <!-- SILO Internal Links -->
+    <div class="container" style="padding: 4rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="section-header">
+            <h2 style="font-size: 2.5rem; text-align: center;">Popular Global Routes</h2>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+            <a href="/newyork-to-london-private-jet-cost/" class="btn btn-outline btn-sm">New York to London</a>
+            <a href="/dubai-to-london-private-jet-cost/" class="btn btn-outline btn-sm">Dubai to London</a>
+            <a href="/paris-to-dubai-private-jet-cost/" class="btn btn-outline btn-sm">Paris to Dubai</a>
+            <a href="/losangeles-to-tokyo-private-jet-cost/" class="btn btn-outline btn-sm">Los Angeles to Tokyo</a>
+            <a href="/miami-to-newyork-private-jet-cost/" class="btn btn-outline btn-sm">Miami to New York</a>
+            <a href="/london-to-ibiza-private-jet-cost/" class="btn btn-outline btn-sm">London to Ibiza</a>
+            <a href="/elite-private-jet-charter/" class="btn btn-gold btn-sm">View All Routes</a>
+        </div>
+    </div>
+    
 <footer>
         <div class="container" style="max-width:1300px; margin:0 auto; padding:0 2rem;">
 
@@ -1608,7 +1625,7 @@
             }
         }
 
-        / --- SUBTLE PARALLAX ENGINE ---
+        // --- SUBTLE PARALLAX ENGINE ---
         document.addEventListener('DOMContentLoaded', () => {
             const heroBg = document.getElementById('heroBg');
             const heroHeadline = document.querySelector('.hero-headline');
