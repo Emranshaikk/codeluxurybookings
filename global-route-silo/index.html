@@ -2,7 +2,7 @@
     <div class="container">
         <h2 class="serif" style="font-size: 3rem; text-align: center; margin-bottom: 4rem;">Global <span class="gold-text">Aviation Network</span></h2>
         
-        <div class="grid-2" style="grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+        <div class="hub-grid" style="grid-template-columns: repeat(4, 1fr); gap: 2rem;">
             <!-- Column 1: UK & Europe Hub -->
             <div class="glass-panel" style="padding: 2rem;">
                 <h3 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">UK & Europe Hub</h3>
@@ -27,7 +27,7 @@
                     <li><a href="/chicago-to-miami-private-jet-cost/" class="internal-link">Chicago to Miami</a></li>
                     <li><a href="/elite-private-jet-charter/" class="internal-link">Miami to Cancun</a></li>
                     <li><a href="/dallas-to-denver-private-jet-cost/" class="internal-link">Dallas to Denver</a></li>
-                    <li><a href="/elite-private-jet-charter/" class="internal-link">NYC to Turks & Caicos</a></li>
+                    <li><a href="/miami-to-turksandcaicos-private-jet-cost/" class="internal-link">Miami to Turks & Caicos</a></li>
                 </ul>
             </div>
 
@@ -67,6 +67,11 @@
 </section>
 
 <style>
+    .hub-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
     .internal-link {
         color: var(--text-main);
         text-decoration: none;
@@ -78,10 +83,10 @@
         padding-left: 5px;
     }
     @media (max-width: 1024px) {
-        .grid-2 { grid-template-columns: repeat(2, 1fr) !important; gap: 2rem; }
+        .hub-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 2rem; }
     }
     @media (max-width: 768px) {
-        .grid-2 { grid-template-columns: 1fr !important; gap: 1.5rem; }
+        .hub-grid { grid-template-columns: 1fr !important; gap: 1.5rem; }
     }
                     /* ===== UPGRADED FOOTER CSS ===== */
     footer { background: #000; border-top: 1px solid rgba(255,255,255,0.05); }
