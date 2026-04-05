@@ -76,7 +76,21 @@
         .footer-links { display: flex; justify-content: center; gap: 3rem; margin-bottom: 2rem; }
         .footer-links a { color: var(--text-muted); text-decoration: none; transition: var(--transition); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
         .footer-links a:hover { color: var(--primary-gold); }
-
+                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     .global-nav-inner { display:flex; align-items:center; justify-content:space-between; height:72px; gap:1rem; max-width:1400px; margin:0 auto; padding:0 2rem; }
     .nav-brand { font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:600; color:#fff; text-decoration:none; white-space:nowrap; flex-shrink:0; }
     .nav-gold { color:#D4AF37; }
@@ -84,12 +98,12 @@
     .nav-links a { color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.82rem; text-transform:uppercase; letter-spacing:1.5px; padding:0.5rem 0.9rem; border-radius:6px; transition:all 0.4s; white-space:nowrap; }
     .nav-links a:hover { color:#D4AF37; }
     .nav-dropdown { position:relative; }
-    .nav-dropdown > a::after {  font-size:0.7rem; }
+    .nav-dropdown > a::after { content:' \u25be'; font-size:0.7rem; }
     .dropdown-menu { position:absolute; top:calc(100% + 8px); left:0; background:#0f0f0f; border:1px solid rgba(212,175,55,0.15); border-radius:12px; padding:0.75rem; min-width:220px; opacity:0; visibility:hidden; transform:translateY(-8px); transition:all 0.4s; box-shadow:0 20px 40px rgba(0,0,0,0.6); z-index:100; }
     .nav-dropdown:hover .dropdown-menu { opacity:1; visibility:visible; transform:translateY(0); }
     .dropdown-menu a { display:block; padding:0.6rem 1rem; color:rgba(255,255,255,0.6) !important; border-radius:8px; font-size:0.82rem; letter-spacing:1px; }
     .dropdown-menu a:hover { color:#D4AF37 !important; background:rgba(212,175,55,0.06); }
-    .nav-cta { display:flex; gap:0.6rem; align-items:center; flex-shrink:0; justify-content:center; }
+    .nav-cta { display:flex; gap:0.6rem; align-items:center; flex-shrink:0; }
     .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:0.5rem; }
     .nav-hamburger span { display:block; width:24px; height:2px; background:rgba(255,255,255,0.6); border-radius:2px; transition:all 0.4s; }
     .nav-hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); background:#D4AF37; }
@@ -102,6 +116,7 @@
     .mobile-cta { margin-top:1rem; text-align:center; background:linear-gradient(135deg,#D4AF37,#B8860B); color:#000 !important; border-radius:8px; padding:1rem; font-weight:600; letter-spacing:2px; border-bottom:none !important; }
     @media (max-width:900px) { .nav-links { display:none; } .nav-cta { display:flex; } .btn-outline { display:none; } .nav-hamburger { display:flex; } }
     body { padding-top: 85px !important; }
+    
 
 /* ELB_BLOG_SIDEBAR_START */
 @media (min-width: 1100px) {
@@ -117,6 +132,36 @@
 /* ELB_BLOG_SIDEBAR_END */
 
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <style>
 /* ELB_CSS_START */
@@ -140,6 +185,20 @@
     body { padding-top: 72px !important; }
     .luxury-list li::before { content: '✓' !important; }
 /* ELB_CSS_END */
+
+
+/* ELB_BLOG_SIDEBAR_START */
+@media (min-width: 1100px) {
+    .blog-main-layout { display: flex; gap: 4rem; align-items: flex-start; max-width: 1300px; margin: 0 auto; padding-top: 100px; }
+    .blog-content-area { flex: 1; min-width: 0; }
+    .blog-sidebar { width: 320px; flex-shrink: 0; position: sticky; top: 120px; }
+}
+@media (max-width: 1099px) {
+    .blog-sidebar { margin: 4rem auto; text-align: center; }
+    .yacht-widget-container { display: inline-block; max-width: 320px; }
+}
+.yacht-widget-container { border-radius: 20px; overflow: hidden; border: 1px solid var(--glass-border); background: var(--graphene); box-shadow: 0 15px 35px rgba(0,0,0,0.4); }
+/* ELB_BLOG_SIDEBAR_END */
 
 </style>
 </head>
@@ -174,7 +233,7 @@
                         <a href="/luxury-villas/">Luxury Villa Guide</a>
                     </div>
                 </li>
-                <li><a href="/blog/index.html">Blog</a></li>
+                <li><a href="/blog/">Blog</a></li>
             </ul>
             <div class="nav-cta"><a href="https://wa.me/918801079030" class="btn btn-gold" target="_blank">WhatsApp</a></div>
             <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></div>
@@ -184,12 +243,41 @@
         <a href="/elite-private-jet-charter/">✈ Private Jets</a>
         <a href="/luxury-yacht-rentals/">⛵ Luxury Yachts</a>
         <a href="/luxury-villa-rentals/">🏛 Exclusive Villas</a>
-        <a href="/blog/index.html">📖 Blog</a>
+        <a href="/blog/">📖 Blog</a>
         <a href="/contact/">📧 Contact</a>
         <a href="https://wa.me/918801079030" class="mobile-cta" target="_blank">WhatsApp Concierge →</a>
     </div>
 <!-- ELB_NAV_END -->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        
+            
+            
+            
+
+    
 <div class="blog-main-layout">
     <div class="blog-content-area">
         <article class="container" style="max-width: 900px; padding: 0;">
@@ -207,6 +295,143 @@
                 <div class="author-info">Curated by the Elite Luxury Concierge Team</div>
             </div>
         </header>
+
+        <section class="blog-content">
+            <p>Dreaming of a <strong>Mallorca to Ibiza private boat Charter</strong> adventure? Skip the crowded ferries and discover the most spectacular, flexible, and luxurious way to island-hop across the Mediterranean. A private charter puts you completely in control of your own sun-drenched adventure.</p>
+            <p>Whether youâ€™re planning a romantic escape, a VIP group holiday, or a once-in-a-lifetime family voyage, this guide covers everything you need to know: the best boat types, realistic costs, expert booking tips, and a full 7-day itinerary.</p>
+
+            <h2>1. Why Choose a Mallorca to Ibiza Private Boat Charter?</h2>
+            <p>Public ferries run on fixed schedules and fixed routes. A private boat charter gives you total freedom: depart at sunrise, anchor in a hidden cove for lunch, and arrive in Ibiza in time for the legendary sunset at Es VedrÃ .</p>
+            <p>Some of the most breathtaking spots in the Balearics â€” crystal-clear lagoons and deserted white sand beaches â€” are completely unreachable by road. A private boat charter on the Mallorca to Ibiza route gives you direct access to these secret gems.</p>
+
+            <h2>2. Route Facts: Distance, Duration & Best Departure Points</h2>
+            <p>The distance between Palma de Mallorca and Ibiza Town is approximately <strong>81 nautical miles (150 km)</strong>. A high-speed private motorboat can cover this in under 3 hours, while a sailing catamaran might take 5â€“7 hours for a more relaxed voyage.</p>
+            
+            <h3>Top Departure Ports in Mallorca</h3>
+            <ul>
+                <li><strong>Palma de Mallorca (Club de Mar)</strong> â€” The most popular hub with the widest charter fleet.</li>
+                <li><strong>Port dâ€™Andratx</strong> â€” An upscale marina in the southwest, closer to Ibiza and ideal for a scenic start.</li>
+                <li><strong>Santa Ponsa</strong> â€” A quieter option favoured by smaller private charters.</li>
+            </ul>
+
+            <h2>3. 7 Brilliant Private Boat Options</h2>
+            <p>Choosing the right vessel defines your experience. Here are the top configurations for the Mallorcaâ€“Ibiza crossing:</p>
+            <ul>
+                <li><strong>Luxury Motor Yacht</strong> â€” The gold standard for speed and onboard comfort, reaching Ibiza in 3â€“4 hours with a professional crew.</li>
+                <li><strong>Private Speedboat</strong> â€” The exciting express, perfect for day trips covering the crossing in under 2.5 hours.</li>
+                <li><strong>Sailing Catamaran</strong> â€” The dreamer's choice, wide and stable, allowing for a relaxed crossing where the journey is the destination.</li>
+            </ul>
+
+            <h2>4. How Much Does a Mallorca to Ibiza Private Boat Cost?</h2>
+            <p>Day charter prices for a single-day crossing typically range from â‚¬800 for a small speedboat to â‚¬15,000+ for a large luxury yacht. For multi-day or weekly charters, sailing catamarans start from â‚¬7,000/week, while superyachts can exceed â‚¬200,000/week.</p>
+
+            <h2>5. Perfect 7-Day Private Boat Itinerary</h2>
+            <ul>
+                <li><strong>Day 1 â€” Palma de Mallorca</strong>: Embark and explore the old town.</li>
+                <li><strong>Day 2 â€” Port dâ€™Andratx</strong>: Swim in the crystal-clear waters of Cala Fornells.</li>
+                <li><strong>Day 3 â€” Crossing Day</strong>: Depart early, lunch at anchor near Espalmador islet.</li>
+                <li><strong>Day 4 â€” Northern Ibiza</strong>: Discover Portinatx and the mud baths of Cala Xarraca.</li>
+                <li><strong>Day 5 â€” Ibiza Town</strong>: UNESCO-listed Dalt Vila and world-class nightlife.</li>
+                <li><strong>Day 6 â€” Formentera Day Trip</strong>: Turquoise waters of Playa de Ses Illetes.</li>
+                <li><strong>Day 7 â€” Disembark</strong>: Final morning swim before returning to reality.</li>
+            </ul>
+
+            <h2>6. FAQs: Mallorca to Ibiza Private Boat Charter</h2>
+            <h3>How long does the Mallorca to Ibiza private boat Charter crossing take?</h3>
+            <p>A fast motor yacht takes 2.5â€“3 hours. A sailing catamaran spread the journey over 6â€“8 hours depending on wind conditions and anchor stops.</p>
+
+            <h3>Can I do a Mallorca to Ibiza private boat Charter day trip?</h3>
+            <p>Yes, a one-day round trip is entirely possible on a fast motor yacht or speedboat. Depart Mallorca at 8-9am and return in the early evening.</p>
+
+            <h3>Do I need a sailing licence?</h3>
+            <p>No, most charters are skippered by a professional captain. If you wish to bareboat charter, you will need a recognised qualification such as RYA Day Skipper.</p>
+        </section>
+
+        <!-- Affiliate Master Widget -->
+        <div class="affiliate-widget">
+            <h3 class="serif">Elite Yacht Selection</h3>
+            <p>Access our real-time global fleet through our exclusive partnership with Yachting.com.</p>
+            <a href="https://www.yachting.com/en-gb?AffiliateID=elbookings" class="btn btn-gold" target="_blank">Browse Live Yacht Fleet</a>
+        </div>
+
+        <!-- Dynamic Conversion Logic -->
+        <div class="cta-box">
+            <h2 class="serif gold-text">Planning an Elite Transition?</h2>
+            <p>Our global coordination team is available 24/7 for bespoke travel planning across private aviation, yachting, and villa retreats.</p>
+            <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+                <a href="https://wa.me/918801079030" class="btn btn-gold">Connect with a Senior Concierge</a>
+                <a href="/" class="btn btn-outline">Return to Excellence</a>
+            </div>
+        </div>
+    
+        </article>
+    </div>
+    
+<!-- ELB_YACHTING_WIDGET_START -->
+<aside class="blog-sidebar">
+    <div class="yacht-widget-container">
+        <a href="https://www.yachting.com/en-gb?AffiliateID=elbookings&amp;BannerID=1729a6e6" target="_top">
+            <img src="//affiliate.yachting.com/accounts/default1/ne6ayxbkog/1729a6e6.png" alt="Exclusive Yacht Charter" title="Book Premium Yachts" width="320" height="1200" style="width:100%; height:auto; display:block;" />
+        </a>
+        <img style="border:0" src="https://affiliate.yachting.com/scripts/ne6ayxikog?AffiliateID=elbookings&amp;BannerID=1729a6e6" width="1" height="1" alt="" />
+    </div>
+</aside>
+<!-- ELB_YACHTING_WIDGET_END -->
+
+</div>
+
+
+                        <!-- SINGLE SILO -->
+
+
+            <!-- Column 2: The Americas Hub -->
+            <div class="glass-panel" style="padding: 2rem;">
+                <h3 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">The Americas Hub</h3>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="/newyork-to-miami-private-jet-cost/" class="internal-link">newyork to Miami</a></li>
+                    <li><a href="/miami-to-newyork-private-jet-cost/" class="internal-link">Miami to newyork</a></li>
+                    <li><a href="/losangeles-to-lasvegas-private-jet-cost/" class="internal-link">LAX to lasvegas</a></li>
+                    <li><a href="/chicago-to-miami-private-jet-cost/" class="internal-link">Chicago to Miami</a></li>
+                    <li><a href="/elite-private-jet-charter/" class="internal-link">Miami to Cancun</a></li>
+                    <li><a href="/dallas-to-denver-private-jet-cost/" class="internal-link">Dallas to Denver</a></li>
+                    <li><a href="/miami-to-turksandcaicos-private-jet-cost/" class="internal-link">Miami to Turks & Caicos</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Asia & Pacific Hub -->
+            <div class="glass-panel" style="padding: 2rem;">
+                <h3 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">Asia & Pacific Hub</h3>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="/london-to-tokyo-private-jet-cost/" class="internal-link">London to tokyo</a></li>
+                    <li><a href="/singapore-to-sydney-private-jet-cost/" class="internal-link">Singapore to Sydney</a></li>
+                    <li><a href="/hongkong-to-singapore-private-jet-cost/" class="internal-link">hongkong to Singapore</a></li>
+                    <li><a href="/beijing-to-seoul-private-jet-cost/" class="internal-link">Beijing to Seoul</a></li>
+                    <li><a href="/sydney-to-perth-private-jet-cost/" class="internal-link">Sydney to Perth</a></li>
+                    <li><a href="/perth-to-bali-private-jet-cost/" class="internal-link">Perth to Bali</a></li>
+                    <li><a href="/sydney-to-dubai-private-jet-cost/" class="internal-link">Sydney to Dubai</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Middle East & Islands Hub -->
+            <div class="glass-panel" style="padding: 2rem;">
+                <h3 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">Middle East & Islands</h3>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="/riyadh-to-maldives-private-jet-cost/" class="internal-link">Riyadh to Maldives</a></li>
+                    <li><a href="/abudhabi-to-doha-private-jet-cost/" class="internal-link">abudhabi to Doha</a></li>
+                    <li><a href="/milan-to-mykonos-private-jet-cost/" class="internal-link">Milan to Mykonos</a></li>
+                    <li><a href="/london-to-santorini-private-jet-cost/" class="internal-link">London to Santorini</a></li>
+                    <li><a href="/elite-private-jet-charter/" class="internal-link">Ibiza to Palma de Mallorca</a></li>
+                    <li><a href="/london-to-marrakesh-private-jet-cost/" class="internal-link">London to Marrakesh</a></li>
+                    <li><a href="/elite-private-jet-charter/" class="internal-link">Nice to French Riviera</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem;">
+            <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 600px; margin: 0 auto;">Elite Luxury Bookings operates 1,200+ global city-pairs. If your specific route is not listed, our 24/7 aviation desk provides bespoke pricing on request.</p>
+        </div>
+    </div>
+</section>
 
 <style>
     .hub-grid {
@@ -240,7 +465,21 @@
         footer > div > div:first-child > div { width: 100% !important; max-width: 100% !important; }
         footer > div > div:last-child { flex-direction: column !important; text-align: center !important; }
     }
-
+            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     .global-nav-inner { display:flex; align-items:center; justify-content:space-between; height:72px; gap:1rem; max-width:1400px; margin:0 auto; padding:0 2rem; }
     .nav-brand { font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:600; color:#fff; text-decoration:none; white-space:nowrap; flex-shrink:0; }
     .nav-gold { color:#D4AF37; }
@@ -248,12 +487,12 @@
     .nav-links a { color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.82rem; text-transform:uppercase; letter-spacing:1.5px; padding:0.5rem 0.9rem; border-radius:6px; transition:all 0.4s; white-space:nowrap; }
     .nav-links a:hover { color:#D4AF37; }
     .nav-dropdown { position:relative; }
-    .nav-dropdown > a::after {  font-size:0.7rem; }
+    .nav-dropdown > a::after { content:' \u25be'; font-size:0.7rem; }
     .dropdown-menu { position:absolute; top:calc(100% + 8px); left:0; background:#0f0f0f; border:1px solid rgba(212,175,55,0.15); border-radius:12px; padding:0.75rem; min-width:220px; opacity:0; visibility:hidden; transform:translateY(-8px); transition:all 0.4s; box-shadow:0 20px 40px rgba(0,0,0,0.6); z-index:100; }
     .nav-dropdown:hover .dropdown-menu { opacity:1; visibility:visible; transform:translateY(0); }
     .dropdown-menu a { display:block; padding:0.6rem 1rem; color:rgba(255,255,255,0.6) !important; border-radius:8px; font-size:0.82rem; letter-spacing:1px; }
     .dropdown-menu a:hover { color:#D4AF37 !important; background:rgba(212,175,55,0.06); }
-    .nav-cta { display:flex; gap:0.6rem; align-items:center; flex-shrink:0; justify-content:center; }
+    .nav-cta { display:flex; gap:0.6rem; align-items:center; flex-shrink:0; }
     .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:0.5rem; }
     .nav-hamburger span { display:block; width:24px; height:2px; background:rgba(255,255,255,0.6); border-radius:2px; transition:all 0.4s; }
     .nav-hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); background:#D4AF37; }
@@ -266,16 +505,66 @@
     .mobile-cta { margin-top:1rem; text-align:center; background:linear-gradient(135deg,#D4AF37,#B8860B); color:#000 !important; border-radius:8px; padding:1rem; font-weight:600; letter-spacing:2px; border-bottom:none !important; }
     @media (max-width:900px) { .nav-links { display:none; } .nav-cta { display:flex; } .btn-outline { display:none; } .nav-hamburger { display:flex; } }
     body { padding-top: 85px !important; }
+    
+
+/* ELB_BLOG_SIDEBAR_START */
+@media (min-width: 1100px) {
+    .blog-main-layout { display: flex; gap: 4rem; align-items: flex-start; max-width: 1300px; margin: 0 auto; padding-top: 100px; }
+    .blog-content-area { flex: 1; min-width: 0; }
+    .blog-sidebar { width: 320px; flex-shrink: 0; position: sticky; top: 120px; }
+}
+@media (max-width: 1099px) {
+    .blog-sidebar { margin: 4rem auto; text-align: center; }
+    .yacht-widget-container { display: inline-block; max-width: 320px; }
+}
+.yacht-widget-container { border-radius: 20px; overflow: hidden; border: 1px solid var(--glass-border); background: var(--graphene); box-shadow: 0 15px 35px rgba(0,0,0,0.4); }
+/* ELB_BLOG_SIDEBAR_END */
 
 </style>
 </div>
 
+
             <!-- Column 2: The Americas Hub -->
+            <div class="glass-panel" style="padding: 2rem;">
+                <h3 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">The Americas Hub</h3>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="/newyork-to-miami-private-jet-cost/" class="internal-link">newyork to Miami</a></li>
+                    <li><a href="/miami-to-newyork-private-jet-cost/" class="internal-link">Miami to newyork</a></li>
+                    <li><a href="/losangeles-to-lasvegas-private-jet-cost/" class="internal-link">LAX to lasvegas</a></li>
+                    <li><a href="/chicago-to-miami-private-jet-cost/" class="internal-link">Chicago to Miami</a></li>
+                    <li><a href="/elite-private-jet-charter/" class="internal-link">Miami to Cancun</a></li>
+                    <li><a href="/dallas-to-denver-private-jet-cost/" class="internal-link">Dallas to Denver</a></li>
+                    <li><a href="/miami-to-turksandcaicos-private-jet-cost/" class="internal-link">Miami to Turks & Caicos</a></li>
+                </ul>
+            </div>
 
             <!-- Column 3: Asia & Pacific Hub -->
+            <div class="glass-panel" style="padding: 2rem;">
+                <h3 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">Asia & Pacific Hub</h3>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="/london-to-tokyo-private-jet-cost/" class="internal-link">London to tokyo</a></li>
+                    <li><a href="/singapore-to-sydney-private-jet-cost/" class="internal-link">Singapore to Sydney</a></li>
+                    <li><a href="/hongkong-to-singapore-private-jet-cost/" class="internal-link">hongkong to Singapore</a></li>
+                    <li><a href="/beijing-to-seoul-private-jet-cost/" class="internal-link">Beijing to Seoul</a></li>
+                    <li><a href="/sydney-to-perth-private-jet-cost/" class="internal-link">Sydney to Perth</a></li>
+                    <li><a href="/perth-to-bali-private-jet-cost/" class="internal-link">Perth to Bali</a></li>
+                    <li><a href="/sydney-to-dubai-private-jet-cost/" class="internal-link">Sydney to Dubai</a></li>
+                </ul>
+            </div>
 
             <!-- Column 4: Middle East & Islands Hub -->
-            
+            <div class="glass-panel" style="padding: 2rem;">
+                <h3 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">Middle East & Islands</h3>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="/riyadh-to-maldives-private-jet-cost/" class="internal-link">Riyadh to Maldives</a></li>
+                    <li><a href="/abudhabi-to-doha-private-jet-cost/" class="internal-link">abudhabi to Doha</a></li>
+                    <li><a href="/milan-to-mykonos-private-jet-cost/" class="internal-link">Milan to Mykonos</a></li>
+                    <li><a href="/london-to-santorini-private-jet-cost/" class="internal-link">London to Santorini</a></li>
+                    <li><a href="/elite-private-jet-charter/" class="internal-link">Ibiza to Palma de Mallorca</a></li>
+                    <li><a href="/london-to-marrakesh-private-jet-cost/" class="internal-link">London to Marrakesh</a></li>
+                    <li><a href="/elite-private-jet-charter/" class="internal-link">Nice to French Riviera</a></li>
+                </ul>
+            </div>
         </div>
 
         <div style="text-align: center; margin-top: 4rem;">
@@ -284,14 +573,156 @@
     </div>
 </section>
 
+<style>
+    .hub-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+    .internal-link {
+        color: var(--text-main);
+        text-decoration: none;
+        transition: var(--transition);
+        font-size: 0.95rem;
+    }
+    .internal-link:hover {
+        color: var(--primary-gold);
+        padding-left: 5px;
+    }
+    @media (max-width: 1024px) {
+        .hub-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 2rem; }
+    }
+    @media (max-width: 768px) {
+        .hub-grid { grid-template-columns: 1fr !important; gap: 1.5rem; }
+    }
+                    /* ===== UPGRADED FOOTER CSS ===== */
+    footer { background: #000; border-top: 1px solid rgba(255,255,255,0.05); }
+    @media (max-width: 900px) {
+        footer > div > div:first-child { justify-content: flex-start !important; gap: 2rem !important; }
+    }
+    @media (max-width: 600px) {
+        footer > div > div:first-child { flex-direction: column !important; align-items: center !important; text-align: center !important; }
+        footer > div > div:first-child > div { width: 100% !important; max-width: 100% !important; }
+        footer > div > div:last-child { flex-direction: column !important; text-align: center !important; }
+    }
+            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .global-nav-inner { display:flex; align-items:center; justify-content:space-between; height:72px; gap:1rem; max-width:1400px; margin:0 auto; padding:0 2rem; }
+    .nav-brand { font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:600; color:#fff; text-decoration:none; white-space:nowrap; flex-shrink:0; }
+    .nav-gold { color:#D4AF37; }
+    .nav-links { display:flex; align-items:center; gap:0.25rem; list-style:none; flex:1; justify-content:center; }
+    .nav-links a { color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.82rem; text-transform:uppercase; letter-spacing:1.5px; padding:0.5rem 0.9rem; border-radius:6px; transition:all 0.4s; white-space:nowrap; }
+    .nav-links a:hover { color:#D4AF37; }
+    .nav-dropdown { position:relative; }
+    .nav-dropdown > a::after { content:' \u25be'; font-size:0.7rem; }
+    .dropdown-menu { position:absolute; top:calc(100% + 8px); left:0; background:#0f0f0f; border:1px solid rgba(212,175,55,0.15); border-radius:12px; padding:0.75rem; min-width:220px; opacity:0; visibility:hidden; transform:translateY(-8px); transition:all 0.4s; box-shadow:0 20px 40px rgba(0,0,0,0.6); z-index:100; }
+    .nav-dropdown:hover .dropdown-menu { opacity:1; visibility:visible; transform:translateY(0); }
+    .dropdown-menu a { display:block; padding:0.6rem 1rem; color:rgba(255,255,255,0.6) !important; border-radius:8px; font-size:0.82rem; letter-spacing:1px; }
+    .dropdown-menu a:hover { color:#D4AF37 !important; background:rgba(212,175,55,0.06); }
+    .nav-cta { display:flex; gap:0.6rem; align-items:center; flex-shrink:0; }
+    .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:0.5rem; }
+    .nav-hamburger span { display:block; width:24px; height:2px; background:rgba(255,255,255,0.6); border-radius:2px; transition:all 0.4s; }
+    .nav-hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); background:#D4AF37; }
+    .nav-hamburger.open span:nth-child(2) { opacity:0; }
+    .nav-hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); background:#D4AF37; }
+    .mobile-menu { display:none; position:fixed; top:72px; left:0; right:0; background:rgba(5,5,5,0.98); backdrop-filter:blur(24px); border-bottom:1px solid rgba(212,175,55,0.15); padding:2rem; z-index:1999; flex-direction:column; gap:1rem; }
+    .mobile-menu.open { display:flex; }
+    .mobile-menu a { color:rgba(255,255,255,0.6); text-decoration:none; font-size:1rem; text-transform:uppercase; letter-spacing:2px; padding:0.75rem 0; border-bottom:1px solid rgba(255,255,255,0.05); transition:all 0.4s; }
+    .mobile-menu a:hover { color:#D4AF37; }
+    .mobile-cta { margin-top:1rem; text-align:center; background:linear-gradient(135deg,#D4AF37,#B8860B); color:#000 !important; border-radius:8px; padding:1rem; font-weight:600; letter-spacing:2px; border-bottom:none !important; }
+    @media (max-width:900px) { .nav-links { display:none; } .nav-cta { display:flex; } .btn-outline { display:none; } .nav-hamburger { display:flex; } }
+    body { padding-top: 85px !important; }
+    
+
+/* ELB_BLOG_SIDEBAR_START */
+@media (min-width: 1100px) {
+    .blog-main-layout { display: flex; gap: 4rem; align-items: flex-start; max-width: 1300px; margin: 0 auto; padding-top: 100px; }
+    .blog-content-area { flex: 1; min-width: 0; }
+    .blog-sidebar { width: 320px; flex-shrink: 0; position: sticky; top: 120px; }
+}
+@media (max-width: 1099px) {
+    .blog-sidebar { margin: 4rem auto; text-align: center; }
+    .yacht-widget-container { display: inline-block; max-width: 320px; }
+}
+.yacht-widget-container { border-radius: 20px; overflow: hidden; border: 1px solid var(--glass-border); background: var(--graphene); box-shadow: 0 15px 35px rgba(0,0,0,0.4); }
+/* ELB_BLOG_SIDEBAR_END */
+
+</style>
 </div>
+<div id="footer-silo-placeholder">
+<section class="section-padding" style="background: rgba(212, 175, 55, 0.02); border-top: 1px solid var(--glass-border);">
+    <div class="container">
+        <h2 class="serif" style="font-size: 3rem; text-align: center; margin-bottom: 4rem;">Global <span class="gold-text">Aviation Network</span></h2>
+        
+        <div class="hub-grid">
+            <!-- Column 1: UK & Europe Hub -->
+            <div class="glass-panel" style="padding: 2rem;">
+                <h3 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">UK & Europe Hub</h3>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="/london-to-ibiza-private-jet-cost/" class="internal-link">London to Ibiza</a></li>
+                    <li><a href="/london-to-nice-private-jet-cost/" class="internal-link">London to Nice</a></li>
+                    <li><a href="/london-to-paris-private-jet-cost/" class="internal-link">London to Paris</a></li>
+                    <li><a href="/elite-private-jet-charter/" class="internal-link">Paris to Geneva</a></li>
+                    <li><a href="/elite-private-jet-charter/" class="internal-link">Milan to Amsterdam</a></li>
+                    <li><a href="/elite-private-jet-charter/" class="internal-link">Nice to Monaco</a></li>
+                    <li><a href="/elite-private-jet-charter/" class="internal-link">Ibiza to Barcelona</a></li>
+                </ul>
+            </div>
 
             <!-- Column 2: The Americas Hub -->
+            <div class="glass-panel" style="padding: 2rem;">
+                <h3 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">The Americas Hub</h3>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="/newyork-to-miami-private-jet-cost/" class="internal-link">newyork to Miami</a></li>
+                    <li><a href="/miami-to-newyork-private-jet-cost/" class="internal-link">Miami to newyork</a></li>
+                    <li><a href="/losangeles-to-lasvegas-private-jet-cost/" class="internal-link">LAX to lasvegas</a></li>
+                    <li><a href="/chicago-to-miami-private-jet-cost/" class="internal-link">Chicago to Miami</a></li>
+                    <li><a href="/elite-private-jet-charter/" class="internal-link">Miami to Cancun</a></li>
+                    <li><a href="/dallas-to-denver-private-jet-cost/" class="internal-link">Dallas to Denver</a></li>
+                    <li><a href="/miami-to-turksandcaicos-private-jet-cost/" class="internal-link">Miami to Turks & Caicos</a></li>
+                </ul>
+            </div>
 
             <!-- Column 3: Asia & Pacific Hub -->
+            <div class="glass-panel" style="padding: 2rem;">
+                <h3 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">Asia & Pacific Hub</h3>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="/london-to-tokyo-private-jet-cost/" class="internal-link">London to tokyo</a></li>
+                    <li><a href="/singapore-to-sydney-private-jet-cost/" class="internal-link">Singapore to Sydney</a></li>
+                    <li><a href="/hongkong-to-singapore-private-jet-cost/" class="internal-link">hongkong to Singapore</a></li>
+                    <li><a href="/beijing-to-seoul-private-jet-cost/" class="internal-link">Beijing to Seoul</a></li>
+                    <li><a href="/sydney-to-perth-private-jet-cost/" class="internal-link">Sydney to Perth</a></li>
+                    <li><a href="/perth-to-bali-private-jet-cost/" class="internal-link">Perth to Bali</a></li>
+                    <li><a href="/sydney-to-dubai-private-jet-cost/" class="internal-link">Sydney to Dubai</a></li>
+                </ul>
+            </div>
 
             <!-- Column 4: Middle East & Islands Hub -->
-            
+            <div class="glass-panel" style="padding: 2rem;">
+                <h3 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">Middle East & Islands</h3>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="/riyadh-to-maldives-private-jet-cost/" class="internal-link">Riyadh to Maldives</a></li>
+                    <li><a href="/abudhabi-to-doha-private-jet-cost/" class="internal-link">abudhabi to Doha</a></li>
+                    <li><a href="/milan-to-mykonos-private-jet-cost/" class="internal-link">Milan to Mykonos</a></li>
+                    <li><a href="/london-to-santorini-private-jet-cost/" class="internal-link">London to Santorini</a></li>
+                    <li><a href="/elite-private-jet-charter/" class="internal-link">Ibiza to Palma de Mallorca</a></li>
+                    <li><a href="/london-to-marrakesh-private-jet-cost/" class="internal-link">London to Marrakesh</a></li>
+                    <li><a href="/elite-private-jet-charter/" class="internal-link">Nice to French Riviera</a></li>
+                </ul>
+            </div>
         </div>
 
         <div style="text-align: center; margin-top: 4rem;">
@@ -300,6 +731,45 @@
     </div>
 </section>
 
+<style>
+    .hub-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+    .internal-link {
+        color: var(--text-main);
+        text-decoration: none;
+        transition: var(--transition);
+        font-size: 0.95rem;
+    }
+    .internal-link:hover {
+        color: var(--primary-gold);
+        padding-left: 5px;
+    }
+    @media (max-width: 1024px) {
+        .hub-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 2rem; }
+    }
+    @media (max-width: 768px) {
+        .hub-grid { grid-template-columns: 1fr !important; gap: 1.5rem; }
+    }
+
+
+/* ELB_BLOG_SIDEBAR_START */
+@media (min-width: 1100px) {
+    .blog-main-layout { display: flex; gap: 4rem; align-items: flex-start; max-width: 1300px; margin: 0 auto; padding-top: 100px; }
+    .blog-content-area { flex: 1; min-width: 0; }
+    .blog-sidebar { width: 320px; flex-shrink: 0; position: sticky; top: 120px; }
+}
+@media (max-width: 1099px) {
+    .blog-sidebar { margin: 4rem auto; text-align: center; }
+    .yacht-widget-container { display: inline-block; max-width: 320px; }
+}
+.yacht-widget-container { border-radius: 20px; overflow: hidden; border: 1px solid var(--glass-border); background: var(--graphene); box-shadow: 0 15px 35px rgba(0,0,0,0.4); }
+/* ELB_BLOG_SIDEBAR_END */
+
+</style>
+</div>
 <footer>
         <div class="container" style="max-width:1300px; margin:0 auto; padding:0 2rem;">
 
@@ -342,7 +812,7 @@
                 <div style="min-width:140px; margin-bottom:2rem;">
                     <div style="font-size:0.8rem; text-transform:uppercase; letter-spacing:2.5px; color:#D4AF37; margin-bottom:1.5rem; font-weight:700;">Company</div>
                     <ul style="list-style:none; display:flex; flex-direction:column; gap:1rem; padding:0; margin:0;">
-                        <li><a href="/blog/index.html" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Blog</a></li>
+                        <li><a href="/blog/" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Blog</a></li>
                         <li><a href="/contact/" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Contact Us</a></li>
                         <li><a href="https://wa.me/918801079030" target="_blank" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">WhatsApp</a></li>
                     </ul>
@@ -356,7 +826,7 @@
                 <div style="display:flex; gap:2rem; flex-wrap:wrap;">
                     <a href="/elite-private-jet-charter/" style="color:rgba(255,255,255,0.35); text-decoration:none; font-size:0.8rem; text-transform:uppercase; letter-spacing:1.5px;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Private Jets</a>
                     <a href="/luxury-yacht-rentals/" style="color:rgba(255,255,255,0.35); text-decoration:none; font-size:0.8rem; text-transform:uppercase; letter-spacing:1.5px;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Yachts</a>
-                    <a href="/blog/index.html" style="color:rgba(255,255,255,0.35); text-decoration:none; font-size:0.8rem; text-transform:uppercase; letter-spacing:1.5px;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Blog</a>
+                    <a href="/blog/" style="color:rgba(255,255,255,0.35); text-decoration:none; font-size:0.8rem; text-transform:uppercase; letter-spacing:1.5px;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Blog</a>
                     <a href="/contact/" style="color:rgba(255,255,255,0.35); text-decoration:none; font-size:0.8rem; text-transform:uppercase; letter-spacing:1.5px;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Contact</a>
                 </div>
             </div>
@@ -364,10 +834,58 @@
         </div>
     </footer>
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- ELB_JS_START -->
     <script>function toggleMobileMenu(){var m=document.getElementById('elbMobileMenu'),b=document.getElementById('navHamburger');if(m&&b){m.classList.toggle('open');b.classList.toggle('open');}}</script>
 <!-- ELB_JS_END -->
 </body>
 
 </html>
+
+
 
