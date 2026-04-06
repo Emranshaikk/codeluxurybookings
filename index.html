@@ -17,7 +17,7 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap"
         rel="stylesheet">
 
-    
+
 
     <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J56D1LJLFM"></script>
@@ -29,36 +29,188 @@
         gtag('config', 'G-J56D1LJLFM');
     </script>
 
-<style>
+    <style>
+        /* ELB_STYLE_START */
+        .global-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(5, 5, 5, 0.98);
+            backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            z-index: 99999;
+        }
 
-/* ELB_STYLE_START */
-    .global-nav { position:fixed; top:0; left:0; right:0; background:rgba(5,5,5,0.98); backdrop-filter:blur(24px); border-bottom:1px solid rgba(212,175,55,0.2); z-index:99999; }
-    .global-nav-inner { display:flex; align-items:center; justify-content:space-between; height:72px; gap:1rem; max-width:1400px; margin:0 auto; padding:0 2rem; box-sizing: border-box; }
-    .nav-brand { font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:600; color:#fff !important; text-decoration:none !important; }
-    .nav-gold { color:#D4AF37 !important; }
-    .nav-links { display:flex; align-items:center; gap:0.25rem; list-style:none; flex:1; justify-content:center; margin:0; padding:0; }
-    .nav-links a { color:rgba(255,255,255,0.7) !important; text-decoration:none !important; font-size:0.82rem; text-transform:uppercase; letter-spacing:1.5px; padding:0.5rem 0.9rem; border-radius:6px; transition:all 0.4s; font-family: 'Inter', sans-serif !important; }
-    .nav-links a:hover { color:#D4AF37 !important; }
-    .nav-dropdown { position:relative; }
-    .dropdown-menu { position:absolute; top:calc(100% + 8px); left:0; background:#0a0a0a; border:1px solid rgba(212,175,55,0.15); border-radius:12px; padding:0.75rem; min-width:240px; opacity:0; visibility:hidden; transform:translateY(-8px); transition:all 0.4s; box-shadow:0 20px 40px rgba(0,0,0,0.8); z-index:100; }
-    .nav-dropdown:hover .dropdown-menu { opacity:1 !important; visibility:visible !important; transform:translateY(0) !important; }
-    .dropdown-menu a { display:block !important; padding:0.7rem 1.2rem !important; color:rgba(255,255,255,0.7) !important; border-radius:8px; font-size:0.85rem !important; text-transform: none !important; }
-    .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:0.5rem; z-index:100001; }
-    .nav-hamburger span { display:block; width:24px; height:2px; background:rgba(255,255,255,0.8); border-radius:2px; transition:all 0.4s; }
-    .mobile-menu { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:#050505; padding:72px 2rem 2rem; z-index:100000; flex-direction:column; gap:0.5rem; overflow-y: auto; }
-    .mobile-menu.open { display:flex !important; }
-    .mobile-menu a { color:rgba(255,255,255,0.8) !important; text-decoration:none !important; font-size:1.1rem; text-transform:uppercase; letter-spacing:2px; padding:1.2rem 0; border-bottom:1px solid rgba(255,255,255,0.05); }
-    .mobile-cta { margin-top:2rem; text-align:center; background:linear-gradient(135deg,#D4AF37,#B8860B); color:#000 !important; border-radius:8px; padding:1.2rem !important; font-weight:700; }
-    @media (max-width:1024px) { .nav-links { display:none !important; } .nav-hamburger { display:flex !important; } }
-    body { padding-top: 72px !important; }
-    .luxury-list li::before { content: '✓' !important; }
-/* ELB_STYLE_END */
+        .global-nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+            gap: 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            box-sizing: border-box;
+        }
 
-</style>
+        .nav-brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #fff !important;
+            text-decoration: none !important;
+        }
+
+        .nav-gold {
+            color: #D4AF37 !important;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            list-style: none;
+            flex: 1;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.7) !important;
+            text-decoration: none !important;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 0.5rem 0.9rem;
+            border-radius: 6px;
+            transition: all 0.4s;
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        .nav-links a:hover {
+            color: #D4AF37 !important;
+        }
+
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            background: #0a0a0a;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 12px;
+            padding: 0.75rem;
+            min-width: 240px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-8px);
+            transition: all 0.4s;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+            z-index: 100;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: translateY(0) !important;
+        }
+
+        .dropdown-menu a {
+            display: block !important;
+            padding: 0.7rem 1.2rem !important;
+            color: rgba(255, 255, 255, 0.7) !important;
+            border-radius: 8px;
+            font-size: 0.85rem !important;
+            text-transform: none !important;
+        }
+
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 100001;
+        }
+
+        .nav-hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 2px;
+            transition: all 0.4s;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #050505;
+            padding: 72px 2rem 2rem;
+            z-index: 100000;
+            flex-direction: column;
+            gap: 0.5rem;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.open {
+            display: flex !important;
+        }
+
+        .mobile-menu a {
+            color: rgba(255, 255, 255, 0.8) !important;
+            text-decoration: none !important;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .mobile-cta {
+            margin-top: 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #D4AF37, #B8860B);
+            color: #000 !important;
+            border-radius: 8px;
+            padding: 1.2rem !important;
+            font-weight: 700;
+        }
+
+        @media (max-width:1024px) {
+            .nav-links {
+                display: none !important;
+            }
+
+            .nav-hamburger {
+                display: flex !important;
+            }
+        }
+
+        body {
+            padding-top: 72px !important;
+        }
+
+        .luxury-list li::before {
+            content: '✓' !important;
+        }
+
+        /* ELB_STYLE_END */
+    </style>
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
-<!-- ELB_NAV_START -->
+    <!-- ELB_NAV_START -->
     <nav class="global-nav">
         <div class="container global-nav-inner">
             <a href="/" class="nav-brand"><span class="nav-gold">Elite</span> Luxury Bookings</a>
@@ -100,7 +252,7 @@
         <a href="/contact/">Contact Us</a>
         <a href="https://wa.me/918801079030" class="mobile-cta">WhatsApp Concierge</a>
     </div>
-<!-- ELB_NAV_END -->
+    <!-- ELB_NAV_END -->
 
 
 
@@ -117,16 +269,116 @@
     <div class="container" style="position: relative;">
         <div class="hero-parallax-bg" id="heroBg"></div>
         <header class="hero">
-            <span class="brand-statement" style="margin-bottom: 1.5rem; color: var(--primary-gold); font-weight: 600;">The Global Gold Standard in Private Travel</span>
+            <span class="brand-statement"
+                style="margin-bottom: 1.5rem; color: var(--primary-gold); font-weight: 600;">The Global Gold Standard in
+                Private Travel</span>
 
-            <h1 class="hero-headline">Elevated Travel, Curated by Experts.<br><span class="gold-text">Your Private Fleet Awaits.</span></h1>
-            
-            <p class="hero-subheadline" style="margin-bottom: 1rem; font-size: 1.4rem; color: #fff;">Bespoke aviation, luxury seafaring, and elite villa stays—deployed within 60 minutes.</p>
-            <p class="hero-subheadline" style="max-width: 800px; margin: 0 auto 2rem;">Global access to off-market aircraft and properties. Our 24/7 concierge department handles every detail with absolute discretion.</p>
+            <h1 class="hero-headline">Elevated Travel, Curated by Experts.<br><span class="gold-text">Your Private Fleet
+                    Awaits.</span></h1>
+
+            <p class="hero-subheadline" style="margin-bottom: 1rem; font-size: 1.4rem; color: #fff;">Bespoke aviation,
+                luxury seafaring, and elite villa stays—deployed within 60 minutes.</p>
+
+        
+        
+        <!-- ELB_VALENS_API_ENGINE_START -->
+        <div class="aviation-search-engine glass-panel" style="margin: 2rem auto; max-width: 1000px; padding: 2.5rem; border: 1px solid var(--primary-gold); position: relative; overflow: hidden; background: rgba(5,5,5,0.8); backdrop-filter: blur(20px); border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+            <div id="search-container">
+                <h3 class="serif gold-text" style="font-size: 2.3rem; margin-bottom: 0.5rem; text-align: center;">Elite Search Engine</h3>
+                <p style="text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-bottom: 2.5rem; text-transform: uppercase; letter-spacing: 3px;">Direct Valens Dashboard Connection</p>
+                
+                <form id="valensEngineForm" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div class="search-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem;">
+                        <input type="text" id="v_dep" name="departure" class="form-control" placeholder="From (Airport or City)" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.1rem; background: rgba(255,255,255,0.03); color: #fff;" required>
+                        <input type="text" id="v_arr" name="arrival" class="form-control" placeholder="To (Airport or City)" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.1rem; background: rgba(255,255,255,0.03); color: #fff;" required>
+                        <input type="date" id="v_date" name="travel_date" class="form-control" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.1rem; background: rgba(255,255,255,0.03); color: #fff;" required>
+                        <input type="number" id="v_pax" name="passengers" class="form-control" min="1" value="2" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.1rem; background: rgba(255,255,255,0.03); color: #fff;" required>
+                    </div>
+
+                    <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem;">
+                        <input type="text" id="v_name" name="name" class="form-control" placeholder="Full Name" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.1rem; background: rgba(255,255,255,0.03); color: #fff;" required>
+                        <input type="email" id="v_email" name="email" class="form-control" placeholder="Email Address" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.1rem; background: rgba(255,255,255,0.03); color: #fff;" required>
+                        <input type="tel" id="v_phone" name="contact" class="form-control" placeholder="WhatsApp / Phone" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.1rem; background: rgba(255,255,255,0.03); color: #fff;" required>
+                    </div>
+
+                    <button type="submit" id="searchApiBtn" class="btn btn-gold" style="width: 100%; margin-top: 1rem; font-size: 1.2rem; min-height: 75px; font-weight: 700; text-transform: uppercase; letter-spacing: 4px; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);">Search Global Fleet</button>
+                </form>
+            </div>
+
+            <div id="engine-success" style="display: none; text-align: center; padding: 5rem 2rem;">
+                <div style="font-size: 4rem; color: var(--primary-gold); margin-bottom: 2rem;">&#10003;</div>
+                <h3 class="serif gold-text" style="font-size: 2.8rem;">Sync Successfully</h3>
+                <p style="color: #fff; font-size: 1.2rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">Your lead is now on our Valens dashboard. A senior aviation concierge will contact you within 15 minutes.</p>
+                <div style="margin-top: 3.5rem; display: flex; gap: 1.5rem; justify-content: center;">
+                    <a href="https://wa.me/918801079030" class="btn btn-gold">Priority WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+        const VALENS_API = {
+            ENDPOINT: 'https://jetluxe.jetlink.app/api/affiliate/valens/v1/trip/new',
+            TOKEN: '64|t997lbxqnHWlW15TpE5FCogSyTev2hKpOLRo2Hjj7cad47bc',
+            ICAO_DB: {
+                'london': 'EGLL', 'nice': 'LFMN', 'dubai': 'OMDB', 'paris': 'LFPG', 'miami': 'KMIA',
+                'new york': 'KJFK', 'jfk': 'KJFK', 'aspen': 'KASE', 'ibiza': 'LEIB'
+            }
+        };
+        document.getElementById('valensEngineForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('searchApiBtn');
+            btn.disabled = true;
+            btn.innerHTML = 'Connecting...';
+            const dep_val = document.getElementById('v_dep').value.toLowerCase();
+            const arr_val = document.getElementById('v_arr').value.toLowerCase();
+            let dep_icao = 'EGLL', arr_icao = 'LFMN'; 
+            for (const [key, icao] of Object.entries(VALENS_API.ICAO_DB)) {
+                if (dep_val.includes(key)) dep_icao = icao;
+                if (arr_val.includes(key)) arr_icao = icao;
+            }
+            const payload = {
+                idempotency_key: crypto.randomUUID(),
+                legs: [{
+                    date: document.getElementById('v_date').value,
+                    passengers: parseInt(document.getElementById('v_pax').value),
+                    departure_icao: dep_icao,
+                    arrival_icao: arr_icao,
+                    time: "12:00"
+                }],
+                customer: {
+                    full_name: document.getElementById('v_name').value,
+                    contact: document.getElementById('v_phone').value,
+                    email: document.getElementById('v_email').value
+                }
+            };
+            try {
+                const response = await fetch(VALENS_API.ENDPOINT, {
+                    method: 'POST',
+                    headers: { 'Authorization': `Bearer ${VALENS_API.TOKEN}`, 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                if (response.ok) {
+                    document.getElementById('search-container').style.display = 'none';
+                    document.getElementById('engine-success').style.display = 'block';
+                } else { alert("Dashboard sync failed. Please use WhatsApp support."); }
+            } catch (err) { alert("Network error. Please use WhatsApp support."); }
+        });
+        </script>
+        <!-- ELB_VALENS_API_ENGINE_END -->
+
+</header>
+
+</header>
+
+            <p class="hero-subheadline" style="max-width: 800px; margin: 0 auto 2rem;">Global access to off-market
+                aircraft and properties. Our 24/7 concierge department handles every detail with absolute discretion.
+            </p>
 
             <!-- Urgency & Trust Hook -->
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; margin-bottom: 2.5rem;">
-                <div style="font-size: 0.9rem; color: var(--primary-gold); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">
+            <div
+                style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; margin-bottom: 2.5rem;">
+                <div
+                    style="font-size: 0.9rem; color: var(--primary-gold); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">
                     Available within 60 minutes • 24/7 Global Dispatch
                 </div>
                 <div style="font-size: 0.85rem; color: var(--text-muted); letter-spacing: 1px;">
@@ -139,24 +391,30 @@
                 <form id="heroForm" onsubmit="submitHeroLead(event)" style="width: 100%;">
                     <div class="mini-form-inner">
                         <input type="tel" name="phone" placeholder="Your WhatsApp for Instant Quote" required
-                            class="form-control-mini" style="flex: 2; max-width: 400px; background: rgba(0,0,0,0.4); border: 1px solid var(--glass-border);">
+                            class="form-control-mini"
+                            style="flex: 2; max-width: 400px; background: rgba(0,0,0,0.4); border: 1px solid var(--glass-border);">
                         <button type="submit" class="btn btn-gold" id="heroSubmitBtn"
-                            style="padding: 1.2rem 2.5rem; white-space: nowrap; flex: 1; font-weight: 700;">Speak to a Private Advisor</button>
+                            style="padding: 1.2rem 2.5rem; white-space: nowrap; flex: 1; font-weight: 700;">Speak to a
+                            Private Advisor</button>
                     </div>
                 </form>
                 <div id="heroFormMsg" style="display:none; width: 100%; text-align: center; padding: 1rem;">
-                    <span style="font-size: 1.1rem; color: #fff;">Your request is being prioritized. A concierge is now reviewing your requirements.</span>
+                    <span style="font-size: 1.1rem; color: #fff;">Your request is being prioritized. A concierge is now
+                        reviewing your requirements.</span>
                     <a href="https://wa.me/918801079030" target="_blank" class="gold-text"
                         style="font-weight: 600; margin-left: 0.5rem; text-decoration: none; display: inline-block; margin-top: 0.5rem;"
-                        onclick="typeof gtag === 'function' && gtag('event', 'whatsapp_click');">Open WhatsApp for Immediate Pricing →</a>
+                        onclick="typeof gtag === 'function' && gtag('event', 'whatsapp_click');">Open WhatsApp for
+                        Immediate Pricing →</a>
                 </div>
             </div>
 
             <div class="hero-ctas">
-                <a href="https://wa.me/918801019030" class="btn btn-outline" style="min-width: 320px; border-width: 2px;">Get Instant Rates on WhatsApp</a>
+                <a href="https://wa.me/918801019030" class="btn btn-outline"
+                    style="min-width: 320px; border-width: 2px;">Get Instant Rates on WhatsApp</a>
             </div>
 
-            <span class="trust-micro" style="margin-top: 2rem; opacity: 0.7;">Secure. Confidential. Elite Performance.</span>
+            <span class="trust-micro" style="margin-top: 2rem; opacity: 0.7;">Secure. Confidential. Elite
+                Performance.</span>
         </header>
     </div>
 
@@ -178,22 +436,25 @@
                 <span class="trust-micro">The ELB Experience</span>
                 <h2 class="serif">The Elite Standard of Deployment</h2>
             </div>
-            
+
             <div class="process-steps">
                 <div>
                     <div class="step-num">01</div>
                     <h3 class="step-title gold-text">Concierge Consult</h3>
-                    <p class="step-desc">Speak directly with a dedicated advisor who understands the nuances of high-ticket travel and privacy requirements.</p>
+                    <p class="step-desc">Speak directly with a dedicated advisor who understands the nuances of
+                        high-ticket travel and privacy requirements.</p>
                 </div>
                 <div>
                     <div class="step-num">02</div>
                     <h3 class="step-title gold-text">Curated Selection</h3>
-                    <p class="step-desc">Within 30 minutes, receive a shortlisted selection of audited aircraft, superyachts, or properties matching your precise brief.</p>
+                    <p class="step-desc">Within 30 minutes, receive a shortlisted selection of audited aircraft,
+                        superyachts, or properties matching your precise brief.</p>
                 </div>
                 <div>
                     <div class="step-num">03</div>
                     <h3 class="step-title gold-text">Seamless Execution</h3>
-                    <p class="step-desc">From ground logistics to manifests, our team manages every tactical detail for a flawless, discreet arrival.</p>
+                    <p class="step-desc">From ground logistics to manifests, our team manages every tactical detail for
+                        a flawless, discreet arrival.</p>
                 </div>
             </div>
 
@@ -201,16 +462,25 @@
             <div class="glass-panel" style="margin-top: 6rem; padding: 4rem;">
                 <div class="exp-grid">
                     <div style="border-left: 1px solid var(--primary-gold); padding-left: 2rem;">
-                        <p style="font-style: italic; font-size: 1.1rem; color: #ddd; margin-bottom: 1.5rem;">"Seamless experience from London to Dubai. Aircraft was positioned within 2 hours of my first call. Absolute discretion."</p>
-                        <span class="gold-text" style="font-weight: 600; letter-spacing: 1px;">— PRINCIPAL, FAMILY OFFICE (LONDON)</span>
+                        <p style="font-style: italic; font-size: 1.1rem; color: #ddd; margin-bottom: 1.5rem;">"Seamless
+                            experience from London to Dubai. Aircraft was positioned within 2 hours of my first call.
+                            Absolute discretion."</p>
+                        <span class="gold-text" style="font-weight: 600; letter-spacing: 1px;">— PRINCIPAL, FAMILY
+                            OFFICE (London)</span>
                     </div>
                     <div style="border-left: 1px solid var(--primary-gold); padding-left: 2rem;">
-                        <p style="font-style: italic; font-size: 1.1rem; color: #ddd; margin-bottom: 1.5rem;">"We require extreme privacy for our board-level meetings. ELB has never failed to provide secure, audited, and off-market options."</p>
-                        <span class="gold-text" style="font-weight: 600; letter-spacing: 1px;">— CHIEF EXECUTIVE, FORTUNE 500</span>
+                        <p style="font-style: italic; font-size: 1.1rem; color: #ddd; margin-bottom: 1.5rem;">"We
+                            require extreme privacy for our board-level meetings. ELB has never failed to provide
+                            secure, audited, and off-market options."</p>
+                        <span class="gold-text" style="font-weight: 600; letter-spacing: 1px;">— CHIEF EXECUTIVE,
+                            FORTUNE 500</span>
                     </div>
                     <div style="border-left: 1px solid var(--primary-gold); padding-left: 2rem;">
-                        <p style="font-style: italic; font-size: 1.1rem; color: #ddd; margin-bottom: 1.5rem;">"The yacht charter in the Mediterranean was flawless. The concierge team handled every onshore request before we even docked."</p>
-                        <span class="gold-text" style="font-weight: 600; letter-spacing: 1px;">— DISCERNING TRAVELER (MIAMI)</span>
+                        <p style="font-style: italic; font-size: 1.1rem; color: #ddd; margin-bottom: 1.5rem;">"The yacht
+                            charter in the Mediterranean was flawless. The concierge team handled every onshore request
+                            before we even docked."</p>
+                        <span class="gold-text" style="font-weight: 600; letter-spacing: 1px;">— DISCERNING TRAVELER
+                            (Miami)</span>
                     </div>
                 </div>
             </div>
@@ -218,22 +488,36 @@
     </section>
 
     <!-- WHO WE SERVE (UPGRADED) -->
-    <section class="who-we-serve glass-panel" style="border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
-        <div class="container">
-            <span class="trust-micro" style="margin-top:0;">Reserved for the 1%</span>
+    <section class="who-we-serve glass-panel" style="padding: 6rem 0; border-top: 1px solid rgba(212, 175, 55, 0.1);">
+        <div class="container" style="text-align: center;">
+            <span class="trust-micro" style="margin-top:0;">RESERVED FOR THE 1%</span>
             <h2 class="serif" style="font-size: 3.5rem; margin-top: 1rem;">Why the Discerning Choose ELB</h2>
-            <p style="color: var(--text-muted); font-size: 1.2rem; max-width: 700px; margin: 1.5rem auto 4rem;">Elite Luxury Bookings is not a generic booking platform. We are a private liaison house for individuals and corporations who require speed, precision, and absolute confidentiality.</p>
+            <p
+                style="color: rgba(255, 255, 255, 0.6); font-size: 1.1rem; max-width: 800px; margin: 1.5rem auto 0; line-height: 1.7;">
+                Elite Luxury Bookings is a private, NDA-backed liaison house for individuals and corporations requiring
+                absolute precision and total confidentiality.
+            </p>
 
             <div class="client-grid">
                 <div class="client-item">
+                    <h3 class="serif">Absolute Discretion</h3>
+                    <p>NDA-backed coordination with complete identity protection for ultra-high-profile principals and
+                        family offices.</p>
                 </div>
                 <div class="client-item">
-                    <h3 class="serif">VIP Travelers</h3>
-                    <p>Unmatched concierge coordination ensuring total security and discretion.</p>
+                    <h3 class="serif">60-Minute Logistics</h3>
+                    <p>Rapid tactical response for urgent global travel missions, providing aircraft deployment within
+                        60 minutes of confirmation.</p>
                 </div>
                 <div class="client-item">
-                    <h3 class="serif">International Clients</h3>
-                    <p>Seamless cross-border planning, tailored to unique cultural expectations.</p>
+                    <h3 class="serif">Global Fleet Priority</h3>
+                    <p>First-priority access to a global fleet of 10,000+ audited aircraft and off-market vessels,
+                        ensuring availability in peak seasons.</p>
+                </div>
+                <div class="client-item">
+                    <h3 class="serif">Wealth Preservation</h3>
+                    <p>Dedicated account management focused on high-security transitions and maximizing time-efficiency
+                        for your travel investment.</p>
                 </div>
             </div>
         </div>
@@ -249,9 +533,12 @@
         </div>
 
         <!-- Price Anchoring Slab -->
-        <div style="text-align: center; margin-bottom: 3rem; background: rgba(212, 175, 55, 0.05); padding: 1.5rem; border: 1px solid var(--glass-border); border-radius: 12px; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <div
+            style="text-align: center; margin-bottom: 3rem; background: rgba(212, 175, 55, 0.05); padding: 1.5rem; border: 1px solid var(--glass-border); border-radius: 12px; max-width: 900px; margin-left: auto; margin-right: auto;">
             <p style="font-size: 0.95rem; color: #ddd; letter-spacing: 1px;">
-                <span class="gold-text" style="font-weight: 600;">INVESTMENT CLARITY:</span> Typical private charter investments range from <span class="gold-text">$8,000 to $250,000+</span> depending on aircraft size, nautical range, and bespoke requirements.
+                <span class="gold-text" style="font-weight: 600;">INVESTMENT CLARITY:</span> Typical private charter
+                investments range from <span class="gold-text">$8,000 to $250,000+</span> depending on aircraft size,
+                nautical range, and bespoke requirements.
             </p>
         </div>
 
@@ -259,25 +546,31 @@
             <div class="glass-panel silo-card">
                 <div>
                     <h3 class="serif gold-text">Private aviation</h3>
-                    <p>Unrestricted global access. From agile light jets to intercontinental heavy aircraft, positioned globally for your immediate departure.</p>
+                    <p>Unrestricted global access. From agile light jets to intercontinental heavy aircraft, positioned
+                        globally for your immediate departure.</p>
                 </div>
-                <a href="/elite-private-jet-charter/" class="btn btn-outline" style="margin-top:2rem; font-size: 0.8rem;">View Private Fleet</a>
+                <a href="/elite-private-jet-charter/" class="btn btn-outline"
+                    style="margin-top:2rem; font-size: 0.8rem;">View Private Fleet</a>
             </div>
 
             <div class="glass-panel silo-card">
                 <div>
                     <h3 class="serif gold-text">Superyacht Charter</h3>
-                    <p>Bespoke maritime access. Hand-selected motor and sailing yachts navigating the world's most exclusive waters from Monaco to the Maldives.</p>
+                    <p>Bespoke maritime access. Hand-selected motor and sailing yachts navigating the world's most
+                        exclusive waters from Monaco to the Maldives.</p>
                 </div>
-                <a href="/luxury-yacht-rentals/" class="btn btn-outline" style="margin-top:2rem; font-size: 0.8rem;">Browse Superyachts</a>
+                <a href="/luxury-yacht-rentals/" class="btn btn-outline"
+                    style="margin-top:2rem; font-size: 0.8rem;">Browse Superyachts</a>
             </div>
 
             <div class="glass-panel silo-card">
                 <div>
                     <h3 class="serif gold-text">Exclusive Estates</h3>
-                    <p>Sanctuaries of total seclusion. Ultra-premium estates and fully-staffed retreats designed for ultimate privacy and high-security stays.</p>
+                    <p>Sanctuaries of total seclusion. Ultra-premium estates and fully-staffed retreats designed for
+                        ultimate privacy and high-security stays.</p>
                 </div>
-                <a href="/luxury-villa-rentals/" class="btn btn-outline" style="margin-top:2rem; font-size: 0.8rem;">Reserve Private Estate</a>
+                <a href="/luxury-villa-rentals/" class="btn btn-outline"
+                    style="margin-top:2rem; font-size: 0.8rem;">Reserve Private Estate</a>
             </div>
         </div>
     </section>
@@ -346,18 +639,16 @@
     </section>
 
     <!-- SOCIAL PROOF -->
-    <section class="container" style="padding: 4rem 0;">
+    <section class="container" style="padding: 4rem 0; text-align: center;">
         <div class="section-header" style="margin-bottom: 4rem;">
-            <h2>Trusted Experiences Delivered</h2>
+            <h2 style="font-size: 3rem;">Trusted Experiences Delivered</h2>
         </div>
-            </div>
-            <div>
-                <p class="story-text" style="font-size: 1.4rem; color: #ddd; max-width: 100%;">"From jet to yacht to
-                    villa — everything handled under one point of contact."</p>
-                <p
-                    style="color: var(--primary-gold); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 1.5rem;">
-                    — CEO, UAE</p>
-            </div>
+        <div style="max-width: 900px; margin: 0 auto;">
+            <p class="story-text" style="font-size: 1.6rem; color: #ccc; line-height: 1.6; font-style: italic;">"From
+                jet to yacht to villa — everything handled under one point of contact."</p>
+            <p
+                style="color: var(--primary-gold); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-top: 2rem; font-weight: 600;">
+                — CEO, UAE</p>
         </div>
     </section>
 
@@ -370,7 +661,8 @@
                     <p
                         style="color: var(--text-muted); font-size: 1rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 1.5rem;">
                         Our 24/7 aviation and maritime desks prioritize immediate deployment.</p>
-                    <p style="color: var(--text-muted); font-size: 1.1rem;">Submit your brief for an audited proposal within 30 minutes.</p>
+                    <p style="color: var(--text-muted); font-size: 1.1rem;">Submit your brief for an audited proposal
+                        within 30 minutes.</p>
                     <p
                         style="color: var(--primary-gold); font-size: 1rem; font-weight: 600; margin-top: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">
                         A dedicated concierge will personally respond within 30 minutes.</p>
@@ -455,39 +747,12 @@
         </p>
     </div>
 
-    <!-- GLOBAL ROUTE NETWORK (4-HUB GRID) -->
-
-</div>
-
-            <!-- Column 2: The Americas Hub -->
-
-            <!-- Column 3: Asia & Pacific Hub -->
-
-            <!-- Column 4: Middle East & Islands Hub -->
-            
-        </div>
-
-        <div style="text-align: center; margin-top: 4rem;">
-            <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 600px; margin: 0 auto;">Elite Luxury Bookings operates 1,200+ global city-pairs. If your specific route is not listed, our 24/7 aviation desk provides bespoke pricing on request.</p>
-        </div>
+    <!-- GLOBAL ROUTE NETWORK -->
+    <div style="text-align: center; padding: 4rem 0;">
+        <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 600px; margin: 0 auto;">Elite Luxury Bookings
+            operates 1,200+ global city-pairs. If your specific route is not listed, our 24/7 aviation desk provides
+            bespoke pricing on request.</p>
     </div>
-</section>
-
-</div>
-
-            <!-- Column 2: The Americas Hub -->
-
-            <!-- Column 3: Asia & Pacific Hub -->
-
-            <!-- Column 4: Middle East & Islands Hub -->
-            
-        </div>
-
-        <div style="text-align: center; margin-top: 4rem;">
-            <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 600px; margin: 0 auto;">Elite Luxury Bookings operates 1,200+ global city-pairs. If your specific route is not listed, our 24/7 aviation desk provides bespoke pricing on request.</p>
-        </div>
-    </div>
-</section>
 
 
     <!-- SILO Internal Links -->
@@ -505,25 +770,11 @@
             <a href="/elite-private-jet-charter/" class="btn btn-gold btn-sm">View All Routes</a>
         </div>
     </div>
-    
-<!-- ELB_FOOTER_START -->
-    <footer class="section-padding" style="background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; margin-top: 5rem;">
-        <div class="container">
-            <a href="/" style="display: block; margin-bottom: 2rem; font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:600; color:#fff; text-decoration:none;"><span style="color:#D4AF37;">Elite</span> Luxury Bookings</a>
-            <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 2rem;">
-                <a href="/elite-private-jet-charter/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Aviation Services</a>
-                <a href="/luxury-yacht-rentals/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Yacht Charter</a>
-                <a href="/luxury-villa-rentals/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Villa Rentals</a>
-                <a href="/blog/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Blog</a>
-                <a href="/contact/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Contact</a>
-            </div>
-            <p style="color: #444; font-size: 0.8rem;">© 2026 Elite Luxury Bookings. All rights reserved.</p>
-        </div>
-    </footer>
-<!-- ELB_FOOTER_END -->
+
+
 
     <script>
-        const endpoint = 'https://script.google.com/macros/s/AKfycbxwH6b82MCg90tYS-yTwUMWw1ePx2S3oBdn3BC5U1UAt2uQRCB2bq03bzPP52ygUGU6UA/exec';
+        const endpoint = 'https://formspree.io/f/xwvwanlj';
 
         // Main Lead Form
         async function submitLead(event) {
@@ -540,12 +791,17 @@
             const formData = new FormData(form);
             const data = {};
             formData.forEach((value, key) => data[key] = value);
+            
+            // Elite Formspree Metadata
+            data['_subject'] = `New Elite Concierge Inquiry: ${data.services || 'General'}`;
+            data['_replyto'] = data.email;
 
             try {
+                const urlParams = new URLSearchParams(data).toString();
                 await fetch(endpoint, {
                     method: 'POST', mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: urlParams
                 });
 
                 form.style.display = 'none';
@@ -580,10 +836,11 @@
             };
 
             try {
+                const urlParams = new URLSearchParams(data).toString();
                 await fetch(endpoint, {
                     method: 'POST', mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: urlParams
                 });
 
                 form.style.display = 'none';
@@ -636,9 +893,34 @@
         });
     </script>
 
-<!-- ELB_JS_START -->
-    <script>function toggleMobileMenu(){var m=document.getElementById('elbMobileMenu'),b=document.getElementById('navHamburger');if(m&&b){m.classList.toggle('open');b.classList.toggle('open');}}</script>
-<!-- ELB_JS_END -->
+    <!-- ELB_FOOTER_START -->
+    <footer class="section-padding"
+        style="background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; margin-top: 5rem;">
+        <div class="container">
+            <a href="/"
+                style="display: block; margin-bottom: 2rem; font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:600; color:#fff; text-decoration:none;"><span
+                    style="color:#D4AF37;">Elite</span> Luxury Bookings</a>
+            <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 2rem;">
+                <a href="/elite-private-jet-charter/"
+                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Aviation
+                    Services</a>
+                <a href="/luxury-yacht-rentals/"
+                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Yacht Charter</a>
+                <a href="/luxury-villa-rentals/"
+                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Villa Rentals</a>
+                <a href="/blog/"
+                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Blog</a>
+                <a href="/contact/"
+                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Contact</a>
+            </div>
+            <p style="color: #444; font-size: 0.8rem;">© 2026 Elite Luxury Bookings. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- ELB_FOOTER_END -->
+
+    <!-- ELB_JS_START -->
+    <script>function toggleMobileMenu() { var m = document.getElementById('elbMobileMenu'), b = document.getElementById('navHamburger'); if (m && b) { m.classList.toggle('open'); b.classList.toggle('open'); } }</script>
+    <!-- ELB_JS_END -->
 </body>
 
 </html>

@@ -84,6 +84,7 @@
 /* ELB_STYLE_END */
 
 </style>
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
@@ -172,66 +173,35 @@
             <h1>Mega Yacht Rental Dubai</h1>
             <p class="hero-sub">Experience the pinnacle of maritime luxury. Our bespoke <strong>Mega Yacht Rental Dubai</strong> services offer discrete, Michelin-tier transitions across the world's most exclusive waters.</p>
 
-            <div class="form-wrapper glass-panel">
-                <div id="form-container">
-                    <form id="leadForm" onsubmit="submitLead(event)">
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="name">Full Name *</label>
-                                <input type="text" id="name" name="fullName" class="form-control" placeholder="Hon. John Doe" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Private Email *</label>
-                                <input type="email" id="email" name="email" class="form-control" placeholder="client@exclusive.com" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="whatsapp">WhatsApp Number *</label>
-                                <input type="tel" id="whatsapp" name="phone" class="form-control" placeholder="+1 234 567 8900" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="service">Service Interested</label>
-                                <select id="service" name="services" class="form-control">
-                                    <option value="Luxury Yacht Charter" selected>Luxury Yacht Charter</option>
-                                    <option value="Private Jet Charter">Private Jet Charter</option>
-                                    <option value="Private Villa Rental">Private Villa Rental</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="date">Estimated Date</label>
-                                <input type="date" id="date" name="travelDate" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="guests">Number of Guests</label>
-                                <input type="number" id="guests" name="passengers" class="form-control" min="1" placeholder="e.g. 4">
-                            </div>
-                            <div class="form-group full">
-                                <label for="budget">Estimated Budget Range</label>
-                                <select id="budget" name="budget" class="form-control">
-                                    <option value="">Select Range</option>
-                                    <option value="50k+">$50,000+</option>
-                                    <option value="100k+">$100,000+</option>
-                                    <option value="250k+">$250,000+</option>
-                                    <option value="500k+">$500,000+</option>
-                                </select>
-                            </div>
-                            <div class="form-group full">
-                                <label for="requirements">Additional Requirements</label>
-                                <textarea id="requirements" name="requirements" class="form-control" style="resize:vertical; min-height:80px;" placeholder="Destinations, catering rules, security needs..."></textarea>
-                            </div>
-                            <div class="form-group full" style="margin-top: 1.5rem;">
-                                <button type="submit" id="submitBtn" class="btn btn-gold" style="width: 100%; padding: 1.5rem;">Secure My Private Proposal</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div id="formMsg" style="display:none; text-align:center; padding: 2rem 0;">
-                    <h3 class="serif gold-text" style="font-size: 2.5rem; margin-bottom: 1rem;">Proposal Requested</h3>
-                    <p style="color: #fff; font-size: 1.1rem; margin-bottom: 2rem;">A senior concierge will contact you shortly via WhatsApp for immediate coordination.</p>
-                    <a href="https://wa.me/918801079030" class="btn btn-gold" target="_blank">Speak Instantly with Concierge</a>
-                </div>
-            </div>
+            
+        
+        
+        
+
+</header>
+
+        <!-- ELB_YACHTING_AFFILIATE_WIDGET_START -->
+        <div class="yachting-affiliate-container" style="margin: 3rem auto; max-width: 350px; text-align: center; background: rgba(255,255,255,0.02); padding: 1rem; border-radius: 15px; border: 1px solid rgba(212,175,55,0.15); box-shadow: 0 15px 45px rgba(0,0,0,0.4); overflow: hidden;">
+            <p style="color: var(--primary-gold); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; font-weight: 600;">Explore Global Yacht Fleet</p>
+            <a href="https://www.yachting.com/en-gb?AffiliateID=elbookings&amp;BannerID=1729a6e6" target="_top" style="display: block; border-radius: 10px; overflow: hidden;">
+                <img src="//affiliate.yachting.com/accounts/default1/ne6ayxbkog/1729a6e6.png" alt="Exclusive Yacht Charter" title="Book Premium Yachts" width="320" height="1200" style="width:100%; height:auto; display:block; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'" />
+            </a>
+            <img style="border:0" src="https://affiliate.yachting.com/scripts/ne6ayxikog?AffiliateID=elbookings&amp;BannerID=1729a6e6" width="1" height="1" alt="" />
+            <p style="color: rgba(255,255,255,0.4); font-size: 0.65rem; margin-top: 1rem; letter-spacing: 1px;">Official Maritime Partner of Elite Luxury Bookings</p>
         </div>
-    </header>
+        <style>
+            @media (max-width: 768px) {
+                .yachting-affiliate-container {
+                    max-width: 100% !important;
+                    margin: 2rem 1rem !important;
+                    border-radius: 12px !important;
+                }
+            }
+        </style>
+        <!-- ELB_YACHTING_AFFILIATE_WIDGET_END -->
+
+
+</header>
 
     <section class="section-padding" style="background: rgba(212, 175, 55, 0.02); border-bottom: 1px solid var(--glass-border);">
         <div class="container">
@@ -270,7 +240,7 @@
 <!-- ELB_FOOTER_END -->
 
     <script>
-        const endpoint = 'https://script.google.com/macros/s/AKfycbxwH6b82MCg90tYS-yTwUMWw1ePx2S3oBdn3BC5U1UAt2uQRCB2bq03bzPP52ygUGU6UA/exec';
+        const endpoint = 'https://formspree.io/f/xwvwanlj';
 
         async function submitLead(event) {
             event.preventDefault();
@@ -291,8 +261,8 @@
             try {
                 await fetch(endpoint, {
                     method: 'POST', mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams(data).toString()
                 });
 
                 form.style.display = 'none';

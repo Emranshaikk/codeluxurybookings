@@ -1,0 +1,5 @@
+﻿e05c561 only favicon kept
+6ee4f05 branding logo done
+ea6c61c logo and favicon implemented
+dbd4524 pending changes comming
+2e639d7 blog content which was removed fixed again

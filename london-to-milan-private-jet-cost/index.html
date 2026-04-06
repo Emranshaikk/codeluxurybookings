@@ -5,8 +5,8 @@
     <!-- 0. BRAND & FAVICON -->
     <link rel="icon" type="image/png" href="/assets/images/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Private Jet Charter London to Milan | Elite Luxury Bookings</title>
-    <meta name="description" content="Book a private jet from London to Milan with Elite Luxury Bookings. Exclusive pricing, bespoke concierge service, and discrete VIP terminal access.">
+    <title>Private Jet Charter: London to Milan Cost (Bookings + Pricing)</title>
+    <meta name="description" content="Secure the elite private jet cost for the London to Milan corridor. VIP terminal access and bespoke 24/7 coordination. Book your London to Milan charter instantly.">
     <link rel="canonical" href="https://eliteluxurybookings.com/london-to-milan-private-jet-cost/">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -50,6 +50,7 @@
 /* ELB_STYLE_END */
 
 </style>
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
 <!-- ELB_NAV_START -->
@@ -149,6 +150,21 @@
     </footer>
 <!-- ELB_FOOTER_END -->
 
+
+
+    <script>
+        document.getElementById('tripForm').addEventListener('submit', function(e) {
+            const btn = document.getElementById('submitBtn');
+            btn.disabled = true;
+            btn.innerHTML = 'Sending...';
+            
+            // Force success panel immediately for premium UX (Formspree handles the POST)
+            setTimeout(() => {
+                document.getElementById('form-container').style.display = 'none';
+                document.getElementById('success-panel').style.display = 'block';
+            }, 800);
+        });
+    </script>
 
 <!-- ELB_JS_START -->
     <script>function toggleMobileMenu(){var m=document.getElementById('elbMobileMenu'),b=document.getElementById('navHamburger');if(m&&b){m.classList.toggle('open');b.classList.toggle('open');}}</script>

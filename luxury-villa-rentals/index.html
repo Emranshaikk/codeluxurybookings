@@ -306,18 +306,32 @@
             text-align: center;
             position: relative;
             margin-top: 40px;
-            overflow: hidden; /* Added for parallax */
+            overflow: hidden;
+            /* Added for parallax */
         }
 
         .hero-parallax-bg {
             position: absolute;
-            top: -10%;
-            left: -10%;
-            width: 120%;
-            height: 120%;
-            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.12) 0%, var(--deep-black) 80%);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(5, 5, 5, 0.4) 0%, rgba(5, 5, 5, 1) 100%), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
             z-index: -1;
             will-change: transform;
+            animation: zoomBg 25s infinite alternate linear;
+        }
+
+        @keyframes zoomBg {
+            from {
+                transform: scale(1);
+                filter: contrast(1);
+            }
+
+            to {
+                transform: scale(1.05);
+                filter: contrast(1.1);
+            }
         }
 
         .hero-headline {
@@ -546,13 +560,18 @@
             .hero-content {
                 padding: 0 5%;
             }
+
             .hero-headline {
                 font-size: 3.5rem;
             }
-            .grid-3, .grid-2, .form-grid {
+
+            .grid-3,
+            .grid-2,
+            .form-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
+
             .form-wrapper {
                 padding: 4rem 3rem;
             }
@@ -568,13 +587,14 @@
             }
 
             .wa-float {
-                display: flex !important; /* Forces visibility on mobile */
+                display: flex !important;
+                /* Forces visibility on mobile */
                 width: 55px;
                 height: 55px;
                 bottom: 25px;
                 right: 25px;
             }
-            
+
             .hero {
                 min-height: 550px;
                 height: auto;
@@ -589,7 +609,8 @@
                 font-size: 2.2rem !important;
             }
 
-            .grid-3, .grid-2 {
+            .grid-3,
+            .grid-2 {
                 grid-template-columns: 1fr;
                 gap: 2.5rem;
             }
@@ -614,11 +635,12 @@
                 align-items: center;
                 gap: 1.5rem;
             }
-            
+
             .glass-panel {
                 padding: 2rem 1.25rem !important;
             }
         }
+
         /* HOW IT WORKS */
         .process-steps {
             display: grid;
@@ -719,37 +741,188 @@
         }
         </script>
 
-<style>
-<style>
+    <style>
+        /* ELB_STYLE_START */
+        .global-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(5, 5, 5, 0.98);
+            backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            z-index: 99999;
+        }
 
-/* ELB_STYLE_START */
-    .global-nav { position:fixed; top:0; left:0; right:0; background:rgba(5,5,5,0.98); backdrop-filter:blur(24px); border-bottom:1px solid rgba(212,175,55,0.2); z-index:99999; }
-    .global-nav-inner { display:flex; align-items:center; justify-content:space-between; height:72px; gap:1rem; max-width:1400px; margin:0 auto; padding:0 2rem; box-sizing: border-box; }
-    .nav-brand { font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:600; color:#fff !important; text-decoration:none !important; }
-    .nav-gold { color:#D4AF37 !important; }
-    .nav-links { display:flex; align-items:center; gap:0.25rem; list-style:none; flex:1; justify-content:center; margin:0; padding:0; }
-    .nav-links a { color:rgba(255,255,255,0.7) !important; text-decoration:none !important; font-size:0.82rem; text-transform:uppercase; letter-spacing:1.5px; padding:0.5rem 0.9rem; border-radius:6px; transition:all 0.4s; font-family: 'Inter', sans-serif !important; }
-    .nav-links a:hover { color:#D4AF37 !important; }
-    .nav-dropdown { position:relative; }
-    .dropdown-menu { position:absolute; top:calc(100% + 8px); left:0; background:#0a0a0a; border:1px solid rgba(212,175,55,0.15); border-radius:12px; padding:0.75rem; min-width:240px; opacity:0; visibility:hidden; transform:translateY(-8px); transition:all 0.4s; box-shadow:0 20px 40px rgba(0,0,0,0.8); z-index:100; }
-    .nav-dropdown:hover .dropdown-menu { opacity:1 !important; visibility:visible !important; transform:translateY(0) !important; }
-    .dropdown-menu a { display:block !important; padding:0.7rem 1.2rem !important; color:rgba(255,255,255,0.7) !important; border-radius:8px; font-size:0.85rem !important; text-transform: none !important; }
-    .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:0.5rem; z-index:100001; }
-    .nav-hamburger span { display:block; width:24px; height:2px; background:rgba(255,255,255,0.8); border-radius:2px; transition:all 0.4s; }
-    .mobile-menu { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:#050505; padding:72px 2rem 2rem; z-index:100000; flex-direction:column; gap:0.5rem; overflow-y: auto; }
-    .mobile-menu.open { display:flex !important; }
-    .mobile-menu a { color:rgba(255,255,255,0.8) !important; text-decoration:none !important; font-size:1.1rem; text-transform:uppercase; letter-spacing:2px; padding:1.2rem 0; border-bottom:1px solid rgba(255,255,255,0.05); }
-    .mobile-cta { margin-top:2rem; text-align:center; background:linear-gradient(135deg,#D4AF37,#B8860B); color:#000 !important; border-radius:8px; padding:1.2rem !important; font-weight:700; }
-    @media (max-width:1024px) { .nav-links { display:none !important; } .nav-hamburger { display:flex !important; } }
-    body { padding-top: 72px !important; }
-    .luxury-list li::before { content: '✓' !important; }
-/* ELB_STYLE_END */
+        .global-nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+            gap: 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            box-sizing: border-box;
+        }
 
-</style>
+        .nav-brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #fff !important;
+            text-decoration: none !important;
+        }
+
+        .nav-gold {
+            color: #D4AF37 !important;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            list-style: none;
+            flex: 1;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.7) !important;
+            text-decoration: none !important;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 0.5rem 0.9rem;
+            border-radius: 6px;
+            transition: all 0.4s;
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        .nav-links a:hover {
+            color: #D4AF37 !important;
+        }
+
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            background: #0a0a0a;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 12px;
+            padding: 0.75rem;
+            min-width: 240px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-8px);
+            transition: all 0.4s;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+            z-index: 100;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: translateY(0) !important;
+        }
+
+        .dropdown-menu a {
+            display: block !important;
+            padding: 0.7rem 1.2rem !important;
+            color: rgba(255, 255, 255, 0.7) !important;
+            border-radius: 8px;
+            font-size: 0.85rem !important;
+            text-transform: none !important;
+        }
+
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 100001;
+        }
+
+        .nav-hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 2px;
+            transition: all 0.4s;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #050505;
+            padding: 72px 2rem 2rem;
+            z-index: 100000;
+            flex-direction: column;
+            gap: 0.5rem;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.open {
+            display: flex !important;
+        }
+
+        .mobile-menu a {
+            color: rgba(255, 255, 255, 0.8) !important;
+            text-decoration: none !important;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .mobile-cta {
+            margin-top: 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #D4AF37, #B8860B);
+            color: #000 !important;
+            border-radius: 8px;
+            padding: 1.2rem !important;
+            font-weight: 700;
+        }
+
+        @media (max-width:1024px) {
+            .nav-links {
+                display: none !important;
+            }
+
+            .nav-hamburger {
+                display: flex !important;
+            }
+        }
+
+        body {
+            padding-top: 72px !important;
+        }
+
+        .luxury-list li::before {
+            content: '✓' !important;
+        }
+
+        /* ELB_STYLE_END */
+    </style>
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
-<!-- ELB_NAV_START -->
+    <!-- ELB_NAV_START -->
     <nav class="global-nav">
         <div class="container global-nav-inner">
             <a href="/" class="nav-brand"><span class="nav-gold">Elite</span> Luxury Bookings</a>
@@ -791,7 +964,7 @@
         <a href="/contact/">Contact Us</a>
         <a href="https://wa.me/918801079030" class="mobile-cta">WhatsApp Concierge</a>
     </div>
-<!-- ELB_NAV_END -->
+    <!-- ELB_NAV_END -->
 
 
 
@@ -811,19 +984,34 @@
     <header class="hero">
         <div class="hero-parallax-bg" id="heroBg"></div>
         <div class="container">
-            <span class="brand-statement" style="margin-bottom: 2rem; color: var(--primary-gold); font-weight: 600;">THE ULTIMATE STANDARD IN GLOBAL REAL ESTATE</span>
+            <span class="brand-statement" style="margin-bottom: 2rem; color: var(--primary-gold); font-weight: 600;">THE
+                ULTIMATE STANDARD IN GLOBAL REAL ESTATE</span>
 
-            <h1 class="hero-headline">Extraordinary Villa Rentals.<br><span class="gold-text">Invisible Service.</span></h1>
+            <h1 class="hero-headline">Extraordinary Villa Rentals.<br><span class="gold-text">Invisible Service.</span>
+            </h1>
 
-            <p class="hero-subheadline" style="margin: 0 auto 1.5rem auto; color: #fff; font-size: 1.4rem;">Off-market estates. Private islands. Fully-staffed sanctuaries.</p>
-            <p class="hero-subheadline" style="margin: 0 auto 2.5rem auto; max-width: 800px;">Access a curated portfolio of the world's most exclusive properties—many never listed publicly—managed by your dedicated estate advisor.</p>
+            <p class="hero-subheadline" style="margin: 0 auto 1.5rem auto; color: #fff; font-size: 1.4rem;">Off-market
+                estates. Private islands. Fully-staffed sanctuaries.</p>
+
+        
+        
+        
+
+</header>
+
+            <p class="hero-subheadline" style="margin: 0 auto 2.5rem auto; max-width: 800px;">Access a curated portfolio
+                of the world's most exclusive properties—many never listed publicly—managed by your dedicated estate
+                advisor.</p>
 
             <div style="margin-top: 2rem;">
-                <a href="https://wa.me/918801079030" class="btn btn-gold" style="min-width: 340px; font-weight: 700;">Secure Instant Portfolio Access</a>
-                <div style="margin-top: 1rem; font-size: 0.9rem; color: var(--primary-gold); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">
+                <a href="https://wa.me/918801079030" class="btn btn-gold"
+                    style="min-width: 340px; font-weight: 700;">Secure Instant Portfolio Access</a>
+                <div
+                    style="margin-top: 1rem; font-size: 0.9rem; color: var(--primary-gold); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">
                     Confidential Proposals within 2 Hours • 24/7 Global Liaison
                 </div>
-                <div style="margin-top: 1.5rem; font-size: 0.85rem; color: #fff; opacity: 0.8; text-transform: uppercase; letter-spacing: 1px;">
+                <div
+                    style="margin-top: 1.5rem; font-size: 0.85rem; color: #fff; opacity: 0.8; text-transform: uppercase; letter-spacing: 1px;">
                     Trusted by Ultra-High-Net-Worth Families Globally
                 </div>
             </div>
@@ -831,50 +1019,68 @@
     </header>
 
     <!-- THE ELITE STANDARD (HOW IT WORKS) -->
-    <section class="section-padding bg-dark" style="border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+    <section class="section-padding bg-dark"
+        style="border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
         <div class="container">
             <div class="section-header">
                 <span class="trust-micro">Seamless Integration</span>
                 <h2 class="serif">The Elite Standard of Estate Management</h2>
             </div>
-            
+
             <div class="process-steps">
                 <div>
                     <div class="step-num">01</div>
                     <h3 class="step-title gold-text">Portfolio Brief</h3>
-                    <p class="step-desc">Your advisor manages the logistics for your group size, staff requirements (private chefs, security), and specific arrival dynamic.</p>
+                    <p class="step-desc">Your advisor manages the logistics for your group size, staff requirements
+                        (private chefs, security), and specific arrival dynamic.</p>
                 </div>
                 <div>
                     <div class="step-num">02</div>
                     <h3 class="step-title gold-text">Audited Portfolio</h3>
-                    <p class="step-desc">Access only the most rigorously vetted estates. We source off-market sanctuaries positioned for your precise window.</p>
+                    <p class="step-desc">Access only the most rigorously vetted estates. We source off-market
+                        sanctuaries positioned for your precise window.</p>
                 </div>
                 <div>
                     <div class="step-num">03</div>
                     <h3 class="step-title gold-text">Invisible Service</h3>
-                    <p class="step-desc">From pre-stocked larders to seamless ground coordination, complete manifest discretion is included as standard.</p>
+                    <p class="step-desc">From pre-stocked larders to seamless ground coordination, complete manifest
+                        discretion is included as standard.</p>
                 </div>
             </div>
 
             <!-- Villa Testimonials -->
-            <div style="margin-top: 6rem; background: rgba(20, 20, 20, 0.8); padding: 4rem; border-radius: 15px; border: 1px solid rgba(212, 175, 55, 0.15);">
+            <div
+                style="margin-top: 6rem; background: rgba(20, 20, 20, 0.8); padding: 4rem; border-radius: 15px; border: 1px solid rgba(212, 175, 55, 0.15);">
                 <div class="exp-grid">
                     <div style="border-left: 1px solid var(--primary-gold); padding-left: 2rem;">
-                        <p style="font-style: italic; color: #ddd; margin-bottom: 1.5rem;">"We required a completely secure, off-market estate in Tuscany on short notice. Elite Luxury Bookings delivered a property that exceeded every expectation."</p>
-                        <span style="color: var(--primary-gold); font-weight: 600; font-size: 0.85rem; letter-spacing: 1px;">— CHAIRPERSON, FORTUNE 500 CO.</span>
+                        <p style="font-style: italic; color: #ddd; margin-bottom: 1.5rem;">"We required a completely
+                            secure, off-market estate in Tuscany on short notice. Elite Luxury Bookings delivered a
+                            property that exceeded every expectation."</p>
+                        <span
+                            style="color: var(--primary-gold); font-weight: 600; font-size: 0.85rem; letter-spacing: 1px;">—
+                            CHAIRPERSON, FORTUNE 500 CO.</span>
                     </div>
                     <div style="border-left: 1px solid var(--primary-gold); padding-left: 2rem;">
-                        <p style="font-style: italic; color: #ddd; margin-bottom: 1.5rem;">"The level of discretion and service provided was unparalleled. The staff was invisible yet everything was perfectly handled."</p>
-                        <span style="color: var(--primary-gold); font-weight: 600; font-size: 0.85rem; letter-spacing: 1px;">— PRIVATE CLIENT, HONG KONG</span>
+                        <p style="font-style: italic; color: #ddd; margin-bottom: 1.5rem;">"The level of discretion and
+                            service provided was unparalleled. The staff was invisible yet everything was perfectly
+                            handled."</p>
+                        <span
+                            style="color: var(--primary-gold); font-weight: 600; font-size: 0.85rem; letter-spacing: 1px;">—
+                            PRIVATE CLIENT, HONG KONG</span>
                     </div>
                     <div style="border-left: 1px solid var(--primary-gold); padding-left: 2rem;">
-                        <p style="font-style: italic; color: #ddd; margin-bottom: 1.5rem;">"Finding a villa that can host a full security detail while maintaining a home-like feel is rare. ELB is our only choice for global travel."</p>
-                        <span style="color: var(--primary-gold); font-weight: 600; font-size: 0.85rem; letter-spacing: 1px;">— DIRECTOR, EUROPEAN FAMILY OFFICE</span>
+                        <p style="font-style: italic; color: #ddd; margin-bottom: 1.5rem;">"Finding a villa that can
+                            host a full security detail while maintaining a home-like feel is rare. ELB is our only
+                            choice for global travel."</p>
+                        <span
+                            style="color: var(--primary-gold); font-weight: 600; font-size: 0.85rem; letter-spacing: 1px;">—
+                            DIRECTOR, EUROPEAN FAMILY OFFICE</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section></section>
+    </section>
+    </section>
 
     <!-- VILLA TYPES -->
     <section class="section-padding" style="background: var(--graphene);">
@@ -950,8 +1156,8 @@
             </div>
 
             <div class="grid-2" style="margin-bottom: 4rem;">
-                <div class="glass-panel"
-                    style="padding: 2.5rem; text-align: center; border-top: 2px solid var(--primary-gold); display: flex; flex-direction: column; justify-content: flex-start; gap: 0.5rem; height: 100%;">
+                <div class="glass-panel card"
+                    style="padding: 2.5rem; text-align: center; border-top: 2px solid var(--primary-gold); background: linear-gradient(to top, rgba(5,5,5,0.95), rgba(5,5,5,0.2)), url('https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&w=800&q=80') center/cover; display: flex; flex-direction: column; justify-content: flex-start; gap: 0.5rem; height: 100%; transition: transform 0.4s ease;">
                     <h3 class="serif" style="font-size: 2rem; margin-bottom: 0; color: #fff;">Amalfi Coast, Italy</h3>
                     <p style="color: var(--text-muted); margin-bottom: auto; line-height: 1.6;">Property Style:
                         Cliffside Villa
@@ -964,8 +1170,8 @@
                         Mediterranean Destinations &rarr;</a>
                 </div>
 
-                <div class="glass-panel"
-                    style="padding: 2.5rem; text-align: center; border-top: 2px solid var(--primary-gold); display: flex; flex-direction: column; justify-content: flex-start; gap: 0.5rem; height: 100%;">
+                <div class="glass-panel card"
+                    style="padding: 2.5rem; text-align: center; border-top: 2px solid var(--primary-gold); background: linear-gradient(to top, rgba(5,5,5,0.95), rgba(5,5,5,0.2)), url('https://images.unsplash.com/photo-1589394815804-964ce052dfce?auto=format&fit=crop&w=800&q=80') center/cover; display: flex; flex-direction: column; justify-content: flex-start; gap: 0.5rem; height: 100%; transition: transform 0.4s ease;">
                     <h3 class="serif" style="font-size: 2rem; margin-bottom: 0; color: #fff;">St. Barts, Caribbean</h3>
                     <p style="color: var(--text-muted); margin-bottom: auto; line-height: 1.6;">Property Style: Tropical
                         Estate
@@ -978,8 +1184,8 @@
                         Availability &rarr;</a>
                 </div>
 
-                <div class="glass-panel"
-                    style="padding: 2.5rem; text-align: center; border-top: 2px solid var(--primary-gold); display: flex; flex-direction: column; justify-content: flex-start; gap: 0.5rem; height: 100%;">
+                <div class="glass-panel card"
+                    style="padding: 2.5rem; text-align: center; border-top: 2px solid var(--primary-gold); background: linear-gradient(to top, rgba(5,5,5,0.95), rgba(5,5,5,0.2)), url('https://images.unsplash.com/photo-1516086550756-32db2f0b701c?auto=format&fit=crop&w=800&q=80') center/cover; display: flex; flex-direction: column; justify-content: flex-start; gap: 0.5rem; height: 100%; transition: transform 0.4s ease;">
                     <h3 class="serif" style="font-size: 2rem; margin-bottom: 0; color: #fff;"> Aspen, Colorado
                     </h3>
                     <p style="color: var(--text-muted); margin-bottom: auto; line-height: 1.6;">Property Style: Ski
@@ -993,8 +1199,8 @@
                         Availability &rarr;</a>
                 </div>
 
-                <div class="glass-panel"
-                    style="padding: 2.5rem; text-align: center; border-top: 2px solid var(--primary-gold); display: flex; flex-direction: column; justify-content: flex-start; gap: 0.5rem; height: 100%;">
+                <div class="glass-panel card"
+                    style="padding: 2.5rem; text-align: center; border-top: 2px solid var(--primary-gold); background: linear-gradient(to top, rgba(5,5,5,0.95), rgba(5,5,5,0.2)), url('https://images.unsplash.com/photo-1520653609805-4c07883d6a2f?auto=format&fit=crop&w=800&q=80') center/cover; display: flex; flex-direction: column; justify-content: flex-start; gap: 0.5rem; height: 100%; transition: transform 0.4s ease;">
                     <h3 class="serif" style="font-size: 2rem; margin-bottom: 0; color: #fff;">Dubai, UAE</h3>
                     <p style="color: var(--text-muted); margin-bottom: auto; line-height: 1.6;">Property Style: Palm
                         Jumeirah Mansion
@@ -1036,7 +1242,7 @@
                         the precise <strong>luxury villa rentals cost</strong> depends on several interlinking variables
                         curated by our specialized brokers.</p>
 
-                    <img src="https://eliteluxurybookings.com/wp-content/uploads/2025/07/resort-vacation-landscape-travel-blue-scaled.jpg"
+                    <img src="/assets/images/villa1.png"
                         alt="Luxury Private Villa Landscape - Elite Travel Destinations" loading="lazy" decoding="async"
                         style="width: 100%; border-radius: 12px; margin-bottom: 1rem; object-fit: cover; height: 250px;">
 
@@ -1075,8 +1281,8 @@
                 <div class="glass-panel" style="padding: 3rem; border: 1px solid var(--primary-gold);">
                     <h3 class="serif" style="font-size: 2.5rem; margin-bottom: 1.5rem;">Off-Market Private Villa Rentals
                     </h3>
-                    <img src="https://eliteluxurybookings.com/wp-content/uploads/2025/07/lady-holds-straw-hat-woman-beige-dress-with-bag-goes-down-sea-scaled.jpg"
-                        alt="Exclusive Off-Market Private Villa Experience" loading="lazy" decoding="async"
+                    <img src="/assets/images/villa2.png" alt="Exclusive Off-Market Private Villa Experience"
+                        loading="lazy" decoding="async"
                         style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem; object-fit: cover; height: 200px;">
                     <p class="seo-text" style="font-size: 1.05rem;">The most remarkable luxury properties rarely appear
                         on public booking sectors. They are known as "off-market" properties, offered solely through
@@ -1315,60 +1521,36 @@
         </div>
     </section>
 
-    <!-- FINAL CTA -->
 
 
-</div>
-
-            <!-- Column 2: The Americas Hub -->
-
-            <!-- Column 3: Asia & Pacific Hub -->
-
-            <!-- Column 4: Middle East & Islands Hub -->
-            
-        </div>
-
-        <div style="text-align: center; margin-top: 4rem;">
-            <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 600px; margin: 0 auto;">Elite Luxury Bookings operates 1,200+ global city-pairs. If your specific route is not listed, our 24/7 aviation desk provides bespoke pricing on request.</p>
-        </div>
-    </div>
-</section>
-
-</div>
-
-            <!-- Column 2: The Americas Hub -->
-
-            <!-- Column 3: Asia & Pacific Hub -->
-
-            <!-- Column 4: Middle East & Islands Hub -->
-            
-        </div>
-
-        <div style="text-align: center; margin-top: 4rem;">
-            <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 600px; margin: 0 auto;">Elite Luxury Bookings operates 1,200+ global city-pairs. If your specific route is not listed, our 24/7 aviation desk provides bespoke pricing on request.</p>
-        </div>
-    </div>
-</section>
-
-<!-- ELB_FOOTER_START -->
-    <footer class="section-padding" style="background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; margin-top: 5rem;">
+    <!-- ELB_FOOTER_START -->
+    <footer class="section-padding"
+        style="background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; margin-top: 5rem;">
         <div class="container">
-            <a href="/" style="display: block; margin-bottom: 2rem; font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:600; color:#fff; text-decoration:none;"><span style="color:#D4AF37;">Elite</span> Luxury Bookings</a>
+            <a href="/"
+                style="display: block; margin-bottom: 2rem; font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:600; color:#fff; text-decoration:none;"><span
+                    style="color:#D4AF37;">Elite</span> Luxury Bookings</a>
             <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 2rem;">
-                <a href="/elite-private-jet-charter/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Aviation Services</a>
-                <a href="/luxury-yacht-rentals/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Yacht Charter</a>
-                <a href="/luxury-villa-rentals/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Villa Rentals</a>
-                <a href="/blog/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Blog</a>
-                <a href="/contact/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Contact</a>
+                <a href="/elite-private-jet-charter/"
+                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Aviation
+                    Services</a>
+                <a href="/luxury-yacht-rentals/"
+                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Yacht Charter</a>
+                <a href="/luxury-villa-rentals/"
+                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Villa Rentals</a>
+                <a href="/blog/"
+                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Blog</a>
+                <a href="/contact/"
+                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Contact</a>
             </div>
             <p style="color: #444; font-size: 0.8rem;">© 2026 Elite Luxury Bookings. All rights reserved.</p>
         </div>
     </footer>
-<!-- ELB_FOOTER_END -->
+    <!-- ELB_FOOTER_END -->
 
     <!-- JAVASCRIPT -->
     <script>
-        const endpoint = 'https://script.google.com/macros/s/AKfycbxwH6b82MCg90tYS-yTwUMWw1ePx2S3oBdn3BC5U1UAt2uQRCB2bq03bzPP52ygUGU6UA/exec';
+        const endpoint = 'https://formspree.io/f/xwvwanlj';
 
         async function submitLead(event) {
             event.preventDefault();
@@ -1390,21 +1572,23 @@
             const formData = new FormData(form);
             const data = {};
             formData.forEach((value, key) => data[key] = value);
+            data['_subject'] = `Elite Inquiry: ${data.services || 'General'}`;
+            data['_replyto'] = data.email;
 
             try {
-                // Proper Fetch with Response Handling
+                const urlParams = new URLSearchParams(data).toString();
                 await fetch(endpoint, {
                     method: 'POST',
-                    mode: 'no-cors', // Keeping no-cors as many GAS endpoints are setup this way, but adding robust UI fallback
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: urlParams
                 });
 
-                // Assuming success for no-cors unless catch triggers
+                // ALWAYS show success panel because no-cors returns opaque response
                 showSuccess();
             } catch (error) {
                 console.error("Submission error:", error);
-                // Even on error, show success to VIP client (and handle retries/alerts internally if needed)
+                // Fallback: show success anyway to provide premium feedback
                 showSuccess();
             } finally {
                 btn.innerText = 'Get Instant Villa Options';
@@ -1419,10 +1603,9 @@
         }
     </script>
 
-<!-- ELB_JS_START -->
-    <script>function toggleMobileMenu(){var m=document.getElementById('elbMobileMenu'),b=document.getElementById('navHamburger');if(m&&b){m.classList.toggle('open');b.classList.toggle('open');}}</script>
-<!-- ELB_JS_END -->
+    <!-- ELB_JS_START -->
+    <script>function toggleMobileMenu() { var m = document.getElementById('elbMobileMenu'), b = document.getElementById('navHamburger'); if (m && b) { m.classList.toggle('open'); b.classList.toggle('open'); } }</script>
+    <!-- ELB_JS_END -->
 </body>
 
 </html>
-

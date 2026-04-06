@@ -552,6 +552,7 @@
                 max-height: 300px;
             }
         }
+
         /* HOW IT WORKS */
         .process-steps {
             display: grid;
@@ -652,36 +653,188 @@
         }
         </script>
 
-<style>
+    <style>
+        /* ELB_STYLE_START */
+        .global-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(5, 5, 5, 0.98);
+            backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            z-index: 99999;
+        }
 
-/* ELB_STYLE_START */
-    .global-nav { position:fixed; top:0; left:0; right:0; background:rgba(5,5,5,0.98); backdrop-filter:blur(24px); border-bottom:1px solid rgba(212,175,55,0.2); z-index:99999; }
-    .global-nav-inner { display:flex; align-items:center; justify-content:space-between; height:72px; gap:1rem; max-width:1400px; margin:0 auto; padding:0 2rem; box-sizing: border-box; }
-    .nav-brand { font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:600; color:#fff !important; text-decoration:none !important; }
-    .nav-gold { color:#D4AF37 !important; }
-    .nav-links { display:flex; align-items:center; gap:0.25rem; list-style:none; flex:1; justify-content:center; margin:0; padding:0; }
-    .nav-links a { color:rgba(255,255,255,0.7) !important; text-decoration:none !important; font-size:0.82rem; text-transform:uppercase; letter-spacing:1.5px; padding:0.5rem 0.9rem; border-radius:6px; transition:all 0.4s; font-family: 'Inter', sans-serif !important; }
-    .nav-links a:hover { color:#D4AF37 !important; }
-    .nav-dropdown { position:relative; }
-    .dropdown-menu { position:absolute; top:calc(100% + 8px); left:0; background:#0a0a0a; border:1px solid rgba(212,175,55,0.15); border-radius:12px; padding:0.75rem; min-width:240px; opacity:0; visibility:hidden; transform:translateY(-8px); transition:all 0.4s; box-shadow:0 20px 40px rgba(0,0,0,0.8); z-index:100; }
-    .nav-dropdown:hover .dropdown-menu { opacity:1 !important; visibility:visible !important; transform:translateY(0) !important; }
-    .dropdown-menu a { display:block !important; padding:0.7rem 1.2rem !important; color:rgba(255,255,255,0.7) !important; border-radius:8px; font-size:0.85rem !important; text-transform: none !important; }
-    .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:0.5rem; z-index:100001; }
-    .nav-hamburger span { display:block; width:24px; height:2px; background:rgba(255,255,255,0.8); border-radius:2px; transition:all 0.4s; }
-    .mobile-menu { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:#050505; padding:72px 2rem 2rem; z-index:100000; flex-direction:column; gap:0.5rem; overflow-y: auto; }
-    .mobile-menu.open { display:flex !important; }
-    .mobile-menu a { color:rgba(255,255,255,0.8) !important; text-decoration:none !important; font-size:1.1rem; text-transform:uppercase; letter-spacing:2px; padding:1.2rem 0; border-bottom:1px solid rgba(255,255,255,0.05); }
-    .mobile-cta { margin-top:2rem; text-align:center; background:linear-gradient(135deg,#D4AF37,#B8860B); color:#000 !important; border-radius:8px; padding:1.2rem !important; font-weight:700; }
-    @media (max-width:1024px) { .nav-links { display:none !important; } .nav-hamburger { display:flex !important; } }
-    body { padding-top: 72px !important; }
-    .luxury-list li::before { content: '✓' !important; }
-/* ELB_STYLE_END */
+        .global-nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+            gap: 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            box-sizing: border-box;
+        }
 
-</style>
+        .nav-brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #fff !important;
+            text-decoration: none !important;
+        }
+
+        .nav-gold {
+            color: #D4AF37 !important;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            list-style: none;
+            flex: 1;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.7) !important;
+            text-decoration: none !important;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 0.5rem 0.9rem;
+            border-radius: 6px;
+            transition: all 0.4s;
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        .nav-links a:hover {
+            color: #D4AF37 !important;
+        }
+
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            background: #0a0a0a;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 12px;
+            padding: 0.75rem;
+            min-width: 240px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-8px);
+            transition: all 0.4s;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+            z-index: 100;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: translateY(0) !important;
+        }
+
+        .dropdown-menu a {
+            display: block !important;
+            padding: 0.7rem 1.2rem !important;
+            color: rgba(255, 255, 255, 0.7) !important;
+            border-radius: 8px;
+            font-size: 0.85rem !important;
+            text-transform: none !important;
+        }
+
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 100001;
+        }
+
+        .nav-hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 2px;
+            transition: all 0.4s;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #050505;
+            padding: 72px 2rem 2rem;
+            z-index: 100000;
+            flex-direction: column;
+            gap: 0.5rem;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.open {
+            display: flex !important;
+        }
+
+        .mobile-menu a {
+            color: rgba(255, 255, 255, 0.8) !important;
+            text-decoration: none !important;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .mobile-cta {
+            margin-top: 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #D4AF37, #B8860B);
+            color: #000 !important;
+            border-radius: 8px;
+            padding: 1.2rem !important;
+            font-weight: 700;
+        }
+
+        @media (max-width:1024px) {
+            .nav-links {
+                display: none !important;
+            }
+
+            .nav-hamburger {
+                display: flex !important;
+            }
+        }
+
+        body {
+            padding-top: 72px !important;
+        }
+
+        .luxury-list li::before {
+            content: '✓' !important;
+        }
+
+        /* ELB_STYLE_END */
+    </style>
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
-<!-- ELB_NAV_START -->
+    <!-- ELB_NAV_START -->
     <nav class="global-nav">
         <div class="container global-nav-inner">
             <a href="/" class="nav-brand"><span class="nav-gold">Elite</span> Luxury Bookings</a>
@@ -723,7 +876,7 @@
         <a href="/contact/">Contact Us</a>
         <a href="https://wa.me/918801079030" class="mobile-cta">WhatsApp Concierge</a>
     </div>
-<!-- ELB_NAV_END -->
+    <!-- ELB_NAV_END -->
 
 
 
@@ -743,19 +896,119 @@
     <header class="hero">
         <div class="hero-parallax-bg" id="heroBg"></div>
         <div class="container">
-            <span class="brand-statement" style="margin-bottom: 2rem; color: var(--primary-gold); font-weight: 600;">THE ULTIMATE STANDARD IN GLOBAL AVIATION</span>
+            <span class="brand-statement" style="margin-bottom: 2rem; color: var(--primary-gold); font-weight: 600;">THE
+                ULTIMATE STANDARD IN GLOBAL AVIATION</span>
 
-            <h1 class="hero-headline">Elevated Private Jet Charter.<br><span class="gold-text">On-Demand Excellence.</span></h1>
+            <h1 class="hero-headline">Elevated Private Jet Charter.<br><span class="gold-text">On-Demand
+                    Excellence.</span></h1>
 
-            <p class="hero-subheadline" style="margin: 0 auto 1.5rem auto; color: #fff; font-size: 1.4rem;">Unmatched privacy. Absolute security. Aircraft positioned within 60 minutes.</p>
-            <p class="hero-subheadline" style="margin: 0 auto 2.5rem auto; max-width: 800px;">Access a premier network of audited, off-market aircraft from light jets to intercontinental heavy liners—curated by your dedicated aviation advisor.</p>
+            <p class="hero-subheadline" style="margin: 0 auto 1.5rem auto; color: #fff; font-size: 1.4rem;">Unmatched
+                privacy. Absolute security. Aircraft positioned within 60 minutes.</p>
+
+        
+        
+        <!-- ELB_VALENS_API_ENGINE_START -->
+        <div class="aviation-search-engine glass-panel" style="margin: 2rem auto; max-width: 1000px; padding: 2.5rem; border: 1px solid var(--primary-gold); position: relative; overflow: hidden; background: rgba(5,5,5,0.8); backdrop-filter: blur(20px); border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+            <div id="search-container">
+                <h3 class="serif gold-text" style="font-size: 2.3rem; margin-bottom: 0.5rem; text-align: center;">Elite Search Engine</h3>
+                <p style="text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-bottom: 2.5rem; text-transform: uppercase; letter-spacing: 3px;">Direct Valens Dashboard Connection</p>
+                
+                <form id="valensEngineForm" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div class="search-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem;">
+                        <input type="text" id="v_dep" name="departure" class="form-control" placeholder="From (Airport or City)" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.1rem; background: rgba(255,255,255,0.03); color: #fff;" required>
+                        <input type="text" id="v_arr" name="arrival" class="form-control" placeholder="To (Airport or City)" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.1rem; background: rgba(255,255,255,0.03); color: #fff;" required>
+                        <input type="date" id="v_date" name="travel_date" class="form-control" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.1rem; background: rgba(255,255,255,0.03); color: #fff;" required>
+                        <input type="number" id="v_pax" name="passengers" class="form-control" min="1" value="2" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.1rem; background: rgba(255,255,255,0.03); color: #fff;" required>
+                    </div>
+
+                    <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem;">
+                        <input type="text" id="v_name" name="name" class="form-control" placeholder="Full Name" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.1rem; background: rgba(255,255,255,0.03); color: #fff;" required>
+                        <input type="email" id="v_email" name="email" class="form-control" placeholder="Email Address" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.1rem; background: rgba(255,255,255,0.03); color: #fff;" required>
+                        <input type="tel" id="v_phone" name="contact" class="form-control" placeholder="WhatsApp / Phone" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.1rem; background: rgba(255,255,255,0.03); color: #fff;" required>
+                    </div>
+
+                    <button type="submit" id="searchApiBtn" class="btn btn-gold" style="width: 100%; margin-top: 1rem; font-size: 1.2rem; min-height: 75px; font-weight: 700; text-transform: uppercase; letter-spacing: 4px; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);">Search Global Fleet</button>
+                </form>
+            </div>
+
+            <div id="engine-success" style="display: none; text-align: center; padding: 5rem 2rem;">
+                <div style="font-size: 4rem; color: var(--primary-gold); margin-bottom: 2rem;">&#10003;</div>
+                <h3 class="serif gold-text" style="font-size: 2.8rem;">Sync Successfully</h3>
+                <p style="color: #fff; font-size: 1.2rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">Your lead is now on our Valens dashboard. A senior aviation concierge will contact you within 15 minutes.</p>
+                <div style="margin-top: 3.5rem; display: flex; gap: 1.5rem; justify-content: center;">
+                    <a href="https://wa.me/918801079030" class="btn btn-gold">Priority WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+        const VALENS_API = {
+            ENDPOINT: 'https://jetluxe.jetlink.app/api/affiliate/valens/v1/trip/new',
+            TOKEN: '64|t997lbxqnHWlW15TpE5FCogSyTev2hKpOLRo2Hjj7cad47bc',
+            ICAO_DB: {
+                'london': 'EGLL', 'nice': 'LFMN', 'dubai': 'OMDB', 'paris': 'LFPG', 'miami': 'KMIA',
+                'new york': 'KJFK', 'jfk': 'KJFK', 'aspen': 'KASE', 'ibiza': 'LEIB'
+            }
+        };
+        document.getElementById('valensEngineForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('searchApiBtn');
+            btn.disabled = true;
+            btn.innerHTML = 'Connecting...';
+            const dep_val = document.getElementById('v_dep').value.toLowerCase();
+            const arr_val = document.getElementById('v_arr').value.toLowerCase();
+            let dep_icao = 'EGLL', arr_icao = 'LFMN'; 
+            for (const [key, icao] of Object.entries(VALENS_API.ICAO_DB)) {
+                if (dep_val.includes(key)) dep_icao = icao;
+                if (arr_val.includes(key)) arr_icao = icao;
+            }
+            const payload = {
+                idempotency_key: crypto.randomUUID(),
+                legs: [{
+                    date: document.getElementById('v_date').value,
+                    passengers: parseInt(document.getElementById('v_pax').value),
+                    departure_icao: dep_icao,
+                    arrival_icao: arr_icao,
+                    time: "12:00"
+                }],
+                customer: {
+                    full_name: document.getElementById('v_name').value,
+                    contact: document.getElementById('v_phone').value,
+                    email: document.getElementById('v_email').value
+                }
+            };
+            try {
+                const response = await fetch(VALENS_API.ENDPOINT, {
+                    method: 'POST',
+                    headers: { 'Authorization': `Bearer ${VALENS_API.TOKEN}`, 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                if (response.ok) {
+                    document.getElementById('search-container').style.display = 'none';
+                    document.getElementById('engine-success').style.display = 'block';
+                } else { alert("Dashboard sync failed. Please use WhatsApp support."); }
+            } catch (err) { alert("Network error. Please use WhatsApp support."); }
+        });
+        </script>
+        <!-- ELB_VALENS_API_ENGINE_END -->
+
+</header>
+
+</header>
+
+            <p class="hero-subheadline" style="margin: 0 auto 2.5rem auto; max-width: 800px;">Access a premier network
+                of audited, off-market aircraft from light jets to intercontinental heavy liners—curated by your
+                dedicated aviation advisor.</p>
 
             <div style="margin-top: 2rem;">
-                <a href="https://wa.me/918801079030" class="btn btn-gold" style="min-width: 340px; font-weight: 700;">Secure Instant Charter Rates</a>
-                <div style="margin-top: 1rem; font-size: 0.9rem; color: var(--primary-gold); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">
+                <a href="https://wa.me/918801079030" class="btn btn-gold"
+                    style="min-width: 340px; font-weight: 700;">Secure Instant Charter Rates</a>
+                <div
+                    style="margin-top: 1rem; font-size: 0.9rem; color: var(--primary-gold); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">
                     Available within 60 minutes • 24/7 Global Dispatch
                 </div>
-                <div style="margin-top: 1.5rem; font-size: 0.85rem; color: #fff; opacity: 0.8; text-transform: uppercase; letter-spacing: 1px;">
+                <div
+                    style="margin-top: 1.5rem; font-size: 0.85rem; color: #fff; opacity: 0.8; text-transform: uppercase; letter-spacing: 1px;">
                     Trusted by Global Executives & Family Offices
                 </div>
             </div>
@@ -763,28 +1016,32 @@
     </header>
 
     <!-- HOW IT WORKS SECTION -->
-    <section class="section-padding bg-dark" style="border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+    <section class="section-padding bg-dark"
+        style="border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
         <div class="container">
             <div class="section-header">
                 <span class="trust-micro">Seamless Aviation</span>
                 <h2 class="serif">The Elite Standard of Deployment</h2>
             </div>
-            
+
             <div class="process-steps">
                 <div>
                     <div class="step-num">01</div>
                     <h3 class="step-title gold-text">Strategic Brief</h3>
-                    <p class="step-desc">Your dedicated aviation advisor manages the logistics for your group size, nautical range, and specific tarmac requirements.</p>
+                    <p class="step-desc">Your dedicated aviation advisor manages the logistics for your group size,
+                        nautical range, and specific tarmac requirements.</p>
                 </div>
                 <div>
                     <div class="step-num">02</div>
                     <h3 class="step-title gold-text">Audited Selection</h3>
-                    <p class="step-desc">Access only ARGUS/Wyvern audited aircraft. We source the finest off-market options positioned for your departure window.</p>
+                    <p class="step-desc">Access only ARGUS/Wyvern audited aircraft. We source the finest off-market
+                        options positioned for your departure window.</p>
                 </div>
                 <div>
                     <div class="step-num">03</div>
                     <h3 class="step-title gold-text">Instant Dispatch</h3>
-                    <p class="step-desc">Position your aircraft within 60 minutes. Complete manifest discretion and seamless ground coordination included as standard.</p>
+                    <p class="step-desc">Position your aircraft within 60 minutes. Complete manifest discretion and
+                        seamless ground coordination included as standard.</p>
                 </div>
             </div>
         </div>
@@ -882,30 +1139,30 @@
                     <p
                         style="font-size: 1.3rem; color: var(--primary-gold); font-weight: 600; margin-top: 1rem; margin-bottom: 0;">
                         Starting from $18,000</p>
-                    <a href="/view-route
-------------------------logistics-&rarr;/" class="internal-link" style="font-size: 0.95rem; margin-top: 0.2rem;">View
+                    <a href="/view-routelogistics-&rarr;/" class="internal-link"
+                        style="font-size: 0.95rem; margin-top: 0.2rem;">View
                         Route
                         Logistics &rarr;</a>
                 </div>
 
                 <div class="glass-panel"
                     style="padding: 2.5rem; text-align: center; border-top: 2px solid var(--primary-gold); display: flex; flex-direction: column; justify-content: flex-start; gap: 0.5rem; height: 100%;">
-                    <h3 class="serif" style="font-size: 2rem; margin-bottom: 0; color: #fff;">newyork ✈ Miami</h3>
+                    <h3 class="serif" style="font-size: 2rem; margin-bottom: 0; color: #fff;">New York ✈ Miami</h3>
                     <p style="color: var(--text-muted); margin-bottom: auto; line-height: 1.6;">Flight Time: ~3 hours
                         <br> Aircraft: Midsize Jet
                     </p>
                     <p
                         style="font-size: 1.3rem; color: var(--primary-gold); font-weight: 600; margin-top: 1rem; margin-bottom: 0;">
                         Starting from $22,000</p>
-                    <a href="/view-route
-------------------------logistics-&rarr;/" class="internal-link" style="font-size: 0.95rem; margin-top: 0.2rem;">View
+                    <a href="/view-routelogistics-&rarr;/" class="internal-link"
+                        style="font-size: 0.95rem; margin-top: 0.2rem;">View
                         Route
                         Logistics &rarr;</a>
                 </div>
 
                 <div class="glass-panel"
                     style="padding: 2.5rem; text-align: center; border-top: 2px solid var(--primary-gold); display: flex; flex-direction: column; justify-content: flex-start; gap: 0.5rem; height: 100%;">
-                    <h3 class="serif" style="font-size: 2rem; margin-bottom: 0; color: #fff;">losangeles ✈ lasvegas
+                    <h3 class="serif" style="font-size: 2rem; margin-bottom: 0; color: #fff;">Los Angeles ✈ Las Vegas
                     </h3>
                     <p style="color: var(--text-muted); margin-bottom: auto; line-height: 1.6;">Flight Time: ~1 hour
                         <br> Aircraft: Light Jet
@@ -970,41 +1227,40 @@
                                     Route
                                     Logistics &rarr;</a></li>
                             <li><a href="/newyork-to-losangeles-private-jet-cost/" class="internal-link"
-                                    style="font-size: 1rem; color: #ddd;">newyork to losangeles Private Jet Cost</a>
+                                    style="font-size: 1rem; color: #ddd;">New York to Los Angeles Private Jet Cost</a>
                             </li>
                             <li><a href="/newyork-to-lasvegas-private-jet-cost/" class="internal-link"
-                                    style="font-size: 1rem; color: #ddd;">newyork to lasvegas Private Jet Cost</a>
+                                    style="font-size: 1rem; color: #ddd;">New York to Las Vegas Private Jet Cost</a>
                             </li>
                             <li><a href="/newyork-to-chicago-private-jet-cost/" class="internal-link"
-                                    style="font-size: 1rem; color: #ddd;">newyork to Chicago Private Jet Cost</a></li>
+                                    style="font-size: 1rem; color: #ddd;">New York to Chicago Private Jet Cost</a></li>
                             <li><a href="/newyork-to-dallas-private-jet-cost/" class="internal-link"
-                                    style="font-size: 1rem; color: #ddd;">newyork to Dallas Private Jet Cost</a></li>
+                                    style="font-size: 1rem; color: #ddd;">New York to Dallas Private Jet Cost</a></li>
                             <li><a href="/newyork-to-toronto-private-jet-cost/" class="internal-link"
-                                    style="font-size: 1rem; color: #ddd;">newyork to toronto Private Jet Cost</a></li>
+                                    style="font-size: 1rem; color: #ddd;">New York to Toronto Private Jet Cost</a></li>
                             <li><a href="/newyork-to-bahamas-private-jet-cost/" class="internal-link"
-                                    style="font-size: 1rem; color: #ddd;">newyork to Bahamas Private Jet Cost</a></li>
-                            <!-- Batch 2: losangeles Departures -->
+                                    style="font-size: 1rem; color: #ddd;">New York to Bahamas Private Jet Cost</a></li>
+                            <!-- Batch 2: Los Angeles Departures -->
                             <li><a href="" class="internal-link" style="font-size: 0.95rem; margin-top: 0.2rem;">View
                                     Route
                                     Logistics &rarr;</a>
                             </li>
                             <li><a href="/losangeles-to-newyork-private-jet-cost/" class="internal-link"
-                                    style="font-size: 1rem; color: #ddd;">losangeles to newyork Private Jet Cost</a>
+                                    style="font-size: 1rem; color: #ddd;">Los Angeles to New York Private Jet Cost</a>
                             </li>
                             <li><a href="/losangeles-to-miami-private-jet-cost/" class="internal-link"
-                                    style="font-size: 1rem; color: #ddd;">losangeles to Miami Private Jet Cost</a></li>
-                            <li><a href="/losangeles-to-sanfrancisco-private-jet
-------------------------------------cost/" class="internal-link" style="font-size: 1rem; color: #ddd;">losangeles to
-                                    sanfrancisco Private Jet
+                                    style="font-size: 1rem; color: #ddd;">Los Angeles to Miami Private Jet Cost</a></li>
+                            <li><a href="/losangeles-to-sanfrancisco-private-jet-cost/" class="internal-link"
+                                    style="font-size: 1rem; color: #ddd;">Los Angeles to San Francisco Private Jet
                                     Cost</a></li>
                             <li><a href="/losangeles-to-chicago-private-jet-cost/" class="internal-link"
-                                    style="font-size: 1rem; color: #ddd;">losangeles to Chicago Private Jet Cost</a>
+                                    style="font-size: 1rem; color: #ddd;">Los Angeles to Chicago Private Jet Cost</a>
                             </li>
                             <li><a href="/losangeles-to-dallas-private-jet-cost/" class="internal-link"
-                                    style="font-size: 1rem; color: #ddd;">losangeles to Dallas Private Jet Cost</a>
+                                    style="font-size: 1rem; color: #ddd;">Los Angeles to Dallas Private Jet Cost</a>
                             </li>
                             <li><a href="/losangeles-to-cabo-private-jet-cost/" class="internal-link"
-                                    style="font-size: 1rem; color: #ddd;">losangeles to Cabo Private Jet Cost</a></li>
+                                    style="font-size: 1rem; color: #ddd;">Los Angeles to Cabo Private Jet Cost</a></li>
                             <!-- You will paste your future 30+ US links directly into this block -->
                         </ul>
                     </div>
@@ -1017,13 +1273,13 @@
                         <ul
                             style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem;">
                             <li><a href="/newyork-to-london-private-jet-cost/" class="internal-link"
-                                    style="font-size: 1rem; color: #ddd;">newyork to London Private Jet Cost</a></li>
+                                    style="font-size: 1rem; color: #ddd;">New York to London Private Jet Cost</a></li>
                             <li><a href="/newyork-to-paris-private-jet-cost/" class="internal-link"
-                                    style="font-size: 1rem; color: #ddd;">newyork to Paris Private Jet Cost</a></li>
+                                    style="font-size: 1rem; color: #ddd;">New York to Paris Private Jet Cost</a></li>
                             <li><a href="/newyork-to-dubai-private-jet-cost/" class="internal-link"
-                                    style="font-size: 1rem; color: #ddd;">newyork to Dubai Private Jet Cost</a></li>
+                                    style="font-size: 1rem; color: #ddd;">New York to Dubai Private Jet Cost</a></li>
                             <li><a href="/losangeles-to-hawaii-private-jet-cost/" class="internal-link"
-                                    style="font-size: 1rem; color: #ddd;">losangeles to Hawaii Private Jet Cost</a>
+                                    style="font-size: 1rem; color: #ddd;">Los Angeles to Hawaii Private Jet Cost</a>
                             </li>
                             <!-- Future global assets go here -->
                         </ul>
@@ -1189,9 +1445,11 @@
                     <ul style="list-style: none; font-size: 1rem; line-height: 2.5;">
                         <li><a href="/london-to-ibiza-private-jet-cost/" class="internal-link">London to Ibiza</a></li>
                         <li><a href="/london-to-nice-private-jet-cost/" class="internal-link">London to Nice</a></li>
-                        <li><a href="/london-to-marrakesh-private-jet-cost/" class="internal-link">London to Marrakesh</a></li>
+                        <li><a href="/london-to-marrakesh-private-jet-cost/" class="internal-link">London to
+                                Marrakesh</a></li>
                         <li><a href="/london-to-paris-private-jet-cost/" class="internal-link">London to Paris</a></li>
-                        <li><a href="/london-to-geneva-private-jet-cost/" class="internal-link">London to Geneva</a></li>
+                        <li><a href="/london-to-geneva-private-jet-cost/" class="internal-link">London to Geneva</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="glass-panel" style="padding: 2.5rem;">
@@ -1200,9 +1458,12 @@
                         North America</h3>
                     <ul style="list-style: none; font-size: 1rem; line-height: 2.5;">
                         <li><a href="/miami-to-aspen-private-jet-cost/" class="internal-link">Miami to Aspen</a></li>
-                        <li><a href="/newyork-to-miami-private-jet-cost/" class="internal-link">newyork to Miami</a></li>
-                        <li><a href="/newyork-to-losangeles-private-jet-cost/" class="internal-link">newyork to LAX</a></li>
-                        <li><a href="/miami-to-lasvegas-private-jet-cost/" class="internal-link">Miami to lasvegas</a></li>
+                        <li><a href="/newyork-to-miami-private-jet-cost/" class="internal-link">New York to Miami</a>
+                        </li>
+                        <li><a href="/newyork-to-losangeles-private-jet-cost/" class="internal-link">New York to LAX</a>
+                        </li>
+                        <li><a href="/miami-to-lasvegas-private-jet-cost/" class="internal-link">Miami to Las Vegas</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="glass-panel" style="padding: 2.5rem;">
@@ -1211,10 +1472,14 @@
                         Australia Hub</h3>
                     <ul style="list-style: none; font-size: 1rem; line-height: 2.5;">
                         <li><a href="/sydney-to-perth-private-jet-cost/" class="internal-link">Sydney to Perth</a></li>
-                        <li><a href="/sydney-to-melbourne-private-jet-cost/" class="internal-link">Sydney to Melbourne</a></li>
-                        <li><a href="/melbourne-to-sydney-private-jet-cost/" class="internal-link">Melbourne to Sydney</a></li>
-                        <li><a href="/brisbane-to-sydney-private-jet-cost/" class="internal-link">Brisbane to Sydney</a></li>
-                        <li><a href="/sydney-to-goldcoast-private-jet-cost/" class="internal-link">Sydney to goldcoast</a></li>
+                        <li><a href="/sydney-to-melbourne-private-jet-cost/" class="internal-link">Sydney to
+                                Melbourne</a></li>
+                        <li><a href="/melbourne-to-sydney-private-jet-cost/" class="internal-link">Melbourne to
+                                Sydney</a></li>
+                        <li><a href="/brisbane-to-sydney-private-jet-cost/" class="internal-link">Brisbane to Sydney</a>
+                        </li>
+                        <li><a href="/sydney-to-goldcoast-private-jet-cost/" class="internal-link">Sydney to
+                                goldcoast</a></li>
                     </ul>
                 </div>
                 <div class="glass-panel" style="padding: 2.5rem;">
@@ -1223,9 +1488,12 @@
                         European Markets</h3>
                     <ul style="list-style: none; font-size: 1rem; line-height: 2.5;">
                         <li><a href="/london-to-milan-private-jet-cost/" class="internal-link">Milan to London</a></li>
-                        <li><a href="/london-to-barcelona-private-jet-cost/" class="internal-link">Barcelona Charter</a></li>
-                        <li><a href="/london-to-amsterdam-private-jet-cost/" class="internal-link">London to Amsterdam</a></li>
-                        <li><a href="/london-to-geneva-private-jet-cost/" class="internal-link">London to Geneva</a></li>
+                        <li><a href="/london-to-barcelona-private-jet-cost/" class="internal-link">Barcelona Charter</a>
+                        </li>
+                        <li><a href="/london-to-amsterdam-private-jet-cost/" class="internal-link">London to
+                                Amsterdam</a></li>
+                        <li><a href="/london-to-geneva-private-jet-cost/" class="internal-link">London to Geneva</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -1245,7 +1513,8 @@
                     <p>The cost varies immensely primarily by aircraft sizing and nautical distance. A short regional
                         flight on a light jet may start around $8,000, whereas navigating intercontinental waters on a
                         Heavy Jet can exceed $100,000. We encourage reviewing our comprehensive <a
-                            href="/elite-private-jet-charter/private-jet-rental-prices/" class="internal-link">private jet
+                            href="/elite-private-jet-charter/private-jet-rental-prices/" class="internal-link">private
+                            jet
                             cost
                             guide</a> or
                         requesting an instantaneous bespoke quote.</p>
@@ -1380,7 +1649,7 @@
                     <h3 class="serif gold-text" style="font-size: 2.8rem; margin-bottom: 1rem;">Request Successfully
                         Received</h3>
                     <p style="color: var(--text-main); font-size: 1.2rem; margin-bottom: 2rem;">A dedicated broker is
-                        evaluating active global routing. You may initiate a rapid secure connection via WhatsApp now.
+                        Thank you for reaching out. A private concierge will connect with you in 30 minutes.
                     </p>
                     <a href="https://wa.me/918801079030" class="btn btn-gold" target="_blank"
                         style="padding: 1.2rem 3rem;"
@@ -1388,152 +1657,137 @@
                         WhatsApp</a>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- FINAL CTA -->
-    <section class="section-padding" style="text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
-        <div class="container">
-            <h2 class="serif" style="font-size: 3.5rem; margin-bottom: 1.5rem;">Book Your Private Jet Today</h2>
-            <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 3rem;">Inquire seamlessly and receive
-                customized, private options matching your precise itinerary elements rapidly.</p>
-            <a href="#quote" class="btn btn-gold" style="padding: 1.5rem 4rem; font-size: 1.2rem;">Request a Quote</a>
-        </div>
-    </section>
-
-    <!-- GLOBAL ROUTE NETWORK (4-HUB GRID) -->
-
-</div>
-
-            <!-- Column 2: The Americas Hub -->
-
-            <!-- Column 3: Asia & Pacific Hub -->
-
-            <!-- Column 4: Middle East & Islands Hub -->
-            
-        </div>
-
-        <div style="text-align: center; margin-top: 4rem;">
-            <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 600px; margin: 0 auto;">Elite Luxury Bookings operates 1,200+ global city-pairs. If your specific route is not listed, our 24/7 aviation desk provides bespoke pricing on request.</p>
-        </div>
-    </div>
-</section>
-
-</div>
-
-            <!-- Column 2: The Americas Hub -->
-
-            <!-- Column 3: Asia & Pacific Hub -->
-
-            <!-- Column 4: Middle East & Islands Hub -->
-            
-        </div>
-
-        <div style="text-align: center; margin-top: 4rem;">
-            <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 600px; margin: 0 auto;">Elite Luxury Bookings operates 1,200+ global city-pairs. If your specific route is not listed, our 24/7 aviation desk provides bespoke pricing on request.</p>
-        </div>
-    </div>
-</section>
-
-
-    <!-- SILO Internal Links -->
-    <div class="container" style="padding: 4rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
-        <div class="section-header">
-            <h2 style="font-size: 2.5rem; text-align: center;">Popular Global Routes</h2>
-        </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-            <a href="/newyork-to-london-private-jet-cost/" class="btn btn-outline btn-sm">New York to London</a>
-            <a href="/dubai-to-london-private-jet-cost/" class="btn btn-outline btn-sm">Dubai to London</a>
-            <a href="/paris-to-dubai-private-jet-cost/" class="btn btn-outline btn-sm">Paris to Dubai</a>
-            <a href="/losangeles-to-tokyo-private-jet-cost/" class="btn btn-outline btn-sm">Los Angeles to Tokyo</a>
-            <a href="/miami-to-newyork-private-jet-cost/" class="btn btn-outline btn-sm">Miami to New York</a>
-            <a href="/london-to-ibiza-private-jet-cost/" class="btn btn-outline btn-sm">London to Ibiza</a>
-            <a href="/elite-private-jet-charter/" class="btn btn-gold btn-sm">View All Routes</a>
-        </div>
-    </div>
-    
-<!-- ELB_FOOTER_START -->
-    <footer class="section-padding" style="background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; margin-top: 5rem;">
-        <div class="container">
-            <a href="/" style="display: block; margin-bottom: 2rem; font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:600; color:#fff; text-decoration:none;"><span style="color:#D4AF37;">Elite</span> Luxury Bookings</a>
-            <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 2rem;">
-                <a href="/elite-private-jet-charter/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Aviation Services</a>
-                <a href="/luxury-yacht-rentals/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Yacht Charter</a>
-                <a href="/luxury-villa-rentals/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Villa Rentals</a>
-                <a href="/blog/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Blog</a>
-                <a href="/contact/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Contact</a>
+            <!-- SILO Internal Links -->
+            <div class="container" style="padding: 4rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+                <div class="section-header">
+                    <h2 style="font-size: 2.5rem; text-align: center;">Popular Global Routes</h2>
+                </div>
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                    <a href="/newyork-to-london-private-jet-cost/" class="btn btn-outline btn-sm">New York to London</a>
+                    <a href="/dubai-to-london-private-jet-cost/" class="btn btn-outline btn-sm">Dubai to London</a>
+                    <a href="/paris-to-dubai-private-jet-cost/" class="btn btn-outline btn-sm">Paris to Dubai</a>
+                    <a href="/losangeles-to-tokyo-private-jet-cost/" class="btn btn-outline btn-sm">Los Angeles to
+                        Tokyo</a>
+                    <a href="/miami-to-newyork-private-jet-cost/" class="btn btn-outline btn-sm">Miami to New York</a>
+                    <a href="/london-to-ibiza-private-jet-cost/" class="btn btn-outline btn-sm">London to Ibiza</a>
+                    <a href="/elite-private-jet-charter/" class="btn btn-gold btn-sm">View All Routes</a>
+                </div>
             </div>
-            <p style="color: #444; font-size: 0.8rem;">© 2026 Elite Luxury Bookings. All rights reserved.</p>
-        </div>
-    </footer>
-<!-- ELB_FOOTER_END -->
 
-    <!-- JAVASCRIPT -->
-    <script>
-        const endpoint = 'https://script.google.com/macros/s/AKfycbxwH6b82MCg90tYS-yTwUMWw1ePx2S3oBdn3BC5U1UAt2uQRCB2bq03bzPP52ygUGU6UA/exec';
+            <!-- JAVASCRIPT -->
+            <script>
+                const endpoint = 'https://script.google.com/macros/s/AKfycbxwH6b82MCg90tYS-yTwUMWw1ePx2S3oBdn3BC5U1UAt2uQRCB2bq03bzPP52ygUGU6UA/exec';
 
-        async function submitLead(event) {
-            event.preventDefault();
-            const btn = document.getElementById('submitBtn');
-            const form = document.getElementById('leadForm');
-            const msg = document.getElementById('formMsg');
+                async function submitLead(event) {
+                    event.preventDefault();
+                    const btn = document.getElementById('submitBtn');
+                    const form = document.getElementById('leadForm');
+                    const msg = document.getElementById('formMsg');
 
-            typeof gtag === 'function' && gtag('event', 'generate_lead');
+                    typeof gtag === 'function' && gtag('event', 'generate_lead');
 
-            btn.innerText = 'SECURELY SENDING...';
-            btn.disabled = true;
+                    btn.innerText = 'SECURELY SENDING...';
+                    btn.disabled = true;
 
-            const formData = new FormData(form);
-            const data = {};
-            formData.forEach((value, key) => data[key] = value);
+                    const formData = new FormData(form);
+                    const data = {};
+                    formData.forEach((value, key) => data[key] = value);
 
-            try {
-                await fetch(endpoint, {
-                    method: 'POST', mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
-                });
-                form.style.display = 'none';
-                msg.style.display = 'block';
-                document.getElementById('quote').scrollIntoView({ behavior: 'smooth' });
-            } catch (error) {
-                console.error(error);
-                form.style.display = 'none';
-                msg.style.display = 'block';
-                document.getElementById('quote').scrollIntoView({ behavior: 'smooth' });
-            } finally {
-                btn.innerText = 'Get Instant Quote';
-                btn.disabled = false;
-            }
-        }
-
-        // --- SUBTLE PARALLAX ENGINE ---
-        document.addEventListener('DOMContentLoaded', () => {
-            const heroBg = document.getElementById('heroBg');
-            const heroHeadline = document.querySelector('.hero-headline');
-            let ticking = false;
-
-            window.addEventListener('scroll', () => {
-                if (!ticking) {
-                    window.requestAnimationFrame(() => {
-                        const scrollY = window.pageYOffset;
-                        if (heroBg) {
-                            heroBg.style.transform = `translate3d(0, ${scrollY * 0.15}px, 0)`;
-                        }
-                        if (heroHeadline && window.innerWidth > 768) {
-                            heroHeadline.style.transform = `translate3d(0, ${scrollY * -0.05}px, 0)`;
-                        }
-                        ticking = false;
-                    });
-                    ticking = true;
+                    try {
+                        const urlParams = new URLSearchParams(data).toString();
+                        await fetch(endpoint, {
+                            method: 'POST', mode: 'no-cors',
+                            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                            body: urlParams
+                        });
+                        
+                        // ALWAYS show success panel because no-cors returns opaque response
+                        form.style.display = 'none';
+                        msg.style.display = 'block';
+                        document.getElementById('quote').scrollIntoView({ behavior: 'smooth' });
+                    } catch (error) {
+                        console.error(error);
+                        // Fallback: show success anyway for VIP feedback
+                        form.style.display = 'none';
+                        msg.style.display = 'block';
+                        document.getElementById('quote').scrollIntoView({ behavior: 'smooth' });
+                    } finally {
+                        btn.innerText = 'Get Instant Quote';
+                        btn.disabled = false;
+                    }
                 }
-            });
+
+                // --- SUBTLE PARALLAX ENGINE ---
+                document.addEventListener('DOMContentLoaded', () => {
+                    const heroBg = document.getElementById('heroBg');
+                    const heroHeadline = document.querySelector('.hero-headline');
+                    let ticking = false;
+
+                    window.addEventListener('scroll', () => {
+                        if (!ticking) {
+                            window.requestAnimationFrame(() => {
+                                const scrollY = window.pageYOffset;
+                                if (heroBg) {
+                                    heroBg.style.transform = `translate3d(0, ${scrollY * 0.15}px, 0)`;
+                                }
+                                if (heroHeadline && window.innerWidth > 768) {
+                                    heroHeadline.style.transform = `translate3d(0, ${scrollY * -0.05}px, 0)`;
+                                }
+                                ticking = false;
+                            });
+                            ticking = true;
+                        }
+                    });
+                });
+            </script>
+
+            <!-- ELB_FOOTER_START -->
+            <footer class="section-padding"
+                style="background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; margin-top: 5rem;">
+                <div class="container">
+                    <a href="/"
+                        style="display: block; margin-bottom: 2rem; font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:600; color:#fff; text-decoration:none;"><span
+                            style="color:#D4AF37;">Elite</span> Luxury Bookings</a>
+                    <div
+                        style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 2rem;">
+                        <a href="/elite-private-jet-charter/"
+                            style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Aviation
+                            Services</a>
+                        <a href="/luxury-yacht-rentals/"
+                            style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Yacht
+                            Charter</a>
+                        <a href="/luxury-villa-rentals/"
+                            style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Villa
+                            Rentals</a>
+                        <a href="/blog/"
+                            style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Blog</a>
+                        <a href="/contact/"
+                            style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Contact</a>
+                    </div>
+                    <p style="color: #444; font-size: 0.8rem;">© 2026 Elite Luxury Bookings. All rights reserved.</p>
+                </div>
+            </footer>
+            <!-- ELB_FOOTER_END -->
+
+            
+    <script>
+        document.getElementById('tripForm').addEventListener('submit', function(e) {
+            const btn = document.getElementById('submitBtn');
+            btn.disabled = true;
+            btn.innerHTML = 'Sending...';
+            
+            // Force success panel immediately for premium UX (Formspree handles the POST)
+            setTimeout(() => {
+                document.getElementById('form-container').style.display = 'none';
+                document.getElementById('success-panel').style.display = 'block';
+            }, 800);
         });
     </script>
 
 <!-- ELB_JS_START -->
-    <script>function toggleMobileMenu(){var m=document.getElementById('elbMobileMenu'),b=document.getElementById('navHamburger');if(m&&b){m.classList.toggle('open');b.classList.toggle('open');}}</script>
-<!-- ELB_JS_END -->
+            <script>function toggleMobileMenu() { var m = document.getElementById('elbMobileMenu'), b = document.getElementById('navHamburger'); if (m && b) { m.classList.toggle('open'); b.classList.toggle('open'); } }</script>
+            <!-- ELB_JS_END -->
 </body>
 
 </html>

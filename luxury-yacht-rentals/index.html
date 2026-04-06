@@ -287,6 +287,7 @@
 /* ELB_STYLE_END */
 
 </style>
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
@@ -343,6 +344,13 @@
             
             <p class="hero-subheadline">Access to the world's finest audited superyachts and off-market vessels. Hand-selected crews and absolute discretion guaranteed.</p>
 
+        
+        
+        
+
+</header>
+
+
             <!-- MINI LEAD FORM -->
             <div class="hero-mini-form glass-panel">
                 <form id="heroForm" onsubmit="submitHeroLead(event)" style="width: 100%;">
@@ -354,7 +362,7 @@
                     </div>
                 </form>
                 <div id="heroFormMsg" style="display:none; width: 100%; text-align: center; padding: 1rem;">
-                    <span style="font-size: 1.1rem; color: #fff;">Your request is being prioritized. A concierge is now reviewing your requirements.</span>
+                    <span style="font-size: 1.1rem; color: #fff;">Thank you for reaching out. Our elite concierge team will get back to you in few hours.</span>
                     <a href="https://wa.me/918801079030" target="_blank" class="gold-text"
                         style="font-weight: 600; margin-left: 0.5rem; text-decoration: none; display: inline-block; margin-top: 0.5rem;">Open WhatsApp for Immediate Pricing →</a>
                 </div>
@@ -496,9 +504,59 @@
     </footer>
 <!-- ELB_FOOTER_END -->
 
-<!-- ELB_JS_START -->
+    <!-- JAVASCRIPT -->
+    <script>
+        const endpoint = 'https://formspree.io/f/xwvwanlj';
+
+        async function submitHeroLead(event) {
+            event.preventDefault();
+            const btn = document.getElementById('heroSubmitBtn');
+            const form = document.getElementById('heroForm');
+            const msg = document.getElementById('heroFormMsg');
+
+            if (typeof gtag === 'function') {
+                gtag('event', 'hero_lead', {
+                    'event_category': 'Engagement',
+                    'event_label': 'Yacht Hub Hero Lead'
+                });
+            }
+
+            btn.innerText = 'SENDING...';
+            btn.disabled = true;
+
+            const formData = new FormData(form);
+            const data = {
+                phone: formData.get('phone'),
+                services: 'Yacht Charter Inquiry',
+                requirements: 'Fast track Yacht inquiry. Concierge follow-up required.'
+            };
+
+            try {
+                const urlParams = new URLSearchParams(data).toString();
+                await fetch(endpoint, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: urlParams
+                });
+
+                form.style.display = 'none';
+                msg.style.display = 'block';
+            } catch (error) {
+                console.error(error);
+                // Fallback: show success anyway for VIP UX
+                form.style.display = 'none';
+                msg.style.display = 'block';
+            } finally {
+                btn.innerText = 'Secure Instant Yacht Rates';
+                btn.disabled = false;
+            }
+        }
+    </script>
+
+    <!-- ELB_JS_START -->
     <script>function toggleMobileMenu(){var m=document.getElementById('elbMobileMenu'),b=document.getElementById('navHamburger');if(m&&b){m.classList.toggle('open');b.classList.toggle('open');}}</script>
-<!-- ELB_JS_END -->
+    <!-- ELB_JS_END -->
 
 </body>
 </html>
