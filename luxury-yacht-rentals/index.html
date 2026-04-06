@@ -283,7 +283,7 @@
     .mobile-cta { margin-top:2rem; text-align:center; background:linear-gradient(135deg,#D4AF37,#B8860B); color:#000 !important; border-radius:8px; padding:1.2rem !important; font-weight:700; }
     @media (max-width:1024px) { .nav-links { display:none !important; } .nav-hamburger { display:flex !important; } }
     body { padding-top: 72px !important; }
-    .luxury-list li::before { content: '✓' !important; }
+    .luxury-list li::before { content: '' !important; }
 /* ELB_STYLE_END */
 
 </style>
@@ -336,173 +336,95 @@
 <!-- ELB_NAV_END -->
 
     <!-- HERO SECTION -->
+    
+    
+    
+    
+    
+    
     <header class="hero">
-        <div class="hero-parallax-bg"></div>
         <div class="container">
-            <span class="brand-statement" style="margin-bottom: 2rem; color: var(--primary-gold); font-weight: 600;">The Global Gold Standard in Maritime Travel</span>
-            <h1 class="hero-headline">Bespoke Yacht Charter.<br><span class="gold-text">On-Demand Excellence.</span></h1>
+            <div class="tag-strip" style="margin-bottom: 1.5rem;">
+                <span class="tag-item">Global Yacht Network</span>
+                <span class="tag-item">5-Star Crewed Charters</span>
+                <span class="tag-item">Confidential Coordination</span>
+            </div>
+            <h1 style="margin-bottom: 0px;">Luxury Yacht Rental & Charter</h1>
             
-            <p class="hero-subheadline">Access to the world's finest audited superyachts and off-market vessels. Hand-selected crews and absolute discretion guaranteed.</p>
+            <div class="urgency-alert" style="background: rgba(255, 77, 77, 0.05); border: 1px solid rgba(255, 77, 77, 0.4); padding: 12px 20px; border-radius: 15px; margin: 1.5rem auto 1.5rem; max-width: 700px; display: flex; align-items: center; justify-content: center; gap: 15px;">
+                <span style="position: relative; display: flex; height: 10px; width: 10px;">
+                    <span style="animation: ping 1.5s infinite; position: absolute; height: 100%; width: 100%; border-radius: 50%; background-color: #ff4d4d; opacity: 0.75;"></span>
+                    <span style="border-radius: 50%; height: 10px; width: 10px; background-color: #ff4d4d;"></span>
+                </span>
+                <span style="color: #ff4d4d; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Strategic Slot Alert: High Demand Season</span>
+            </div>
 
-        
-        
-        
-
-</header>
-
-
-            <!-- MINI LEAD FORM -->
-            <div class="hero-mini-form glass-panel">
-                <form id="heroForm" onsubmit="submitHeroLead(event)" style="width: 100%;">
-                    <div class="mini-form-inner">
-                        <input type="tel" name="phone" placeholder="Your WhatsApp for Instant Quote" required
-                            class="form-control-mini" style="background: rgba(0,0,0,0.4); border: 1px solid var(--glass-border);">
-                        <button type="submit" class="btn btn-gold" id="heroSubmitBtn"
-                            style="padding: 1.2rem 2.5rem; white-space: nowrap; font-weight: 700;">Secure Instant Yacht Rates</button>
+            <div class="maritime-lead-hub glass-panel" style="margin: 0 auto 2.5rem; max-width: 800px; padding: 2.5rem; border: 1px solid var(--primary-gold); background: rgba(5,5,5,0.92); border-radius: 20px; box-shadow: 0 40px 100px rgba(0,0,0,0.7); text-align: left;">
+                <h3 class="serif gold-text" style="font-size: 2.2rem; margin-bottom: 0.5rem; text-align: center;" class="serif gold-text">Elite Maritime Inquiry</h3>
+                <p style="text-align: center; color: var(--text-muted); font-size: 0.8rem; margin-bottom: 2.5rem; text-transform: uppercase; letter-spacing: 3px;">Direct Senior Concierge Dispatch</p>
+                <form action="https://formspree.io/f/xwvwanlj" method="POST" style="display: flex; flex-direction: column; gap: 1.2rem;">
+                    <input type="text" name="name" placeholder="Full Name" style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.2rem; background: rgba(0,0,0,0.4); color: #fff;" required>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <input type="email" name="email" placeholder="Email Address" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.2rem; background: rgba(0,0,0,0.4); color: #fff;" required>
+                        <input type="tel" name="phone" placeholder="WhatsApp Number" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.2rem; background: rgba(0,0,0,0.4); color: #fff;" required>
                     </div>
+                    <textarea name="requirements" placeholder="Preferred Routing, Yacht Categories (Superyacht, Sailing...), or Specialist Requirements..." style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.2rem; background: rgba(0,0,0,0.4); color: #fff; min-height: 100px;" required></textarea>
+                    <button type="submit" class="btn btn-gold" style="width: 100%; font-size: 1.2rem; min-height: 70px; font-weight: 800; text-transform: uppercase; letter-spacing: 4px;">Request Priority Portfolio</button>
+                    <p style="text-align: center; font-size: 0.7rem; color: var(--text-muted); margin-top: 1rem;">Elite Luxury Bookings: Private Concierge Dispatch worldwide within 15 Minutes.</p>
                 </form>
-                <div id="heroFormMsg" style="display:none; width: 100%; text-align: center; padding: 1rem;">
-                    <span style="font-size: 1.1rem; color: #fff;">Thank you for reaching out. Our elite concierge team will get back to you in few hours.</span>
-                    <a href="https://wa.me/918801079030" target="_blank" class="gold-text"
-                        style="font-weight: 600; margin-left: 0.5rem; text-decoration: none; display: inline-block; margin-top: 0.5rem;">Open WhatsApp for Immediate Pricing →</a>
-                </div>
             </div>
 
-            <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; align-items: center;">
-                <span style="font-size: 0.85rem; color: var(--primary-gold); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">
-                    Positioned Globally within 4 Hours • 24/7 Global Dispatch
-                </span>
-                <span style="font-size: 0.8rem; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase;">
-                    Trusted by Global Executives & Family Offices
-                </span>
-            </div>
         </div>
     </header>
 
-    <!-- CONTENT MODULES -->
-    <section class="section-padding" style="background: var(--graphene);">
+    <!-- ELB_CONTENT_HUB_START -->
+    <section class="section-padding" style="background: rgba(212, 175, 55, 0.02); border-bottom: 1px solid rgba(212,175,55,0.1); padding: 4rem 0;">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 5rem;">
-                <span class="brand-statement">The ELB Experience</span>
-                <h2 class="serif" style="font-size: 3.5rem; margin-top: 1rem;">The Elite Standard of Maritime Deployment</h2>
-            </div>
-
-            <div class="grid-3" style="text-align: center;">
-                <div class="glass-panel" style="padding: 3rem;">
-                    <span class="serif" style="font-size: 4rem; color: var(--primary-gold); opacity: 0.3;">01</span>
-                    <h3 class="serif" style="font-size: 2rem; margin-bottom: 1.5rem;">Concierge Consult</h3>
-                    <p style="color: var(--text-muted);">Direct liaison with a Senior Yachting Advisor managing group logistics and secure routing.</p>
+            <div class="grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+                <div class="seo-content">
+                    <h2 class="serif" style="font-size: 2.3rem; margin-bottom: 1.5rem;">Bespoke Excellence: Luxury Yacht Rental & Charter Charter Guide</h2>
+                    <p style="margin-bottom: 1.2rem; color: #fff; opacity: 0.9; line-height: 1.6;">Securing a <strong>Elite Luxury Yacht Rental & Charter Charter</strong> is the coordination of a world-class maritime experience. Our fleet selection is curated for those who demand absolute discretion and Michelin-tier standards on the water.</p>
+                    <p style="color: #fff; opacity: 0.9; line-height: 1.6;">From the Balearics to the Amalfi Coast, every itinerary is tailored to your specific requirements, ensuring your time at sea is as productive or as relaxing as you desire.</p>
                 </div>
-                <div class="glass-panel" style="padding: 3rem;">
-                    <span class="serif" style="font-size: 4rem; color: var(--primary-gold); opacity: 0.3;">02</span>
-                    <h3 class="serif" style="font-size: 2rem; margin-bottom: 1.5rem;">Audited Selection</h3>
-                    <p style="color: var(--text-muted);">Access to hand-selected vessels, spanning off-market superyachts and racing catamarans.</p>
-                </div>
-                <div class="glass-panel" style="padding: 3rem;">
-                    <span class="serif" style="font-size: 4rem; color: var(--primary-gold); opacity: 0.3;">03</span>
-                    <h3 class="serif" style="font-size: 2rem; margin-bottom: 1.5rem;">Tactical Dispatch</h3>
-                    <p style="color: var(--text-muted);">From tender transfers to on-deck manifest security, we manage every tactical arrival detail.</p>
+                <div class="glass-panel" style="padding: 2.5rem; background: rgba(5,5,5,0.6); border: 1px solid rgba(212,175,55,0.15); border-radius: 20px; backdrop-filter: blur(20px);">
+                    <h3 class="serif gold-text" style="margin-top:0; font-size: 1.8rem; margin-bottom: 1.5rem;">Charter Standards</h3>
+                    <ul class="luxury-list" style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1.2rem; padding-left: 0; position: relative;"><strong style="color:#fff;">Professional Crew:</strong> Fully vetted, multi-lingual elite maritime staff.</li>
+                        <li style="margin-bottom: 1.2rem; padding-left: 0; position: relative;"><strong style="color:#fff;">Onboard Culinary:</strong> Private chefs trained in Michelin-starred environments.</li>
+                        <li style="padding-left: 0; position: relative;"><strong style="color:#fff;">Worldwide Access:</strong> From hidden coves to the world's most exclusive marinas.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
+    <!-- ELB_CONTENT_HUB_END -->
 
-    <!-- FLEET SELECTION -->
-    <section class="section-padding">
-        <div class="container">
-            <div style="text-align: center; margin-bottom: 5rem;">
-                <h2 class="serif" style="font-size: 3.5rem;">Our Curated Yacht Fleet</h2>
-                <p style="color: var(--text-muted);">Hand-picked for performance, luxury, and absolute guest comfort.</p>
-            </div>
 
-            <div class="grid-3">
-                <!-- Yacht 1 -->
-                <div class="yacht-card">
-                    <div class="yacht-image-wrap">
-                        <img src="https://images.pexels.com/photos/30264731/pexels-photo-30264731.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Superyacht Rental">
-                    </div>
-                    <div class="yacht-content">
-                        <h3 class="serif" style="font-size: 2.2rem; margin-bottom: 1rem;">Serenity Collection</h3>
-                        <p style="color: var(--primary-gold); font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">180ft+ Mega Yacht</p>
-                        <p style="margin: 1.5rem 0; color: var(--text-muted);">Helipads, infinity pools, and ballroom spaces. Designed for elite corporate retreats and grand celebrations.</p>
-                        <a href="https://wa.me/918801079030" class="btn btn-gold btn-sm" style="width: 100%;">Inquire for Rates</a>
-                    </div>
-                </div>
-                <!-- Yacht 2 -->
-                <div class="yacht-card">
-                    <div class="yacht-image-wrap">
-                        <img src="https://images.pexels.com/photos/33852930/pexels-photo-33852930.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Motor Yacht Rental">
-                    </div>
-                    <div class="yacht-content">
-                        <h3 class="serif" style="font-size: 2.2rem; margin-bottom: 1rem;">The Azure Series</h3>
-                        <p style="color: var(--primary-gold); font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">135ft Motor Yacht</p>
-                        <p style="margin: 1.5rem 0; color: var(--text-muted);">Sleek performance with vast sun decks and jacuzzis. Ideal for VIP island hopping and private family voyages.</p>
-                        <a href="https://wa.me/918801079030" class="btn btn-gold btn-sm" style="width: 100%;">Inquire for Rates</a>
-                    </div>
-                </div>
-                <!-- Yacht 3 -->
-                <div class="yacht-card">
-                    <div class="yacht-image-wrap">
-                        <img src="https://images.pexels.com/photos/30710213/pexels-photo-30710213.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sailing Yacht Rental">
-                    </div>
-                    <div class="yacht-content">
-                        <h3 class="serif" style="font-size: 2.2rem; margin-bottom: 1rem;">Oceanis Heritage</h3>
-                        <p style="color: var(--primary-gold); font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">Sailing / Catamaran</p>
-                        <p style="margin: 1.5rem 0; color: var(--text-muted);">Romantic serenity under sail. Wide-beam stability and intimate decks for weddings and secluded escapes.</p>
-                        <a href="https://wa.me/918801079030" class="btn btn-gold btn-sm" style="width: 100%;">Inquire for Rates</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
-    <!-- FAQ SECTION -->
-    <section class="section-padding" style="background: #000; border-top: 1px solid var(--glass-border);">
-        <div class="container" style="max-width: 900px;">
-            <div style="text-align: center; margin-bottom: 5rem;">
-                <h2 class="serif" style="font-size: 3rem;">Maritime Intelligence</h2>
-                <p style="color: var(--text-muted);">Frequently asked questions for the discerning traveler.</p>
-            </div>
 
-            <div style="display: flex; flex-direction: column; gap: 2rem;">
-                <div class="glass-panel" style="padding: 2.5rem;">
-                    <h3 class="serif" style="font-size: 1.5rem; color: var(--primary-gold); margin-bottom: 1rem;">How much does a luxury yacht rental cost?</h3>
-                    <p style="color: var(--text-muted);">Daily charters begin from $10,000, while mega yacht week rentals average $250,000+. Costs are influenced by vessel size, crew count, and seasonal positioning.</p>
-                </div>
-                <div class="glass-panel" style="padding: 2.5rem;">
-                    <h3 class="serif" style="font-size: 1.5rem; color: var(--primary-gold); margin-bottom: 1rem;">Can I host a helicopter on the yacht?</h3>
-                    <p style="color: var(--text-muted);">Yes, our Helideck-equipped Mega Yacht fleet supports helicopter landing and storage for seamless ship-to-shore transitions.</p>
-                </div>
-                <div class="glass-panel" style="padding: 2.5rem;">
-                    <h3 class="serif" style="font-size: 1.5rem; color: var(--primary-gold); margin-bottom: 1rem;">What is included in the charter fee?</h3>
-                    <p style="color: var(--text-muted);">Fees include the vessel, a professional crew, and standard luxury amenities. APA (Advance Provisioning Allowance) covers fuel, catering, and specific guest requests.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- WA Floating Item -->
-    <a href="https://wa.me/918801079030" class="wa-float" target="_blank" aria-label="WhatsApp Concierge">
-        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
-        </svg>
-    </a>
 
 <!-- ELB_FOOTER_START -->
-    <footer class="section-padding" style="background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; margin-top: 5rem;">
-        <div class="container">
-            <a href="/" style="display: block; margin-bottom: 2rem; font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:600; color:#fff; text-decoration:none;"><span style="color:#D4AF37;">Elite</span> Luxury Bookings</a>
-            <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 2rem;">
-                <a href="/elite-private-jet-charter/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Aviation Services</a>
-                <a href="/luxury-yacht-rentals/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Yacht Charter</a>
-                <a href="/luxury-villa-rentals/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Villa Rentals</a>
-                <a href="/blog/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Blog</a>
-                <a href="/contact/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Contact</a>
+    
+<!-- ELB_FOOTER_START -->
+    <footer class="section-padding" style="background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center !important; margin-top: 4rem; padding: 5rem 0;">
+        <div class="container" style="display: block !important; text-align: center !important;">
+            <a href="/" style="display: inline-block; margin-bottom: 2rem; font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:600; color:#fff; text-decoration:none;"><span style="color:#D4AF37;">Elite</span> Luxury Bookings</a>
+            <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
+                <a href="/elite-private-jet-charter/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Aviation</a>
+                <a href="/luxury-yacht-rentals/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Maritime</a>
+                <a href="/luxury-villa-rentals/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Villas</a>
+                <a href="/blog/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Blog</a>
+                <a href="/contact/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Contact</a>
             </div>
-            <p style="color: #444; font-size: 0.8rem;">© 2026 Elite Luxury Bookings. All rights reserved.</p>
+            <p style="color: #555; font-size: 0.8rem; letter-spacing: 1px;">© 2026 Elite Luxury Bookings. Discrete Concierge Worldwide.</p>
         </div>
     </footer>
 <!-- ELB_FOOTER_END -->
+
+<!-- ELB_FOOTER_END -->
+
 
     <!-- JAVASCRIPT -->
     <script>
