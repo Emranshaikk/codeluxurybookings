@@ -26,39 +26,6 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap"
         rel="stylesheet">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <style>
         /* ELB_STYLE_START */
         .global-nav {
@@ -240,7 +207,7 @@
 </head>
 
 <body>
-    <!-- ELB_NAV_START -->
+<!-- ELB_NAV_START -->
     <nav class="global-nav">
         <div class="container global-nav-inner">
             <a href="/" class="nav-brand"><span class="nav-gold">Elite</span> Luxury Bookings</a>
@@ -282,38 +249,7 @@
         <a href="/contact/">Contact Us</a>
         <a href="https://wa.me/918801079030" class="mobile-cta">WhatsApp Concierge</a>
     </div>
-    <!-- ELB_NAV_END -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- ELB_NAV_END -->
 
     <!-- PAGE HERO -->
     <section class="page-hero" style="text-align: center; padding: 6rem 0 3rem;">
@@ -326,6 +262,45 @@
             <p style="color: var(--text-muted); max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.6;">
                 Available 24/7 for bespoke travel planning across private jets, luxury yachts, and exclusive villa
                 retreats worldwide.</p>
+        </div>
+    </section>
+
+    <!-- ELITE VILLA INQUIRY HUB -->
+    <section id="villa-inquiry" style="padding: 100px 0; background: #050505; position: relative; overflow: hidden;">
+        <div class="container" style="max-width: 800px; margin: 0 auto; position: relative; z-index: 2;">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <div style="display: inline-block; padding: 8px 16px; background: rgba(212,175,55,0.1); border: 1px solid rgba(212,175,55,0.3); border-radius: 50px; color: #D4AF37; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; animation: pulse 2s infinite;">
+                    Elite Direct • Inquiry Received
+                </div>
+                <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; color: #fff; margin-bottom: 20px;">Secure Your Private Estate</h2>
+                <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; line-height: 1.6;">Our global villa desk provides off-market access to the world's most exclusive retreats. Submit your requirements for a bespoke portfolio.</p>
+            </div>
+
+            <div style="background: rgba(15,15,15,0.8); backdrop-filter: blur(20px); border: 1px solid rgba(212,175,55,0.2); border-radius: 24px; padding: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.5);">
+                <form action="https://formspree.io/f/xwvwanlj" method="POST" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div style="grid-column: span 1;">
+                        <label style="display: block; color: #D4AF37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px;">Principal Name</label>
+                        <input type="text" name="name" required style="width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 15px; color: #fff; font-family: 'Inter', sans-serif;">
+                    </div>
+                    <div style="grid-column: span 1;">
+                        <label style="display: block; color: #D4AF37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px;">Priority Contact</label>
+                        <input type="email" name="email" required placeholder="email or phone" style="width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 15px; color: #fff; font-family: 'Inter', sans-serif;">
+                    </div>
+                    <div style="grid-column: span 1;">
+                        <label style="display: block; color: #D4AF37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px;">Destination Profile</label>
+                        <input type="text" name="destination" placeholder="e.g. Ibiza, Maldives" style="width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 15px; color: #fff; font-family: 'Inter', sans-serif;">
+                    </div>
+                    <div style="grid-column: span 1;">
+                        <label style="display: block; color: #D4AF37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px;">Preferred Dates</label>
+                        <input type="text" name="dates" placeholder="Season 2026" style="width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 15px; color: #fff; font-family: 'Inter', sans-serif;">
+                    </div>
+                    <div style="grid-column: span 2;">
+                        <label style="display: block; color: #D4AF37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px;">Bespoke Requirements</label>
+                        <textarea name="message" rows="3" placeholder="Number of guests, staff requirements, helipad access..." style="width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 15px; color: #fff; font-family: 'Inter', sans-serif; resize: none;"></textarea>
+                    </div>
+                    <button type="submit" style="grid-column: span 2; background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%); color: #000; border: none; border-radius: 12px; padding: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; transition: all 0.3s; margin-top: 10px;">Initialize Personal Concierge</button>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -485,34 +460,7 @@
             }
         </script>
 
-
         </div>
-        <!-- ELB_FOOTER_START -->
-        <footer class="section-padding"
-            style="background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; margin-top: 5rem;">
-            <div class="container">
-                <a href="/"
-                    style="display: block; margin-bottom: 2rem; font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:600; color:#fff; text-decoration:none;"><span
-                        style="color:#D4AF37;">Elite</span> Luxury Bookings</a>
-                <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 2rem;">
-                    <a href="/elite-private-jet-charter/"
-                        style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Aviation
-                        Services</a>
-                    <a href="/luxury-yacht-rentals/"
-                        style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Yacht
-                        Charter</a>
-                    <a href="/luxury-villa-rentals/"
-                        style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Villa
-                        Rentals</a>
-                    <a href="/blog/"
-                        style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Blog</a>
-                    <a href="/contact/"
-                        style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Contact</a>
-                </div>
-                <p style="color: #444; font-size: 0.8rem;">© 2026 Elite Luxury Bookings. All rights reserved.</p>
-            </div>
-        </footer>
-        <!-- ELB_FOOTER_END -->
 
         <a href="https://wa.me/918801079030" class="wa-float" target="_blank" aria-label="WhatsApp">
             <svg xmlns="http:/www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
@@ -521,56 +469,25 @@
             </svg>
         </a>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <!-- ELB_JS_START -->
         <script>function toggleMobileMenu() { var m = document.getElementById('elbMobileMenu'), b = document.getElementById('navHamburger'); if (m && b) { m.classList.toggle('open'); b.classList.toggle('open'); } }</script>
         <!-- ELB_JS_END -->
+
+<!-- ELB_FOOTER_START -->
+    <footer class="section-padding" style="background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center !important; margin-top: 6rem; padding: 6rem 0;">
+        <div class="container" style="display: block !important; text-align: center !important;">
+            <a href="/" style="display: inline-block; margin-bottom: 2rem; font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:600; color:#fff; text-decoration:none;"><span style="color:#D4AF37;">Elite</span> Luxury Bookings</a>
+            <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
+                <a href="/elite-private-jet-charter/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Aviation</a>
+                <a href="/luxury-yacht-rentals/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Maritime</a>
+                <a href="/luxury-villa-rentals/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Villas</a>
+                <a href="/blog/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Blog</a>
+                <a href="/contact/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Contact</a>
+            </div>
+            <p style="color: #444; font-size: 0.8rem; letter-spacing: 1px;">© 2026 Elite Luxury Bookings. Concierge Dispatch Worldwide.</p>
+        </div>
+    </footer>
+<!-- ELB_FOOTER_END -->
 </body>
 
 </html>
