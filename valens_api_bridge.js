@@ -5,48 +5,57 @@
 
 const VALENS_CONFIG = {
     ENDPOINT: 'https://jetluxe.jetlink.app/api/affiliate/valens/v1/trip/new',
-    TOKEN: '64|t997lbxqnHWlW15TpE5FCogSyTev2hKpOLRo2Hjj7cad47bc',
-    AIRPORT_MAP: {
-        'london': 'EGLL', 'lhr': 'EGLL', 'lgw': 'EGKK', 'fab': 'EGLF', 'nice': 'LFMN', 'nce': 'LFMN',
-        'dubai': 'OMDB', 'dxb': 'OMDB', 'dwc': 'OMDW', 'paris': 'LFPG', 'cdg': 'LFPG', 'le bourgeois': 'LFPB',
-        'miami': 'KMIA', 'mia': 'KMIA', 'opa locka': 'KOPF', 'new york': 'KJFK', 'jfk': 'KJFK', 'tebor': 'KTEB',
-        'geneva': 'LSGG', 'gva': 'LSGG', 'aspen': 'KASE', 'ase': 'KASE', 'ibiza': 'LEIB', 'ibz': 'LEIB',
-        'mykonos': 'LGMK', 'jmks': 'LGMK', 'moscow': 'UUEE', 'svo': 'UUEE', 'vnukovo': 'UUWW',
-        'riyadh': 'OERK', 'ruh': 'OERK', 'doha': 'OTBD', 'dia': 'OTBD', 'hamad': 'OTHH'
-    }
+    TOKEN: '77|CkX9R7zefI00A3vp3CPKqYH2P9NlHvCABNryulMba24b86ed',
+    AIRPORTS: [
+        { name: "London Heathrow", city: "London", icao: "EGLL" },
+        { name: "London Gatwick", city: "London", icao: "EGKK" },
+        { name: "London Farnborough", city: "London", icao: "EGLF" },
+        { name: "London Biggin Hill", city: "London", icao: "EGKB" },
+        { name: "Paris Charles de Gaulle", city: "Paris", icao: "LFPG" },
+        { name: "Paris Le Bourget", city: "Paris", icao: "LFPB" },
+        { name: "Nice Côte d'Azur", city: "Nice", icao: "LFMN" },
+        { name: "Dubai International", city: "Dubai", icao: "OMDB" },
+        { name: "Dubai Al Maktoum", city: "Dubai", icao: "OMDW" },
+        { name: "New York JFK", city: "New York", icao: "KJFK" },
+        { name: "Teterboro", city: "New York/NJ", icao: "KTEB" },
+        { name: "Miami International", city: "Miami", icao: "KMIA" },
+        { name: "Opa Locka", city: "Miami", icao: "KOPF" },
+        { name: "Geneva Cointrin", city: "Geneva", icao: "LSGG" },
+        { name: "Zurich Kloten", city: "Zurich", icao: "LSZH" },
+        { name: "Ibiza Airport", city: "Ibiza", icao: "LEIB" },
+        { name: "Mykonos", city: "Mykonos", icao: "LGMK" },
+        { name: "Monaco Heliport", city: "Monaco", icao: "LNMC" },
+        { name: "Cannes-Mandelieu", city: "Cannes", icao: "LFMD" },
+        { name: "Aspen Pitkin County", city: "Aspen", icao: "KASE" },
+        { name: "Riyadh King Khalid", city: "Riyadh", icao: "OERK" },
+        { name: "Doha Hamad", city: "Doha", icao: "OTHH" }
+    ]
 };
 
-async function submitToValens(formData) {
-    // 1. Generate Idempotency Key
-    const idempotencyKey = crypto.randomUUID();
-
-    // 2. Resolve ICAO Codes
-    const departureICAO = resolveICAO(formData.departure);
-    const arrivalICAO = resolveICAO(formData.arrival);
-
-    // 3. Construct Payload
+async function submitToValens(data) {
     const payload = {
-        idempotency_key: idempotencyKey,
+        idempotency_key: crypto.randomUUID(),
         legs: [{
-            date: formData.travel_date,
-            time: formData.travel_time || "12:00",
-            passengers: parseInt(formData.passengers),
-            departure_icao: departureICAO,
-            arrival_icao: arrivalICAO
+            date: data.date,
+            time: data.time || "12:00",
+            passengers: parseInt(data.passengers),
+            departure_icao: data.departure_icao,
+            arrival_icao: data.arrival_icao
         }],
         customer: {
-            full_name: formData.name,
-            contact: formData.contact,
-            email: formData.email || "client@eliteluxurybookings.com" // Fallback if email field is missing
+            full_name: data.full_name,
+            contact: data.contact,
+            email: data.email
         }
     };
 
-    // 4. Submit to Valens API
+    const url = `${VALENS_CONFIG.ENDPOINT}?api_token=${VALENS_CONFIG.TOKEN}`;
+
     try {
-        const response = await fetch(VALENS_CONFIG.ENDPOINT, {
+        const response = await fetch(url, {
             method: 'POST',
+            mode: 'cors',
             headers: {
-                'Authorization': `Bearer ${VALENS_CONFIG.TOKEN}`,
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
@@ -54,19 +63,24 @@ async function submitToValens(formData) {
         });
 
         const result = await response.json();
-        return { success: response.ok, data: result };
+        if (!response.ok) {
+            const errorDetail = result.message || (result.errors ? JSON.stringify(result.errors) : JSON.stringify(result));
+            return { success: false, error: errorDetail };
+        }
+        return { success: true, data: result };
     } catch (error) {
-        console.error("Valens API Error:", error);
-        return { success: false, error: error.message };
+        console.error("Valens Redirect Error:", error);
+        return { success: false, error: "Browser Security Block. Please refresh and try again or use WhatsApp." };
     }
 }
 
-function resolveICAO(input) {
-    const cleanInput = input.toLowerCase().trim();
-    // Direct match in map
-    for (const [key, icao] of Object.entries(VALENS_CONFIG.AIRPORT_MAP)) {
-        if (cleanInput.includes(key)) return icao;
-    }
-    // Fallback/Generic (API requires 4 letters)
-    return "EGLL"; // Defaulting to London if unknown for testing, or we should handle this better
+// Search Logic
+function searchAirports(query) {
+    if (!query || query.length < 2) return [];
+    const q = query.toLowerCase();
+    return VALENS_CONFIG.AIRPORTS.filter(a => 
+        a.name.toLowerCase().includes(q) || 
+        a.city.toLowerCase().includes(q) || 
+        a.icao.toLowerCase().includes(q)
+    ).slice(0, 5);
 }

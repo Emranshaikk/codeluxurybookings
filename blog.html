@@ -82,69 +82,123 @@
 
 
 
+
 /* ELB_STYLE_START */
-
-
     .global-nav { position:fixed; top:0; left:0; right:0; background:rgba(5,5,5,0.98); backdrop-filter:blur(24px); border-bottom:1px solid rgba(212,175,55,0.2); z-index:99999; }
-
-
     .global-nav-inner { display:flex; align-items:center; justify-content:space-between; height:72px; gap:1rem; max-width:1400px; margin:0 auto; padding:0 2rem; box-sizing: border-box; }
-
-
     .nav-brand { font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:600; color:#fff !important; text-decoration:none !important; }
-
-
     .nav-gold { color:#D4AF37 !important; }
-
-
     .nav-links { display:flex; align-items:center; gap:0.25rem; list-style:none; flex:1; justify-content:center; margin:0; padding:0; }
-
-
     .nav-links a { color:rgba(255,255,255,0.7) !important; text-decoration:none !important; font-size:0.82rem; text-transform:uppercase; letter-spacing:1.5px; padding:0.5rem 0.9rem; border-radius:6px; transition:all 0.4s; font-family: 'Inter', sans-serif !important; }
-
-
     .nav-links a:hover { color:#D4AF37 !important; }
-
-
-    .nav-dropdown { position:relative; }
-
-
-    .dropdown-menu { position:absolute; top:calc(100% + 8px); left:0; background:#0a0a0a; border:1px solid rgba(212,175,55,0.15); border-radius:12px; padding:0.75rem; min-width:240px; opacity:0; visibility:hidden; transform:translateY(-8px); transition:all 0.4s; box-shadow:0 20px 40px rgba(0,0,0,0.8); z-index:100; }
-
-
-    .nav-dropdown:hover .dropdown-menu { opacity:1 !important; visibility:visible !important; transform:translateY(0) !important; }
-
-
-    .dropdown-menu a { display:block !important; padding:0.7rem 1.2rem !important; color:rgba(255,255,255,0.7) !important; border-radius:8px; font-size:0.85rem !important; text-transform: none !important; }
-
-
+    
+    
+    
     .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:0.5rem; z-index:100001; }
-
-
     .nav-hamburger span { display:block; width:24px; height:2px; background:rgba(255,255,255,0.8); border-radius:2px; transition:all 0.4s; }
-
-
     .mobile-menu { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:#050505; padding:72px 2rem 2rem; z-index:100000; flex-direction:column; gap:0.5rem; overflow-y: auto; }
-
-
     .mobile-menu.open { display:flex !important; }
-
-
     .mobile-menu a { color:rgba(255,255,255,0.8) !important; text-decoration:none !important; font-size:1.1rem; text-transform:uppercase; letter-spacing:2px; padding:1.2rem 0; border-bottom:1px solid rgba(255,255,255,0.05); }
-
-
     .mobile-cta { margin-top:2rem; text-align:center; background:linear-gradient(135deg,#D4AF37,#B8860B); color:#000 !important; border-radius:8px; padding:1.2rem !important; font-weight:700; }
-
-
     @media (max-width:1024px) { .nav-links { display:none !important; } .nav-hamburger { display:flex !important; } }
-
-
     body { padding-top: 72px !important; }
-
-
     .luxury-list li::before { content: '✓' !important; }
 
+    /* --- ELITE BLOG CARD OVERHAUL --- */
+    .blog-card {
+        background: linear-gradient(145deg, rgba(20, 20, 20, 0.95), rgba(5, 5, 5, 1)) !important;
+        border: 1px solid rgba(212, 175, 55, 0.15) !important;
+        border-radius: 12px !important;
+        transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+        position: relative;
+        overflow: hidden !important;
+    }
 
+    .blog-card:hover {
+        transform: translateY(-8px) !important;
+        border-color: var(--primary-gold) !important;
+        box-shadow: 0 40px 80px rgba(0, 0, 0, 0.9), 0 0 30px rgba(212, 175, 55, 0.15) !important;
+    }
+
+    .card-img-container {
+        height: 180px !important;
+        background: radial-gradient(circle at center, rgba(212, 175, 55, 0.1) 0%, transparent 80%) !important;
+        position: relative;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+        overflow: hidden !important;
+    }
+
+    /* Hide the actual images to prevent broken photo icons */
+    .card-img-container img {
+        display: none !important;
+    }
+
+    /* Create the Luxury Monogram Visual */
+    .card-img-container::before {
+        content: 'ELITE';
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.8rem;
+        letter-spacing: 12px;
+        color: var(--primary-gold);
+        opacity: 0.4;
+        font-weight: 300;
+        z-index: 2;
+    }
+
+    .card-img-container::after {
+        content: '';
+        position: absolute;
+        width: 150%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.05), transparent);
+        top: 0;
+        left: -150%;
+        transition: 0.8s;
+        z-index: 1;
+    }
+
+    .blog-card:hover .card-img-container::after {
+        left: 150%;
+    }
+
+    /* Specialized visual for Route Cards (*-to-*) */
+    .route-card .card-img-container::before {
+        content: '✦';
+        font-size: 3rem;
+        opacity: 0.6;
+    }
+
+    .card-content {
+        padding: 2.5rem !important;
+        background: transparent !important;
+    }
+
+    .card-meta {
+        font-weight: 600 !important;
+        font-size: 0.75rem !important;
+        opacity: 0.8;
+    }
+
+    .card-content h3 {
+        font-size: 1.6rem !important;
+        margin-top: 0.5rem !important;
+        line-height: 1.2 !important;
+        min-height: 3.8rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .card-content p {
+        font-size: 0.92rem !important;
+        line-height: 1.7 !important;
+        opacity: 0.6;
+        margin-top: 1rem !important;
+    }
 /* ELB_STYLE_END */
 
 
@@ -167,131 +221,32 @@
 
 
 <!-- ELB_NAV_START -->
-
-
     <nav class="global-nav">
-
-
         <div class="container global-nav-inner">
-
-
             <a href="/" class="nav-brand"><span class="nav-gold">Elite</span> Luxury Bookings</a>
-
-
-            <ul class="nav-links">
-
-
-                <li class="nav-dropdown"><a href="elite-private-jet-charter.html">Private Jets</a>
-
-
-                    <div class="dropdown-menu">
-
-
-                        <a href="elite-private-jet-charter.html">Jet Charters Overview</a>
-
-
-                        <a href="private-jet-rental-prices.html">Rental Prices</a>
-
-
-                        <a href="types-of-private-jets.html">Types of Jets</a>
-
-
-                        <a href="empty-leg-flights-discount.html">Empty Leg Deals</a>
-
-
-                        <a href="private-jet-for-business-travel.html">Business Travel</a>
-
-
-                    </div>
-
-
-                </li>
-
-
-                <li class="nav-dropdown"><a href="/luxury-yacht-rentals/">Yacht Charter</a>
-
-
-                    <div class="dropdown-menu">
-
-
-                        <a href="/luxury-yacht-rentals/">Yacht Rental Overview</a>
-
-
-                        <a href="/luxury-yacht-rentals/renting-catamaran/">Catamaran Rental</a>
-
-
-                        <a href="/luxury-yacht-rentals/best-sailing-yacht-charter/">Sailing Yachts</a>
-
-
-                        <a href="/luxury-yacht-rentals/bareboat-charter-guide/">Bareboat Guide</a>
-
-
-                    </div>
-
-
-                </li>
-
-
-                <li><a href="luxury-villa-rentals.html">Villas</a></li>
-
-
-                <li><a href="blog.html">Blog</a></li>
-
-
-                <li><a href="contact.html">Contact</a></li>
-
-
+                        <ul class="nav-links">
+                <li><a href="/elite-private-jet-charter.html">Private Jets</a></li>
+                <li><a href="/luxury-yacht-rentals/">Yacht Charter</a></li>
+                <li><a href="/luxury-villa-rentals.html">Villas</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contact.html">Contact</a></li>
             </ul>
-
-
             <div class="nav-cta">
-
-
                 <a href="https://wa.me/918801079030" class="btn btn-gold btn-sm">Direct Concierge</a>
-
-
                 <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()">
-
-
                     <span></span><span></span><span></span>
-
-
                 </div>
-
-
             </div>
-
-
         </div>
-
-
     </nav>
-
-
     <div class="mobile-menu" id="elbMobileMenu">
-
-
-        <a href="elite-private-jet-charter.html">Private Jets</a>
-
-
+        <a href="/elite-private-jet-charter.html">Private Jets</a>
         <a href="/luxury-yacht-rentals/">Luxury Yachts</a>
-
-
-        <a href="luxury-villa-rentals.html">Exclusive Villas</a>
-
-
-        <a href="blog.html">Articles & News</a>
-
-
-        <a href="contact.html">Contact Us</a>
-
-
+        <a href="/luxury-villa-rentals.html">Exclusive Villas</a>
+        <a href="/blog.html">Articles & News</a>
+        <a href="/contact.html">Contact Us</a>
         <a href="https://wa.me/918801079030" class="mobile-cta">WhatsApp Concierge</a>
-
-
     </div>
-
-
 <!-- ELB_NAV_END -->
 
 
@@ -1534,34 +1489,7 @@
 
 
 
-    <a href="how-private-jet-flight-bookings-work.html" class="blog-card" data-category="private jets" style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
 
-
-        <div class="card-img-container" style="height: 250px; overflow: hidden;">
-
-
-            <img src="jet_master.png" alt="How Private Jet Flight Bookings Work: 2026 Process Guide"  style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-
-
-        </div>
-
-
-        <div class="card-content" style="padding: 2rem;">
-
-
-            <div class="card-meta" style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">private jets</div>
-
-
-            <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 1rem; line-height: 1.3; font-family: 'Cormorant Garamond', serif;">How Private Jet Flight Bookings Work: 2026 Process Guide</h3>
-
-
-            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0;">Master the art of private aviation logistics. Expert Guide on how private jet flight bookings work, from initial inqu...</p>
-
-
-        </div>
-
-
-    </a>
 
 
 
@@ -3916,166 +3844,25 @@
 
 
 
-    <a href="private-charter-flights.html" class="blog-card" data-category="private jets" style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
 
 
-        <div class="card-img-container" style="height: 250px; overflow: hidden;">
 
 
-            <img src="jet_master.png" alt="Private Charter Flights: Safety & Hidden Costs Guide 2026"  style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
 
 
-        </div>
 
 
-        <div class="card-content" style="padding: 2rem;">
 
 
-            <div class="card-meta" style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">private jets</div>
 
 
-            <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 1rem; line-height: 1.3; font-family: 'Cormorant Garamond', serif;">Private Charter Flights: Safety & Hidden Costs Guide 2026</h3>
 
 
-            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0;">Stop wasting time on commercial flights. Discover the truth about private charter flights, safety ratings (ARGUS/Wyve...</p>
 
 
-        </div>
 
 
-    </a>
 
-
-
-
-
-    <a href="private-jet-charter-expert-guide-to-luxury.html" class="blog-card" data-category="private jets" style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
-
-
-        <div class="card-img-container" style="height: 250px; overflow: hidden;">
-
-
-            <img src="jet_master.png" alt="Expert Guide to Luxury Private Jet Charter 2026"  style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-
-
-        </div>
-
-
-        <div class="card-content" style="padding: 2rem;">
-
-
-            <div class="card-meta" style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">private jets</div>
-
-
-            <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 1rem; line-height: 1.3; font-family: 'Cormorant Garamond', serif;">Expert Guide to Luxury Private Jet Charter 2026</h3>
-
-
-            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0;">Master the art of luxury aviation. Expert insights on private jet charter services, real costs, and 14 years of prove...</p>
-
-
-        </div>
-
-
-    </a>
-
-
-
-
-
-    <a href="private-jet-charter-to-monaco.html" class="blog-card" data-category="private jets" style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
-
-
-        <div class="card-img-container" style="height: 250px; overflow: hidden;">
-
-
-            <img src="jet_master.png" alt="Private Jet Charter to Monaco: The 2026 Ultra-Luxury Guide"  style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-
-
-        </div>
-
-
-        <div class="card-content" style="padding: 2rem;">
-
-
-            <div class="card-meta" style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">private jets</div>
-
-
-            <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 1rem; line-height: 1.3; font-family: 'Cormorant Garamond', serif;">Private Jet Charter to Monaco: The 2026 Ultra-Luxury Guide</h3>
-
-
-            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0;">Experience the ultimate VIP arrival with a private jet charter to Monaco. Expert tips on Nice CÃ´te d'Azur (NCE) arri...</p>
-
-
-        </div>
-
-
-    </a>
-
-
-
-
-
-    <a href="private-jet-for-short-trips.html" class="blog-card" data-category="private jets" style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
-
-
-        <div class="card-img-container" style="height: 250px; overflow: hidden;">
-
-
-            <img src="jet_master.png" alt="Best Private Jet for Short Trips (2026): Cost, Speed & Comfort"  style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-
-
-        </div>
-
-
-        <div class="card-content" style="padding: 2rem;">
-
-
-            <div class="card-meta" style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">private jets</div>
-
-
-            <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 1rem; line-height: 1.3; font-family: 'Cormorant Garamond', serif;">Best Private Jet for Short Trips (2026): Cost, Speed & Comfort</h3>
-
-
-            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0;">Discover the best private jet for short trips in 2026. Compare King Air, Phenom 100, and Citation Mustang for efficie...</p>
-
-
-        </div>
-
-
-    </a>
-
-
-
-
-
-    <a href="private-jet-travel-with-pet.html" class="blog-card" data-category="private jets" style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
-
-
-        <div class="card-img-container" style="height: 250px; overflow: hidden;">
-
-
-            <img src="jet_master.png" alt="Private Jet Travel with Pets: The Ultimate 2026 Guide"  style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-
-
-        </div>
-
-
-        <div class="card-content" style="padding: 2rem;">
-
-
-            <div class="card-meta" style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">private jets</div>
-
-
-            <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 1rem; line-height: 1.3; font-family: 'Cormorant Garamond', serif;">Private Jet Travel with Pets: The Ultimate 2026 Guide</h3>
-
-
-            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0;">Discover the truth about private jet travel with pets. Costs, global regulations (DEFRA), and elite pet-friendly flig...</p>
-
-
-        </div>
-
-
-    </a>
 
 
 

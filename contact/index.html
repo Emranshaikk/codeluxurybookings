@@ -167,7 +167,7 @@
 
         /* ELB_STYLE_END */
     </style>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
@@ -176,11 +176,11 @@
         <div class="container global-nav-inner">
             <a href="/" class="nav-brand"><span class="nav-gold">Elite</span> Luxury Bookings</a>
             <ul class="nav-links">
-                <li><a href="/elite-private-jet-charter/">Private Jets</a></li>
+                <li><a href="/elite-private-jet-charter.html">Private Jets</a></li>
                 <li><a href="/luxury-yacht-rentals/">Yacht Charter</a></li>
-                <li><a href="/luxury-villa-rentals/">Villas</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/contact/">Contact</a></li>
+                <li><a href="/luxury-villa-rentals.html">Villas</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contact.html">Contact</a></li>
             </ul>
             <div class="nav-cta">
                 <a href="https://wa.me/918801079030" class="btn btn-gold btn-sm">Direct Concierge</a>
@@ -191,11 +191,11 @@
         </div>
     </nav>
     <div class="mobile-menu" id="elbMobileMenu">
-        <a href="/elite-private-jet-charter/">Private Jets</a>
+        <a href="/elite-private-jet-charter.html">Private Jets</a>
         <a href="/luxury-yacht-rentals/">Luxury Yachts</a>
-        <a href="/luxury-villa-rentals/">Exclusive Villas</a>
-        <a href="/blog/">Articles & News</a>
-        <a href="/contact/">Contact Us</a>
+        <a href="/luxury-villa-rentals.html">Exclusive Villas</a>
+        <a href="/blog.html">Articles & News</a>
+        <a href="/contact.html">Contact Us</a>
         <a href="https://wa.me/918801079030" class="mobile-cta">WhatsApp Concierge</a>
     </div>
     <!-- ELB_NAV_END -->
@@ -268,27 +268,27 @@
                     <h2 class="serif" style="font-size: 2.2rem; margin-bottom: 2.5rem;">Request <span
                             class="gold-text">Private Access</span></h2>
 
-                    <form id="contactForm" onsubmit="submitContact(event)">
+                    <form action="https://formspree.io/f/xwvwanlj" method="POST">
                         <div style="display: flex; flex-direction: column; gap: 2rem;">
                             <div class="form-group">
                                 <label>Your Full Name</label>
-                                <input type="text" class="form-control" placeholder="e.g. James Harrington" required>
+                                <input type="text" name="name" class="form-control" placeholder="e.g. James Harrington" required>
                             </div>
 
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
                                 <div class="form-group">
                                     <label>WhatsApp / Phone</label>
-                                    <input type="tel" class="form-control" placeholder="+44 7XXX XXXXXX" required>
+                                    <input type="tel" name="phone" class="form-control" placeholder="+44 7XXX XXXXXX" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Email Address</label>
-                                    <input type="email" class="form-control" placeholder="your@email.com" required>
+                                    <input type="email" name="email" class="form-control" placeholder="your@email.com" required>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label>Primary Interest</label>
-                                <select class="form-control" required style="width: 100%;">
+                                <select name="interest" class="form-control" required style="width: 100%;">
                                     <option value="">Select a Category</option>
                                     <option>Private Jet Charter</option>
                                     <option>Luxury Yacht Charter</option>
@@ -299,7 +299,7 @@
 
                             <div class="form-group">
                                 <label>Special Requirements</label>
-                                <textarea class="form-control" rows="4"
+                                <textarea name="message" class="form-control" rows="4"
                                     placeholder="Dates, destination, group size, and specific preferences..."
                                     style="resize: none;"></textarea>
                             </div>
@@ -309,16 +309,6 @@
                                 Inquiry</button>
                         </div>
                     </form>
-
-                    <div id="contactMsg"
-                        style="display:none; margin-top: 2.5rem; text-align: center; animation: fadeUp 0.8s forwards;">
-                        <span style="font-size: 3rem; display: block; margin-bottom: 1rem;">✓</span>
-                        <h3 class="serif" style="font-size: 1.8rem; margin-bottom: 0.5rem;">Inquiry Received</h3>
-                        <p style="color: var(--text-muted);">A senior broker will evaluate your mission and reach out
-                            via your preferred channel.</p>
-                        <a href="https://wa.me/918801079030" class="btn btn-outline btn-sm"
-                            style="margin-top: 1.5rem;">Immediate WhatsApp Support</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -337,78 +327,24 @@
             var m = document.getElementById('elbMobileMenu'), b = document.getElementById('navHamburger');
             if (m && b) { m.classList.toggle('open'); b.classList.toggle('open'); }
         }
-
-        const ENDPOINT = "https://formspree.io/f/xwvwanlj";
-
-        async function submitContact(e) {
-            e.preventDefault();
-            const form = e.target;
-            const btn = form.querySelector('button');
-            const msg = document.getElementById('contactMsg');
-
-            btn.disabled = true;
-            btn.innerText = "Processing...";
-
-            const data = {
-                fullName: form.elements[0].value,
-                contact: form.elements[1].value,
-                email: form.elements[2].value,
-                services: form.elements[3].value,
-                requirements: form.elements[4].value
-            };
-
-            try {
-                const formData = new FormData();
-                Object.keys(data).forEach(key => formData.append(key, data[key]));
-
-                await fetch(ENDPOINT, {
-                    method: 'POST',
-                    body: formData,
-                    headers: { 'Accept': 'application/json' }
-                });
-
-                form.style.display = 'none';
-                msg.style.display = 'block';
-                window.scrollTo({ top: form.offsetTop - 100, behavior: 'smooth' });
-
-                typeof gtag === 'function' && gtag('event', 'generate_lead', { 'event_category': 'form', 'event_label': 'contact' });
-
-            } catch (err) {
-                console.error(err);
-                form.style.display = 'none';
-                msg.style.display = 'block';
-            } finally {
-                btn.disabled = false;
-                btn.innerText = "Submit Private Inquiry";
-            }
-        }
     </script>
     <!-- ELB_JS_END -->
 
-    <!-- ELB_FOOTER_START -->
-    <footer class="section-padding"
-        style="background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center !important; margin-top: 6rem; padding: 6rem 0;">
-        <div class="container" style="display: block !important; text-align: center !important;">
-            <a href="/"
-                style="display: inline-block; margin-bottom: 2rem; font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:600; color:#fff; text-decoration:none;"><span
-                    style="color:#D4AF37;">Elite</span> Luxury Bookings</a>
+<!-- ELB_FOOTER_START -->
+    <footer style="background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center !important; padding: 6rem 0; margin-top: auto;">
+        <div class="container" style="display: block !important; text-align: center !important; max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+            <a href="/" style="display: inline-block; margin-bottom: 2rem; font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:600; color:#fff; text-decoration:none;"><span style="color:#D4AF37;">Elite</span> Luxury Bookings</a>
             <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
-                <a href="/elite-private-jet-charter/"
-                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Aviation</a>
-                <a href="/luxury-yacht-rentals/"
-                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Maritime</a>
-                <a href="/luxury-villa-rentals/"
-                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Villas</a>
-                <a href="/blog/"
-                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Blog</a>
-                <a href="/contact/"
-                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Contact</a>
+                <a href="/elite-private-jet-charter.html" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Aviation</a>
+                <a href="/luxury-yacht-rentals/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Maritime</a>
+                <a href="/luxury-villa-rentals.html" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Villas</a>
+                <a href="/blog.html" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Blog</a>
+                <a href="/contact.html" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Contact</a>
             </div>
-            <p style="color: #444; font-size: 0.8rem; letter-spacing: 1px;">&copy; 2026 Elite Luxury Bookings. Concierge
-                Dispatch Worldwide.</p>
+            <p style="color: #444; font-size: 0.8rem; letter-spacing: 1px;">&copy; 2026 Elite Luxury Bookings. Concierge Dispatch Worldwide.</p>
         </div>
     </footer>
-    <!-- ELB_FOOTER_END -->
+<!-- ELB_FOOTER_END -->
 </body>
 
 </html>

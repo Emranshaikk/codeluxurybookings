@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="/assets/images/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exclusive Private Villa Curation | Elite Luxury Bookings</title>
+    <title>Private Yacht Charter Concierge | Elite Luxury Bookings</title>
     <meta name="description"
-        content="Bespoke luxury villa experiences curated for the world's most discerning travelers. Off-market estates in St. Tropez, Lake Como, and Mykonos.">
-    <link rel="canonical" href="https://eliteluxurybookings.com/luxury-villa-rentals.html">
+        content="Exclusive yacht experience curation for UHNWIs. private maritime narratives globally. Monaco, Dubai, Maldives.">
+    <link rel="canonical" href="https://eliteluxurybookings.com/luxury-yacht-rentals/">
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J56D1LJLFM"></script>
@@ -176,6 +176,19 @@
             padding-top: 72px !important;
         }
 
+        /* Hero Styling */
+        .yacht-hero {
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(5, 5, 5, 0.3), rgba(5, 5, 5, 1)),
+                url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
         .serif {
             font-family: 'Cormorant Garamond', serif;
         }
@@ -226,26 +239,16 @@
             padding: 8rem 0;
         }
 
-        /* Hero */
-        .villa-hero {
-            height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-
         .grid-3 {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
         }
 
-        @media (max-width: 1000px) {
-            .grid-3 { grid-template-columns: 1fr; }
+        @media (max-width: 900px) {
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* ELB_STYLE_END */
@@ -284,98 +287,109 @@
     <!-- ELB_NAV_END -->
 
     <!-- HERO SECTION -->
-    <section class="villa-hero">
+    <section class="yacht-hero">
         <div class="container">
-            <span class="gold-text" style="letter-spacing: 4px; text-transform: uppercase; font-size: 0.9rem; font-weight: 600; display: block; margin-bottom: 1.5rem;">Global Estate Curation</span>
-            <h1 class="serif" style="font-size: 4.5rem; line-height: 1.1; margin-bottom: 2rem;">Sanctuaries of <span class="gold-text">Exclusivity</span></h1>
-            <p style="font-size: 1.2rem; color: rgba(255,255,255,0.8); max-width: 800px; margin: 0 auto 3rem; line-height: 1.8;">We do not simply offer rentals; we engineer retreats. Access an off-market portfolio of the world's most prestigious estates, curated for those who demand absolute privacy and bespoke service.</p>
+            <span class="gold-text" style="letter-spacing: 4px; text-transform: uppercase; font-size: 0.9rem; font-weight: 600; display: block; margin-bottom: 1.5rem;">Global Maritime Experiences</span>
+            <h1 class="serif" style="font-size: 4.5rem; line-height: 1.1; margin-bottom: 1.5rem;">Curating the World's<br><span class="gold-text">Most Exclusive</span> Voyages</h1>
+            <p style="font-size: 1.2rem; color: var(--text-muted); max-width: 800px; margin: 0 auto 3rem; line-height: 1.8;">Beyond mere chartering, we engineer bespoke maritime narratives. From the azure waters of the Amalfi Coast to the deep blues of the Maldives, access our private partner network for seamless exclusivity.</p>
             <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-                <a href="#inquire" class="btn btn-gold">Request Estate Access</a>
+                <a href="#inquire" class="btn btn-gold">Request Private Yacht Access</a>
                 <a href="https://wa.me/918801079030" class="btn" style="border: 1px solid var(--primary-gold);">Speak to a Concierge</a>
             </div>
         </div>
     </section>
 
-    <!-- MANDATORY STATEMENT -->
+    <!-- TRUST & STATEMENT -->
     <section style="background: var(--graphene); padding: 5rem 0; border-y: 1px solid var(--glass-border);">
         <div class="container" style="text-align: center;">
             <p class="serif" style="font-size: 1.8rem; font-style: italic; color: #fff; max-width: 1000px; margin: 0 auto;">
                 “We curate and coordinate world-class luxury experiences through our global partner network.”
             </p>
+            <div style="display: flex; justify-content: center; gap: 4rem; margin-top: 3rem; opacity: 0.6; flex-wrap: wrap; font-size: 0.8rem; letter-spacing: 2px;">
+                <span>MONACO</span>
+                <span>DUBAI</span>
+                <span>MALDIVES</span>
+                <span>IBIZA</span>
+                <span>ST. BARTS</span>
+            </div>
         </div>
     </section>
 
-    <!-- CORE VALUE SECTION -->
+    <!-- EXPERIENCE SECTION -->
     <section class="section-padding">
         <div class="container">
             <div style="text-align: center; margin-bottom: 6rem;">
-                <h2 class="serif" style="font-size: 3.5rem; margin-bottom: 1.5rem;">Access the <span class="gold-text">Invisible Portfolio</span></h2>
-                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto;">True luxury is rarely found on public platforms. Our concierge desk holds the keys to private estates that remain invisible to the retail market.</p>
+                <h2 class="serif" style="font-size: 3.5rem; margin-bottom: 1.5rem;">The <span class="gold-text">Elite</span> Experience</h2>
+                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto;">We don't sell boat rentals. We sell sunrise meditations on the deck, private chefs under the stars, and the status of being exactly where you want to be, effortlessly.</p>
             </div>
-
+            
             <div class="grid-3">
                 <div class="glass-panel" style="padding: 3rem; text-align: center;">
-                    <span style="font-size: 3rem; display: block; margin-bottom: 1.5rem;">🏰</span>
-                    <h3 class="serif gold-text" style="font-size: 1.8rem; margin-bottom: 1rem;">Historic Estates</h3>
-                    <p style="color: var(--text-muted);">From Venetian palazzos to 18th-century French chateaus, fully modernized for the contemporary UHNW traveler.</p>
+                    <span style="font-size: 3rem; display: block; margin-bottom: 1.5rem;">🌅</span>
+                    <h3 class="serif gold-text" style="font-size: 1.8rem; margin-bottom: 1rem;">Sunset Sovereignty</h3>
+                    <p style="color: var(--text-muted);">Uninterrupted views of the world's most beautiful horizons, paired with vintage vintages and complete privacy.</p>
                 </div>
                 <div class="glass-panel" style="padding: 3rem; text-align: center;">
-                    <span style="font-size: 3rem; display: block; margin-bottom: 1.5rem;">🌊</span>
-                    <h3 class="serif gold-text" style="font-size: 1.8rem; margin-bottom: 1rem;">Seafront Sovereignty</h3>
-                    <p style="color: var(--text-muted);">Direct beach access and private docks in St. Tropez, Ibiza, and the Maldives. Unparalleled maritime proximity.</p>
+                    <span style="font-size: 3rem; display: block; margin-bottom: 1.5rem;">🚤</span>
+                    <h3 class="serif gold-text" style="font-size: 1.8rem; margin-bottom: 1rem;">Island Narratives</h3>
+                    <p style="color: var(--text-muted);">Hop between exclusive archipelagos with curated itineraries that only a global concierge can unlock.</p>
                 </div>
                 <div class="glass-panel" style="padding: 3rem; text-align: center;">
-                    <span style="font-size: 3rem; display: block; margin-bottom: 1.5rem;">❄️</span>
-                    <h3 class="serif gold-text" style="font-size: 1.8rem; margin-bottom: 1rem;">Alpine Retreats</h3>
-                    <p style="color: var(--text-muted);">Sky-in/Sky-out chalets in Aspen and Courchevel, featuring private spas and 24/7 dedicated service teams.</p>
+                    <span style="font-size: 3rem; display: block; margin-bottom: 1.5rem;">🥂</span>
+                    <h3 class="serif gold-text" style="font-size: 1.8rem; margin-bottom: 1rem;">Private Celebrations</h3>
+                    <h4 style="font-size: 0.8rem; color: var(--primary-gold);">NOT PUBLICLY LISTED</h4>
+                    <p style="color: var(--text-muted); margin-top: 1rem;">Host legendary events on yachts that remain anonymous to the general public, accessible only to our clients.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- WHY ELITE SECTION -->
+    <!-- WHY CHOOSE US -->
     <section style="background: #000; padding: 8rem 0;">
         <div class="container">
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;">
                 <div>
-                    <h2 class="serif" style="font-size: 3.5rem; margin-bottom: 2rem;">Seamless <span class="gold-text">Coordination</span></h2>
-                    <div style="display: flex; flex-direction: column; gap: 2.5rem;">
-                        <div style="display: flex; gap: 1.5rem;">
-                            <span class="gold-text" style="font-size: 1.5rem;">✓</span>
+                    <h2 class="serif" style="font-size: 3.5rem; margin-bottom: 2rem;">Access the <span class="gold-text">Unattainable</span></h2>
+                    <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 2rem;">
+                        <li style="display: flex; gap: 1.5rem;">
+                            <span class="gold-text" style="font-size: 1.5rem;">●</span>
                             <div>
-                                <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;">Single Point of Contact</h4>
-                                <p style="color: var(--text-muted);">Your dedicated concierge handles vessel, villa, and aviation logistics concurrently.</p>
+                                <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: #fff;">Single Point of Contact</h4>
+                                <p style="color: var(--text-muted); font-size: 0.95rem;">You deal with one senior concierge. We deal with the world. Seamless coordination from dock to dinner.</p>
                             </div>
-                        </div>
-                        <div style="display: flex; gap: 1.5rem;">
-                            <span class="gold-text" style="font-size: 1.5rem;">✓</span>
+                        </li>
+                        <li style="display: flex; gap: 1.5rem;">
+                            <span class="gold-text" style="font-size: 1.5rem;">●</span>
                             <div>
-                                <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;">Private Staff Curation</h4>
-                                <p style="color: var(--text-muted);">Bespoke placement of Michelin-starred chefs, VIP security, and lifestyle managers.</p>
+                                <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: #fff;">Off-Market Access</h4>
+                                <p style="color: var(--text-muted); font-size: 0.95rem;">Many of the world's most elite yachts are never listed on rental platforms. We hold the keys to these private vessels.</p>
                             </div>
-                        </div>
-                        <div style="display: flex; gap: 1.5rem;">
-                            <span class="gold-text" style="font-size: 1.5rem;">✓</span>
+                        </li>
+                        <li style="display: flex; gap: 1.5rem;">
+                            <span class="gold-text" style="font-size: 1.5rem;">●</span>
                             <div>
-                                <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;">Zero-Friction Access</h4>
-                                <p style="color: var(--text-muted);">We manage the operational burden. You simply arrive and enjoy the serenity.</p>
+                                <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: #fff;">Absolute Discretion</h4>
+                                <p style="color: var(--text-muted); font-size: 0.95rem;">Your privacy is our highest priority. All missions are conducted with total confidentiality.</p>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
-                <div class="glass-panel" style="padding: 4rem; text-align: center;">
-                    <h3 class="serif gold-text" style="font-size: 2.2rem; margin-bottom: 1.5rem;">Experience Curation</h3>
-                    <p style="color: var(--text-muted); margin-bottom: 3rem;">We sell time and exclusivity. Our process is designed for the world's busiest individuals.</p>
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 12px; border-left: 3px solid var(--primary-gold);">
-                            <p style="font-weight: 600; font-size: 0.9rem;">1. DIRECT REQUEST</p>
+                <div class="glass-panel" style="padding: 4rem;">
+                    <h3 class="serif" style="font-size: 2.2rem; margin-bottom: 2.5rem;">The <span class="gold-text">Elite Journey</span></h3>
+                    <div style="display: flex; flex-direction: column; gap: 2.5rem;">
+                        <div style="display: flex; gap: 1.5rem; align-items: center;">
+                            <span style="background: var(--primary-gold); color: #000; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: 700;">1</span>
+                            <p style="color: #fff; font-weight: 500;">Submit your maritime request</p>
                         </div>
-                        <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 12px; border-left: 3px solid var(--primary-gold);">
-                            <p style="font-weight: 600; font-size: 0.9rem;">2. CURATED DOSSIER</p>
+                        <div style="display: flex; gap: 1.5rem; align-items: center;">
+                            <span style="background: var(--primary-gold); color: #000; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: 700;">2</span>
+                            <p style="color: #fff; font-weight: 500;">We curate bespoke options from our network</p>
                         </div>
-                        <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 12px; border-left: 3px solid var(--primary-gold);">
-                            <p style="font-weight: 600; font-size: 0.9rem;">3. SEAMLESS DEPLOYMENT</p>
+                        <div style="display: flex; gap: 1.5rem; align-items: center;">
+                            <span style="background: var(--primary-gold); color: #000; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: 700;">3</span>
+                            <p style="color: #fff; font-weight: 500;">You confirm, and we handle the rest</p>
                         </div>
+                        <a href="#inquire" class="btn btn-gold" style="margin-top: 1rem;">Start Curation</a>
                     </div>
                 </div>
             </div>
@@ -386,40 +400,70 @@
     <section id="inquire" class="section-padding">
         <div class="container" style="max-width: 900px;">
             <div class="glass-panel" style="padding: 5rem; text-align: center; border-top: 4px solid var(--primary-gold);">
-                <h2 class="serif" style="font-size: 3rem; margin-bottom: 1.5rem;">Secure Your <span class="gold-text">Sanctuary</span></h2>
-                <p style="color: var(--text-muted); margin-bottom: 4rem;">Elite Luxury Bookings is a curated experience partner. Share your requirements for a confidential consultation.</p>
+                <h2 class="serif" style="font-size: 3rem; margin-bottom: 1.5rem;">Commence Your <span class="gold-text">Voyage</span></h2>
+                <p style="color: var(--text-muted); margin-bottom: 4rem;">Share your vision, and our senior maritime concierge will be in touch within 30 minutes.</p>
                 
                 <form action="https://formspree.io/f/xwvwanlj" method="POST" style="text-align: left;">
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
                         <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                            <label style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted);">Full Name</label>
+                            <label style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted);">Name</label>
                             <input type="text" name="name" required style="background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); padding: 1.2rem; color: #fff; border-radius: 8px;">
                         </div>
                         <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                            <label style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted);">Region of Interest</label>
-                            <select name="region" style="background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); padding: 1.2rem; color: #fff; border-radius: 8px;">
-                                <option>Mediterranean (St. Tropez, Ibiza, Amalfi)</option>
-                                <option>Caribbean (St. Barts, Bahamas)</option>
-                                <option>Indian Ocean (Maldives, Seychelles)</option>
-                                <option>Alpine (Aspen, Courchevel)</option>
-                                <option>Southeast Asia (Bali, Phuket)</option>
+                            <label style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted);">Preferred Destination</label>
+                            <select name="destination" style="background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); padding: 1.2rem; color: #fff; border-radius: 8px;">
+                                <option>Monaco / Mediterranean</option>
+                                <option>Dubai / Arabian Gulf</option>
+                                <option>Maldives / Indian Ocean</option>
+                                <option>Ibiza / Balearics</option>
+                                <option>Amalfi / Italy</option>
                             </select>
                         </div>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 2rem;">
-                        <label style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted);">Contact Method (WhatsApp/Phone/Email)</label>
+                        <label style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted);">Contact (WhatsApp / Email)</label>
                         <input type="text" name="contact" required style="background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); padding: 1.2rem; color: #fff; border-radius: 8px;">
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 3rem;">
-                        <label style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted);">Special Mission Requirements</label>
-                        <textarea name="requirements" rows="4" placeholder="Dates, privacy needs, staffing requirements..." style="background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); padding: 1.2rem; color: #fff; border-radius: 8px; resize: none;"></textarea>
+                        <label style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted);">Special Requirements</label>
+                        <textarea name="requirements" rows="4" style="background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); padding: 1.2rem; color: #fff; border-radius: 8px; resize: none;"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-gold" style="width: 100%; padding: 1.5rem; font-size: 1.1rem;">Request Private Estate Consultation</button>
-                    <p style="margin-top: 2rem; text-align: center; color: var(--text-muted); font-size: 0.9rem;">
-                        Emergency / Immediate Request? <a href="https://wa.me/918801079030" style="color: var(--primary-gold); text-decoration: none; font-weight: 600;">WhatsApp our Concierge Hub</a>.
+                    <button type="submit" class="btn btn-gold" style="width: 100%; padding: 1.5rem; font-size: 1.1rem;">Request Private Maritime Access</button>
+                    <p style="margin-top: 2rem; color: var(--text-muted); font-size: 0.9rem;">
+                        Prefer immediate assistance? <a href="https://wa.me/918801079030" style="color: var(--primary-gold); text-decoration: none; font-weight: 600;">WhatsApp our Concierge now</a>.
                     </p>
                 </form>
             </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section-padding" style="background: #000;">
+        <div class="container" style="max-width: 1000px;">
+            <h2 class="serif" style="font-size: 3rem; text-align: center; margin-bottom: 5rem;">Maritime <span class="gold-text">Intelligence</span></h2>
+            <div style="display: grid; gap: 2rem;">
+                <div class="glass-panel" style="padding: 2.5rem;">
+                    <h4 class="serif" style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--primary-gold);">How is pricing structured?</h4>
+                    <p style="color: var(--text-muted);">Each voyage is fully bespoke. We provide all-inclusive curation quotes that cover vessel, crew, catering, and specific experiences, ensuring total cost transparency without standard "rental" fees.</p>
+                </div>
+                <div class="glass-panel" style="padding: 2.5rem;">
+                    <h4 class="serif" style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--primary-gold);">What is the lead time for booking?</h4>
+                    <p style="color: var(--text-muted);">While we recommend 4-8 weeks for peak season in Monaco or Dubai, our global network often allows us to leverage last-minute cancellations for 24-48 hour turnarounds.</p>
+                </div>
+                <div class="glass-panel" style="padding: 2.5rem;">
+                    <h4 class="serif" style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--primary-gold);">Is my identity protected?</h4>
+                    <p style="color: var(--text-muted);">Non-Disclosure Agreements are part of our standard operating procedure. We handle all logistics discreetly to ensure your mission remains anonymous.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CLOSING -->
+    <section class="section-padding" style="text-align: center; background: linear-gradient(to top, rgba(212,175,55,0.05), transparent);">
+        <div class="container">
+            <h2 class="serif" style="font-size: 4rem; margin-bottom: 2rem;">Luxury is <span class="gold-text">Ease.</span></h2>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 3rem; font-size: 1.2rem;">Don't just rent a yacht. Engineer an unforgettable chapter of your life with the world's leading luxury curator.</p>
+            <a href="#inquire" class="btn btn-gold">Commence Your Curation</a>
         </div>
     </section>
 
