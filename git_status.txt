@@ -1,4 +1,4 @@
-﻿ M 404.html
+ M 404.html
  M 7-best-private-jet-charter-in-dubai/index.html
  M 7-day-yacht-charter-mediterranean-itinerary/index.html
  M _template_blog_master.html
@@ -60,7 +60,7 @@
  M greek-islands-yacht-route-guide/index.html
  M guide-to-mediterranean-yacht-charter/index.html
  M hawaii-to-losangeles-private-jet-cost/index.html
- M hermanus-whale-watching-best-tours-price/index.html
+
  M hidden-costs-of-yacht/index.html
  M hire-private-yacht-greece/index.html
  M hongkong-to-singapore-private-jet-cost/index.html
