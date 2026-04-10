@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <!-- 0. BRAND & FAVICON -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 0. BRAND & FAVICON -->
     <link rel="icon" type="image/png" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elite Luxury Bookings | Private Jet Charter, Superyachts & Exclusive Villas</title>
@@ -13,9 +19,7 @@
     <!-- Premium Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
     <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J56D1LJLFM"></script>
@@ -23,200 +27,51 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-J56D1LJLFM');
     </script>
 
     <style>
         /* ELB_STYLE_START */
-        .global-nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(5, 5, 5, 0.98);
-            backdrop-filter: blur(24px);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-            z-index: 99999;
+        body { padding-top: 72px !important; margin: 0 !important; height: auto !important; overflow-x: hidden !important; background: #050505; font-family: 'Inter', sans-serif; color: #fff; }
+        .hero-parallax-bg { position: absolute !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; height: 100% !important; z-index: -1 !important; pointer-events: none !important; }
+
+        /* Navigation Base */
+        .global-nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(5, 5, 5, 0.98); backdrop-filter: blur(24px); border-bottom: 1px solid rgba(212, 175, 55, 0.2); z-index: 99999; }
+        .global-nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; max-width: 1400px; margin: 0 auto; padding: 0 1.5rem; box-sizing: border-box; }
+        .nav-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff !important; text-decoration: none !important; white-space: nowrap; }
+        .nav-gold { color: #D4AF37 !important; }
+        .nav-links { display: flex; align-items: center; list-style: none; margin: 0; padding: 0; gap: 0.5rem; }
+        .nav-links a { color: rgba(255, 255, 255, 0.7) !important; text-decoration: none !important; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 1.5px; padding: 0.5rem 0.8rem; border-radius: 6px; transition: all 0.4s; }
+        .nav-links a:hover { color: #D4AF37 !important; }
+        .nav-cta { display: flex; align-items: center; gap: 1rem; }
+        .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
+        .nav-hamburger span { display: block; width: 24px; height: 2px; background: #D4AF37; border-radius: 2px; }
+
+        /* Mobile Menu Panel */
+        .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #050505; padding: 80px 2rem; z-index: 100000; flex-direction: column; gap: 0.5rem; overflow-y: auto; }
+        .mobile-menu.open { display: flex !important; }
+        .mobile-menu a { color: #fff !important; text-decoration: none !important; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; padding: 1.2rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+
+        /* --- LOCKED MOBILE OPTIMIZATION --- */
+        @media (max-width: 1024px) {
+            .nav-links { display: none !important; }
+            .nav-hamburger { display: flex !important; }
         }
 
-        .global-nav-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 72px;
-            gap: 1rem;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            box-sizing: border-box;
+        @media (max-width: 768px) {
+            .global-nav-inner { padding: 0 1rem !important; }
+            .nav-brand { font-size: 1.2rem !important; }
+            .btn-sm.mobile-hide-text span { display: none; }
+            .btn-sm.mobile-hide-text::after { content: 'Concierge'; }
+            .hero { padding: 5rem 0 3rem !important; }
+            .hero h1 { font-size: 2.1rem !important; }
+            .grid-2 { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+            .section-padding { padding: 3.5rem 1rem !important; }
+            .glass-panel { padding: 1.5rem !important; }
+            .elite-lead-hub { padding: 1.5rem !important; margin: 1.5rem 1rem !important; }
+            .elite-lead-hub h3 { font-size: 1.7rem !important; }
+            .luxury-list li span { display: block; width: 100% !important; }
         }
-
-        .nav-brand {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.75rem;
-            font-weight: 600;
-            color: #fff !important;
-            text-decoration: none !important;
-        }
-
-        .nav-gold {
-            color: #D4AF37 !important;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-            list-style: none;
-            flex: 1;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-links a {
-            color: rgba(255, 255, 255, 0.7) !important;
-            text-decoration: none !important;
-            font-size: 0.82rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            padding: 0.5rem 0.9rem;
-            border-radius: 6px;
-            transition: all 0.4s;
-            font-family: 'Inter', sans-serif !important;
-        }
-
-        .nav-links a:hover {
-            color: #D4AF37 !important;
-        }
-
-        .nav-dropdown {
-            position: relative;
-        }
-
-        .dropdown-menu {
-            position: absolute;
-            top: calc(100% + 8px);
-            left: 0;
-            background: #0a0a0a;
-            border: 1px solid rgba(212, 175, 55, 0.15);
-            border-radius: 12px;
-            padding: 0.75rem;
-            min-width: 240px;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-8px);
-            transition: all 0.4s;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
-            z-index: 100;
-        }
-
-        .nav-dropdown:hover .dropdown-menu {
-            opacity: 1 !important;
-            visibility: visible !important;
-            transform: translateY(0) !important;
-        }
-
-        .dropdown-menu a {
-            display: block !important;
-            padding: 0.7rem 1.2rem !important;
-            color: rgba(255, 255, 255, 0.7) !important;
-            border-radius: 8px;
-            font-size: 0.85rem !important;
-            text-transform: none !important;
-        }
-
-        .nav-hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            padding: 0.5rem;
-            z-index: 100001;
-        }
-
-        .nav-hamburger span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 2px;
-            transition: all 0.4s;
-        }
-
-        .mobile-menu {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: #050505;
-            padding: 72px 2rem 2rem;
-            z-index: 100000;
-            flex-direction: column;
-            gap: 0.5rem;
-            overflow-y: auto;
-        }
-
-        .mobile-menu.open {
-            display: flex !important;
-        }
-
-        .mobile-menu a {
-            color: rgba(255, 255, 255, 0.8) !important;
-            text-decoration: none !important;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            padding: 1.2rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .mobile-cta {
-            margin-top: 2rem;
-            text-align: center;
-            background: linear-gradient(135deg, #D4AF37, #B8860B);
-            color: #000 !important;
-            border-radius: 8px;
-            padding: 1.2rem !important;
-            font-weight: 700;
-        }
-
-        @media (max-width:1024px) {
-            .nav-links {
-                display: none !important;
-            }
-
-            .nav-hamburger {
-                display: flex !important;
-            }
-        }
-
-        body {
-            padding-top: 72px !important;
-            margin: 0 !important;
-            height: auto !important;
-            overflow-x: hidden !important;
-            background: #050505;
-        }
-
-        .hero-parallax-bg {
-            position: absolute !important;
-            top: 0 !important;
-            left: 0 !important;
-            right: 0 !important;
-            bottom: 0 !important;
-            height: 100% !important;
-            z-index: -1 !important;
-            pointer-events: none !important;
-        }
-
-        .luxury-list li::before {
-            content: '✓' !important;
-        }
-
         /* ELB_STYLE_END */
     </style>
     <link rel="stylesheet" href="style.css">
@@ -235,7 +90,7 @@
                 <li><a href="/contact.html">Contact</a></li>
             </ul>
             <div class="nav-cta">
-                <a href="https://wa.me/918801079030" class="btn btn-gold btn-sm">Direct Concierge</a>
+                <a href="https://wa.me/918801079030" class="btn btn-gold btn-sm mobile-hide-text"><span>Direct Concierge</span></a>
                 <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()">
                     <span></span><span></span><span></span>
                 </div>
@@ -250,12 +105,12 @@
         <a href="/contact.html">Contact Us</a>
         <a href="https://wa.me/918801079030" class="mobile-cta">WhatsApp Concierge</a>
     </div>
-<!-- ELB_NAV_END -->
+    <!-- ELB_NAV_END -->
 
     <!-- Desktop floating WA icon -->
     <a href="https://wa.me/918801079030" class="wa-float" target="_blank" aria-label="WhatsApp Concierge"
         title="Plan your journey via WhatsApp">
-        <svg xmlns="http:/www.w3.org/2000/svg" width="34" height="34" fill="currentColor" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" viewBox="0 0 16 16">
             <path
                 d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
         </svg>
@@ -298,7 +153,7 @@
                     <input type="text" name="name" placeholder="Full Name"
                         style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.2rem; background: rgba(0,0,0,0.4); color: #fff;"
                         required>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="grid-2" style="display: grid; gap: 1rem;">
                         <input type="email" name="email" placeholder="Private Email Address"
                             style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.2rem; background: rgba(0,0,0,0.4); color: #fff;"
                             required>
@@ -337,79 +192,6 @@
         <p class="hero-subheadline" style="max-width: 800px; margin: 0 auto 2rem; color: var(--text-muted);">Global
             access to off-market aircraft and properties. Our 24/7 concierge department handles every detail with
             absolute discretion.</p>
-    </div>
-
-    <!-- Urgency & Trust Hook -->
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; margin-bottom: 2.5rem;">
-        <div
-            style="font-size: 0.9rem; color: var(--primary-gold); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">
-            Available within 60 minutes • 24/7 Global Dispatch
-        </div>
-        <div style="font-size: 0.85rem; color: var(--text-muted); letter-spacing: 1px;">
-            Trusted by Global Executives, Family Offices & Discerning Travelers
-        </div>
-    </div>
-
-    <!-- ELB_CONTENT_HUB_START -->
-    <section class="section-padding"
-        style="background: rgba(212, 175, 55, 0.02); border-bottom: 1px solid rgba(212,175,55,0.1); padding: 5rem 0;">
-        <div class="container">
-            <div class="grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
-                <div class="seo-content" style="text-align: left;">
-                    <h2 class="serif" style="font-size: 2.8rem; margin-bottom: 2rem;">Bespoke Excellence: The Elite
-                        Global Liaison House</h2>
-                    <p style="margin-bottom: 1.5rem; color: #fff; opacity: 0.9; line-height: 1.8;">Elite Luxury Bookings
-                        is more than a concierge; we are the strategic coordination house for the world's most
-                        discerning travelers. From agile private jets to intercontinental superyachts, our network is
-                        built on absolute discretion and 60-minute deployment standards.</p>
-                    <p style="color: #fff; opacity: 0.9; line-height: 1.8;">Our liaison officers operate across three
-                        core silos—Aviation, Maritime, and Estates—ensuring your global transitions are handled with
-                        Michelin-tier precision and total confidentiality.</p>
-                </div>
-                <div class="glass-panel"
-                    style="padding: 3rem; background: rgba(5,5,5,0.7); border: 1px solid rgba(212,175,55,0.2); border-radius: 24px; backdrop-filter: blur(20px); text-align: left;">
-                    <h3 class="serif gold-text" style="margin-top:0; font-size: 2rem; margin-bottom: 2rem;">The ELB
-                        Standard</h3>
-                    <ul class="luxury-list" style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 1.5rem; padding-left: 0; position: relative;"><strong
-                                style="color:#fff;">Rapid Deployment:</strong> Aircraft and Yacht positioning within
-                            60-120 minutes globally.</li>
-                        <li style="margin-bottom: 1.5rem; padding-left: 0; position: relative;"><strong
-                                style="color:#fff;">Off-Market Access:</strong> Exclusive portfolios of unlisted
-                            aircraft, vessels, and estates.</li>
-                        <li style="padding-left: 0; position: relative;"><strong style="color:#fff;">Absolute
-                                Seclusion:</strong> NDA-backed coordination for high-profile principals and families.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ELB_CONTENT_HUB_END -->
-
-
-
-    <!-- HOW IT WORKS & TESTIMONIALS -->
-    <section class="section-padding bg-dark">
-        <div class="container">
-            <div class="section-header">
-                <span class="trust-micro">The ELB Experience</span>
-                <h2 class="serif">The Elite Standard of Deployment</h2>
-            </div>
-
-            <div class="process-steps">
-                <div>
-                    <div class="step-num">01</div>
-                    <h3 class="step-title gold-text">Concierge Consult</h3>
-                    <p class="step-desc">Speak directly with a dedicated advisor who understands the nuances of
-                        high-ticket travel and privacy requirements.</p>
-                </div>
-                <div>
-                    <div class="step-num">02</div>
-                    <h3 class="step-title gold-text">Curated Selection</h3>
-                    <p class="step-desc">Within 30 minutes, receive a shortlisted selection of audited aircraft,
-                        superyachts, or properties matching your precise brief.</p>
-                </div>
                 <div>
                     <div class="step-num">03</div>
                     <h3 class="step-title gold-text">Seamless Execution</h3>

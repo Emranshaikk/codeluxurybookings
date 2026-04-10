@@ -312,134 +312,22 @@
         </div>
     </section>
 
-    <!-- LEAD FORM SECTION (VALENS INTEGRATION) -->
+    <!-- LEAD FORM SECTION (VALENS WIDGET INTEGRATION) -->
     <section id="book" class="section-padding" style="background: #000;">
-        <div class="container" style="max-width: 900px;">
-            <div class="glass-panel" style="padding: 4rem; border-top: 4px solid var(--primary-gold);">
-                <h2 class="serif" style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">Instant <span class="gold-text">Aircraft Access</span></h2>
-                <p style="text-align: center; color: var(--text-muted); margin-bottom: 3rem;">Request on-demand availability from our vetted global operator network.</p>
-                
-                <form id="valensForm" onsubmit="handleValensSubmit(event)">
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
-                        <div style="position: relative;">
-                            <label style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 0.5rem;">Departure City / Airport</label>
-                            <input type="text" id="dep_query" placeholder="Search (e.g. London)" required autocomplete="off" 
-                                style="width: 100%; background: rgba(5,5,5,0.8); border: 1px solid var(--glass-border); padding: 1.2rem; color: #fff; border-radius: 8px;"
-                                oninput="suggest(this, 'dep_results', 'dep_icao')">
-                            <input type="hidden" id="dep_icao">
-                            <div id="dep_results" class="suggest-box"></div>
-                        </div>
-                        <div style="position: relative;">
-                            <label style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 0.5rem;">Arrival City / Airport</label>
-                            <input type="text" id="arr_query" placeholder="Search (e.g. Dubai)" required autocomplete="off"
-                                style="width: 100%; background: rgba(5,5,5,0.8); border: 1px solid var(--glass-border); padding: 1.2rem; color: #fff; border-radius: 8px;"
-                                oninput="suggest(this, 'arr_results', 'arr_icao')">
-                            <input type="hidden" id="arr_icao">
-                            <div id="arr_results" class="suggest-box"></div>
-                        </div>
-                    </div>
-
-                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
-                        <div>
-                            <label style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 0.5rem;">Date</label>
-                            <input type="date" id="trip_date" required style="width:100%; background: rgba(5,5,5,0.8); border: 1px solid var(--glass-border); padding: 1.2rem; color: #fff; border-radius: 8px;">
-                        </div>
-                        <div>
-                            <label style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 0.5rem;">Time</label>
-                            <input type="time" id="trip_time" value="12:00" required style="width:100%; background: rgba(5,5,5,0.8); border: 1px solid var(--glass-border); padding: 1.2rem; color: #fff; border-radius: 8px;">
-                        </div>
-                        <div>
-                            <label style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 0.5rem;">Passengers</label>
-                            <input type="number" id="passengers" min="1" value="2" required style="width:100%; background: rgba(5,5,5,0.8); border: 1px solid var(--glass-border); padding: 1.2rem; color: #fff; border-radius: 8px;">
-                        </div>
-                    </div>
-
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem;">
-                        <input type="text" id="client_name" placeholder="Full Name" required style="background: rgba(5,5,5,0.8); border: 1px solid var(--glass-border); padding: 1.2rem; color: #fff; border-radius: 8px;">
-                        <input type="email" id="client_email" placeholder="Email Address" required style="background: rgba(5,5,5,0.8); border: 1px solid var(--glass-border); padding: 1.2rem; color: #fff; border-radius: 8px;">
-                        <input type="tel" id="client_contact" placeholder="WhatsApp / Phone" required style="grid-column: span 2; background: rgba(5,5,5,0.8); border: 1px solid var(--glass-border); padding: 1.2rem; color: #fff; border-radius: 8px;">
-                    </div>
-
-                    <button type="submit" id="valensBtn" class="btn btn-gold" style="width: 100%; padding: 1.5rem; font-size: 1.1rem;">Commence Trip Request</button>
-                    
-                    <div id="valensSuccess" style="display:none; text-align: center; margin-top: 2rem; animation: fadeUp 0.6s forwards;">
-                        <span style="font-size: 3rem; display: block; margin-bottom: 1rem;">✓</span>
-                        <h4 class="serif" style="font-size: 1.8rem;">Mission Registered</h4>
-                        <p style="color: var(--text-muted);">Your request has been broadcast to our operator network. A senior aviation curator will reach out shortly.</p>
-                    </div>
-                </form>
-                
-                <p style="margin-top: 2rem; text-align: center; color: var(--text-muted); font-size: 0.9rem;">
-                    Bespoke mission requirements? <a href="https://wa.me/918801079030" style="color: var(--primary-gold); text-decoration: none; font-weight: 600;">Contact us on WhatsApp</a>.
-                </p>
+        <div class="container" style="max-width: 1000px;">
+            <div class="glass-panel" style="padding: 1.5rem; border: 1px solid var(--primary-gold); background: #000; border-radius: 24px; box-shadow: 0 40px 100px rgba(0,0,0,0.8);">
+                <iframe src="https://jetluxe.jetlink.app/affiliate/valens/widget/cb37e0db-af0a-42bd-94c4-26736dae4aa9?signature=07e252c33f271e5994234ad6e8864d593388f699b6f80ee4add5512ffa467224" 
+                    frameborder="0" 
+                    allowfullscreen 
+                    style="width: 100%; min-height: 650px; border-radius: 12px; background: transparent;"></iframe>
+                <div style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">
+                    Elite Luxury Bookings | Powered by Valens Core
+                </div>
             </div>
         </div>
     </section>
 
-    <style>
-        .suggest-box {
-            position: absolute; top: 100%; left: 0; right: 0; background: #111; border: 1px solid var(--glass-border); 
-            z-index: 1000; border-radius: 0 0 8px 8px; display: none; max-height: 250px; overflow-y: auto;
-        }
-        .suggest-item { padding: 1rem; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .suggest-item:hover { background: var(--graphene); color: var(--primary-gold); }
-        .icao-tag { background: var(--graphene); color: var(--primary-gold); font-size: 0.7rem; padding: 2px 6px; border-radius: 4px; float: right; }
-    </style>
-
-    <script src="/valens_api_bridge.js?v=elite_v2"></script>
-    <script>
-        function suggest(input, resultsId, hiddenId) {
-            const results = document.getElementById(resultsId);
-            const matches = searchAirports(input.value);
-            if (matches.length > 0) {
-                results.innerHTML = matches.map(m => `
-                    <div class="suggest-item" onclick="selectAir('${resultsId}', '${hiddenId}', '${input.id}', '${m.name} (${m.city})', '${m.icao}')">
-                        ${m.name} <span class="icao-tag">${m.icao}</span>
-                        <div style="font-size: 0.75rem; color: var(--text-muted)">${m.city}</div>
-                    </div>
-                `).join('');
-                results.style.display = 'block';
-            } else { results.style.display = 'none'; }
-        }
-
-        function selectAir(resultsId, hiddenId, inputId, text, icao) {
-            document.getElementById(inputId).value = text;
-            document.getElementById(hiddenId).value = icao;
-            document.getElementById(resultsId).style.display = 'none';
-        }
-
-        async function handleValensSubmit(e) {
-            e.preventDefault();
-            const btn = document.getElementById('valensBtn');
-            const data = {
-                departure_icao: document.getElementById('dep_icao').value || "EGLL",
-                arrival_icao: document.getElementById('arr_icao').value || "OMDB",
-                date: document.getElementById('trip_date').value,
-                time: document.getElementById('trip_time').value,
-                passengers: document.getElementById('passengers').value,
-                full_name: document.getElementById('client_name').value,
-                email: document.getElementById('client_email').value,
-                contact: document.getElementById('client_contact').value
-            };
-
-            btn.disabled = true; 
-            btn.innerText = "Processing Mission...";
-
-            try {
-                // Call the bridge (Now with internal Security Bypass)
-                await submitToValens(data);
-                
-                // Show success panel regardless of CORS state to maintain UX
-                document.getElementById('valensForm').querySelector('.btn-gold').style.display = 'none';
-                document.getElementById('valensSuccess').style.display = 'block';
-                window.scrollTo({ top: document.getElementById('book').offsetTop + 100, behavior: 'smooth' });
-            } catch (err) {
-                // Fallback success
-                document.getElementById('valensForm').querySelector('.btn-gold').style.display = 'none';
-                document.getElementById('valensSuccess').style.display = 'block';
-            }
-        }
-    </script>
+    <!-- VALENS WIDGET CORE -->
 
     <!-- WHY CHOOSE ELITE SECTION -->
     <section class="section-padding">
