@@ -195,6 +195,13 @@
             cursor: pointer;
         }
 
+        /* Responsive Form Grid */
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
         /* ELB_STYLE_START */
         .global-nav {
             position: fixed;
@@ -421,9 +428,16 @@
 
         /* --- MOBILE OPTIMIZATION LOCK --- */
         @media (max-width: 768px) {
-            .hero {
-                padding: 6rem 0 3rem !important;
-            }
+            .hero { padding: 6rem 0 3rem !important; }
+            .hero h1 { font-size: 2.2rem !important; line-height: 1.1; padding: 0 1rem; }
+            .hero-sub { font-size: 1rem !important; padding: 0 1.5rem; }
+            .grid-2, .grid-3 { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+            .section-padding { padding: 4rem 1rem !important; }
+            .aviation-search-engine { padding: 1.5rem !important; margin: 1rem !important; }
+            .form-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+            .nav-brand { font-size: 1.3rem !important; }
+            .btn-gold { padding: 0.6rem 1rem !important; font-size: 0.7rem !important; }
+        }
 
             .hero h1 {
                 font-size: 2.2rem !important;
@@ -454,6 +468,20 @@
             .aviation-search-engine {
                 padding: 1.5rem !important;
                 margin: 1rem !important;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+
+            .nav-brand {
+                font-size: 1.3rem !important;
+            }
+
+            .btn-gold {
+                padding: 0.6rem 1rem !important;
+                font-size: 0.7rem !important;
             }
         }
 
@@ -541,7 +569,7 @@
                     <input type="hidden" name="Route" value="Beijing to Seoul Private Jet">
                     <input type="hidden" name="_cc" value="info@eliteluxurybookings.com">
 
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                    <div class="form-grid">
                         <div class="form-group">
                             <label>Full Name</label>
                             <input type="text" name="name" class="form-control" placeholder="e.g. James Harrington"
@@ -559,7 +587,7 @@
                             required>
                     </div>
 
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                    <div class="form-grid">
                         <div class="form-group">
                             <label>Travel Date</label>
                             <input type="date" name="travel_date" class="form-control" required
