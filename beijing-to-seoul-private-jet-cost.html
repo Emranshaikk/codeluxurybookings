@@ -135,6 +135,66 @@
             overflow-x: hidden;
         }
 
+        /* --- FORM STYLES --- */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--primary-gold);
+            letter-spacing: 2px;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .form-control {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            padding: 1.2rem;
+            color: #fff;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            box-sizing: border-box;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-gold);
+            background: rgba(212, 175, 55, 0.08);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23D4AF37' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.2rem;
+        }
+
+        /* Dropdown Visibility Fix */
+        select.form-control option {
+            background-color: #1A1A1A !important;
+            color: #FFFFFF !important;
+            padding: 12px;
+        }
+
+        /* Date Picker Fix */
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(1) sepia(100%) saturate(500%) hue-rotate(10deg);
+            cursor: pointer;
+        }
+
         /* ELB_STYLE_START */
         .global-nav {
             position: fixed;
@@ -289,6 +349,33 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+            filter: brightness(1.1);
+        }
+
+        .btn-sm {
+            padding: 0.6rem 1.2rem;
+            font-size: 0.75rem;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+            filter: brightness(1.1);
+        }
+
+        .btn-sm {
+            padding: 0.6rem 1.2rem;
+            font-size: 0.75rem;
         }
 
         .luxury-list {
@@ -436,23 +523,85 @@
                     Slot Alert: Peak Season Demand - Inquire Early</span>
             </div>
 
-            <!-- ELB_VALENS_WIDGET_START -->
+            <!-- ELB_FORMSPREE_WIDGET_START -->
             <div class="aviation-search-engine glass-panel"
-                style="margin: 3rem auto; max-width: 1000px; padding: 1.5rem; border: 1px solid var(--primary-gold); position: relative; overflow: visible; background: #000; border-radius: 24px; box-shadow: 0 40px 100px rgba(0,0,0,0.8); z-index: 10;">
-                <iframe
-                    src="https://jetluxe.jetlink.app/affiliate/valens/widget/cb37e0db-af0a-42bd-94c4-26736dae4aa9?signature=07e252c33f271e5994234ad6e8864d593388f699b6f80ee4add5512ffa467224"
-                    frameborder="0" 
-                    allowfullscreen
-                    loading="lazy"
-                    sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
-                    title="Valens Booking Engine"
-                    style="width: 100%; min-height: 700px; border-radius: 12px; background: #000; display: block; border: none;"></iframe>
-                <div
-                    style="text-align: center; margin-top: 1rem; font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">
-                    Elite Luxury Bookings | Powered by Valens Core
+                style="margin: 3rem auto; max-width: 800px; padding: 3rem; border: 1px solid var(--primary-gold); position: relative; background: #000; border-radius: 24px; box-shadow: 0 40px 100px rgba(0,0,0,0.8); z-index: 10;">
+
+                <div style="text-align: center; margin-bottom: 2.5rem;">
+                    <h2 class="serif gold-text" style="font-size: 2.2rem; margin-bottom: 0.5rem;">Request Charter Quote
+                    </h2>
+                    <p
+                        style="color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px;">
+                        Beijing (PEK) → Seoul (GMP/ICN)</p>
                 </div>
+
+                <form action="https://formspree.io/f/xwvwanlj" method="POST">
+                    <!-- Global Route Identifier -->
+                    <input type="hidden" name="_subject" value="New Private Jet Lead: Beijing to Seoul">
+                    <input type="hidden" name="Route" value="Beijing to Seoul Private Jet">
+                    <input type="hidden" name="_cc" value="info@eliteluxurybookings.com">
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" name="name" class="form-control" placeholder="e.g. James Harrington"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label>WhatsApp / Phone</label>
+                            <input type="tel" name="phone" class="form-control" placeholder="+44 7XXX XXXXXX" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email" class="form-control" placeholder="client@privatemail.com"
+                            required>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div class="form-group">
+                            <label>Travel Date</label>
+                            <input type="date" name="travel_date" class="form-control" required
+                                style="color-scheme: dark;">
+                        </div>
+                        <div class="form-group">
+                            <label>Passengers</label>
+                            <input type="number" name="passengers" class="form-control" placeholder="Qty" min="1"
+                                max="50">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Aircraft Class Preference</label>
+                        <select name="aircraft_class" class="form-control">
+                            <option value="Not Specified">Select Preferred Class</option>
+                            <option value="Light Jet">Light Jet (4-7 Pax)</option>
+                            <option value="Midsize Jet">Midsize Jet (7-9 Pax)</option>
+                            <option value="Heavy Jet">Heavy Jet (10-16 Pax)</option>
+                            <option value="Ultra Long Range">Ultra Long Range (Global)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Specific Requirements</label>
+                        <textarea name="message" class="form-control" rows="3"
+                            placeholder="Catering, ground transport, or specific FBO requirements..."
+                            style="resize: none;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-gold"
+                        style="width: 100%; padding: 1.5rem; font-size: 1.1rem; border-radius: 12px; margin-top: 1rem;">
+                        Secure Private Quote
+                    </button>
+
+                    <div
+                        style="text-align: center; margin-top: 1.5rem; font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px; opacity: 0.6;">
+                        Elite Concierge Coordination | 24/7 Global Response
+                    </div>
+                </form>
             </div>
-            <!-- ELB_VALENS_WIDGET_END -->
+            <!-- ELB_FORMSPREE_WIDGET_END -->
 
         </div>
     </header>

@@ -66,7 +66,29 @@
 
         .cta-box { background: var(--graphene); border: 1px solid var(--glass-border); padding: 4rem; border-radius: 30px; margin-top: 6rem; text-align: center; }
         .btn { display: inline-block; padding: 1.2rem 2.5rem; border-radius: 8px; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; text-decoration: none; transition: var(--transition); cursor: pointer; text-align: center; border: none; }
-        .btn-gold { background: linear-gradient(135deg, var(--primary-gold), #B8860B); color: #000; margin-top: 2rem; }
+        .btn-gold {
+            background: linear-gradient(135deg, #D4AF37, #B8860B);
+            color: #000 !important;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+            filter: brightness(1.1);
+        }
+
+        .btn-sm {
+            padding: 0.6rem 1.2rem;
+            font-size: 0.75rem;
+        }
         .btn-outline { background: transparent; color: var(--primary-gold); border: 1px solid var(--primary-gold); margin-top: 1rem; }
 
         .author-card { display: flex; align-items: center; gap: 1.5rem; padding: 3rem 0; border-top: 1px solid var(--glass-border); margin-top: 4rem; }
