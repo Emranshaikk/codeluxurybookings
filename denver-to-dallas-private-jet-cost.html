@@ -179,7 +179,16 @@
         <a href="/contact.html">Contact Us</a>
         <a href="https://wa.me/918801079030" class="mobile-cta">WhatsApp Concierge</a>
     </div>
-<!-- ELB_NAV_END -->
+<!-- ELB_NAV_END -->
+<!-- ELB_SILO_BREADCRUMB_START -->
+    <div class="container" style="margin: 1.5rem auto -0.5rem; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.4); font-family: 'Inter', sans-serif;">
+        <a href="/" style="color: rgba(255,255,255,0.5); text-decoration: none;">Home</a> 
+        <span style="margin: 0 12px; color: #D4AF37;">/</span>
+        <a href="/elite-private-jet-charter.html" style="color: #D4AF37; text-decoration: none; font-weight: 600;">Private Jet Charter</a>
+        <span style="margin: 0 12px; color: #D4AF37;">/</span>
+        <span style="color: #fff; opacity: 0.8;">Denver to Dallas</span>
+    </div>
+<!-- ELB_SILO_BREADCRUMB_END -->
 
     <header class="hero" id="top">
         <div class="container">
@@ -241,51 +250,11 @@
             </div>
         </div>
 
-        <script>
-        const VALENS_API = {
-            ENDPOINT: 'https://jetluxe.jetlink.app/api/affiliate/valens/v1/trip/new',
-            TOKEN: '64|t997lbxqnHWlW15TpE5FCogSyTev2hKpOLRo2Hjj7cad47bc',
-            ICAO_DB: {
-                'london': 'EGLL', 'nice': 'LFMN', 'dubai': 'OMDB', 'paris': 'LFPG', 'miami': 'KMIA',
-                'new york': 'KJFK', 'jfk': 'KJFK', 'aspen': 'KASE', 'ibiza': 'LEIB'
-            }
-        };
-        document.getElementById('valensEngineForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const btn = document.getElementById('searchApiBtn');
-            btn.disabled = true;
-            btn.innerHTML = 'Connecting...';
-            const dep_icao = document.getElementById('v_dep').value;
-            const arr_icao = document.getElementById('v_arr').value;
-            const payload = {
-                idempotency_key: crypto.randomUUID(),
-                legs: [{
-                    date: document.getElementById('v_date').value,
-                    passengers: parseInt(document.getElementById('v_pax').value),
-                    departure_icao: dep_icao,
-                    arrival_icao: arr_icao,
-                    time: "12:00"
-                }],
-                customer: {
-                    full_name: document.getElementById('v_name').value,
-                    contact: document.getElementById('v_phone').value,
-                    email: document.getElementById('v_email').value
-                }
-            };
-            try {
-                const response = await fetch(VALENS_API.ENDPOINT, {
-                    method: 'POST',
-                    headers: { 'Authorization': `Bearer ${VALENS_API.TOKEN}`, 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-                if (response.ok) {
-                    document.getElementById('search-container').style.display = 'none';
-                    document.getElementById('engine-success').style.display = 'block';
-                } else { alert("Dashboard sync failed. Please use WhatsApp support."); }
-            } catch (err) { alert("Network error. Please use WhatsApp support."); }
-        });
-        </script>
-        <!-- ELB_VALENS_API_ENGINE_END -->
+        <script src="/valens_api_bridge.js"></script>
+<script>
+    document.getElementById('valensEngineForm').addEventListener('submit', handleValensSubmit);
+</script>
+<!-- ELB_VALENS_API_ENGINE_END -->
 
             <p class="hero-sub">Book your <strong>Denver to Dallas private jet cost</strong> with absolute discretion. Experience the ultimate in bespoke aviation as you transition between these premium global destinations.</p>
 

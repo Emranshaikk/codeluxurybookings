@@ -1,103 +1,206 @@
-
-
-<style>
-    .hub-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
-    }
-    .internal-link {
-        color: var(--text-main);
-        text-decoration: none;
-        transition: var(--transition);
-        font-size: 0.95rem;
-    }
-    .internal-link:hover {
-        color: var(--primary-gold);
-        padding-left: 5px;
-    }
-    @media (max-width: 1024px) {
-        .hub-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 2rem; }
-    }
-    @media (max-width: 768px) {
-        .hub-grid { grid-template-columns: 1fr !important; gap: 1.5rem; }
-    }
-</style>
-<style>
-
-/* ELB_STYLE_START */
-    .global-nav { position:fixed; top:0; left:0; right:0; background:rgba(5,5,5,0.98); backdrop-filter:blur(24px); border-bottom:1px solid rgba(212,175,55,0.2); z-index:99999; }
-    .global-nav-inner { display:flex; align-items:center; justify-content:space-between; height:72px; gap:1rem; max-width:1400px; margin:0 auto; padding:0 2rem; box-sizing: border-box; }
-    .nav-brand { font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:600; color:#fff !important; text-decoration:none !important; }
-    .nav-gold { color:#D4AF37 !important; }
-    .nav-links { display:flex; align-items:center; gap:0.25rem; list-style:none; flex:1; justify-content:center; margin:0; padding:0; }
-    .nav-links a { color:rgba(255,255,255,0.7) !important; text-decoration:none !important; font-size:0.82rem; text-transform:uppercase; letter-spacing:1.5px; padding:0.5rem 0.9rem; border-radius:6px; transition:all 0.4s; font-family: 'Inter', sans-serif !important; }
-    .nav-links a:hover { color:#D4AF37 !important; }
-    
-    
-    
-    .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:0.5rem; z-index:100001; }
-    .nav-hamburger span { display:block; width:24px; height:2px; background:rgba(255,255,255,0.8); border-radius:2px; transition:all 0.4s; }
-    .mobile-menu { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:#050505; padding:72px 2rem 2rem; z-index:100000; flex-direction:column; gap:0.5rem; overflow-y: auto; }
-    .mobile-menu.open { display:flex !important; }
-    .mobile-menu a { color:rgba(255,255,255,0.8) !important; text-decoration:none !important; font-size:1.1rem; text-transform:uppercase; letter-spacing:2px; padding:1.2rem 0; border-bottom:1px solid rgba(255,255,255,0.05); }
-    .mobile-cta { margin-top:2rem; text-align:center; background:linear-gradient(135deg,#D4AF37,#B8860B); color:#000 !important; border-radius:8px; padding:1.2rem !important; font-weight:700; }
-    @media (max-width:1024px) { .nav-links { display:none !important; } .nav-hamburger { display:flex !important; } }
-    body { padding-top: 72px !important; }
-    .luxury-list li::before { content: '✓' !important; }
-/* ELB_STYLE_END */
-
-</style>
-    <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-<!-- ELB_NAV_START -->
-    <nav class="global-nav">
-        <div class="container global-nav-inner">
-            <a href="/" class="nav-brand"><span class="nav-gold">Elite</span> Luxury Bookings</a>
-                        <ul class="nav-links">
-                <li><a href="/elite-private-jet-charter.html">Private Jets</a></li>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Global Route Directory | Elite Luxury Bookings</title>
+    <meta name="description" content="Explore the full network of elite private jet charter routes. Direct connectivity between global luxury hubs.">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .directory-header { padding: 8rem 0 4rem; text-align: center; background: linear-gradient(to bottom, #0a0a0a, #000); }
+        .hub-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 4rem; }
+        .internal-link { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; transition: all 0.3s; padding: 10px; border-radius: 4px; border-left: 2px solid transparent; text-transform: capitalize; }
+        .internal-link:hover { color: #D4AF37; border-left: 2px solid #D4AF37; background: rgba(212,175,55,0.05); padding-left: 15px; }
+        @media (max-width: 1024px) { .hub-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .hub-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body style="background: #000; color: #fff;">
+<!-- ELB_NAV_START -->
+    <nav class="global-nav">
+        <div class="container global-nav-inner">
+            <a href="/" class="nav-brand"><span class="nav-gold">Elite</span> Luxury Bookings</a>
+            <ul class="nav-links">
+                <li><a href="elite-private-jet-charter.html">Private Jets</a></li>
                 <li><a href="/luxury-yacht-rentals/">Yacht Charter</a></li>
-                <li><a href="/luxury-villa-rentals.html">Villas</a></li>
-                <li><a href="/blog.html">Blog</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-            </ul>
-            <div class="nav-cta">
-                <a href="https://wa.me/918801079030" class="btn btn-gold btn-sm">Direct Concierge</a>
-                <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <div class="mobile-menu" id="elbMobileMenu">
-        <a href="/elite-private-jet-charter.html">Private Jets</a>
-        <a href="/luxury-yacht-rentals/">Luxury Yachts</a>
-        <a href="/luxury-villa-rentals.html">Exclusive Villas</a>
-        <a href="/blog.html">Articles & News</a>
-        <a href="/contact.html">Contact Us</a>
-        <a href="https://wa.me/918801079030" class="mobile-cta">WhatsApp Concierge</a>
-    </div>
-<!-- ELB_NAV_END -->
-
-<!-- ELB_JS_START -->
-    <script>function toggleMobileMenu(){var m=document.getElementById('elbMobileMenu'),b=document.getElementById('navHamburger');if(m&&b){m.classList.toggle('open');b.classList.toggle('open');}}</script>
-<!-- ELB_JS_END -->
-
-<!-- ELB_FOOTER_START -->
-    <footer class="section-padding" style="background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center !important; margin-top: 6rem; padding: 6rem 0;">
-        <div class="container" style="display: block !important; text-align: center !important;">
-            <a href="/" style="display: inline-block; margin-bottom: 2rem; font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:600; color:#fff; text-decoration:none;"><span style="color:#D4AF37;">Elite</span> Luxury Bookings</a>
-            <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
-                <a href="/elite-private-jet-charter.html" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Aviation</a>
-                <a href="/luxury-yacht-rentals/" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Maritime</a>
-                <a href="/luxury-villa-rentals.html" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Villas</a>
-                <a href="/blog.html" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Blog</a>
-                <a href="/contact.html" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Contact</a>
-            </div>
-            <p style="color: #444; font-size: 0.8rem; letter-spacing: 1px;">&copy; 2026 Elite Luxury Bookings. Concierge Dispatch Worldwide.</p>
-        </div>
-    </footer>
-<!-- ELB_FOOTER_END -->
-</body>
+                <li><a href="luxury-villa-rentals.html">Villas</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="https://wa.me/918801079030" class="btn btn-gold btn-sm">Direct Concierge</a>
+                <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="elbMobileMenu">
+        <a href="elite-private-jet-charter.html">Private Jets</a>
+        <a href="/luxury-yacht-rentals/">Luxury Yachts</a>
+        <a href="luxury-villa-rentals.html">Exclusive Villas</a>
+        <a href="blog.html">Articles & News</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="https://wa.me/918801079030" class="mobile-cta">WhatsApp Concierge</a>
+    </div>
+    <!-- ELB_NAV_END -->
+
+<section class="directory-header">
+    <div class="container">
+        <h1 class="serif" style="font-size: 3.5rem;">Aviation <span class="gold-text">Network</span></h1>
+        <p style="color: rgba(255,255,255,0.5); letter-spacing: 2px; text-transform: uppercase; margin-top: 1rem;">116 Direct Private Jet Charter Corridors</p>
+    </div>
+</section>
+
+<section class="section-padding" style="padding-top: 0;">
+    <div class="container">
+        <div class="hub-grid">
+            <a href='/abudhabi-to-doha-private-jet-cost.html' class='internal-link'>abudhabi ? doha</a>
+<a href='/amsterdam-to-london-private-jet-cost.html' class='internal-link'>amsterdam ? london</a>
+<a href='/aspen-to-miami-private-jet-cost.html' class='internal-link'>aspen ? miami</a>
+<a href='/aspen-to-newyork-private-jet-cost.html' class='internal-link'>aspen ? newyork</a>
+<a href='/bahamas-to-newyork-private-jet-cost.html' class='internal-link'>bahamas ? newyork</a>
+<a href='/bali-to-melbourne-private-jet-cost.html' class='internal-link'>bali ? melbourne</a>
+<a href='/bali-to-perth-private-jet-cost.html' class='internal-link'>bali ? perth</a>
+<a href='/barcelona-to-london-private-jet-cost.html' class='internal-link'>barcelona ? london</a>
+<a href='/beijing-to-seoul-private-jet-cost.html' class='internal-link'>beijing ? seoul</a>
+<a href='/brisbane-to-sydney-private-jet-cost.html' class='internal-link'>brisbane ? sydney</a>
+<a href='/cabo-to-losangeles-private-jet-cost.html' class='internal-link'>cabo ? losangeles</a>
+<a href='/cancun-to-dallas-private-jet-cost.html' class='internal-link'>cancun ? dallas</a>
+<a href='/chicago-to-losangeles-private-jet-cost.html' class='internal-link'>chicago ? losangeles</a>
+<a href='/chicago-to-miami-private-jet-cost.html' class='internal-link'>chicago ? miami</a>
+<a href='/chicago-to-newyork-private-jet-cost.html' class='internal-link'>chicago ? newyork</a>
+<a href='/dallas-to-cancun-private-jet-cost.html' class='internal-link'>dallas ? cancun</a>
+<a href='/dallas-to-denver-private-jet-cost.html' class='internal-link'>dallas ? denver</a>
+<a href='/dallas-to-losangeles-private-jet-cost.html' class='internal-link'>dallas ? losangeles</a>
+<a href='/dallas-to-newyork-private-jet-cost.html' class='internal-link'>dallas ? newyork</a>
+<a href='/denver-to-dallas-private-jet-cost.html' class='internal-link'>denver ? dallas</a>
+<a href='/doha-to-abudhabi-private-jet-cost.html' class='internal-link'>doha ? abudhabi</a>
+<a href='/dubai-to-london-private-jet-cost.html' class='internal-link'>dubai ? london</a>
+<a href='/dubai-to-newyork-private-jet-cost.html' class='internal-link'>dubai ? newyork</a>
+<a href='/dubai-to-sydney-private-jet-cost.html' class='internal-link'>dubai ? sydney</a>
+<a href='/geneva-to-london-private-jet-cost.html' class='internal-link'>geneva ? london</a>
+<a href='/goldcoast-to-sydney-private-jet-cost.html' class='internal-link'>goldcoast ? sydney</a>
+<a href='/hawaii-to-losangeles-private-jet-cost.html' class='internal-link'>hawaii ? losangeles</a>
+<a href='/hongkong-to-singapore-private-jet-cost.html' class='internal-link'>hongkong ? singapore</a>
+<a href='/houston-to-miami-private-jet-cost.html' class='internal-link'>hous?n ? miami</a>
+<a href='/ibiza-to-london-private-jet-cost.html' class='internal-link'>ibiza ? london</a>
+<a href='/lasvegas-to-lax-private-jet-cost.html' class='internal-link'>lasvegas ? lax</a>
+<a href='/lasvegas-to-losangeles-private-jet-cost.html' class='internal-link'>lasvegas ? losangeles</a>
+<a href='/lasvegas-to-miami-private-jet-cost.html' class='internal-link'>lasvegas ? miami</a>
+<a href='/lasvegas-to-newyork-private-jet-cost.html' class='internal-link'>lasvegas ? newyork</a>
+<a href='/lax-to-lasvegas-private-jet-cost.html' class='internal-link'>lax ? lasvegas</a>
+<a href='/london-to-amsterdam-private-jet-cost.html' class='internal-link'>london ? amsterdam</a>
+<a href='/london-to-barcelona-private-jet-cost.html' class='internal-link'>london ? barcelona</a>
+<a href='/london-to-dubai-private-jet-cost.html' class='internal-link'>london ? dubai</a>
+<a href='/london-to-geneva-private-jet-cost.html' class='internal-link'>london ? geneva</a>
+<a href='/london-to-ibiza-private-jet-cost.html' class='internal-link'>london ? ibiza</a>
+<a href='/london-to-losangeles-private-jet-cost.html' class='internal-link'>london ? losangeles</a>
+<a href='/london-to-marrakesh-private-jet-cost.html' class='internal-link'>london ? marrakesh</a>
+<a href='/london-to-miami-private-jet-cost.html' class='internal-link'>london ? miami</a>
+<a href='/london-to-milan-private-jet-cost.html' class='internal-link'>london ? milan</a>
+<a href='/london-to-mykonos-private-jet-cost.html' class='internal-link'>london ? mykonos</a>
+<a href='/london-to-newyork-private-jet-cost.html' class='internal-link'>london ? newyork</a>
+<a href='/london-to-nice-private-jet-cost.html' class='internal-link'>london ? nice</a>
+<a href='/london-to-palma-private-jet-cost.html' class='internal-link'>london ? palma</a>
+<a href='/london-to-paris-private-jet-cost.html' class='internal-link'>london ? paris</a>
+<a href='/london-to-rome-private-jet-cost.html' class='internal-link'>london ? rome</a>
+<a href='/london-to-sanfrancisco-private-jet-cost.html' class='internal-link'>london ? sanfrancisco</a>
+<a href='/london-to-santorini-private-jet-cost.html' class='internal-link'>london ? san?rini</a>
+<a href='/london-to-tokyo-private-jet-cost.html' class='internal-link'>london ? ?kyo</a>
+<a href='/losangeles-to-cabo-private-jet-cost.html' class='internal-link'>losangeles ? cabo</a>
+<a href='/losangeles-to-chicago-private-jet-cost.html' class='internal-link'>losangeles ? chicago</a>
+<a href='/losangeles-to-dallas-private-jet-cost.html' class='internal-link'>losangeles ? dallas</a>
+<a href='/losangeles-to-hawaii-private-jet-cost.html' class='internal-link'>losangeles ? hawaii</a>
+<a href='/losangeles-to-lasvegas-private-jet-cost.html' class='internal-link'>losangeles ? lasvegas</a>
+<a href='/losangeles-to-london-private-jet-cost.html' class='internal-link'>losangeles ? london</a>
+<a href='/losangeles-to-miami-private-jet-cost.html' class='internal-link'>losangeles ? miami</a>
+<a href='/losangeles-to-newyork-private-jet-cost.html' class='internal-link'>losangeles ? newyork</a>
+<a href='/losangeles-to-sanfrancisco-private-jet-cost.html' class='internal-link'>losangeles ? sanfrancisco</a>
+<a href='/losangeles-to-tokyo-private-jet-cost.html' class='internal-link'>losangeles ? ?kyo</a>
+<a href='/maldives-to-riyadh-private-jet-cost.html' class='internal-link'>maldives ? riyadh</a>
+<a href='/marrakesh-to-london-private-jet-cost.html' class='internal-link'>marrakesh ? london</a>
+<a href='/melbourne-to-bali-private-jet-cost.html' class='internal-link'>melbourne ? bali</a>
+<a href='/melbourne-to-sydney-private-jet-cost.html' class='internal-link'>melbourne ? sydney</a>
+<a href='/miami-to-aspen-private-jet-cost.html' class='internal-link'>miami ? aspen</a>
+<a href='/miami-to-chicago-private-jet-cost.html' class='internal-link'>miami ? chicago</a>
+<a href='/miami-to-houston-private-jet-cost.html' class='internal-link'>miami ? hous?n</a>
+<a href='/miami-to-lasvegas-private-jet-cost.html' class='internal-link'>miami ? lasvegas</a>
+<a href='/miami-to-london-private-jet-cost.html' class='internal-link'>miami ? london</a>
+<a href='/miami-to-losangeles-private-jet-cost.html' class='internal-link'>miami ? losangeles</a>
+<a href='/miami-to-newyork-private-jet-cost.html' class='internal-link'>miami ? newyork</a>
+<a href='/miami-to-turksandcaicos-private-jet-cost.html' class='internal-link'>miami ? turksandcaicos</a>
+<a href='/milan-to-london-private-jet-cost.html' class='internal-link'>milan ? london</a>
+<a href='/milan-to-mykonos-private-jet-cost.html' class='internal-link'>milan ? mykonos</a>
+<a href='/mykonos-to-london-private-jet-cost.html' class='internal-link'>mykonos ? london</a>
+<a href='/mykonos-to-milan-private-jet-cost.html' class='internal-link'>mykonos ? milan</a>
+<a href='/newyork-to-aspen-private-jet-cost.html' class='internal-link'>newyork ? aspen</a>
+<a href='/newyork-to-bahamas-private-jet-cost.html' class='internal-link'>newyork ? bahamas</a>
+<a href='/newyork-to-chicago-private-jet-cost.html' class='internal-link'>newyork ? chicago</a>
+<a href='/newyork-to-dallas-private-jet-cost.html' class='internal-link'>newyork ? dallas</a>
+<a href='/newyork-to-dubai-private-jet-cost.html' class='internal-link'>newyork ? dubai</a>
+<a href='/newyork-to-lasvegas-private-jet-cost.html' class='internal-link'>newyork ? lasvegas</a>
+<a href='/newyork-to-london-private-jet-cost.html' class='internal-link'>newyork ? london</a>
+<a href='/newyork-to-losangeles-private-jet-cost.html' class='internal-link'>newyork ? losangeles</a>
+<a href='/newyork-to-miami-private-jet-cost.html' class='internal-link'>newyork ? miami</a>
+<a href='/newyork-to-paris-private-jet-cost.html' class='internal-link'>newyork ? paris</a>
+<a href='/newyork-to-toronto-private-jet-cost.html' class='internal-link'>newyork ? ?ron?</a>
+<a href='/nice-to-london-private-jet-cost.html' class='internal-link'>nice ? london</a>
+<a href='/ntomiami-to-hous-private-jet-cost.html' class='internal-link'>n?miami ? hous</a>
+<a href='/palma-to-london-private-jet-cost.html' class='internal-link'>palma ? london</a>
+<a href='/paris-to-dubai-private-jet-cost.html' class='internal-link'>paris ? dubai</a>
+<a href='/paris-to-london-private-jet-cost.html' class='internal-link'>paris ? london</a>
+<a href='/paris-to-newyork-private-jet-cost.html' class='internal-link'>paris ? newyork</a>
+<a href='/perth-to-bali-private-jet-cost.html' class='internal-link'>perth ? bali</a>
+<a href='/perth-to-sydney-private-jet-cost.html' class='internal-link'>perth ? sydney</a>
+<a href='/rinitolondon-to-san-private-jet-cost.html' class='internal-link'>rini?london ? san</a>
+<a href='/riyadh-to-maldives-private-jet-cost.html' class='internal-link'>riyadh ? maldives</a>
+<a href='/rome-to-london-private-jet-cost.html' class='internal-link'>rome ? london</a>
+<a href='/sanfrancisco-to-london-private-jet-cost.html' class='internal-link'>sanfrancisco ? london</a>
+<a href='/sanfrancisco-to-losangeles-private-jet-cost.html' class='internal-link'>sanfrancisco ? losangeles</a>
+<a href='/santorini-to-london-private-jet-cost.html' class='internal-link'>san?rini ? london</a>
+<a href='/seoul-to-beijing-private-jet-cost.html' class='internal-link'>seoul ? beijing</a>
+<a href='/singapore-to-hongkong-private-jet-cost.html' class='internal-link'>singapore ? hongkong</a>
+<a href='/singapore-to-sydney-private-jet-cost.html' class='internal-link'>singapore ? sydney</a>
+<a href='/sydney-to-brisbane-private-jet-cost.html' class='internal-link'>sydney ? brisbane</a>
+<a href='/sydney-to-dubai-private-jet-cost.html' class='internal-link'>sydney ? dubai</a>
+<a href='/sydney-to-goldcoast-private-jet-cost.html' class='internal-link'>sydney ? goldcoast</a>
+<a href='/sydney-to-melbourne-private-jet-cost.html' class='internal-link'>sydney ? melbourne</a>
+<a href='/sydney-to-perth-private-jet-cost.html' class='internal-link'>sydney ? perth</a>
+<a href='/sydney-to-singapore-private-jet-cost.html' class='internal-link'>sydney ? singapore</a>
+<a href='/tokyo-to-london-private-jet-cost.html' class='internal-link'>?kyo ? london</a>
+<a href='/toronto-to-newyork-private-jet-cost.html' class='internal-link'>?ron? ? newyork</a>
+<a href='/turksandcaicos-to-miami-private-jet-cost.html' class='internal-link'>turksandcaicos ? miami</a>
+
+
+        </div>
+    </div>
+</section>
+
+<!-- ELB_FOOTER_START -->
+    <footer class="section-padding"
+        style="background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center !important; margin-top: 6rem; padding: 6rem 0;">
+        <div class="container" style="display: block !important; text-align: center !important;">
+            <a href="/"
+                style="display: inline-block; margin-bottom: 2rem; font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:600; color:#fff; text-decoration:none;"><span
+                    style="color:#D4AF37;">Elite</span> Luxury Bookings</a>
+            <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
+                <a href="elite-private-jet-charter.html"
+                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Aviation</a>
+                <a href="/luxury-yacht-rentals/"
+                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Maritime</a>
+                <a href="luxury-villa-rentals.html"
+                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Villas</a>
+                <a href="blog.html"
+                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Blog</a>
+                <a href="contact.html"
+                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Contact</a>
+            </div>
+            <p style="color: #444; font-size: 0.8rem; letter-spacing: 1px;">&copy; 2026 Elite Luxury Bookings. Concierge
+                Dispatch Worldwide.</p>
+        </div>
+    </footer>
+    <!-- ELB_FOOTER_END -->
+<script src="/valens_api_bridge.js"></script>
+</body>
 </html>
+
