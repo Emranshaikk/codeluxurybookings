@@ -4,87 +4,277 @@
 <head>
     <meta charset="UTF-8">
     <!-- 0. BRAND & FAVICON -->
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <!-- 0. BRAND & FAVICON -->
-    <link rel="icon" type="image/png" href="favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Luxury Bookings | Private Jet Charter, Superyachts & Exclusive Villas</title>
-    <meta name="description"
-        content="The world's premier concierge for private jet charter, luxury yacht rentals, and exclusive villas. Global reach, absolute discretion, and aircraft deployment within 60 minutes.">
+    <head>
+        <meta charset="UTF-8">
+        <!-- 0. BRAND & FAVICON -->
+        <link rel="icon" type="image/png" href="favicon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Elite Luxury Bookings | Private Jet Charter, Superyachts & Exclusive Villas</title>
+        <meta name="description"
+            content="The world's premier concierge for private jet charter, luxury yacht rentals, and exclusive villas. Global reach, absolute discretion, and aircraft deployment within 60 minutes.">
 
-    <!-- Premium Typography -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+        <!-- Premium Typography -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap"
+            rel="stylesheet">
 
-    <!-- Google Analytics (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J56D1LJLFM"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-J56D1LJLFM');
-    </script>
+        <!-- Google Analytics (GA4) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-J56D1LJLFM"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-J56D1LJLFM');
+        </script>
 
-    <style>
-        /* ELB_STYLE_START */
-        body { padding-top: 72px !important; margin: 0 !important; height: auto !important; overflow-x: hidden !important; background: #050505; font-family: 'Inter', sans-serif; color: #fff; }
-        .hero-parallax-bg { position: absolute !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; height: 100% !important; z-index: -1 !important; pointer-events: none !important; }
+        <style>
+            /* ELB_STYLE_START */
+            body {
+                padding-top: 72px !important;
+                margin: 0 !important;
+                height: auto !important;
+                overflow-x: hidden !important;
+                background: #050505;
+                font-family: 'Inter', sans-serif;
+                color: #fff;
+            }
 
-        /* Navigation Base */
-        .global-nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(5, 5, 5, 0.98); backdrop-filter: blur(24px); border-bottom: 1px solid rgba(212, 175, 55, 0.2); z-index: 99999; }
-        .global-nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; max-width: 1400px; margin: 0 auto; padding: 0 1.5rem; box-sizing: border-box; }
-        .nav-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff !important; text-decoration: none !important; white-space: nowrap; }
-        .nav-gold { color: #D4AF37 !important; }
-        .nav-links { display: flex; align-items: center; list-style: none; margin: 0; padding: 0; gap: 0.5rem; }
-        .nav-links a { color: rgba(255, 255, 255, 0.7) !important; text-decoration: none !important; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 1.5px; padding: 0.5rem 0.8rem; border-radius: 6px; transition: all 0.4s; }
-        .nav-links a:hover { color: #D4AF37 !important; }
-        .nav-cta { display: flex; align-items: center; gap: 1rem; }
-        .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
-        .nav-hamburger span { display: block; width: 24px; height: 2px; background: #D4AF37; border-radius: 2px; }
+            .hero-parallax-bg {
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                bottom: 0 !important;
+                height: 100% !important;
+                z-index: -1 !important;
+                pointer-events: none !important;
+            }
 
-        /* Mobile Menu Panel */
-        .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #050505; padding: 80px 2rem; z-index: 100000; flex-direction: column; gap: 0.5rem; overflow-y: auto; }
-        .mobile-menu.open { display: flex !important; }
-        .mobile-menu a { color: #fff !important; text-decoration: none !important; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; padding: 1.2rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+            /* Navigation Base */
+            .global-nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                background: rgba(5, 5, 5, 0.98);
+                backdrop-filter: blur(24px);
+                border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+                z-index: 99999;
+            }
 
-        /* --- LOCKED MOBILE OPTIMIZATION --- */
-        @media (max-width: 1024px) {
-            .nav-links { display: none !important; }
-            .nav-hamburger { display: flex !important; }
-        }
+            .global-nav-inner {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 72px;
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 0 1.5rem;
+                box-sizing: border-box;
+            }
 
-        @media (max-width: 768px) {
-            .hero { padding: 6rem 0 3rem !important; }
-            .hero h1 { font-size: 2.2rem !important; line-height: 1.1; padding: 0 1rem; }
-            .hero-sub { font-size: 1rem !important; padding: 0 1.5rem; }
-            .grid-2, .grid-3 { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
-            .section-padding { padding: 4rem 1rem !important; }
-            .aviation-search-engine { padding: 1.5rem !important; margin: 1rem !important; }
-            .form-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
-            .nav-brand { font-size: 1.3rem !important; }
-            .btn-gold { padding: 0.6rem 1rem !important; font-size: 0.7rem !important; }
-        }
-            .nav-brand { font-size: 1.2rem !important; }
-            .btn-sm.mobile-hide-text span { display: none; }
-            .btn-sm.mobile-hide-text::after { content: 'Concierge'; }
-            .hero { padding: 5rem 0 3rem !important; }
-            .hero h1 { font-size: 2.1rem !important; }
-            .grid-2 { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
-            .section-padding { padding: 3.5rem 1rem !important; }
-            .glass-panel { padding: 1.5rem !important; }
-            .elite-lead-hub { padding: 1.5rem !important; margin: 1.5rem 1rem !important; }
-            .elite-lead-hub h3 { font-size: 1.7rem !important; }
-            .luxury-list li span { display: block; width: 100% !important; }
-        }
-        /* ELB_STYLE_END */
-    </style>
-    <link rel="stylesheet" href="style.css">
-</head>
+            .nav-brand {
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: #fff !important;
+                text-decoration: none !important;
+                white-space: nowrap;
+            }
+
+            .nav-gold {
+                color: #D4AF37 !important;
+            }
+
+            .nav-links {
+                display: flex;
+                align-items: center;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                gap: 0.5rem;
+            }
+
+            .nav-links a {
+                color: rgba(255, 255, 255, 0.7) !important;
+                text-decoration: none !important;
+                font-size: 0.82rem;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                padding: 0.5rem 0.8rem;
+                border-radius: 6px;
+                transition: all 0.4s;
+            }
+
+            .nav-links a:hover {
+                color: #D4AF37 !important;
+            }
+
+            .nav-cta {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .nav-hamburger {
+                display: none;
+                flex-direction: column;
+                gap: 5px;
+                cursor: pointer;
+                padding: 5px;
+            }
+
+            .nav-hamburger span {
+                display: block;
+                width: 24px;
+                height: 2px;
+                background: #D4AF37;
+                border-radius: 2px;
+            }
+
+            /* Mobile Menu Panel */
+            .mobile-menu {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: #050505;
+                padding: 80px 2rem;
+                z-index: 100000;
+                flex-direction: column;
+                gap: 0.5rem;
+                overflow-y: auto;
+            }
+
+            .mobile-menu.open {
+                display: flex !important;
+            }
+
+            .mobile-menu a {
+                color: #fff !important;
+                text-decoration: none !important;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                padding: 1.2rem 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            /* --- LOCKED MOBILE OPTIMIZATION --- */
+            @media (max-width: 1024px) {
+                .nav-links {
+                    display: none !important;
+                }
+
+                .nav-hamburger {
+                    display: flex !important;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .hero {
+                    padding: 6rem 0 3rem !important;
+                }
+
+                .hero h1 {
+                    font-size: 2.2rem !important;
+                    line-height: 1.1;
+                    padding: 0 1rem;
+                }
+
+                .hero-sub {
+                    font-size: 1rem !important;
+                    padding: 0 1.5rem;
+                }
+
+                .grid-2,
+                .grid-3 {
+                    grid-template-columns: 1fr !important;
+                    gap: 2.5rem !important;
+                }
+
+                .section-padding {
+                    padding: 4rem 1rem !important;
+                }
+
+                .aviation-search-engine {
+                    padding: 1.5rem !important;
+                    margin: 1rem !important;
+                }
+
+                .form-grid {
+                    grid-template-columns: 1fr !important;
+                    gap: 1rem !important;
+                }
+
+                .nav-brand {
+                    font-size: 1.3rem !important;
+                }
+
+                .btn-gold {
+                    padding: 0.6rem 1rem !important;
+                    font-size: 0.7rem !important;
+                }
+            }
+
+            .nav-brand {
+                font-size: 1.2rem !important;
+            }
+
+            .btn-sm.mobile-hide-text span {
+                display: none;
+            }
+
+            .btn-sm.mobile-hide-text::after {
+                content: 'Concierge';
+            }
+
+            .hero {
+                padding: 5rem 0 3rem !important;
+            }
+
+            .hero h1 {
+                font-size: 2.1rem !important;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr !important;
+                gap: 2.5rem !important;
+            }
+
+            .section-padding {
+                padding: 3.5rem 1rem !important;
+            }
+
+            .glass-panel {
+                padding: 1.5rem !important;
+            }
+
+            .elite-lead-hub {
+                padding: 1.5rem !important;
+                margin: 1.5rem 1rem !important;
+            }
+
+            .elite-lead-hub h3 {
+                font-size: 1.7rem !important;
+            }
+
+            .luxury-list li span {
+                display: block;
+                width: 100% !important;
+            }
+
+            /* ELB_STYLE_END */
+        </style>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
 <body>
     <!-- ELB_NAV_START -->
@@ -99,7 +289,8 @@
                 <li><a href="/contact.html">Contact</a></li>
             </ul>
             <div class="nav-cta">
-                <a href="https://wa.me/918801079030" class="btn btn-gold btn-sm mobile-hide-text"><span>Direct Concierge</span></a>
+                <a href="https://wa.me/918801079030" class="btn btn-gold btn-sm mobile-hide-text"><span>Direct
+                        Concierge</span></a>
                 <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()">
                     <span></span><span></span><span></span>
                 </div>
@@ -201,45 +392,45 @@
         <p class="hero-subheadline" style="max-width: 800px; margin: 0 auto 2rem; color: var(--text-muted);">Global
             access to off-market aircraft and properties. Our 24/7 concierge department handles every detail with
             absolute discretion.</p>
-                <div>
-                    <div class="step-num">03</div>
-                    <h3 class="step-title gold-text">Seamless Execution</h3>
-                    <p class="step-desc">From ground logistics to manifests, our team manages every tactical detail for
-                        a flawless, discreet arrival.</p>
-                </div>
-            </div>
+        <div>
+            <div class="step-num">03</div>
+            <h3 class="step-title gold-text">Seamless Execution</h3>
+            <p class="step-desc">From ground logistics to manifests, our team manages every tactical detail for
+                a flawless, discreet arrival.</p>
+        </div>
+    </div>
 
-            <!-- Testimonials Slab -->
-            <div class="glass-panel" style="margin-top: 6rem; padding: 4rem;">
-                <div class="exp-grid">
-                    <div style="border-left: 1px solid var(--primary-gold); padding-left: 2rem;">
-                        <p style="font-style: italic; font-size: 1.1rem; color: #ddd; margin-bottom: 1.5rem;">"Seamless
-                            experience from London to Dubai. Aircraft was positioned within 2 hours of my first call.
-                            Absolute discretion."</p>
-                        <span class="gold-text" style="font-weight: 600; letter-spacing: 1px;">— PRINCIPAL, FAMILY
-                            OFFICE (London)</span>
-                    </div>
-                    <div style="border-left: 1px solid var(--primary-gold); padding-left: 2rem;">
-                        <p style="font-style: italic; font-size: 1.1rem; color: #ddd; margin-bottom: 1.5rem;">"We
-                            require extreme privacy for our board-level meetings. ELB has never failed to provide
-                            secure, audited, and off-market options."</p>
-                        <span class="gold-text" style="font-weight: 600; letter-spacing: 1px;">— CHIEF EXECUTIVE,
-                            FORTUNE 500</span>
-                    </div>
-                    <div style="border-left: 1px solid var(--primary-gold); padding-left: 2rem;">
-                        <p style="font-style: italic; font-size: 1.1rem; color: #ddd; margin-bottom: 1.5rem;">"The yacht
-                            charter in the Mediterranean was flawless. The concierge team handled every onshore request
-                            before we even docked."</p>
-                        <span class="gold-text" style="font-weight: 600; letter-spacing: 1px;">— DISCERNING TRAVELER
-                            (Miami)</span>
-                    </div>
-                </div>
+    <!-- Testimonials Slab -->
+    <div class="glass-panel" style="margin-top: 6rem; padding: 4rem;">
+        <div class="exp-grid">
+            <div style="border-left: 1px solid var(--primary-gold); padding-left: 2rem;">
+                <p style="font-style: italic; font-size: 1.1rem; color: #ddd; margin-bottom: 1.5rem;">"Seamless
+                    experience from London to Dubai. Aircraft was positioned within 2 hours of my first call.
+                    Absolute discretion."</p>
+                <span class="gold-text" style="font-weight: 600; letter-spacing: 1px;">— PRINCIPAL, FAMILY
+                    OFFICE (London)</span>
+            </div>
+            <div style="border-left: 1px solid var(--primary-gold); padding-left: 2rem;">
+                <p style="font-style: italic; font-size: 1.1rem; color: #ddd; margin-bottom: 1.5rem;">"We
+                    require extreme privacy for our board-level meetings. ELB has never failed to provide
+                    secure, audited, and off-market options."</p>
+                <span class="gold-text" style="font-weight: 600; letter-spacing: 1px;">— CHIEF EXECUTIVE,
+                    FORTUNE 500</span>
+            </div>
+            <div style="border-left: 1px solid var(--primary-gold); padding-left: 2rem;">
+                <p style="font-style: italic; font-size: 1.1rem; color: #ddd; margin-bottom: 1.5rem;">"The yacht
+                    charter in the Mediterranean was flawless. The concierge team handled every onshore request
+                    before we even docked."</p>
+                <span class="gold-text" style="font-weight: 600; letter-spacing: 1px;">— DISCERNING TRAVELER
+                    (Miami)</span>
             </div>
         </div>
+    </div>
+    </div>
     </section>
 
     <!-- WHO WE SERVE (UPGRADED) -->
-    <section class="who-we-serve glass-panel" style="padding: 6rem 0; border-top: 1px solid rgba(37, 211, 102, 0.1);">
+    <section class="who-we-serve glass-panel" style="padding: 6rem 0; border-top: 1px solid rgba(212, 175, 55, 0.1);">
         <div class="container" style="text-align: center;">
             <span class="trust-micro" style="margin-top:0;">RESERVED FOR THE 1%</span>
             <h2 class="serif" style="font-size: 3.5rem; margin-top: 1rem;">Why the Discerning Choose ELB</h2>
@@ -393,7 +584,7 @@
 
 
     <!-- SILO Internal Links (TIGHTENED) -->
-    <div class="container" style="padding: 3rem 0; border-top: 1px solid rgba(37, 211, 102, 0.1);">
+    <div class="container" style="padding: 3rem 0; border-top: 1px solid rgba(212, 175, 55, 0.1);">
         <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; opacity: 0.7;">
             <a href="newyork-to-london-private-jet-cost.html"
                 style="color: #fff; text-decoration: none; font-size: 0.75rem; padding: 0.5rem 1rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px;">New
