@@ -3,307 +3,1295 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- 0. BRAND & FAVICON -->
-    <!DOCTYPE html>
-    <html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Luxury Bookings | Private Jets, Yachts & Villas</title>
+    <meta name="description"
+        content="We curate and coordinate world-class luxury experiences through our global partner network. Private Jets, Luxury Yachts, and Exclusive Villas.">
 
-    <head>
-        <meta charset="UTF-8">
-        <!-- 0. BRAND & FAVICON -->
-        <link rel="icon" type="image/png" href="favicon.png">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Elite Luxury Bookings | Private Jet Charter, Superyachts & Exclusive Villas</title>
-        <meta name="description"
-            content="The world's premier concierge for private jet charter, luxury yacht rentals, and exclusive villas. Global reach, absolute discretion, and aircraft deployment within 60 minutes.">
+    <!-- Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
 
-        <!-- Premium Typography -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap"
-            rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --deep-black: #050505;
+            --graphene: #1A1A1A;
+            --glass-bg: rgba(255, 255, 255, 0.02);
+            --glass-border: rgba(212, 175, 55, 0.15);
+            --text-main: #FFFFFF;
+            --text-muted: rgba(255, 255, 255, 0.6);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-        <!-- Google Analytics (GA4) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-J56D1LJLFM"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'G-J56D1LJLFM');
-        </script>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
 
-        <style>
-            /* ELB_STYLE_START */
-            body {
-                padding-top: 72px !important;
-                margin: 0 !important;
-                height: auto !important;
-                overflow-x: hidden !important;
-                background: #050505;
-                font-family: 'Inter', sans-serif;
-                color: #fff;
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--deep-black);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        .serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .gold-text {
+            color: var(--primary-gold);
+        }
+
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+        }
+
+        /* Typography Helpers */
+        .brand-statement {
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            display: block;
+        }
+
+        .trust-micro {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 1.5rem;
+            display: block;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 1.2rem 2.5rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--primary-gold), #B8860B);
+            color: #000;
+            border: none;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.15);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.25);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary-gold);
+            border: 1px solid var(--primary-gold);
+        }
+
+        .btn-outline:hover {
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        .btn-sm {
+            padding: 0.8rem 1.5rem;
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+        }
+
+        .btn:active {
+            transform: scale(0.97);
+        }
+
+        .wa-float:active {
+            transform: scale(0.92);
+        }
+
+        /* 2. STICKY CTA BAR */
+        .sticky-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(5, 5, 5, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 2000;
+            padding: 1rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .sticky-bar-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sticky-brand {
+            font-size: 1.5rem;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .sticky-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25D366;
+            color: #FFF;
+            width: 65px;
+            height: 65px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 35px;
+            box-shadow: 0px 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .wa-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 6px 25px rgba(37, 211, 102, 0.6);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 100vh;
+            min-height: 900px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            margin-top: 0px;
+            overflow: hidden;
+            /* Added to contain parallax */
+        }
+
+        .hero-parallax-bg {
+            position: absolute;
+            top: -10%;
+            /* Extra space for movement */
+            left: -10%;
+            width: 120%;
+            height: 120%;
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.12) 0%, var(--deep-black) 80%);
+            z-index: -1;
+            will-change: transform;
+        }
+
+        .hero-headline {
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            font-weight: 300;
+            line-height: 1.1;
+            margin: 1.5rem 0 1rem;
+            opacity: 0;
+            animation: fadeUp 1s forwards;
+        }
+
+        .hero-subheadline {
+            font-size: 1.2rem;
+            max-width: 600px;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeUp 1s 0.2s forwards;
+        }
+
+        /* MINI LEAD FORM */
+        .hero-mini-form {
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            opacity: 0;
+            animation: fadeUp 1s 0.4s forwards;
+        }
+
+        .mini-form-inner {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .form-control-mini {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 1.2rem 1.5rem;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            outline: none;
+            transition: var(--transition);
+            border-radius: 8px;
+            flex: 1;
+            min-width: 200px;
+            max-width: 300px;
+        }
+
+        .form-control-mini:focus {
+            border-color: var(--primary-gold);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            opacity: 0;
+            animation: fadeUp 1s 0.6s forwards;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* 3. CREDIBILITY STRIP */
+        .credibility-strip {
+            background: rgba(255, 255, 255, 0.015);
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .credibility-strip ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .credibility-strip li {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .credibility-strip li::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: var(--primary-gold);
+            border-radius: 50%;
+        }
+
+        /* WHO WE SERVE */
+        .who-we-serve {
+            padding: 6rem 0;
+            text-align: center;
+            border-radius: 0;
+            border: none;
+            background: transparent;
+        }
+
+        .client-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .client-item {
+            padding: 3rem 2rem;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-top: 2px solid var(--primary-gold);
+            border-radius: 12px;
+            transition: var(--transition);
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .client-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+        }
+
+        .client-item:hover {
+            background: rgba(212, 175, 55, 0.05);
+            border-color: rgba(212, 175, 55, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .client-item h3 {
+            font-size: 1.4rem;
+            color: #fff;
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .client-item p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* 4. SILOS */
+        .silos {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-header h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .silo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        .silo-card {
+            padding: 5rem 3rem;
+            text-align: center;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .silo-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-gold);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .silo-card h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .silo-card p {
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        /* 6. EXPERIENCE SELLING */
+        .story-section {
+            padding: 10rem 2rem;
+            text-align: center;
+            background: var(--graphene);
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
+        }
+
+        .story-text {
+            font-size: clamp(2rem, 4vw, 3rem);
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.5;
+            color: #ddd;
+            font-style: italic;
+        }
+
+        .story-text span {
+            color: var(--primary-gold);
+            font-style: normal;
+        }
+
+        /* 5. FEATURED EXPERIENCES */
+        .experiences {
+            padding: 4rem 0;
+        }
+
+        .exp-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        .exp-item {
+            position: relative;
+            padding: 4rem 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.02);
+            text-align: left;
+            transition: var(--transition);
+        }
+
+        .exp-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 0;
+            background: var(--primary-gold);
+            transition: var(--transition);
+        }
+
+        .exp-item:hover {
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .exp-item:hover::before {
+            height: 100%;
+        }
+
+        .exp-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--primary-gold);
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .exp-title {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* 7. HOW IT WORKS */
+        .process {
+            padding: 4rem 0;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4rem;
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        .step-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 5rem;
+            color: var(--primary-gold);
+            opacity: 0.2;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .process-steps>div:hover .step-num {
+            opacity: 0.6;
+            transform: translateY(-5px);
+        }
+
+        .step-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .step-desc {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        /* 8. LEAD CAPTURE FORM */
+        .form-section {
+            padding: 4rem 0 10rem;
+        }
+
+        .form-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 5rem;
+            border-radius: 30px;
+            background: rgba(26, 26, 26, 0.6);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary-gold);
+            margin-bottom: 0.8rem;
+        }
+
+        .form-control {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 1rem 0;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-bottom-color: var(--primary-gold);
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        select.form-control {
+            background-color: transparent;
+            cursor: pointer;
+            color: #fff;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D4AF37' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 1em;
+            min-height: 56px;
+            padding-right: 2rem;
+        }
+
+        select.form-control option {
+            background-color: var(--deep-black);
+            color: #fff;
+            padding: 1rem;
+        }
+
+        /* FOOTER */
+        .footer {
+            padding: 6rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            background: #000;
+        }
+
+        .footer-brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            margin-bottom: 2.5rem;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 3.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-gold);
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
             }
 
-            .hero-parallax-bg {
-                position: absolute !important;
-                top: 0 !important;
-                left: 0 !important;
-                right: 0 !important;
-                bottom: 0 !important;
-                height: 100% !important;
-                z-index: -1 !important;
-                pointer-events: none !important;
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .client-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
-            /* Navigation Base */
-            .global-nav {
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                background: rgba(5, 5, 5, 0.98);
-                backdrop-filter: blur(24px);
-                border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-                z-index: 99999;
+            .trust-grid,
+            .silo-grid,
+            .exp-grid,
+            .process-steps {
+                grid-template-columns: 1fr;
+                gap: 3rem;
             }
 
-            .global-nav-inner {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                height: 72px;
-                max-width: 1400px;
-                margin: 0 auto;
-                padding: 0 1.5rem;
-                box-sizing: border-box;
+            .form-grid {
+                grid-template-columns: 1fr;
             }
 
-            .nav-brand {
-                font-family: 'Cormorant Garamond', serif;
-                font-size: 1.5rem;
-                font-weight: 600;
-                color: #fff !important;
-                text-decoration: none !important;
-                white-space: nowrap;
+            .form-wrapper {
+                padding: 3rem;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .hero-headline {
+                font-size: 4rem;
             }
 
-            .nav-gold {
-                color: #D4AF37 !important;
+            .silo-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .wa-float {
+                display: flex !important;
+                width: 55px;
+                height: 55px;
+                bottom: 25px;
+                right: 25px;
             }
 
-            .nav-links {
-                display: flex;
-                align-items: center;
-                list-style: none;
-                margin: 0;
+            .sticky-bar-inner {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+            }
+
+            .sticky-brand {
+                font-size: 1.1rem;
+            }
+
+            .sticky-actions {
+                width: 100%;
+                justify-content: center;
+                gap: 8px;
+            }
+
+            .sticky-actions .btn-sm {
+                padding: 0.6rem 0.8rem;
+                font-size: 0.7rem;
+                flex: 1;
+                text-align: center;
+            }
+
+            .container {
+                padding: 0 1.25rem;
+            }
+
+            .hero {
+                padding-top: 8rem;
+                height: auto;
+                padding-bottom: 4rem;
+                min-height: auto;
+            }
+
+            .hero-headline {
+                font-size: 2.8rem !important;
+                line-height: 1.2;
+            }
+
+            .hero-subheadline {
+                font-size: 1.1rem;
                 padding: 0;
-                gap: 0.5rem;
+                margin-bottom: 1.5rem;
             }
 
-            .nav-links a {
-                color: rgba(255, 255, 255, 0.7) !important;
-                text-decoration: none !important;
-                font-size: 0.82rem;
-                text-transform: uppercase;
-                letter-spacing: 1.5px;
-                padding: 0.5rem 0.8rem;
-                border-radius: 6px;
-                transition: all 0.4s;
+            .mini-form-inner {
+                flex-direction: column;
+                width: 100%;
+                gap: 10px;
             }
 
-            .nav-links a:hover {
-                color: #D4AF37 !important;
+            .form-control-mini {
+                width: 100%;
+                max-width: 100%;
+                border-radius: 8px !important;
+            }
+
+            .hero-ctas .btn-outline {
+                min-width: 100% !important;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 1.2rem;
+                font-size: 0.9rem;
+            }
+
+            .credibility-strip {
+                padding: 2rem 0;
+            }
+
+            .credibility-strip ul {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+
+            .credibility-strip li {
+                font-size: 0.85rem;
+                border-left: 2px solid var(--primary-gold);
+                padding-left: 1rem;
+            }
+
+            .who-we-serve,
+            .silos,
+            .experiences,
+            .process,
+            .form-section,
+            .story-section {
+                padding: 5rem 0;
+            }
+
+            .who-we-serve h2,
+            .section-header h2,
+            .form-wrapper h2 {
+                font-size: 2.22rem !important;
+            }
+
+            .client-grid,
+            .exp-grid,
+            .process-steps {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .story-text {
+                font-size: 1.6rem;
+                line-height: 1.4;
+            }
+
+            .form-wrapper {
+                padding: 2.5rem 1.25rem;
+            }
+
+            #formMsg h3 {
+                font-size: 2.2rem !important;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-headline {
+                font-size: 2.2rem !important;
+            }
+
+            .who-we-serve h2,
+            .section-header h2,
+            .form-wrapper h2 {
+                font-size: 1.8rem !important;
+            }
+
+            .brand-statement {
+                font-size: 0.75rem !important;
+            }
+        }
+
+        /* ===== UPGRADED FOOTER CSS ===== */
+        footer {
+            background: #000;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        @media (max-width: 900px) {
+            footer>div>div:first-child {
+                justify-content: flex-start !important;
+                gap: 2rem !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            footer>div>div:first-child {
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+            }
+
+            footer>div>div:first-child>div {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            footer>div>div:last-child {
+                flex-direction: column !important;
+                text-align: center !important;
+            }
+        }
+
+        .global-nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+            gap: 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .nav-brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .nav-gold {
+            color: #D4AF37;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            list-style: none;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 0.5rem 0.9rem;
+            border-radius: 6px;
+            transition: all 0.4s;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover {
+            color: #D4AF37;
+        }
+
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            background: #0f0f0f;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 12px;
+            padding: 0.75rem;
+            min-width: 220px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-8px);
+            transition: all 0.4s;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            z-index: 100;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.6rem 1rem;
+            color: rgba(255, 255, 255, 0.6) !important;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            letter-spacing: 1px;
+        }
+
+        .dropdown-menu a:hover {
+            color: #D4AF37 !important;
+            background: rgba(212, 175, 55, 0.06);
+        }
+
+        .nav-cta {
+            display: flex;
+            gap: 0.6rem;
+            align-items: center;
+            flex-shrink: 0;
+            justify-content: center;
+        }
+
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .nav-hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 2px;
+            transition: all 0.4s;
+        }
+
+        .nav-hamburger.open span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+            background: #D4AF37;
+        }
+
+        .nav-hamburger.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-hamburger.open span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+            background: #D4AF37;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 72px;
+            left: 0;
+            right: 0;
+            background: rgba(5, 5, 5, 0.98);
+            backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+            padding: 2rem;
+            z-index: 1999;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .mobile-menu.open {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s;
+        }
+
+        .mobile-menu a:hover {
+            color: #D4AF37;
+        }
+
+        .mobile-cta {
+            margin-top: 1rem;
+            text-align: center;
+            background: linear-gradient(135deg, #D4AF37, #B8860B);
+            color: #000 !important;
+            border-radius: 8px;
+            padding: 1rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            border-bottom: none !important;
+        }
+
+        @media (max-width:900px) {
+            .nav-links {
+                display: none;
             }
 
             .nav-cta {
                 display: flex;
-                align-items: center;
-                gap: 1rem;
+            }
+
+            .btn-outline {
+                display: none;
             }
 
             .nav-hamburger {
-                display: none;
-                flex-direction: column;
-                gap: 5px;
-                cursor: pointer;
-                padding: 5px;
+                display: flex;
+            }
+        }
+
+        body {
+            padding-top: 85px !important;
+        }
+
+        /* ELB_CSS_START */
+        .global-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(5, 5, 5, 0.98);
+            backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            z-index: 99999;
+        }
+
+        .global-nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+            gap: 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            box-sizing: border-box;
+        }
+
+        .nav-brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #fff !important;
+            text-decoration: none !important;
+        }
+
+        .nav-gold {
+            color: #D4AF37 !important;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            list-style: none;
+            flex: 1;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.7) !important;
+            text-decoration: none !important;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 0.5rem 0.9rem;
+            border-radius: 6px;
+            transition: all 0.4s;
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            background: #0a0a0a;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 12px;
+            padding: 0.75rem;
+            min-width: 240px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-8px);
+            transition: all 0.4s;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+            z-index: 100;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: translateY(0) !important;
+        }
+
+        .dropdown-menu a {
+            display: block !important;
+            padding: 0.7rem 1.2rem !important;
+            color: rgba(255, 255, 255, 0.7) !important;
+            border-radius: 8px;
+            font-size: 0.85rem !important;
+            text-transform: none !important;
+        }
+
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 100001;
+        }
+
+        .nav-hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 2px;
+            transition: all 0.4s;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #050505;
+            padding: 72px 2rem 2rem;
+            z-index: 100000;
+            flex-direction: column;
+            gap: 0.5rem;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.open {
+            display: flex !important;
+        }
+
+        .mobile-menu a {
+            color: rgba(255, 255, 255, 0.8) !important;
+            text-decoration: none !important;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .mobile-cta {
+            margin-top: 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #D4AF37, #B8860B);
+            color: #000 !important;
+            border-radius: 8px; padding: 1.2rem !important;
+            font-weight: 700;
+        }
+
+        @media (max-width:1024px) {
+            .nav-links {
+                display: none !important;
             }
 
-            .nav-hamburger span {
-                display: block;
-                width: 24px;
-                height: 2px;
-                background: #D4AF37;
-                border-radius: 2px;
-            }
-
-            /* Mobile Menu Panel */
-            .mobile-menu {
-                display: none;
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: #050505;
-                padding: 80px 2rem;
-                z-index: 100000;
-                flex-direction: column;
-                gap: 0.5rem;
-                overflow-y: auto;
-            }
-
-            .mobile-menu.open {
+            .nav-hamburger {
                 display: flex !important;
             }
+        }
 
-            .mobile-menu a {
-                color: #fff !important;
-                text-decoration: none !important;
-                font-size: 1.2rem;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                padding: 1.2rem 0;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            }
+        body {
+            padding-top: 72px !important;
+        }
 
-            /* --- LOCKED MOBILE OPTIMIZATION --- */
-            @media (max-width: 1024px) {
-                .nav-links {
-                    display: none !important;
-                }
+        .luxury-list li::before {
+            content: '✓' !important;
+        }
 
-                .nav-hamburger {
-                    display: flex !important;
-                }
-            }
+        /* ELB_CSS_END */
+    </style>
 
-            @media (max-width: 768px) {
-                .hero {
-                    padding: 6rem 0 3rem !important;
-                }
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J56D1LJLFM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-                .hero h1 {
-                    font-size: 2.2rem !important;
-                    line-height: 1.1;
-                    padding: 0 1rem;
-                }
-
-                .hero-sub {
-                    font-size: 1rem !important;
-                    padding: 0 1.5rem;
-                }
-
-                .grid-2,
-                .grid-3 {
-                    grid-template-columns: 1fr !important;
-                    gap: 2.5rem !important;
-                }
-
-                .section-padding {
-                    padding: 4rem 1rem !important;
-                }
-
-                .aviation-search-engine {
-                    padding: 1.5rem !important;
-                    margin: 1rem !important;
-                }
-
-                .form-grid {
-                    grid-template-columns: 1fr !important;
-                    gap: 1rem !important;
-                }
-
-                .nav-brand {
-                    font-size: 1.3rem !important;
-                }
-
-                .btn-gold {
-                    padding: 0.6rem 1rem !important;
-                    font-size: 0.7rem !important;
-                }
-            }
-
-            .nav-brand {
-                font-size: 1.2rem !important;
-            }
-
-            .btn-sm.mobile-hide-text span {
-                display: none;
-            }
-
-            .btn-sm.mobile-hide-text::after {
-                content: 'Concierge';
-            }
-
-            .hero {
-                padding: 5rem 0 3rem !important;
-            }
-
-            .hero h1 {
-                font-size: 2.1rem !important;
-            }
-
-            .grid-2 {
-                grid-template-columns: 1fr !important;
-                gap: 2.5rem !important;
-            }
-
-            .section-padding {
-                padding: 3.5rem 1rem !important;
-            }
-
-            .glass-panel {
-                padding: 1.5rem !important;
-            }
-
-            .elite-lead-hub {
-                padding: 1.5rem !important;
-                margin: 1.5rem 1rem !important;
-            }
-
-            .elite-lead-hub h3 {
-                font-size: 1.7rem !important;
-            }
-
-            .luxury-list li span {
-                display: block;
-                width: 100% !important;
-            }
-
-            /* ELB_STYLE_END */
-        </style>
-        <link rel="stylesheet" href="style.css">
-    </head>
+        gtag('config', 'G-J56D1LJLFM');
+    </script>
+</head>
 
 <body>
     <!-- ELB_NAV_START -->
     <nav class="global-nav">
         <div class="container global-nav-inner">
-            <a href="/" class="nav-brand"><span class="nav-gold">Elite</span> Luxury Bookings</a>
+            <a href="/" class="nav-brand">Elite Luxury <span class="nav-gold">Bookings</span></a>
             <ul class="nav-links">
                 <li><a href="/elite-private-jet-charter.html">Private Jets</a></li>
-                <li><a href="/luxury-yacht-rentals/">Yacht Charter</a></li>
+                <li><a href="/luxury-yacht-rentals.html">Yachts</a></li>
                 <li><a href="/luxury-villa-rentals.html">Villas</a></li>
                 <li><a href="/blog.html">Blog</a></li>
                 <li><a href="/contact.html">Contact</a></li>
             </ul>
-            <div class="nav-cta">
-                <a href="https://wa.me/918801079030" class="btn btn-gold btn-sm mobile-hide-text"><span>Direct
-                        Concierge</span></a>
-                <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
+            
+            <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></div>
         </div>
     </nav>
     <div class="mobile-menu" id="elbMobileMenu">
-        <a href="/elite-private-jet-charter.html">Private Jets</a>
-        <a href="/luxury-yacht-rentals/">Luxury Yachts</a>
-        <a href="/luxury-villa-rentals.html">Exclusive Villas</a>
-        <a href="/blog.html">Articles & News</a>
-        <a href="/contact.html">Contact Us</a>
-        <a href="https://wa.me/918801079030" class="mobile-cta">WhatsApp Concierge</a>
+        <a href="/elite-private-jet-charter.html">✈ Private Jets</a>
+        <a href="/luxury-villa-rentals.html">🏡 Luxury Villas</a>
+        <a href="/luxury-yacht-rentals.html">⚓ Luxury Yachts</a>
+        <a href="/blog.html">📰 Blog</a>
+        <a href="/contact.html">📞 Contact</a>
+        
     </div>
     <!-- ELB_NAV_END -->
 
@@ -320,147 +1308,55 @@
     <div class="container" style="position: relative;">
         <div class="hero-parallax-bg" id="heroBg"></div>
         <header class="hero">
-            <span class="brand-statement"
-                style="margin-bottom: 1.5rem; color: var(--primary-gold); font-weight: 600;">The Global Gold Standard in
-                Private Travel</span>
-
-            <h1 class="hero-headline">Elevated Travel, Curated by Experts.<br><span class="gold-text">Your Private Fleet
-                    Awaits.</span></h1>
-
-            <div class="urgency-alert"
-                style="background: rgba(255, 77, 77, 0.05); border: 1px solid rgba(255, 77, 77, 0.3); padding: 12px 20px; border-radius: 12px; margin: 2rem auto 1.5rem; max-width: 700px; display: flex; align-items: center; justify-content: center; gap: 15px; animation: fadeIn 1s ease-out;">
-                <span style="position: relative; display: flex; height: 12px; width: 12px;">
-                    <span
-                        style="animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite; position: absolute; display: inline-flex; height: 100%; width: 100%; border-radius: 50%; background-color: #ff4d4d; opacity: 0.75;"></span>
-                    <span
-                        style="position: relative; display: inline-flex; border-radius: 50%; height: 12px; width: 12px; background-color: #ff4d4d;"></span>
-                </span>
-                <span
-                    style="color: #ff4d4d; font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Strategic
-                    Slot Alert: Peak Season Demand - Inquire Early</span>
+            <h1 class="hero-headline">Private Jets. Luxury Yachts.<br><span class="gold-text">Exclusive Villas.</span></h1>
+            
+            <div class="hero-ctas">
+                <a href="#quote" class="btn btn-gold" style="min-width: 320px;">Request Private Access</a>
             </div>
-
-            <!-- ELB_ELITE_LEAD_HUB_START -->
-            <div id="quote" class="elite-lead-hub glass-panel"
-                style="margin: 2.5rem auto 3rem; max-width: 850px; padding: 2.5rem; border: 1px solid var(--primary-gold); background: rgba(5,5,5,0.92); border-radius: 20px; box-shadow: 0 40px 100px rgba(0,0,0,0.7); text-align: left;">
-                <h3 class="serif gold-text" style="font-size: 2.3rem; margin-bottom: 0.5rem; text-align: center;">Elite
-                    Global Concierge Inquiry</h3>
-                <p
-                    style="text-align: center; color: var(--text-muted); font-size: 0.8rem; margin-bottom: 2.5rem; text-transform: uppercase; letter-spacing: 3px;">
-                    Direct Senior Dispatch: Jets • Yachts • Villas</p>
-                <form action="https://formspree.io/f/xwvwanlj" method="POST"
-                    style="display: flex; flex-direction: column; gap: 1.2rem;">
-                    <input type="text" name="name" placeholder="Full Name"
-                        style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.2rem; background: rgba(0,0,0,0.4); color: #fff;"
-                        required>
-                    <div class="grid-2" style="display: grid; gap: 1rem;">
-                        <input type="email" name="email" placeholder="Private Email Address"
-                            style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.2rem; background: rgba(0,0,0,0.4); color: #fff;"
-                            required>
-                        <input type="tel" name="phone" placeholder="WhatsApp / Contact Number"
-                            style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.2rem; background: rgba(0,0,0,0.4); color: #fff;"
-                            required>
-                    </div>
-                    <select name="service"
-                        style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.2rem; background: rgba(0,0,0,0.4); color: #fff;">
-                        <option value="Multi-Silo Concierge">General Elite Inquiry</option>
-                        <option value="Private Jet Charter">Private Jet Charter</option>
-                        <option value="Luxury Yacht Rental">Luxury Yacht Rental</option>
-                        <option value="Exclusive Villa Stay">Exclusive Villa Stay</option>
-                    </select>
-                    <textarea name="requirements"
-                        placeholder="Provide a brief summary of your journey requirements (Destinations, Dates, Group Size)..."
-                        style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); padding: 1.2rem; background: rgba(0,0,0,0.4); color: #fff; min-height: 100px;"
-                        required></textarea>
-                    <button type="submit" class="btn btn-gold"
-                        style="width: 100%; font-size: 1.3rem; min-height: 75px; font-weight: 800; text-transform: uppercase; letter-spacing: 5px; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);">Secure
-                        My Private Proposal</button>
-                    <p style="text-align: center; font-size: 0.75rem; color: var(--text-muted); margin-top: 1rem;">Elite
-                        Luxury Bookings: Private Liaison worldwide within 30 Minutes.</p>
-                </form>
-            </div>
-            <!-- ELB_ELITE_LEAD_HUB_END -->
-
-            <p class="hero-subheadline" style="margin-bottom: 1rem; font-size: 1.4rem; color: #fff;">Bespoke aviation,
-                luxury seafaring, and elite villa stays—deployed within 60 minutes.</p>
-
         </header>
     </div>
 
-    <!-- ELB_INTRO_SECTION -->
-    <div class="container" style="text-align: center; padding-top: 4rem;">
-        <p class="hero-subheadline" style="max-width: 800px; margin: 0 auto 2rem; color: var(--text-muted);">Global
-            access to off-market aircraft and properties. Our 24/7 concierge department handles every detail with
-            absolute discretion.</p>
-        <div>
-            <div class="step-num">03</div>
-            <h3 class="step-title gold-text">Seamless Execution</h3>
-            <p class="step-desc">From ground logistics to manifests, our team manages every tactical detail for
-                a flawless, discreet arrival.</p>
-        </div>
-    </div>
+    <!-- 8. LEAD CAPTURE FORM (PROMOTED) -->
+    <section id="quote" class="form-section">
+        <div class="container">
+            <div class="glass-panel form-wrapper" style="border: 1px solid var(--primary-gold); background: rgba(5,5,5,0.8);">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 class="serif" style="font-size: 3.5rem; margin-bottom: 1rem;">Request Private Proposal</h2>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; letter-spacing: 1px; text-transform: uppercase;">A dedicated concierge will personally respond within 30 minutes.</p>
+                </div>
 
-    <!-- Testimonials Slab -->
-    <div class="glass-panel" style="margin-top: 6rem; padding: 4rem;">
-        <div class="exp-grid">
-            <div style="border-left: 1px solid var(--primary-gold); padding-left: 2rem;">
-                <p style="font-style: italic; font-size: 1.1rem; color: #ddd; margin-bottom: 1.5rem;">"Seamless
-                    experience from London to Dubai. Aircraft was positioned within 2 hours of my first call.
-                    Absolute discretion."</p>
-                <span class="gold-text" style="font-weight: 600; letter-spacing: 1px;">— PRINCIPAL, FAMILY
-                    OFFICE (London)</span>
-            </div>
-            <div style="border-left: 1px solid var(--primary-gold); padding-left: 2rem;">
-                <p style="font-style: italic; font-size: 1.1rem; color: #ddd; margin-bottom: 1.5rem;">"We
-                    require extreme privacy for our board-level meetings. ELB has never failed to provide
-                    secure, audited, and off-market options."</p>
-                <span class="gold-text" style="font-weight: 600; letter-spacing: 1px;">— CHIEF EXECUTIVE,
-                    FORTUNE 500</span>
-            </div>
-            <div style="border-left: 1px solid var(--primary-gold); padding-left: 2rem;">
-                <p style="font-style: italic; font-size: 1.1rem; color: #ddd; margin-bottom: 1.5rem;">"The yacht
-                    charter in the Mediterranean was flawless. The concierge team handled every onshore request
-                    before we even docked."</p>
-                <span class="gold-text" style="font-weight: 600; letter-spacing: 1px;">— DISCERNING TRAVELER
-                    (Miami)</span>
-            </div>
-        </div>
-    </div>
-    </div>
-    </section>
-
-    <!-- WHO WE SERVE (UPGRADED) -->
-    <section class="who-we-serve glass-panel" style="padding: 6rem 0; border-top: 1px solid rgba(212, 175, 55, 0.1);">
-        <div class="container" style="text-align: center;">
-            <span class="trust-micro" style="margin-top:0;">RESERVED FOR THE 1%</span>
-            <h2 class="serif" style="font-size: 3.5rem; margin-top: 1rem;">Why the Discerning Choose ELB</h2>
-            <p
-                style="color: rgba(255, 255, 255, 0.6); font-size: 1.1rem; max-width: 800px; margin: 1.5rem auto 0; line-height: 1.7;">
-                Elite Luxury Bookings is a private, NDA-backed liaison house for individuals and corporations requiring
-                absolute precision and total confidentiality.
-            </p>
-
-            <div class="client-grid">
-                <div class="client-item">
-                    <h3 class="serif">Absolute Discretion</h3>
-                    <p>NDA-backed coordination with complete identity protection for ultra-high-profile principals and
-                        family offices.</p>
-                </div>
-                <div class="client-item">
-                    <h3 class="serif">60-Minute Logistics</h3>
-                    <p>Rapid tactical response for urgent global travel missions, providing aircraft deployment within
-                        60 minutes of confirmation.</p>
-                </div>
-                <div class="client-item">
-                    <h3 class="serif">Global Fleet Priority</h3>
-                    <p>First-priority access to a global fleet of 10,000+ audited aircraft and off-market vessels,
-                        ensuring availability in peak seasons.</p>
-                </div>
-                <div class="client-item">
-                    <h3 class="serif">Wealth Preservation</h3>
-                    <p>Dedicated account management focused on high-security transitions and maximizing time-efficiency
-                        for your travel investment.</p>
-                </div>
+                <form action="https://formspree.io/f/xwvwanlj" method="POST">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" name="name" class="form-control" placeholder="Hon. John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Private Email *</label>
+                            <input type="email" name="email" class="form-control" placeholder="client@exclusive.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="whatsapp">WhatsApp Number *</label>
+                            <input type="tel" name="phone" class="form-control" placeholder="+1 234 567 8900" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interested</label>
+                            <select name="service" class="form-control">
+                                <option value="Private Jet">Private Jet Charter</option>
+                                <option value="Yacht">Luxury Yacht Charter</option>
+                                <option value="Villa">Private Villa Rental</option>
+                                <option value="Concierge">Multi-Service Concierge</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group full" style="margin-top: 2rem;">
+                        <label>Mission Brief / Requirements</label>
+                        <textarea name="message" class="form-control" rows="4" placeholder="Flight routes, yacht destination, or villa requirements..." style="resize:none;"></textarea>
+                    </div>
+                    <div style="text-align: center; margin-top: 3rem;">
+                        <button type="submit" class="btn btn-gold" style="width: 100%; border-radius: 12px;">Initiate Private Consultation</button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
@@ -468,56 +1364,71 @@
     <!-- 4. CORE SERVICES (SILOS) -->
     <section class="silos container">
         <div class="section-header">
-            <span class="trust-micro">Our Expertise</span>
-            <h2 class="serif">The Collection</h2>
+            <h2>Our Core Domains</h2>
             <p style="color: var(--text-muted); font-size: 1.1rem; letter-spacing: 1px; text-transform: uppercase;">
-                Global Access • Audited Excellence</p>
-        </div>
-
-        <!-- Price Anchoring Slab -->
-        <div
-            style="text-align: center; margin-bottom: 3rem; background: rgba(212, 175, 55, 0.05); padding: 1.5rem; border: 1px solid var(--glass-border); border-radius: 12px; max-width: 900px; margin-left: auto; margin-right: auto;">
-            <p style="font-size: 0.95rem; color: #ddd; letter-spacing: 1px;">
-                <span class="gold-text" style="font-weight: 600;">INVESTMENT CLARITY:</span> Typical private charter
-                investments range from <span class="gold-text">$8,000 to $250,000+</span> depending on aircraft size,
-                nautical range, and bespoke requirements.
-            </p>
+                Serving clients globally</p>
         </div>
 
         <div class="silo-grid">
             <div class="glass-panel silo-card">
                 <div>
-                    <h3 class="serif gold-text">Private aviation</h3>
-                    <p>Unrestricted global access. From agile light jets to intercontinental heavy aircraft, positioned
-                        globally for your immediate departure.</p>
+                    <h3 class="serif gold-text">Private Jet Charter</h3>
+                    <p>Unrestricted global aviation. From agile light jets to intercontinental heavy aircraft,
+                        positioned globally for your immediate departure.</p>
                 </div>
-                <a href="elite-private-jet-charter.html" class="btn btn-outline"
-                    style="margin-top:2rem; font-size: 0.8rem;">View Private Fleet</a>
+                <a href="/elite-private-jet-charter.html" class="btn btn-outline" style="margin-top:2rem;">Explore Jets</a>
             </div>
 
             <div class="glass-panel silo-card">
                 <div>
-                    <h3 class="serif gold-text">Superyacht Charter</h3>
+                    <h3 class="serif gold-text">Luxury Yacht Charter</h3>
                     <p>Bespoke maritime access. Hand-selected motor and sailing yachts navigating the world's most
-                        exclusive waters from Monaco to the Maldives.</p>
+                        exclusive waters.</p>
                 </div>
-                <a href="#quote" class="btn btn-outline" style="margin-top:2rem; font-size: 0.8rem;">Browse
-                    Superyachts</a>
+                <a href="#quote" class="btn btn-outline" style="margin-top:2rem;">View Yachts</a>
             </div>
 
             <div class="glass-panel silo-card">
                 <div>
-                    <h3 class="serif gold-text">Exclusive Estates</h3>
-                    <p>Sanctuaries of total seclusion. Ultra-premium estates and fully-staffed retreats designed for
-                        ultimate privacy and high-security stays.</p>
+                    <h3 class="serif gold-text">Luxury Private Villas</h3>
+                    <p>Sanctuaries of exclusivity. Ultra-premium estates and fully-staffed retreats designed for
+                        ultimate privacy.</p>
                 </div>
-                <a href="luxury-villa-rentals.html" class="btn btn-outline"
-                    style="margin-top:2rem; font-size: 0.8rem;">Reserve Private Estate</a>
+                <a href="#quote" class="btn btn-outline" style="margin-top:2rem;">Explore Villas</a>
             </div>
         </div>
     </section>
 
 
+
+    <!-- 7. HOW IT WORKS -->
+    <section class="process container">
+        <div class="section-header">
+            <h2>The Process</h2>
+            <p style="color: var(--text-muted); font-size: 1.1rem; letter-spacing: 1px; text-transform: uppercase;">
+                Seamless, premium, and entirely frictionless</p>
+        </div>
+        <div class="process-steps">
+            <div>
+                <div class="step-num">01</div>
+                <h3 class="serif step-title">Share Your Requirements</h3>
+                <p class="step-desc">Provide your destination, dates, and bespoke preferences via our secure form or
+                    directly to our concierge team.</p>
+            </div>
+            <div>
+                <div class="step-num">02</div>
+                <h3 class="serif step-title">We Curate Options</h3>
+                <p class="step-desc">Our experts leverage global networks to procure the finest off-market aircraft,
+                    yachts, or estates matching your exact criteria.</p>
+            </div>
+            <div>
+                <div class="step-num">03</div>
+                <h3 class="serif step-title">You Confirm</h3>
+                <p class="step-desc">Review your tailored options. Once confirmed, we handle everything absolutely
+                    perfectly.</p>
+            </div>
+        </div>
+    </section>
 
     <!-- 5. FEATURED EXPERIENCES -->
     <section class="experiences container">
@@ -565,73 +1476,86 @@
         </div>
     </section>
 
-    <!-- SOCIAL PROOF -->
-    <section class="container" style="padding: 4rem 0; text-align: center;">
-        <div class="section-header" style="margin-bottom: 4rem;">
-            <h2 style="font-size: 3rem;">Trusted Experiences Delivered</h2>
-        </div>
-        <div style="max-width: 900px; margin: 0 auto;">
-            <p class="story-text" style="font-size: 1.6rem; color: #ccc; line-height: 1.6; font-style: italic;">"From
-                jet to yacht to villa — everything handled under one point of contact."</p>
-            <p
-                style="color: var(--primary-gold); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-top: 2rem; font-weight: 600;">
-                — CEO, UAE</p>
+
+
+                <!-- Post-Submission Follow-Up Experience -->
+                <div id="formMsg"
+                    style="display:none; text-align:center; padding: 3rem 0; border: 1px solid var(--glass-border); border-radius: 20px; background: rgba(212, 175, 55, 0.05);">
+                    <h3 class="serif gold-text" style="font-size: 2.8rem; margin-bottom: 1rem;">Proposal Requested</h3>
+                    <p style="color: var(--text-main); font-size: 1.2rem; margin-bottom: 2rem;">A senior concierge will
+                        contact you shortly. For immediate assistance, connect via WhatsApp.</p>
+                    <a href="https://wa.me/918801079030" class="btn btn-gold" target="_blank"
+                        style="padding: 1.2rem 3rem;">Speak instantly with concierge</a>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- FINAL TRUST CLOSER -->
+    <div class="container" style="text-align: center; padding-bottom: 6rem;">
+        <p class="serif" style="color: var(--text-muted); font-size: 1.8rem; max-width: 800px; margin: 0 auto;">
+            Every request is handled discreetly, privately, and through a globally trusted network of elite partners.
+        </p>
+    </div>
 
-
-
-
-    <!-- SILO Internal Links (TIGHTENED) -->
-    <div class="container" style="padding: 3rem 0; border-top: 1px solid rgba(212, 175, 55, 0.1);">
-        <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; opacity: 0.7;">
-            <a href="newyork-to-london-private-jet-cost.html"
-                style="color: #fff; text-decoration: none; font-size: 0.75rem; padding: 0.5rem 1rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px;">New
-                York to London</a>
-            <a href="dubai-to-london-private-jet-cost.html"
-                style="color: #fff; text-decoration: none; font-size: 0.75rem; padding: 0.5rem 1rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px;">Dubai
-                to London</a>
-            <a href="paris-to-dubai-private-jet-cost.html"
-                style="color: #fff; text-decoration: none; font-size: 0.75rem; padding: 0.5rem 1rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px;">Paris
-                to Dubai</a>
-            <a href="london-to-ibiza-private-jet-cost.html"
-                style="color: #fff; text-decoration: none; font-size: 0.75rem; padding: 0.5rem 1rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px;">London
-                to Ibiza</a>
+    <!-- SILO Internal Links -->
+    <div class="container" style="padding: 4rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="section-header">
+            <h2 style="font-size: 2.5rem; text-align: center;">Popular Global Routes</h2>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+            <a href="/newyork-to-london-private-jet-cost.html" class="btn btn-outline btn-sm">New York to London</a>
+            <a href="/dubai-to-london-private-jet-cost.html" class="btn btn-outline btn-sm">Dubai to London</a>
+            <a href="/paris-to-dubai-private-jet-cost.html" class="btn btn-outline btn-sm">Paris to Dubai</a>
+            <a href="/losangeles-to-tokyo-private-jet-cost.html" class="btn btn-outline btn-sm">Los Angeles to Tokyo</a>
+            <a href="/miami-to-newyork-private-jet-cost.html" class="btn btn-outline btn-sm">Miami to New York</a>
+            <a href="/london-to-ibiza-private-jet-cost.html" class="btn btn-outline btn-sm">London to Ibiza</a>
+            <a href="/elite-private-jet-charter.html" class="btn btn-gold btn-sm">View All Routes</a>
         </div>
     </div>
 
-    <script>
-        const endpoint = 'https://formspree.io/f/xwvwanlj';
+        <footer style="background:#000; border-top:1px solid rgba(255,255,255,0.05); padding:6rem 0;">
+        <div class="container">
+            <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:4rem; padding-bottom:3rem; border-bottom:1px solid rgba(212,175,55,0.1); text-align:left;">
+                <div style="flex:1; min-width:280px; margin-bottom:2rem;">
+                    <div style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; color:#fff; margin-bottom:1rem; line-height:1.2;">Elite Luxury <span style="color:#D4AF37;">Bookings</span></div>
+                    <p style="color:rgba(255,255,255,0.5); font-size:0.95rem; line-height:1.8; max-width:300px;">Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
+                </div>
+                <div style="min-width:160px; margin-bottom:2rem;">
+                    <div style="font-size:0.8rem; text-transform:uppercase; letter-spacing:2.5px; color:#D4AF37; margin-bottom:1.5rem; font-weight:700;">Services</div>
+                    <ul style="list-style:none; display:flex; flex-direction:column; gap:1rem; padding:0; margin:0;">
+                        <li><a href="/elite-private-jet-charter.html" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Private Jets</a></li>
+                        <li><a href="/luxury-yacht-rentals.html" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Luxury Yachts</a></li>
+                        <li><a href="/luxury-villa-rentals.html" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Luxury Villas</a></li>
+                        <li><a href="/blog.html" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; padding-top:3rem; gap:1.5rem;">
+                <p style="color:rgba(255,255,255,0.35); font-size:0.85rem; letter-spacing:0.5px;">&copy; 2026 Elite Luxury Bookings. All rights reserved. Global Concierge Service.</p>
+            </div>
+        </div>
+    </footer>
 
-        // Main Lead Form
+    <script>
+        const endpoint = 'https://script.google.com/macros/s/AKfycbxwH6b82MCg90tYS-yTwUMWw1ePx2S3oBdn3BC5U1UAt2uQRCB2bq03bzPP52ygUGU6UA/exec';
+
         async function submitLead(event) {
             event.preventDefault();
             const btn = document.getElementById('submitBtn');
             const form = document.getElementById('leadForm');
             const msg = document.getElementById('formMsg');
-
-            typeof gtag === 'function' && gtag('event', 'generate_lead');
-
             btn.innerText = 'SECURELY SENDING...';
             btn.disabled = true;
-
             const formData = new FormData(form);
             const data = {};
             formData.forEach((value, key) => data[key] = value);
-
-            // Elite Formspree Metadata
-            data['_subject'] = `New Elite Concierge Inquiry: ${data.services || 'General'}`;
-            data['_replyto'] = data.email;
-
             try {
-                const urlParams = new URLSearchParams(data).toString();
                 await fetch(endpoint, {
                     method: 'POST', mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: urlParams
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
                 });
-
                 form.style.display = 'none';
                 msg.style.display = 'block';
                 document.getElementById('quote').scrollIntoView({ behavior: 'smooth' });
@@ -644,33 +1568,25 @@
             }
         }
 
-        // Hero Mini Lead Form
         async function submitHeroLead(event) {
             event.preventDefault();
             const btn = document.getElementById('heroSubmitBtn');
             const form = document.getElementById('heroForm');
             const msg = document.getElementById('heroFormMsg');
-
-            typeof gtag === 'function' && gtag('event', 'hero_lead');
-
             btn.innerText = 'SENDING...';
             btn.disabled = true;
-
             const formData = new FormData(form);
             const data = {
                 phone: formData.get('phone'),
                 services: 'Fast Track Inquiry',
                 requirements: 'Requested immediate contact via WhatsApp. Confidential coordination.'
             };
-
             try {
-                const urlParams = new URLSearchParams(data).toString();
                 await fetch(endpoint, {
                     method: 'POST', mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: urlParams
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
                 });
-
                 form.style.display = 'none';
                 msg.style.display = 'block';
             } catch (error) {
@@ -682,37 +1598,23 @@
             }
         }
 
-        // --- GLOBAL NAVIGATION ---
         function toggleMobileMenu() {
-            const menu = document.getElementById('elbMobileMenu');
-            const burger = document.getElementById('navHamburger');
-            if (menu && burger) {
-                menu.classList.toggle('open');
-                burger.classList.toggle('open');
-            }
+            var m = document.getElementById('elbMobileMenu'), b = document.getElementById('navHamburger');
+            if (m && b) { m.classList.toggle('open'); b.classList.toggle('open'); }
         }
 
-        // --- SUBTLE PARALLAX ENGINE ---
         document.addEventListener('DOMContentLoaded', () => {
             const heroBg = document.getElementById('heroBg');
             const heroHeadline = document.querySelector('.hero-headline');
             let ticking = false;
-
             window.addEventListener('scroll', () => {
                 if (!ticking) {
                     window.requestAnimationFrame(() => {
                         const scrollY = window.pageYOffset;
-
-                        // Background moves slightly slower (depth effect)
-                        if (heroBg) {
-                            heroBg.style.transform = `translate3d(0, ${scrollY * 0.15}px, 0)`;
-                        }
-
-                        // Optional: Subtle contrary motion for headline
+                        if (heroBg) { heroBg.style.transform = `translate3d(0, ${scrollY * 0.15}px, 0)`; }
                         if (heroHeadline && window.innerWidth > 768) {
                             heroHeadline.style.transform = `translate3d(0, ${scrollY * -0.05}px, 0)`;
                         }
-
                         ticking = false;
                     });
                     ticking = true;
@@ -720,35 +1622,16 @@
             });
         });
     </script>
-
-    <!-- ELB_JS_START -->
-    <script>function toggleMobileMenu() { var m = document.getElementById('elbMobileMenu'), b = document.getElementById('navHamburger'); if (m && b) { m.classList.toggle('open'); b.classList.toggle('open'); } }</script>
-    <!-- ELB_JS_END -->
-
-    <!-- ELB_FOOTER_START -->
-    <footer class="section-padding"
-        style="background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center !important; margin-top: 6rem; padding: 6rem 0;">
-        <div class="container" style="display: block !important; text-align: center !important;">
-            <a href="/"
-                style="display: inline-block; margin-bottom: 2rem; font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:600; color:#fff; text-decoration:none;"><span
-                    style="color:#D4AF37;">Elite</span> Luxury Bookings</a>
-            <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
-                <a href="elite-private-jet-charter.html"
-                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Aviation</a>
-                <a href="/luxury-yacht-rentals/"
-                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Maritime</a>
-                <a href="luxury-villa-rentals.html"
-                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Villas</a>
-                <a href="blog.html"
-                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Blog</a>
-                <a href="contact.html"
-                    style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Contact</a>
-            </div>
-            <p style="color: #444; font-size: 0.8rem; letter-spacing: 1px;">&copy; 2026 Elite Luxury Bookings. Concierge
-                Dispatch Worldwide.</p>
-        </div>
-    </footer>
-    <!-- ELB_FOOTER_END -->
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+

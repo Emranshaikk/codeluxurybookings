@@ -12,37 +12,37 @@
         .internal-link:hover { color: #D4AF37; border-left: 2px solid #D4AF37; background: rgba(212,175,55,0.05); padding-left: 15px; }
         @media (max-width: 1024px) { .hub-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 600px) { .hub-grid { grid-template-columns: 1fr; } }
-    </style>
+    @media (max-width: 768px) { .form-grid { grid-template-columns: 1fr !important; gap: 2rem !important; } }
+    
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 100000; box-shadow: 0 10px 25px rgba(0,0,0,0.3); transition: all 0.3s; }
+        .wa-float:hover { transform: scale(1.1); background: #128C7E; }
+</style>
 </head>
 <body style="background: #000; color: #fff;">
-<!-- ELB_NAV_START -->
+    <!-- ELB_NAV_START -->
     <nav class="global-nav">
         <div class="container global-nav-inner">
-            <a href="/" class="nav-brand"><span class="nav-gold">Elite</span> Luxury Bookings</a>
+            <a href="/" class="nav-brand">Elite Luxury <span class="nav-gold">Bookings</span></a>
             <ul class="nav-links">
                 <li><a href="/elite-private-jet-charter.html">Private Jets</a></li>
-                <li><a href="/luxury-yacht-rentals/">Yacht Charter</a></li>
+                <li><a href="/luxury-yacht-rentals.html">Yachts</a></li>
                 <li><a href="/luxury-villa-rentals.html">Villas</a></li>
                 <li><a href="/blog.html">Blog</a></li>
                 <li><a href="/contact.html">Contact</a></li>
             </ul>
-            <div class="nav-cta">
-                
-                <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
+            
+            <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></div>
         </div>
     </nav>
     <div class="mobile-menu" id="elbMobileMenu">
-        <a href="/elite-private-jet-charter.html">Private Jets</a>
-        <a href="/luxury-yacht-rentals/">Luxury Yachts</a>
-        <a href="/luxury-villa-rentals.html">Exclusive Villas</a>
-        <a href="/blog.html">Articles & News</a>
-        <a href="/contact.html">Contact Us</a>
-        <a href="https://wa.me/918801079030" class="mobile-cta">WhatsApp Concierge</a>
+        <a href="/elite-private-jet-charter.html">✈ Private Jets</a>
+        <a href="/luxury-villa-rentals.html">🏡 Luxury Villas</a>
+        <a href="/luxury-yacht-rentals.html">⚓ Luxury Yachts</a>
+        <a href="/blog.html">📰 Blog</a>
+        <a href="/contact.html">📞 Contact</a>
+        
     </div>
-<!-- ELB_NAV_END -->
+    <!-- ELB_NAV_END -->
 
 <section class="directory-header">
     <div class="container">
@@ -171,29 +171,35 @@
 <a href='/toronto-to-newyork-private-jet-cost.html' class='internal-link'>?ron? ? newyork</a>
 <a href='/turksandcaicos-to-miami-private-jet-cost.html' class='internal-link'>turksandcaicos ? miami</a>
 
-
         </div>
     </div>
 </section>
 
 <!-- ELB_FOOTER_START -->
-    <footer class="section-padding"
-        style="background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center !important; margin-top: 6rem; padding: 6rem 0;">
-        <div class="container" style="display: block !important; text-align: center !important;">
-            <a href="/"
-                style="display: inline-block; margin-bottom: 2rem; font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:600; color:#fff; text-decoration:none;"><span
-                    style="color:#D4AF37;">Elite</span> Luxury Bookings</a>
-                        <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
-                <a href="/elite-private-jet-charter.html" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Aviation</a>
-                <a href="/blog.html" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Blog</a>
-                <a href="/contact.html" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase;">Contact</a>
+        <footer style="background:#000; border-top:1px solid rgba(255,255,255,0.05); padding:6rem 0;">
+        <div class="container">
+            <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:4rem; padding-bottom:3rem; border-bottom:1px solid rgba(212,175,55,0.1); text-align:left;">
+                <div style="flex:1; min-width:280px; margin-bottom:2rem;">
+                    <div style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; color:#fff; margin-bottom:1rem; line-height:1.2;">Elite Luxury <span style="color:#D4AF37;">Bookings</span></div>
+                    <p style="color:rgba(255,255,255,0.5); font-size:0.95rem; line-height:1.8; max-width:300px;">Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
+                </div>
+                <div style="min-width:160px; margin-bottom:2rem;">
+                    <div style="font-size:0.8rem; text-transform:uppercase; letter-spacing:2.5px; color:#D4AF37; margin-bottom:1.5rem; font-weight:700;">Services</div>
+                    <ul style="list-style:none; display:flex; flex-direction:column; gap:1rem; padding:0; margin:0;">
+                        <li><a href="/elite-private-jet-charter.html" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Private Jets</a></li>
+                        <li><a href="/luxury-yacht-rentals.html" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Luxury Yachts</a></li>
+                        <li><a href="/luxury-villa-rentals.html" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Luxury Villas</a></li>
+                        <li><a href="/blog.html" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Blog</a></li>
+                    </ul>
+                </div>
             </div>
-            <p style="color: #444; font-size: 0.8rem; letter-spacing: 1px;">&copy; 2026 Elite Luxury Bookings. Concierge
-                Dispatch Worldwide.</p>
+            <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; padding-top:3rem; gap:1.5rem;">
+                <p style="color:rgba(255,255,255,0.35); font-size:0.85rem; letter-spacing:0.5px;">&copy; 2026 Elite Luxury Bookings. All rights reserved. Global Concierge Service.</p>
+            </div>
         </div>
     </footer>
     <!-- ELB_FOOTER_END -->
-<script src="/valens_api_bridge.js"></script>
+<script src="/"></script>
 <!-- FLOATING WHATSAPP -->
     <a href="https://wa.me/918801079030" class="wa-float" target="_blank" aria-label="WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
@@ -202,4 +208,19 @@
     </a>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
