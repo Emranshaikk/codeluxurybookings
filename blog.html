@@ -228,270 +228,313 @@
             }
         }
 
+
+
+
+    <!-- Google tag (gtag.js) -->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J56D1LJLFM"></script>
+
+
+    <script>
+
+
+        window.dataLayer = window.dataLayer || [];
+
+
+        function gtag() { dataLayer.push(arguments); }
+
+
+        gtag('js', new Date());
+
+
+        gtag('config', 'G-J56D1LJLFM');
+
+
+    </script>
+
+
+
+
+
+    <!-- Premium Typography -->
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+
+
+
+
+    <style>
+        /* ELB_CORE_THEME_INJECT */
+        :root {
+            --primary-gold: #D4AF37;
+            --deep-black: #050505;
+            --graphene: #1A1A1A;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(212, 175, 55, 0.15);
+            --text-main: #FFFFFF;
+            --text-muted: rgba(255, 255, 255, 0.6);
+        }
+
         body {
-            padding-top: 72px !important;
+            background: var(--deep-black) !important;
+            color: var(--text-main) !important;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
         }
 
-        /* --- PREMIUM BLOG HERO --- */
-        .blog-hero {
-            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.08) 0%, var(--deep-black) 70%);
-            border-bottom: 1px solid rgba(37, 211, 102, 0.1);
-            position: relative;
-            overflow: hidden;
+        /* ELB_STYLE_START */
+        .global-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(5, 5, 5, 0.98);
+            backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            z-index: 99999;
         }
 
-        .blog-hero::before {
-            content: '';
-            position: absolute;
+        .global-nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+            gap: 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            box-sizing: border-box;
+        }
+
+        .nav-brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #fff !important;
+            text-decoration: none !important;
+        }
+
+        .nav-gold {
+            color: #D4AF37 !important;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            list-style: none;
+            flex: 1;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.7) !important;
+            text-decoration: none !important;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 0.5rem 0.9rem;
+            border-radius: 6px;
+            transition: all 0.4s;
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        .nav-links a:hover {
+            color: #D4AF37 !important;
+        }
+
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 100001;
+        }
+
+        .nav-hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 2px;
+            transition: all 0.4s;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
-            opacity: 0.03;
-            pointer-events: none;
+            background: #050505;
+            padding: 72px 2rem 2rem;
+            z-index: 100000;
+            flex-direction: column;
+            gap: 0.5rem;
+            overflow-y: auto;
         }
 
-        /* --- ELITE BLOG CARD OVERHAUL --- */
+        .mobile-menu.open {
+            display: flex !important;
+        }
+
+        .mobile-menu a {
+            color: rgba(255, 255, 255, 0.8) !important;
+            text-decoration: none !important;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .mobile-cta {
+            margin-top: 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: #fff !important;
+            border-radius: 8px;
+            padding: 1.2rem !important;
+            font-weight: 700;
+        }
+
+        @media (max-width:1024px) {
+            .nav-links {
+                display: none !important;
+            }
+
+            .nav-hamburger {
+                display: flex !important;
+            }
+        }
+
+        body {
+            padding-top: 72px !important;
+        }
+
+        /* --- ELITE MODULAR GRID RESTORATION --- */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
         .blog-card {
-            background: linear-gradient(165deg, rgba(30, 30, 30, 0.9), rgba(5, 5, 5, 1)) !important;
-            border: 1px solid rgba(212, 175, 55, 0.12) !important;
-            border-radius: 16px !important;
-            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1) !important;
-            position: relative;
-            overflow: hidden !important;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: block;
+            background: var(--graphene) !important;
+            border: 1px solid var(--glass-border) !important;
+            border-radius: 20px !important;
+            overflow: hidden;
+            text-decoration: none !important;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         .blog-card:hover {
-            transform: translateY(-12px) scale(1.02) !important;
+            transform: translateY(-10px);
             border-color: var(--primary-gold) !important;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 20px rgba(37, 211, 102, 0.1) !important;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
         }
 
         .card-img-container {
-            height: 180px !important;
-            background: radial-gradient(circle at center, rgba(37, 211, 102, 0.1) 0%, transparent 80%) !important;
+            height: 220px;
+            overflow: hidden;
+            background: #000;
             position: relative;
-            display: flex !important;
-            align-items: center;
-            justify-content: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
-            overflow: hidden !important;
         }
 
-        /* Hide the actual images to prevent broken photo icons */
         .card-img-container img {
-            display: none !important;
-        }
-
-        .card-img-container::before {
-            content: 'ELITE';
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
-            letter-spacing: 12px;
-            color: var(--primary-gold);
-            opacity: 0.4;
-            font-weight: 300;
-            z-index: 2;
-        }
-
-        .card-img-container::after {
-            content: '';
-            position: absolute;
-            width: 150%;
+            width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.05), transparent);
-            top: 0;
-            left: -150%;
-            transition: 0.8s;
-            z-index: 1;
+            object-fit: cover;
+            opacity: 0.8;
+            transition: transform 0.6s ease;
         }
 
-        .blog-card:hover .card-img-container::after {
-            left: 150%;
-        }
-
-        /* Specialized visual for Route Cards (*-to-*) */
-        .route-card .card-img-container::before {
-            content: '✦';
-            font-size: 3rem;
-            opacity: 0.6;
+        .blog-card:hover img {
+            transform: scale(1.08);
+            opacity: 1;
         }
 
         .card-content {
-            padding: 2rem !important;
-            background: transparent !important;
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .card-meta {
-            font-weight: 700 !important;
-            font-size: 0.7rem !important;
+            color: var(--primary-gold);
+            font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--primary-gold) !important;
+            letter-spacing: 2px;
+            font-weight: 700;
             margin-bottom: 1rem;
         }
 
         .card-content h3 {
-            color: #fff !important;
-            font-size: 1.4rem !important;
-            margin-top: 0.5rem !important;
-            line-height: 1.3 !important;
-            font-family: 'Cormorant Garamond', serif !important;
-            min-height: 3.6rem;
+            color: #fff;
+            font-size: 1.4rem;
+            line-height: 1.3;
+            font-family: 'Cormorant Garamond', serif;
+            margin-bottom: 1rem;
         }
 
         .card-content p {
-            font-size: 0.9rem !important;
-            line-height: 1.6 !important;
-            color: var(--text-muted) !important;
-            margin-top: 1rem !important;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
         }
 
-        /* --- FILTER BUTTONS PREM --- */
+        /* Filter Container */
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 4rem 0;
+            flex-wrap: wrap;
+        }
+
         .filter-btn {
-            background: rgba(255, 255, 255, 0.05) !important;
-            border: 1px solid rgba(212, 175, 55, 0.2) !important;
-            color: #fff !important;
-            padding: 0.8rem 1.8rem !important;
-            border-radius: 50px !important;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
             cursor: pointer;
-            font-size: 0.9rem !important;
+            font-weight: 600;
             letter-spacing: 1px;
-            transition: all 0.3s ease;
+            transition: all 0.3s;
         }
 
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: var(--primary-gold) !important;
-            color: #fff !important;
-            border-color: var(--primary-gold) !important;
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary-gold);
+            color: #000;
+            border-color: var(--primary-gold);
             box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
         }
 
-        /* --- NAVIGATION BUTTON FIX --- */
-        .btn {
-            display: inline-block;
-            border-radius: 8px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none !important;
-            text-align: center;
-            border: none;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .btn-gold {
-            background: linear-gradient(135deg, #25D366, #128C7E);
-            color: #fff !important;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            padding: 0.8rem 1.5rem;
-            border-radius: 8px;
-            display: inline-block;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-        }
-
-        .btn-gold:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
-            filter: brightness(1.1);
-        }
-
-        .btn-sm {
-            padding: 0.6rem 1.2rem;
-            font-size: 0.75rem;
-        }
-
-        .btn-gold:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
-            filter: brightness(1.1);
-        }
-
-        .btn-sm {
-            padding: 0.7rem 1.4rem;
-            font-size: 0.75rem;
-            letter-spacing: 1px;
-        }
-
-        /* --- MOBILE OPTIMIZATION LOCK --- */
         @media (max-width: 768px) {
-            .hero { padding: 6rem 0 3rem !important; }
-            .hero h1 { font-size: 2.2rem !important; line-height: 1.1; padding: 0 1rem; }
-            .hero-sub { font-size: 1rem !important; padding: 0 1.5rem; }
-            .grid-2, .grid-3 { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
-            .section-padding { padding: 4rem 1rem !important; }
-            .aviation-search-engine { padding: 1.5rem !important; margin: 1rem !important; }
-            .form-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
-            .nav-brand { font-size: 1.3rem !important; }
-            .btn-gold { padding: 0.6rem 1rem !important; font-size: 0.7rem !important; }
-        }
-
-            .blog-hero h1 {
-                font-size: 2.2rem !important;
-                line-height: 1.2;
-                padding: 0 1rem;
-            }
-
-            .blog-hero p {
-                font-size: 1rem !important;
-                padding: 0 1.5rem;
-            }
-
-            .filter-container {
-                margin: 2rem 0 !important;
-                gap: 0.6rem !important;
-                padding: 0 1rem;
-            }
-
-            .filter-btn {
-                padding: 0.6rem 1rem !important;
-                font-size: 0.75rem !important;
-                flex: 1 1 calc(50% - 1rem);
-                min-width: 120px;
-                text-align: center;
-            }
-
-            .blog-grid {
-                grid-template-columns: 1fr !important;
-                gap: 1.5rem !important;
-            }
-
-            .card-content {
-                padding: 1.5rem !important;
-            }
-
-            .card-content h3 {
-                font-size: 1.25rem !important;
-                min-height: auto;
-            }
-
-            .card-img-container {
-                height: 160px !important;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .blog-hero h1 {
-                font-size: 1.8rem !important;
-            }
-
-            .filter-btn {
-                flex: 1 1 100%;
-            }
-        }
-
-        /* ELB_STYLE_END */
-    </style>
-    <link rel="stylesheet" href="/style.css">
-
 
 </head>
 
@@ -584,8 +627,7 @@
 
 
 
-        <div class="blog-grid" id="blogGrid"
-            style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2.5rem;">
+        <div class="blog-grid" id="blogGrid" class="blog-grid">
 
 
 
@@ -597,11 +639,10 @@
 
 
 
-            <a href="abudhabi-to-doha-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="abudhabi-to-doha-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -613,11 +654,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -658,12 +698,10 @@
 
 
 
-            <a href="amsterdam-to-london-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="amsterdam-to-london-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -675,11 +713,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -702,11 +739,10 @@
 
 
 
-            <a href="aspen-to-miami-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="aspen-to-miami-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Aspen to Miami Flight Cost Breakdown)"
@@ -717,11 +753,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -744,11 +779,10 @@
 
 
 
-            <a href="aspen-to-newyork-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="aspen-to-newyork-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -760,11 +794,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -787,11 +820,10 @@
 
 
 
-            <a href="bahamas-to-newyork-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="bahamas-to-newyork-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -803,11 +835,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -830,11 +861,10 @@
 
 
 
-            <a href="bali-to-melbourne-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="bali-to-melbourne-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -846,11 +876,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -873,11 +902,10 @@
 
 
 
-            <a href="bali-to-perth-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="bali-to-perth-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Bali to Perth Flight Cost Breakdown)"
@@ -888,11 +916,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -915,12 +942,10 @@
 
 
 
-            <a href="barcelona-to-london-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="barcelona-to-london-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -932,11 +957,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -965,11 +989,10 @@
 
 
 
-            <a href="beijing-to-seoul-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="beijing-to-seoul-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Beijing to Seoul Flight Cost Breakdown)"
@@ -980,11 +1003,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -1043,11 +1065,10 @@
 
 
 
-            <a href="brisbane-to-sydney-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="brisbane-to-sydney-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -1059,11 +1080,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -1086,11 +1106,10 @@
 
 
 
-            <a href="cabo-to-losangeles-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="cabo-to-losangeles-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -1102,11 +1121,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -1129,11 +1147,10 @@
 
 
 
-            <a href="cancun-to-dallas-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="cancun-to-dallas-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Cancun to Dallas Flight Cost Breakdown)"
@@ -1144,11 +1161,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -1183,12 +1199,10 @@
 
 
 
-            <a href="chicago-to-losangeles-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="chicago-to-losangeles-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -1200,11 +1214,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -1227,11 +1240,10 @@
 
 
 
-            <a href="chicago-to-miami-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="chicago-to-miami-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Chicago to Miami Flight Cost Breakdown)"
@@ -1242,11 +1254,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -1269,11 +1280,10 @@
 
 
 
-            <a href="chicago-to-newyork-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="chicago-to-newyork-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -1285,11 +1295,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -1318,11 +1327,10 @@
 
 
 
-            <a href="dallas-to-cancun-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="dallas-to-cancun-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Dallas to Cancun Flight Cost Breakdown)"
@@ -1333,11 +1341,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -1360,11 +1367,10 @@
 
 
 
-            <a href="dallas-to-denver-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="dallas-to-denver-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Dallas to Denver Flight Cost Breakdown)"
@@ -1375,11 +1381,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -1402,12 +1407,10 @@
 
 
 
-            <a href="dallas-to-losangeles-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="dallas-to-losangeles-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -1419,11 +1422,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -1446,11 +1448,10 @@
 
 
 
-            <a href="dallas-to-newyork-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="dallas-to-newyork-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -1462,11 +1463,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -1489,11 +1489,10 @@
 
 
 
-            <a href="denver-to-dallas-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="denver-to-dallas-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Denver to Dallas Flight Cost Breakdown)"
@@ -1504,11 +1503,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -1531,11 +1529,10 @@
 
 
 
-            <a href="doha-to-abudhabi-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="doha-to-abudhabi-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -1547,11 +1544,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -1586,11 +1582,10 @@
 
 
 
-            <a href="dubai-to-london-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="dubai-to-london-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Dubai to London Flight Cost Breakdown)"
@@ -1601,11 +1596,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -1628,11 +1622,10 @@
 
 
 
-            <a href="dubai-to-newyork-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="dubai-to-newyork-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -1644,11 +1637,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -1671,11 +1663,10 @@
 
 
 
-            <a href="dubai-to-sydney-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="dubai-to-sydney-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Dubai to Sydney Flight Cost Breakdown)"
@@ -1686,11 +1677,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -1713,11 +1703,10 @@
 
 
 
-            <a href="geneva-to-london-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="geneva-to-london-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Geneva to London Flight Cost Breakdown)"
@@ -1728,11 +1717,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -1755,12 +1743,10 @@
 
 
 
-            <a href="goldcoast-to-sydney-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="goldcoast-to-sydney-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -1772,11 +1758,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -1835,12 +1820,10 @@
 
 
 
-            <a href="hawaii-to-losangeles-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="hawaii-to-losangeles-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -1852,11 +1835,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -1897,12 +1879,10 @@
 
 
 
-            <a href="hongkong-to-singapore-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="hongkong-to-singapore-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -1914,11 +1894,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -1941,11 +1920,10 @@
 
 
 
-            <a href="houston-to-miami-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="houston-to-miami-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Houston to Miami Flight Cost Breakdown)"
@@ -1956,11 +1934,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -2024,11 +2001,10 @@
 
 
 
-            <a href="ibiza-to-london-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="ibiza-to-london-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Ibiza to London Flight Cost Breakdown)"
@@ -2039,11 +2015,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -2090,11 +2065,10 @@
 
 
 
-            <a href="lasvegas-to-lax-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="lasvegas-to-lax-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Las Vegas to Lax Flight Cost Breakdown)"
@@ -2105,11 +2079,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -2132,12 +2105,10 @@
 
 
 
-            <a href="lasvegas-to-losangeles-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="lasvegas-to-losangeles-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -2149,11 +2120,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -2176,11 +2146,10 @@
 
 
 
-            <a href="lasvegas-to-miami-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="lasvegas-to-miami-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -2192,11 +2161,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -2219,12 +2187,10 @@
 
 
 
-            <a href="lasvegas-to-newyork-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="lasvegas-to-newyork-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -2236,11 +2202,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -2263,11 +2228,10 @@
 
 
 
-            <a href="lax-to-lasvegas-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="lax-to-lasvegas-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Lax to Las Vegas Flight Cost Breakdown)"
@@ -2278,11 +2242,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -2305,12 +2268,10 @@
 
 
 
-            <a href="london-to-amsterdam-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="london-to-amsterdam-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -2322,11 +2283,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -2349,12 +2309,10 @@
 
 
 
-            <a href="london-to-barcelona-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="london-to-barcelona-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -2366,11 +2324,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -2393,11 +2350,10 @@
 
 
 
-            <a href="london-to-dubai-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="london-to-dubai-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + London to Dubai Flight Cost Breakdown)"
@@ -2408,11 +2364,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -2435,11 +2390,10 @@
 
 
 
-            <a href="london-to-geneva-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="london-to-geneva-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + London to Geneva Flight Cost Breakdown)"
@@ -2450,11 +2404,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -2477,11 +2430,10 @@
 
 
 
-            <a href="london-to-ibiza-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="london-to-ibiza-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + London to Ibiza Flight Cost Breakdown)"
@@ -2492,11 +2444,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -2519,12 +2470,10 @@
 
 
 
-            <a href="london-to-losangeles-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="london-to-losangeles-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -2536,11 +2485,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -2563,12 +2511,10 @@
 
 
 
-            <a href="london-to-marrakesh-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="london-to-marrakesh-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -2580,11 +2526,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -2607,11 +2552,10 @@
 
 
 
-            <a href="london-to-miami-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="london-to-miami-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + London to Miami Flight Cost Breakdown)"
@@ -2622,11 +2566,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -2649,11 +2592,10 @@
 
 
 
-            <a href="london-to-milan-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="london-to-milan-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet Charter London to Milan"
@@ -2664,11 +2606,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -2691,11 +2632,10 @@
 
 
 
-            <a href="london-to-mykonos-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="london-to-mykonos-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -2707,11 +2647,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -2734,11 +2673,10 @@
 
 
 
-            <a href="london-to-newyork-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="london-to-newyork-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -2750,11 +2688,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -2777,11 +2714,10 @@
 
 
 
-            <a href="london-to-nice-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="london-to-nice-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + London to Nice Flight Cost Breakdown)"
@@ -2792,11 +2728,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -2819,11 +2754,10 @@
 
 
 
-            <a href="london-to-palma-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="london-to-palma-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + London to Palma Flight Cost Breakdown)"
@@ -2834,11 +2768,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -2861,11 +2794,10 @@
 
 
 
-            <a href="london-to-paris-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="london-to-paris-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + London to Paris Flight Cost Breakdown)"
@@ -2876,11 +2808,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -2903,11 +2834,10 @@
 
 
 
-            <a href="london-to-rome-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="london-to-rome-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + London to Rome Flight Cost Breakdown)"
@@ -2918,11 +2848,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -2945,12 +2874,10 @@
 
 
 
-            <a href="london-to-sanfrancisco-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="london-to-sanfrancisco-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -2962,11 +2889,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -2989,12 +2915,10 @@
 
 
 
-            <a href="london-to-santorini-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="london-to-santorini-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -3006,11 +2930,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -3033,11 +2956,10 @@
 
 
 
-            <a href="london-to-tokyo-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="london-to-tokyo-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + London to Tokyo Flight Cost Breakdown)"
@@ -3048,11 +2970,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -3075,11 +2996,10 @@
 
 
 
-            <a href="losangeles-to-cabo-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="losangeles-to-cabo-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -3091,11 +3011,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -3118,12 +3037,10 @@
 
 
 
-            <a href="losangeles-to-chicago-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="losangeles-to-chicago-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -3135,11 +3052,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -3162,12 +3078,10 @@
 
 
 
-            <a href="losangeles-to-dallas-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="losangeles-to-dallas-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -3179,11 +3093,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -3206,12 +3119,10 @@
 
 
 
-            <a href="losangeles-to-hawaii-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="losangeles-to-hawaii-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -3223,11 +3134,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -3250,12 +3160,10 @@
 
 
 
-            <a href="losangeles-to-lasvegas-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="losangeles-to-lasvegas-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -3267,11 +3175,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -3294,12 +3201,10 @@
 
 
 
-            <a href="losangeles-to-london-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="losangeles-to-london-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -3311,11 +3216,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -3338,12 +3242,10 @@
 
 
 
-            <a href="losangeles-to-miami-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="losangeles-to-miami-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -3355,11 +3257,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -3382,12 +3283,10 @@
 
 
 
-            <a href="losangeles-to-newyork-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="losangeles-to-newyork-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -3399,11 +3298,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -3426,12 +3324,10 @@
 
 
 
-            <a href="losangeles-to-sanfrancisco-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="losangeles-to-sanfrancisco-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -3443,11 +3339,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -3506,11 +3401,10 @@
 
 
 
-            <a href="maldives-to-riyadh-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="maldives-to-riyadh-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -3522,11 +3416,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -3567,12 +3460,10 @@
 
 
 
-            <a href="marrakesh-to-london-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="marrakesh-to-london-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -3584,11 +3475,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -3617,11 +3507,10 @@
 
 
 
-            <a href="melbourne-to-bali-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="melbourne-to-bali-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -3633,11 +3522,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -3660,12 +3548,10 @@
 
 
 
-            <a href="melbourne-to-sydney-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="melbourne-to-sydney-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -3677,11 +3563,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -3704,11 +3589,10 @@
 
 
 
-            <a href="miami-to-aspen-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="miami-to-aspen-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Miami to Aspen Flight Cost Breakdown)"
@@ -3719,11 +3603,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -3746,11 +3629,10 @@
 
 
 
-            <a href="miami-to-chicago-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="miami-to-chicago-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Miami to Chicago Flight Cost Breakdown)"
@@ -3761,11 +3643,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -3788,11 +3669,10 @@
 
 
 
-            <a href="miami-to-houston-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="miami-to-houston-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + houston to Miami Flight Cost Breakdown)"
@@ -3803,11 +3683,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -3830,11 +3709,10 @@
 
 
 
-            <a href="miami-to-lasvegas-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="miami-to-lasvegas-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -3846,11 +3724,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -3873,11 +3750,10 @@
 
 
 
-            <a href="miami-to-london-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="miami-to-london-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Miami to London Flight Cost Breakdown)"
@@ -3888,11 +3764,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -3915,12 +3790,10 @@
 
 
 
-            <a href="miami-to-losangeles-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="miami-to-losangeles-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -3932,11 +3805,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -3959,11 +3831,10 @@
 
 
 
-            <a href="miami-to-newyork-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="miami-to-newyork-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -3975,11 +3846,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -4002,12 +3872,10 @@
 
 
 
-            <a href="miami-to-turksandcaicos-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="miami-to-turksandcaicos-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -4019,11 +3887,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -4046,11 +3913,10 @@
 
 
 
-            <a href="milan-to-london-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="milan-to-london-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Milan to London Flight Cost Breakdown)"
@@ -4061,11 +3927,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -4088,11 +3953,10 @@
 
 
 
-            <a href="milan-to-mykonos-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="milan-to-mykonos-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Milan to Mykonos Flight Cost Breakdown)"
@@ -4103,11 +3967,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -4148,11 +4011,10 @@
 
 
 
-            <a href="mykonos-to-london-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="mykonos-to-london-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -4164,11 +4026,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -4191,11 +4052,10 @@
 
 
 
-            <a href="mykonos-to-milan-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="mykonos-to-milan-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Mykonos to Milan Flight Cost Breakdown)"
@@ -4206,11 +4066,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -4239,11 +4098,10 @@
 
 
 
-            <a href="newyork-to-aspen-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="newyork-to-aspen-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -4255,11 +4113,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -4282,11 +4139,10 @@
 
 
 
-            <a href="newyork-to-bahamas-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="newyork-to-bahamas-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -4298,11 +4154,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -4325,11 +4180,10 @@
 
 
 
-            <a href="newyork-to-chicago-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="newyork-to-chicago-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -4341,11 +4195,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -4368,11 +4221,10 @@
 
 
 
-            <a href="newyork-to-dallas-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="newyork-to-dallas-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -4384,11 +4236,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -4411,11 +4262,10 @@
 
 
 
-            <a href="newyork-to-dubai-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="newyork-to-dubai-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -4427,11 +4277,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -4454,12 +4303,10 @@
 
 
 
-            <a href="newyork-to-lasvegas-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="newyork-to-lasvegas-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -4471,11 +4318,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -4498,11 +4344,10 @@
 
 
 
-            <a href="newyork-to-london-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="newyork-to-london-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -4514,11 +4359,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -4541,12 +4385,10 @@
 
 
 
-            <a href="newyork-to-losangeles-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="newyork-to-losangeles-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -4558,11 +4400,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -4585,11 +4426,10 @@
 
 
 
-            <a href="newyork-to-miami-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="newyork-to-miami-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -4601,11 +4441,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -4628,11 +4467,10 @@
 
 
 
-            <a href="newyork-to-paris-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="newyork-to-paris-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -4644,11 +4482,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -4671,11 +4508,10 @@
 
 
 
-            <a href="newyork-to-toronto-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="newyork-to-toronto-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -4687,11 +4523,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -4714,11 +4549,10 @@
 
 
 
-            <a href="nice-to-london-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="nice-to-london-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Nice to London Flight Cost Breakdown)"
@@ -4729,11 +4563,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -4756,11 +4589,10 @@
 
 
 
-            <a href="ntomiami-to-hous-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="ntomiami-to-hous-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Ntomiami to Hous Flight Cost Breakdown)"
@@ -4771,11 +4603,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -4798,11 +4629,10 @@
 
 
 
-            <a href="palma-to-london-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="palma-to-london-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Palma to London Flight Cost Breakdown)"
@@ -4813,11 +4643,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -4840,11 +4669,10 @@
 
 
 
-            <a href="paris-to-london-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="paris-to-london-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Paris to London Flight Cost Breakdown)"
@@ -4855,11 +4683,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -4882,11 +4709,10 @@
 
 
 
-            <a href="paris-to-newyork-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="paris-to-newyork-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -4898,11 +4724,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -4925,11 +4750,10 @@
 
 
 
-            <a href="perth-to-bali-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="perth-to-bali-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Perth to Bali Flight Cost Breakdown)"
@@ -4940,11 +4764,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -4967,11 +4790,10 @@
 
 
 
-            <a href="perth-to-sydney-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="perth-to-sydney-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Perth to Sydney Flight Cost Breakdown)"
@@ -4982,11 +4804,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -5081,12 +4902,10 @@
 
 
 
-            <a href="rinitolondon-to-san-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="rinitolondon-to-san-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -5098,11 +4917,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -5125,11 +4943,10 @@
 
 
 
-            <a href="riyadh-to-maldives-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="riyadh-to-maldives-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -5141,11 +4958,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -5168,11 +4984,10 @@
 
 
 
-            <a href="rome-to-london-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="rome-to-london-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Rome to London Flight Cost Breakdown)"
@@ -5183,11 +4998,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -5216,12 +5030,10 @@
 
 
 
-            <a href="sanfrancisco-to-london-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="sanfrancisco-to-london-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -5233,11 +5045,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -5260,12 +5071,10 @@
 
 
 
-            <a href="sanfrancisco-to-losangeles-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="sanfrancisco-to-losangeles-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -5277,11 +5086,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -5304,12 +5112,10 @@
 
 
 
-            <a href="santorini-to-london-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="santorini-to-london-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -5321,11 +5127,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -5360,11 +5165,10 @@
 
 
 
-            <a href="seoul-to-beijing-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="seoul-to-beijing-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Seoul to Beijing Flight Cost Breakdown)"
@@ -5375,11 +5179,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -5402,12 +5205,10 @@
 
 
 
-            <a href="singapore-to-hongkong-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="singapore-to-hongkong-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -5419,11 +5220,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -5446,12 +5246,10 @@
 
 
 
-            <a href="singapore-to-sydney-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="singapore-to-sydney-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -5463,11 +5261,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -5496,11 +5293,10 @@
 
 
 
-            <a href="sydney-to-brisbane-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="sydney-to-brisbane-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -5512,11 +5308,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -5539,11 +5334,10 @@
 
 
 
-            <a href="sydney-to-dubai-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="sydney-to-dubai-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Sydney to Dubai Flight Cost Breakdown)"
@@ -5554,11 +5348,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -5581,12 +5374,10 @@
 
 
 
-            <a href="sydney-to-goldcoast-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="sydney-to-goldcoast-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -5598,11 +5389,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -5625,12 +5415,10 @@
 
 
 
-            <a href="sydney-to-melbourne-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="sydney-to-melbourne-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -5642,11 +5430,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -5668,11 +5455,10 @@
 
 
 
-            <a href="sydney-to-perth-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="sydney-to-perth-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + Sydney to Perth Flight Cost Breakdown)"
@@ -5683,11 +5469,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -5710,12 +5495,10 @@
 
 
 
-            <a href="sydney-to-singapore-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="sydney-to-singapore-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -5727,11 +5510,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -5754,11 +5536,10 @@
 
 
 
-            <a href="tokyo-to-london-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="tokyo-to-london-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png" alt="Private Jet cost (Bookings + tokyo to London Flight Cost Breakdown)"
@@ -5769,11 +5550,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -5796,11 +5576,10 @@
 
 
 
-            <a href="toronto-to-newyork-private-jet-cost.html" class="blog-card route-card" data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="toronto-to-newyork-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -5812,11 +5591,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 
@@ -5839,12 +5617,10 @@
 
 
 
-            <a href="turksandcaicos-to-miami-private-jet-cost.html" class="blog-card route-card"
-                data-category="private jets"
-                style="display: block; background: var(--graphene); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; text-decoration: none; transition: transform 0.3s ease;">
+            <a href="turksandcaicos-to-miami-private-jet-cost.html" class="blog-card route-card">
 
 
-                <div class="card-img-container" style="height: 250px; overflow: hidden;">
+                <div class="card-img-container">
 
 
                     <img src="jet_master.png"
@@ -5856,11 +5632,10 @@
                 </div>
 
 
-                <div class="card-content" style="padding: 2rem;">
+                <div class="card-content">
 
 
-                    <div class="card-meta"
-                        style="color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
+                    <div class="card-meta">
                         private jets</div>
 
 

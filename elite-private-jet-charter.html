@@ -197,73 +197,70 @@
             border-radius: 20px;
         }
 
-        .section-padding {
-            padding: 8rem 0;
+        /* Responsive Form Grid */
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 1.2rem 2.5rem;
-            border-radius: 8px;
-            font-size: 0.9rem;
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label {
+            display: block;
+            font-size: 0.75rem;
             text-transform: uppercase;
+            color: var(--primary-gold);
             letter-spacing: 2px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            text-decoration: none;
-            text-align: center;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+        .form-control {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            padding: 1.2rem;
+            color: #fff;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            box-sizing: border-box;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-gold);
+            background: rgba(212, 175, 55, 0.08);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
         }
 
-        .btn-gold {
+        /* Floating WhatsApp Button */
+        .wa-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 54px;
+            height: 54px;
             background: linear-gradient(135deg, #25D366, #128C7E);
             color: #fff !important;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            padding: 0.8rem 1.5rem;
-            border-radius: 8px;
-            display: inline-block;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-        }
-
-        .btn-gold:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
-            filter: brightness(1.1);
-        }
-
-        .btn-sm {
-            padding: 0.6rem 1.2rem;
-            font-size: 0.75rem;
-        }
-
-        .btn-outline {
-            border: 1px solid var(--primary-gold);
-            color: var(--primary-gold);
-        }
-
-        /* Hero */
-        .jet-hero {
-            height: 85vh;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 0 5px rgba(37, 211, 102, 0.1);
+            z-index: 999999;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none !important;
+        }
+        .wa-float:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
         }
 
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        @media (max-width: 1000px) {
-            .grid-3 { grid-template-columns: 1fr; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.8rem !important; }
+            .section-padding { padding: 4rem 0; }
+            .form-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+            .wa-float { bottom: 20px; right: 20px; width: 48px; height: 48px; }
         }
 
         /* ELB_STYLE_END */
@@ -330,17 +327,67 @@
         </div>
     </section>
 
-    <!-- LEAD FORM SECTION (VALENS WIDGET INTEGRATION) -->
+    <!-- FORM SECTION -->
     <section id="book" class="section-padding" style="background: #000;">
-        <div class="container" style="max-width: 1000px;">
-            <div class="glass-panel" style="padding: 1.5rem; border: 1px solid var(--primary-gold); background: #000; border-radius: 24px; box-shadow: 0 40px 100px rgba(0,0,0,0.8);">
-                <iframe src="https://jetluxe.jetlink.app/affiliate/valens/widget/cb37e0db-af0a-42bd-94c4-26736dae4aa9?signature=07e252c33f271e5994234ad6e8864d593388f699b6f80ee4add5512ffa467224" 
-                    frameborder="0" 
-                    allowfullscreen 
-                    style="width: 100%; min-height: 650px; border-radius: 12px; background: transparent;"></iframe>
-                <div style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">
-                    Elite Luxury Bookings | Powered by Valens Core
+        <div class="container" style="max-width: 850px;">
+            <div class="glass-panel" style="padding: 3rem; border: 1px solid var(--primary-gold); background: #000; border-radius: 24px; box-shadow: 0 40px 100px rgba(0,0,0,0.8);">
+                
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 class="serif gold-text" style="font-size: 2.5rem; margin-bottom: 1rem;">Global Charter Inquiry</h2>
+                    <p style="color: var(--text-muted); text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem;">24/7 Concierge Dispatch</p>
                 </div>
+
+                <form action="https://formspree.io/f/xwvwanlj" method="POST">
+                    <input type="hidden" name="_subject" value="GLOBAL INQUIRY: Private Jet Charter Hub">
+                    <input type="hidden" name="Source" value="Aviation Hub Page">
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" name="name" class="form-control" placeholder="e.g. James Harrington" required>
+                        </div>
+                        <div class="form-group">
+                            <label>WhatsApp / Phone</label>
+                            <input type="tel" name="phone" class="form-control" placeholder="+44 7XXX XXXXXX" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email" class="form-control" placeholder="client@privatemail.com" required>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Departure City</label>
+                            <input type="text" name="from" class="form-control" placeholder="City or Code" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Destination City</label>
+                            <input type="text" name="to" class="form-control" placeholder="City or Code" required>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Preferred Date</label>
+                            <input type="date" name="date" class="form-control" style="color-scheme: dark;">
+                        </div>
+                        <div class="form-group">
+                            <label>Passengers</label>
+                            <input type="number" name="pax" class="form-control" placeholder="Quantity">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Special Requirements</label>
+                        <textarea name="message" class="form-control" rows="3" placeholder="Aircraft preference, catering, or urgent dispatch needs..." style="resize: none;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-gold" style="width: 100%; padding: 1.5rem; font-size: 1.1rem; border-radius: 12px; margin-top: 1rem; background: linear-gradient(135deg, #D4AF37, #B8860B); color: #000 !important;">
+                        Submit Confidential Inquiry
+                    </button>
+                </form>
             </div>
         </div>
     </section>
