@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -137,7 +137,7 @@
         }
 
         /* ELB_STYLE_START */
-        .global-nav {
+.global-nav {
             position: fixed;
             top: 0;
             left: 0;
@@ -394,7 +394,45 @@
             }
         }
 
-        /* ELB_STYLE_END */
+        /* ELB_STYLE_START_REDESIGN */
+        .why-elb-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 2rem;
+        }
+
+        .why-elb-list li {
+            position: relative;
+            padding-left: 2.5rem;
+            margin-bottom: 1.5rem;
+            display: block !important;
+        }
+
+        .why-elb-list li::before {
+            content: "\2022";
+            position: absolute;
+            left: 0;
+            color: var(--primary-gold);
+            font-size: 1.8rem;
+            line-height: 1;
+            top: -0.2rem;
+        }
+
+        .why-elb-list .text {
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: 1.05rem;
+        }
+
+        .why-elb-list .text strong {
+            color: #fff;
+            display: block;
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+/* ELB_STYLE_END */
     
         .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 100000; box-shadow: 0 10px 25px rgba(0,0,0,0.3); transition: all 0.3s; }
         .wa-float:hover { transform: scale(1.1); background: #128C7E; }
@@ -418,13 +456,12 @@
             <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></div>
         </div>
     </nav>
-    <div class="mobile-menu" id="elbMobileMenu">
-        <a href="/elite-private-jet-charter.html">✈ Private Jets</a>
-        <a href="/luxury-villa-rentals.html">🏡 Luxury Villas</a>
-        <a href="/luxury-yacht-rentals.html">⚓ Luxury Yachts</a>
-        <a href="/blog.html">📰 Blog</a>
-        <a href="/contact.html">📞 Contact</a>
-        
+        <div class="mobile-menu" id="elbMobileMenu">
+        <a href="/elite-private-jet-charter.html">Private Jets</a>
+        <a href="/luxury-villa-rentals.html">Luxury Villas</a>
+        <a href="/luxury-yacht-rentals.html">Luxury Yachts</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/contact.html">Contact</a>
     </div>
     <!-- ELB_NAV_END -->
 
@@ -504,92 +541,51 @@
             </div>
 
         </div>
-    </header>
+        </header>
 
-    <section class="section-padding" style="background: rgba(212, 175, 55, 0.02);">
+    <section class="section-padding" style="background: rgba(212, 175, 55, 0.02); border-bottom: 1px solid var(--glass-border);">
         <div class="container">
             <div class="grid-2 align-items-center">
                 <div>
-                    <h2 class="serif gold-text" style="font-size: 2.8rem; margin-bottom: 2rem;">Why Elite Luxury
-                        Bookings?</h2>
-                    <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem; font-size: 1.1rem;">As an
-                        experience curator, we transcend standard aviation logistics. We act as your single point of
-                        contact, coordinating every nuance of your journey through a vetted global operator network.</p>
-                    <ul class="luxury-list" style="margin-top: 2rem;">
-                        <li style="display: flex; gap: 1.2rem; align-items: flex-start; margin-bottom: 1.2rem;">
-                            <span
-                                style="color: var(--primary-gold); font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;">✓</span>
-                            <span>
-                                <strong
-                                    style="color: #fff; display: inline-block; width: 230px; vertical-align: top;">Single
-                                    Point of Contact:</strong>
-                                <span
-                                    style="color: var(--text-muted); display: inline-block; width: calc(100% - 240px); min-width: 200px;">Dedicated
-                                    concierge handling all logistics personally.</span>
-                            </span>
+                    <h2 class="serif gold-text" style="font-size: 2.8rem; margin-bottom: 2rem;">Why Elite Luxury Bookings?</h2>
+                    <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem; font-size: 1.1rem;">As an experience curator, we transcend standard aviation logistics. We act as your single point of contact, coordinating every nuance of your journey through a vetted global operator network.</p>
+                    <ul class="why-elb-list">
+                        <li>
+                            
+                            <div class="text">
+                                <strong>Single Point of Contact</strong>
+                                Dedicated concierge handling all logistics personally, from tarmac to terminal.
+                            </div>
                         </li>
-                        <li style="display: flex; gap: 1.2rem; align-items: flex-start; margin-bottom: 1.2rem;">
-                            <span
-                                style="color: var(--primary-gold); font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;">✓</span>
-                            <span>
-                                <strong
-                                    style="color: #fff; display: inline-block; width: 230px; vertical-align: top;">Access
-                                    to Off-Market Aircraft:</strong>
-                                <span
-                                    style="color: var(--text-muted); display: inline-block; width: calc(100% - 240px); min-width: 200px;">Exclusive
-                                    availability not found on public platforms.</span>
-                            </span>
+                        <li>
+                            
+                            <div class="text">
+                                <strong>Off-Market Aircraft Access</strong>
+                                Exclusive availability of ARGUS & Wyvern vetted assets not found on public platforms.
+                            </div>
                         </li>
-                        <li style="display: flex; gap: 1.2rem; align-items: flex-start; margin-bottom: 1.2rem;">
-                            <span
-                                style="color: var(--primary-gold); font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;">✓</span>
-                            <span>
-                                <strong
-                                    style="color: #fff; display: inline-block; width: 230px; vertical-align: top;">Time-Saving
-                                    Precision:</strong>
-                                <span
-                                    style="color: var(--text-muted); display: inline-block; width: calc(100% - 240px); min-width: 200px;">Rapid
-                                    dispatch and streamlined terminal protocols.</span>
-                            </span>
+                        <li>
+                            
+                            <div class="text">
+                                <strong>Time-Saving Precision</strong>
+                                Rapid dispatch protocols and streamlined private FBO transitions for maximum efficiency.
+                            </div>
                         </li>
-                        <li style="display: flex; gap: 1.2rem; align-items: flex-start; margin-bottom: 1.2rem;">
-                            <span
-                                style="color: var(--primary-gold); font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;">✓</span>
-                            <span>
-                                <strong
-                                    style="color: #fff; display: inline-block; width: 230px; vertical-align: top;">Discreet
-                                    & Confidential:</strong>
-                                <span
-                                    style="color: var(--text-muted); display: inline-block; width: calc(100% - 240px); min-width: 200px;">Absolute
-                                    privacy for high-profile business and leisure travelers.</span>
-                            </span>
-                        </li>
-                        <li style="display: flex; gap: 1.2rem; align-items: flex-start; margin-bottom: 1.2rem;">
-                            <span
-                                style="color: var(--primary-gold); font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;">✓</span>
-                            <span>
-                                <strong
-                                    style="color: #fff; display: inline-block; width: 230px; vertical-align: top;">24/7
-                                    Global Coordination:</strong>
-                                <span
-                                    style="color: var(--text-muted); display: inline-block; width: calc(100% - 240px); min-width: 200px;">Round-the-clock
-                                    support across all time zones.</span>
-                            </span>
+                        <li>
+                            
+                            <div class="text">
+                                <strong>Confidentiality First</strong>
+                                Absolute privacy for high-profile business and leisure travelers in an encrypted service environment.
+                            </div>
                         </li>
                     </ul>
                 </div>
                 <div class="glass-panel" style="padding: 3rem; border-color: rgba(212, 175, 55, 0.3);">
                     <h3 class="serif gold-text" style="font-size: 2rem; margin-bottom: 1.5rem;">Safety & Authority</h3>
-                    <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;">Our safety-first
-                        approach ensures every flight meets the highest international standards. We utilize an ARGUS &
-                        Wyvern certified partner network for absolute peace of mind.</p>
+                    <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;">Our safety-first approach ensures every flight meets the highest international standards. We utilize an ARGUS & Wyvern certified partner network for absolute peace of mind.</p>
                     <div style="display: flex; gap: 2rem; align-items: center; margin-top: 2rem; opacity: 0.8;">
-                        <span
-                            style="font-weight: 700; border: 1px solid var(--primary-gold); padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.8rem;">ARGUS
-                            PARTNER</span>
-                        <span
-                            style="font-weight: 700; border: 1px solid var(--primary-gold); padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.8rem;">WYVERN
-                            VETTED</span>
+                        <span style="font-weight: 700; border: 1px solid var(--primary-gold); padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.8rem;">ARGUS PARTNER</span>
+                        <span style="font-weight: 700; border: 1px solid var(--primary-gold); padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.8rem;">WYVERN VETTED</span>
                     </div>
                 </div>
             </div>
@@ -598,121 +594,71 @@
 
     <section class="section-padding">
         <div class="container">
-            <h2 class="serif gold-text" style="font-size: 2.8rem; text-align: center; margin-bottom: 4rem;">Route
-                Intelligence & Fleet</h2>
-
+            <h2 class="serif gold-text" style="font-size: 2.8rem; text-align: center; margin-bottom: 4rem;">Fleet Intelligence & Logistics</h2>
             <div class="grid-3" style="margin-bottom: 4rem;">
-                <div class="glass-panel" style="padding: 2.5rem; text-align: center;">
-                    <div
-                        style="font-size: 1.2rem; color: var(--primary-gold); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 2px;">
-                        Light Jet</div>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">Ideal for rapid efficiency. Phenom 300 or
-                        Citation CJ4 class aircraft. Typical flight time: 1h 45m.</p>
+                <div class="glass-panel fleet-card">
+                    <div class="type">Light Jet</div>
+                    <p class="desc">Ideal for rapid efficiency on the Maldives to Riyadh corridor. Phenom 300 or Citation CJ4 class aircraft.</p>
                 </div>
-                <div class="glass-panel" style="padding: 2.5rem; text-align: center;">
-                    <div
-                        style="font-size: 1.2rem; color: var(--primary-gold); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 2px;">
-                        Midsize Jet</div>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">Enhanced cabin volume and stand-up comfort.
-                        Citation Latitude or Hawker 900XP class.</p>
+                <div class="glass-panel fleet-card">
+                    <div class="type">Midsize Jet</div>
+                    <p class="desc">Enhanced cabin volume and stand-up comfort. Citation Latitude or Hawker 900XP class.</p>
                 </div>
-                <div class="glass-panel" style="padding: 2.5rem; text-align: center;">
-                    <div
-                        style="font-size: 1.2rem; color: var(--primary-gold); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 2px;">
-                        Heavy Jet</div>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">Maximum prestige and intercontinental range
-                        capabilities. Gulfstream G650 or Global 7500.</p>
+                <div class="glass-panel fleet-card">
+                    <div class="type">Heavy Jet</div>
+                    <p class="desc">Maximum prestige and intercontinental range. Gulfstream G650 or Global 7500 for the ultimate mission.</p>
                 </div>
             </div>
 
             <div class="grid-2">
                 <div class="glass-panel" style="padding: 3rem;">
-                    <h3 class="serif gold-text" style="font-size: 2.2rem; margin-bottom: 1.5rem;">Flight Performance
-                    </h3>
-                    <p style="color: var(--text-muted); line-height: 1.8;">The Maldives to Riyadh corridor is one of the
-                        most vital business routes in East Asia. With a flight time of approximately 2 hours, private
-                        aviation allows business travelers to bypass commercial congestion entirely.</p>
+                    <h3 class="serif gold-text" style="font-size: 2.2rem; margin-bottom: 1.5rem;">Flight Performance</h3>
+                    <p style="color: var(--text-muted); line-height: 1.8;">The Maldives to Riyadh corridor is a vital luxury transit route. By utilizing private aviation, travelers bypass commercial congestion entirely, reclaiming hours of valuable time.</p>
                 </div>
                 <div class="glass-panel" style="padding: 3rem;">
-                    <h3 class="serif gold-text" style="font-size: 2.2rem; margin-bottom: 1.5rem;">Airports Covered</h3>
-                    <ul class="luxury-list">
-                        <li>Maldives Private Terminals (FBO)</li>
-                        <li>Riyadh Private Terminals (FBO)</li>
-                        <li>Dedicated Private FBO Terminals at all locations.</li>
+                    <h3 class="serif gold-text" style="font-size: 2.2rem; margin-bottom: 1.5rem;">Exclusive Coverage</h3>
+                    <ul class="why-elb-list" style="margin-top: 0;">
+                        <li> <div class="text"><strong>Dedicated FBO Access</strong> Private terminals at both Maldives and Riyadh hubs.</div> </li>
+                        <li> <div class="text"><strong>Seemless Ground Logistics</strong> Coordinated chauffeur services awaiting your arrival.</div> </li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MID-PAGE CTA -->
-    <section class="section-padding"
-        style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&q=80&w=1920'); background-size: cover; background-position: center; border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+    <section class="section-padding" style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&q=80&w=1920'); background-size: cover; background-position: center; border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
         <div class="container" style="text-align: center;">
             <h2 class="serif gold-text" style="font-size: 3rem; margin-bottom: 1.5rem;">Request Private Jet Access</h2>
-            <p style="max-width: 700px; margin: 0 auto 3rem; font-size: 1.2rem; line-height: 1.6;">Secure your strategic
-                flight slot for the Maldives - Riyadh corridor. Our concierge is standing by to curate your bespoke
-                itinerary.</p>
+            <p style="max-width: 700px; margin: 0 auto 3rem; font-size: 1.2rem; line-height: 1.6;">Secure your strategic flight slot for the Maldives to Riyadh corridor. Our concierge is standing by to curate your bespoke itinerary.</p>
             <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
-                <a href="https://wa.me/918801079030" class="btn btn-gold" style="padding: 1.5rem 3rem;">WhatsApp
-                    Priority Concierge</a>
-                <a href="#top" class="btn"
-                    style="border: 1px solid var(--primary-gold); color: #fff; padding: 1.5rem 3rem; border-radius: 8px; font-weight: 700; text-transform: uppercase;">Get
-                    Online Quote</a>
+                <a href="https://wa.me/918801079030" class="btn btn-gold" style="padding: 1.5rem 3rem;">WhatsApp Priority Concierge</a>
+                <a href="#top" class="btn" style="border: 1px solid var(--primary-gold); color: #fff; padding: 1.5rem 3rem; border-radius: 8px; font-weight: 700; text-transform: uppercase;">Get Online Quote</a>
             </div>
         </div>
     </section>
 
     <section class="section-padding" style="background: rgba(255, 255, 255, 0.01);">
         <div class="container" style="max-width: 1000px;">
-            <h2 class="serif gold-text" style="font-size: 2.8rem; text-align: center; margin-bottom: 4rem;">Refining
-                Your Experience (FAQ)</h2>
+            <h2 class="serif gold-text" style="font-size: 2.8rem; text-align: center; margin-bottom: 4rem;">Refining Your Experience (FAQ)</h2>
             <div style="display: grid; gap: 2rem;">
-                <div class="glass-panel" style="padding: 2rem;">
-                    <h4 class="gold-text" style="margin-top: 0; margin-bottom: 1rem;">How much does a private jet
-                        charter cost?</h4>
-                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">We provide tailored
-                        quotes based on aircraft availability, positioning, and specific travel requirements to ensure
-                        the best investment value for your mission.</p>
+                <div class="glass-panel faq-card">
+                    <h4>How much does the Maldives to Riyadh private jet cost?</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Quotes are tailored based on current aircraft positioning and mission requirements. Contact us for a precise, confidential appraisal.</p>
                 </div>
-                <div class="glass-panel" style="padding: 2rem;">
-                    <h4 class="gold-text" style="margin-top: 0; margin-bottom: 1rem;">Can I book a jet last minute?</h4>
-                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Yes. Our concierge can
-                        typically arrange a private flight in as little as 4 hours, depending on aircraft positioning
-                        and airport slot availability.</p>
+                <div class="glass-panel faq-card">
+                    <h4>How quickly can I depart?</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">With our rapid dispatch protocol, you can typically be airborne within 4 hours of your initial request, subject to aircraft availability.</p>
                 </div>
-                <div class="glass-panel" style="padding: 2rem;">
-                    <h4 class="gold-text" style="margin-top: 0; margin-bottom: 1rem;">Is private jet travel
-                        confidential?</h4>
-                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Absolute discretion is
-                        our standard. We utilize private terminal access (FBOs) to ensure you bypass commercial crowds
-                        and maintain anonymity.</p>
-                </div>
-                <div class="glass-panel" style="padding: 2rem;">
-                    <h4 class="gold-text" style="margin-top: 0; margin-bottom: 1rem;">Can I choose my aircraft type?
-                    </h4>
-                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Certainly. We offer
-                        exclusive access to a diverse fleet ranging from light jets for short hops to heavy jets for
-                        transcontinental luxury.</p>
-                </div>
-                <div class="glass-panel" style="padding: 2rem;">
-                    <h4 class="gold-text" style="margin-top: 0; margin-bottom: 1rem;">Are pets allowed on board?</h4>
-                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Yes, we coordinate
-                        pet-friendly flights regularly. Please specify your requirements so we can secure the
-                        appropriate aircraft cabin.</p>
-                </div>
-                <div class="glass-panel" style="padding: 2rem;">
-                    <h4 class="gold-text" style="margin-top: 0; margin-bottom: 1rem;">How quickly can I depart?</h4>
-                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Transition times are
-                        minimized. You can typically be airborne within 15-20 minutes of arriving at the private
-                        terminal.</p>
+                <div class="glass-panel faq-card">
+                    <h4>Is private aviation truly discrete?</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Absolute discretion is our standard. Private terminal access (FBOs) ensure you maintain complete anonymity throughout your journey.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- INTERNAL LINKING -->
-    <section class="section-padding" style="border-top: 1px solid rgba(37, 211, 102, 0.1); text-align: center;">
+        <!-- INTERNAL LINKING -->
+    <section class="section-padding" style="border-top: 1px solid rgba(212, 175, 55, 0.1); text-align: center;">
         <div class="container">
             <h3 class="serif gold-text" style="font-size: 2rem; margin-bottom: 2rem;">Related Private Jet Routes</h3>
             <div style="display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center;">
@@ -721,7 +667,7 @@
                     onmouseover="this.style.color='#D4AF37'; this.style.borderColor='#D4AF37'"
                     onmouseout="this.style.color='rgba(255,255,255,0.6)'; this.style.borderColor='transparent'">London
                     to Paris Charter</a>
-                <a href="/dubai-to-monaco-private-jet-cost.html"
+                <a href="/dubai-to-london-private-jet-cost.html"
                     style="color: var(--text-muted); text-decoration: none; border-bottom: 1px solid transparent; transition: all 0.3s;"
                     onmouseover="this.style.color='#D4AF37'; this.style.borderColor='#D4AF37'"
                     onmouseout="this.style.color='rgba(255,255,255,0.6)'; this.style.borderColor='transparent'">Dubai to
@@ -734,7 +680,6 @@
             </div>
         </div>
     </section>
-
     <!-- ELB_FOOTER_START -->
         <footer style="background:#000; border-top:1px solid rgba(255,255,255,0.05); padding:6rem 0;">
         <div class="container">
@@ -773,6 +718,7 @@
 </body>
 
 </html>
+
 
 
 

@@ -6,9 +6,9 @@ foreach ($file in $files) {
 
     # Find all <style> blocks
     $styleRegex = '(?s)<style>(.*?)</style>'
-    $matches = [regex]::Matches($content, $styleRegex)
+    $allMatches = [regex]::Matches($content, $styleRegex)
     
-    foreach ($m in $matches) {
+    foreach ($m in $allMatches) {
         $styleContent = $m.Groups[1].Value
         
         # Count braces

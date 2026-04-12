@@ -8,7 +8,8 @@
     <title>Luxury Villa Rentals | Exclusive Private Estates | Elite Luxury Bookings</title>
     <meta name="description"
         content="Access the world's most exclusive, off-market private villas and estates. Fully staffed sanctuaries in Ibiza, Mykonos, Saint-Tropez, and beyond.">
-    
+    <link rel="canonical" href="https://eliteluxurybookings.com/luxury-villa-rentals.html">
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J56D1LJLFM"></script>
     <script>
@@ -44,36 +45,152 @@
             padding-top: 72px;
         }
 
-        .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
-        .serif { font-family: 'Cormorant Garamond', serif; }
-        .gold-text { color: var(--primary-gold); }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .gold-text {
+            color: var(--primary-gold);
+        }
 
         /* NAVIGATION REPLICATION */
-        .global-nav { position:fixed; top:0; left:0; right:0; background:rgba(5,5,5,0.98); backdrop-filter:blur(24px); border-bottom:1px solid rgba(212,175,55,0.2); z-index:99999; }
-        .global-nav-inner { display:flex; align-items:center; justify-content:space-between; height:72px; gap:1rem; max-width:1400px; margin:0 auto; padding:0 2rem; box-sizing: border-box; }
-        .nav-brand { font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:600; color:#fff !important; text-decoration:none !important; }
-        .nav-gold { color:#D4AF37 !important; }
-        .nav-links { display:flex; align-items:center; gap:0.25rem; list-style:none; flex:1; justify-content:center; margin:0; padding:0; }
-        .nav-links a { color:rgba(255,255,255,0.7) !important; text-decoration:none !important; font-size:0.82rem; text-transform:uppercase; letter-spacing:1.5px; padding:0.5rem 0.9rem; border-radius:6px; transition:all 0.4s; }
-        .nav-links a:hover { color:#D4AF37 !important; }
-        
-        .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:0.5rem; }
-        .nav-hamburger span { display:block; width:24px; height:2px; background:rgba(255,255,255,0.8); border-radius:2px; }
-        .mobile-menu { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:#050505; padding:72px 2rem 2rem; z-index:100000; flex-direction:column; gap:0.5rem; }
-        .mobile-menu.open { display:flex !important; }
-        .mobile-menu a { color:rgba(255,255,255,0.8) !important; text-decoration:none !important; font-size:1.1rem; text-transform:uppercase; letter-spacing:2px; padding:1.2rem 0; border-bottom:1px solid rgba(255,255,255,0.05); }
+        .global-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(5, 5, 5, 0.98);
+            backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            z-index: 99999;
+        }
+
+        .global-nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+            gap: 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            box-sizing: border-box;
+        }
+
+        .nav-brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #fff !important;
+            text-decoration: none !important;
+        }
+
+        .nav-gold {
+            color: #D4AF37 !important;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            list-style: none;
+            flex: 1;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.7) !important;
+            text-decoration: none !important;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 0.5rem 0.9rem;
+            border-radius: 6px;
+            transition: all 0.4s;
+        }
+
+        .nav-links a:hover {
+            color: #D4AF37 !important;
+        }
+
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .nav-hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 2px;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #050505;
+            padding: 72px 2rem 2rem;
+            z-index: 100000;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .mobile-menu.open {
+            display: flex !important;
+        }
+
+        .mobile-menu a {
+            color: rgba(255, 255, 255, 0.8) !important;
+            text-decoration: none !important;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
 
         /* HERO & CONTENT */
-        .page-hero { 
-            padding: 10rem 0 6rem; 
-            text-align: center; 
+        .page-hero {
+            padding: 10rem 0 6rem;
+            text-align: center;
             position: relative;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('ultra_luxury_mediterranean_villa_sunset_1775902206137.png');
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('ultra_luxury_mediterranean_villa_sunset_1775902206137.png');
             background-size: cover;
             background-position: center;
         }
-        .page-hero h1 { font-size: clamp(3rem, 6vw, 5.5rem); margin-bottom: 1.5rem; line-height: 1.1; font-weight: 300; }
-        .page-hero p { color: #fff; max-width: 800px; margin: 0 auto; font-size: 1.25rem; text-shadow: 0 2px 10px rgba(0,0,0,0.5); font-family: 'Cormorant Garamond', serif; font-style: italic; }
+
+        .page-hero h1 {
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            font-weight: 300;
+        }
+
+        .page-hero p {
+            color: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.25rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+        }
 
         .glass-panel {
             background: rgba(10, 10, 10, 0.85);
@@ -81,7 +198,7 @@
             border-radius: 30px;
             backdrop-filter: blur(30px);
             padding: 4rem;
-            box-shadow: 0 50px 100px rgba(0,0,0,0.8);
+            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.8);
         }
 
         .villa-grid {
@@ -93,25 +210,51 @@
         }
 
         .villa-card {
-            background: rgba(255,255,255,0.02);
+            background: rgba(255, 255, 255, 0.02);
             border-radius: 20px;
             overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.05);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             transition: var(--transition);
         }
 
-        .villa-card:hover { border-color: var(--primary-gold); transform: translateY(-10px); background: rgba(212,175,55,0.02); }
-        .villa-info { padding: 3rem 2rem; }
-        .villa-info h3 { font-size: 2rem; margin-bottom: 1rem; }
-        .villa-tag { color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; display: block; margin-bottom: 1rem; }
+        .villa-card:hover {
+            border-color: var(--primary-gold);
+            transform: translateY(-10px);
+            background: rgba(212, 175, 55, 0.02);
+        }
+
+        .villa-info {
+            padding: 3rem 2rem;
+        }
+
+        .villa-info h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .villa-tag {
+            color: var(--primary-gold);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 1rem;
+        }
 
         /* FORM STYLING */
-        .form-section { padding: 0; margin-top: -80px; position: relative; z-index: 10; }
+        .form-section {
+            padding: 0;
+            margin-top: -80px;
+            position: relative;
+            z-index: 10;
+        }
+
         .form-control {
             width: 100%;
             background: transparent;
             border: none;
-            border-bottom: 1px solid rgba(255,255,255,0.15);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
             padding: 1.5rem 0;
             color: #fff;
             font-family: 'Inter', sans-serif;
@@ -119,7 +262,12 @@
             outline: none;
             transition: var(--transition);
         }
-        .form-control:focus { border-bottom-color: var(--primary-gold); background: rgba(255,255,255,0.02); }
+
+        .form-control:focus {
+            border-bottom-color: var(--primary-gold);
+            background: rgba(255, 255, 255, 0.02);
+        }
+
         .btn-gold {
             background: linear-gradient(135deg, #D4AF37, #B8860B);
             color: #000;
@@ -135,9 +283,20 @@
             font-size: 1.2rem;
             margin-top: 2rem;
         }
-        .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(212,175,55,0.3); filter: brightness(1.1); }
 
-        .form-label { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold); }
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
+            filter: brightness(1.1);
+        }
+
+        .form-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary-gold);
+        }
 
         .wa-float {
             position: fixed;
@@ -152,16 +311,31 @@
             align-items: center;
             justify-content: center;
             z-index: 100000;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
             transition: all 0.3s;
         }
 
         @media (max-width: 1024px) {
-            .nav-links { display: none; }
-            .nav-hamburger { display: flex; }
-            .villa-grid { grid-template-columns: 1fr; }
-            .form-section { margin-top: 2rem; padding: 0 1rem; }
-            .glass-panel { padding: 2.5rem 1.5rem; }
+            .nav-links {
+                display: none;
+            }
+
+            .nav-hamburger {
+                display: flex;
+            }
+
+            .villa-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-section {
+                margin-top: 2rem;
+                padding: 0 1rem;
+            }
+
+            .glass-panel {
+                padding: 2.5rem 1.5rem;
+            }
         }
     </style>
 </head>
@@ -178,7 +352,8 @@
                 <li><a href="/blog.html">Blog</a></li>
                 <li><a href="/contact.html">Contact</a></li>
             </ul>
-            <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></div>
+            <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()">
+                <span></span><span></span><span></span></div>
         </div>
     </nav>
     <div class="mobile-menu" id="elbMobileMenu">
@@ -194,7 +369,8 @@
         <div class="container">
             <span class="villa-tag" style="color: #fff; opacity: 0.8;">Selected by Referral. Not Publicly Listed.</span>
             <h1 class="serif">Unrivaled <span class="gold-text">Private Villa</span> Portfolio</h1>
-            <p>"Sanctuaries of exclusivity. Ultra-premium estates and fully-staffed retreats designed for absolute privacy in the world's most coveted destinations."</p>
+            <p>"Sanctuaries of exclusivity. Ultra-premium estates and fully-staffed retreats designed for absolute
+                privacy in the world's most coveted destinations."</p>
         </div>
     </section>
 
@@ -202,12 +378,15 @@
     <section id="inquiry" class="form-section container">
         <div class="glass-panel" style="max-width: 950px; margin: 0 auto;">
             <div style="text-align: center; margin-bottom: 4rem;">
-                <h2 class="serif gold-text" style="font-size: 3.5rem; margin-bottom: 1rem; font-weight: 300;">Request Private Villa Access</h2>
-                <p style="color: var(--text-muted); font-size: 1rem; text-transform: uppercase; letter-spacing: 4px;">Exclusive Estate Procurement & Coordination</p>
+                <h2 class="serif gold-text" style="font-size: 3.5rem; margin-bottom: 1rem; font-weight: 300;">Request
+                    Private Villa Access</h2>
+                <p style="color: var(--text-muted); font-size: 1rem; text-transform: uppercase; letter-spacing: 4px;">
+                    Exclusive Estate Procurement & Coordination</p>
             </div>
-            <form action="https://formspree.io/f/xwvwanlj" method="POST" style="display: flex; flex-direction: column; gap: 2.5rem;">
+            <form action="https://formspree.io/f/xwvwanlj" method="POST"
+                style="display: flex; flex-direction: column; gap: 2.5rem;">
                 <input type="hidden" name="_subject" value="Villa Inquiry: Global Portfolio">
-                
+
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;" class="form-grid">
                     <div style="display: flex; flex-direction: column; gap: 0.8rem;">
                         <label class="form-label">Full Name *</label>
@@ -222,22 +401,28 @@
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;" class="form-grid">
                     <div style="display: flex; flex-direction: column; gap: 0.8rem;">
                         <label class="form-label">Private Email *</label>
-                        <input type="email" name="email" class="form-control" placeholder="client@exclusive.com" required>
+                        <input type="email" name="email" class="form-control" placeholder="client@exclusive.com"
+                            required>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 0.8rem;">
                         <label class="form-label">Desired Destination</label>
-                        <input type="text" name="destination" class="form-control" placeholder="Ibiza, St. Barts, Mykonos...">
+                        <input type="text" name="destination" class="form-control"
+                            placeholder="Ibiza, St. Barts, Mykonos...">
                     </div>
                 </div>
 
                 <div style="display: flex; flex-direction: column; gap: 1rem;">
                     <label class="form-label">Mission Brief & Requirements</label>
-                    <textarea name="requirements" class="form-control" rows="4" placeholder="Dates, guest count, or specific staffing needs (Private Chef, Security, Concierge)..." style="resize: none;"></textarea>
+                    <textarea name="requirements" class="form-control" rows="4"
+                        placeholder="Dates, guest count, or specific staffing needs (Private Chef, Security, Concierge)..."
+                        style="resize: none;"></textarea>
                 </div>
 
                 <div style="text-align: center; margin-top: 1rem;">
                     <button type="submit" class="btn-gold">Initiate Estate Procurement</button>
-                    <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-top: 2rem; letter-spacing: 1px;">A senior concierge will respond personally within 30 minutes.</p>
+                    <p
+                        style="text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-top: 2rem; letter-spacing: 1px;">
+                        A senior concierge will respond personally within 30 minutes.</p>
                 </div>
             </form>
         </div>
@@ -249,52 +434,77 @@
                 <div class="villa-info">
                     <span class="villa-tag">Ibiza, Spain</span>
                     <h3 class="serif">Hidden Clifftop Sanctuary</h3>
-                    <p style="color: var(--text-muted); line-height: 1.8;">A fully-staffed clifftop retreat offering absolute privacy, an elite private chef, and an integrated invisible security perimeter.</p>
+                    <p style="color: var(--text-muted); line-height: 1.8;">A fully-staffed clifftop retreat offering
+                        absolute privacy, an elite private chef, and an integrated invisible security perimeter.</p>
                 </div>
             </div>
             <div class="villa-card">
                 <div class="villa-info">
                     <span class="villa-tag">Mykonos, Greece</span>
                     <h3 class="serif">Aegean Grand Estate</h3>
-                    <p style="color: var(--text-muted); line-height: 1.8;">Expansive minimalist luxury overlooking the Cyclades. Features a 50m infinity pool and private helipad access for discrete arrival.</p>
+                    <p style="color: var(--text-muted); line-height: 1.8;">Expansive minimalist luxury overlooking the
+                        Cyclades. Features a 50m infinity pool and private helipad access for discrete arrival.</p>
                 </div>
             </div>
             <div class="villa-card">
                 <div class="villa-info">
                     <span class="villa-tag">St. Barts</span>
                     <h3 class="serif">Caribbean Ocean Front</h3>
-                    <p style="color: var(--text-muted); line-height: 1.8;">Ultra-discrete beach-front acreage. Complete with internal concierge and 24/7 discrete protective services for the discerning traveler.</p>
+                    <p style="color: var(--text-muted); line-height: 1.8;">Ultra-discrete beach-front acreage. Complete
+                        with internal concierge and 24/7 discrete protective services for the discerning traveler.</p>
                 </div>
             </div>
         </div>
     </section>
 
-        <footer style="background:#000; border-top:1px solid rgba(255,255,255,0.05); padding:6rem 0;">
+    <footer style="background:#000; border-top:1px solid rgba(255,255,255,0.05); padding:6rem 0;">
         <div class="container">
-            <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:4rem; padding-bottom:3rem; border-bottom:1px solid rgba(212,175,55,0.1); text-align:left;">
+            <div
+                style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:4rem; padding-bottom:3rem; border-bottom:1px solid rgba(212,175,55,0.1); text-align:left;">
                 <div style="flex:1; min-width:280px; margin-bottom:2rem;">
-                    <div style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; color:#fff; margin-bottom:1rem; line-height:1.2;">Elite Luxury <span style="color:#D4AF37;">Bookings</span></div>
-                    <p style="color:rgba(255,255,255,0.5); font-size:0.95rem; line-height:1.8; max-width:300px;">Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
+                    <div
+                        style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; color:#fff; margin-bottom:1rem; line-height:1.2;">
+                        Elite Luxury <span style="color:#D4AF37;">Bookings</span></div>
+                    <p style="color:rgba(255,255,255,0.5); font-size:0.95rem; line-height:1.8; max-width:300px;">
+                        Curating world-class luxury experiences through our global partner network. Private Jets.
+                        Yachts. Villas.</p>
                 </div>
                 <div style="min-width:160px; margin-bottom:2rem;">
-                    <div style="font-size:0.8rem; text-transform:uppercase; letter-spacing:2.5px; color:#D4AF37; margin-bottom:1.5rem; font-weight:700;">Services</div>
+                    <div
+                        style="font-size:0.8rem; text-transform:uppercase; letter-spacing:2.5px; color:#D4AF37; margin-bottom:1.5rem; font-weight:700;">
+                        Services</div>
                     <ul style="list-style:none; display:flex; flex-direction:column; gap:1rem; padding:0; margin:0;">
-                        <li><a href="/elite-private-jet-charter.html" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Private Jets</a></li>
-                        <li><a href="/luxury-yacht-rentals.html" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Luxury Yachts</a></li>
-                        <li><a href="/luxury-villa-rentals.html" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Luxury Villas</a></li>
-                        <li><a href="/blog.html" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Blog</a></li>
+                        <li><a href="/elite-private-jet-charter.html"
+                                style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;"
+                                onmouseover="this.style.color='#D4AF37'"
+                                onmouseout="this.style.color='rgba(255,255,255,0.6)'">Private Jets</a></li>
+                        <li><a href="/luxury-yacht-rentals.html"
+                                style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;"
+                                onmouseover="this.style.color='#D4AF37'"
+                                onmouseout="this.style.color='rgba(255,255,255,0.6)'">Luxury Yachts</a></li>
+                        <li><a href="/luxury-villa-rentals.html"
+                                style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;"
+                                onmouseover="this.style.color='#D4AF37'"
+                                onmouseout="this.style.color='rgba(255,255,255,0.6)'">Luxury Villas</a></li>
+                        <li><a href="/blog.html"
+                                style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;"
+                                onmouseover="this.style.color='#D4AF37'"
+                                onmouseout="this.style.color='rgba(255,255,255,0.6)'">Blog</a></li>
                     </ul>
                 </div>
             </div>
-            <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; padding-top:3rem; gap:1.5rem;">
-                <p style="color:rgba(255,255,255,0.35); font-size:0.85rem; letter-spacing:0.5px;">&copy; 2026 Elite Luxury Bookings. All rights reserved. Global Concierge Service.</p>
+            <div
+                style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; padding-top:3rem; gap:1.5rem;">
+                <p style="color:rgba(255,255,255,0.35); font-size:0.85rem; letter-spacing:0.5px;">&copy; 2026 Elite
+                    Luxury Bookings. All rights reserved. Global Concierge Service.</p>
             </div>
         </div>
     </footer>
 
     <a href="https://wa.me/918801079030" class="wa-float" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+            <path
+                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
         </svg>
     </a>
 
@@ -305,10 +515,5 @@
         }
     </script>
 </body>
+
 </html>
-
-
-
-
-
-
