@@ -20,13 +20,12 @@ RewriteRule ^(.*)\.html$ /$1/ [R=301,L]
 # Ensures that index.html is served from directories automatically (Apache Default)
 DirectoryIndex index.html
 
-# 4. Internal Rewrite (Map /page/ to page.html)
-# If a direct file doesn't exist, try appending .html
+# 4. Internal Rewrite (Map /page or /page/ to page.html)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} ^/(.+)/$
+RewriteCond %{REQUEST_URI} ^/([^/.]+)/?$
 RewriteCond %{DOCUMENT_ROOT}/%1.html -f
-RewriteRule ^(.*)/$ $1.html [L]
+RewriteRule ^([^/.]+)/?$ %1.html [L]
 
 # 4. PHP Blocking Shield (Prevents Legacy WordPress Database Errors)
 # This forces the server to NEVER look for .php files, ensuring the static site stays live.
