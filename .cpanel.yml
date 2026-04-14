@@ -1,24 +1,22 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/ccgaumtb/public_html
-    
     # 1. DECOMMISSION WORDPRESS (Force Delete Core Folders)
-    - rm -rf $DEPLOYPATH/wp-admin
-    - rm -rf $DEPLOYPATH/wp-includes
-    - rm -rf $DEPLOYPATH/wp-content
+    - rm -rf /home/ccgaumtb/public_html/wp-admin
+    - rm -rf /home/ccgaumtb/public_html/wp-includes
+    - rm -rf /home/ccgaumtb/public_html/wp-content
     
     # 2. DELETE WORDPRESS SYSTEM FILES (Root Files)
-    - rm -f $DEPLOYPATH/index.php
-    - rm -f $DEPLOYPATH/wp-*.php
-    - rm -f $DEPLOYPATH/xmlrpc.php
-    - rm -f $DEPLOYPATH/license.txt
-    - rm -f $DEPLOYPATH/readme.html
+    - rm -f /home/ccgaumtb/public_html/index.php
+    - rm -f /home/ccgaumtb/public_html/wp-*.php
+    - rm -f /home/ccgaumtb/public_html/xmlrpc.php
+    - rm -f /home/ccgaumtb/public_html/license.txt
+    - rm -f /home/ccgaumtb/public_html/readme.html
     
     # 3. CLEAN UP LEGACY HTML (Loose root files)
-    - find $DEPLOYPATH -maxdepth 1 -name "*.html" -not -name "index.html" -delete
+    - find /home/ccgaumtb/public_html -maxdepth 1 -name "*.html" -not -name "index.html" -delete
     
     # 4. SYNCHRONIZE MASTER STATIC NETWORK
-    - /bin/cp -RV * $DEPLOYPATH
-    - /bin/cp -V .htaccess $DEPLOYPATH
+    - /bin/cp -RV * /home/ccgaumtb/public_html
+    - /bin/cp -V .htaccess /home/ccgaumtb/public_html
     - echo "Final Static Migration Complete: WordPress Decommissioned."
