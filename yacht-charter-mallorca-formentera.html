@@ -5,11 +5,11 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J56D1LJLFM"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-J56D1LJLFM');
+        gtag('config', 'G-J56D1LJLFM');
     </script>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="/favicon.png">
@@ -23,7 +23,7 @@
         content="Plan the ultimate yacht charter Mallorca to Formentera. Discover routes, costs, top boats & insider tips. Book your luxury sailing adventure today!">
 
     <!-- ════ CANONICAL URL (75 chars) ════ -->
-    <link rel="canonical" href="https://www.eliteluxurybookings.com/yacht-charter-mallorca-formentera">
+    <link rel="canonical" href="https://www.eliteluxurybookings.com/yacht-charter-mallorca-formentera.html">
 
     <meta property="og:title" content="7 Best Yacht Charter Mallorca to Formentera 2025">
     <meta property="og:description"
@@ -192,119 +192,498 @@
             --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; background: var(--deep-black); color: var(--text-main); line-height: 1.8; overflow-x: hidden; padding-top: 72px; }
-        h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond', serif; }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
-        .gold-text { color: var(--primary-gold); }
-        .glass-panel { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 20px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--deep-black);
+            color: var(--text-main);
+            line-height: 1.8;
+            overflow-x: hidden;
+            padding-top: 72px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .gold-text {
+            color: var(--primary-gold);
+        }
+
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+        }
 
         /* NAVIGATION */
-        .global-nav { position:fixed; top:0; left:0; right:0; background:rgba(5,5,5,0.98); backdrop-filter:blur(24px); border-bottom:1px solid rgba(212,175,55,0.2); z-index:99999; }
-        .global-nav-inner { display:flex; align-items:center; justify-content:space-between; height:72px; gap:1rem; max-width:1400px; margin:0 auto; padding:0 2rem; box-sizing: border-box; }
-        .nav-brand { font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:600; color:#fff !important; text-decoration:none !important; }
-        .nav-gold { color:#D4AF37 !important; }
-        .nav-links { display:flex; align-items:center; gap:0.25rem; list-style:none; flex:1; justify-content:center; margin:0; padding:0; }
-        .nav-links a { color:rgba(255,255,255,0.7) !important; text-decoration:none !important; font-size:0.82rem; text-transform:uppercase; letter-spacing:1.5px; padding:0.5rem 0.9rem; border-radius:6px; transition:all 0.4s; }
-        .nav-links a:hover { color:#D4AF37 !important; }
+        .global-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(5, 5, 5, 0.98);
+            backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            z-index: 99999;
+        }
+
+        .global-nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+            gap: 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            box-sizing: border-box;
+        }
+
+        .nav-brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #fff !important;
+            text-decoration: none !important;
+        }
+
+        .nav-gold {
+            color: #D4AF37 !important;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            list-style: none;
+            flex: 1;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.7) !important;
+            text-decoration: none !important;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 0.5rem 0.9rem;
+            border-radius: 6px;
+            transition: all 0.4s;
+        }
+
+        .nav-links a:hover {
+            color: #D4AF37 !important;
+        }
 
         /* HERO */
-        .hero { 
-            padding: 100px 0 60px; 
-            text-align: center; 
-            position: relative; 
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/mallorca_formentera_hero.png');
+        .hero {
+            padding: 100px 0 60px;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/mallorca_formentera_hero.png');
             background-size: cover;
             background-position: center;
             border-bottom: 1px solid var(--glass-border);
         }
-        .hero-overlay { position: absolute; inset: 0; background: radial-gradient(circle at center, transparent 0%, var(--deep-black) 90%); }
-        .hero-content { position: relative; z-index: 10; }
-        .hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 300; margin-bottom: 1.5rem; line-height: 1.1; }
-        .hero-sub { font-size: 1.1rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 4px; margin-bottom: 3rem; }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, transparent 0%, var(--deep-black) 90%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-sub {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 3rem;
+        }
 
         /* SECTIONS */
-        .section-padding { padding: 6rem 0; }
-        .content-wrap { max-width: 800px; margin: 0 auto; }
-        p { margin-bottom: 2rem; font-size: 1.1rem; color: rgba(255,255,255,0.85); font-weight: 300; }
-        h2 { font-size: 3rem; color: var(--primary-gold); margin-bottom: 2rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 1rem; margin-top: 4rem; font-weight: 300; }
-        h3 { font-size: 2rem; color: #fff; margin-bottom: 1.5rem; margin-top: 3rem; }
-        h4 { font-size: 1.2rem; color: var(--primary-gold); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 2px; }
+        .section-padding {
+            padding: 6rem 0;
+        }
+
+        .content-wrap {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 300;
+        }
+
+        h2 {
+            font-size: 3rem;
+            color: var(--primary-gold);
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 1rem;
+            margin-top: 4rem;
+            font-weight: 300;
+        }
+
+        h3 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            color: var(--primary-gold);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
 
         /* TOC */
-        .toc-panel { padding: 3rem; margin: 4rem 0; border-left: 3px solid var(--primary-gold); }
-        .toc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; list-style: none; }
-        .toc-grid a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; transition: var(--transition); }
-        .toc-grid a:hover { color: var(--primary-gold); padding-left: 5px; }
+        .toc-panel {
+            padding: 3rem;
+            margin: 4rem 0;
+            border-left: 3px solid var(--primary-gold);
+        }
 
-        /* CARDS & TABLES */
-        .glass-card { background: var(--glass-bg); border: 1px solid var(--glass-border); padding: 2.5rem; border-radius: 20px; margin: 2rem 0; }
-        .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin: 4rem 0; }
-        .stat-cell { text-align: center; padding: 2rem; border-bottom: 1px solid var(--glass-border); transition: var(--transition); }
-        .stat-cell:hover { border-bottom-color: var(--primary-gold); background: rgba(212, 175, 55, 0.05); }
-        .s-val { font-size: 2.5rem; font-family: 'Cormorant Garamond', serif; color: var(--primary-gold); line-height: 1; margin-bottom: 0.5rem; }
-        .s-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); }
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            list-style: none;
+        }
 
-        .route-card { margin-bottom: 1.5rem; border-left: 2px solid rgba(212, 175, 55, 0.2); transition: var(--transition); }
-        .route-card:hover { border-left-color: var(--primary-gold); background: rgba(212, 175, 55, 0.03); }
-        .route-card h3 { margin-top: 0; padding-top: 1.5rem; padding-left: 2rem; font-size: 1.75rem; }
-        .route-card p { padding-left: 2rem; font-size: 1rem; }
-
-        /* BOAT TABLE */
-        .table-wrap { overflow-x: auto; margin: 3rem 0; border: 1px solid var(--glass-border); border-radius: 15px; }
-        table { width: 100%; border-collapse: collapse; text-align: left; }
-        th { background: rgba(212, 175, 55, 0.1); padding: 1.5rem; color: var(--primary-gold); text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; }
-        td { padding: 1.5rem; border-bottom: 1px solid var(--glass-border); font-size: 0.95rem; }
-        tr:last-child td { border-bottom: none; }
-
-        /* BUTTONS */
-        .btn-gold { 
-            background: linear-gradient(135deg, #D4AF37, #B8860B); 
-            color: #000; 
-            padding: 1.2rem 2.5rem; 
-            border-radius: 8px; 
-            text-transform: uppercase; 
-            letter-spacing: 3px; 
-            font-weight: 700; 
-            text-decoration: none; 
-            display: inline-block; 
+        .toc-grid a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
             transition: var(--transition);
         }
-        .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3); filter: brightness(1.1); }
+
+        .toc-grid a:hover {
+            color: var(--primary-gold);
+            padding-left: 5px;
+        }
+
+        /* CARDS & TABLES */
+        .glass-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            padding: 2.5rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+        }
+
+        .stat-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin: 4rem 0;
+        }
+
+        .stat-cell {
+            text-align: center;
+            padding: 2rem;
+            border-bottom: 1px solid var(--glass-border);
+            transition: var(--transition);
+        }
+
+        .stat-cell:hover {
+            border-bottom-color: var(--primary-gold);
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        .s-val {
+            font-size: 2.5rem;
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--primary-gold);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .s-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+        }
+
+        .route-card {
+            margin-bottom: 1.5rem;
+            border-left: 2px solid rgba(212, 175, 55, 0.2);
+            transition: var(--transition);
+        }
+
+        .route-card:hover {
+            border-left-color: var(--primary-gold);
+            background: rgba(212, 175, 55, 0.03);
+        }
+
+        .route-card h3 {
+            margin-top: 0;
+            padding-top: 1.5rem;
+            padding-left: 2rem;
+            font-size: 1.75rem;
+        }
+
+        .route-card p {
+            padding-left: 2rem;
+            font-size: 1rem;
+        }
+
+        /* BOAT TABLE */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 3rem 0;
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 1.5rem;
+            color: var(--primary-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+        }
+
+        td {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--glass-border);
+            font-size: 0.95rem;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* BUTTONS */
+        .btn-gold {
+            background: linear-gradient(135deg, #D4AF37, #B8860B);
+            color: #000;
+            padding: 1.2rem 2.5rem;
+            border-radius: 8px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: var(--transition);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+            filter: brightness(1.1);
+        }
 
         /* ITINERARY */
-        .itin-day { margin-bottom: 3rem; position: relative; padding-left: 4rem; }
-        .itin-day::before { content: ''; position: absolute; left: 0; top: 10px; width: 15px; height: 15px; background: var(--primary-gold); border-radius: 50%; box-shadow: 0 0 15px var(--primary-gold); }
-        .itin-day::after { content: ''; position: absolute; left: 7px; top: 25px; bottom: -30px; width: 1px; background: var(--glass-border); }
-        .itin-day:last-child::after { display: none; }
-        .day-tag { font-size: 0.8rem; letter-spacing: 3px; color: var(--primary-gold); text-transform: uppercase; margin-bottom: 0.5rem; display: block; }
+        .itin-day {
+            margin-bottom: 3rem;
+            position: relative;
+            padding-left: 4rem;
+        }
+
+        .itin-day::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 15px;
+            height: 15px;
+            background: var(--primary-gold);
+            border-radius: 50%;
+            box-shadow: 0 0 15px var(--primary-gold);
+        }
+
+        .itin-day::after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 25px;
+            bottom: -30px;
+            width: 1px;
+            background: var(--glass-border);
+        }
+
+        .itin-day:last-child::after {
+            display: none;
+        }
+
+        .day-tag {
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            color: var(--primary-gold);
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
 
         /* FAQ */
-        .faq-item { border-bottom: 1px solid var(--glass-border); }
-        .faq-q { width: 100%; padding: 2rem 0; background: none; border: none; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: #fff; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; }
-        .faq-a { padding-bottom: 2rem; display: none; }
-        .faq-item.active .faq-a { display: block; }
-        .faq-icon { color: var(--primary-gold); transition: var(--transition); }
-        .faq-item.active .faq-icon { transform: rotate(45deg); }
+        .faq-item {
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .faq-q {
+            width: 100%;
+            padding: 2rem 0;
+            background: none;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+        }
+
+        .faq-a {
+            padding-bottom: 2rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-a {
+            display: block;
+        }
+
+        .faq-icon {
+            color: var(--primary-gold);
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
 
         /* IMAGES */
-        .premium-img-box { margin: 4rem 0; border-radius: 20px; overflow: hidden; border: 1px solid var(--glass-border); position: relative; }
-        .premium-img-box img { width: 100%; height: auto; display: block; filter: brightness(0.9) contrast(1.1); transition: var(--transition); }
-        .premium-img-box:hover img { transform: scale(1.05); filter: brightness(1); }
-        .img-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); }
-        .img-caption { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: #fff; font-style: italic; }
+        .premium-img-box {
+            margin: 4rem 0;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            position: relative;
+        }
+
+        .premium-img-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: brightness(0.9) contrast(1.1);
+            transition: var(--transition);
+        }
+
+        .premium-img-box:hover img {
+            transform: scale(1.05);
+            filter: brightness(1);
+        }
+
+        .img-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        }
+
+        .img-caption {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            color: #fff;
+            font-style: italic;
+        }
 
         /* FOOTER */
-        footer { background:#000; border-top:1px solid rgba(255,255,255,0.05); padding:6rem 0; margin-top: 8rem; }
+        footer {
+            background: #000;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 6rem 0;
+            margin-top: 8rem;
+        }
 
-        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 100000; box-shadow: 0 10px 25px rgba(0,0,0,0.3); transition: all 0.3s; }
-        .wa-float:hover { transform: scale(1.1); background: #128C7E; }
+        .wa-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100000;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+        }
+
+        .wa-float:hover {
+            transform: scale(1.1);
+            background: #128C7E;
+        }
 
         @media (max-width: 768px) {
-            .stat-row { grid-template-columns: 1fr 1fr; }
-            .toc-grid { grid-template-columns: 1fr; }
-            h2 { font-size: 2.2rem; }
+            .stat-row {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+            }
         }
     </style>
 </head>
@@ -337,20 +716,25 @@
 
     <div class="container">
         <!-- BREADCRUMBS -->
-        <div style="font-size: 0.8rem; color: var(--text-muted); margin: 3rem 0; text-transform: uppercase; letter-spacing: 2px;">
+        <div
+            style="font-size: 0.8rem; color: var(--text-muted); margin: 3rem 0; text-transform: uppercase; letter-spacing: 2px;">
             Home / Yachts / Mallorca to Formentera
         </div>
 
         <section class="section-padding" style="padding-top: 0;">
             <div class="content-wrap">
-                <p><strong class="gold-text">Yacht charter Mallorca to Formentera</strong> is the defining maritime experience of the Western Mediterranean. Gliding across turquoise shallows, anchoring in coves inaccessible by road, and waking to a Balearic dawn — this is luxury at its most essential.</p>
-                
-                <p>Whether you seek a high-performance catamaran for a private family week or a fully crewed superyacht for an island-hopping voyage, the passage delivered by Elite Luxury Bookings remains peerless.</p>
+                <p><strong class="gold-text">Yacht charter Mallorca to Formentera</strong> is the defining maritime
+                    experience of the Western Mediterranean. Gliding across turquoise shallows, anchoring in coves
+                    inaccessible by road, and waking to a Balearic dawn — this is luxury at its most essential.</p>
+
+                <p>Whether you seek a high-performance catamaran for a private family week or a fully crewed superyacht
+                    for an island-hopping voyage, the passage delivered by Elite Luxury Bookings remains peerless.</p>
 
                 <div class="premium-img-box">
                     <img src="assets/megayacht1.jpg" alt="Luxury yacht sailing Mallorca to Formentera">
                     <div class="img-overlay">
-                        <div class="img-caption">Sailing the Balearic Channel — The ultimate Mediterranean passage.</div>
+                        <div class="img-caption">Sailing the Balearic Channel — The ultimate Mediterranean passage.
+                        </div>
                     </div>
                 </div>
 
@@ -369,7 +753,9 @@
                 </div>
 
                 <h2 id="why">The Allure of the <em>Balearic Crossing</em></h2>
-                <p>Formentera, consistently ranked among the world's most beautiful island ecosystems, is the "Caribbean of Europe." Its beaches, Ses Illetes and Migjorn, are best experienced from the deck of a private vessel, bypassing the commercial ferries for absolute freedom.</p>
+                <p>Formentera, consistently ranked among the world's most beautiful island ecosystems, is the "Caribbean
+                    of Europe." Its beaches, Ses Illetes and Migjorn, are best experienced from the deck of a private
+                    vessel, bypassing the commercial ferries for absolute freedom.</p>
 
                 <div class="premium-img-box">
                     <img src="assets/megayacht4.jpg" alt="Ses Illetes beach Formentera turquoise water">
@@ -401,31 +787,39 @@
                 <div class="route-list">
                     <div class="route-card glass-panel">
                         <h3>01. The Classic Direct</h3>
-                        <p>Palma Marina south-southwest toward Formentera. A 75-nautical mile passage that takes approximately 10–12 hours under sail. Optimal for those maximizing their time at the destination.</p>
+                        <p>Palma Marina south-southwest toward Formentera. A 75-nautical mile passage that takes
+                            approximately 10–12 hours under sail. Optimal for those maximizing their time at the
+                            destination.</p>
                     </div>
                     <div class="route-card glass-panel">
                         <h3>02. The Island Passage</h3>
-                        <p>A multi-day voyage via the Cabrera Archipelago National Park and the Ibiza south coast. Widely considered the most scenic route in the Balearics.</p>
+                        <p>A multi-day voyage via the Cabrera Archipelago National Park and the Ibiza south coast.
+                            Widely considered the most scenic route in the Balearics.</p>
                     </div>
                     <div class="route-card glass-panel">
                         <h3>03. The East Coast Explorer</h3>
-                        <p>Departing from Portocolom on Mallorca's raw eastern coastline. This reduces passage time and awards more days exploring Formentera’s 69-km shoreline.</p>
+                        <p>Departing from Portocolom on Mallorca's raw eastern coastline. This reduces passage time and
+                            awards more days exploring Formentera’s 69-km shoreline.</p>
                     </div>
                     <div class="route-card glass-panel">
                         <h3>04. The Midnight Crossing</h3>
-                        <p>A sunset departure from Palma, navigating the Balearic Channel by moonlight to arrive at Ses Illetes for a sunrise breakfast.</p>
+                        <p>A sunset departure from Palma, navigating the Balearic Channel by moonlight to arrive at Ses
+                            Illetes for a sunrise breakfast.</p>
                     </div>
                     <div class="route-card glass-panel">
                         <h3>05. The Full Balearic Loop</h3>
-                        <p>A 14-day master itinerary: Mallorca → Menorca → Ibiza → Formentera. Over 300 nautical miles of total maritime discovery.</p>
+                        <p>A 14-day master itinerary: Mallorca → Menorca → Ibiza → Formentera. Over 300 nautical miles
+                            of total maritime discovery.</p>
                     </div>
                     <div class="route-card glass-panel">
                         <h3>06. The Wild Anchorage</h3>
-                        <p>Following Mallorca’s south shore with an overnight anchorage at the secluded Es Trenc beach before the final crossing.</p>
+                        <p>Following Mallorca’s south shore with an overnight anchorage at the secluded Es Trenc beach
+                            before the final crossing.</p>
                     </div>
                     <div class="route-card glass-panel">
                         <h3>07. The Express Charter</h3>
-                        <p>Utilizing a private motor yacht to cover the distance in under 4 hours, perfect for short-term luxury weekend escapes.</p>
+                        <p>Utilizing a private motor yacht to cover the distance in under 4 hours, perfect for
+                            short-term luxury weekend escapes.</p>
                     </div>
                 </div>
 
@@ -478,15 +872,18 @@
 
                 <h2 id="costs">Charter Costs Breakdown</h2>
                 <div class="glass-card">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 2rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 1rem;">
+                    <div
+                        style="display: flex; justify-content: space-between; margin-bottom: 2rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 1rem;">
                         <span class="gold-text">Bareboat Charter</span>
                         <span>€800 – €2,500 / Day</span>
                     </div>
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 2rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 1rem;">
+                    <div
+                        style="display: flex; justify-content: space-between; margin-bottom: 2rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 1rem;">
                         <span class="gold-text">Crewed Charter</span>
                         <span>€1,200 – €5,000 / Day</span>
                     </div>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">*Rates exclude fuel, provisioning, and local marina fees which typically account for 20-30% of total charter costs.</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">*Rates exclude fuel, provisioning, and local
+                        marina fees which typically account for 20-30% of total charter costs.</p>
                 </div>
 
                 <h2 id="itin">7-Day Master Itinerary</h2>
@@ -494,48 +891,58 @@
                     <div class="itin-day">
                         <span class="day-tag">Day 01</span>
                         <h3>Palma de Mallorca → Portocolom</h3>
-                        <p>Depart Palma late morning. Sail east along the dramatic southern coastline. Overnight at anchor in the natural harbor of Portocolom.</p>
+                        <p>Depart Palma late morning. Sail east along the dramatic southern coastline. Overnight at
+                            anchor in the natural harbor of Portocolom.</p>
                     </div>
                     <div class="itin-day">
                         <span class="day-tag">Day 02</span>
                         <h3>Cabrera Archipelago</h3>
-                        <p>Enter the protected National Park. Snorkel the marine caves and hike to the 14th-century fortress for sea-lane views.</p>
+                        <p>Enter the protected National Park. Snorkel the marine caves and hike to the 14th-century
+                            fortress for sea-lane views.</p>
                     </div>
                     <div class="itin-day">
                         <span class="day-tag">Day 03</span>
                         <h3>Crossing to Ibiza</h3>
-                        <p>The principal passage. Navigate 42 nautical miles southwest to Ibiza Town. Dalt Vila dinner at sunset.</p>
+                        <p>The principal passage. Navigate 42 nautical miles southwest to Ibiza Town. Dalt Vila dinner
+                            at sunset.</p>
                     </div>
                     <div class="itin-day">
                         <span class="day-tag">Day 04</span>
                         <h3>South Coast Coves</h3>
-                        <p>Day sailing past Es Vedrà. Anchor at Cala Vadella for swimming and paddleboarding in crystalline waters.</p>
+                        <p>Day sailing past Es Vedrà. Anchor at Cala Vadella for swimming and paddleboarding in
+                            crystalline waters.</p>
                     </div>
                     <div class="itin-day">
                         <span class="day-tag">Day 05</span>
                         <h3>Formentera — Ses Illetes</h3>
-                        <p>The defining moment. Drop anchor at the world-famous Ses Illetes for lunch at Beso Beach or Juan y Andrea.</p>
+                        <p>The defining moment. Drop anchor at the world-famous Ses Illetes for lunch at Beso Beach or
+                            Juan y Andrea.</p>
                     </div>
                     <div class="itin-day">
                         <span class="day-tag">Day 06</span>
                         <h3>Formentera Discovery</h3>
-                        <p>Circumnavigate the island. Far de la Mola and the white sands of Llevant. Sundowners at anchor.</p>
+                        <p>Circumnavigate the island. Far de la Mola and the white sands of Llevant. Sundowners at
+                            anchor.</p>
                     </div>
                     <div class="itin-day">
                         <span class="day-tag">Day 07</span>
                         <h3>The Return Passage</h3>
-                        <p>Slow return to Mallorca or extension to the north coast. Final farewell to the Balearic blues.</p>
+                        <p>Slow return to Mallorca or extension to the north coast. Final farewell to the Balearic
+                            blues.</p>
                     </div>
                 </div>
 
                 <h2 id="tips">Insider Intelligence</h2>
                 <div class="glass-card">
                     <h4>01. Permit Strategy</h4>
-                    <p>Ses Illetes requires advance anchoring permits during July and August. We handle all documentation 4–6 months in advance for our clients.</p>
+                    <p>Ses Illetes requires advance anchoring permits during July and August. We handle all
+                        documentation 4–6 months in advance for our clients.</p>
                     <h4>02. Tramuntana Awareness</h4>
-                    <p>The Balearic Channel is subject to sudden wind changes. Always consult Windy.com or trust your local ELB skipper’s intuition.</p>
+                    <p>The Balearic Channel is subject to sudden wind changes. Always consult Windy.com or trust your
+                        local ELB skipper’s intuition.</p>
                     <h4>03. Beach Club Transfers</h4>
-                    <p>Many Formentera restaurants provide tender services. Signal with your flag or use Channel 16 if specified in your pilot book.</p>
+                    <p>Many Formentera restaurants provide tender services. Signal with your flag or use Channel 16 if
+                        specified in your pilot book.</p>
                 </div>
 
                 <div class="premium-img-box">
@@ -559,7 +966,8 @@
                             <span class="faq-icon">+</span>
                         </button>
                         <div class="faq-a">
-                            <p>Yes, an ICC or RYA Day Skipper is mandatory for Spanish waters. Alternatively, a professional skipper can be added to any booking.</p>
+                            <p>Yes, an ICC or RYA Day Skipper is mandatory for Spanish waters. Alternatively, a
+                                professional skipper can be added to any booking.</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -568,7 +976,8 @@
                             <span class="faq-icon">+</span>
                         </button>
                         <div class="faq-a">
-                            <p>Catamarans are ideal due to their shallow draft, allowing you to anchor closer to the pristine Formentera shoreline than monohulls.</p>
+                            <p>Catamarans are ideal due to their shallow draft, allowing you to anchor closer to the
+                                pristine Formentera shoreline than monohulls.</p>
                         </div>
                     </div>
                 </div>
@@ -580,29 +989,37 @@
     <!-- FOOTER -->
     <footer>
         <div class="container">
-            <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:4rem; padding-bottom:3rem; border-bottom:1px solid rgba(212,175,55,0.1); text-align:left;">
+            <div
+                style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:4rem; padding-bottom:3rem; border-bottom:1px solid rgba(212,175,55,0.1); text-align:left;">
                 <div style="flex:1; min-width:280px;">
-                    <div style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; color:#fff; margin-bottom:1rem;">Elite Luxury <span style="color:#D4AF37;">Bookings</span></div>
-                    <p style="color:rgba(255,255,255,0.5); font-size:0.95rem; max-width:300px;">Curating world-class maritime and aviation experiences through a global partner network.</p>
+                    <div
+                        style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; color:#fff; margin-bottom:1rem;">
+                        Elite Luxury <span style="color:#D4AF37;">Bookings</span></div>
+                    <p style="color:rgba(255,255,255,0.5); font-size:0.95rem; max-width:300px;">Curating world-class
+                        maritime and aviation experiences through a global partner network.</p>
                 </div>
                 <div>
                     <h4 style="color: #D4AF37; margin-bottom: 1.5rem;">Services</h4>
-                    <ul style="list-style:none; display:flex; flex-direction:column; gap:0.8rem; color: rgba(255,255,255,0.6);">
+                    <ul
+                        style="list-style:none; display:flex; flex-direction:column; gap:0.8rem; color: rgba(255,255,255,0.6);">
                         <li>Private Jets</li>
                         <li>Luxury Yachts</li>
                         <li>Elite Villas</li>
                     </ul>
                 </div>
             </div>
-            <p style="margin-top: 3rem; color: rgba(255,255,255,0.3); font-size: 0.8rem;">&copy; 2026 Elite Luxury Bookings. All rights reserved.</p>
+            <p style="margin-top: 3rem; color: rgba(255,255,255,0.3); font-size: 0.8rem;">&copy; 2026 Elite Luxury
+                Bookings. All rights reserved.</p>
         </div>
     </footer>
 
     <a href="https://wa.me/918801079030" class="wa-float" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+            <path
+                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
         </svg>
     </a>
 
 </body>
+
 </html>
