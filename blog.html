@@ -397,37 +397,37 @@
         </div>
     </nav>
     <main>
-    <header class="blog-hero">
+        <header class="blog-hero">
+            <div class="container">
+                <span class="eyebrow">Expert Intel & Authority Guides</span>
+                <h1>Knowledge for the 1%</h1>
+                <p
+                    style="color: var(--text-muted); max-width: 700px; margin: 1.5rem auto 0; font-size: 1.15rem; line-height: 1.7;">
+                    The global definitive source for high-security aviation itineraries, maritime strategies, and estate
+                    management.</p>
+            </div>
+        </header>
         <div class="container">
-            <span class="eyebrow">Expert Intel & Authority Guides</span>
-            <h1>Knowledge for the 1%</h1>
-            <p
-                style="color: var(--text-muted); max-width: 700px; margin: 1.5rem auto 0; font-size: 1.15rem; line-height: 1.7;">
-                The global definitive source for high-security aviation itineraries, maritime strategies, and estate
-                management.</p>
-        </div>
-    </header>
-    <div class="container">
-        <!-- CATEGORY HUB -->
-        <div class="cat-hub">
-            <div class="cat-box active" onclick="filterBlog('private jet')">
-                <h3>Private Jet</h3>
-                <span>116 Routes & Guides</span>
+            <!-- CATEGORY HUB -->
+            <div class="cat-hub">
+                <div class="cat-box active" onclick="filterBlog('private jet')">
+                    <h3>Private Jet</h3>
+                    <span>116 Routes & Guides</span>
+                </div>
+                <div class="cat-box" onclick="filterBlog('private yacht')">
+                    <h3>Private Yacht</h3>
+                    <span>Maritime Excellence</span>
+                </div>
+                <div class="cat-box" onclick="filterBlog('luxury villa')">
+                    <h3>Luxury Villa</h3>
+                    <span>Estate Dossiers</span>
+                </div>
             </div>
-            <div class="cat-box" onclick="filterBlog('private yacht')">
-                <h3>Private Yacht</h3>
-                <span>Maritime Excellence</span>
-            </div>
-            <div class="cat-box" onclick="filterBlog('luxury villa')">
-                <h3>Luxury Villa</h3>
-                <span>Estate Dossiers</span>
+            <div class="blog-grid" id="blogGrid">
+                <!-- Dynamic Content Container -->
+                <div id="routeGallery"></div>
             </div>
         </div>
-        <div class="blog-grid" id="blogGrid">
-            <!-- Dynamic Content Container -->
-            <div id="routeGallery"></div>
-        </div>
-    </div>
     </main>
     <!-- FOOTER -->
     <footer style="background:#000; border-top:1px solid rgba(255,255,255,0.05); padding:6rem 0;">
@@ -496,7 +496,7 @@
             });
         });
 
-        
+
         document.addEventListener('DOMContentLoaded', () => {
             fetch('blog-data.json')
                 .then(res => res.json())
@@ -518,7 +518,7 @@
                         `;
                         grid.insertBefore(a, gallery);
                     });
-                    
+
                     const activeBtn = document.querySelector('.cat-box.active');
                     if (activeBtn) {
                         const catTitle = activeBtn.querySelector('h3');

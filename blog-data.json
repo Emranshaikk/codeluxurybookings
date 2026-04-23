@@ -1,5 +1,37 @@
 [
     {
+        "url": "/luxury-experience-of-flying-private.html",
+        "category": "private jet",
+        "label": "Elite Experience",
+        "title": "The Ultimate Luxury Experience of Flying Private 2026",
+        "excerpt": "Discover the true luxury experience of flying private. A 1,500-word authority guide on elite aviation, bespoke jet interiors, and the pinnacle of luxury flying.",
+        "link_text": "Experience the Elite"
+    },
+    {
+        "url": "/7-best-private-jet-charter-in-dubai.html",
+        "category": "private jet",
+        "label": "Dubai Elite",
+        "title": "7 Best Private Jet Charter in Dubai 2026: The Authority Cost Guide",
+        "excerpt": "Master the art of private jet charter in Dubai. A 1,500-word authority guide covering the top 7 operators, detailed cost analysis, and VIP terminal secrets for the 2026 season.",
+        "link_text": "Read the Cost Guide"
+    },
+    {
+        "url": "/private-jet-charter-to-monaco.html",
+        "category": "private jet",
+        "label": "Riviera Elite",
+        "title": "Private Jet Charter to Monaco: The Ultimate 2026 Arrival Guide",
+        "excerpt": "The definitive blueprint for reaching the Principality. A 1,500-word deep dive into Nice airport logistics, helicopter transfers, and VIP event arrival strategies.",
+        "link_text": "Plan Your Arrival"
+    },
+    {
+        "url": "/private-jet-travel-with-pet.html",
+        "category": "private jet",
+        "label": "Family Guide",
+        "title": "Private Jet Travel with Pets: The 2026 Authority Guide",
+        "excerpt": "No member of the family left behind. A 1,500-word blueprint for stress-free pet travel, covering international regulations, cabin comfort, and 'no-crate' flying.",
+        "link_text": "Fly with Your Pet"
+    },
+    {
         "url": "/private-jet-for-short-trips.html",
         "category": "private jet",
         "label": "Efficiency Guide",
@@ -16,14 +48,6 @@
         "link_text": "Explore Montenegro"
     },
     {
-        "url": "/7-best-private-jet-charter-in-dubai.html",
-        "category": "private jet",
-        "label": "Dubai Elite",
-        "title": "7 Best Private Jet Charter Options in Dubai 2026",
-        "excerpt": "Discover the pinnacle of UAE aviation. A 1,500-word authority guide to Dubai's private terminals, elite fleet selection, and the top 7 charter experiences for the 2026 season.",
-        "link_text": "Explore Dubai"
-    },
-    {
         "url": "/guide-to-mediterranean-yacht-charter.html",
         "category": "private yacht",
         "label": "Pillar Guide",
@@ -38,6 +62,14 @@
         "title": "Private Boat Mallorca to Ibiza: The Definitive 2026 Masterclass",
         "excerpt": "The absolute authority on Balearic crossings. A 1,500-word blueprint for Mallorca to Ibiza boat charters, featuring the Wajer 55, VIP Cala Jondal arrivals, and expert maritime intelligence.",
         "link_text": "View the Route"
+    },
+    {
+        "url": "/boat-trip-from-mallorca-to-formentera.html",
+        "category": "private yacht",
+        "label": "Maritime Guide",
+        "title": "Boat Trip from Mallorca to Formentera: The 2026 Authority Guide",
+        "excerpt": "The definitive 1,500-word guide to the ultimate crossing. Discover private yacht routes, costs, top beaches, and VIP club access for the Mediterranean's most exclusive route.",
+        "link_text": "Explore the Route"
     },
     {
         "url": "/private-boat-trip-mallorca-to-formentera.html",
