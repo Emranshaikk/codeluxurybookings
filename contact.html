@@ -337,6 +337,7 @@
     </div>
 
     <!-- HERO -->
+    <main>
     <header class="page-hero">
         <div class="container">
             <div class="tag-strip">
@@ -396,24 +397,24 @@
 
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;" class="form-grid">
                         <div class="form-group">
-                            <label class="form-label">Full Name *</label>
-                            <input type="text" name="name" class="form-control" required placeholder="John Doe">
+                            <label class="form-label" for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-control" required placeholder="John Doe">
                         </div>
                         <div class="form-group">
-                            <label class="form-label">WhatsApp / Phone *</label>
-                            <input type="tel" name="phone" class="form-control" required placeholder="+1...">
+                            <label class="form-label" for="phone">WhatsApp / Phone *</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required placeholder="+1...">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label">Private Email *</label>
-                        <input type="email" name="email" class="form-control" required
+                        <label class="form-label" for="email">Private Email *</label>
+                        <input type="email" id="email" name="email" class="form-control" required
                             placeholder="client@exclusive.com">
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label">Primary Interest</label>
-                        <select name="interest" class="form-control"
+                        <label class="form-label" for="interest">Primary Interest</label>
+                        <select id="interest" name="interest" class="form-control"
                             style="background: #111; border: 1px solid rgba(255,255,255,0.1); padding: 1rem;">
                             <option value="private_jet">Private Jet Charter</option>
                             <option value="luxury_villa">Luxury Villa Rental</option>
@@ -423,8 +424,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label">Mission Brief & Requirements</label>
-                        <textarea name="message" rows="4" class="form-control"
+                        <label class="form-label" for="message">Mission Brief & Requirements</label>
+                        <textarea id="message" name="message" rows="4" class="form-control"
                             placeholder="Tell us about your requirements..."></textarea>
                     </div>
 
@@ -436,6 +437,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <footer style="background:#000; border-top:1px solid rgba(255,255,255,0.05); padding:6rem 0;">
         <div class="container">
@@ -445,7 +447,7 @@
                     <div
                         style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; color:#fff; margin-bottom:1rem; line-height:1.2;">
                         Elite Luxury <span style="color:#D4AF37;">Bookings</span></div>
-                    <p style="color:rgba(255,255,255,0.5); font-size:0.95rem; line-height:1.8; max-width:300px;">
+                    <p style="color:rgba(255,255,255,0.7); font-size:0.95rem; line-height:1.8; max-width:300px;">
                         Curating world-class luxury experiences through our global partner network. Private Jets.
                         Yachts. Villas.</p>
                 </div>
@@ -475,7 +477,7 @@
             </div>
             <div
                 style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; padding-top:3rem; gap:1.5rem;">
-                <p style="color:rgba(255,255,255,0.35); font-size:0.85rem; letter-spacing:0.5px;">&copy; 2026 Elite
+                <p style="color:rgba(255,255,255,0.6); font-size:0.85rem; letter-spacing:0.5px;">&copy; 2026 Elite
                     Luxury Bookings. All rights reserved. Global Concierge Service.</p>
             </div>
         </div>

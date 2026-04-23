@@ -1407,6 +1407,7 @@
     </a>
 
     <!-- 1. HERO SECTION -->
+    <main>
     <div class="container" style="position: relative;">
         <div class="hero-parallax-bg" id="heroBg"></div>
         <header class="hero">
@@ -1431,19 +1432,19 @@
                     <div class="form-grid">
                         <div class="form-group">
                             <label for="name">Full Name *</label>
-                            <input type="text" name="name" class="form-control" placeholder="Hon. John Doe" required>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Hon. John Doe" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Private Email *</label>
-                            <input type="email" name="email" class="form-control" placeholder="client@exclusive.com" required>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="client@exclusive.com" required>
                         </div>
                         <div class="form-group">
                             <label for="whatsapp">WhatsApp Number *</label>
-                            <input type="tel" name="phone" class="form-control" placeholder="+1 234 567 8900" required>
+                            <input type="tel" id="whatsapp" name="phone" class="form-control" placeholder="+1 234 567 8900" required>
                         </div>
                         <div class="form-group">
                             <label for="service">Service Interested</label>
-                            <select name="service" class="form-control">
+                            <select id="service" name="service" class="form-control">
                                 <option value="Private Jet">Private Jet Charter</option>
                                 <option value="Yacht">Luxury Yacht Charter</option>
                                 <option value="Villa">Private Villa Rental</option>
@@ -1452,8 +1453,8 @@
                         </div>
                     </div>
                     <div class="form-group full" style="margin-top: 2rem;">
-                        <label>Mission Brief / Requirements</label>
-                        <textarea name="message" class="form-control" rows="4" placeholder="Flight routes, yacht destination, or villa requirements..." style="resize:none;"></textarea>
+                        <label for="message">Mission Brief / Requirements</label>
+                        <textarea id="message" name="message" class="form-control" rows="4" placeholder="Flight routes, yacht destination, or villa requirements..." style="resize:none;"></textarea>
                     </div>
                     <div style="text-align: center; margin-top: 3rem;">
                         <button type="submit" class="btn btn-gold" style="width: 100%; border-radius: 12px;">Initiate Private Consultation</button>
@@ -1615,13 +1616,14 @@
             <a href="/elite-private-jet-charter.html" class="btn btn-gold btn-sm">View All Routes</a>
         </div>
     </div>
+    </main>
 
         <footer style="background:#000; border-top:1px solid rgba(255,255,255,0.05); padding:6rem 0;">
         <div class="container">
             <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:4rem; padding-bottom:3rem; border-bottom:1px solid rgba(212,175,55,0.1); text-align:left;">
                 <div style="flex:1; min-width:280px; margin-bottom:2rem;">
                     <div style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; color:#fff; margin-bottom:1rem; line-height:1.2;">Elite Luxury <span style="color:#D4AF37;">Bookings</span></div>
-                    <p style="color:rgba(255,255,255,0.5); font-size:0.95rem; line-height:1.8; max-width:300px;">Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
+                    <p style="color:rgba(255,255,255,0.7); font-size:0.95rem; line-height:1.8; max-width:300px;">Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
                 </div>
                 <div style="min-width:160px; margin-bottom:2rem;">
                     <div style="font-size:0.8rem; text-transform:uppercase; letter-spacing:2.5px; color:#D4AF37; margin-bottom:1.5rem; font-weight:700;">Services</div>
@@ -1634,7 +1636,7 @@
                 </div>
             </div>
             <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; padding-top:3rem; gap:1.5rem;">
-                <p style="color:rgba(255,255,255,0.35); font-size:0.85rem; letter-spacing:0.5px;">&copy; 2026 Elite Luxury Bookings. All rights reserved. Global Concierge Service.</p>
+                <p style="color:rgba(255,255,255,0.6); font-size:0.85rem; letter-spacing:0.5px;">&copy; 2026 Elite Luxury Bookings. All rights reserved. Global Concierge Service.</p>
             </div>
         </div>
     </footer>

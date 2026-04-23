@@ -457,12 +457,8 @@
         /* --- MOBILE OPTIMIZATION LOCK --- */
         @media (max-width: 768px) {
             .hero { padding: 6rem 0 3rem !important; }
-            .hero h1 { font-size: 2.2rem !important; line-height: 1.1; padding: 0 1rem; }
-            .hero-sub { font-size: 1rem !important; padding: 0 1.5rem; }
-            .grid-2, .grid-3 { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
-            .section-padding { padding: 4rem 1rem !important; }
-            .aviation-search-engine { padding: 1.5rem !important; margin: 1rem !important; }
-            .form-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+
+        .form-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
             .nav-brand { font-size: 1.3rem !important; }
             .btn-gold { padding: 0.6rem 1rem !important; font-size: 0.7rem !important; }
         }
@@ -507,6 +503,7 @@
         }
 /* ELB_STYLE_END */
     </style>
+    <link rel="preload" href="/style.css" as="style">
     <link rel="stylesheet" href="/style.css">
 </head>
 
@@ -534,6 +531,8 @@
         <a href="/contact.html">Contact</a>
     </div>
     <!-- ELB_NAV_END -->
+
+    <main>
 
     <header class="hero" id="top">
         <div class="container">
@@ -586,38 +585,38 @@
 
                     <div class="form-grid">
                         <div class="form-group">
-                            <label>Full Name</label>
-                            <input type="text" name="name" class="form-control" placeholder="e.g. James Harrington"
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="e.g. James Harrington"
                                 required>
                         </div>
                         <div class="form-group">
-                            <label>WhatsApp / Phone</label>
-                            <input type="tel" name="phone" class="form-control" placeholder="+44 7XXX XXXXXX" required>
+                            <label for="phone">WhatsApp / Phone</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="+44 7XXX XXXXXX" required>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label>Email Address</label>
-                        <input type="email" name="email" class="form-control" placeholder="client@privatemail.com"
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="client@privatemail.com"
                             required>
                     </div>
 
                     <div class="form-grid">
                         <div class="form-group">
-                            <label>Travel Date</label>
-                            <input type="date" name="travel_date" class="form-control" required
+                            <label for="travel_date">Travel Date</label>
+                            <input type="date" id="travel_date" name="travel_date" class="form-control" required
                                 style="color-scheme: dark;">
                         </div>
                         <div class="form-group">
-                            <label>Passengers</label>
-                            <input type="number" name="passengers" class="form-control" placeholder="Qty" min="1"
+                            <label for="passengers">Passengers</label>
+                            <input type="number" id="passengers" name="passengers" class="form-control" placeholder="Qty" min="1"
                                 max="50">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label>Aircraft Class Preference</label>
-                        <select name="aircraft_class" class="form-control">
+                        <label for="aircraft_class">Aircraft Class Preference</label>
+                        <select id="aircraft_class" name="aircraft_class" class="form-control">
                             <option value="Not Specified">Select Preferred Class</option>
                             <option value="Light Jet">Light Jet (4-7 Pax)</option>
                             <option value="Midsize Jet">Midsize Jet (7-9 Pax)</option>
@@ -627,8 +626,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Specific Requirements</label>
-                        <textarea name="message" class="form-control" rows="3"
+                        <label for="message">Specific Requirements</label>
+                        <textarea id="message" name="message" class="form-control" rows="3"
                             placeholder="Catering, ground transport, or specific FBO requirements..."
                             style="resize: none;"></textarea>
                     </div>
@@ -786,13 +785,15 @@
             </div>
         </div>
     </section>
+    </main>
+
     <!-- ELB_FOOTER_START -->
         <footer style="background:#000; border-top:1px solid rgba(255,255,255,0.05); padding:6rem 0;">
         <div class="container">
             <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:4rem; padding-bottom:3rem; border-bottom:1px solid rgba(212,175,55,0.1); text-align:left;">
                 <div style="flex:1; min-width:280px; margin-bottom:2rem;">
                     <div style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; color:#fff; margin-bottom:1rem; line-height:1.2;">Elite Luxury <span style="color:#D4AF37;">Bookings</span></div>
-                    <p style="color:rgba(255,255,255,0.5); font-size:0.95rem; line-height:1.8; max-width:300px;">Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
+                    <p style="color:rgba(255,255,255,0.7); font-size:0.95rem; line-height:1.8; max-width:300px;">Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
                 </div>
                 <div style="min-width:160px; margin-bottom:2rem;">
                     <div style="font-size:0.8rem; text-transform:uppercase; letter-spacing:2.5px; color:#D4AF37; margin-bottom:1.5rem; font-weight:700;">Services</div>
@@ -805,7 +806,7 @@
                 </div>
             </div>
             <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; padding-top:3rem; gap:1.5rem;">
-                <p style="color:rgba(255,255,255,0.35); font-size:0.85rem; letter-spacing:0.5px;">&copy; 2026 Elite Luxury Bookings. All rights reserved. Global Concierge Service.</p>
+                <p style="color:rgba(255,255,255,0.6); font-size:0.85rem; letter-spacing:0.5px;">&copy; 2026 Elite Luxury Bookings. All rights reserved. Global Concierge Service.</p>
             </div>
         </div>
     </footer>
