@@ -1,5 +1,5 @@
 User-agent: *
-Allow: /
+Disallow:
 
 # Sitemap Location
 Sitemap: https://eliteluxurybookings.com/sitemap.xml
