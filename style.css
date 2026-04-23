@@ -997,3 +997,9 @@ ul.luxury-list li::before {
         grid-template-columns: 1fr;
     }
 }
+
+/* PLACEHOLDER ACCESSIBILITY */
+::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    opacity: 1;
+}
