@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.media='all'">
 
     <style>
         :root {
@@ -32,7 +32,7 @@
             --glass-bg: rgba(255, 255, 255, 0.02);
             --glass-border: rgba(212, 175, 55, 0.15);
             --text-main: #FFFFFF;
-            --text-muted: rgba(255, 255, 255, 0.75);
+            --text-muted: rgba(255, 255, 255, 0.85);
             --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -390,29 +390,29 @@
                 </div>
                 <form action="https://formspree.io/f/xwvwanlj" method="POST"
                     style="display: flex; flex-direction: column; gap: 2.5rem;">
-                    <input type="hidden" name="_subject" value="Villa Inquiry: Global Portfolio">
+                    <input aria-label="Form Input" type="hidden" name="_subject" value="Villa Inquiry: Global Portfolio">
 
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;" class="form-grid">
                         <div style="display: flex; flex-direction: column; gap: 0.8rem;">
                             <label class="form-label" for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" class="form-control" placeholder="Hon. John Doe"
+                            <input aria-label="Form Input" type="text" id="name" name="name" class="form-control" placeholder="Hon. John Doe"
                                 required>
                         </div>
                         <div style="display: flex; flex-direction: column; gap: 0.8rem;">
                             <label class="form-label" for="phone">WhatsApp / Phone *</label>
-                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="+1..." required>
+                            <input aria-label="Form Input" type="tel" id="phone" name="phone" class="form-control" placeholder="+1..." required>
                         </div>
                     </div>
 
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;" class="form-grid">
                         <div style="display: flex; flex-direction: column; gap: 0.8rem;">
                             <label class="form-label" for="email">Private Email *</label>
-                            <input type="email" id="email" name="email" class="form-control"
+                            <input aria-label="Form Input" type="email" id="email" name="email" class="form-control"
                                 placeholder="client@exclusive.com" required>
                         </div>
                         <div style="display: flex; flex-direction: column; gap: 0.8rem;">
                             <label class="form-label" for="destination">Desired Destination</label>
-                            <input type="text" id="destination" name="destination" class="form-control"
+                            <input aria-label="Form Input" type="text" id="destination" name="destination" class="form-control"
                                 placeholder="Ibiza, St. Barts, Mykonos...">
                         </div>
                     </div>
@@ -485,19 +485,19 @@
                         Services</div>
                     <ul style="list-style:none; display:flex; flex-direction:column; gap:1rem; padding:0; margin:0;">
                         <li><a href="/elite-private-jet-charter.html"
-                                style="color: rgba(255, 255, 255, 0.75); text-decoration:none; font-size:0.9rem; transition:color 0.3s;"
+                                style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;"
                                 onmouseover="this.style.color='#D4AF37'"
                                 onmouseout="this.style.color='rgba(255,255,255,0.6)'">Private Jets</a></li>
                         <li><a href="/luxury-yacht-rentals.html"
-                                style="color: rgba(255, 255, 255, 0.75); text-decoration:none; font-size:0.9rem; transition:color 0.3s;"
+                                style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;"
                                 onmouseover="this.style.color='#D4AF37'"
                                 onmouseout="this.style.color='rgba(255,255,255,0.6)'">Luxury Yachts</a></li>
                         <li><a href="/luxury-villa-rentals.html"
-                                style="color: rgba(255, 255, 255, 0.75); text-decoration:none; font-size:0.9rem; transition:color 0.3s;"
+                                style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;"
                                 onmouseover="this.style.color='#D4AF37'"
                                 onmouseout="this.style.color='rgba(255,255,255,0.6)'">Luxury Villas</a></li>
                         <li><a href="/blog.html"
-                                style="color: rgba(255, 255, 255, 0.75); text-decoration:none; font-size:0.9rem; transition:color 0.3s;"
+                                style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;"
                                 onmouseover="this.style.color='#D4AF37'"
                                 onmouseout="this.style.color='rgba(255,255,255,0.6)'">Blog</a></li>
                     </ul>
@@ -505,7 +505,7 @@
             </div>
             <div
                 style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; padding-top:3rem; gap:1.5rem;">
-                <p style="color: rgba(255, 255, 255, 0.75); font-size:0.85rem; letter-spacing:0.5px;">&copy; 2026 Elite
+                <p style="color: rgba(255, 255, 255, 0.85); font-size:0.85rem; letter-spacing:0.5px;">&copy; 2026 Elite
                     Luxury Bookings. All rights reserved. Global Concierge Service.</p>
             </div>
         </div>
