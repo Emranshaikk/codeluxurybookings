@@ -353,7 +353,8 @@
                 <li><a href="/contact.html">Contact</a></li>
             </ul>
             <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()">
-                <span></span><span></span><span></span></div>
+                <span></span><span></span><span></span>
+            </div>
         </div>
     </nav>
     <div class="mobile-menu" id="elbMobileMenu">
@@ -366,97 +367,104 @@
     <!-- ELB_NAV_END -->
 
     <main>
-    <section class="page-hero">
-        <div class="container">
-            <span class="villa-tag" style="color: #fff; opacity: 0.8;">Selected by Referral. Not Publicly Listed.</span>
-            <h1 class="serif">Unrivaled <span class="gold-text">Private Villa</span> Portfolio</h1>
-            <p>"Sanctuaries of exclusivity. Ultra-premium estates and fully-staffed retreats designed for absolute
-                privacy in the world's most coveted destinations."</p>
-        </div>
-    </section>
-
-    <!-- INQUIRY FORM AT TOP -->
-    <section id="inquiry" class="form-section container">
-        <div class="glass-panel" style="max-width: 950px; margin: 0 auto;">
-            <div style="text-align: center; margin-bottom: 4rem;">
-                <h2 class="serif gold-text" style="font-size: 3.5rem; margin-bottom: 1rem; font-weight: 300;">Request
-                    Private Villa Access</h2>
-                <p style="color: var(--text-muted); font-size: 1rem; text-transform: uppercase; letter-spacing: 4px;">
-                    Exclusive Estate Procurement & Coordination</p>
+        <section class="page-hero">
+            <div class="container">
+                <span class="villa-tag" style="color: #fff; opacity: 0.8;">Selected by Referral. Not Publicly
+                    Listed.</span>
+                <h1 class="serif">Unrivaled <span class="gold-text">Private Villa</span> Portfolio</h1>
+                <p>"Sanctuaries of exclusivity. Ultra-premium estates and fully-staffed retreats designed for absolute
+                    privacy in the world's most coveted destinations."</p>
             </div>
-            <form action="https://formspree.io/f/xwvwanlj" method="POST"
-                style="display: flex; flex-direction: column; gap: 2.5rem;">
-                <input type="hidden" name="_subject" value="Villa Inquiry: Global Portfolio">
+        </section>
 
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;" class="form-grid">
-                    <div style="display: flex; flex-direction: column; gap: 0.8rem;">
-                        <label class="form-label" for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" class="form-control" placeholder="Hon. John Doe" required>
-                    </div>
-                    <div style="display: flex; flex-direction: column; gap: 0.8rem;">
-                        <label class="form-label" for="phone">WhatsApp / Phone *</label>
-                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="+1..." required>
-                    </div>
-                </div>
-
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;" class="form-grid">
-                    <div style="display: flex; flex-direction: column; gap: 0.8rem;">
-                        <label class="form-label" for="email">Private Email *</label>
-                        <input type="email" id="email" name="email" class="form-control" placeholder="client@exclusive.com"
-                            required>
-                    </div>
-                    <div style="display: flex; flex-direction: column; gap: 0.8rem;">
-                        <label class="form-label" for="destination">Desired Destination</label>
-                        <input type="text" id="destination" name="destination" class="form-control"
-                            placeholder="Ibiza, St. Barts, Mykonos...">
-                    </div>
-                </div>
-
-                <div style="display: flex; flex-direction: column; gap: 1rem;">
-                    <label class="form-label" for="requirements">Mission Brief & Requirements</label>
-                    <textarea id="requirements" name="requirements" class="form-control" rows="4"
-                        placeholder="Dates, guest count, or specific staffing needs (Private Chef, Security, Concierge)..."
-                        style="resize: none;"></textarea>
-                </div>
-
-                <div style="text-align: center; margin-top: 1rem;">
-                    <button type="submit" class="btn-gold">Initiate Estate Procurement</button>
+        <!-- INQUIRY FORM AT TOP -->
+        <section id="inquiry" class="form-section container">
+            <div class="glass-panel" style="max-width: 950px; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 class="serif gold-text" style="font-size: 3.5rem; margin-bottom: 1rem; font-weight: 300;">
+                        Request
+                        Private Villa Access</h2>
                     <p
-                        style="text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-top: 2rem; letter-spacing: 1px;">
-                        A senior concierge will respond personally within 30 minutes.</p>
+                        style="color: var(--text-muted); font-size: 1rem; text-transform: uppercase; letter-spacing: 4px;">
+                        Exclusive Estate Procurement & Coordination</p>
                 </div>
-            </form>
-        </div>
-    </section>
+                <form action="https://formspree.io/f/xwvwanlj" method="POST"
+                    style="display: flex; flex-direction: column; gap: 2.5rem;">
+                    <input type="hidden" name="_subject" value="Villa Inquiry: Global Portfolio">
 
-    <section class="container">
-        <div class="villa-grid">
-            <div class="villa-card">
-                <div class="villa-info">
-                    <span class="villa-tag">Ibiza, Spain</span>
-                    <h3 class="serif">Hidden Clifftop Sanctuary</h3>
-                    <p style="color: var(--text-muted); line-height: 1.8;">A fully-staffed clifftop retreat offering
-                        absolute privacy, an elite private chef, and an integrated invisible security perimeter.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;" class="form-grid">
+                        <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+                            <label class="form-label" for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Hon. John Doe"
+                                required>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+                            <label class="form-label" for="phone">WhatsApp / Phone *</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="+1..." required>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;" class="form-grid">
+                        <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+                            <label class="form-label" for="email">Private Email *</label>
+                            <input type="email" id="email" name="email" class="form-control"
+                                placeholder="client@exclusive.com" required>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+                            <label class="form-label" for="destination">Desired Destination</label>
+                            <input type="text" id="destination" name="destination" class="form-control"
+                                placeholder="Ibiza, St. Barts, Mykonos...">
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <label class="form-label" for="requirements">Mission Brief & Requirements</label>
+                        <textarea id="requirements" name="requirements" class="form-control" rows="4"
+                            placeholder="Dates, guest count, or specific staffing needs (Private Chef, Security, Concierge)..."
+                            style="resize: none;"></textarea>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 1rem;">
+                        <button type="submit" class="btn-gold">Initiate Estate Procurement</button>
+                        <p
+                            style="text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-top: 2rem; letter-spacing: 1px;">
+                            A senior concierge will respond personally within 30 minutes.</p>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="villa-grid">
+                <div class="villa-card">
+                    <div class="villa-info">
+                        <span class="villa-tag">Ibiza, Spain</span>
+                        <h3 class="serif">Hidden Clifftop Sanctuary</h3>
+                        <p style="color: var(--text-muted); line-height: 1.8;">A fully-staffed clifftop retreat offering
+                            absolute privacy, an elite private chef, and an integrated invisible security perimeter.</p>
+                    </div>
+                </div>
+                <div class="villa-card">
+                    <div class="villa-info">
+                        <span class="villa-tag">Mykonos, Greece</span>
+                        <h3 class="serif">Aegean Grand Estate</h3>
+                        <p style="color: var(--text-muted); line-height: 1.8;">Expansive minimalist luxury overlooking
+                            the
+                            Cyclades. Features a 50m infinity pool and private helipad access for discrete arrival.</p>
+                    </div>
+                </div>
+                <div class="villa-card">
+                    <div class="villa-info">
+                        <span class="villa-tag">St. Barts</span>
+                        <h3 class="serif">Caribbean Ocean Front</h3>
+                        <p style="color: var(--text-muted); line-height: 1.8;">Ultra-discrete beach-front acreage.
+                            Complete
+                            with internal concierge and 24/7 discrete protective services for the discerning traveler.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="villa-card">
-                <div class="villa-info">
-                    <span class="villa-tag">Mykonos, Greece</span>
-                    <h3 class="serif">Aegean Grand Estate</h3>
-                    <p style="color: var(--text-muted); line-height: 1.8;">Expansive minimalist luxury overlooking the
-                        Cyclades. Features a 50m infinity pool and private helipad access for discrete arrival.</p>
-                </div>
-            </div>
-            <div class="villa-card">
-                <div class="villa-info">
-                    <span class="villa-tag">St. Barts</span>
-                    <h3 class="serif">Caribbean Ocean Front</h3>
-                    <p style="color: var(--text-muted); line-height: 1.8;">Ultra-discrete beach-front acreage. Complete
-                        with internal concierge and 24/7 discrete protective services for the discerning traveler.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
     </main>
 
     <footer style="background:#000; border-top:1px solid rgba(255,255,255,0.05); padding:6rem 0;">
