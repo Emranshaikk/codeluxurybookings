@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <!-- 0. BRAND & FAVICON -->
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elite Luxury Blog: Mastery in Private Jets, Yachts & Villas</title>
     <meta name="description"
@@ -13,10 +13,9 @@
     <!-- Premium Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet" media="print" onload="this.media='all'">
-    <link rel="preload" href="blog-data.json" as="fetch" crossorigin="anonymous">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" media="all">
+    <link rel="preload" href="/blog-data.json" as="fetch" crossorigin="anonymous">
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J56D1LJLFM"></script>
     <script>
@@ -607,7 +606,7 @@
         const postsPerPage = 24;
 
         document.addEventListener('DOMContentLoaded', () => {
-            fetch('blog-data.json')
+            fetch('/blog-data.json')
                 .then(res => res.json())
                 .then(data => {
                     allPosts = data;
