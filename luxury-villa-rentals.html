@@ -316,6 +316,7 @@
         }
 
         @media (max-width: 1024px) {
+            .form-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
             .nav-links {
                 display: none;
             }
@@ -354,7 +355,8 @@
         .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #050505; padding: 72px 2rem 2rem; z-index: 100000; flex-direction: column; gap: 0.5rem; overflow-y: auto; }
         .mobile-menu.open { display: flex !important; }
         .mobile-menu a { color: rgba(255, 255, 255, 0.8) !important; text-decoration: none !important; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; padding: 1.2rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
-        @media (max-width: 1024px) { .nav-links { display: none !important; } .nav-hamburger { display: flex !important; } }
+        @media (max-width: 1024px) {
+            .form-grid { grid-template-columns: 1fr !important; gap: 2rem !important; } .nav-links { display: none !important; } .nav-hamburger { display: flex !important; } }
         /* --- END ELITE MOBILE NAV --- */
 </style>
 </head>

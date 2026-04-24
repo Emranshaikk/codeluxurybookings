@@ -314,6 +314,7 @@
             .cat-box {
                 min-width: 280px;
                 flex-shrink: 0;
+            }
         }
 
         .pagination {
@@ -354,6 +355,7 @@
             }
 
             @media (max-width: 768px) {
+            .blog-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
                 .form-grid {
                     grid-template-columns: 1fr !important;
                     gap: 2rem !important;
@@ -536,10 +538,6 @@
         <div class="container">
             <!-- CATEGORY HUB -->
             <div class="cat-hub">
-                <div class="cat-box active" onclick="filterBlog('all')">
-                    <h3>All Intel</h3>
-                    <span>Complete luxury archive</span>
-                </div>
                 <div class="cat-box" onclick="filterBlog('private jet')">
                     <h3>Private Jet</h3>
                     <span>116 Routes & Guides</span>
