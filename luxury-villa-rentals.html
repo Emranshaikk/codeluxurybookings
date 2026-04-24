@@ -29,10 +29,11 @@
         :root {
             --primary-gold: #D4AF37;
             --deep-black: #050505;
+            --graphene: #0A0A0A;
             --glass-bg: rgba(255, 255, 255, 0.02);
             --glass-border: rgba(212, 175, 55, 0.15);
             --text-main: #FFFFFF;
-            --text-muted: rgba(255, 255, 255, 0.85);
+            --text-muted: rgba(255, 255, 255, 0.7);
             --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -43,10 +44,11 @@
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
             padding-top: 72px;
+            line-height: 1.6;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1300px;
             margin: 0 auto;
             padding: 0 2rem;
         }
@@ -59,7 +61,11 @@
             color: var(--primary-gold);
         }
 
-        /* NAVIGATION REPLICATION */
+        .section-padding {
+            padding: 8rem 0;
+        }
+
+        /* Global Nav Standard */
         .global-nav {
             position: fixed;
             top: 0;
@@ -76,11 +82,9 @@
             align-items: center;
             justify-content: space-between;
             height: 72px;
-            gap: 1rem;
-            max-width: 1400px;
+            max-width: 1300px;
             margin: 0 auto;
             padding: 0 2rem;
-            box-sizing: border-box;
         }
 
         .nav-brand {
@@ -88,37 +92,30 @@
             font-size: 1.75rem;
             font-weight: 600;
             color: #fff !important;
-            text-decoration: none !important;
-        }
-
-        .nav-gold {
-            color: #D4AF37 !important;
+            text-decoration: none;
         }
 
         .nav-links {
             display: flex;
-            align-items: center;
-            gap: 0.25rem;
+            gap: 0.5rem;
             list-style: none;
-            flex: 1;
-            justify-content: center;
             margin: 0;
             padding: 0;
         }
 
         .nav-links a {
             color: rgba(255, 255, 255, 0.7) !important;
-            text-decoration: none !important;
-            font-size: 0.82rem;
+            text-decoration: none;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            padding: 0.5rem 0.9rem;
+            padding: 0.5rem 1rem;
             border-radius: 6px;
-            transition: all 0.4s;
+            transition: 0.3s;
         }
 
         .nav-links a:hover {
-            color: #D4AF37 !important;
+            color: var(--primary-gold) !important;
         }
 
         .nav-hamburger {
@@ -126,15 +123,26 @@
             flex-direction: column;
             gap: 5px;
             cursor: pointer;
-            padding: 0.5rem;
+            z-index: 100001;
         }
 
         .nav-hamburger span {
-            display: block;
             width: 24px;
             height: 2px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 2px;
+            background: #fff;
+            transition: 0.4s;
+        }
+
+        .nav-hamburger.open span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .nav-hamburger.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-hamburger.open span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
         }
 
         .mobile-menu {
@@ -144,158 +152,146 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: #050505;
-            padding: 72px 2rem 2rem;
+            background: #000;
+            padding: 100px 2rem;
             z-index: 100000;
             flex-direction: column;
-            gap: 0.5rem;
+            gap: 1rem;
+            text-align: center;
         }
 
         .mobile-menu.open {
-            display: flex !important;
+            display: flex;
         }
 
         .mobile-menu a {
-            color: rgba(255, 255, 255, 0.8) !important;
-            text-decoration: none !important;
-            font-size: 1.1rem;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            padding: 1.2rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            letter-spacing: 3px;
+            font-family: 'Cormorant Garamond', serif;
         }
 
-        /* HERO & CONTENT */
+        /* Hero Section */
         .page-hero {
-            padding: 10rem 0 6rem;
+            padding: 12rem 0 8rem;
             text-align: center;
-            position: relative;
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('ultra_luxury_mediterranean_villa_sunset_1775902206137.png');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
 
-        .page-hero h1 {
-            font-size: clamp(3rem, 6vw, 5.5rem);
-            margin-bottom: 1.5rem;
+        .hero-tagline {
+            color: var(--primary-gold);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 2rem;
+        }
+
+        .hero-title {
+            font-size: clamp(3.5rem, 8vw, 5.5rem);
             line-height: 1.1;
+            margin-bottom: 2rem;
             font-weight: 300;
         }
 
-        .page-hero p {
-            color: #fff;
-            max-width: 800px;
-            margin: 0 auto;
+        .hero-desc {
             font-size: 1.25rem;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-            font-family: 'Cormorant Garamond', serif;
+            color: #fff;
+            max-width: 850px;
+            margin: 0 auto;
             font-style: italic;
+            opacity: 0.9;
+        }
+
+        /* Grid & Panels */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
         }
 
         .glass-panel {
-            background: rgba(10, 10, 10, 0.85);
+            background: rgba(10, 10, 10, 0.8);
             border: 1px solid var(--glass-border);
-            border-radius: 30px;
-            backdrop-filter: blur(30px);
-            padding: 4rem;
-            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.8);
-        }
-
-        .villa-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2.5rem;
-            margin-top: 6rem;
-            padding-bottom: 6rem;
-        }
-
-        .villa-card {
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 20px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            padding: 3rem;
+            backdrop-filter: blur(20px);
             transition: var(--transition);
         }
 
         .villa-card:hover {
             border-color: var(--primary-gold);
             transform: translateY(-10px);
-            background: rgba(212, 175, 55, 0.02);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
         }
 
-        .villa-info {
-            padding: 3rem 2rem;
+        /* Form Controls */
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
         }
 
-        .villa-info h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
         }
 
-        .villa-tag {
-            color: var(--primary-gold);
+        .form-label {
             font-size: 0.8rem;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            font-weight: 700;
-            display: block;
-            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            color: var(--primary-gold);
         }
 
-        /* FORM STYLING */
-        .form-section {
-            padding: 0;
-            margin-top: -80px;
-            position: relative;
-            z-index: 10;
-        }
-
-        .form-control {
-            width: 100%;
+        .form-input,
+        .form-textarea {
             background: transparent;
             border: none;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 1.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
             color: #fff;
-            font-family: 'Inter', sans-serif;
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             outline: none;
-            transition: var(--transition);
+            transition: 0.3s;
         }
 
-        .form-control:focus {
+        .form-input:focus {
             border-bottom-color: var(--primary-gold);
-            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .form-textarea {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 1rem;
         }
 
         .btn-gold {
             background: linear-gradient(135deg, #D4AF37, #B8860B);
             color: #000;
-            padding: 2rem;
+            padding: 1.5rem 3rem;
             border: none;
-            border-radius: 12px;
+            border-radius: 8px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 5px;
+            letter-spacing: 3px;
             cursor: pointer;
-            width: 100%;
-            transition: var(--transition);
-            font-size: 1.2rem;
-            margin-top: 2rem;
+            transition: 0.4s;
+            font-size: 1rem;
         }
 
         .btn-gold:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
-            filter: brightness(1.1);
-        }
-
-        .form-label {
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--primary-gold);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
         }
 
         .wa-float {
@@ -303,20 +299,18 @@
             bottom: 30px;
             right: 30px;
             background: #25D366;
-            color: #fff;
+            color: #fff !important;
             width: 60px;
             height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 100000;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s;
+            z-index: 9999;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
-        @media (max-width: 1024px) {
-            .form-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+        @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
@@ -325,44 +319,71 @@
                 display: flex;
             }
 
-            .villa-grid {
+            .section-padding {
+                padding: 4rem 0;
+            }
+
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .form-grid {
                 grid-template-columns: 1fr;
             }
 
-            .form-section {
-                margin-top: 2rem;
-                padding: 0 1rem;
+            .glass-panel {
+                padding: 2rem 1.5rem;
             }
 
-            .glass-panel {
-                padding: 2.5rem 1.5rem;
+            .page-hero {
+                padding: 8rem 0 6rem;
+                background-attachment: scroll;
             }
         }
-    
-        /* --- ELITE MOBILE NAV STANDARDIZATION --- */
-        .global-nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(5, 5, 5, 0.98); backdrop-filter: blur(24px); border-bottom: 1px solid rgba(212, 175, 55, 0.2); z-index: 99999; }
-        .global-nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 1rem; max-width: 1400px; margin: 0 auto; padding: 0 2rem; box-sizing: border-box; }
-        .nav-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; font-weight: 600; color: #fff !important; text-decoration: none !important; }
-        .nav-gold { color: #D4AF37 !important; }
-        .nav-links { display: flex; align-items: center; gap: 0.25rem; list-style: none; flex: 1; justify-content: center; margin: 0; padding: 0; }
-        .nav-links a { color: rgba(255, 255, 255, 0.7) !important; text-decoration: none !important; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 1.5px; padding: 0.5rem 0.9rem; border-radius: 6px; transition: all 0.4s; font-family: 'Inter', sans-serif !important; }
-        .nav-links a:hover { color: #D4AF37 !important; }
-        .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 0.5rem; z-index: 100001; }
-        .nav-hamburger span { display: block; width: 24px; height: 2px; background: rgba(255, 255, 255, 0.8); border-radius: 2px; transition: all 0.4s; }
-        .nav-hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-        .nav-hamburger.open span:nth-child(2) { opacity: 0; }
-        .nav-hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
-        .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #050505; padding: 72px 2rem 2rem; z-index: 100000; flex-direction: column; gap: 0.5rem; overflow-y: auto; }
-        .mobile-menu.open { display: flex !important; }
-        .mobile-menu a { color: rgba(255, 255, 255, 0.8) !important; text-decoration: none !important; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; padding: 1.2rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
-        @media (max-width: 1024px) {
-            .form-grid { grid-template-columns: 1fr !important; gap: 2rem !important; } .nav-links { display: none !important; } .nav-hamburger { display: flex !important; } }
-        /* --- END ELITE MOBILE NAV --- */
-</style>
+    </style>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Luxury Villa Rentals",
+      "provider": {
+        "@type": "Organization",
+        "name": "Elite Luxury Bookings",
+        "url": "https://eliteluxurybookings.com"
+      },
+      "description": "Access the world's most exclusive, off-market private villas and estates. Fully staffed sanctuaries in Ibiza, Mykonos, Saint-Tropez, and beyond.",
+      "areaServed": "Global",
+      "serviceType": "Estate Concierge"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "How do I book a private villa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Simply submit a request via our estate concierge portal. A senior consultant will curate a selection of off-market private estates tailored to your destination and staffing requirements."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Are the villas fully staffed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, most villas in our elite portfolio include professional staffing such as private chefs, housekeepers, and discrete security if requested."
+        }
+      }]
+    }
+    </script>
+    </style>
 </head>
 
 <body>
-        <!-- ELB_NAV_START -->
+    <!-- ELB_NAV_START -->
     <nav class="global-nav">
         <div class="container global-nav-inner">
             <a href="/" class="nav-brand">Elite Luxury <span class="nav-gold">Bookings</span></a>
@@ -373,7 +394,9 @@
                 <li><a href="/blog.html">Blog</a></li>
                 <li><a href="/contact.html">Contact</a></li>
             </ul>
-            <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></div>
+            <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()">
+                <span></span><span></span><span></span>
+            </div>
         </div>
     </nav>
     <div class="mobile-menu" id="elbMobileMenu">
@@ -388,121 +411,138 @@
     <main>
         <section class="page-hero">
             <div class="container">
-                <span class="villa-tag" style="color: #fff; opacity: 0.8;">Selected by Referral. Not Publicly
-                    Listed.</span>
-                <h1 class="serif">Unrivaled <span class="gold-text">Private Villa</span> Portfolio</h1>
-                <p>"Sanctuaries of exclusivity. Ultra-premium estates and fully-staffed retreats designed for absolute
-                    privacy in the world's most coveted destinations."</p>
+                <span class="hero-tagline">Selected by Referral Only</span>
+                <h1 class="serif hero-title">Unrivaled <span class="gold-text">Private Villa</span> Portfolio</h1>
+                <p class="hero-desc">"Sanctuaries of exclusivity. Ultra-premium estates and fully-staffed retreats
+                    designed for absolute privacy in the world's most coveted destinations."</p>
             </div>
         </section>
 
-        <!-- INQUIRY FORM AT TOP -->
-        <section id="inquiry" class="form-section container">
-            <div class="glass-panel" style="max-width: 950px; margin: 0 auto;">
-                <div style="text-align: center; margin-bottom: 4rem;">
-                    <h2 class="serif gold-text" style="font-size: 3.5rem; margin-bottom: 1rem; font-weight: 300;">
-                        Request
-                        Private Villa Access</h2>
+        <!-- INQUIRY FORM -->
+        <section id="inquiry" class="container" style="margin-top: -100px; position: relative; z-index: 10;">
+            <div class="glass-panel" style="max-width: 1000px; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 class="serif gold-text" style="font-size: 2.5rem; margin-bottom: 0.5rem;">Request Private Villa
+                        Access</h2>
                     <p
-                        style="color: var(--text-muted); font-size: 1rem; text-transform: uppercase; letter-spacing: 4px;">
+                        style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 3px;">
                         Exclusive Estate Procurement & Coordination</p>
                 </div>
-                <form action="https://formspree.io/f/xwvwanlj" method="POST"
-                    style="display: flex; flex-direction: column; gap: 2.5rem;">
-                    <input aria-label="Form Input" type="hidden" name="_subject" value="Villa Inquiry: Global Portfolio">
+                <form action="https://formspree.io/f/xwvwanlj" method="POST">
+                    <input type="hidden" name="_subject" value="Villa Inquiry: Global Portfolio">
 
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;" class="form-grid">
-                        <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+                    <div class="form-grid">
+                        <div class="form-group">
                             <label class="form-label" for="name">Full Name *</label>
-                            <input aria-label="Form Input" type="text" id="name" name="name" class="form-control" placeholder="Hon. John Doe"
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Hon. John Doe"
                                 required>
                         </div>
-                        <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+                        <div class="form-group">
                             <label class="form-label" for="phone">WhatsApp / Phone *</label>
-                            <input aria-label="Form Input" type="tel" id="phone" name="phone" class="form-control" placeholder="+1..." required>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1..." required>
                         </div>
                     </div>
 
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;" class="form-grid">
-                        <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+                    <div class="form-grid" style="margin-top: 2rem;">
+                        <div class="form-group">
                             <label class="form-label" for="email">Private Email *</label>
-                            <input aria-label="Form Input" type="email" id="email" name="email" class="form-control"
+                            <input type="email" id="email" name="email" class="form-input"
                                 placeholder="client@exclusive.com" required>
                         </div>
-                        <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+                        <div class="form-group">
                             <label class="form-label" for="destination">Desired Destination</label>
-                            <input aria-label="Form Input" type="text" id="destination" name="destination" class="form-control"
+                            <input type="text" id="destination" name="destination" class="form-input"
                                 placeholder="Ibiza, St. Barts, Mykonos...">
                         </div>
                     </div>
 
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div class="form-group" style="margin-top: 2rem;">
                         <label class="form-label" for="requirements">Mission Brief & Requirements</label>
-                        <textarea id="requirements" name="requirements" class="form-control" rows="4"
-                            placeholder="Dates, guest count, or specific staffing needs (Private Chef, Security, Concierge)..."
-                            style="resize: none;"></textarea>
+                        <textarea id="requirements" name="requirements" class="form-textarea" rows="4"
+                            placeholder="Dates, guest count, or specific staffing needs (Private Chef, Security, Concierge)..."></textarea>
                     </div>
 
-                    <div style="text-align: center; margin-top: 1rem;">
+                    <div style="text-align: center; margin-top: 3rem;">
                         <button type="submit" class="btn-gold">Initiate Estate Procurement</button>
                         <p
-                            style="text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-top: 2rem; letter-spacing: 1px;">
+                            style="color: var(--text-muted); font-size: 0.8rem; margin-top: 1.5rem; letter-spacing: 1px;">
                             A senior concierge will respond personally within 30 minutes.</p>
                     </div>
                 </form>
             </div>
         </section>
 
-        <section class="container">
-            <div class="villa-grid">
-                <div class="villa-card">
-                    <div class="villa-info">
-                        <span class="villa-tag">Ibiza, Spain</span>
-                        <h3 class="serif">Hidden Clifftop Sanctuary</h3>
-                        <p style="color: var(--text-muted); line-height: 1.8;">A fully-staffed clifftop retreat offering
-                            absolute privacy, an elite private chef, and an integrated invisible security perimeter.</p>
+        <!-- VILLA CARDS -->
+        <section class="container section-padding">
+            <div class="grid-3">
+                <div class="glass-panel villa-card" style="padding: 0; overflow: hidden;">
+                    <div style="padding: 3rem 2rem;">
+                        <span class="hero-tagline" style="font-size: 0.7rem; margin-bottom: 1rem;">Ibiza, Spain</span>
+                        <h3 class="serif" style="font-size: 1.8rem; margin-bottom: 1rem;">Hidden Clifftop Sanctuary</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">A fully-staffed clifftop retreat
+                            offering absolute privacy, an elite private chef, and an integrated invisible security
+                            perimeter.</p>
                     </div>
                 </div>
-                <div class="villa-card">
-                    <div class="villa-info">
-                        <span class="villa-tag">Mykonos, Greece</span>
-                        <h3 class="serif">Aegean Grand Estate</h3>
-                        <p style="color: var(--text-muted); line-height: 1.8;">Expansive minimalist luxury overlooking
-                            the
-                            Cyclades. Features a 50m infinity pool and private helipad access for discrete arrival.</p>
-                    </div>
-                </div>
-                <div class="villa-card">
-                    <div class="villa-info">
-                        <span class="villa-tag">St. Barts</span>
-                        <h3 class="serif">Caribbean Ocean Front</h3>
-                        <p style="color: var(--text-muted); line-height: 1.8;">Ultra-discrete beach-front acreage.
-                            Complete
-                            with internal concierge and 24/7 discrete protective services for the discerning traveler.
+
+                <div class="glass-panel villa-card" style="padding: 0; overflow: hidden;">
+                    <div style="padding: 3rem 2rem;">
+                        <span class="hero-tagline" style="font-size: 0.7rem; margin-bottom: 1rem;">Mykonos,
+                            Greece</span>
+                        <h3 class="serif" style="font-size: 1.8rem; margin-bottom: 1rem;">Aegean Grand Estate</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">Expansive minimalist luxury overlooking
+                            the Cyclades. Features a 50m infinity pool and private helipad access for discrete arrival.
                         </p>
+                    </div>
+                </div>
+
+                <div class="glass-panel villa-card" style="padding: 0; overflow: hidden;">
+                    <div style="padding: 3rem 2rem;">
+                        <span class="hero-tagline" style="font-size: 0.7rem; margin-bottom: 1rem;">St. Barts</span>
+                        <h3 class="serif" style="font-size: 1.8rem; margin-bottom: 1rem;">Caribbean Ocean Front</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">Ultra-discrete beach-front acreage.
+                            Complete with internal concierge and 24/7 discrete protective services for the discerning
+                            traveler.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-        <!-- ELB_FOOTER_START -->
+    <!-- ELB_FOOTER_START -->
     <footer style="background:#000; border-top:1px solid rgba(255,255,255,0.05); padding:6rem 0;">
         <div class="container">
-            <div style="font-family:'Cormorant Garamond', serif; font-size: 2.2rem; margin-bottom: 1.5rem; text-align: center; color: #D4AF37;">Elite Luxury Bookings</div>
+            <div class="serif gold-text" style="font-size: 2.2rem; margin-bottom: 1.5rem; text-align: center;">Elite
+                Luxury Bookings</div>
             <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap;">
-                <a href="/elite-private-jet-charter.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Private Jets</a>
-                <a href="/luxury-yacht-rentals.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Yachts</a>
-                <a href="/luxury-villa-rentals.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Villas</a>
-                <a href="/blog.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Blog</a>
-                <a href="/contact.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Contact</a>
+                <a href="/elite-private-jet-charter.html"
+                    style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;"
+                    onmouseover="this.style.color='#D4AF37'"
+                    onmouseout="this.style.color='rgba(255,255,255,0.7)'">Private Jets</a>
+                <a href="/luxury-yacht-rentals.html"
+                    style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;"
+                    onmouseover="this.style.color='#D4AF37'"
+                    onmouseout="this.style.color='rgba(255,255,255,0.7)'">Yachts</a>
+                <a href="/luxury-villa-rentals.html"
+                    style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;"
+                    onmouseover="this.style.color='#D4AF37'"
+                    onmouseout="this.style.color='rgba(255,255,255,0.7)'">Villas</a>
+                <a href="/blog.html"
+                    style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;"
+                    onmouseover="this.style.color='#D4AF37'"
+                    onmouseout="this.style.color='rgba(255,255,255,0.7)'">Blog</a>
+                <a href="/contact.html"
+                    style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;"
+                    onmouseover="this.style.color='#D4AF37'"
+                    onmouseout="this.style.color='rgba(255,255,255,0.7)'">Contact</a>
             </div>
-            <p style="color: rgba(255, 255, 255, 0.5); font-size: 0.8rem; text-align: center;">&copy; 2026 Elite Luxury Bookings. All rights reserved. Global Concierge Service.</p>
+            <p style="color: rgba(255, 255, 255, 0.5); font-size: 0.8rem; text-align: center;">&copy; 2026 Elite Luxury
+                Bookings. All rights reserved. Global Concierge Service.</p>
         </div>
     </footer>
     <!-- ELB_FOOTER_END -->
 
-    <a href="https://wa.me/918801079030" class="wa-float" target="_blank">
+    <a href="https://wa.me/918801079030" class="wa-float" target="_blank" aria-label="WhatsApp Concierge">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
             <path
                 d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
@@ -511,8 +551,11 @@
 
     <script>
         function toggleMobileMenu() {
-            document.getElementById('elbMobileMenu').classList.toggle('open');
-            document.getElementById('navHamburger').classList.toggle('open');
+            const menu = document.getElementById('elbMobileMenu');
+            const hamburger = document.getElementById('navHamburger');
+            menu.classList.toggle('open');
+            hamburger.classList.toggle('open');
+            document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
         }
     </script>
 </body>
