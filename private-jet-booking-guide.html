@@ -945,7 +945,7 @@
                     7,000+ global jets.</p>
 
                 <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
-                    <a href="#booking-form" class="btn btn-gold">Get 3 Jet Quotes in 2 Minutes</a>
+                    <a href="#booking-form" class="btn btn-gold" onclick="gtag('event', 'cta_click', {'event_category': 'engagement', 'event_label': 'Primary CTA'});">Get 3 Jet Quotes in 2 Minutes</a>
                     <!-- FIX: Distinct secondary CTA — leads to real value, not a duplicate action -->
                     <a href="#empty-legs" class="btn btn-outline">See Empty Leg Deals Today</a>
                 </div>
@@ -1188,7 +1188,7 @@
                         </div>
                     </div>
                     <div style="text-align: center; margin-top: 4rem;">
-                        <a href="#booking-form" class="btn btn-gold">Get Started Now</a>
+                        <a href="#booking-form" class="btn btn-gold" onclick="gtag('event', 'cta_click', {'event_category': 'engagement', 'event_label': 'Primary CTA'});">Get Started Now</a>
                     </div>
                 </div>
             </section>
@@ -1370,7 +1370,7 @@
                         </tbody>
                     </table>
                     <div style="text-align: center; margin-top: 3rem;">
-                        <a href="#booking-form" class="btn btn-gold">Get Your Exact All-In Quote</a>
+                        <a href="#booking-form" class="btn btn-gold" onclick="gtag('event', 'cta_click', {'event_category': 'engagement', 'event_label': 'Primary CTA'});">Get Your Exact All-In Quote</a>
                     </div>
                 </div>
             </section>
@@ -1417,7 +1417,7 @@
                         </div>
                     </div>
                     <div style="text-align: center; margin-top: 3rem;">
-                        <a href="#booking-form" class="btn btn-outline">Check Empty Leg Availability</a>
+                        <a href="#booking-form" class="btn btn-outline" onclick="gtag('event', 'cta_click', {'event_category': 'engagement', 'event_label': 'Primary CTA'});">Check Empty Leg Availability</a>
                     </div>
                 </div>
             </section>
@@ -1628,7 +1628,7 @@
                         Don't
                         overpay for your next journey. Let our market experts secure your aircraft at the best possible
                         rate.</p>
-                    <a href="#booking-form" class="btn btn-gold"
+                    <a href="#booking-form" class="btn btn-gold" onclick="gtag('event', 'cta_click', {'event_category': 'engagement', 'event_label': 'Primary CTA'});"
                         style="padding: 1.8rem 4rem; font-size: 1.1rem;">Request My
                         3 Instant Quotes</a>
                     <p
@@ -1682,7 +1682,7 @@
 
     <!-- Sticky CTA -->
     <div class="sticky-cta" id="stickyCta">
-        <a href="#booking-form" class="btn btn-gold"
+        <a href="#booking-form" class="btn btn-gold" onclick="gtag('event', 'cta_click', {'event_category': 'engagement', 'event_label': 'Primary CTA'});"
             style="padding: 1rem 2rem; white-space: nowrap; box-shadow: 0 10px 30px rgba(212,175,55,0.4);">Get Jet
             Quote</a>
     </div>
@@ -1847,7 +1847,7 @@
                         credit</strong> for your next charter mission.</p>
                 <form id="exitForm" onsubmit="handleExitSubmit(event)">
                     <input type="hidden" name="form_type" value="Exit Intent Popup">
-                    <input type="email" placeholder="Your private email address" class="form-control" required
+                    <input type="email" name="email" placeholder="Your private email address" class="form-control" required
                         style="margin-bottom: 1.5rem; background: rgba(255,255,255,0.08);">
                     <button type="submit" class="btn btn-gold" style="width: 100%;">Send Guide & Credit</button>
                 </form>
