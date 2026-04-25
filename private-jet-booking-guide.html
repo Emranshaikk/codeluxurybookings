@@ -810,8 +810,15 @@
         }
 
         @keyframes modalPop {
-            from { opacity: 0; transform: scale(0.9) translateY(20px); }
-            to { opacity: 1; transform: scale(1) translateY(0); }
+            from {
+                opacity: 0;
+                transform: scale(0.9) translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
         }
 
         .exit-popup-image {
@@ -867,12 +874,15 @@
                 flex-direction: column;
                 max-width: 450px;
             }
+
             .exit-popup-image {
                 min-height: 200px;
             }
+
             .exit-popup-content {
                 padding: 2.5rem;
             }
+
             .exit-popup-content h2 {
                 font-size: 2.2rem;
             }
@@ -1680,11 +1690,6 @@
     <script>
         /* ── Intersection Observer for Scroll Reveals ── */
         const observerOptions = {
-            threshold: 0.1
-        };
-
-        /* ── Intersection Observer for Scroll Reveals ── */
-        const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
@@ -1736,20 +1741,20 @@
                 body: data,
                 headers: { 'Accept': 'application/json' }
             })
-            .then(res => {
-                if (res.ok) {
-                    gtag('event', 'generate_lead', {
-                        'event_category': 'exit_intent',
-                        'event_label': 'Popup Lead'
-                    });
-                    window.location.href = '/thank-you/';
-                } else {
-                    alert('There was an issue. Please try again or WhatsApp us.');
-                }
-            })
-            .catch(() => {
-                alert('Connection error. Please try again.');
-            });
+                .then(res => {
+                    if (res.ok) {
+                        gtag('event', 'generate_lead', {
+                            'event_category': 'exit_intent',
+                            'event_label': 'Popup Lead'
+                        });
+                        window.location.href = '/thank-you/';
+                    } else {
+                        alert('There was an issue. Please try again or WhatsApp us.');
+                    }
+                })
+                .catch(() => {
+                    alert('Connection error. Please try again.');
+                });
         }
 
         document.addEventListener('mouseleave', (e) => {
