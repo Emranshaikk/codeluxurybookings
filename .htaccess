@@ -31,9 +31,16 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([^/]+)/?$ $1.html [L]
 
-# 5. PHP Blocking Shield (Prevents Legacy WordPress Database Errors)
-# This forces the server to NEVER look for .php files, ensuring the static site stays live.
+# 5. PHP Blocking Shield (Security First)
+# This forces the server to NEVER look for .php files, EXCEPT for our lead handler.
 <FilesMatch "\.(php|php5|php4|php3|phtml|phps)$">
     Order Deny,Allow
     Deny from all
 </FilesMatch>
+
+# EXCEPTION: Allow the specific Lead Handler script to run
+<Files "submit-lead.php">
+    Order Allow,Deny
+    Allow from all
+</Files>
+
