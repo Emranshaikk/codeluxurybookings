@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Jet Charter from London | Luxury Routes & Costs | ELB</title>
+    <meta name="description"
+        content="Discover premium private jet charter routes from London. Instant pricing, airport guides, and luxury aircraft options for your next journey from London.">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+
+    <style>
+        :root {
+            --primary-gold: #d4af37;
+            --dark-bg: #050505;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-muted: rgba(255, 255, 255, 0.6);
+        }
+
+        body {
+            background: var(--dark-bg);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .gold-text {
+            color: var(--primary-gold);
+        }
+
+        /* Hero */
+        .city-hero {
+            padding: 12rem 0 6rem;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), #000), url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&q=80&w=2000') center/cover;
+            text-align: center;
+        }
+
+        .city-hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Intro Section */
+        .section-padding {
+            padding: 6rem 0;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            padding: 3rem;
+            border-radius: 32px;
+        }
+
+        /* Route Grid */
+        .route-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .route-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+            text-transform: capitalize;
+        }
+
+        .route-link:hover {
+            border-color: var(--primary-gold);
+            transform: translateY(-3px);
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        /* Airport Section */
+        .airport-card {
+            padding: 2rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .airport-card:last-child {
+            border-bottom: none;
+        }
+
+        .airport-tag {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--primary-gold);
+            border-radius: 100px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        /* CTA */
+        .cta-banner {
+            background: var(--primary-gold);
+            color: #000;
+            padding: 4rem;
+            border-radius: 40px;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .btn-black {
+            background: #000;
+            color: #fff;
+            padding: 1rem 2.5rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 2rem;
+            transition: 0.3s;
+        }
+
+        .btn-black:hover {
+            transform: scale(1.05);
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            padding: 2rem 0;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .breadcrumbs a {
+            color: var(--primary-gold);
+            text-decoration: none;
+        }
+
+        /* NAV STANDARDIZATION */
+        .global-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(5, 5, 5, 0.98);
+            backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            z-index: 99999;
+        }
+
+        .global-nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+            gap: 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            box-sizing: border-box;
+        }
+
+        .nav-brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-gold {
+            color: #D4AF37;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 0.5rem 0.9rem;
+            border-radius: 6px;
+            transition: 0.4s;
+        }
+
+        .nav-links a:hover {
+            color: #D4AF37;
+        }
+
+        @media (max-width: 900px) {
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .city-hero h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="global-nav">
+        <div class="container global-nav-inner">
+            <a href="/" class="nav-brand">Elite Luxury <span class="nav-gold">Bookings</span></a>
+            <ul class="nav-links">
+                <li><a href="/private-jet-booking-guide/">Private Jets</a></li>
+                <li><a href="/global-route-silo/">Routes</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="city-hero">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="/">Home</a> / <a href="/private-jet-booking-guide/">Private Jets</a> / <span
+                    class="gold-text">London Routes</span>
+            </div>
+            <h1 class="serif">Private Jet Charter <br><span class="gold-text">from London</span></h1>
+            <p style="max-width: 700px; margin: 0 auto; color: var(--text-muted); font-size: 1.1rem;">Access the world's
+                most sophisticated aviation network. Departing from London's premier executive terminals with 15-minute
+                boarding and bespoke fleet access.</p>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="intro-grid">
+                <div>
+                    <h2 class="serif" style="font-size: 2.5rem; margin-bottom: 2rem;">The London <span
+                            class="gold-text">Aviation Hub</span></h2>
+                    <p style="margin-bottom: 1.5rem;">As the global capital of private aviation, London offers an
+                        unparalleled infrastructure for elite travelers. Whether you are departing for a high-stakes
+                        meeting in Dubai or a seasonal retreat in Ibiza, our network ensures immediate access to
+                        aircraft positioned across London's strategic private airports.</p>
+                    <p>We provide seamless connectivity to over 7,000 global destinations, backed by 24/7 flight support
+                        and localized expertise in UK aviation regulations.</p>
+                </div>
+                <div class="glass-card">
+                    <h3 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 1.5rem;">London Charter
+                        Advantages</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1.2rem; display: flex; align-items: start; gap: 10px;">
+                            <span class="gold-text">✔</span>
+                            <span><strong>Dedicated Terminals</strong>: Total privacy at Farnborough & Biggin
+                                Hill.</span>
+                        </li>
+                        <li style="margin-bottom: 1.2rem; display: flex; align-items: start; gap: 10px;">
+                            <span class="gold-text">✔</span>
+                            <span><strong>Pet-Friendly</strong>: DEFRA-authorized travel specialists.</span>
+                        </li>
+                        <li style="margin-bottom: 1.2rem; display: flex; align-items: start; gap: 10px;">
+                            <span class="gold-text">✔</span>
+                            <span><strong>Rapid Response</strong>: Aircraft ready in as little as 3 hours.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding"
+        style="background: rgba(255,255,255,0.01); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+        <div class="container">
+            <h2 class="serif" style="font-size: 2.5rem; text-align: center;">Popular <span class="gold-text">Routes from
+                    London</span></h2>
+            <div class="route-grid">
+                <a href="/london-to-amsterdam-private-jet-cost/" class="route-link"><span>London to Amsterdam</span>
+                    <span class="gold-text">→</span></a>
+                <a href="/london-to-barcelona-private-jet-cost/" class="route-link"><span>London to Barcelona</span>
+                    <span class="gold-text">→</span></a>
+                <a href="/london-to-dubai-private-jet-cost/" class="route-link"><span>London to Dubai</span> <span
+                        class="gold-text">→</span></a>
+                <a href="/london-to-geneva-private-jet-cost/" class="route-link"><span>London to Geneva</span> <span
+                        class="gold-text">→</span></a>
+                <a href="/london-to-ibiza-private-jet-cost/" class="route-link"><span>London to Ibiza</span> <span
+                        class="gold-text">→</span></a>
+                <a href="/london-to-losangeles-private-jet-cost/" class="route-link"><span>London to Los Angeles</span>
+                    <span class="gold-text">→</span></a>
+                <a href="/london-to-marrakesh-private-jet-cost/" class="route-link"><span>London to Marrakesh</span>
+                    <span class="gold-text">→</span></a>
+                <a href="/london-to-miami-private-jet-cost/" class="route-link"><span>London to Miami</span> <span
+                        class="gold-text">→</span></a>
+                <a href="/london-to-milan-private-jet-cost/" class="route-link"><span>London to Milan</span> <span
+                        class="gold-text">→</span></a>
+                <a href="/london-to-mykonos-private-jet-cost/" class="route-link"><span>London to Mykonos</span> <span
+                        class="gold-text">→</span></a>
+                <a href="/london-to-newyork-private-jet-cost/" class="route-link"><span>London to New York</span> <span
+                        class="gold-text">→</span></a>
+                <a href="/london-to-nice-private-jet-cost/" class="route-link"><span>London to Nice</span> <span
+                        class="gold-text">→</span></a>
+                <a href="/london-to-palma-private-jet-cost/" class="route-link"><span>London to Palma</span> <span
+                        class="gold-text">→</span></a>
+                <a href="/london-to-paris-private-jet-cost/" class="route-link"><span>London to Paris</span> <span
+                        class="gold-text">→</span></a>
+                <a href="/london-to-rome-private-jet-cost/" class="route-link"><span>London to Rome</span> <span
+                        class="gold-text">→</span></a>
+                <a href="/london-to-sanfrancisco-private-jet-cost/" class="route-link"><span>London to San
+                        Francisco</span> <span class="gold-text">→</span></a>
+                <a href="/london-to-santorini-private-jet-cost/" class="route-link"><span>London to Santorini</span>
+                    <span class="gold-text">→</span></a>
+                <a href="/london-to-tokyo-private-jet-cost/" class="route-link"><span>London to Tokyo</span> <span
+                        class="gold-text">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="intro-grid">
+                <div class="glass-card" style="padding: 0;">
+                    <div class="airport-card">
+                        <span class="airport-tag">Executive Priority</span>
+                        <h4 class="serif" style="font-size: 1.5rem; margin-top: 0.5rem;">London Farnborough (FAB)</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">The UK's only airport dedicated
+                            exclusively to business aviation. Offering the highest levels of privacy and a 15-minute
+                            "car-to-cabin" transfer time.</p>
+                    </div>
+                    <div class="airport-card">
+                        <span class="airport-tag">Corporate Hub</span>
+                        <h4 class="serif" style="font-size: 1.5rem; margin-top: 0.5rem;">London Biggin Hill (BQH)</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Ideally located for South London and
+                            City access. Known for its extensive hangarage and exceptional handling for large cabin
+                            aircraft.</p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="serif" style="font-size: 2.5rem; margin-bottom: 2rem;">London Market <span
+                            class="gold-text">Insights</span></h2>
+                    <p>Demand for private travel from London peaks during the summer Mediterranean season and winter ski
+                        months. Our team monitors real-time aircraft availability to secure empty-leg opportunities and
+                        competitive positioning for our clients.</p>
+
+                    <div
+                        style="margin-top: 2rem; padding: 2rem; background: rgba(212,175,55,0.05); border-radius: 20px;">
+                        <h4 class="serif gold-text" style="font-size: 1.3rem;">Average Flight Times</h4>
+                        <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                            <li
+                                style="border-bottom: 1px solid rgba(255,255,255,0.05); padding: 0.5rem 0; display: flex; justify-content: space-between;">
+                                <span>London to Paris</span>
+                                <span class="gold-text">45 Mins</span>
+                            </li>
+                            <li
+                                style="border-bottom: 1px solid rgba(255,255,255,0.05); padding: 0.5rem 0; display: flex; justify-content: space-between;">
+                                <span>London to New York</span>
+                                <span class="gold-text">7 Hrs 15 Mins</span>
+                            </li>
+                            <li style="padding: 0.5rem 0; display: flex; justify-content: space-between;">
+                                <span>London to Dubai</span>
+                                <span class="gold-text">6 Hrs 45 Mins</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-banner">
+                <h2 class="serif" style="font-size: 3rem;">Ready for Departure?</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 1rem;">Sourcing the world's most transparent pricing for
+                    your next mission from London.</p>
+                <a href="/private-jet-booking-guide/#booking-form" class="btn-black">Get My 15-Min Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background:#000; border-top:1px solid rgba(255,255,255,0.05); padding:4rem 0; text-align: center;">
+        <div class="container">
+            <div class="serif" style="font-size: 2rem; color: #D4AF37; margin-bottom: 1rem;">Elite Luxury Bookings</div>
+            <p style="color: rgba(255,255,255,0.5); font-size: 0.8rem;">&copy; 2026 Global Executive Concierge. All
+                Flights ARG/US & Wyvern Audited.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

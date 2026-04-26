@@ -154,10 +154,10 @@
             --primary-gold: #D4AF37;
             --deep-black: #000000;
             --graphene: #000000;
-            --glass-bg: rgba(255, 255, 255, 0.02);
-            --glass-border: rgba(212, 175, 55, 0.15);
+            --glass-bg: rgba(255, 255, 255, 0.01);
+            --glass-border: rgba(212, 175, 55, 0.12);
             --text-main: #FFFFFF;
-            --text-muted: rgba(255, 255, 255, 0.7);
+            --text-muted: rgba(255, 255, 255, 0.6);
             --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -174,7 +174,7 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: var(--deep-black);
+            background: #000000 !important;
             color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
@@ -213,7 +213,7 @@
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(5, 5, 5, 0.95);
+            background: rgba(0, 0, 0, 0.98);
             backdrop-filter: blur(24px);
             border-bottom: 1px solid var(--glass-border);
             z-index: 9999;
@@ -257,7 +257,7 @@
         .hero {
             padding: 180px 0 100px;
             text-align: center;
-            background: #000;
+            background: #000000;
         }
 
         .hero h1 {
@@ -367,6 +367,13 @@
         .form-control:focus {
             border-color: var(--primary-gold);
             background: rgba(212, 175, 55, 0.05);
+        }
+
+        /* FIX: Dropdown options visibility in dark mode */
+        .form-control option {
+            background-color: #000000;
+            color: #fff;
+            padding: 10px;
         }
 
         /* FIX: Step 1 form grid collapses on mobile */
@@ -931,7 +938,7 @@
     <main>
         <!-- Hero Section -->
         <section class="hero"
-            style="background: linear-gradient(rgba(0,0,0,0.7), #000), url('./assets/elite_jet_hero_2026.png'); background-size: cover; background-position: center;">
+            style="background: linear-gradient(rgba(0,0,0,0.92), #000000), url('./assets/elite_jet_hero_2026.png'); background-size: cover; background-position: center;">
             <div class="container" style="position: relative; z-index: 2;">
                 <div class="glass-panel" style="display: inline-block; padding: 0.5rem 1.5rem; margin-bottom: 2rem;">
                     <span
@@ -945,7 +952,9 @@
                     7,000+ global jets.</p>
 
                 <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
-                    <a href="#booking-form" class="btn btn-gold" onclick="gtag('event', 'cta_click', {'event_category': 'engagement', 'event_label': 'Primary CTA'});">Get 3 Jet Quotes in 2 Minutes</a>
+                    <a href="#booking-form" class="btn btn-gold"
+                        onclick="gtag('event', 'cta_click', {'event_category': 'engagement', 'event_label': 'Primary CTA'});">Get
+                        3 Jet Quotes in 2 Minutes</a>
                     <!-- FIX: Distinct secondary CTA — leads to real value, not a duplicate action -->
                     <a href="#empty-legs" class="btn btn-outline">See Empty Leg Deals Today</a>
                 </div>
@@ -960,7 +969,7 @@
             </header>
 
             <!-- Trust Signals -->
-            <section style="background: #000; padding: 3rem 0; border-bottom: 1px solid var(--glass-border);">
+            <section style="background: #000000; padding: 3rem 0; border-bottom: 1px solid var(--glass-border);">
                 <div class="container">
                     <p
                         style="text-align: center; font-size: 0.75rem; letter-spacing: 3px; color: var(--text-muted); text-transform: uppercase; margin-bottom: 2rem;">
@@ -987,7 +996,7 @@
             </section>
 
             <!-- Booking Form -->
-            <section id="booking-form" class="section-padding" style="background: var(--graphene);">
+            <section id="booking-form" class="section-padding" style="background: #000000;">
                 <div class="container">
                     <div class="glass-panel" style="max-width: 800px; margin: 0 auto;">
                         <div style="text-align: center; margin-bottom: 2rem;">
@@ -1109,7 +1118,7 @@
             </section>
 
             <!-- Why Choose Us -->
-            <section class="section-padding">
+            <section class="section-padding" style="background: #000000;">
                 <div class="container">
                     <div style="text-align: center; margin-bottom: 4rem;">
                         <h2 class="serif" style="font-size: 3rem;">Why Discerning Travelers <br><span
@@ -1117,7 +1126,7 @@
                     </div>
                     <div
                         style="margin-bottom: 4rem; border-radius: 20px; overflow: hidden; border: 1px solid var(--glass-border);">
-                        <img src="./assets/luxury_jet_interior_gold.png" alt="Ultra-luxury private jet interior"
+                        <img src="/assets/luxury_jet_interior_gold.png" alt="Ultra-luxury private jet interior"
                             style="width: 100%; display: block; height: 400px; object-fit: cover;">
                     </div>
                     <div class="grid-2">
@@ -1150,7 +1159,7 @@
             </section>
 
             <!-- How It Works -->
-            <section class="section-padding" style="background: #000;">
+            <section class="section-padding" style="background: #000000;">
                 <div class="container">
                     <div style="text-align: center; margin-bottom: 5rem;">
                         <h2 class="serif" style="font-size: 3rem;">From Request to <span
@@ -1188,13 +1197,15 @@
                         </div>
                     </div>
                     <div style="text-align: center; margin-top: 4rem;">
-                        <a href="#booking-form" class="btn btn-gold" onclick="gtag('event', 'cta_click', {'event_category': 'engagement', 'event_label': 'Primary CTA'});">Get Started Now</a>
+                        <a href="#booking-form" class="btn btn-gold"
+                            onclick="gtag('event', 'cta_click', {'event_category': 'engagement', 'event_label': 'Primary CTA'});">Get
+                            Started Now</a>
                     </div>
                 </div>
             </section>
 
             <!-- Performance Impact -->
-            <section class="section-padding">
+            <section class="section-padding" style="background: #000000;">
                 <div class="container">
                     <div style="text-align: center; margin-bottom: 4rem;">
                         <h2 class="serif" style="font-size: 3rem;">Our Performance <span class="gold-text">Impact</span>
@@ -1303,7 +1314,7 @@
             </section>
 
             <!-- ===== NEW: PRICING TABLE ===== -->
-            <section class="section-padding" style="background: #000;">
+            <section class="section-padding" style="background: #000000;">
                 <div class="container" style="max-width: 1000px;">
                     <div style="text-align: center; margin-bottom: 3rem;">
                         <h2 class="serif" style="font-size: 3rem;"> Private Jet <span class="gold-text">Pricing
@@ -1370,14 +1381,16 @@
                         </tbody>
                     </table>
                     <div style="text-align: center; margin-top: 3rem;">
-                        <a href="#booking-form" class="btn btn-gold" onclick="gtag('event', 'cta_click', {'event_category': 'engagement', 'event_label': 'Primary CTA'});">Get Your Exact All-In Quote</a>
+                        <a href="#booking-form" class="btn btn-gold"
+                            onclick="gtag('event', 'cta_click', {'event_category': 'engagement', 'event_label': 'Primary CTA'});">Get
+                            Your Exact All-In Quote</a>
                     </div>
                 </div>
             </section>
 
             <!-- ===== NEW: EMPTY LEGS ===== -->
             <section id="empty-legs" class="section-padding"
-                style="background: #000; border-top: 1px solid var(--glass-border);">
+                style="background: #000000; border-top: 1px solid var(--glass-border);">
                 <div class="container" style="max-width: 900px;">
                     <div style="text-align: center; margin-bottom: 3rem;">
                         <h2 class="serif" style="font-size: 3rem;">Save Up to 75% With <span class="gold-text">Empty
@@ -1417,13 +1430,15 @@
                         </div>
                     </div>
                     <div style="text-align: center; margin-top: 3rem;">
-                        <a href="#booking-form" class="btn btn-outline" onclick="gtag('event', 'cta_click', {'event_category': 'engagement', 'event_label': 'Primary CTA'});">Check Empty Leg Availability</a>
+                        <a href="#booking-form" class="btn btn-outline"
+                            onclick="gtag('event', 'cta_click', {'event_category': 'engagement', 'event_label': 'Primary CTA'});">Check
+                            Empty Leg Availability</a>
                     </div>
                 </div>
             </section>
 
             <!-- Long Form SEO Content — Expanded -->
-            <section class="section-padding" style="background: #000; border-top: 1px solid var(--glass-border);">
+            <section class="section-padding" style="background: #000000; border-top: 1px solid var(--glass-border);">
                 <div class="container" style="max-width: 900px;">
                     <h2 class="serif gold-text" style="font-size: 3rem; margin-bottom: 2rem;">Private Jet Charter Cost
                         Guide
@@ -1512,7 +1527,7 @@
             </section>
 
             <!-- ===== NEW: FAQ SECTION (matches schema markup) ===== -->
-            <section class="section-padding" style="background: #000; border-top: 1px solid var(--glass-border);">
+            <section class="section-padding" style="background: #000000; border-top: 1px solid var(--glass-border);">
                 <div class="container" style="max-width: 800px;">
                     <div style="text-align: center; margin-bottom: 3rem;">
                         <h2 class="serif" style="font-size: 3rem;">Frequently Asked <span
@@ -1620,7 +1635,7 @@
             </section>
 
             <!-- Final CTA -->
-            <section class="section-padding" style="text-align: center; background: #000;">
+            <section class="section-padding" style="text-align: center; background: #000000;">
                 <div class="container">
                     <h2 class="serif" style="font-size: 3.5rem; margin-bottom: 1.5rem;">Your Flight, <span
                             class="gold-text">Optimized.</span></h2>
@@ -1628,7 +1643,8 @@
                         Don't
                         overpay for your next journey. Let our market experts secure your aircraft at the best possible
                         rate.</p>
-                    <a href="#booking-form" class="btn btn-gold" onclick="gtag('event', 'cta_click', {'event_category': 'engagement', 'event_label': 'Primary CTA'});"
+                    <a href="#booking-form" class="btn btn-gold"
+                        onclick="gtag('event', 'cta_click', {'event_category': 'engagement', 'event_label': 'Primary CTA'});"
                         style="padding: 1.8rem 4rem; font-size: 1.1rem;">Request My
                         3 Instant Quotes</a>
                     <p
@@ -1639,7 +1655,7 @@
     </main>
 
     <!-- Footer -->
-    <footer style="background:#000; border-top:1px solid var(--glass-border); padding:5rem 0;">
+    <footer style="background:#000000; border-top:1px solid var(--glass-border); padding:5rem 0;">
         <div class="container" style="text-align: center;">
             <div class="serif" style="font-size: 2rem; color: var(--primary-gold); margin-bottom: 1rem;">Elite Luxury
                 Bookings</div>
@@ -1682,7 +1698,8 @@
 
     <!-- Sticky CTA -->
     <div class="sticky-cta" id="stickyCta">
-        <a href="#booking-form" class="btn btn-gold" onclick="gtag('event', 'cta_click', {'event_category': 'engagement', 'event_label': 'Primary CTA'});"
+        <a href="#booking-form" class="btn btn-gold"
+            onclick="gtag('event', 'cta_click', {'event_category': 'engagement', 'event_label': 'Primary CTA'});"
             style="padding: 1rem 2rem; white-space: nowrap; box-shadow: 0 10px 30px rgba(212,175,55,0.4);">Get Jet
             Quote</a>
     </div>
@@ -1847,8 +1864,8 @@
                         credit</strong> for your next charter mission.</p>
                 <form id="exitForm" onsubmit="handleExitSubmit(event)">
                     <input type="hidden" name="form_type" value="Exit Intent Popup">
-                    <input type="email" name="email" placeholder="Your private email address" class="form-control" required
-                        style="margin-bottom: 1.5rem; background: rgba(255,255,255,0.08);">
+                    <input type="email" name="email" placeholder="Your private email address" class="form-control"
+                        required style="margin-bottom: 1.5rem; background: rgba(255,255,255,0.08);">
                     <button type="submit" class="btn btn-gold" style="width: 100%;">Send Guide & Credit</button>
                 </form>
                 <div id="exitSuccess" style="display: none; text-align: center; padding: 1.5rem 0;">
