@@ -29,7 +29,12 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-J56D1LJLFM');
-        gtag('event', 'conversion', {'send_to': 'G-J56D1LJLFM/Lead'});
+        gtag('event', 'generate_lead', {
+            currency: 'USD',
+            value: 1,
+            event_category: 'engagement',
+            event_label: 'private_jet_lead'
+        });
     </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -49,15 +54,16 @@
             background-color: var(--dark-bg);
             color: #fff;
             font-family: 'Inter', sans-serif;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
+            padding: 2rem 1rem;
+            overflow-y: auto;
         }
 
         .bg-overlay {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
@@ -72,7 +78,7 @@
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid var(--glass-border);
             border-radius: 40px;
-            padding: 4rem;
+            padding: 2.5rem;
             max-width: 700px;
             width: 90%;
             text-align: center;
@@ -93,28 +99,28 @@
         .gold-text { color: var(--primary-gold); }
 
         h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 3rem;
+            margin-bottom: 1rem;
             line-height: 1.1;
         }
 
         p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--text-muted);
-            margin-bottom: 3rem;
-            line-height: 1.6;
+            margin-bottom: 2rem;
+            line-height: 1.5;
         }
 
         .check-icon {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             background: rgba(212, 175, 55, 0.15);
             color: var(--primary-gold);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 2.5rem;
+            margin: 0 auto 1.5rem;
             border: 1px solid rgba(212, 175, 55, 0.3);
         }
 
@@ -142,12 +148,12 @@
         }
 
         .next-steps {
-            margin-top: 3.5rem;
-            padding-top: 2.5rem;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
             border-top: 1px solid var(--glass-border);
             display: flex;
             justify-content: center;
-            gap: 3rem;
+            gap: 2rem;
         }
 
         .step {
@@ -187,9 +193,29 @@
         </div>
         
         <h1 class="serif">Request <span class="gold-text">Confirmed</span></h1>
-        <p>Our flight operations team has been notified. You will receive your personalized jet itineraries via WhatsApp/Email shortly.</p>
+        <p style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 4px; color: var(--primary-gold); margin-top: -1rem; margin-bottom: 1.5rem; font-weight: 700;">Private Client Desk Activated</p>
+        <p style="margin-bottom: 0.5rem;">Our flight operations team has been notified. You will receive your personalized jet itineraries via WhatsApp/Email shortly.</p>
+        <p style="font-size: 0.95rem; margin-bottom: 1.5rem; color: #fff;">
+        👉 For fastest allocation, message us on WhatsApp now to lock your aircraft.
+        </p>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; opacity: 0.8;">⏱ Expected response time: 10–30 minutes</p>
         
-        <a href="/" class="btn btn-gold">Return to Home</a>
+        <div style="background: rgba(212, 175, 55, 0.05); border: 1px solid rgba(212, 175, 55, 0.2); padding: 2rem; border-radius: 20px; margin-bottom: 2.5rem;">
+            <p style="font-size: 1.1rem; color: #fff; margin-bottom: 1.5rem; font-weight: 600;">🚀 Want a faster response?</p>
+            <p style="font-size: 0.95rem; margin-bottom: 2rem;">Message our concierge directly on WhatsApp for immediate aircraft availability.</p>
+            <a href="https://wa.me/918801079030?text=Hi%2C%20I%20just%20submitted%20a%20jet%20request%20from%20your%20website.%20Need%20urgent%20assistance." class="btn btn-gold" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                </svg>
+                👉 Chat on WhatsApp Now
+            </a>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1rem;">
+            Trusted by HNW clients worldwide • 24/7 concierge desk
+            </p>
+            <p style="color: #ff4d4d; font-size: 0.85rem; font-weight: 600; margin-top: 1.2rem; letter-spacing: 0.5px;">⚠️ High demand detected — limited aircraft availability for your route in the next few hours</p>
+        </div>
+
+        <a href="/" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; border-bottom: 1px solid transparent; transition: 0.3s;" onmouseover="this.style.color='#fff'; this.style.borderBottomColor='var(--primary-gold)'" onmouseout="this.style.color='var(--text-muted)'; this.style.borderBottomColor='transparent'">Return to Homepage</a>
 
         <div class="next-steps">
             <div class="step">
@@ -206,5 +232,13 @@
             </div>
         </div>
     </div>
+    <!-- Sticky WhatsApp Button -->
+    <a href="https://wa.me/918801079030?text=Hi%2C%20I%20just%20submitted%20a%20jet%20request%20from%20your%20website.%20Need%20urgent%20assistance." target="_blank" style="position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 700; box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3); display: flex; align-items: center; gap: 10px; z-index: 9999; transition: all 0.3s ease;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+        </svg>
+        Chat Now
+    </a>
+
 </body>
 </html>

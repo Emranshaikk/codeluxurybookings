@@ -308,8 +308,47 @@
             }
 
             .nav-links {
-                display: none;
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: #000;
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                border-bottom: 1px solid var(--glass-border);
+                transform: translateY(-150%);
+                transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                display: flex;
+                z-index: 999;
             }
+
+            .nav-links.active {
+                transform: translateY(0);
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 0.5rem;
+                z-index: 1000;
+            }
+
+            .mobile-menu-btn span {
+                display: block;
+                width: 25px;
+                height: 2px;
+                background: var(--primary-gold);
+                transition: var(--transition);
+            }
+
+            .mobile-menu-btn.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+            .mobile-menu-btn.active span:nth-child(2) { opacity: 0; }
+            .mobile-menu-btn.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
         }
 
         .btn {
@@ -830,7 +869,7 @@
 
         .exit-popup-image {
             flex: 1;
-            background: url('/assets/exit-jet-interior.png') center/cover no-repeat;
+            background: url('./assets/exit-jet-interior.png') center/cover no-repeat;
             min-height: 450px;
         }
 
@@ -925,13 +964,18 @@
     <nav class="global-nav">
         <div class="container global-nav-inner">
             <a href="/" class="nav-brand">Elite Luxury <span class="gold-text">Bookings</span></a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="/elite-private-jet-charter/">Private Jets</a></li>
                 <li><a href="/luxury-yacht-rentals/">Yachts</a></li>
                 <li><a href="/luxury-villa-rentals/">Villas</a></li>
                 <li><a href="/blog/">Blog</a></li>
                 <li><a href="/contact/">Contact</a></li>
             </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -966,7 +1010,7 @@
                     <span>✓ ARG/US &amp; Wyvern Safety Audited</span>
                 </div>
             </div>
-            </header>
+        </section>
 
             <!-- Trust Signals -->
             <section style="background: #000000; padding: 3rem 0; border-bottom: 1px solid var(--glass-border);">
@@ -1010,7 +1054,8 @@
                             <div class="progress-inner" id="form-progress" style="width: 50%;"></div>
                         </div>
 
-                        <form id="jetForm" action="/submit-lead.php" method="POST">
+                        <form id="jetForm" action="https://formspree.io/f/xwvwanlj" method="POST">
+                            <input type="hidden" name="_redirect" value="https://eliteluxurybookings.com/thank-you.html">
                             <input type="hidden" name="form_type" value="Jet Booking Guide Main Form">
                             <!-- Step 1 -->
                             <div class="form-step active" id="step1">
@@ -1323,7 +1368,8 @@
                             fees
                             &amp; fuel surcharges. Actual quotes may vary by route and positioning.</p>
                     </div>
-                    <table class="pricing-table">
+                    <div style="overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 2rem; border-radius: 16px;">
+                        <table class="pricing-table" style="margin-top: 0;">
                         <thead>
                             <tr>
                                 <th>Aircraft Category</th>
@@ -1380,6 +1426,7 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
                     <div style="text-align: center; margin-top: 3rem;">
                         <a href="#booking-form" class="btn btn-gold"
                             onclick="gtag('event', 'cta_click', {'event_category': 'engagement', 'event_label': 'Primary CTA'});">Get
@@ -1720,11 +1767,33 @@
         }, observerOptions);
 
         document.querySelectorAll('section, .feature-card, .pricing-table, .glass-panel').forEach(el => {
-            el.classList.add('reveal');
-            observer.observe(el);
-            // Fallback for elements that might stay hidden
-            setTimeout(() => el.classList.add('active'), 2000);
+            // Only add reveal if IntersectionObserver is supported
+            if ('IntersectionObserver' in window) {
+                el.classList.add('reveal');
+                observer.observe(el);
+            }
+            // Shorter, safer fallback
+            setTimeout(() => el.classList.add('active'), 1000);
         });
+
+        /* ── Mobile Menu Logic ── */
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Close menu on link click
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuBtn.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
 
         /* ── Sticky CTA Visibility ── */
         window.addEventListener('scroll', () => {
@@ -1753,7 +1822,7 @@
             const success = document.getElementById('exitSuccess');
             const data = new FormData(form);
 
-            fetch('/submit-lead.php', {
+            fetch('https://formspree.io/f/xwvwanlj', {
                 method: 'POST',
                 body: data,
                 headers: { 'Accept': 'application/json' }
@@ -1764,7 +1833,7 @@
                             'event_category': 'exit_intent',
                             'event_label': 'Popup Lead'
                         });
-                        window.location.href = '/thank-you/';
+                        window.location.href = 'https://eliteluxurybookings.com/thank-you.html';
                     } else {
                         alert('There was an issue. Please try again or WhatsApp us.');
                     }
@@ -1831,7 +1900,7 @@
                 .then(res => {
                     if (res.ok) {
                         gtag('event', 'purchase', { 'event_category': 'conversion', 'event_label': 'Form Submitted' });
-                        window.location.href = '/thank-you/';
+                        window.location.href = 'https://eliteluxurybookings.com/thank-you.html';
                     } else {
                         alert('There was an issue submitting your request. Please WhatsApp us directly for immediate assistance.');
                     }
@@ -1860,8 +1929,7 @@
                     style="font-size: 0.8rem; text-transform: uppercase; color: var(--primary-gold); letter-spacing: 2px; font-weight: 600; display: block; margin-bottom: 1rem;">Exclusive
                     Access</span>
                 <h2 class="serif">Before You <span class="gold-text">Fly Away...</span></h2>
-                <p>Secure our <strong>2026 Fleet Pricing Guide</strong> and receive a <strong>$500 flight
-                        credit</strong> for your next charter mission.</p>
+                <p>Secure our <strong>2026 Fleet Pricing Guide</strong> and get the inside track on the global charter market.</p>
                 <form id="exitForm" onsubmit="handleExitSubmit(event)">
                     <input type="hidden" name="form_type" value="Exit Intent Popup">
                     <input type="email" name="email" placeholder="Your private email address" class="form-control"
@@ -1874,7 +1942,7 @@
                         <span style="color: var(--primary-gold); font-size: 2rem;">✓</span>
                     </div>
                     <h3 class="gold-text serif" style="font-size: 2rem; margin-bottom: 0.5rem;">Access Granted</h3>
-                    <p>Check your inbox. Your guide and $500 credit code are on their way.</p>
+                    <p>Check your inbox. Your guide is on its way.</p>
                 </div>
             </div>
         </div>
