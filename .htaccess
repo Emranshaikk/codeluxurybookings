@@ -3,6 +3,11 @@
 
 RewriteEngine On
 
+# Add X-Robots-Tag for SEO compliance
+<IfModule mod_headers.c>
+    Header set X-Robots-Tag "index, follow"
+</IfModule>
+
 # Enforce HTTPS and non-WWW
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
