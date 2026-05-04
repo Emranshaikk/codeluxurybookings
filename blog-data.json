@@ -44,6 +44,7 @@
         "category": "private yacht",
         "label": "Charter Authority",
         "title": "Motor Yacht vs. Sailing Yacht Charter: The Ultimate Comparison",
+        "image": "/assets/images/motor-vs-sailing-yacht-hero.png",
         "excerpt": "Comparing a motor yacht vs sailing yacht charter? Learn the differences in fuel costs (APA), interior volume, speed, and the overall luxury guest experience.",
         "link_text": "Compare Yachts Now"
     },
@@ -52,6 +53,7 @@
         "category": "private yacht",
         "label": "Sailing Authority",
         "title": "The Ultimate Guide to Luxury Sailing Yacht Charters in the Mediterranean",
+        "image": "/assets/images/luxury-sailing-mediterranean-hero.png",
         "excerpt": "Experience the pinnacle of old-money elegance with a luxury sailing yacht charter in the Mediterranean. Discover the best itineraries, costs, and classic yachts.",
         "link_text": "Read the Sailing Guide"
     },
@@ -60,6 +62,7 @@
         "category": "private yacht",
         "label": "Charter Authority",
         "title": "Bareboat vs. Crewed Catamaran Charter: The Ultimate Comparison",
+        "image": "/assets/images/bareboat-vs-crewed-hero.png",
         "excerpt": "Deciding between a bareboat vs crewed catamaran charter? Compare costs, liability, required qualifications, and the elite luxury experience of a private chef.",
         "link_text": "Compare Charter Models"
     },
@@ -100,6 +103,7 @@
         "category": "private yacht",
         "label": "Fleet Authority",
         "title": "The Top 5 Luxury Yachts Available Under $100k/Week (2026)",
+        "image": "/assets/images/yacht-under-100k-hero.png",
         "excerpt": "Discover the top 5 luxury yachts available for under $100k per week. High-value superyacht charters offering elite concierge service without the megayacht premium.",
         "link_text": "View the Fleet"
     },
@@ -108,6 +112,7 @@
         "category": "private yacht",
         "label": "Destination Authority",
         "title": "7 Best Mediterranean Yacht Charter Destinations for 2026",
+        "image": "/assets/images/mediterranean-yacht-destinations-hero.png",
         "excerpt": "Discover the 7 best Mediterranean yacht charter destinations for summer 2026. An exclusive authority guide to the Amalfi Coast, French Riviera, Cyclades, and more.",
         "link_text": "Read the Destination Guide"
     },

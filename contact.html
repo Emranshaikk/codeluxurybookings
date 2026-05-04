@@ -446,9 +446,8 @@
                             Confidential Command Center</p>
                     </div>
 
-                    <form action="https://formspree.io/f/xwvwanlj" method="POST">
-                        <input type="hidden" name="_redirect" value="https://eliteluxurybookings.com/thank-you.html">
-                        <input type="hidden" name="_subject" value="Elite Contact Inquiry">
+                    <form id="contactForm" onsubmit="submitContact(event)">
+                        <input type="hidden" name="form_type" value="Contact Page Inquiry">
 
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;" class="form-grid">
                             <div class="form-group">
@@ -471,7 +470,7 @@
 
                         <div class="form-group">
                             <label class="form-label" for="interest">Primary Interest</label>
-                            <select id="interest" name="interest" class="form-control"
+                            <select id="interest" name="service" class="form-control"
                                 style="background: #111; border: 1px solid rgba(255,255,255,0.1); padding: 1rem;" aria-label="Interest">
                                 <option value="private_jet">Private Jet Charter</option>
                                 <option value="luxury_villa">Luxury Villa Rental</option>
@@ -486,11 +485,16 @@
                                 placeholder="Tell us about your requirements..."></textarea>
                         </div>
 
-                        <button type="submit" class="btn-gold">Initiate Coordination</button>
-                        <p
+                        <button type="submit" id="submitBtn" class="btn-gold">Initiate Coordination</button>
+                        <p id="submitText"
                             style="text-align: center; margin-top: 2rem; color: var(--text-muted); font-size: 0.8rem; letter-spacing: 1px;">
                             A senior coordinator will respond personally within 30 minutes.</p>
                     </form>
+                    <div id="formMsg" style="display:none; text-align:center; padding:2rem 0;">
+                        <h3 class="serif gold-text" style="font-size:2rem; margin-bottom:1rem;">Inquiry Secured</h3>
+                        <p style="color:var(--text-main); font-size:1rem; margin-bottom:2rem;">Our elite desk has received your brief and is currently coordinating availability. A coordinator will be in touch shortly.</p>
+                        <a href="https://wa.me/918801079030" class="btn-gold" style="display:inline-block; text-decoration:none; padding:1rem 2rem;">Immediate WhatsApp Access</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -560,6 +564,37 @@
     </a>
 
     <script>
+        const endpoint = 'https://eliteluxurybookings.com/submit-lead.php';
+
+        async function submitContact(event) {
+            event.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const form = document.getElementById('contactForm');
+            const msg = document.getElementById('formMsg');
+            const subText = document.getElementById('submitText');
+            
+            btn.innerText = 'SECURING ACCESS...';
+            btn.disabled = true;
+            
+            const formData = new FormData(form);
+            
+            try {
+                await fetch(endpoint, {
+                    method: 'POST',
+                    body: formData
+                });
+                form.style.display = 'none';
+                if(subText) subText.style.display = 'none';
+                msg.style.display = 'block';
+            } catch (error) {
+                console.error(error);
+                alert('Connection issue. Please connect directly via WhatsApp for immediate coordination.');
+            } finally {
+                btn.innerText = 'Initiate Coordination';
+                btn.disabled = false;
+            }
+        }
+
         function toggleMobileMenu() {
             var m = document.getElementById('elbMobileMenu'), b = document.getElementById('navHamburger');
             if (m && b) { m.classList.toggle('open'); b.classList.toggle('open'); }

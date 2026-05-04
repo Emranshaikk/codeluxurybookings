@@ -1446,6 +1446,34 @@
     </div>
     <!-- ELB_NAV_END -->
 
+    <!-- Hidden Hero Lead Form -->
+    <div id="heroFormContainer" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:10000; justify-content:center; align-items:center;">
+        <div class="glass-panel" style="width:90%; max-width:500px; padding:3rem; position:relative; border:1px solid var(--primary-gold);">
+            <button onclick="document.getElementById('heroFormContainer').style.display='none'" style="position:absolute; top:1.5rem; right:1.5rem; background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer;">&times;</button>
+            <div style="text-align:center; margin-bottom:2.5rem;">
+                <h3 class="serif gold-text" style="font-size:2.2rem; margin-bottom:0.5rem;">Fast-Track Inquiry</h3>
+                <p style="color:var(--text-muted); font-size:0.9rem; text-transform:uppercase; letter-spacing:2px;">Instant Concierge Access</p>
+            </div>
+            <form id="heroForm" onsubmit="submitHeroLead(event)">
+                <input type="hidden" name="form_type" value="Hero Fast Track">
+                <div class="form-group" style="margin-bottom:1.5rem;">
+                    <label for="heroName" style="display:block; color:var(--primary-gold); font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; margin-bottom:0.5rem;">Full Name</label>
+                    <input type="text" id="heroName" name="name" class="form-control" placeholder="Your Name" required style="width:100%; background:none; border:none; border-bottom:1px solid rgba(255,255,255,0.1); color:#fff; padding:0.8rem 0;">
+                </div>
+                <div class="form-group" style="margin-bottom:2rem;">
+                    <label for="heroPhone" style="display:block; color:var(--primary-gold); font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; margin-bottom:0.5rem;">WhatsApp / Phone</label>
+                    <input type="tel" id="heroPhone" name="phone" class="form-control" placeholder="+1..." required style="width:100%; background:none; border:none; border-bottom:1px solid rgba(255,255,255,0.1); color:#fff; padding:0.8rem 0;">
+                </div>
+                <button type="submit" id="heroSubmitBtn" class="btn btn-gold" style="width:100%;">Apply for Private Access</button>
+            </form>
+            <div id="heroFormMsg" style="display:none; text-align:center; padding:2rem 0;">
+                <h4 class="serif gold-text" style="font-size:1.8rem; margin-bottom:1rem;">Request Received</h4>
+                <p style="color:var(--text-main); font-size:1rem;">A concierge is reviewing your request and will contact you via WhatsApp shortly.</p>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Desktop floating WA icon -->
     <a href="https://wa.me/918801079030" class="wa-float" target="_blank" aria-label="WhatsApp Concierge"
         title="Plan your journey via WhatsApp">
@@ -1464,7 +1492,7 @@
                         Villas.</span></h1>
 
                 <div class="hero-ctas">
-                    <a href="#quote" class="btn btn-gold" style="min-width: 320px;">Request Private Access</a>
+                    <button onclick="document.getElementById('heroFormContainer').style.display='flex'" class="btn btn-gold" style="min-width: 320px; border:none;">Request Private Access</button>
                 </div>
             </header>
         </div>
@@ -1481,8 +1509,8 @@
                             A dedicated concierge will personally respond within 30 minutes.</p>
                     </div>
 
-                    <form action="https://formspree.io/f/xwvwanlj" method="POST">
-                        <input type="hidden" name="_redirect" value="https://eliteluxurybookings.com/thank-you.html">
+                    <form id="leadForm" onsubmit="submitLead(event)">
+                        <input type="hidden" name="form_type" value="Master Quote Form">
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="name">Full Name *</label>
@@ -1517,7 +1545,7 @@
                                 style="resize:none;"></textarea>
                         </div>
                         <div style="text-align: center; margin-top: 3rem;">
-                            <button type="submit" class="btn btn-gold"
+                            <button type="submit" id="submitBtn" class="btn btn-gold"
                                 style="width: 100%; border-radius: 12px;">Initiate Private Consultation</button>
                         </div>
                     </form>
@@ -1906,7 +1934,7 @@
     </footer>
 
     <script>
-        const endpoint = 'https://script.google.com/macros/s/AKfycbxwH6b82MCg90tYS-yTwUMWw1ePx2S3oBdn3BC5U1UAt2uQRCB2bq03bzPP52ygUGU6UA/exec';
+        const endpoint = 'https://eliteluxurybookings.com/submit-lead.php';
 
         async function submitLead(event) {
             event.preventDefault();
@@ -1917,12 +1945,10 @@
             btn.disabled = true;
             const formData = new FormData(form);
             const data = {};
-            formData.forEach((value, key) => data[key] = value);
             try {
                 await fetch(endpoint, {
-                    method: 'POST', mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
+                    method: 'POST',
+                    body: formData
                 });
                 form.style.display = 'none';
                 msg.style.display = 'block';
@@ -1944,16 +1970,10 @@
             btn.innerText = 'SENDING...';
             btn.disabled = true;
             const formData = new FormData(form);
-            const data = {
-                phone: formData.get('phone'),
-                services: 'Fast Track Inquiry',
-                requirements: 'Requested immediate contact via WhatsApp. Confidential coordination.'
-            };
             try {
                 await fetch(endpoint, {
-                    method: 'POST', mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
+                    method: 'POST',
+                    body: formData
                 });
                 form.style.display = 'none';
                 msg.style.display = 'block';

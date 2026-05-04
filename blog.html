@@ -278,7 +278,22 @@
         }
 
         .card-img-wrap {
-            display: none !important;
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .card-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .blog-card:hover .card-img-wrap img {
+            transform: scale(1.1);
         }
 
         /* WhatsApp */
@@ -736,7 +751,14 @@
                 a.href = item.url;
                 a.className = 'blog-card';
                 a.setAttribute('data-category', item.category);
+                
+                // Determine image source - use placeholder if not defined
+                const imgSrc = item.image || '/assets/images/placeholder.jpg';
+                
                 a.innerHTML = `
+                    <div class="card-img-wrap">
+                        <img src="${imgSrc}" alt="${item.title}" loading="lazy">
+                    </div>
                     <div class="card-body">
                         <span class="card-label">${item.label}</span>
                         <h3 class="card-title">${item.title}</h3>
