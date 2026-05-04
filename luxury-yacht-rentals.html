@@ -70,10 +70,63 @@
             padding: 8rem 0;
         }
 
+        body {
+            padding-top: 108px !important;
+        }
+
         /* --- STANDARD GLOBAL NAV --- */
-        .global-nav {
+        .top-intel-bar {
+            background: rgba(5, 5, 5, 0.98);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            height: 36px;
+            overflow: hidden;
             position: fixed;
             top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100000;
+            display: flex;
+            align-items: center;
+        }
+
+        .ticker-wrap {
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .ticker-content {
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100%;
+            animation: ticker 40s linear infinite;
+            font-size: 0.72rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-200%, 0, 0); }
+        }
+
+        .ticker-content strong {
+            color: #D4AF37;
+            margin: 0 40px;
+        }
+
+        .ticker-content a {
+            color: #fff;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            margin-left: 10px;
+            font-weight: 600;
+        }
+
+        .global-nav {
+            position: fixed;
+            top: 36px;
             left: 0;
             right: 0;
             background: rgba(5, 5, 5, 0.98);
@@ -167,7 +220,7 @@
             right: 0;
             bottom: 0;
             background: #050505;
-            padding: 72px 2rem 2rem;
+            padding: 108px 2rem 2rem;
             z-index: 100000;
             flex-direction: column;
             gap: 0.5rem;
@@ -414,13 +467,31 @@
     <meta property="og:url" content="https://eliteluxurybookings.com/luxury-yacht-rentals/">
     <meta property="og:image" content="https://eliteluxurybookings.com/assets/elite_jet_master_hero.png">
     <meta property="og:site_name" content="Elite Luxury Bookings">
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "sia395rirl");
+    </script>
 </head>
 
 <body>
+    <div class="top-intel-bar">
+        <div class="ticker-wrap">
+            <div class="ticker-content">
+                <strong>⚠️ Intelligence Alert:</strong> High Demand for Summer 2026 Mediterranean Charters. 
+                <strong>Empty Leg Flights Available:</strong> <a href="https://wa.me/918801079030">Connect for Instant Procurement</a>
+                <strong>⚠️ Global Inventory Update:</strong> Off-Market Superyachts Now Accessible via Maritime Concierge.
+            </div>
+        </div>
+    </div>
     <!-- ELB_NAV_START -->
     <nav class="global-nav">
         <div class="global-nav-inner">
-            <a href="https://eliteluxurybookings.com/" class="nav-brand">Elite Luxury <span class="nav-gold">Bookings</span></a>
+            <a href="https://eliteluxurybookings.com/" class="nav-brand">Elite Luxury <span
+                    class="nav-gold">Bookings</span></a>
             <ul class="nav-links">
                 <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
                 <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Yachts</a></li>
@@ -429,7 +500,8 @@
                 <li><a href="https://eliteluxurybookings.com/contact/">Contact</a></li>
             </ul>
             <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()">
-                <span></span><span></span><span></span></div>
+                <span></span><span></span><span></span>
+            </div>
         </div>
     </nav>
     <div class="mobile-menu" id="elbMobileMenu">
