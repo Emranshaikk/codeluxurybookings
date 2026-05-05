@@ -14,7 +14,6 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="publisher" href="https://eliteluxurybookings.com/">
 
-
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J56D1LJLFM"></script>
     <script>
@@ -95,7 +94,7 @@
         /* ELB_STYLE_START */
         .global-nav {
             position: fixed;
-            top: 0;
+            top: 36px;
             left: 0;
             right: 0;
             background: rgba(5, 5, 5, 0.98);
@@ -185,7 +184,7 @@
             right: 0;
             bottom: 0;
             background: #050505;
-            padding: 72px 2rem 2rem;
+            padding: 108px 2rem 2rem;
             z-index: 100000;
             flex-direction: column;
             gap: 0.5rem;
@@ -222,7 +221,57 @@
             color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
-            padding-top: 72px !important;
+            padding-top: 108px !important;
+        }
+
+        /* --- INTELLIGENCE TICKER --- */
+        .top-intel-bar {
+            background: rgba(5, 5, 5, 0.98);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            height: 36px;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100000;
+            display: flex;
+            align-items: center;
+        }
+
+        .ticker-wrap {
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .ticker-content {
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100%;
+            animation: ticker 40s linear infinite;
+            font-size: 0.72rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-200%, 0, 0); }
+        }
+
+        .ticker-content strong {
+            color: #D4AF37;
+            margin: 0 40px;
+        }
+
+        .ticker-content a {
+            color: #fff;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            margin-left: 10px;
+            font-weight: 600;
         }
 
         .serif {
@@ -421,6 +470,11 @@
             .wa-float { bottom: 20px; right: 20px; width: 50px; height: 50px; }
             .jet-hero { padding: 6rem 0 8rem 0; background-attachment: scroll; }
             .container { padding: 0 1.5rem; }
+            .nav-brand { font-size: 1.1rem !important; letter-spacing: 1px; }
+            .top-intel-bar { height: 32px; }
+            .global-nav { top: 32px; }
+            body { padding-top: 100px !important; }
+            .mobile-menu { padding-top: 100px; }
         }
         /* ELB_STYLE_END */
     </style>
@@ -465,6 +519,7 @@
 </head>
 
 <body>
+    
         <!-- ELB_NAV_START -->
     <nav class="global-nav">
         <div class="container global-nav-inner">
@@ -488,207 +543,79 @@
     </div>
     <!-- ELB_NAV_END -->
 
+    <div class="container" style="padding: 2rem 0; font-size: 0.8rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px;">
+        <a href="https://eliteluxurybookings.com/" style="color: #d4af37; text-decoration: none;">Home</a> / 
+        <a href="https://eliteluxurybookings.com/private-jet-booking-guide/" style="color: #d4af37; text-decoration: none;">Private Jets</a> / 
+        <span style="color: rgba(255,255,255,0.6);">Private Jet Charter</span>
+    </div>
+
+    
+
+    
+
     <main>
     <!-- HERO SECTION -->
-    <section class="jet-hero">
-        <div class="container">
-            <span class="hero-tagline">Premier Aviation Concierge</span>
-            <h1 class="serif hero-title">Private Jet Charter:<br><span class="gold-text">Curated Elite Travel</span></h1>
-            <p class="hero-desc">Beyond mere logistics, we engineer your global mobility. Access a world-class network of vetted aircraft operators with a single, trusted point of contact. No delays. No airports. Total control.</p>
-            <div class="btn-container">
-                <a href="#book" class="btn btn-gold">Request Private Jet Access</a>
-                <a href="https://wa.me/918801079030" class="btn btn-outline">Speak to a Concierge</a>
-            </div>
-        </div>
-    </section>
+    
 
-    <!-- TRUST SECTION -->
-    <section style="background: var(--graphene); padding: 5rem 0; border-bottom: 1px solid var(--glass-border);">
-        <div class="container" style="text-align: center;">
-            <p class="serif" style="font-size: 1.8rem; font-style: italic; color: #fff; max-width: 1000px; margin: 0 auto;">
-                “We curate and coordinate world-class luxury experiences through our global partner network.”
-            </p>
-            <div style="display: flex; justify-content: center; gap: 4rem; margin-top: 3rem; opacity: 0.6; flex-wrap: wrap; font-size: 0.8rem; letter-spacing: 2px;">
-                <span>LONDON</span>
-                <span>DUBAI</span>
-                <span>NEW YORK</span>
-                <span>MONACO</span>
-                <span>MALDIVES</span>
-            </div>
-        </div>
-    </section>
+        
 
-    <!-- FORM SECTION -->
-    <section id="book" class="section-padding" style="background: #000;">
-        <div class="container">
-            <div class="glass-panel" style="padding: 4rem; background: rgba(10, 10, 10, 0.9); box-shadow: 0 50px 120px rgba(0,0,0,0.9); margin: 0 auto; max-width: 850px;">
-                <div style="text-align: center; margin-bottom: 4rem;">
-                    <h2 class="serif gold-text" style="font-size: 3.5rem; margin-bottom: 1rem; font-weight: 300;">Request Private Proposal</h2>
-                    <p style="color: var(--text-muted); font-size: 1rem; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 2rem;">Discreet & Confidential Aviation Dispatch</p>
-                    <div style="width: 80px; height: 1px; background: var(--primary-gold); margin: 0 auto; opacity: 0.4;"></div>
-                </div>
+        
 
-                <form action="https://formspree.io/f/xwvwanlj" method="POST" style="display: flex; flex-direction: column; gap: 2.5rem;">
-                        <input type="hidden" name="_redirect" value="https://eliteluxurybookings.com/thank-you.html">
-                    <input type="hidden" name="_target" value="Inquiry: elite-private-jet-charter">
-                    
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="name" class="form-label">Full Name *</label>
-                            <input type="text" id="name" name="name" required placeholder="John Doe" class="form-input">
+        
+
+        <section class="section-padding" style="background: rgba(212, 175, 55, 0.05); border-top: 1px solid var(--glass-border);">
+            <div class="container">
+                <h2 class="serif gold-text" style="font-size: 2.5rem; text-align: center; margin-bottom: 3rem; border: none;">Aviation Authority & Guides</h2>
+                <div class="grid-3">
+                    <a href="https://eliteluxurybookings.com/private-jet-charter-cost-estimator/" style="text-decoration: none; color: inherit;">
+                        <div class="glass-panel" style="padding: 2rem; height: 100%; transition: var(--transition); border-color: rgba(212,175,55,0.1);">
+                            <h4 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 1rem;">2026 Price Estimator</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">A comprehensive breakdown of hourly rates and hidden fees for all jet classes.</p>
                         </div>
-                        <div class="form-group">
-                            <label for="phone" class="form-label">WhatsApp / Phone *</label>
-                            <input type="tel" id="phone" name="phone" required placeholder="+1 234 567 8900" class="form-input">
+                    </a>
+                    <a href="https://eliteluxurybookings.com/heavy-jet-vs-light-jet-charter/" style="text-decoration: none; color: inherit;">
+                        <div class="glass-panel" style="padding: 2rem; height: 100%; transition: var(--transition); border-color: rgba(212,175,55,0.1);">
+                            <h4 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 1rem;">Jet Class Comparison</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">Deciding between a Heavy Jet and a Light Jet for your next mission.</p>
                         </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email" class="form-label">Private Email *</label>
-                        <input type="email" id="email" name="email" required placeholder="client@exclusive.com" class="form-input">
-                    </div>
-
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="departure" class="form-label">Departure City *</label>
-                            <input type="text" id="departure" name="departure" required placeholder="Origin City" class="form-input">
+                    </a>
+                    <a href="https://eliteluxurybookings.com/empty-leg-flights-guide/" style="text-decoration: none; color: inherit;">
+                        <div class="glass-panel" style="padding: 2rem; height: 100%; transition: var(--transition); border-color: rgba(212,175,55,0.1);">
+                            <h4 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 1rem;">Empty Leg Mastery</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">How to secure luxury repositioning flights at up to 75% discount.</p>
                         </div>
-                        <div class="form-group">
-                            <label for="destination" class="form-label">Destination City *</label>
-                            <input type="text" id="destination" name="destination" required placeholder="Arrival City" class="form-input">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="requirements" class="form-label">Aviation & Mission Requirements</label>
-                        <textarea id="requirements" name="requirements" rows="3" placeholder="Flight date, passenger count, or aircraft preference..." class="form-textarea"></textarea>
-                    </div>
-
-                    <div style="text-align: center; margin-top: 1rem;">
-                        <button type="submit" class="btn btn-gold" style="width: 100%; padding: 1.8rem; font-size: 1.25rem; border: none; cursor: pointer;">Secure Private Proposal</button>
-                        <p style="margin-top: 2rem; color: var(--text-muted); font-size: 0.85rem; letter-spacing: 2px; opacity: 0.7;">A dedicated concierge will respond personally within 30 minutes.</p>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHY CHOOSE ELITE SECTION -->
-    <section class="section-padding">
-        <div class="container">
-            <div style="text-align: center; margin-bottom: 6rem;">
-                <h2 class="serif" style="font-size: 3.5rem; margin-bottom: 1.5rem;">The <span class="gold-text">Elite</span> Advantage</h2>
-                <p style="color: var(--text-muted); max-width: 800px; margin: 0 auto; font-size: 1.1rem;">We don't just book a jet; we engineer a seamless transition from your door to your destination. Our curation service is designed for the world's most discerning travelers.</p>
-            </div>
-
-            <div class="grid-3">
-                <div class="glass-panel" style="padding: 3rem;">
-                    <h3 class="serif gold-text" style="font-size: 1.8rem; margin-bottom: 1rem;">Single Trusted Point</h3>
-                    <p style="color: var(--text-muted);">Eliminate the complexity of dealing with multiple operators. Your dedicated concierge handles everything from aircraft selection to ground handling.</p>
-                </div>
-                <div class="glass-panel" style="padding: 3rem;">
-                    <h3 class="serif gold-text" style="font-size: 1.8rem; margin-bottom: 1rem;">Off-Market Access</h3>
-                    <p style="color: var(--text-muted);">Access exclusive aircraft and empty-leg opportunities that never hit public booking platforms, curated specifically for your profile.</p>
-                </div>
-                <div class="glass-panel" style="padding: 3rem;">
-                    <h3 class="serif gold-text" style="font-size: 1.8rem; margin-bottom: 1rem;">Absolute Discretion</h3>
-                    <p style="color: var(--text-muted);">Your identity and travel patterns are protected by our strict confidentiality protocols. Travel anonymously through private VIP terminals.</p>
+                    </a>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 4rem;">
-                <p style="color: var(--text-muted); font-size: 1.1rem;">Want to learn how to avoid common pricing pitfalls? <a href="https://eliteluxurybookings.com/private-jet-booking-guide/" class="gold-text" style="text-decoration: underline; font-weight: 600;">Read our Insider Guide to Private Jet Costs</a>.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- SEO KEYWORD SERVICES SECTION -->
-    <section style="background: var(--graphene); padding: 8rem 0;">
-        <div class="container">
-            <h2 class="serif" style="font-size: 3rem; margin-bottom: 4rem; text-align: center;">Our <span class="gold-text">Bespoke</span> Aviation Services</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem;">
-                <div style="display: flex; flex-direction: column; gap: 2rem;">
-                    <div style="border-left: 3px solid var(--primary-gold); padding-left: 2rem;">
-                        <h4 class="serif" style="font-size: 1.6rem; color: #fff;">On-Demand Private Jet Charter</h4>
-                        <p style="color: var(--text-muted);">True flexibility for when your schedule demands immediate action. Book a private jet with as little as 4 hours notice.</p>
+        <section class="section-padding" style="border-top: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.5);">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+                    <div>
+                        <h2 class="serif" style="font-size: 2rem; margin-bottom: 1.5rem; border: none;">Aviation <span class="gold-text">Authority Hub</span></h2>
+                        <p style="color: rgba(255,255,255,0.6); margin-bottom: 2rem;">Elite Luxury Bookings operates a global network of executive flight corridors. Explore our authority guides for more insights.</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 1rem;"><a href="https://eliteluxurybookings.com/private-jet-charter-cost-estimator/" style="color: #d4af37; text-decoration: none; font-weight: 600;">💰 2026 Private Jet Cost Estimator</a></li>
+                            <li style="margin-bottom: 1rem;"><a href="https://eliteluxurybookings.com/heavy-jet-vs-light-jet-charter/" style="color: #d4af37; text-decoration: none; font-weight: 600;">✈️ Heavy vs Light Jet Comparison</a></li>
+                            <li style="margin-bottom: 1rem;"><a href="https://eliteluxurybookings.com/empty-leg-flights-guide/" style="color: #d4af37; text-decoration: none; font-weight: 600;">🏷️ Empty Leg Booking Guide</a></li>
+                            <li style="margin-bottom: 1rem;"><a href="https://eliteluxurybookings.com/private-jet-booking-guide/" style="color: #d4af37; text-decoration: none; font-weight: 600;">📑 Master Private Jet Guide</a></li>
+                        </ul>
                     </div>
-                    <div style="border-left: 3px solid var(--primary-gold); padding-left: 2rem;">
-                        <h4 class="serif" style="font-size: 1.6rem; color: #fff;">Business Jet Charter Services</h4>
-                        <p style="color: var(--text-muted);">Transform the cabin into your boardroom. Optimized for group travel, corporate missions, and global roadshows.</p>
-                    </div>
-                    <div style="border-left: 3px solid var(--primary-gold); padding-left: 2rem;">
-                        <h4 class="serif" style="font-size: 1.6rem; color: #fff;">Last-Minute Private Jet Charter</h4>
-                        <p style="color: var(--text-muted);">Emergency missions and urgent relocations handled with the precision of a dedicated broker.</p>
+                    <div>
+                        <h2 class="serif" style="font-size: 2rem; margin-bottom: 1.5rem; border: none;">Elite <span class="gold-text">Intelligence</span></h2>
+                        <p style="color: rgba(255,255,255,0.6); margin-bottom: 2rem;">Our multi-modal concierge covers maritime, aviation, and exclusive estates. Navigate the full ecosystem below.</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 1rem;"><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/" style="color: #d4af37; text-decoration: none; font-weight: 600;">⚓ Luxury Yacht Charters</a></li>
+                            <li style="margin-bottom: 1rem;"><a href="https://eliteluxurybookings.com/luxury-villa-rentals/" style="color: #d4af37; text-decoration: none; font-weight: 600;">🏡 Exclusive Villa Rentals</a></li>
+                            <li style="margin-bottom: 1rem;"><a href="https://eliteluxurybookings.com/blog/" style="color: #d4af37; text-decoration: none; font-weight: 600;">📰 Global Intelligence Blog</a></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="glass-panel" style="padding: 3rem;">
-                    <h3 class="serif" style="font-size: 2.2rem; margin-bottom: 2rem;">Global <span class="gold-text">Routings</span></h3>
-                    <p style="color: var(--text-muted); margin-bottom: 2rem;">Elite Luxury Bookings coordinates missions across every major global corridor.</p>
-                    <ul style="list-style: none; padding: 0; display: grid; gap: 1rem;">
-                        <li style="color: #fff; font-weight: 500;">● London to Paris (Standard 1 hour mission)</li>
-                        <li style="color: #fff; font-weight: 500;">● New York to Los Angeles (Coast-to-Coast)</li>
-                        <li style="color: #fff; font-weight: 500;">● Dubai to Maldives (Bespoke Island Transit)</li>
-                        <li style="color: #fff; font-weight: 500;">● Monaco & Côte d'Azur (F1 & Gala Access)</li>
-                    </ul>
-                    <a href="#book" class="btn btn-gold" style="display: block; margin-top: 2rem; width: 100%; box-sizing: border-box;">View Luxury Routings</a>
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- SEO FAQ SECTION -->
-    <section class="section-padding">
-        <div class="container" style="max-width: 1000px;">
-            <h2 class="serif" style="font-size: 3rem; text-align: center; margin-bottom: 5rem;">Aviation <span class="gold-text">Intelligence</span></h2>
-            <div style="display: grid; gap: 2rem;">
-                <div class="glass-panel" style="padding: 2.5rem;">
-                    <h4 class="serif" style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--primary-gold);">How much does a private jet charter cost?</h4>
-                    <p style="color: var(--text-muted);">Private jet charter cost is determined by the aircraft type, trip duration, and specific mission requirements. We provide all-inclusive curated quotes through our platform to ensure total price transparency for our clients.</p>
-                </div>
-                <div class="glass-panel" style="padding: 2.5rem;">
-                    <h4 class="serif" style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--primary-gold);">How quickly can I book a jet?</h4>
-                    <p style="color: var(--text-muted);">For verified clients, we can have a jet wheels-up in as little as 4 hours. Our curation desk is available 24/7 to handle urgent and last-minute booking requests globally.</p>
-                </div>
-                <div class="glass-panel" style="padding: 2.5rem;">
-                    <h4 class="serif" style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--primary-gold);">Is my flight confidential?</h4>
-                    <p style="color: var(--text-muted);">Absolutely. We utilize private FBOs (Fixed Base Operators) and VIP terminals to ensure you bypass public gaze. Confidentiality is the cornerstone of the Elite Luxury experience.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section class="section-padding" style="text-align: center; background: linear-gradient(to top, rgba(212,175,55,0.05), transparent);">
-        <div class="container">
-            <h2 class="serif" style="font-size: 4rem; margin-bottom: 2rem;">Time is the <span class="gold-text">Ultimate Luxury.</span></h2>
-            <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto 3rem; font-size: 1.2rem;">Reclaim your schedule with a private aviation partner that understands the nuance of elite travel. Your curated wings await.</p>
-            <div class="btn-container" style="padding-bottom: 3rem;">
-                <a href="#book" class="btn btn-gold">Request Private Access</a>
-                <a href="https://wa.me/918801079030" class="btn btn-outline" style="background: #000;">WhatsApp Concierge Now</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- GLOBAL NETWORK SECTION -->
-    <section class="section-padding" style="background: rgba(212,175,55,0.02); border-top: 1px solid var(--glass-border);">
-        <div class="container" style="text-align: center;">
-            <h2 class="serif" style="font-size: 2.5rem; margin-bottom: 1.5rem;">Explore Our <span class="gold-text">Global Fleet</span></h2>
-            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 2.5rem;">Access tailored aviation solutions across our extensive network of 116 premium flight corridors.</p>
-            <a href="https://eliteluxurybookings.com/global-route-silo/" class="btn btn-outline">View Full Route Directory</a>
-        </div>
-    </section>
-
-    <!-- FOOTER SEO TEXT AREA -->
-    <section style="background: #000; padding: 4rem 0; border-top: 1px solid var(--glass-border);">
-        <div class="container">
-            <p style="font-size: 0.8rem; color: #333; line-height: 1.8; text-align: justify; columns: 2; gap: 4rem;">
-                Elite Luxury Bookings serves as the premier global concierge for <strong>private jet charter</strong> services. Within our curated partner network, we provide on-demand access to <strong>luxury private jet</strong> aircraft including light jets, super-midsize vessels, and ultra-long-range global travelers. Whether you need to <strong>book a private jet</strong> for a trans-Atlantic business mission or require a <strong>last minute private jet charter</strong> for a weekend in Monaco, our senior concierge desk handles every detail with absolute precision. We optimize your <strong>private jet charter cost</strong> by curating only the most efficient and elite operators, providing you with a single point of contact for all your <strong>on demand private jet</strong> needs. Experience the difference of architectural curation in aviation.
-            </p>
-        </div>
-    </section>
-    </main>
-
-    <!-- FOOTER -->
-    <!-- ELB_FOOTER_START -->
+<!-- ELB_FOOTER_START -->
     <footer style="background:#000; border-top:1px solid rgba(255,255,255,0.05); padding:6rem 0;">
         <div class="container">
             <div style="font-family:'Cormorant Garamond', serif; font-size: 2.2rem; margin-bottom: 1.5rem; text-align: center; color: #D4AF37;">Elite Luxury Bookings</div>
@@ -700,10 +627,23 @@
                 <a href="https://eliteluxurybookings.com/contact/" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Contact</a>
             </div>
             <p style="color: rgba(255, 255, 255, 0.5); font-size: 0.8rem; text-align: center;">&copy; 2026 Elite Luxury Bookings. All rights reserved. Global Concierge Service.</p>
+            <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; border-top: 1px solid rgba(212,175,55,0.1); padding-top: 2rem;">
+                <a href="https://eliteluxurybookings.com/about/" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">The Mission</a>
+                <a href="https://eliteluxurybookings.com/privacy/" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Privacy Protocol</a>
+                <a href="https://eliteluxurybookings.com/terms/" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Terms of Engagement</a>
+            </div>
+
         </div>
     </footer>
     
     
+    
+    
+    
+    
+    
+    <!-- ELB_FOOTER_END -->
+
     <!-- ELITE YACHTING INTELLIGENCE -->
     <div style="max-width: 1200px; margin: 3rem auto 0; padding: 2rem; border-top: 1px solid rgba(212,175,55,0.1); text-align: center;">
         <h4 class="serif gold-text" style="font-size: 1.4rem; margin-bottom: 1.5rem; letter-spacing: 2px;">Elite Yachting Intelligence</h4>
@@ -737,12 +677,12 @@
             <a href="https://eliteluxurybookings.com/elite-private-jet-charter/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">View Global Fleet</a>
         </div>
     </div>
-    <!-- ELB_FOOTER_END -->
 
-
-
-
-
+    
+    
+    
+    
+    
 
     <script>
         function toggleMobileMenu() {

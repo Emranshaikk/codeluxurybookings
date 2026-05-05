@@ -48,8 +48,58 @@
             margin: 0;
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
-            padding-top: 72px;
+            padding-top: 108px;
             line-height: 1.6;
+        }
+
+        /* --- INTELLIGENCE TICKER --- */
+        .top-intel-bar {
+            background: rgba(5, 5, 5, 0.98);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            height: 36px;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100000;
+            display: flex;
+            align-items: center;
+        }
+
+        .ticker-wrap {
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .ticker-content {
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100%;
+            animation: ticker 40s linear infinite;
+            font-size: 0.72rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-200%, 0, 0); }
+        }
+
+        .ticker-content strong {
+            color: #D4AF37;
+            margin: 0 40px;
+        }
+
+        .ticker-content a {
+            color: #fff;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            margin-left: 10px;
+            font-weight: 600;
         }
 
         .container {
@@ -73,7 +123,7 @@
         /* Global Nav Standard */
         .global-nav {
             position: fixed;
-            top: 0;
+            top: 36px;
             left: 0;
             right: 0;
             background: rgba(5, 5, 5, 0.98);
@@ -332,6 +382,15 @@
                 font-size: 3rem;
             }
 
+            .nav-brand {
+                font-size: 1.1rem !important;
+                letter-spacing: 1px;
+            }
+            .top-intel-bar { height: 32px; }
+            .global-nav { top: 32px; }
+            body { padding-top: 100px; }
+            .mobile-menu { padding-top: 100px; }
+
             .form-grid {
                 grid-template-columns: 1fr;
             }
@@ -404,6 +463,15 @@
 </head>
 
 <body>
+    <div class="top-intel-bar">
+        <div class="ticker-wrap">
+            <div class="ticker-content">
+                <strong>⚠️ Intelligence Alert:</strong> High Demand for Summer 2026 Mediterranean Charters. 
+                <strong>Empty Leg Flights Available:</strong> <a href="https://wa.me/918801079030">Connect for Instant Procurement</a>
+                <strong>⚠️ Global Inventory Update:</strong> Off-Market Superyachts Now Accessible via Maritime Concierge.
+            </div>
+        </div>
+    </div>
     <!-- ELB_NAV_START -->
     <nav class="global-nav">
         <div class="container global-nav-inner">
