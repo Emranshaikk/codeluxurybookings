@@ -78,7 +78,7 @@
         <h1 class="serif" style="font-size: 2.5rem; margin-bottom: 0.5rem;">Secure Your <span class="gold-text">Mission</span></h1>
         <p style="color: rgba(255,255,255,0.6); margin-bottom: 3rem; font-size: 0.9rem;">Submit your flight details for immediate aircraft sourcing and competitive jet quotes.</p>
 
-        <form action="https://formspree.io/f/xwvwanlj" method="POST">
+        <form id="leadForm" onsubmit="submitLead(event)">
             <input type="hidden" name="_redirect" value="https://eliteluxurybookings.com/thank-you.html">
             <input type="hidden" name="form_type" value="Pixel Page Direct">
             <input type="text" name="name" placeholder="Full Name" class="form-control" required>
@@ -95,5 +95,34 @@
             <span>🔒 SSL Secured</span>
         </div>
     </div>
+
+    <script>
+        const endpoint = 'https://eliteluxurybookings.com/submit-lead.php';
+        async function submitLead(event) {
+            event.preventDefault();
+            const btn = event.target.querySelector('button[type="submit"]');
+            const form = event.target;
+            const originalBtnText = btn.innerText;
+            
+            btn.innerText = 'SECURELY SENDING...';
+            btn.disabled = true;
+            
+            const formData = new FormData(form);
+            try {
+                await fetch(endpoint, {
+                    method: 'POST',
+                    body: formData
+                });
+                window.location.href = '/thank-you.html';
+            } catch (error) {
+                console.error(error);
+                alert('Connection issue. Please connect directly with your concierge via WhatsApp.');
+            } finally {
+                btn.innerText = originalBtnText;
+                btn.disabled = false;
+            }
+        }
+    </script>
+
 </body>
 </html>

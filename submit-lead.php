@@ -7,7 +7,7 @@
 // --- CONFIGURATION ---
 $TELEGRAM_TOKEN = '8274022771:AAHDPmDq6vfAttktCf1iOeNAwqSAuUFgP2g';
 $TELEGRAM_CHAT_ID = '5875175296'; 
-$BACKUP_EMAIL = 'info@eliteluxurybookings.com';
+$BACKUP_EMAIL = 'contact@eliteluxurybookings.com';
 $LOG_FILE = 'lead_handler_errors.log';
 
 // --- SECURITY ---
@@ -22,26 +22,37 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 // --- DATA EXTRACTION ---
 $data = $_POST;
-$form_type = isset($data['form_type']) ? $data['form_type'] : 'General Lead';
+$form_type = isset($data['form_type']) ? $data['form_type'] : (isset($data['_target']) ? $data['_target'] : 'General Lead');
 
 // --- HTML FORMATTING FOR TELEGRAM ---
 $message = "🚀 <b>New Elite Lead Received!</b>\n\n";
-$message .= "<b>Type:</b> " . htmlspecialchars(ucfirst($form_type)) . "\n";
+$message .= "<b>Source:</b> " . htmlspecialchars(ucfirst($form_type)) . "\n\n";
 
 $fields = [
-    'route' => '📍 Route',
-    'date' => '📅 Date',
-    'passengers' => '👥 Passengers',
-    'budget' => '💰 Budget',
     'name' => '👤 Name',
     'phone' => '📞 Phone',
     'email' => '✉️ Email',
+    'departure' => '🛫 Departure',
+    'destination' => '🛬 Destination',
+    'date' => '📅 Date',
+    'passengers' => '👥 Passengers',
+    'service' => '🛠️ Service',
+    'requirements' => '📋 Requirements',
+    'message' => '📝 Message',
+    'budget' => '💰 Budget',
     'whatsapp_pref' => '💬 WhatsApp Pref'
 ];
 
 foreach ($fields as $key => $label) {
     if (isset($data[$key]) && !empty($data[$key])) {
         $message .= "<b>$label:</b> " . htmlspecialchars($data[$key]) . "\n";
+    }
+}
+
+// Catch-all for any other fields
+foreach ($data as $key => $value) {
+    if (!isset($fields[$key]) && !in_array($key, ['form_type', '_redirect', '_target']) && !empty($value)) {
+        $message .= "<b>" . ucfirst($key) . ":</b> " . htmlspecialchars($value) . "\n";
     }
 }
 

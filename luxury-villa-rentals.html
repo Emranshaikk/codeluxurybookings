@@ -10,10 +10,9 @@
         content="Access the world's most exclusive, off-market private villas and estates. Fully staffed sanctuaries in Ibiza, Mykonos, Saint-Tropez, and beyond.">
     <link rel="canonical" href="https://eliteluxurybookings.com/luxury-villa-rentals/">
     <!-- SEO Enhancements -->
-    <meta name="keywords" content="luxury villa rentals, elite luxury bookings, private jet charter">
+    <meta name="keywords" content="luxury villa rentals, superyacht charter, private jet charter, elite luxury bookings">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="publisher" href="https://eliteluxurybookings.com/">
-
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J56D1LJLFM"></script>
@@ -30,26 +29,33 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap"
         rel="stylesheet" media="print" onload="this.media='all'">
 
+    <!-- SEO Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Elite Luxury Villa Rentals",
+      "provider": {
+        "@type": "Organization",
+        "name": "Elite Luxury Bookings",
+        "url": "https://eliteluxurybookings.com"
+      },
+      "serviceType": "Luxury Estate Concierge",
+      "description": "Access to exclusive off-market villas and private islands with full staffing and 24/7 concierge support.",
+      "areaServed": "Worldwide"
+    }
+    </script>
+
     <style>
         :root {
             --primary-gold: #D4AF37;
             --deep-black: #050505;
-            --graphene: #0A0A0A;
+            --graphene: #1A1A1A;
             --glass-bg: rgba(255, 255, 255, 0.02);
             --glass-border: rgba(212, 175, 55, 0.15);
             --text-main: #FFFFFF;
-            --text-muted: rgba(255, 255, 255, 0.7);
+            --text-muted: rgba(255, 255, 255, 0.85);
             --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        body {
-            background: var(--deep-black);
-            color: var(--text-main);
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-            padding-top: 108px;
-            line-height: 1.6;
         }
 
         /* --- INTELLIGENCE TICKER --- */
@@ -74,53 +80,36 @@
         }
 
         .ticker-content {
-            display: inline-block;
+            display: flex;
             white-space: nowrap;
-            padding-left: 100%;
-            animation: ticker 40s linear infinite;
+            animation: ticker-scroll 60s linear infinite;
+        }
+
+        .ticker-item {
+            display: inline-block;
             font-size: 0.72rem;
             letter-spacing: 2px;
             text-transform: uppercase;
             color: rgba(255, 255, 255, 0.9);
+            flex-shrink: 0;
+            padding-right: 50px;
         }
 
-        @keyframes ticker {
+        @keyframes ticker-scroll {
             0% { transform: translate3d(0, 0, 0); }
-            100% { transform: translate3d(-200%, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
         }
 
-        .ticker-content strong {
-            color: #D4AF37;
-            margin: 0 40px;
+        body {
+            padding-top: 108px !important;
+            background: var(--deep-black) !important;
+            color: var(--text-main) !important;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        .ticker-content a {
-            color: #fff;
-            text-decoration: underline;
-            text-underline-offset: 4px;
-            margin-left: 10px;
-            font-weight: 600;
-        }
-
-        .container {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .serif {
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        .gold-text {
-            color: var(--primary-gold);
-        }
-
-        .section-padding {
-            padding: 8rem 0;
-        }
-
-        /* Global Nav Standard */
         .global-nav {
             position: fixed;
             top: 36px;
@@ -137,9 +126,11 @@
             align-items: center;
             justify-content: space-between;
             height: 72px;
-            max-width: 1300px;
+            gap: 1rem;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
+            box-sizing: border-box;
         }
 
         .nav-brand {
@@ -147,12 +138,17 @@
             font-size: 1.75rem;
             font-weight: 600;
             color: #fff !important;
-            text-decoration: none;
+            text-decoration: none !important;
+        }
+
+        .nav-gold {
+            color: #D4AF37 !important;
         }
 
         .nav-links {
             display: flex;
-            gap: 0.5rem;
+            align-items: center;
+            gap: 1rem;
             list-style: none;
             margin: 0;
             padding: 0;
@@ -160,17 +156,19 @@
 
         .nav-links a {
             color: rgba(255, 255, 255, 0.7) !important;
-            text-decoration: none;
-            font-size: 0.85rem;
+            text-decoration: none !important;
+            font-size: 0.82rem;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            padding: 0.5rem 1rem;
+            padding: 0.5rem 0.9rem;
             border-radius: 6px;
-            transition: 0.3s;
+            transition: all 0.4s;
+            font-family: 'Inter', sans-serif !important;
         }
 
-        .nav-links a:hover {
+        .nav-links a.active {
             color: var(--primary-gold) !important;
+            background: rgba(212, 175, 55, 0.05);
         }
 
         .nav-hamburger {
@@ -178,27 +176,22 @@
             flex-direction: column;
             gap: 5px;
             cursor: pointer;
+            padding: 0.5rem;
             z-index: 100001;
         }
 
         .nav-hamburger span {
+            display: block;
             width: 24px;
             height: 2px;
-            background: #fff;
-            transition: 0.4s;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 2px;
+            transition: all 0.4s;
         }
 
-        .nav-hamburger.open span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        .nav-hamburger.open span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .nav-hamburger.open span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-        }
+        .nav-hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+        .nav-hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
 
         .mobile-menu {
             display: none;
@@ -207,271 +200,236 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: #000;
-            padding: 100px 2rem;
+            background: #050505;
+            padding: 108px 2rem 2rem;
             z-index: 100000;
             flex-direction: column;
-            gap: 1rem;
-            text-align: center;
+            gap: 0.5rem;
+            overflow-y: auto;
         }
 
         .mobile-menu.open {
-            display: flex;
+            display: flex !important;
         }
 
         .mobile-menu a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.8) !important;
+            text-decoration: none !important;
+            font-size: 1.1rem;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            font-family: 'Cormorant Garamond', serif;
+            letter-spacing: 2px;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* Hero Section */
-        .page-hero {
-            padding: 12rem 0 8rem;
+        @media (max-width:1024px) {
+            .nav-links { display: none !important; }
+            .nav-hamburger { display: flex !important; }
+        }
+
+        .serif { font-family: 'Cormorant Garamond', serif; }
+        .gold-text { color: var(--primary-gold); }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
+
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+        }
+
+        /* Hero Section Styling */
+        .villa-hero {
+            position: relative;
             text-align: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/villa_master.png');
+            padding: 12rem 0 4rem 0;
+            background: linear-gradient(rgba(5, 5, 5, 0.75), rgba(5, 5, 5, 0.9)), url('/assets/villa_master.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
 
         .hero-tagline {
-            color: var(--primary-gold);
-            font-size: 0.9rem;
+            letter-spacing: 4px;
             text-transform: uppercase;
-            letter-spacing: 5px;
-            font-weight: 700;
+            font-size: 0.9rem;
+            font-weight: 600;
             display: block;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-gold);
         }
 
         .hero-title {
-            font-size: clamp(3.5rem, 8vw, 5.5rem);
+            font-size: 5rem;
             line-height: 1.1;
-            margin-bottom: 2rem;
-            font-weight: 300;
+            margin-bottom: 1.5rem;
         }
 
         .hero-desc {
-            font-size: 1.25rem;
-            color: #fff;
-            max-width: 850px;
-            margin: 0 auto;
-            font-style: italic;
-            opacity: 0.9;
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
         }
 
-        /* Grid & Panels */
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
+        .btn-container {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
-        .glass-panel {
-            background: rgba(10, 10, 10, 0.8);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 3rem;
-            backdrop-filter: blur(20px);
+        .btn {
+            display: inline-block;
+            padding: 1.2rem 2.5rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
             transition: var(--transition);
         }
 
-        .villa-card:hover {
-            border-color: var(--primary-gold);
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        .btn-gold {
+            background: linear-gradient(135deg, #D4AF37, #B8860B);
+            color: #000 !important;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.15);
         }
 
-        /* Form Controls */
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary-gold) !important;
+            border: 1px solid var(--primary-gold);
+        }
+
+        .btn-outline:hover {
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        /* Section Styling */
+        .section-padding { padding: 8rem 0; }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        .form-section { padding: 4rem 0 10rem; }
+        .form-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 5rem;
+            border-radius: 30px;
+            background: rgba(26, 26, 26, 0.6);
+        }
+
         .form-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2.5rem;
         }
 
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-        }
-
-        .form-label {
-            font-size: 0.8rem;
+        .form-group { display: flex; flex-direction: column; }
+        .form-group.full { grid-column: 1 / -1; }
+        .form-group label {
+            font-size: 0.85rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--primary-gold);
+            margin-bottom: 0.8rem;
         }
 
-        .form-input,
-        .form-textarea {
+        .form-control {
             background: transparent;
             border: none;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
             padding: 1rem 0;
             color: #fff;
+            font-family: 'Inter', sans-serif;
             font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
             outline: none;
-            transition: 0.3s;
-        }
-
-        .form-input:focus {
             border-bottom-color: var(--primary-gold);
+            background: rgba(255, 255, 255, 0.02);
         }
 
-        .form-textarea {
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-top: 1rem;
-        }
-
-        .btn-gold {
-            background: linear-gradient(135deg, #D4AF37, #B8860B);
-            color: #000;
-            padding: 1.5rem 3rem;
-            border: none;
-            border-radius: 8px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 3px;
+        select.form-control {
+            background-color: transparent;
             cursor: pointer;
-            transition: 0.4s;
-            font-size: 1rem;
+            color: #fff;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D4AF37' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 1em;
         }
 
-        .btn-gold:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
-        }
-
+        /* Floating WhatsApp Button */
         .wa-float {
             position: fixed;
             bottom: 30px;
             right: 30px;
             background: #25D366;
             color: #fff !important;
+            border-radius: 50%;
             width: 60px;
             height: 60px;
-            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 9999;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            z-index: 999999;
+            transition: var(--transition);
         }
 
+        .wa-float:hover { transform: scale(1.1); }
+
+        /* Mobile Overrides */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .nav-hamburger {
-                display: flex;
-            }
-
-            .section-padding {
-                padding: 4rem 0;
-            }
-
-            .hero-title {
-                font-size: 3rem;
-            }
-
-            .nav-brand {
-                font-size: 1.1rem !important;
-                letter-spacing: 1px;
-            }
-            .top-intel-bar { height: 32px; }
-            .global-nav { top: 32px; }
-            body { padding-top: 100px; }
-            .mobile-menu { padding-top: 100px; }
-
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .glass-panel {
-                padding: 2rem 1.5rem;
-            }
-
-            .page-hero {
-                padding: 8rem 0 6rem;
-                background-attachment: scroll;
-            }
+            .section-padding { padding: 4rem 0; }
+            .hero-title { font-size: 2.8rem; }
+            .hero-desc { font-size: 1.1rem; }
+            .grid-3 { grid-template-columns: 1fr; gap: 1.5rem; }
+            .form-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .glass-panel { padding: 2rem !important; }
+            .wa-float { bottom: 20px; right: 20px; width: 50px; height: 50px; }
+            .villa-hero { padding: 12rem 0 8rem 0; background-attachment: scroll; }
+            .container { padding: 0 1.5rem; }
+            .nav-brand { font-size: 1.1rem !important; letter-spacing: 1px; }
         }
     </style>
-
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Luxury Villa Rentals",
-      "provider": {
-        "@type": "Organization",
-        "name": "Elite Luxury Bookings",
-        "url": "https://eliteluxurybookings.com"
-      },
-      "description": "Access the world's most exclusive, off-market private villas and estates. Fully staffed sanctuaries in Ibiza, Mykonos, Saint-Tropez, and beyond.",
-      "areaServed": "Global",
-      "serviceType": "Estate Concierge"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "How do I book a private villa?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Simply submit a request via our estate concierge portal. A senior consultant will curate a selection of off-market private estates tailored to your destination and staffing requirements."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Are the villas fully staffed?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, most villas in our elite portfolio include professional staffing such as private chefs, housekeepers, and discrete security if requested."
-        }
-      }]
-    }
-    </script>
-    </style>
-
-    <!-- Open Graph / Social Sharing -->
-    <meta property="og:title" content="Luxury Villa Rentals | Exclusive Private Estates | Elite Luxury Bookings">
-    <meta property="og:description" content="Access the world's most exclusive, off-market private villas and estates. Fully staffed sanctuaries in Ibiza, Mykonos, Saint-Tropez, and beyond.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://eliteluxurybookings.com/luxury-villa-rentals/">
-    <meta property="og:image" content="https://eliteluxurybookings.com/assets/elite_jet_master_hero.png">
-    <meta property="og:site_name" content="Elite Luxury Bookings">
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "sia395rirl");
-    </script>
 </head>
 
 <body>
+    <!-- INTELLIGENCE TICKER -->
     <div class="top-intel-bar">
         <div class="ticker-wrap">
             <div class="ticker-content">
-                <strong>⚠️ Intelligence Alert:</strong> High Demand for Summer 2026 Mediterranean Charters. 
-                <strong>Empty Leg Flights Available:</strong> <a href="https://wa.me/918801079030">Connect for Instant Procurement</a>
-                <strong>⚠️ Global Inventory Update:</strong> Off-Market Superyachts Now Accessible via Maritime Concierge.
+                <div class="ticker-item">
+                    <span style="color: var(--primary-gold);">⚠️ ESTATE ALERT:</span> PEAK SEASON AVAILABILITY FOR IBIZA & MYKONOS CLOSING. &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span style="color: var(--primary-gold);">OFF-MARKET INVENTORY:</span> 8 NEW PRIVATE ISLANDS ADDED TO PORTFOLIO. &nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+                <div class="ticker-item">
+                    <span style="color: var(--primary-gold);">⚠️ ESTATE ALERT:</span> PEAK SEASON AVAILABILITY FOR IBIZA & MYKONOS CLOSING. &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span style="color: var(--primary-gold);">OFF-MARKET INVENTORY:</span> 8 NEW PRIVATE ISLANDS ADDED TO PORTFOLIO. &nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
             </div>
         </div>
     </div>
+
     <!-- ELB_NAV_START -->
     <nav class="global-nav">
         <div class="container global-nav-inner">
@@ -479,7 +437,7 @@
             <ul class="nav-links">
                 <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
                 <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Yachts</a></li>
-                <li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/">Villas</a></li>
+                <li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/" class="active">Villas</a></li>
                 <li><a href="https://eliteluxurybookings.com/blog/">Blog</a></li>
                 <li><a href="https://eliteluxurybookings.com/contact/">Contact</a></li>
             </ul>
@@ -498,138 +456,132 @@
     <!-- ELB_NAV_END -->
 
     <main>
-        <section class="page-hero">
+        <!-- HERO SECTION -->
+        <section class="villa-hero">
             <div class="container">
-                <span class="hero-tagline">Selected by Referral Only</span>
-                <h1 class="serif hero-title">Unrivaled <span class="gold-text">Private Villa</span> Portfolio</h1>
-                <p class="hero-desc">"Sanctuaries of exclusivity. Ultra-premium estates and fully-staffed retreats
-                    designed for absolute privacy in the world's most coveted destinations."</p>
+                <span class="hero-tagline">Elite Estate Intelligence</span>
+                <h1 class="hero-title serif">The Pinnacle of <br><span class="gold-text">Private Sanctuaries</span></h1>
+                <p class="hero-desc">Bespoke living experiences engineered for the world's most discerning travelers. Access an off-market portfolio of ultra-luxury estates and private islands globally.</p>
+                <div class="btn-container">
+                    <button onclick="document.getElementById('quote').scrollIntoView({ behavior: 'smooth' })" class="btn btn-gold" style="border:none; cursor:pointer;">Initiate Estate Protocol</button>
+                    <a href="https://wa.me/918801079030" class="btn btn-outline" aria-label="WhatsApp Concierge">WhatsApp Concierge</a>
+                </div>
             </div>
         </section>
 
-        <!-- INQUIRY FORM -->
-        <section id="inquiry" class="container" style="margin-top: -100px; position: relative; z-index: 10;">
-            <div class="glass-panel" style="max-width: 1000px; margin: 0 auto;">
-                <div style="text-align: center; margin-bottom: 3rem;">
-                    <h2 class="serif gold-text" style="font-size: 2.5rem; margin-bottom: 0.5rem;">Request Private Villa
-                        Access</h2>
-                    <p
-                        style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 3px;">
-                        Exclusive Estate Procurement & Coordination</p>
-                </div>
-                <form action="https://formspree.io/f/xwvwanlj" method="POST">
-                        <input type="hidden" name="_redirect" value="https://eliteluxurybookings.com/thank-you.html">
-                    <input type="hidden" name="_subject" value="Villa Inquiry: Global Portfolio">
+        <!-- LEAD CAPTURE FORM -->
+        <section id="quote" class="form-section">
+            <div class="container">
+                <div class="glass-panel form-wrapper" style="border: 1px solid var(--primary-gold); background: rgba(5,5,5,0.8);">
+                    <div style="text-align: center; margin-bottom: 4rem;">
+                        <h2 class="serif" style="font-size: 3.5rem; margin-bottom: 1rem;">Request Private Proposal</h2>
+                        <p style="color: var(--text-muted); font-size: 1.1rem; letter-spacing: 1px; text-transform: uppercase;">A dedicated estate concierge will personally respond within 30 minutes.</p>
+                    </div>
 
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label class="form-label" for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" class="form-input" placeholder="Hon. John Doe"
-                                required>
+                    <form id="leadForm" onsubmit="submitLead(event)">
+                        <input type="hidden" name="form_type" value="ELB Luxury Villa Main Form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Hon. John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Private Email *</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="client@exclusive.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="whatsapp">WhatsApp Number *</label>
+                                <input type="tel" id="whatsapp" name="phone" class="form-control" placeholder="+1 234 567 8900" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Service Interested</label>
+                                <select id="service" name="service" class="form-control" aria-label="Service Interested">
+                                    <option value="Villa" selected>Private Villa Rental</option>
+                                    <option value="Private Jet">Private Jet Charter</option>
+                                    <option value="Yacht">Luxury Yacht Rental</option>
+                                    <option value="Concierge">Multi-Service Concierge</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label class="form-label" for="phone">WhatsApp / Phone *</label>
-                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1..." required>
+                        <div class="form-group full" style="margin-top: 2rem;">
+                            <label for="message">Mission Brief / Requirements</label>
+                            <textarea id="message" name="message" class="form-control" rows="4" placeholder="Destination, dates, guest count, or specific estate preference..." style="resize:none;"></textarea>
                         </div>
-                    </div>
-
-                    <div class="form-grid" style="margin-top: 2rem;">
-                        <div class="form-group">
-                            <label class="form-label" for="email">Private Email *</label>
-                            <input type="email" id="email" name="email" class="form-input"
-                                placeholder="client@exclusive.com" required>
+                        <div style="text-align: center; margin-top: 3rem;">
+                            <button type="submit" id="submitBtn" class="btn btn-gold" style="width: 100%; border-radius: 12px;">Initiate Private Consultation</button>
                         </div>
-                        <div class="form-group">
-                            <label class="form-label" for="destination">Desired Destination</label>
-                            <input type="text" id="destination" name="destination" class="form-input"
-                                placeholder="Ibiza, St. Barts, Mykonos...">
-                        </div>
-                    </div>
-
-                    <div class="form-group" style="margin-top: 2rem;">
-                        <label class="form-label" for="requirements">Mission Brief & Requirements</label>
-                        <textarea id="requirements" name="requirements" class="form-textarea" rows="4"
-                            placeholder="Dates, guest count, or specific staffing needs (Private Chef, Security, Concierge)..."></textarea>
-                    </div>
-
-                    <div style="text-align: center; margin-top: 3rem;">
-                        <button type="submit" class="btn-gold">Initiate Estate Procurement</button>
-                        <p
-                            style="color: var(--text-muted); font-size: 0.8rem; margin-top: 1.5rem; letter-spacing: 1px;">
-                            A senior concierge will respond personally within 30 minutes.</p>
-                    </div>
-                </form>
-            </div>
-        </section>
-
-        <!-- VILLA CARDS -->
-        <section class="container section-padding">
-            <div class="grid-3">
-                <div class="glass-panel villa-card" style="padding: 0; overflow: hidden;">
-                    <div style="padding: 3rem 2rem;">
-                        <span class="hero-tagline" style="font-size: 0.7rem; margin-bottom: 1rem;">Ibiza, Spain</span>
-                        <h3 class="serif" style="font-size: 1.8rem; margin-bottom: 1rem;">Hidden Clifftop Sanctuary</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem;">A fully-staffed clifftop retreat
-                            offering absolute privacy, an elite private chef, and an integrated invisible security
-                            perimeter.</p>
-                    </div>
-                </div>
-
-                <div class="glass-panel villa-card" style="padding: 0; overflow: hidden;">
-                    <div style="padding: 3rem 2rem;">
-                        <span class="hero-tagline" style="font-size: 0.7rem; margin-bottom: 1rem;">Mykonos,
-                            Greece</span>
-                        <h3 class="serif" style="font-size: 1.8rem; margin-bottom: 1rem;">Aegean Grand Estate</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem;">Expansive minimalist luxury overlooking
-                            the Cyclades. Features a 50m infinity pool and private helipad access for discrete arrival.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="glass-panel villa-card" style="padding: 0; overflow: hidden;">
-                    <div style="padding: 3rem 2rem;">
-                        <span class="hero-tagline" style="font-size: 0.7rem; margin-bottom: 1rem;">St. Barts</span>
-                        <h3 class="serif" style="font-size: 1.8rem; margin-bottom: 1rem;">Caribbean Ocean Front</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem;">Ultra-discrete beach-front acreage.
-                            Complete with internal concierge and 24/7 discrete protective services for the discerning
-                            traveler.</p>
+                    </form>
+                    <div id="formMsg" style="display:none; text-align:center; padding:2rem 0;">
+                        <h4 class="serif gold-text" style="font-size:1.8rem; margin-bottom:1rem;">Request Received</h4>
+                        <p style="color:var(--text-main); font-size:1rem;">A senior estate concierge is reviewing your request and will contact you via WhatsApp shortly.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- STRATEGIC INSIGHTS -->
-        <section class="container" style="margin-bottom: 8rem;">
-            <h2 class="serif gold-text" style="font-size: 2.5rem; margin-bottom: 3rem; text-align: center;">Strategic Insights</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                <a href="https://eliteluxurybookings.com/ultimate-luxury-villa-rental-guide-2026/" class="glass-panel" style="padding: 2.5rem; text-decoration: none; display: block; border: 1px solid rgba(212,175,55,0.1); transition: var(--transition);">
-                    <h4 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 1rem;">2026 Villa Blueprint</h4>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">Our definitive guide to the structural and operational shifts in the global villa market for the upcoming season.</p>
-                    <span style="display: inline-block; margin-top: 1.5rem; color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Read Full Analysis →</span>
-                </a>
-                <a href="https://eliteluxurybookings.com/villa-vs-luxury-hotel-comparison/" class="glass-panel" style="padding: 2.5rem; text-decoration: none; display: block; border: 1px solid rgba(212,175,55,0.1); transition: var(--transition);">
-                    <h4 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 1rem;">Villa vs. Hotel Analysis</h4>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">A rigorous comparison of privacy benchmarks, staffing models, and ROI for ultra-high-net-worth travelers.</p>
-                    <span style="display: inline-block; margin-top: 1.5rem; color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Compare Options →</span>
-                </a>
-                <a href="https://eliteluxurybookings.com/how-to-book-luxury-villa-guide/" class="glass-panel" style="padding: 2.5rem; text-decoration: none; display: block; border: 1px solid rgba(212,175,55,0.1); transition: var(--transition);">
-                    <h4 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 1rem;">Booking Protocol</h4>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">Master the off-market procurement process and the technical nuances of elite estate contracts.</p>
-                    <span style="display: inline-block; margin-top: 1.5rem; color: var(--primary-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">View Protocol →</span>
-                </a>
+        <!-- CORE AUTHORITY SECTION -->
+        <section class="section-padding" style="background: linear-gradient(rgba(10,10,10,0.9), rgba(10,10,10,0.9)), url('/assets/villa_master.png') center/cover;">
+            <div class="container" style="text-align: center; max-width: 1000px;">
+                <h2 class="serif" style="font-size: 3rem; margin-bottom: 2rem; border: none;">A Legacy of <span class="gold-text">Estate Excellence</span></h2>
+                <p style="color: rgba(255,255,255,0.7); font-size: 1.25rem; margin-bottom: 4rem; line-height: 2;">Elite Luxury Bookings doesn't just book villas; we engineer sanctuaries. Our global network allows us to secure off-market estates and private islands that traditional agencies cannot access. From fully-staffed retreats in Saint-Tropez to ultra-secure compounds in the Caribbean, our curation is absolute.</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div class="glass-panel" style="padding: 3rem;">
+                        <h4 class="gold-text serif" style="font-size: 1.5rem; margin-bottom: 1rem;">Direct Access</h4>
+                        <p style="font-size: 0.95rem; color: rgba(255,255,255,0.5);">Direct relationships with estate owners and private island managers globally.</p>
+                    </div>
+                    <div class="glass-panel" style="padding: 3rem;">
+                        <h4 class="gold-text serif" style="font-size: 1.5rem; margin-bottom: 1rem;">Full-Staffing Ops</h4>
+                        <p style="font-size: 0.95rem; color: rgba(255,255,255,0.5);">Dedicated teams ensuring seamless operations, from private chefs to elite security.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- EXPERT PERSONA -->
-        <section class="container" style="margin-bottom: 8rem;">
-            <div style="display: flex; align-items: center; gap: 3rem; background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); padding: 4rem; border-radius: 30px;">
-                <div style="width: 120px; height: 120px; border-radius: 50%; background: #222; border: 2px solid var(--primary-gold); flex-shrink: 0; overflow: hidden;">
-                    <img src="/assets/images/captain_alexander_voss_bio.png" alt="Isabella Montis" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%);">
+        <!-- ESTATE COLLECTION SECTION -->
+        <section class="section-padding" style="background: #050505; border-top: 1px solid rgba(255,255,255,0.05);">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 5rem;">
+                    <span class="hero-tagline" style="margin-bottom: 1rem;">The Elite Collection</span>
+                    <h2 class="serif" style="font-size: 3.5rem; border: none;">Engineered for <span class="gold-text">Privacy</span></h2>
                 </div>
-                <div>
-                    <h4 class="serif gold-text" style="font-size: 2rem; margin-bottom: 1rem;">Isabella Montis</h4>
-                    <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8;">"In the world of ultra-luxury estates, privacy is the ultimate amenity. My mission is to secure sanctuaries that offer absolute autonomy and bespoke service for our discerning global clientele."</p>
-                    <p style="color: var(--primary-gold); font-size: 0.9rem; margin-top: 1rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">Senior Lifestyle Manager & Global Estate Consultant</p>
+                <div class="grid-3">
+                    <div class="glass-panel" style="padding: 0; overflow: hidden; border-color: rgba(255,255,255,0.05);">
+                        <div style="height: 250px; background: url('/assets/villa1.png') center/cover;"></div>
+                        <div style="padding: 2.5rem;">
+                            <h4 class="serif gold-text" style="font-size: 1.6rem; margin-bottom: 1rem;">Mediterranean Sanctuaries</h4>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 2rem;">Exclusive estates in Ibiza, Mykonos, and the Amalfi Coast. Designed for the elite.</p>
+                            <a href="https://wa.me/918801079030" style="color: #fff; text-decoration: none; font-size: 0.8rem; letter-spacing: 2px; font-weight: 600;">VIEW PORTFOLIO →</a>
+                        </div>
+                    </div>
+                    <div class="glass-panel" style="padding: 0; overflow: hidden; border-color: rgba(255,255,255,0.05);">
+                        <div style="height: 250px; background: url('/assets/villa2.png') center/cover;"></div>
+                        <div style="padding: 2.5rem;">
+                            <h4 class="serif gold-text" style="font-size: 1.6rem; margin-bottom: 1rem;">Private Islands</h4>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 2rem;">Total isolation and absolute luxury. The ultimate in transcontinental privacy.</p>
+                            <a href="https://wa.me/918801079030" style="color: #fff; text-decoration: none; font-size: 0.8rem; letter-spacing: 2px; font-weight: 600;">VIEW PORTFOLIO →</a>
+                        </div>
+                    </div>
+                    <div class="glass-panel" style="padding: 0; overflow: hidden; border-color: rgba(212,175,55,0.3);">
+                        <div style="height: 250px; background: url('/assets/luxury_villa_guide_hero.png') center/cover;"></div>
+                        <div style="padding: 2.5rem;">
+                            <h4 class="serif gold-text" style="font-size: 1.6rem; margin-bottom: 1rem;">Alpine Retreats</h4>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 2rem;">Masterfully crafted chalets in Courchevel and St. Moritz. Luxury without limits.</p>
+                            <a href="https://wa.me/918801079030" style="color: #fff; text-decoration: none; font-size: 0.8rem; letter-spacing: 2px; font-weight: 600;">VIEW PORTFOLIO →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESTATE AUTHORITY HUBS -->
+        <section class="container" style="padding-bottom: 8rem;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 4rem; background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); border-radius: 30px;">
+                <h4 class="serif gold-text" style="font-size: 1.4rem; margin-bottom: 2rem; letter-spacing: 2px; text-align: center;">Strategic Estate Resources</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: center;">
+                    <a href="https://eliteluxurybookings.com/ultimate-luxury-villa-rental-guide-2026/" style="color: rgba(255,255,255,0.6); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Villa Guide 2026</a>
+                    <a href="https://eliteluxurybookings.com/villa-vs-luxury-hotel-comparison/" style="color: rgba(255,255,255,0.6); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Villa vs Hotel</a>
+                    <a href="https://eliteluxurybookings.com/how-to-book-luxury-villa-guide/" style="color: rgba(255,255,255,0.6); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Booking Protocol</a>
+                    <a href="https://eliteluxurybookings.com/contact/" style="color: rgba(255,255,255,0.6); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Estate Consultation</a>
                 </div>
             </div>
         </section>
@@ -638,84 +590,81 @@
     <!-- ELB_FOOTER_START -->
     <footer style="background:#000; border-top:1px solid rgba(255,255,255,0.05); padding:6rem 0;">
         <div class="container">
-            <div class="serif gold-text" style="font-size: 2.2rem; margin-bottom: 1.5rem; text-align: center;">Elite
-                Luxury Bookings</div>
-            <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap;">
-                <a href="https://eliteluxurybookings.com/elite-private-jet-charter/"
-                    style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;"
-                    onmouseover="this.style.color='#D4AF37'"
-                    onmouseout="this.style.color='rgba(255,255,255,0.7)'">Private Jets</a>
-                <a href="https://eliteluxurybookings.com/luxury-yacht-rentals/"
-                    style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;"
-                    onmouseover="this.style.color='#D4AF37'"
-                    onmouseout="this.style.color='rgba(255,255,255,0.7)'">Yachts</a>
-                <a href="https://eliteluxurybookings.com/luxury-villa-rentals/"
-                    style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;"
-                    onmouseover="this.style.color='#D4AF37'"
-                    onmouseout="this.style.color='rgba(255,255,255,0.7)'">Villas</a>
-                <a href="https://eliteluxurybookings.com/blog/"
-                    style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;"
-                    onmouseover="this.style.color='#D4AF37'"
-                    onmouseout="this.style.color='rgba(255,255,255,0.7)'">Blog</a>
-                <a href="https://eliteluxurybookings.com/contact/"
-                    style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;"
-                    onmouseover="this.style.color='#D4AF37'"
-                    onmouseout="this.style.color='rgba(255,255,255,0.7)'">Contact</a>
+            <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:4rem; padding-bottom:3rem; border-bottom:1px solid rgba(212,175,55,0.1); text-align:left;">
+                <div style="flex:1; min-width:280px; margin-bottom:2rem;">
+                    <div style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; color:#fff; margin-bottom:1rem; line-height:1.2;">Elite Luxury <span style="color:#D4AF37;">Bookings</span></div>
+                    <p style="color:rgba(255,255,255,0.7); font-size:0.95rem; line-height:1.8; max-width:300px;">Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
+                    <div style="display: flex; gap: 1.5rem; margin-top: 2rem;">
+                        <a href="https://www.instagram.com/eliteluxurybookings/" target="_blank" style="color: rgba(255,255,255,0.6); transition: 0.3s;" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.174.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61575800006704" target="_blank" style="color: rgba(255,255,255,0.6); transition: 0.3s;" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div style="min-width:160px; margin-bottom:2rem;">
+                    <div style="font-size:0.8rem; text-transform:uppercase; letter-spacing:2.5px; color:#D4AF37; margin-bottom:1.5rem; font-weight:700;">Services</div>
+                    <ul style="list-style:none; display:flex; flex-direction:column; gap:1rem; padding:0; margin:0;">
+                        <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem;">Private Jets</a></li>
+                        <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem;">Luxury Yachts</a></li>
+                        <li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem;">Luxury Villas</a></li>
+                        <li><a href="https://eliteluxurybookings.com/blog/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem;">Blog</a></li>
+                    </ul>
+                </div>
+                <div style="min-width:160px; margin-bottom:2rem;">
+                    <div style="font-size:0.8rem; text-transform:uppercase; letter-spacing:2.5px; color:#D4AF37; margin-bottom:1.5rem; font-weight:700;">Authority</div>
+                    <ul style="list-style:none; display:flex; flex-direction:column; gap:1rem; padding:0; margin:0;">
+                        <li><a href="https://eliteluxurybookings.com/about/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem;">The Mission</a></li>
+                        <li><a href="https://eliteluxurybookings.com/privacy/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem;">Privacy Protocol</a></li>
+                        <li><a href="https://eliteluxurybookings.com/terms/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem;">Terms of Engagement</a></li>
+                        <li><a href="https://eliteluxurybookings.com/contact/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem;">Connect</a></li>
+                    </ul>
+                </div>
             </div>
-            <p style="color: rgba(255, 255, 255, 0.5); font-size: 0.8rem; text-align: center;">&copy; 2026 Elite Luxury
-                Bookings. All rights reserved. Global Concierge Service.</p>
+            <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; padding-top:3rem; gap:1.5rem; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 3rem;">
+                <p style="color: rgba(255, 255, 255, 0.5); font-size:0.85rem; letter-spacing:0.5px;">&copy; 2026 Elite Luxury Bookings. All rights reserved. Global Authority in Luxury Procurement.</p>
+                <div style="display: flex; gap: 2rem;">
+                    <a href="https://eliteluxurybookings.com/privacy/" style="color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.8rem;">Privacy</a>
+                    <a href="https://eliteluxurybookings.com/terms/" style="color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.8rem;">Terms</a>
+                </div>
+            </div>
         </div>
     </footer>
-    
-    
-    <!-- ELITE YACHTING INTELLIGENCE -->
-    <div style="max-width: 1200px; margin: 3rem auto 0; padding: 2rem; border-top: 1px solid rgba(212,175,55,0.1); text-align: center;">
-        <h4 class="serif gold-text" style="font-size: 1.4rem; margin-bottom: 1.5rem; letter-spacing: 2px;">Elite Yachting Intelligence</h4>
-        <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">
-            <a href="https://eliteluxurybookings.com/motor-yacht-vs-sailing-yacht-charter/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Motor vs Sailing</a>
-            <a href="https://eliteluxurybookings.com/cost-to-charter-superyacht-2026/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Charter Costs</a>
-            <a href="https://eliteluxurybookings.com/best-mediterranean-yacht-destinations/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Mediterranean Guide</a>
-            <a href="https://eliteluxurybookings.com/yacht-charter-apa-guide/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">APA Guide</a>
-            <a href="https://eliteluxurybookings.com/how-to-rent-superyacht-guide/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Booking Guide</a>
-        </div>
-    </div>
-    
-    <!-- ELITE VILLA INTELLIGENCE -->
-    <div style="max-width: 1200px; margin: 3rem auto 0; padding: 2rem; border-top: 1px solid rgba(212,175,55,0.1); text-align: center;">
-        <h4 class="serif gold-text" style="font-size: 1.4rem; margin-bottom: 1.5rem; letter-spacing: 2px;">Elite Villa Intelligence</h4>
-        <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">
-            <a href="https://eliteluxurybookings.com/ultimate-luxury-villa-rental-guide-2026/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Villa Guide 2026</a>
-            <a href="https://eliteluxurybookings.com/villa-vs-luxury-hotel-comparison/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Villa vs Hotel</a>
-            <a href="https://eliteluxurybookings.com/how-to-book-luxury-villa-guide/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Booking Protocol</a>
-            <a href="https://eliteluxurybookings.com/luxury-villa-rentals/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">View Portfolio</a>
-        </div>
-    </div>
-    
-    <!-- ELITE AVIATION INTELLIGENCE -->
-    <div style="max-width: 1200px; margin: 3rem auto 0; padding: 2rem; border-top: 1px solid rgba(212,175,55,0.1); text-align: center;">
-        <h4 class="serif gold-text" style="font-size: 1.4rem; margin-bottom: 1.5rem; letter-spacing: 2px;">Elite Aviation Intelligence</h4>
-        <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">
-            <a href="https://eliteluxurybookings.com/private-jet-charter-cost-estimator/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Jet Cost Estimator</a>
-            <a href="https://eliteluxurybookings.com/heavy-jet-vs-light-jet-charter/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Jet Class Analysis</a>
-            <a href="https://eliteluxurybookings.com/empty-leg-flights-guide/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Empty Leg Mastery</a>
-            <a href="https://eliteluxurybookings.com/elite-private-jet-charter/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">View Global Fleet</a>
-        </div>
-    </div>
     <!-- ELB_FOOTER_END -->
-
-
-
-
-
 
     <a href="https://wa.me/918801079030" class="wa-float" target="_blank" aria-label="WhatsApp Concierge">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-            <path
-                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
         </svg>
     </a>
 
     <script>
+        const endpoint = 'https://eliteluxurybookings.com/submit-lead.php';
+
+        async function submitLead(event) {
+            event.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const form = document.getElementById('leadForm');
+            const msg = document.getElementById('formMsg');
+            btn.innerText = 'SECURELY SENDING...';
+            btn.disabled = true;
+            const formData = new FormData(form);
+            try {
+                await fetch(endpoint, {
+                    method: 'POST',
+                    body: formData
+                });
+                window.location.href = '/thank-you.html';
+            } catch (error) {
+                console.error(error);
+                alert('Connection issue. Please connect directly with your concierge via WhatsApp.');
+            } finally {
+                btn.innerText = 'Initiate Private Consultation';
+                btn.disabled = false;
+            }
+        }
+
         function toggleMobileMenu() {
             const menu = document.getElementById('elbMobileMenu');
             const hamburger = document.getElementById('navHamburger');

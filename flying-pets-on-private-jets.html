@@ -185,9 +185,10 @@
             <ul class="nav-links">
                 <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
                 <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Yachts</a></li>
-                <li><a href="https://eliteluxurybookings.com/blog/">Blog</a></li>
-                <li><a href="https://eliteluxurybookings.com/contact/">Contact</a></li>
-            </ul>
+                <li><a href="https://eliteluxurybookings.com/blog/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Blog</a></li>
+                        
+                        
+                    </ul>
         </div>
     </nav>
 
@@ -290,7 +291,7 @@
                     <div style="width: 80px; height: 1px; background: var(--primary-gold); margin: 0 auto; opacity: 0.4;"></div>
                 </div>
 
-                <form action="https://formspree.io/f/xwvwanlj" method="POST"
+                <form id="leadForm" onsubmit="submitLead(event)"
                     style="display: flex; flex-direction: column; gap: 2.5rem;">
                     <input type="hidden" name="_redirect" value="https://eliteluxurybookings.com/thank-you.html">
                     <input type="hidden" name="_target" value="Inquiry: Pet-Friendly Jet Booking">
@@ -470,5 +471,34 @@
             document.body.style.overflow = document.body.style.overflow === 'hidden' ? '' : 'hidden';
         }
     </script>
+
+    <script>
+        const endpoint = 'https://eliteluxurybookings.com/submit-lead.php';
+        async function submitLead(event) {
+            event.preventDefault();
+            const btn = event.target.querySelector('button[type="submit"]');
+            const form = event.target;
+            const originalBtnText = btn.innerText;
+            
+            btn.innerText = 'SECURELY SENDING...';
+            btn.disabled = true;
+            
+            const formData = new FormData(form);
+            try {
+                await fetch(endpoint, {
+                    method: 'POST',
+                    body: formData
+                });
+                window.location.href = '/thank-you.html';
+            } catch (error) {
+                console.error(error);
+                alert('Connection issue. Please connect directly with your concierge via WhatsApp.');
+            } finally {
+                btn.innerText = originalBtnText;
+                btn.disabled = false;
+            }
+        }
+    </script>
+
 </body>
 </html>
