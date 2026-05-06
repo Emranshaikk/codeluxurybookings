@@ -2028,9 +2028,7 @@
                     method: 'POST',
                     body: formData
                 });
-                form.style.display = 'none';
-                msg.style.display = 'block';
-                document.getElementById('quote').scrollIntoView({ behavior: 'smooth' });
+                window.location.href = '/thank-you.html';
             } catch (error) {
                 console.error(error);
                 alert('Connection issue. Please connect directly with your concierge via WhatsApp.');
@@ -2053,8 +2051,7 @@
                     method: 'POST',
                     body: formData
                 });
-                form.style.display = 'none';
-                msg.style.display = 'block';
+                window.location.href = '/thank-you.html';
             } catch (error) {
                 console.error(error);
                 alert('Connection issue. Please connect directly with your concierge via WhatsApp.');

@@ -841,9 +841,7 @@
                     method: 'POST',
                     body: formData
                 });
-                form.style.display = 'none';
-                if (subText) subText.style.display = 'none';
-                msg.style.display = 'block';
+                window.location.href = '/thank-you.html';
             } catch (error) {
                 console.error(error);
                 alert('Connection issue. Please connect directly via WhatsApp for immediate coordination.');
