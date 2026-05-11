@@ -22,71 +22,89 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap"
         rel="stylesheet" media="all">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Schema Markup: Organization & Concierge -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Elite Luxury Bookings",
+      "alternateName": "ELB",
+      "url": "https://eliteluxurybookings.com",
+      "logo": "https://eliteluxurybookings.com/favicon.png",
+      "sameAs": [
+        "https://www.facebook.com/eliteluxurybookings",
+        "https://www.instagram.com/eliteluxurybookings",
+        "https://www.linkedin.com/company/elite-luxury-bookings/",
+        "https://x.com/eliteluxuryb"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+918801079030",
+        "contactType": "Concierge",
+        "availableLanguage": "English"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Elite Lifestyle Management",
+      "provider": {
+        "@type": "Organization",
+        "name": "Elite Luxury Bookings"
+      },
+      "areaServed": "Global",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Luxury Procurement Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Private Jet Charter"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Luxury Yacht Rental"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Exclusive Villa Rentals"
+            }
+          }
+        ]
+      }
+    }
+    </script>
 
     <style>
-        :root {
-            --primary-gold: #D4AF37;
-            --deep-black: #050505;
-            --graphene: #1A1A1A;
-            --glass-bg: rgba(255, 255, 255, 0.02);
-            --glass-border: rgba(212, 175, 55, 0.15);
-            --text-main: #FFFFFF;
-            --text-muted: rgba(255, 255, 255, 0.85);
-            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+        
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            -webkit-font-smoothing: antialiased;
-        }
+        
 
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 80px;
         }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--deep-black);
-            color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-            padding-top: 108px;
-        }
+        
 
         /* --- INTELLIGENCE TICKER --- */
-        .top-intel-bar {
-            background: rgba(5, 5, 5, 0.98);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-            height: 36px;
-            overflow: hidden;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100000;
-            display: flex;
-            align-items: center;
-        }
+        
 
-        .ticker-wrap {
-            white-space: nowrap;
-            overflow: hidden;
-            width: 100%;
-        }
+        
 
-        .ticker-content {
-            display: inline-block;
-            white-space: nowrap;
-            padding-left: 100%;
-            animation: ticker 40s linear infinite;
-            font-size: 0.72rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.9);
-        }
+        
 
         @keyframes ticker {
             0% { transform: translate3d(0, 0, 0); }
@@ -106,98 +124,19 @@
             font-weight: 600;
         }
 
-        h1,
-        h2,
-        h3,
-        .serif {
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .gold-text {
-            color: var(--primary-gold);
-        }
-
-        .glass-panel {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-        }
-
-        /* Typography Helpers */
-        .brand-statement {
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            display: block;
-        }
-
-        .trust-micro {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-top: 1.5rem;
-            display: block;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            padding: 1.2rem 2.5rem;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            text-decoration: none;
+        /* Custom Index Styles (Non-Global) */
+        .hero {
+            height: 90vh;
+            min-height: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: 15vh;
+            align-items: center;
             text-align: center;
-        }
-
-        .btn-gold {
-            background: linear-gradient(135deg, var(--primary-gold), #B8860B);
-            color: #000;
-            border: none;
-            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.15);
-        }
-
-        .btn-gold:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.25);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--primary-gold);
-            border: 1px solid var(--primary-gold);
-        }
-
-        .btn-outline:hover {
-            background: rgba(212, 175, 55, 0.1);
-        }
-
-        .btn-sm {
-            padding: 0.8rem 1.5rem;
-            font-size: 0.8rem;
-            letter-spacing: 1.5px;
-        }
-
-        .btn:active {
-            transform: scale(0.97);
-        }
-
-        .wa-float:active {
-            transform: scale(0.92);
+            position: relative;
+            margin-top: 0px;
+            overflow: hidden;
         }
 
         /* 2. STICKY CTA BAR */
@@ -704,41 +643,82 @@
             padding: 1rem;
         }
 
-        /* FOOTER */
-        .footer {
-            padding: 6rem 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            text-align: center;
-            background: #000;
-        }
-
-        .footer-brand {
+        /* ===== MASTER FOOTER ===== */
+        
+        
+        .footer-brand h2 {
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.2rem;
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.5rem;
             color: #fff;
-            letter-spacing: 1px;
         }
-
-        .footer-links {
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+            max-width: 380px;
+            margin-bottom: 2rem;
+        }
+        .footer-socials {
             display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-bottom: 3.5rem;
-            flex-wrap: wrap;
+            gap: 1.5rem;
         }
-
-        .footer-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 1.05rem;
+        .footer-socials a {
+            color: rgba(255, 255, 255, 0.6);
+            transition: 0.3s;
+            font-size: 1.5rem;
+        }
+        .footer-socials a:hover {
+            color: #D4AF37;
+        }
+        .footer-col h4 {
+            color: #D4AF37;
             text-transform: uppercase;
             letter-spacing: 2px;
-            transition: var(--transition);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
         }
-
-        .footer-links a:hover {
-            color: var(--primary-gold);
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-col ul li {
+            margin-bottom: 1rem;
+        }
+        .footer-col ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 0.95rem;
+        }
+        .footer-col ul li a:hover {
+            color: #D4AF37;
+            padding-left: 5px;
+        }
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 3rem;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.85rem;
+        }
+        .footer-legal {
+            display: flex;
+            gap: 2rem;
+        }
+        .footer-legal a {
+            color: inherit;
+            text-decoration: none;
+        }
+        @media (max-width: 992px) {
+            
+            .footer-brand { grid-column: span 2; }
+        }
+        @media (max-width: 600px) {
+            
+            .footer-brand { grid-column: span 1; }
+            .footer-bottom { flex-direction: column; gap: 2rem; text-align: center; }
         }
 
         @keyframes fadeUp {
@@ -781,12 +761,9 @@
                 font-size: 3rem;
             }
 
-            .nav-brand {
-                font-size: 1.1rem !important;
-                letter-spacing: 1px;
-            }
-            .top-intel-bar { height: 32px; }
-            .global-nav { top: 32px; }
+            
+            
+            
             body { padding-top: 100px; }
             .mobile-menu { padding-top: 100px; }
 
@@ -950,39 +927,15 @@
             }
         }
 
-        .global-nav-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 72px;
-            gap: 1rem;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+        
 
-        .nav-brand {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.75rem;
-            font-weight: 600;
-            color: #fff;
-            text-decoration: none;
-            white-space: nowrap;
-            flex-shrink: 0;
-        }
+        
 
         .nav-gold {
             color: #D4AF37;
         }
 
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-            list-style: none;
-            flex: 1;
-            justify-content: center;
-        }
+        
 
         .nav-links a {
             color: rgba(255, 255, 255, 0.85);
@@ -1127,9 +1080,7 @@
         }
 
         @media (max-width:900px) {
-            .nav-links {
-                display: none;
-            }
+            
 
             .nav-cta {
                 display: flex;
@@ -1149,51 +1100,17 @@
         }
 
         /* ELB_CSS_START        /* NAVIGATION */
-        .global-nav {
-            position: fixed;
-            top: 36px !important;
-            left: 0;
-            right: 0;
-            background: rgba(5, 5, 5, 0.98);
-            backdrop-filter: blur(24px);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-            z-index: 99999;
-        }
+        
 
-        .global-nav-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 72px;
-            gap: 1rem;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            box-sizing: border-box;
-        }
+        
 
-        .nav-brand {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.75rem;
-            font-weight: 600;
-            color: #fff !important;
-            text-decoration: none !important;
-        }
+        
 
         .nav-gold {
             color: #D4AF37 !important;
         }
 
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-            list-style: none;
-            flex: 1;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-        }
+        
 
         .nav-links a {
             color: rgba(255, 255, 255, 0.7) !important;
@@ -1301,9 +1218,7 @@
         }
 
         @media (max-width:1024px) {
-            .nav-links {
-                display: none !important;
-            }
+            
 
             .nav-hamburger {
                 display: flex !important;
@@ -1315,36 +1230,11 @@
         }
 
         /* --- STANDARD GLOBAL NAV --- */
-        .top-intel-bar {
-            background: rgba(5, 5, 5, 0.98);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-            height: 36px;
-            overflow: hidden;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100000;
-            display: flex;
-            align-items: center;
-        }
+        
 
-        .ticker-wrap {
-            white-space: nowrap;
-            overflow: hidden;
-            width: 100%;
-        }
+        
 
-        .ticker-content {
-            display: inline-block;
-            white-space: nowrap;
-            padding-left: 100%;
-            animation: ticker 40s linear infinite;
-            font-size: 0.72rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.9);
-        }
+        
 
         @keyframes ticker {
             0% { transform: translate3d(0, 0, 0); }
@@ -1367,8 +1257,8 @@
         /* ELB_CSS_END */
     
         /* ===== MASTER FOOTER (INJECTED SITE-WIDE) ===== */
-        .footer { background: #000; padding: 5rem 0 3rem; border-top: 1px solid rgba(212, 175, 55, 0.1); margin-top: 5rem; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; padding-bottom: 4rem; border-bottom: 1px solid rgba(212, 175, 55, 0.1); }
+        
+        
         .footer-brand h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; margin-bottom: 1.5rem; color: #fff; }
         .footer-brand p { color: rgba(255, 255, 255, 0.7); line-height: 1.8; max-width: 380px; margin-bottom: 2rem; }
         .footer-socials { display: flex; gap: 1.5rem; }
@@ -1382,8 +1272,8 @@
         .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 3rem; color: rgba(255, 255, 255, 0.4); font-size: 0.85rem; }
         .footer-legal { display: flex; gap: 2rem; }
         .footer-legal a { color: inherit; text-decoration: none; }
-        @media (max-width: 992px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: span 2; } }
-        @media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } .footer-brand { grid-column: span 1; } .footer-bottom { flex-direction: column; gap: 2rem; text-align: center; } }
+        @media (max-width: 992px) {  .footer-brand { grid-column: span 2; } }
+        @media (max-width: 600px) {  .footer-brand { grid-column: span 1; } .footer-bottom { flex-direction: column; gap: 2rem; text-align: center; } }
 
     </style>
 
@@ -1430,6 +1320,13 @@
         })(window, document, "clarity", "script", "sia395rirl");
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@eliteluxuryb">
+    <meta name="twitter:title" content="Elite Luxury Bookings | Private Jets, Yachts & Villas">
+    <meta name="twitter:description" content="Elite Luxury Bookings - Private Jets, Yachts & Villas">
+    <meta name="twitter:image" content="https://eliteluxurybookings.com/assets/elite_jet_master_hero.png">
 </head>
 
 <body>
@@ -1873,16 +1770,13 @@
             <a href="https://wa.me/918801079030" class="btn btn-gold" target="_blank"
                 style="padding: 1.2rem 3rem;">Speak instantly with concierge</a>
         </div>
-        </div>
-        </div>
-        </section>
 
         <!-- FINAL TRUST CLOSER -->
-        <div class="container" style="text-align: center; padding-bottom: 6rem;">
-            <p class="serif" style="color: var(--text-muted); font-size: 1.8rem; max-width: 800px; margin: 0 auto;">
-                Every request is handled discreetly, privately, and through a globally trusted network of elite
-                partners.
+        <div class="container" style="text-align: center; padding-top: 4rem;">
+            <p class="serif" style="color: var(--text-muted); font-size: 1.8rem; max-width: 800px; margin: 0 auto; opacity: 0.8;">
+                Every request is handled discreetly, privately, and through a globally trusted network of elite partners.
             </p>
+        </div>
 
     <!-- Master Footer -->
 <footer class="footer">
@@ -1892,10 +1786,10 @@
                     <h2>Elite Luxury <span class="gold-text">Bookings</span></h2>
                     <p>Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
                     <div class="footer-socials">
-                        <a href="https://www.facebook.com/eliteluxurybookings"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/eliteluxurybookings"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/elite-luxury-bookings/"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://x.com/eliteluxuryb"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/eliteluxurybookings" aria-label="Follow Elite Luxury Bookings on Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/eliteluxurybookings" aria-label="Follow Elite Luxury Bookings on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/elite-luxury-bookings/" aria-label="Follow Elite Luxury Bookings on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/eliteluxuryb" aria-label="Follow Elite Luxury Bookings on X (Twitter)"><i class="fab fa-x-twitter"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
