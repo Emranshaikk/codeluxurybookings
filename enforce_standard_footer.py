@@ -1,35 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+import os
+import re
 
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Protocol | Elite Luxury Bookings</title>
-    <meta name="description" content="The privacy and data protection protocols for Elite Luxury Bookings. Ensuring absolute discretion for all client mission intelligence.">
-    <link rel="canonical" href="https://eliteluxurybookings.com/privacy/">
-    <meta name="robots" content="noindex, follow">
-
-    <!-- Premium Typography -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-
-    <style>
-        :root {
-            --primary-gold: #D4AF37;
-            --deep-black: #050505;
-            --graphene: #111111;
-            --text-main: #FFFFFF;
-            --text-muted: rgba(255, 255, 255, 0.7);
-        }
-
-        body { background: var(--deep-black); color: var(--text-main); font-family: 'Inter', sans-serif; line-height: 1.8; padding-top: 72px; }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
-        .serif { font-family: 'Cormorant Garamond', serif; }
-        .gold-text { color: var(--primary-gold); }
-
+# Standardized Footer CSS
+FOOTER_CSS = """
         /* ===== MASTER FOOTER (INJECTED SITE-WIDE) ===== */
         .footer { background: #000; padding: 5rem 0 3rem; border-top: 1px solid rgba(212, 175, 55, 0.1); margin-top: 5rem; }
         .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; padding-bottom: 4rem; border-bottom: 1px solid rgba(212, 175, 55, 0.1); }
@@ -48,63 +21,11 @@
         .footer-legal a { color: inherit; text-decoration: none; }
         @media (max-width: 992px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: span 2; } }
         @media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } .footer-brand { grid-column: span 1; } .footer-bottom { flex-direction: column; gap: 2rem; text-align: center; } }
+"""
 
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-
-<body>
-    <nav class="global-nav">
-        <div class="global-nav-inner">
-            <a href="https://eliteluxurybookings.com/" class="nav-brand">Elite Luxury <span class="gold-text">Bookings</span></a>
-        </div>
-    </nav>
-
-    <main class="container">
-        <header>
-            <h1 class="serif">Privacy <span class="gold-text">Protocol</span></h1>
-            <p style="color: var(--text-muted); margin-top: 1rem;">Effective Date: May 2026</p>
-        </header>
-
-        <article>
-            <div class="content-section">
-                <h2>1. Commitment to Discretion</h2>
-                <p>At Elite Luxury Bookings, we understand that privacy is the ultimate luxury. This protocol outlines how we manage and protect the sensitive mission intelligence you provide during the procurement of aviation, maritime, and estate services.</p>
-            </div>
-
-            <div class="content-section">
-                <h2>2. Data Collection & Intelligence</h2>
-                <p>We only collect data essential for the safe and secure coordination of your travel requirements. This includes:</p>
-                <ul style="list-style: disc; margin-left: 2rem; color: var(--text-muted); margin-bottom: 1.5rem;">
-                    <li>Personal identification for FBO and maritime manifests.</li>
-                    <li>Secure communication details (WhatsApp, Signal, or encrypted email).</li>
-                    <li>Specific mission requirements (itineraries, security preferences, dietary needs).</li>
-                </ul>
-            </div>
-
-            <div class="content-section">
-                <h2>3. Security Standards</h2>
-                <p>All client data is encrypted and stored in secure environments. We employ industry-standard protocols to prevent unauthorized access. For high-profile individuals, we coordinate with private security teams to ensure data handling meets your specific NDA requirements.</p>
-            </div>
-
-            <div class="content-section">
-                <h2>4. Third-Party Coordination</h2>
-                <p>To execute your journey, we share essential data with vetted partners (aircraft operators, yacht owners, estate managers). These partners are bound by strict confidentiality agreements and only receive the intelligence necessary to fulfill their specific role in your mission.</p>
-            </div>
-
-            <div class="content-section">
-                <h2>5. Your Rights</h2>
-                <p>You maintain full control over your data. You may request the immediate deletion of your mission records upon completion of your travel, subject to legal and regulatory aviation requirements.</p>
-            </div>
-
-            <div class="content-section">
-                <h2>6. Contact the Protocol Officer</h2>
-                <p>For questions regarding your privacy or to request data removal, please contact our desk at: contact@eliteluxurybookings.com</p>
-            </div>
-        </article>
-    </main>
+FOOTER_HTML = """
     <!-- Master Footer -->
-<footer class="footer">
+    <footer class="footer">
         <div class="container" style="max-width: 1200px;">
             <div class="footer-grid">
                 <div class="footer-brand">
@@ -145,7 +66,10 @@
             </div>
         </div>
     </footer>
-<script>
+"""
+
+MOBILE_SCRIPT = """
+    <script>
         function toggleMobileMenu() { 
             var m = document.getElementById('elbMobileMenu'), 
                 b = document.getElementById('navHamburger'); 
@@ -156,5 +80,60 @@
             } 
         }
     </script>
-</body>
-</html>
+"""
+
+FONTAWESOME_LINK = '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">'
+
+directory = r"c:\Users\imran\OneDrive\Desktop\ELB code"
+
+for filename in os.listdir(directory):
+    if filename.endswith(".html"):
+        path = os.path.join(directory, filename)
+        with open(path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # 1. Clean up redundant CSS
+        # Remove legacy footer CSS block if it exists
+        content = re.sub(r'/\* --- STANDARDIZED FOOTER --- \*/.*?/\* --- END ELITE MOBILE NAV --- \*/', '', content, flags=re.DOTALL)
+        
+        # 2. Inject MASTER FOOTER CSS into <style> if missing
+        if "MASTER FOOTER (INJECTED SITE-WIDE)" not in content:
+            if "</style>" in content:
+                content = content.replace("</style>", FOOTER_CSS + "\n    </style>")
+        
+        # 3. Add FontAwesome if missing
+        if "font-awesome" not in content:
+            if "</head>" in content:
+                content = content.replace("</head>", f"    {FONTAWESOME_LINK}\n</head>")
+        
+        # 4. Clean up stray </div> tags and redundant comments before the footer
+        # This matches the pattern seen in the blog pages: </div> followed by comments and whitespace
+        content = re.sub(r'(</div>\s*){1,5}(<!-- Master Footer -->\s*)+', '', content, flags=re.DOTALL)
+        
+        # 5. REPLACE FOOTER
+        # Remove any existing footer
+        content = re.sub(r'<footer.*?>.*?</footer>', '', content, flags=re.DOTALL)
+        # Remove legacy hubs
+        content = re.sub(r'<!-- Elite Intelligence Hubs -->.*?</div>\s*</div>\s*</div>', '', content, flags=re.DOTALL)
+        content = re.sub(r'<div class="intel-hub-section".*?</div>\s*</div>\s*</div>', '', content, flags=re.DOTALL)
+        
+        # Additional cleanup for excessive empty lines before the footer
+        content = re.sub(r'\n\s*\n\s*\n+', '\n\n', content)
+        
+        # 6. Inject Footer and Mobile Script
+        if "</body>" in content:
+            # Remove existing mobile script if present to avoid duplicates
+            content = re.sub(r'<script>\s*function toggleMobileMenu.*?</script>', '', content, flags=re.DOTALL)
+            
+            # Place Footer and Script before </body>
+            # We use a clean block and ensure only one Master Footer comment exists
+            footer_block = f"\n    <!-- Master Footer -->\n{FOOTER_HTML.strip()}\n{MOBILE_SCRIPT.strip()}\n"
+            content = content.replace("</body>", footer_block + "</body>")
+            
+            # Final deduplication of the Master Footer comment
+            content = re.sub(r'(<!-- Master Footer -->\s*)+', '<!-- Master Footer -->\n', content)
+
+        with open(path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        print(f"Standardized {filename}")
+
