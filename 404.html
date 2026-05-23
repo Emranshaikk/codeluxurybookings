@@ -15,32 +15,23 @@
     <!-- BRAND & FAVICON -->
     <link rel="icon" type="image/png" href="/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://eliteluxurybookings.com/404/">
     <title>404 - Experience Not Found | Elite Luxury Bookings</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet">
-    <style>
-                :root {
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <style>:root {
             --primary-gold: #D4AF37;
             --deep-black: #050505;
             --graphene: #1A1A1A;
             --glass-bg: rgba(255, 255, 255, 0.02);
             --glass-border: rgba(212, 175, 55, 0.15);
             --text-main: #FFFFFF;
-            --text-muted: rgba(255, 255, 255, 0.6);
+            --text-muted: rgba(255, 255, 255, 0.85);
             --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--deep-black);
-            color: var(--text-main);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            margin: 0;
-            overflow-x: hidden;
-        }
+        
 
         .error-container {
             flex: 1;
@@ -96,11 +87,10 @@
         }
 
 /* ELB_STYLE_START */
-    .global-nav { position:fixed; top:0; left:0; right:0; background:rgba(5,5,5,0.98); backdrop-filter:blur(24px); border-bottom:1px solid rgba(212,175,55,0.2); z-index:99999; }
-    .global-nav-inner { display:flex; align-items:center; justify-content:space-between; height:72px; gap:1rem; max-width:1400px; margin:0 auto; padding:0 2rem; box-sizing: border-box; }
+
     .nav-brand { font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:600; color:#fff !important; text-decoration:none !important; }
     .nav-gold { color:#D4AF37 !important; }
-    .nav-links { display:flex; align-items:center; gap:0.25rem; list-style:none; flex:1; justify-content:center; margin:0; padding:0; }
+    
     .nav-links a { color:rgba(255,255,255,0.7) !important; text-decoration:none !important; font-size:0.82rem; text-transform:uppercase; letter-spacing:1.5px; padding:0.5rem 0.9rem; border-radius:6px; transition:all 0.4s; font-family: 'Inter', sans-serif !important; }
     .nav-links a:hover { color:#D4AF37 !important; }
     .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:0.5rem; z-index:100001; }
@@ -110,102 +100,244 @@
     .mobile-menu a { color:rgba(255,255,255,0.8) !important; text-decoration:none !important; font-size:1.1rem; text-transform:uppercase; letter-spacing:2px; padding:1.2rem 0; border-bottom:1px solid rgba(255,255,255,0.05); }
     .mobile-cta { margin-top:2rem; text-align:center; background:linear-gradient(135deg,#D4AF37,#B8860B); color:#000 !important; border-radius:8px; padding:1.2rem !important; font-weight:700; }
     @media (max-width:1024px) { .nav-links { display:none !important; } .nav-hamburger { display:flex !important; } }
-    body { padding-top: 72px !important; }
+    
 /* ELB_STYLE_END */
 
 @media (max-width: 768px) { .form-grid { grid-template-columns: 1fr !important; gap: 2rem !important; } }
     
         .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 100000; box-shadow: 0 10px 25px rgba(0,0,0,0.3); transition: all 0.3s; }
         .wa-float:hover { transform: scale(1.1); background: #128C7E; }
-</style>
+
+        /* --- ELITE NAV & TICKER STANDARDIZATION --- */
+        .top-intel-bar { background: rgba(5, 5, 5, 0.98) !important; border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important; height: 36px !important; overflow: hidden !important; position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; z-index: 100000 !important; display: flex !important; align-items: center !important; }
+        .ticker-wrap { white-space: nowrap !important; overflow: hidden !important; width: 100% !important; }
+        .ticker-content { display: inline-block !important; white-space: nowrap !important; padding-left: 100% !important; animation: ticker-scroll 40s linear infinite !important; font-size: 0.72rem !important; letter-spacing: 2px !important; text-transform: uppercase !important; color: rgba(255, 255, 255, 0.9) !important; }
+        @keyframes ticker-scroll { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-200%, 0, 0); } }
+        .ticker-content strong { color: #D4AF37 !important; margin: 0 40px !important; }
+        .ticker-content a { color: #fff !important; text-decoration: underline !important; text-underline-offset: 4px !important; margin-left: 10px !important; font-weight: 600 !important; }
+        
+        .global-nav { position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; background: rgba(5, 5, 5, 0.98) !important; backdrop-filter: blur(24px) !important; border-bottom: 1px solid rgba(212, 175, 55, 0.2) !important; z-index: 99999 !important; transition: top 0.3s ease !important; }
+        .top-intel-bar ~ .global-nav { top: 36px !important; }
+        .global-nav-inner { display: flex !important; align-items: center !important; justify-content: space-between !important; height: 72px !important; gap: 1rem !important; max-width: 1400px !important; margin: 0 auto !important; padding: 0 2rem !important; box-sizing: border-box !important; }
+        .nav-brand { font-family: 'Cormorant Garamond', serif !important; font-size: 1.75rem !important; font-weight: 600 !important; color: #fff !important; text-decoration: none !important; }
+        .nav-gold { color: #D4AF37 !important; }
+        .nav-links { display: flex !important; align-items: center !important; gap: 0.25rem !important; list-style: none !important; flex: 1 !important; justify-content: center !important; margin: 0 !important; padding: 0 !important; }
+        .nav-links a { color: rgba(255, 255, 255, 0.7) !important; text-decoration: none !important; font-size: 0.82rem !important; text-transform: uppercase !important; letter-spacing: 1.5px !important; padding: 0.5rem 0.9rem !important; border-radius: 6px !important; transition: all 0.4s !important; font-family: 'Inter', sans-serif !important; }
+        .nav-links a:hover { color: #D4AF37 !important; }
+        .nav-hamburger { display: none !important; flex-direction: column !important; gap: 5px !important; cursor: pointer !important; padding: 0.5rem !important; z-index: 100001 !important; }
+        .nav-hamburger span { display: block !important; width: 24px !important; height: 2px !important; background: rgba(255, 255, 255, 0.8) !important; border-radius: 2px !important; transition: all 0.4s !important; }
+        .nav-hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px) !important; }
+        .nav-hamburger.open span:nth-child(2) { opacity: 0 !important; }
+        .nav-hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px) !important; }
+        .mobile-menu { display: none !important; position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; background: #050505 !important; padding: 72px 2rem 2rem !important; z-index: 100000 !important; flex-direction: column !important; gap: 0.5rem !important; overflow-y: auto !important; }
+        .mobile-menu.open { display: flex !important; }
+        .mobile-menu a { color: rgba(255, 255, 255, 0.8) !important; text-decoration: none !important; font-size: 1.1rem !important; text-transform: uppercase !important; letter-spacing: 2px !important; padding: 1.2rem 0 !important; border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important; }
+        @media (max-width: 1024px) { .nav-links { display: none !important; } .nav-hamburger { display: flex !important; } }
+        
+        body { padding-top: 72px !important; }
+        body:has(.top-intel-bar) { padding-top: 108px !important; }
+        
+        @media (max-width: 768px) {
+            .top-intel-bar { height: 32px !important; }
+            .top-intel-bar ~ .global-nav { top: 32px !important; }
+            body:has(.top-intel-bar) { padding-top: 104px !important; }
+        }
+        /* --- END ELITE NAV & TICKER --- */
+
+            /* ===== MASTER FOOTER (INJECTED SITE-WIDE) ===== */
+        .footer { background: #000 !important; padding: 5rem 0 3rem !important; border-top: 1px solid rgba(212, 175, 55, 0.1) !important; margin-top: 5rem !important; text-align: left !important; }
+        .footer-grid { display: grid !important; grid-template-columns: 2fr 1fr 1fr !important; gap: 4rem !important; padding-bottom: 4rem !important; border-bottom: 1px solid rgba(212, 175, 55, 0.1) !important; text-align: left !important; }
+        .footer-brand { text-align: left !important; }
+        .footer-brand h2 { font-family: 'Cormorant Garamond', serif !important; font-size: 2.2rem !important; margin-bottom: 1.5rem !important; color: #fff !important; text-align: left !important; }
+        .footer-brand p { font-family: 'Inter', sans-serif !important; font-size: 0.9rem !important; line-height: 1.8 !important; max-width: 380px !important; margin-bottom: 2rem !important; color: rgba(255, 255, 255, 0.7) !important; text-align: left !important; }
+        .footer-socials { display: flex !important; gap: 1.5rem !important; justify-content: flex-start !important; }
+        .footer-socials a { color: rgba(255, 255, 255, 0.6) !important; transition: 0.3s !important; font-size: 1.5rem !important; }
+        .footer-socials a:hover { color: #D4AF37 !important; }
+        .footer-col { text-align: left !important; }
+        .footer-col h4 { color: #D4AF37 !important; text-transform: uppercase !important; letter-spacing: 2px !important; font-size: 0.9rem !important; margin-bottom: 2rem !important; text-align: left !important; }
+        .footer-col ul { list-style: none !important; padding: 0 !important; margin: 0 !important; text-align: left !important; }
+        .footer-col ul li { margin-bottom: 1rem !important; text-align: left !important; }
+        .footer-col ul li a { color: rgba(255, 255, 255, 0.8) !important; text-decoration: none !important; transition: 0.3s !important; font-size: 0.95rem !important; }
+        .footer-col ul li a:hover { color: #D4AF37 !important; padding-left: 5px !important; }
+        .footer-bottom { display: flex !important; justify-content: space-between !important; align-items: center !important; padding-top: 3rem !important; color: rgba(255, 255, 255, 0.4) !important; font-size: 0.85rem !important; }
+        .footer-legal { display: flex !important; gap: 2rem !important; }
+        .footer-legal a { color: inherit !important; text-decoration: none !important; }
+        @media (max-width: 992px) { 
+            .footer-grid { grid-template-columns: 1fr 1fr !important; } 
+            .footer-brand { grid-column: span 2 !important; } 
+        }
+        @media (max-width: 600px) { 
+            .footer-grid { grid-template-columns: 1fr !important; } 
+            .footer-brand { grid-column: span 1 !important; text-align: center !important; } 
+            .footer-brand h2 { text-align: center !important; }
+            .footer-brand p { text-align: center !important; margin: 0 auto 2rem auto !important; }
+            .footer-socials { justify-content: center !important; }
+            .footer-col { text-align: center !important; }
+            .footer-col h4 { text-align: center !important; }
+            .footer-col ul { text-align: center !important; }
+            .footer-col ul li { text-align: center !important; }
+            .footer-bottom { flex-direction: column !important; gap: 2rem !important; text-align: center !important; } 
+        }
+    </style>
+    <link rel="preload" href="/style.css" as="style">
     <link rel="stylesheet" href="/style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Elite Luxury Bookings",
+      "url": "https://eliteluxurybookings.com",
+      "logo": "https://eliteluxurybookings.com/favicon.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+918801079030",
+        "contactType": "Concierge Customer Service",
+        "availableLanguage": "English"
+      }
+    }
+    </script>
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="404 - Experience Not Found | Elite Luxury Bookings">
+    <meta property="og:description" content="We curate world-class luxury experiences: Private Jets, Luxury Yachts, and Exclusive Villas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eliteluxurybookings.com/404/">
+    <meta property="og:image" content="https://eliteluxurybookings.com/assets/elite_jet_master_hero.png">
+    <meta property="og:site_name" content="Elite Luxury Bookings">
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "sia395rirl");
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@eliteluxuryb">
+    <meta name="twitter:title" content="404 - Experience Not Found | Elite Luxury Bookings">
+    <meta name="twitter:description" content="Elite Luxury Bookings - Private Jets, Yachts & Villas">
+    <meta name="twitter:image" content="https://eliteluxurybookings.com/assets/elite_jet_master_hero.png">
 </head>
 
 <body>
-    <!-- ELB_NAV_START -->
+        <!-- ELB_NAV_START -->
     <nav class="global-nav">
         <div class="container global-nav-inner">
-            <a href="/" class="nav-brand">Elite Luxury <span class="nav-gold">Bookings</span></a>
+            <a href="https://eliteluxurybookings.com/" class="nav-brand">Elite Luxury <span class="nav-gold">Bookings</span></a>
             <ul class="nav-links">
-                <li><a href="/elite-private-jet-charter.html">Private Jets</a></li>
-                <li><a href="/luxury-yacht-rentals.html">Yachts</a></li>
-                <li><a href="/luxury-villa-rentals.html">Villas</a></li>
-                <li><a href="/blog.html">Blog</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-            </ul>
-            
+                <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
+                <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Yachts</a></li>
+                <li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/">Villas</a></li>
+                <li><a href="https://eliteluxurybookings.com/blog/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Blog</a></li>
+                <li><a href="https://eliteluxurybookings.com/contact/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Contact</a></li>
+
+                    </ul>
             <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></div>
         </div>
     </nav>
     <div class="mobile-menu" id="elbMobileMenu">
-        <a href="/elite-private-jet-charter.html">✈ Private Jets</a>
-        <a href="/luxury-villa-rentals.html">🏡 Luxury Villas</a>
-        <a href="/luxury-yacht-rentals.html">⚓ Luxury Yachts</a>
-        <a href="/blog.html">📰 Blog</a>
-        <a href="/contact.html">📞 Contact</a>
-        
+        <a href="https://eliteluxurybookings.com/elite-private-jet-charter/">✈ Private Jets</a>
+        <a href="https://eliteluxurybookings.com/luxury-villa-rentals/">🏡 Luxury Villas</a>
+        <a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">⚓ Luxury Yachts</a>
+        <a href="https://eliteluxurybookings.com/blog/">📰 Blog</a>
+        <a href="https://eliteluxurybookings.com/contact/">📞 Contact</a>
     </div>
     <!-- ELB_NAV_END -->
 
+    <main>
+
     <main class="error-container">
         <div class="error-content">
-            <h1>404</h1>
-            <h2>Destination Unknown</h2>
-            <p>The exclusive experience you are looking for has moved or does not exist. Our concierge is ready to guide you back.</p>
-            <a href="/" class="btn">Return to Homepage</a>
+            <h1 class="serif" style="margin-bottom: 1rem;">404</h1>
+            <h2 class="serif">Mission Disruption</h2>
+            <p style="max-width: 600px; margin-left: auto; margin-right: auto; margin-bottom: 4rem;">The coordinates you followed do not exist within our current intelligence network. Our concierge is ready to guide you back to an elite destination.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; margin-bottom: 4rem; text-align: left;">
+                <a href="https://eliteluxurybookings.com/elite-private-jet-charter/" style="text-decoration: none; color: inherit;">
+                    <div class="glass-panel" style="padding: 2.5rem; border: 1px solid rgba(212,175,55,0.1); border-radius: 20px; transition: var(--transition); height: 100%;">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">✈️</div>
+                        <h4 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 0.5rem;">Private Jets</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0;">Global mission procurement and 2026 price estimates.</p>
+                    </div>
+                </a>
+                <a href="https://eliteluxurybookings.com/luxury-yacht-rentals/" style="text-decoration: none; color: inherit;">
+                    <div class="glass-panel" style="padding: 2.5rem; border: 1px solid rgba(212,175,55,0.1); border-radius: 20px; transition: var(--transition); height: 100%;">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">⚓</div>
+                        <h4 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 0.5rem;">Luxury Yachts</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0;">Exclusive maritime charters across all major basins.</p>
+                    </div>
+                </a>
+                <a href="https://eliteluxurybookings.com/luxury-villa-rentals/" style="text-decoration: none; color: inherit;">
+                    <div class="glass-panel" style="padding: 2.5rem; border: 1px solid rgba(212,175,55,0.1); border-radius: 20px; transition: var(--transition); height: 100%;">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🏡</div>
+                        <h4 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 0.5rem;">Luxury Villas</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0;">Off-market private estates and full-service residential teams.</p>
+                    </div>
+                </a>
+            </div>
+
+            <a href="https://eliteluxurybookings.com/" class="btn" style="border-radius: 50px; padding: 1.2rem 3.5rem;">Return to Command Center</a>
         </div>
     </main>
 
-<!-- ELB_FOOTER_START -->
-        <footer style="background:#000; border-top:1px solid rgba(255,255,255,0.05); padding:6rem 0;">
-        <div class="container">
-            <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:4rem; padding-bottom:3rem; border-bottom:1px solid rgba(212,175,55,0.1); text-align:left;">
-                <div style="flex:1; min-width:280px; margin-bottom:2rem;">
-                    <div style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; color:#fff; margin-bottom:1rem; line-height:1.2;">Elite Luxury <span style="color:#D4AF37;">Bookings</span></div>
-                    <p style="color:rgba(255,255,255,0.5); font-size:0.95rem; line-height:1.8; max-width:300px;">Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
+</main>
+    <!-- Master Footer -->
+<footer class="footer">
+        <div class="container" style="max-width: 1200px;">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>Elite Luxury <span class="gold-text">Bookings</span></h2>
+                    <p>Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com/eliteluxurybookings" aria-label="Follow Elite Luxury Bookings on Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/eliteluxurybookings" aria-label="Follow Elite Luxury Bookings on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/elite-luxury-bookings/" aria-label="Follow Elite Luxury Bookings on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/eliteluxuryb" aria-label="Follow Elite Luxury Bookings on X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                    </div>
                 </div>
-                <div style="min-width:160px; margin-bottom:2rem;">
-                    <div style="font-size:0.8rem; text-transform:uppercase; letter-spacing:2.5px; color:#D4AF37; margin-bottom:1.5rem; font-weight:700;">Services</div>
-                    <ul style="list-style:none; display:flex; flex-direction:column; gap:1rem; padding:0; margin:0;">
-                        <li><a href="/elite-private-jet-charter.html" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Private Jets</a></li>
-                        <li><a href="/luxury-yacht-rentals.html" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Luxury Yachts</a></li>
-                        <li><a href="/luxury-villa-rentals.html" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Luxury Villas</a></li>
-                        <li><a href="/blog.html" style="color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Blog</a></li>
+                <div class="footer-col">
+                    <h4>SERVICES</h4>
+                    <ul>
+                        <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
+                        <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Luxury Yachts</a></li>
+                        <li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/">Luxury Villas</a></li>
+                        <li><a href="https://eliteluxurybookings.com/global-route-silo/">Route Directory</a></li>
+                        <li><a href="https://eliteluxurybookings.com/blog/">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>AUTHORITY</h4>
+                    <ul>
+                        <li><a href="https://eliteluxurybookings.com/about/">The Mission</a></li>
+                        <li><a href="https://eliteluxurybookings.com/privacy/">Privacy Protocol</a></li>
+                        <li><a href="https://eliteluxurybookings.com/terms/">Terms of Engagement</a></li>
+                        <li><a href="https://eliteluxurybookings.com/contact/">Connect</a></li>
                     </ul>
                 </div>
             </div>
-            <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; padding-top:3rem; gap:1.5rem;">
-                <p style="color:rgba(255,255,255,0.35); font-size:0.85rem; letter-spacing:0.5px;">&copy; 2026 Elite Luxury Bookings. All rights reserved. Global Concierge Service.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Elite Luxury Bookings. All rights reserved. Global Authority in Luxury Procurement.</p>
+                <div class="footer-legal">
+                    <a href="https://eliteluxurybookings.com/privacy/">Privacy</a>
+                    <a href="https://eliteluxurybookings.com/terms/">Terms</a>
+                </div>
             </div>
         </div>
     </footer>
-<!-- ELB_FOOTER_END -->
 
-<!-- ELB_JS_START -->
-    <script>function toggleMobileMenu(){var m=document.getElementById('elbMobileMenu'),b=document.getElementById('navHamburger');if(m&&b){m.classList.toggle('open');b.classList.toggle('open');}}</script>
-<!-- ELB_JS_END -->
-
-<!-- FLOATING WHATSAPP -->
-    <a href="https://wa.me/918801079030" class="wa-float" target="_blank" aria-label="WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
-        </svg>
-    </a>
+<script>
+        function toggleMobileMenu() { 
+            var m = document.getElementById('elbMobileMenu'), 
+                b = document.getElementById('navHamburger'); 
+            if (m && b) { 
+                m.classList.toggle('open'); 
+                b.classList.toggle('open'); 
+                document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
+            } 
+        }
+    </script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

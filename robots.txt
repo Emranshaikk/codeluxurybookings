@@ -1,5 +1,17 @@
 User-agent: *
 Allow: /
+Crawl-delay: 1
 
-# Sitemap Location
+# Block scraper bots (protect high-value content)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# Allow Google's AI for rich results (recommended for E-E-A-T)
+User-agent: Google-Extended
+Allow: /
+
+# Sitemap
 Sitemap: https://eliteluxurybookings.com/sitemap.xml
