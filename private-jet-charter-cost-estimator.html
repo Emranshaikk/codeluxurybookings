@@ -2,26 +2,18 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J56D1LJLFM"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-J56D1LJLFM');
-    </script>
-
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J56D1LJLFM"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-J56D1LJLFM');
+</script>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Private Jet Charter Cost Estimator & Price Guide | Elite Luxury Bookings</title>
-    <meta name="description"
-        content="How much does a private jet charter cost? Our comprehensive 2026 estimator breaks down hourly rates for Light, Midsize, and Heavy jets, plus hidden fees.">
-    <link rel="canonical" href="https://eliteluxurybookings.com/private-jet-charter-cost-estimator/">
-    <!-- SEO Enhancements -->
-    <meta name="keywords" content="private jet charter cost per hour, how much to rent a private jet, private jet price guide, empty leg flights cost, private plane charter rates">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="publisher" href="https://eliteluxurybookings.com/">
+    <title>Private Jet Charter Cost Estimator 2026 | Elite Luxury Bookings</title>
+    <meta name="description" content="Calculate your private jet charter costs instantly. Estimate pricing for light, midsize, and heavy jets with our 2026 procurement tool.">
     
     <!-- FAQ Schema -->
     <script type="application/ld+json">
@@ -278,13 +270,206 @@
     </script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        .estimator-hero {
+            padding: 8rem 0 4rem;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.05) 0%, #050505 100%);
+        }
+
+        .estimator-container {
+            max-width: 1000px;
+            margin: -4rem auto 6rem;
+            padding: 3rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .estimator-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        @media (max-width: 850px) {
+            .estimator-grid { grid-template-columns: 1fr; }
+        }
+
+        .input-group {
+            margin-bottom: 2.5rem;
+        }
+
+        .input-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .input-label span:last-child {
+            color: var(--primary-gold);
+            font-weight: 600;
+        }
+
+        /* Custom Range Slider */
+        input[type="range"] {
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            appearance: none;
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-gold);
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+            transition: 0.3s;
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+        }
+
+        /* Aircraft Selection */
+        .aircraft-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .aircraft-option {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            padding: 1.2rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .aircraft-option:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .aircraft-option.active {
+            border-color: var(--primary-gold);
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        .aircraft-option i {
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+            display: block;
+            color: var(--primary-gold);
+        }
+
+        .aircraft-option span {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+        }
+
+        /* Result Panel */
+        .result-panel {
+            background: linear-gradient(145deg, rgba(212, 175, 55, 0.08), rgba(255, 255, 255, 0.02));
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .result-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4rem;
+            color: #fff;
+            margin: 1rem 0;
+            line-height: 1;
+        }
+
+        .result-currency {
+            font-size: 1.5rem;
+            vertical-align: super;
+            margin-right: 5px;
+            color: var(--primary-gold);
+        }
+
+        .result-disclaimer {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            max-width: 300px;
+        }
+
+        .inquiry-btn {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .feature-list {
+            margin-top: 2rem;
+            text-align: left;
+            width: 100%;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.8rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .feature-item i {
+            color: var(--primary-gold);
+            font-size: 0.7rem;
+        }
+    </style>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "sia395rirl");
+</script>
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@eliteluxuryb">
+    <meta name="twitter:title" content="Private Jet Charter Cost Estimator 2026 | Elite Luxury Bookings">
+    <meta name="twitter:description" content="Calculate your private jet charter costs instantly. Estimate pricing for light, midsize, and heavy jets with our 2026 procurement tool.">
+    <meta name="twitter:image" content="https://eliteluxurybookings.com/assets/elite_jet_master_hero.png">
+    <meta property="og:image" content="https://eliteluxurybookings.com/assets/elite_jet_master_hero.png">
+    <link rel="canonical" href="https://eliteluxurybookings.com/private-jet-charter-cost-estimator/">
+    <meta property="og:title" content="Private Jet Charter Cost Estimator 2026 | Elite Luxury Bookings">
+    <meta property="og:description" content="Calculate your private jet charter costs instantly. Estimate pricing for light, midsize, and heavy jets with our 2026 procurement tool.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eliteluxurybookings.com/private-jet-charter-cost-estimator/">
+    <meta property="og:image" content="https://eliteluxurybookings.com/assets/elite_jet_master_hero.png">
+    <meta property="og:site_name" content="Elite Luxury Bookings">
 </head>
 
 <body>
-
+    <!-- Standard Nav -->
     <nav class="global-nav">
         <div class="global-nav-inner">
-            <a href="https://eliteluxurybookings.com/" class="nav-brand">Elite Luxury <span class="gold-text">Bookings</span></a>
+            <a href="/" class="nav-brand">ELITE<span class="nav-gold">LUXURY</span></a>
             <ul class="nav-links">
                 <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
                 <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Yachts</a></li>
@@ -295,245 +480,92 @@
         </div>
     </nav>
 
-    <div class="container" style="padding: 2rem 0; font-size: 0.8rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px;">
-        <a href="https://eliteluxurybookings.com/" style="color: #d4af37; text-decoration: none;">Home</a> / 
-        <a href="https://eliteluxurybookings.com/private-jet-booking-guide/" style="color: #d4af37; text-decoration: none;">Private Jets</a> / 
-        <span style="color: rgba(255,255,255,0.6);">Private Jet Charter Cost Estimator & Price Guide</span>
-    </div>
-
-    <!-- WhatsApp Floating CTA button strictly retained from Route Pages -->
-    <a href="https://wa.me/918801079030" class="wa-float" target="_blank">
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16.05 2.1C8.25 2.1 1.95 8.4 1.95 16.2c0 2.55.6 5.1 1.95 7.35L1.95 30l6.75-1.8c2.1 1.2 4.65 1.95 7.35 1.95 7.8 0 14.1-6.3 14.1-14.1C30.15 8.4 23.85 2.1 16.05 2.1zm0 25.65c-2.1 0-4.2-.6-6-1.65l-.45-.3-4.5 1.2 1.2-4.35-.3-.45c-1.2-1.95-1.95-4.2-1.95-6.45 0-6.6 5.4-12 12-12s12 5.4 12 12c0 6.6-5.4 12-12 12zm6.6-8.85c-.3-.15-2.1-1.05-2.4-1.2-.3-.15-.45-.15-.6.15s-1.05 1.2-1.2 1.5c-.15.3-.45.3-.75.15-2.1-.9-3.6-2.1-4.95-4.2-.15-.3 0-.45.15-.6.15-.15.3-.3.45-.45.15-.15.15-.3.3-.45.15-.3 0-.6-.15-.75-.15-.15-.75-1.8-1.05-2.55-.3-.75-.6-.6-.75-.6h-.6c-.3 0-.75.15-1.05.45-.45.45-1.5 1.5-1.5 3.6 0 2.1 1.65 4.2 1.8 4.5.15.15 3.15 4.8 7.5 6.6 1.05.45 1.95.75 2.55.9.15 0 .3.15.6.15.75.15 2.25-.9 2.55-1.8.3-.9.3-1.65.15-1.8z" fill-rule="evenodd"></path>
-        </svg>
-    </a>
+    <header class="estimator-hero">
+        <div class="container">
+            <span class="brand-statement">Procurement Intelligence</span>
+            <h1 class="serif">Private Jet Cost Estimator</h1>
+            <p class="hero-subheadline" style="margin: 1.5rem auto;">Institutional-grade pricing estimates for the 2026 global charter market.</p>
+        </div>
+    </header>
 
     <main class="container">
-        <header class="blog-header">
-            <div class="blog-meta">Aviation Authority • 2026 Edition</div>
-            <h1><span class="gold-text">Private Jet Charter</span> Cost Estimator</h1>
-            <div class="article-meta-data">
-                <span>Last Updated: May 2026</span>
-                <span>•</span>
-                <span>Estimated Read Time: 8 min</span>
-            </div>
-            
-            <div class="hero-image-container">
-                <img src="/assets/images/jet-cost-estimator-hero.png" alt="High-end private jet flight planning interface" class="blog-hero-img">
-            </div>
-        </header>
+        <div class="estimator-container glass-panel">
+            <div class="estimator-grid">
+                <!-- Inputs -->
+                <div class="estimator-inputs">
+                    <div class="input-group">
+                        <div class="input-label">
+                            <span>Flight Duration</span>
+                            <span id="hours-display">4 Hours</span>
+                        </div>
+                        <input type="range" id="hours-range" min="1" max="15" value="4" step="0.5">
+                    </div>
 
-        <article class="blog-content">
-            <div class="snippet-box">
-                <h4>Featured Snippet: How Much is a Private Jet Per Hour?</h4>
-                <p>The cost to charter a private jet depends heavily on the aircraft class. In 2026, expect to pay approximately <strong>$2,500 - $3,500 per hour</strong> for a Light Jet (e.g., Phenom 300), <strong>$4,500 - $6,000 per hour</strong> for a Midsize Jet (e.g., Citation Latitude), and <strong>$8,000 - $14,000+ per hour</strong> for a Heavy/Ultra-Long-Range Jet (e.g., Gulfstream G650). Prices exclude repositioning fees, landing taxes, and overnight crew costs.</p>
-            </div>
+                    <div class="input-group">
+                        <div class="input-label">
+                            <span>Passenger Count</span>
+                            <span id="pax-display">4 PAX</span>
+                        </div>
+                        <input type="range" id="pax-range" min="1" max="18" value="4">
+                    </div>
 
-            <p>Unlike booking a first-class ticket on a commercial airline, chartering a private jet does not come with a static price tag. The final invoice for a private flight is a dynamic equation factoring in the aircraft's hourly rate, the distance flown, the time it spends idling on the tarmac, and the fees charged by the specific airports you utilize.</p>
-
-            <p>For high-net-worth individuals and corporate executives, understanding these cost metrics is vital to optimizing aviation budgets and selecting the correct aircraft for the mission.</p>
-            
-            <p>This ultimate 2026 Private Jet Charter Cost Guide breaks down exactly what you are paying for, category by category, so you can estimate the exact cost of your next flight.</p>
-
-            <div class="toc-box">
-                <h3>Executive Briefing: Table of Contents</h3>
-                <ul class="toc-list">
-                    <li><a href="#hourly-rates">1. Average Hourly Rates by Jet Class</a></li>
-                    <li><a href="#hidden-fees">2. Hidden Fees: What the Hourly Rate Doesn't Cover</a></li>
-                    <li><a href="#empty-legs">3. The Exception: Empty Leg Flights</a></li>
-                    <li><a href="#cost-examples">4. Real-World Route Cost Examples</a></li>
-                    <li><a href="#booking">5. How to Secure the Best Rates</a></li>
-                </ul>
-            </div>
-
-            <h2 id="hourly-rates">1. Average Hourly Rates by Jet Class</h2>
-            <p>The foundation of any private jet quote is the base hourly rate of the aircraft. This rate primarily covers the mechanical depreciation, maintenance, and basic operation of the specific plane.</p>
-
-            <ul class="luxury-list">
-                <li><strong>Turboprops (e.g., Pilatus PC-12):</strong> $1,500 - $2,500 per hour. Perfect for short regional hops (1-2 hours) into airports with very short runways. They seat 6-8 passengers.</li>
-                <li><strong>Light Jets (e.g., Phenom 300, Citation CJ4):</strong> $2,500 - $3,500 per hour. The workhorses of private aviation. Ideal for 2-3 hour flights with 6-7 passengers. Limited luggage capacity and usually no flight attendant.</li>
-                <li><strong>Midsize & Super-Midsize Jets (e.g., Citation Latitude, Challenger 350):</strong> $4,500 - $7,000 per hour. These offer stand-up cabins, greater luggage capacity, coast-to-coast range, and a dedicated flight attendant. Seats up to 9 passengers.</li>
-                <li><strong>Heavy & Ultra-Long-Range Jets (e.g., Gulfstream G650, Global 7500):</strong> $8,000 - $14,000+ per hour. The pinnacle of luxury aviation. These jets feature multiple cabin zones, full galleys, beds, and intercontinental range (e.g., London to Los Angeles direct). Seats 12-16 passengers.</li>
-            </ul>
-
-            <img src="/assets/images/jet-interior-champagne.png" alt="Interior of a heavy private jet showing a full dining table and luxurious leather seats" style="width: 100%; border-radius: 20px; margin: 3rem 0; box-shadow: 0 15px 35px rgba(0,0,0,0.4); border: 1px solid var(--glass-border);">
-
-            <h2 id="hidden-fees">2. Hidden Fees: What the Hourly Rate Doesn't Cover</h2>
-            <p>A common misconception is multiplying the flight time by the hourly rate and assuming that is the final price. A professional charter quote will also include the following variables:</p>
-
-            <p><strong>Repositioning Fees:</strong> If the jet is currently sitting in Miami, but you need to depart from Aspen, you must pay the hourly rate for the jet to fly "empty" from Miami to Aspen to pick you up.</p>
-            <p><strong>Landing and Handling Fees:</strong> Every airport charges a fee to land, which is usually based on the weight of the aircraft. Furthermore, the FBO (Fixed Base Operator - the private terminal) charges a handling fee to park the jet and manage your luggage. Landing a Gulfstream at London Heathrow is significantly more expensive than landing a Light Jet at a regional airfield.</p>
-            <p><strong>Crew Overnight Fees:</strong> If you are flying somewhere for a 3-day weekend and keeping the plane waiting for you, you must pay for the pilots' and flight attendant's hotel, meals, and per-diem for those three days.</p>
-            <p><strong>Federal Excise Tax (FET) & Segment Fees:</strong> For domestic flights within the United States, there is a mandatory 7.5% Federal Excise Tax applied to the entire charter invoice.</p>
-
-            <h2 id="empty-legs">3. The Exception: Empty Leg Flights</h2>
-            <p>If you want to fly private but are highly flexible on dates and times, <strong>Empty Leg Flights</strong> offer massive discounts—sometimes up to 75% off the standard charter rate.</p>
-            <p>An empty leg occurs when a jet is booked for a one-way flight and needs to return to its home base (or its next pickup location) empty. To mitigate the loss, operators will sell this repositioning flight at a drastically reduced cost. The catch? If the original client cancels their flight, your empty leg flight is automatically canceled as well.</p>
-
-            <h2 id="cost-examples">4. Real-World Route Cost Examples</h2>
-            <p>To put this into perspective, here are estimated costs for popular high-net-worth routes in 2026:</p>
-            <ul class="luxury-list">
-                <li><strong>London to Paris (Light Jet):</strong> Approx. $7,000 - $9,000</li>
-                <li><strong>New York to Miami (Midsize Jet):</strong> Approx. $18,000 - $24,000</li>
-                <li><strong>Los Angeles to Las Vegas (Light Jet):</strong> Approx. $8,000 - $11,000</li>
-                <li><strong>Dubai to London (Heavy Jet):</strong> Approx. $85,000 - $110,000</li>
-            </ul>
-
-            <h2 id="booking">5. How to Secure the Best Rates</h2>
-            <p>The private aviation market is highly fragmented. To secure the best aircraft at the best price, you need an aviation concierge who has access to the "off-market" fleet. Do not rely on algorithms to book a $50,000 flight. Rely on vetted human expertise.</p>
-
-            <!-- Exact Lead Form Lifted from Route Pages -->
-            <div class="glass-panel"
-                style="padding: 4rem; border: 1px solid var(--glass-border); background: rgba(10, 10, 10, 0.9); border-radius: 30px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); margin: 5rem auto; max-width: 900px;">
-                <div style="text-align: center; margin-bottom: 3rem;">
-                    <h2 class="serif gold-text" style="font-size: 3rem; margin-bottom: 1rem; border:none; padding:0; margin-top:0;">
-                        Request Private Proposal</h2>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 2rem;">
-                        Discreet & Confidential Aviation Dispatch</p>
-                    <div style="width: 80px; height: 1px; background: var(--primary-gold); margin: 0 auto; opacity: 0.4;"></div>
+                    <div class="input-group">
+                        <div class="input-label">
+                            <span>Aircraft Category</span>
+                        </div>
+                        <div class="aircraft-grid">
+                            <div class="aircraft-option active" data-rate="3500" data-cat="Light Jet">
+                                <i class="fas fa-plane"></i>
+                                <span>Light Jet</span>
+                            </div>
+                            <div class="aircraft-option" data-rate="5800" data-cat="Midsize Jet">
+                                <i class="fas fa-plane-departure"></i>
+                                <span>Midsize</span>
+                            </div>
+                            <div class="aircraft-option" data-rate="12500" data-cat="Heavy Jet">
+                                <i class="fas fa-plane-arrival"></i>
+                                <span>Heavy Jet</span>
+                            </div>
+                            <div class="aircraft-option" data-rate="19000" data-cat="Ultra Long Range">
+                                <i class="fas fa-globe"></i>
+                                <span>Ultra Range</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <form id="leadForm" onsubmit="submitLead(event)"
-                    style="display: flex; flex-direction: column; gap: 2.5rem;">
-                    <input type="hidden" name="_redirect" value="https://eliteluxurybookings.com/thank-you.html">
-                    <input type="hidden" name="_target" value="Inquiry: Private Jet Cost Estimator Blog Post">
-                    
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;" class="form-grid">
-                        <div style="display: flex; flex-direction: column; gap: 0.8rem;">
-                            <label for="name" style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold);">Full Name *</label>
-                            <input id="name" type="text" name="name" required placeholder="John Doe" style="background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 1.2rem 0; color: #fff; font-size: 1.15rem; outline: none; font-family: 'Inter', sans-serif;">
-                        </div>
-                        <div style="display: flex; flex-direction: column; gap: 0.8rem;">
-                            <label for="phone" style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold);">WhatsApp / Phone *</label>
-                            <input id="phone" type="tel" name="phone" required placeholder="+1 234 567 8900" style="background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 1.2rem 0; color: #fff; font-size: 1.15rem; outline: none; font-family: 'Inter', sans-serif;">
-                        </div>
+                <!-- Results -->
+                <div class="result-panel">
+                    <span class="brand-statement">Estimated Investment</span>
+                    <div class="result-value">
+                        <span class="result-currency">$</span><span id="total-price">14,000</span>
                     </div>
+                    <p class="result-disclaimer">Estimates include base charter, fuel surcharges, and landing fees. Excludes gourmet catering and de-icing.</p>
                     
-                    <div style="display: flex; flex-direction: column; gap: 0.8rem;">
-                        <label for="email" style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold);">Private Email *</label>
-                        <input id="email" type="email" name="email" required placeholder="client@exclusive.com" style="background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 1.2rem 0; color: #fff; font-size: 1.15rem; outline: none; font-family: 'Inter', sans-serif;">
-                    </div>
+                    <a href="https://wa.me/447597513364?text=I%20would%20like%20a%20formal%20quote%20for%20a%20flight." class="btn btn-gold inquiry-btn">
+                        <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> Start Private Protocol
+                    </a>
                     
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;" class="form-grid">
-                        <div style="display: flex; flex-direction: column; gap: 0.8rem;">
-                            <label for="departure" style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold);">Departure City *</label>
-                            <input id="departure" type="text" name="departure" required placeholder="Origin City" style="background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 1.2rem 0; color: #fff; font-size: 1.15rem; outline: none; font-family: 'Inter', sans-serif;">
-                        </div>
-                        <div style="display: flex; flex-direction: column; gap: 0.8rem;">
-                            <label for="destination" style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold);">Destination City *</label>
-                            <input id="destination" type="text" name="destination" required placeholder="Arrival City" style="background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 1.2rem 0; color: #fff; font-size: 1.15rem; outline: none; font-family: 'Inter', sans-serif;">
-                        </div>
+                    <div class="feature-list">
+                        <div class="feature-item"><i class="fas fa-check"></i> VIP FBO Access Included</div>
+                        <div class="feature-item"><i class="fas fa-check"></i> Pet-Friendly Options Available</div>
+                        <div class="feature-item"><i class="fas fa-check"></i> 2026 Fleet Availability</div>
                     </div>
-                    
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <label for="requirements" style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold);">Aviation & Mission Requirements</label>
-                        <textarea id="requirements" name="requirements" rows="3" placeholder="Flight date, passenger count, or aircraft preference..." style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); padding: 1.5rem; color: #fff; font-size: 1.1rem; outline: none; border-radius: 12px; resize: none; font-family: 'Inter', sans-serif;"></textarea>
-                    </div>
-                    
-                    <div style="text-align: center; margin-top: 1rem;">
-                        <button type="submit" class="btn btn-gold" style="width: 100%; padding: 1.5rem; font-size: 1.1rem; border-radius: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 4px; border: none; cursor: pointer;">Secure Private Proposal</button>
-                    </div>
-                </form>
-            </div>
-            <!-- End Form -->
-
-            <div class="author-bio-box">
-                <div class="author-avatar">
-                    <img src="/assets/images/captain_alexander_voss_bio.png" alt="Captain Alexander Voss" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%);">
-                </div>
-                <div class="author-info">
-                    <h4>Captain Alexander Voss</h4>
-                    <p>Senior Aviation Strategy Consultant at Elite Luxury Bookings. With over 15 years in private aviation logistics, Alexander specializes in fleet economics and ultra-long-range mission planning.</p>
                 </div>
             </div>
-
-            <h2 id="faq" style="text-align: center; margin-bottom: 3rem; border:none;">Frequently Asked Questions</h2>
-            
-            <div class="faq-item">
-                <h4>What is the average hourly rate for a private jet charter in 2026?</h4>
-                <p>Hourly rates vary by aircraft class: Light Jets typically range from $3,500 to $5,500, Midsize Jets from $6,000 to $9,000, and Heavy Jets from $12,000 to over $20,000 per billable hour.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h4>What are the most common hidden fees in jet chartering?</h4>
-                <p>Common additional costs include landing fees, de-icing (in winter), repositioning fees (ferry time), and high-end concierge catering. Elite Luxury Bookings provides transparent quotes that include these variables.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h4>How does the jet class affect the total charter price?</h4>
-                <p>Jet class is the primary price driver. A Heavy Jet has significantly higher fuel burn, crew requirements, and maintenance overhead than a Light Jet, often resulting in a 3x price difference for the same route.</p>
-            </div>
-
-        </article>
+        </div>
     </main>
 
-        <section class="section-padding" style="background: rgba(212, 175, 55, 0.05); border-top: 1px solid var(--glass-border);">
-            <div class="container">
-                <h2 class="serif gold-text" style="font-size: 2.5rem; text-align: center; margin-bottom: 3rem; border: none;">Aviation Authority & Guides</h2>
-                <div class="grid-3">
-                    <a href="https://eliteluxurybookings.com/private-jet-charter-cost-estimator/" style="text-decoration: none; color: inherit;">
-                        <div class="glass-panel" style="padding: 2rem; height: 100%; transition: var(--transition); border-color: rgba(212,175,55,0.1);">
-                            <h4 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 1rem;">2026 Price Estimator</h4>
-                            <p style="font-size: 0.9rem; color: var(--text-muted);">A comprehensive breakdown of hourly rates and hidden fees for all jet classes.</p>
-                        </div>
-                    </a>
-                    <a href="https://eliteluxurybookings.com/heavy-jet-vs-light-jet-charter/" style="text-decoration: none; color: inherit;">
-                        <div class="glass-panel" style="padding: 2rem; height: 100%; transition: var(--transition); border-color: rgba(212,175,55,0.1);">
-                            <h4 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 1rem;">Jet Class Comparison</h4>
-                            <p style="font-size: 0.9rem; color: var(--text-muted);">Deciding between a Heavy Jet and a Light Jet for your next mission.</p>
-                        </div>
-                    </a>
-                    <a href="https://eliteluxurybookings.com/empty-leg-flights-guide/" style="text-decoration: none; color: inherit;">
-                        <div class="glass-panel" style="padding: 2rem; height: 100%; transition: var(--transition); border-color: rgba(212,175,55,0.1);">
-                            <h4 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 1rem;">Empty Leg Mastery</h4>
-                            <p style="font-size: 0.9rem; color: var(--text-muted);">How to secure luxury repositioning flights at up to 75% discount.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-padding" style="border-top: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.5);">
-            <div class="container">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
-                    <div>
-                        <h2 class="serif" style="font-size: 2rem; margin-bottom: 1.5rem; border: none;">Aviation <span class="gold-text">Authority Hub</span></h2>
-                        <p style="color: rgba(255,255,255,0.6); margin-bottom: 2rem;">Elite Luxury Bookings operates a global network of executive flight corridors. Explore our authority guides for more insights.</p>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 1rem;"><a href="https://eliteluxurybookings.com/private-jet-charter-cost-estimator/" style="color: #d4af37; text-decoration: none; font-weight: 600;">💰 2026 Private Jet Cost Estimator</a></li>
-                            <li style="margin-bottom: 1rem;"><a href="https://eliteluxurybookings.com/heavy-jet-vs-light-jet-charter/" style="color: #d4af37; text-decoration: none; font-weight: 600;">✈️ Heavy vs Light Jet Comparison</a></li>
-                            <li style="margin-bottom: 1rem;"><a href="https://eliteluxurybookings.com/empty-leg-flights-guide/" style="color: #d4af37; text-decoration: none; font-weight: 600;">🏷️ Empty Leg Booking Guide</a></li>
-                            <li style="margin-bottom: 1rem;"><a href="https://eliteluxurybookings.com/private-jet-booking-guide/" style="color: #d4af37; text-decoration: none; font-weight: 600;">📑 Master Private Jet Guide</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="serif" style="font-size: 2rem; margin-bottom: 1.5rem; border: none;">Elite <span class="gold-text">Intelligence</span></h2>
-                        <p style="color: rgba(255,255,255,0.6); margin-bottom: 2rem;">Our multi-modal concierge covers maritime, aviation, and exclusive estates. Navigate the full ecosystem below.</p>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 1rem;"><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/" style="color: #d4af37; text-decoration: none; font-weight: 600;">⚓ Luxury Yacht Charters</a></li>
-                            <li style="margin-bottom: 1rem;"><a href="https://eliteluxurybookings.com/luxury-villa-rentals/" style="color: #d4af37; text-decoration: none; font-weight: 600;">🏡 Exclusive Villa Rentals</a></li>
-                            <li style="margin-bottom: 1rem;"><a href="https://eliteluxurybookings.com/blog/" style="color: #d4af37; text-decoration: none; font-weight: 600;">📰 Global Intelligence Blog</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <!-- Master Footer -->
-<footer class="footer">
-        <div class="container" style="max-width: 1200px;">
+    <!-- Master Footer placeholder -->
+    <footer class="footer">
+        <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <h2>Elite Luxury <span class="gold-text">Bookings</span></h2>
-                    <p>Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
-                    <div class="footer-socials">
-                        <a href="https://www.facebook.com/eliteluxurybookings"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/eliteluxurybookings"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/elite-luxury-bookings/"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://x.com/eliteluxuryb"><i class="fab fa-x-twitter"></i></a>
-                    </div>
+                    <h2>ELITE LUXURY BOOKINGS</h2>
+                    <p>The world's leading coordination hub for ultra-high-net-worth individuals. We manage the logistics of elite living.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>SERVICES</h4>
+                    <h4>Aviation</h4>
                     <ul>
                         <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
                         <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Luxury Yachts</a></li>
@@ -543,20 +575,19 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>AUTHORITY</h4>
+                    <h4>Maritime</h4>
                     <ul>
-                        <li><a href="https://eliteluxurybookings.com/about/">The Mission</a></li>
-                        <li><a href="https://eliteluxurybookings.com/privacy/">Privacy Protocol</a></li>
-                        <li><a href="https://eliteluxurybookings.com/terms/">Terms of Engagement</a></li>
-                        <li><a href="https://eliteluxurybookings.com/contact/">Connect</a></li>
+                        <li><a href="/luxury-yacht-rentals">Yacht Rentals</a></li>
+                        <li><a href="/superyacht-charter">Superyachts</a></li>
+                        <li><a href="/sailing-yachts">Sailing Yachts</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Elite Luxury Bookings. All rights reserved. Global Authority in Luxury Procurement.</p>
+                <p>&copy; 2026 Elite Luxury Bookings. All Rights Reserved.</p>
                 <div class="footer-legal">
-                    <a href="https://eliteluxurybookings.com/privacy/">Privacy</a>
-                    <a href="https://eliteluxurybookings.com/terms/">Terms</a>
+                    <a href="/privacy">Privacy</a>
+                    <a href="/terms">Terms</a>
                 </div>
             </div>
         </div>
@@ -600,6 +631,28 @@
                 document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
             } 
         }
+
+        hoursRange.addEventListener('input', updateEstimate);
+        paxRange.addEventListener('input', updateEstimate);
+
+        aircraftOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                aircraftOptions.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
+                currentRate = parseInt(option.getAttribute('data-rate'));
+                updateEstimate();
+            });
+        });
+
+        // Initialize
+        updateEstimate();
     </script>
+<!-- WhatsApp Float -->
+<a href="https://wa.me/918801079030" class="wa-float" target="_blank" rel="noopener" aria-label="Chat with Elite Luxury Bookings Concierge on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+    </svg>
+</a>
 </body>
+
 </html>

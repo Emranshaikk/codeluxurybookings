@@ -31,16 +31,7 @@
             --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--deep-black);
-            color: var(--text-main);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            margin: 0;
-            overflow-x: hidden;
-        }
+        
 
         .error-container {
             flex: 1;
@@ -99,7 +90,7 @@
 
     .nav-brand { font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:600; color:#fff !important; text-decoration:none !important; }
     .nav-gold { color:#D4AF37 !important; }
-    .nav-links { display:flex; align-items:center; gap:0.25rem; list-style:none; flex:1; justify-content:center; margin:0; padding:0; }
+    
     .nav-links a { color:rgba(255,255,255,0.7) !important; text-decoration:none !important; font-size:0.82rem; text-transform:uppercase; letter-spacing:1.5px; padding:0.5rem 0.9rem; border-radius:6px; transition:all 0.4s; font-family: 'Inter', sans-serif !important; }
     .nav-links a:hover { color:#D4AF37 !important; }
     .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:0.5rem; z-index:100001; }
@@ -206,6 +197,12 @@
         })(window, document, "clarity", "script", "sia395rirl");
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@eliteluxuryb">
+    <meta name="twitter:title" content="404 - Experience Not Found | Elite Luxury Bookings">
+    <meta name="twitter:description" content="Elite Luxury Bookings - Private Jets, Yachts & Villas">
+    <meta name="twitter:image" content="https://eliteluxurybookings.com/assets/elite_jet_master_hero.png">
 </head>
 
 <body>
@@ -237,10 +234,35 @@
 
     <main class="error-container">
         <div class="error-content">
-            <h1>404</h1>
-            <h2>Destination Unknown</h2>
-            <p>The exclusive experience you are looking for has moved or does not exist. Our concierge is ready to guide you back.</p>
-            <a href="https://eliteluxurybookings.com/" class="btn">Return to Homepage</a>
+            <h1 class="serif" style="margin-bottom: 1rem;">404</h1>
+            <h2 class="serif">Mission Disruption</h2>
+            <p style="max-width: 600px; margin-left: auto; margin-right: auto; margin-bottom: 4rem;">The coordinates you followed do not exist within our current intelligence network. Our concierge is ready to guide you back to an elite destination.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; margin-bottom: 4rem; text-align: left;">
+                <a href="https://eliteluxurybookings.com/elite-private-jet-charter/" style="text-decoration: none; color: inherit;">
+                    <div class="glass-panel" style="padding: 2.5rem; border: 1px solid rgba(212,175,55,0.1); border-radius: 20px; transition: var(--transition); height: 100%;">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">✈️</div>
+                        <h4 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 0.5rem;">Private Jets</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0;">Global mission procurement and 2026 price estimates.</p>
+                    </div>
+                </a>
+                <a href="https://eliteluxurybookings.com/luxury-yacht-rentals/" style="text-decoration: none; color: inherit;">
+                    <div class="glass-panel" style="padding: 2.5rem; border: 1px solid rgba(212,175,55,0.1); border-radius: 20px; transition: var(--transition); height: 100%;">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">⚓</div>
+                        <h4 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 0.5rem;">Luxury Yachts</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0;">Exclusive maritime charters across all major basins.</p>
+                    </div>
+                </a>
+                <a href="https://eliteluxurybookings.com/luxury-villa-rentals/" style="text-decoration: none; color: inherit;">
+                    <div class="glass-panel" style="padding: 2.5rem; border: 1px solid rgba(212,175,55,0.1); border-radius: 20px; transition: var(--transition); height: 100%;">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🏡</div>
+                        <h4 class="serif gold-text" style="font-size: 1.5rem; margin-bottom: 0.5rem;">Luxury Villas</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0;">Off-market private estates and full-service residential teams.</p>
+                    </div>
+                </a>
+            </div>
+
+            <a href="https://eliteluxurybookings.com/" class="btn" style="border-radius: 50px; padding: 1.2rem 3.5rem;">Return to Command Center</a>
         </div>
     </main>
 
@@ -253,10 +275,10 @@
                     <h2>Elite Luxury <span class="gold-text">Bookings</span></h2>
                     <p>Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
                     <div class="footer-socials">
-                        <a href="https://www.facebook.com/eliteluxurybookings"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/eliteluxurybookings"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/elite-luxury-bookings/"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://x.com/eliteluxuryb"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/eliteluxurybookings" aria-label="Follow Elite Luxury Bookings on Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/eliteluxurybookings" aria-label="Follow Elite Luxury Bookings on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/elite-luxury-bookings/" aria-label="Follow Elite Luxury Bookings on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/eliteluxuryb" aria-label="Follow Elite Luxury Bookings on X (Twitter)"><i class="fab fa-x-twitter"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">

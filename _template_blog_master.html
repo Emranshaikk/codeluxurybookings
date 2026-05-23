@@ -1,22 +1,38 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-<head>
-
-    <!-- Google tag (gtag.js) -->
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J56D1LJLFM"></script>
-
-    <script>
-
-      window.dataLayer = window.dataLayer || [];
+ <head>
+  <!-- Google tag (gtag.js) -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-J56D1LJLFM">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
 
       function gtag(){dataLayer.push(arguments);}
 
       gtag('js', new Date());
 
       gtag('config', 'G-J56D1LJLFM');
+  </script>
+  <meta charset="utf-8"/>
+  <!-- BRAND & FAVICON -->
+  <link href="/favicon.png" rel="icon" type="image/png"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <!-- SEO Meta Tags - CTR Optimized for Elite Authority -->
+  <title>
+   {{TITLE}} | Elite Luxury Blog
+  </title>
+  <meta content="{{EXCERPT}}" name="description"/>
+  <link href="https://eliteluxurybookings.com/_template_blog_master/" rel="canonical"/>
+  <!-- SEO Enhancements -->
+  <meta content="_template_blog_master, elite luxury bookings, private jet charter" name="keywords"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <link href="https://eliteluxurybookings.com/" rel="publisher"/>
+  <!-- Premium Typography -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&amp;family=Inter:wght@300;400;600&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
+  <style>
+   html { scroll-behavior: smooth; }
 
     </script>
 
@@ -282,18 +298,17 @@
         "availableLanguage": "English"
       }
     }
-    </script>
-
-    <!-- Open Graph / Social Sharing -->
-    <meta property="og:title" content="{{TITLE}} | Elite Luxury Blog">
-    <meta property="og:description" content="{{EXCERPT}}">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://eliteluxurybookings.com/_template_blog_master/">
-    <meta property="og:image" content="https://eliteluxurybookings.com/assets/elite_jet_master_hero.png">
-    <meta property="og:site_name" content="Elite Luxury Bookings">
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
+  </script>
+  <!-- Open Graph / Social Sharing -->
+  <meta content="{{TITLE}} | Elite Luxury Blog" property="og:title"/>
+  <meta content="{{EXCERPT}}" property="og:description"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://eliteluxurybookings.com/_template_blog_master/" property="og:url"/>
+  <meta content="https://eliteluxurybookings.com/assets/elite_jet_master_hero.png" property="og:image"/>
+  <meta content="Elite Luxury Bookings" property="og:site_name"/>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+   (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
@@ -326,74 +341,57 @@
         <a href="https://eliteluxurybookings.com/contact/">📞 Contact</a>
         
     </div>
-    <!-- ELB_NAV_END -->
-
-    <main>
-
-    <article class="container">
-
-        <header class="blog-header">
-
-            <div class="blog-meta">Elite Authority Insights â€¢ {{DATE}}</div>
-
-            <h1>{{TITLE}}</h1>
-
-            {{#if HERO_IMAGE}}
-
-            <div class="hero-image-container">
-
-                <img loading="lazy" src="{{HERO_IMAGE}}" alt="{{TITLE}}" class="blog-hero-img">
-
-            </div>
-
-            {{/if}}
-
-            <div class="author-card">
-
-                <div class="author-img"></div>
-
-                <div class="author-info">Curated by the Elite Luxury Concierge Team</div>
-
-            </div>
-
-        </header>
-
-</div>
-
-            <!-- Column 2: The Americas Hub -->
-
-            <!-- Column 3: Asia & Pacific Hub -->
-
-            <!-- Column 4: Middle East & Islands Hub -->
-
-        </div>
-
-        <div style="text-align: center; margin-top: 4rem;">
-
-            <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 600px; margin: 0 auto;">Elite Luxury Bookings operates 1,200+ global city-pairs. If your specific route is not listed, our 24/7 aviation desk provides bespoke pricing on request.</p>
-
-        </div>
-
+   </div>
+  </nav>
+  <div class="mobile-menu" id="elbMobileMenu">
+   <a href="https://eliteluxurybookings.com/elite-private-jet-charter/">
+    ✈ Private Jets
+   </a>
+   <a href="https://eliteluxurybookings.com/blog/">
+    📰 Blog
+   </a>
+   <a href="https://eliteluxurybookings.com/contact/">
+    📞 Contact
+   </a>
+  </div>
+  <!-- ELB_NAV_END -->
+  <main>
+   <article class="container">
+    <header class="blog-header">
+     <div class="blog-meta">
+      Elite Authority Insights â€¢ {{DATE}}
+     </div>
+     <h1>
+      {{TITLE}}
+     </h1>
+     {{#if HERO_IMAGE}}
+     <div class="hero-image-container">
+      <img alt="{{TITLE}}" class="blog-hero-img" loading="lazy" src="{{HERO_IMAGE}}"/>
+     </div>
+     {{/if}}
+     <div class="author-card">
+      <div class="author-img">
+      </div>
+      <div class="author-info">
+       Curated by the Elite Luxury Concierge Team
+      </div>
+     </div>
+    </header>
+    <!-- Column 2: The Americas Hub -->
+    <!-- Column 3: Asia & Pacific Hub -->
+    <!-- Column 4: Middle East & Islands Hub -->
+    <div style="text-align: center; margin-top: 4rem;">
+     <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 600px; margin: 0 auto;">
+      Elite Luxury Bookings operates 1,200+ global city-pairs. If your specific route is not listed, our 24/7 aviation desk provides bespoke pricing on request.
+     </p>
     </div>
-
-</section>
-
-</div>
-
-            <!-- Column 2: The Americas Hub -->
-
-            <!-- Column 3: Asia & Pacific Hub -->
-
-            <!-- Column 4: Middle East & Islands Hub -->
-
-        </div>
-
-        <div style="text-align: center; margin-top: 4rem;">
-
-            <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 600px; margin: 0 auto;">Elite Luxury Bookings operates 1,200+ global city-pairs. If your specific route is not listed, our 24/7 aviation desk provides bespoke pricing on request.</p>
-
-        </div>
-
+    <!-- Column 2: The Americas Hub -->
+    <!-- Column 3: Asia & Pacific Hub -->
+    <!-- Column 4: Middle East & Islands Hub -->
+    <div style="text-align: center; margin-top: 4rem;">
+     <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 600px; margin: 0 auto;">
+      Elite Luxury Bookings operates 1,200+ global city-pairs. If your specific route is not listed, our 24/7 aviation desk provides bespoke pricing on request.
+     </p>
     </div>
 
 </section>
@@ -453,6 +451,6 @@
                 document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
             } 
         }
-    </script>
-</body>
+  </script>
+ </body>
 </html>

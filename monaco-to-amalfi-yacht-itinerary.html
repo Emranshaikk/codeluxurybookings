@@ -138,12 +138,7 @@
             --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            -webkit-font-smoothing: antialiased;
-        }
+        
 
         html {
             scroll-behavior: smooth;
@@ -152,36 +147,11 @@
         body { padding-top: 110px !important; }
 
         /* --- INTELLIGENCE TICKER --- */
-        .top-intel-bar {
-            background: rgba(5, 5, 5, 0.98);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-            height: 36px;
-            overflow: hidden;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100000;
-            display: flex;
-            align-items: center;
-        }
+        
 
-        .ticker-wrap {
-            white-space: nowrap;
-            overflow: hidden;
-            width: 100%;
-        }
+        
 
-        .ticker-content {
-            display: inline-block;
-            white-space: nowrap;
-            padding-left: 100%;
-            animation: ticker 40s linear infinite;
-            font-size: 0.72rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.9);
-        }
+        
 
         @keyframes ticker {
             0% { transform: translate3d(0, 0, 0); }
@@ -225,28 +195,13 @@
 
         /* NAVIGATION */
 
-        .nav-brand {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.75rem;
-            font-weight: 600;
-            color: #fff !important;
-            text-decoration: none !important;
-        }
+        
 
         .nav-gold {
             color: #D4AF37 !important;
         }
 
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-            list-style: none;
-            flex: 1;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-        }
+        
 
         .nav-links a {
             color: rgba(255, 255, 255, 0.7) !important;
@@ -315,9 +270,7 @@
         }
 
         @media (max-width: 1024px) {
-            .nav-links {
-                display: none !important;
-            }
+            
 
             .nav-hamburger {
                 display: flex !important;
@@ -727,10 +680,10 @@
                     <h2>Elite Luxury <span class="gold-text">Bookings</span></h2>
                     <p>Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
                     <div class="footer-socials">
-                        <a href="https://www.facebook.com/eliteluxurybookings"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/eliteluxurybookings"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/elite-luxury-bookings/"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://x.com/eliteluxuryb"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/eliteluxurybookings" aria-label="Follow Elite Luxury Bookings on Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/eliteluxurybookings" aria-label="Follow Elite Luxury Bookings on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/elite-luxury-bookings/" aria-label="Follow Elite Luxury Bookings on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/eliteluxuryb" aria-label="Follow Elite Luxury Bookings on X (Twitter)"><i class="fab fa-x-twitter"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">

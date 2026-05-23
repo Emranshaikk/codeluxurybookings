@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J56D1LJLFM"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
+ <head>
+  <!-- Google tag (gtag.js) -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-J56D1LJLFM">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-J56D1LJLFM');
@@ -82,9 +82,9 @@
         .btn-gold:hover { transform: translateY(-2px); filter: brightness(1.1); box-shadow: 0 10px 20px rgba(212,175,55,0.3); }
 
         /* Navigation Sync */
-        .top-intel-bar { height: 36px; background: #000; border-bottom: 1px solid rgba(212, 175, 55, 0.3); position: fixed; top: 0; left: 0; right: 0; z-index: 100000; overflow: hidden; display: flex; align-items: center; }
-        .ticker-wrap { width: 100%; padding-left: 100%; box-sizing: content-box; }
-        .ticker-content { display: inline-block; white-space: nowrap; padding-right: 100%; animation: ticker 45s linear infinite; }
+        
+        
+        
         @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
         .ticker-item { display: inline-block; padding: 0 2rem; color: #fff; font-size: 0.75rem; letter-spacing: 1px; font-weight: 600; text-transform: uppercase; }
 
@@ -92,7 +92,7 @@
         
         .nav-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; font-weight: 600; color: #fff; text-decoration: none; }
         .nav-gold { color: #D4AF37; }
-        .nav-links { display: flex; align-items: center; gap: 0.25rem; list-style: none; margin: 0; padding: 0; }
+        
         .nav-links a { color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 1.5px; padding: 0.5rem 0.9rem; border-radius: 6px; transition: 0.4s; }
         .nav-links a:hover { color: #D4AF37; }
 
@@ -102,7 +102,7 @@
         .mobile-menu.open { display: flex !important; }
         .mobile-menu a { color: rgba(255, 255, 255, 0.8); text-decoration: none; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; padding: 1.2rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
 
-        @media (max-width: 1024px) { .nav-links { display: none; } .nav-hamburger { display: flex; } }
+        @media (max-width: 1024px) {  .nav-hamburger { display: flex; } }
         @media (max-width: 768px) { 
             .blog-header h1 { font-size: 2.5rem; }
             .pricing-table { display: block; overflow-x: auto; }
@@ -168,37 +168,67 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
-<body>
-    <div class="top-intel-bar">
-        <div class="ticker-wrap">
-            <div class="ticker-content">
-                <div class="ticker-item"><span style="color: var(--primary-gold);">⚠️ INTELLIGENCE ALERT:</span> STRATEGIC PROCUREMENT WINDOWS OPEN FOR SUMMER 2026.</div>
-                <div class="ticker-item"><span style="color: var(--primary-gold);">EMPTY LEG FLIGHTS AVAILABLE:</span> CONTACT CONCIERGE DIRECTLY.</div>
-            </div>
-        </div>
+ <body>
+  <div class="top-intel-bar">
+   <div class="ticker-wrap">
+    <div class="ticker-content">
+     <div class="ticker-item">
+      <span style="color: var(--primary-gold);">
+       ⚠️ INTELLIGENCE ALERT:
+      </span>
+      STRATEGIC PROCUREMENT WINDOWS OPEN FOR SUMMER 2026.
+     </div>
+     <div class="ticker-item">
+      <span style="color: var(--primary-gold);">
+       EMPTY LEG FLIGHTS AVAILABLE:
+      </span>
+      CONTACT CONCIERGE DIRECTLY.
+     </div>
     </div>
-
-    <nav class="global-nav">
-        <div class="container global-nav-inner">
-            <a href="https://eliteluxurybookings.com/" class="nav-brand">Elite Luxury <span class="nav-gold">Bookings</span></a>
-            <ul class="nav-links">
-                <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
-                <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Yachts</a></li>
-                <li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/">Villas</a></li>
-                <li><a href="https://eliteluxurybookings.com/blog/">Blog</a></li>
-                <li><a href="https://eliteluxurybookings.com/contact/">Contact</a></li>
-            </ul>
-            <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></div>
-        </div>
-    </nav>
-
-    <div class="mobile-menu" id="elbMobileMenu">
-        <a href="https://eliteluxurybookings.com/elite-private-jet-charter/">✈ Private Jets</a>
-        <a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">⚓ Luxury Yachts</a>
-        <a href="https://eliteluxurybookings.com/luxury-villa-rentals/">🏡 Luxury Villas</a>
-        <a href="https://eliteluxurybookings.com/blog/">📰 Blog</a>
-        <a href="https://eliteluxurybookings.com/contact/">📞 Contact</a>
+   </div>
+  </div>
+  <nav class="global-nav">
+   <div class="container global-nav-inner">
+    <a class="nav-brand" href="https://eliteluxurybookings.com/">
+     Elite Luxury
+     <span class="nav-gold">
+      Bookings
+     </span>
+    </a>
+    <ul class="nav-links">
+     <li>
+      <a href="https://eliteluxurybookings.com/elite-private-jet-charter/">
+       Private Jets
+      </a>
+     </li>
+     <li>
+      <a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">
+       Yachts
+      </a>
+     </li>
+     <li>
+      <a href="https://eliteluxurybookings.com/luxury-villa-rentals/">
+       Villas
+      </a>
+     </li>
+     <li>
+      <a href="https://eliteluxurybookings.com/blog/">
+       Blog
+      </a>
+     </li>
+     <li>
+      <a href="https://eliteluxurybookings.com/contact/">
+       Contact
+      </a>
+     </li>
+    </ul>
+    <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()">
+     <span>
+     </span>
+     <span>
+     </span>
+     <span>
+     </span>
     </div>
 
     <main class="container">
@@ -416,6 +446,6 @@
                 document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
             } 
         }
-    </script>
-</body>
+  </script>
+ </body>
 </html>

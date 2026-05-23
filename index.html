@@ -22,6 +22,70 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap"
         rel="stylesheet" media="all">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Schema Markup: Organization & Concierge -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Elite Luxury Bookings",
+      "alternateName": "ELB",
+      "url": "https://eliteluxurybookings.com",
+      "logo": "https://eliteluxurybookings.com/favicon.png",
+      "sameAs": [
+        "https://www.facebook.com/eliteluxurybookings",
+        "https://www.instagram.com/eliteluxurybookings",
+        "https://www.linkedin.com/company/elite-luxury-bookings/",
+        "https://x.com/eliteluxuryb"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+918801079030",
+        "contactType": "Concierge",
+        "availableLanguage": "English"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Elite Lifestyle Management",
+      "provider": {
+        "@type": "Organization",
+        "name": "Elite Luxury Bookings"
+      },
+      "areaServed": "Global",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Luxury Procurement Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Private Jet Charter"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Luxury Yacht Rental"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Exclusive Villa Rentals"
+            }
+          }
+        ]
+      }
+    }
+    </script>
 
     <style>:root {
             --primary-gold: #D4AF37;
@@ -34,12 +98,7 @@
             --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            -webkit-font-smoothing: antialiased;
-        }
+        
 
         html {
             scroll-behavior: smooth;
@@ -49,36 +108,11 @@
         body { padding-top: 110px !important; }
 
         /* --- INTELLIGENCE TICKER --- */
-        .top-intel-bar {
-            background: rgba(5, 5, 5, 0.98);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-            height: 36px;
-            overflow: hidden;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100000;
-            display: flex;
-            align-items: center;
-        }
+        
 
-        .ticker-wrap {
-            white-space: nowrap;
-            overflow: hidden;
-            width: 100%;
-        }
+        
 
-        .ticker-content {
-            display: inline-block;
-            white-space: nowrap;
-            padding-left: 100%;
-            animation: ticker 40s linear infinite;
-            font-size: 0.72rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.9);
-        }
+        
 
         @keyframes ticker {
             0% { transform: translate3d(0, 0, 0); }
@@ -98,98 +132,19 @@
             font-weight: 600;
         }
 
-        h1,
-        h2,
-        h3,
-        .serif {
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .gold-text {
-            color: var(--primary-gold);
-        }
-
-        .glass-panel {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-        }
-
-        /* Typography Helpers */
-        .brand-statement {
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            display: block;
-        }
-
-        .trust-micro {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-top: 1.5rem;
-            display: block;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            padding: 1.2rem 2.5rem;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            text-decoration: none;
+        /* Custom Index Styles (Non-Global) */
+        .hero {
+            height: 90vh;
+            min-height: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: 15vh;
+            align-items: center;
             text-align: center;
-        }
-
-        .btn-gold {
-            background: linear-gradient(135deg, var(--primary-gold), #B8860B);
-            color: #000;
-            border: none;
-            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.15);
-        }
-
-        .btn-gold:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.25);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--primary-gold);
-            border: 1px solid var(--primary-gold);
-        }
-
-        .btn-outline:hover {
-            background: rgba(212, 175, 55, 0.1);
-        }
-
-        .btn-sm {
-            padding: 0.8rem 1.5rem;
-            font-size: 0.8rem;
-            letter-spacing: 1.5px;
-        }
-
-        .btn:active {
-            transform: scale(0.97);
-        }
-
-        .wa-float:active {
-            transform: scale(0.92);
+            position: relative;
+            margin-top: 0px;
+            overflow: hidden;
         }
 
         /* 2. STICKY CTA BAR */
@@ -919,14 +874,7 @@
             color: #D4AF37;
         }
 
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-            list-style: none;
-            flex: 1;
-            justify-content: center;
-        }
+        
 
         .nav-links a {
             color: rgba(255, 255, 255, 0.85);
@@ -1071,9 +1019,7 @@
         }
 
         @media (max-width:900px) {
-            .nav-links {
-                display: none;
-            }
+            
 
             .nav-cta {
                 display: flex;
@@ -1091,16 +1037,7 @@
         body { padding-top: 110px !important; }
 
         /* ELB_CSS_START        /* NAVIGATION */
-        .global-nav {
-            position: fixed;
-            top: 36px !important;
-            left: 0;
-            right: 0;
-            background: rgba(5, 5, 5, 0.98);
-            backdrop-filter: blur(24px);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-            z-index: 99999;
-        }
+        
 
         .nav-brand {
             font-family: 'Cormorant Garamond', serif;
@@ -1114,16 +1051,7 @@
             color: #D4AF37 !important;
         }
 
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-            list-style: none;
-            flex: 1;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-        }
+        
 
         .nav-links a {
             color: rgba(255, 255, 255, 0.7) !important;
@@ -1231,9 +1159,7 @@
         }
 
         @media (max-width:1024px) {
-            .nav-links {
-                display: none !important;
-            }
+            
 
             .nav-hamburger {
                 display: flex !important;
@@ -1243,36 +1169,11 @@
         body { padding-top: 110px !important; }
 
         /* --- STANDARD GLOBAL NAV --- */
-        .top-intel-bar {
-            background: rgba(5, 5, 5, 0.98);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-            height: 36px;
-            overflow: hidden;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100000;
-            display: flex;
-            align-items: center;
-        }
+        
 
-        .ticker-wrap {
-            white-space: nowrap;
-            overflow: hidden;
-            width: 100%;
-        }
+        
 
-        .ticker-content {
-            display: inline-block;
-            white-space: nowrap;
-            padding-left: 100%;
-            animation: ticker 40s linear infinite;
-            font-size: 0.72rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.9);
-        }
+        
 
         @keyframes ticker {
             0% { transform: translate3d(0, 0, 0); }
@@ -1391,6 +1292,13 @@
         })(window, document, "clarity", "script", "sia395rirl");
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@eliteluxuryb">
+    <meta name="twitter:title" content="Elite Luxury Bookings | Private Jets, Yachts & Villas">
+    <meta name="twitter:description" content="Elite Luxury Bookings - Private Jets, Yachts & Villas">
+    <meta name="twitter:image" content="https://eliteluxurybookings.com/assets/elite_jet_master_hero.png">
 </head>
 
 <body>
@@ -1835,16 +1743,13 @@
             <a href="https://wa.me/918801079030" class="btn btn-gold" target="_blank"
                 style="padding: 1.2rem 3rem;">Speak instantly with concierge</a>
         </div>
-        </div>
-        </div>
-        </section>
 
         <!-- FINAL TRUST CLOSER -->
-        <div class="container" style="text-align: center; padding-bottom: 6rem;">
-            <p class="serif" style="color: var(--text-muted); font-size: 1.8rem; max-width: 800px; margin: 0 auto;">
-                Every request is handled discreetly, privately, and through a globally trusted network of elite
-                partners.
+        <div class="container" style="text-align: center; padding-top: 4rem;">
+            <p class="serif" style="color: var(--text-muted); font-size: 1.8rem; max-width: 800px; margin: 0 auto; opacity: 0.8;">
+                Every request is handled discreetly, privately, and through a globally trusted network of elite partners.
             </p>
+        </div>
 
     </main>
 
@@ -1856,10 +1761,10 @@
                     <h2>Elite Luxury <span class="gold-text">Bookings</span></h2>
                     <p>Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
                     <div class="footer-socials">
-                        <a href="https://www.facebook.com/eliteluxurybookings"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/eliteluxurybookings"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/elite-luxury-bookings/"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://x.com/eliteluxuryb"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/eliteluxurybookings" aria-label="Follow Elite Luxury Bookings on Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/eliteluxurybookings" aria-label="Follow Elite Luxury Bookings on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/elite-luxury-bookings/" aria-label="Follow Elite Luxury Bookings on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/eliteluxuryb" aria-label="Follow Elite Luxury Bookings on X (Twitter)"><i class="fab fa-x-twitter"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
