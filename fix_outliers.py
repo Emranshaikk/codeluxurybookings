@@ -83,7 +83,6 @@ files_to_fix = [
     "best-sailing-yacht-charter.html",
     "dubai-private-jet-routes.html",
     "guide-to-mediterranean-yacht-charter.html",
-    "london-private-jet-routes.html",
     "london-to-ibiza-private-jet-cost-guide.html",
     "newyork-private-jet-routes.html",
     "paris-private-jet-routes.html",
