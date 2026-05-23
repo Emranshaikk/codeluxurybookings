@@ -17,8 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
 
-    <style>
-        :root {
+    <style>:root {
             --primary-gold: #d4af37;
             --dark-bg: #050505;
             --glass: rgba(255, 255, 255, 0.03);
@@ -56,26 +55,60 @@
         /* Breadcrumbs */
         .breadcrumbs { padding: 2rem 0; font-size: 0.85rem; color: var(--text-muted); }
         .breadcrumbs a { color: var(--primary-gold); text-decoration: none; }
-    
-        /* ===== MASTER FOOTER (INJECTED SITE-WIDE) ===== */
-        .footer { background: #000; padding: 5rem 0 3rem; border-top: 1px solid rgba(212, 175, 55, 0.1); margin-top: 5rem; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; padding-bottom: 4rem; border-bottom: 1px solid rgba(212, 175, 55, 0.1); }
-        .footer-brand h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; margin-bottom: 1.5rem; color: #fff; }
-        .footer-brand p { color: rgba(255, 255, 255, 0.7); line-height: 1.8; max-width: 380px; margin-bottom: 2rem; }
-        .footer-socials { display: flex; gap: 1.5rem; }
-        .footer-socials a { color: rgba(255, 255, 255, 0.6); transition: 0.3s; font-size: 1.5rem; }
-        .footer-socials a:hover { color: #D4AF37; }
-        .footer-col h4 { color: #D4AF37; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 2rem; }
-        .footer-col ul { list-style: none; padding: 0; margin: 0; }
-        .footer-col ul li { margin-bottom: 1rem; }
-        .footer-col ul li a { color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s; font-size: 0.95rem; }
-        .footer-col ul li a:hover { color: #D4AF37; padding-left: 5px; }
-        .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 3rem; color: rgba(255, 255, 255, 0.4); font-size: 0.85rem; }
-        .footer-legal { display: flex; gap: 2rem; }
-        .footer-legal a { color: inherit; text-decoration: none; }
-        @media (max-width: 992px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: span 2; } }
-        @media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } .footer-brand { grid-column: span 1; } .footer-bottom { flex-direction: column; gap: 2rem; text-align: center; } }
 
+
+            /* ===== MASTER FOOTER (INJECTED SITE-WIDE) ===== */
+        .footer { background: #000 !important; padding: 5rem 0 3rem !important; border-top: 1px solid rgba(212, 175, 55, 0.1) !important; margin-top: 5rem !important; text-align: left !important; }
+        .footer-grid { display: grid !important; grid-template-columns: 2fr 1fr 1fr !important; gap: 4rem !important; padding-bottom: 4rem !important; border-bottom: 1px solid rgba(212, 175, 55, 0.1) !important; text-align: left !important; }
+        .footer-brand { text-align: left !important; }
+        .footer-brand h2 { font-family: 'Cormorant Garamond', serif !important; font-size: 2.2rem !important; margin-bottom: 1.5rem !important; color: #fff !important; text-align: left !important; }
+        .footer-brand p { font-family: 'Inter', sans-serif !important; font-size: 0.9rem !important; line-height: 1.8 !important; max-width: 380px !important; margin-bottom: 2rem !important; color: rgba(255, 255, 255, 0.7) !important; text-align: left !important; }
+        .footer-socials { display: flex !important; gap: 1.5rem !important; justify-content: flex-start !important; }
+        .footer-socials a { color: rgba(255, 255, 255, 0.6) !important; transition: 0.3s !important; font-size: 1.5rem !important; }
+        .footer-socials a:hover { color: #D4AF37 !important; }
+        .footer-col { text-align: left !important; }
+        .footer-col h4 { color: #D4AF37 !important; text-transform: uppercase !important; letter-spacing: 2px !important; font-size: 0.9rem !important; margin-bottom: 2rem !important; text-align: left !important; }
+        .footer-col ul { list-style: none !important; padding: 0 !important; margin: 0 !important; text-align: left !important; }
+        .footer-col ul li { margin-bottom: 1rem !important; text-align: left !important; }
+        .footer-col ul li a { color: rgba(255, 255, 255, 0.8) !important; text-decoration: none !important; transition: 0.3s !important; font-size: 0.95rem !important; }
+        .footer-col ul li a:hover { color: #D4AF37 !important; padding-left: 5px !important; }
+        .footer-bottom { display: flex !important; justify-content: space-between !important; align-items: center !important; padding-top: 3rem !important; color: rgba(255, 255, 255, 0.4) !important; font-size: 0.85rem !important; }
+        .footer-legal { display: flex !important; gap: 2rem !important; }
+        .footer-legal a { color: inherit !important; text-decoration: none !important; }
+        @media (max-width: 992px) { 
+            .footer-grid { grid-template-columns: 1fr 1fr !important; } 
+            .footer-brand { grid-column: span 2 !important; } 
+        }
+        @media (max-width: 600px) { 
+            .footer-grid { grid-template-columns: 1fr !important; } 
+            .footer-brand { grid-column: span 1 !important; text-align: center !important; } 
+            .footer-brand h2 { text-align: center !important; }
+            .footer-brand p { text-align: center !important; margin: 0 auto 2rem auto !important; }
+            .footer-socials { justify-content: center !important; }
+            .footer-col { text-align: center !important; }
+            .footer-col h4 { text-align: center !important; }
+            .footer-col ul { text-align: center !important; }
+            .footer-col ul li { text-align: center !important; }
+            .footer-bottom { flex-direction: column !important; gap: 2rem !important; text-align: center !important; } 
+        }
+            /* --- ELITE MOBILE NAV STANDARDIZATION --- */
+        .global-nav { position: fixed !important; top: 36px !important; left: 0 !important; right: 0 !important; background: rgba(5, 5, 5, 0.98) !important; backdrop-filter: blur(24px) !important; border-bottom: 1px solid rgba(212, 175, 55, 0.2) !important; z-index: 99999 !important; }
+        .global-nav-inner { display: flex !important; align-items: center !important; justify-content: space-between !important; height: 72px !important; gap: 1rem !important; max-width: 1400px !important; margin: 0 auto !important; padding: 0 2rem !important; box-sizing: border-box !important; }
+        .nav-brand { font-family: 'Cormorant Garamond', serif !important; font-size: 1.75rem !important; font-weight: 600 !important; color: #fff !important; text-decoration: none !important; }
+        .nav-gold { color: #D4AF37 !important; }
+        .nav-links { display: flex !important; align-items: center !important; gap: 0.25rem !important; list-style: none !important; flex: 1 !important; justify-content: center !important; margin: 0 !important; padding: 0 !important; }
+        .nav-links a { color: rgba(255, 255, 255, 0.7) !important; text-decoration: none !important; font-size: 0.82rem !important; text-transform: uppercase !important; letter-spacing: 1.5px !important; padding: 0.5rem 0.9rem !important; border-radius: 6px !important; transition: all 0.4s !important; font-family: 'Inter', sans-serif !important; }
+        .nav-links a:hover { color: #D4AF37 !important; }
+        .nav-hamburger { display: none !important; flex-direction: column !important; gap: 5px !important; cursor: pointer !important; padding: 0.5rem !important; z-index: 100001 !important; }
+        .nav-hamburger span { display: block !important; width: 24px !important; height: 2px !important; background: rgba(255, 255, 255, 0.8) !important; border-radius: 2px !important; transition: all 0.4s !important; }
+        .nav-hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px) !important; }
+        .nav-hamburger.open span:nth-child(2) { opacity: 0 !important; }
+        .nav-hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px) !important; }
+        .mobile-menu { display: none !important; position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; background: #050505 !important; padding: 72px 2rem 2rem !important; z-index: 100000 !important; flex-direction: column !important; gap: 0.5rem !important; overflow-y: auto !important; }
+        .mobile-menu.open { display: flex !important; }
+        .mobile-menu a { color: rgba(255, 255, 255, 0.8) !important; text-decoration: none !important; font-size: 1.1rem !important; text-transform: uppercase; letter-spacing: 2px !important; padding: 1.2rem 0 !important; border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important; }
+        @media (max-width: 1024px) { .nav-links { display: none !important; } .nav-hamburger { display: flex !important; } }
+        /* --- END ELITE MOBILE NAV --- */
     </style>
 
     <script type="application/ld+json">
@@ -262,6 +295,9 @@
             </div>
         </div>
     </footer>
+
+
+
 <script>
         function toggleMobileMenu() { 
             var m = document.getElementById('elbMobileMenu'), 
