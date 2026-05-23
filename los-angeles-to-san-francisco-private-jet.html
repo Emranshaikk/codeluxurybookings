@@ -220,7 +220,7 @@
             }
         }
 
-        body { padding-top: 110px !important; }
+        
 
         /* --- PREMIUM REINFORCEMENTS --- */
         .hero {
@@ -299,7 +299,7 @@
         /* --- MOBILE OPTIMIZATION LOCK --- */
         @media (max-width: 768px) {
             .nav-brand { font-size: 1.1rem !important; letter-spacing: 1px; }
-            body { padding-top: 110px !important; }
+            
             .top-intel-bar { height: 32px; }
             
             .hero { padding: 6rem 0 3rem !important; }
@@ -424,8 +424,16 @@
             .footer-col ul li { text-align: center !important; }
             .footer-bottom { flex-direction: column !important; gap: 2rem !important; text-align: center !important; } 
         }
-            /* --- ELITE MOBILE NAV STANDARDIZATION --- */
-        .global-nav { position: fixed !important; top: 36px !important; left: 0 !important; right: 0 !important; background: rgba(5, 5, 5, 0.98) !important; backdrop-filter: blur(24px) !important; border-bottom: 1px solid rgba(212, 175, 55, 0.2) !important; z-index: 99999 !important; }
+            /* --- ELITE NAV & TICKER STANDARDIZATION --- */
+        .top-intel-bar { background: rgba(5, 5, 5, 0.98) !important; border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important; height: 36px !important; overflow: hidden !important; position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; z-index: 100000 !important; display: flex !important; align-items: center !important; }
+        .ticker-wrap { white-space: nowrap !important; overflow: hidden !important; width: 100% !important; }
+        .ticker-content { display: inline-block !important; white-space: nowrap !important; padding-left: 100% !important; animation: ticker-scroll 40s linear infinite !important; font-size: 0.72rem !important; letter-spacing: 2px !important; text-transform: uppercase !important; color: rgba(255, 255, 255, 0.9) !important; }
+        @keyframes ticker-scroll { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-200%, 0, 0); } }
+        .ticker-content strong { color: #D4AF37 !important; margin: 0 40px !important; }
+        .ticker-content a { color: #fff !important; text-decoration: underline !important; text-underline-offset: 4px !important; margin-left: 10px !important; font-weight: 600 !important; }
+        
+        .global-nav { position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; background: rgba(5, 5, 5, 0.98) !important; backdrop-filter: blur(24px) !important; border-bottom: 1px solid rgba(212, 175, 55, 0.2) !important; z-index: 99999 !important; transition: top 0.3s ease !important; }
+        .top-intel-bar ~ .global-nav { top: 36px !important; }
         .global-nav-inner { display: flex !important; align-items: center !important; justify-content: space-between !important; height: 72px !important; gap: 1rem !important; max-width: 1400px !important; margin: 0 auto !important; padding: 0 2rem !important; box-sizing: border-box !important; }
         .nav-brand { font-family: 'Cormorant Garamond', serif !important; font-size: 1.75rem !important; font-weight: 600 !important; color: #fff !important; text-decoration: none !important; }
         .nav-gold { color: #D4AF37 !important; }
@@ -439,9 +447,18 @@
         .nav-hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px) !important; }
         .mobile-menu { display: none !important; position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; background: #050505 !important; padding: 72px 2rem 2rem !important; z-index: 100000 !important; flex-direction: column !important; gap: 0.5rem !important; overflow-y: auto !important; }
         .mobile-menu.open { display: flex !important; }
-        .mobile-menu a { color: rgba(255, 255, 255, 0.8) !important; text-decoration: none !important; font-size: 1.1rem !important; text-transform: uppercase; letter-spacing: 2px !important; padding: 1.2rem 0 !important; border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important; }
+        .mobile-menu a { color: rgba(255, 255, 255, 0.8) !important; text-decoration: none !important; font-size: 1.1rem !important; text-transform: uppercase !important; letter-spacing: 2px !important; padding: 1.2rem 0 !important; border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important; }
         @media (max-width: 1024px) { .nav-links { display: none !important; } .nav-hamburger { display: flex !important; } }
-        /* --- END ELITE MOBILE NAV --- */
+        
+        body { padding-top: 72px !important; }
+        body:has(.top-intel-bar) { padding-top: 108px !important; }
+        
+        @media (max-width: 768px) {
+            .top-intel-bar { height: 32px !important; }
+            .top-intel-bar ~ .global-nav { top: 32px !important; }
+            body:has(.top-intel-bar) { padding-top: 104px !important; }
+        }
+        /* --- END ELITE NAV & TICKER --- */
     </style>
     <link rel="preload" href="/style.css" as="style">
     <link rel="stylesheet" href="/style.css">
