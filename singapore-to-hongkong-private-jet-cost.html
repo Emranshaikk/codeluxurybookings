@@ -898,6 +898,8 @@
                 </div>
             </div>
         </section>
+    </main>
+
     <!-- Master Footer -->
 <footer class="footer">
         <div class="container" style="max-width: 1200px;">
@@ -918,6 +920,7 @@
                         <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
                         <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Luxury Yachts</a></li>
                         <li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/">Luxury Villas</a></li>
+                        <li><a href="https://eliteluxurybookings.com/global-route-silo/">Route Directory</a></li>
                         <li><a href="https://eliteluxurybookings.com/blog/">Blog</a></li>
                     </ul>
                 </div>
@@ -951,5 +954,34 @@
             } 
         }
     </script>
+
+    <script>
+        const endpoint = 'https://eliteluxurybookings.com/submit-lead.php';
+        async function submitLead(event) {
+            event.preventDefault();
+            const btn = event.target.querySelector('button[type="submit"]');
+            const form = event.target;
+            const originalBtnText = btn.innerText;
+            
+            btn.innerText = 'SECURELY SENDING...';
+            btn.disabled = true;
+            
+            const formData = new FormData(form);
+            try {
+                await fetch(endpoint, {
+                    method: 'POST',
+                    body: formData
+                });
+                window.location.href = '/thank-you.html';
+            } catch (error) {
+                console.error(error);
+                alert('Connection issue. Please connect directly with your concierge via WhatsApp.');
+            } finally {
+                btn.innerText = originalBtnText;
+                btn.disabled = false;
+            }
+        }
+    </script>
+
 </body>
 </html>
