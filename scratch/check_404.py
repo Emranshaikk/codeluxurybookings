@@ -12,7 +12,7 @@ valid_files.add('')
 
 for file in html_files:
     file_path = os.path.join(directory, file)
-    with open(file_path, 'r', encoding='utf-8') as f:
+    with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
         content = f.read()
     
     hrefs = re.findall(r'href="(.*?)"', content)
