@@ -6,7 +6,8 @@ def interlink_aviation():
         'luxury-private-jet-charter.html',
         'private-jet-available-now.html',
         'business-jet-charter.html',
-        'corporate-jet-charter.html'
+        'corporate-jet-charter.html',
+        'private-aircraft-charter.html'
     ]
 
     css_style = """
@@ -71,6 +72,7 @@ def interlink_aviation():
                     <li><a href="https://eliteluxurybookings.com/private-jet-available-now/">Private Jet Available Now</a> – 2-to-4 Hour Rapid Tarmac Dispatch</li>
                     <li><a href="https://eliteluxurybookings.com/business-jet-charter/">Business Jet Charter</a> – Premium Corporate Charter Flights</li>
                     <li><a href="https://eliteluxurybookings.com/corporate-jet-charter/">Corporate Jet Charter</a> – Scaled Enterprise Fleet Sourcing</li>
+                    <li><a href="https://eliteluxurybookings.com/private-aircraft-charter/">Private Aircraft Charter</a> – Global Jet Sourcing & Rentals</li>
                 </ul>
             </div>
             <div class="authority-col">
@@ -101,18 +103,26 @@ def interlink_aviation():
                 content = content[:style_idx] + css_style + content[style_idx:]
                 print(f"[{fname}] Injected local interlinking CSS styles.")
 
+        # Remove existing HTML block if present
+        if '<!-- Interlinking Yacht & Aviation Hubs -->' in content:
+            start_idx = content.find('<!-- Interlinking Yacht & Aviation Hubs -->')
+            end_idx = content.find('<section class="cta-banner">')
+            if end_idx == -1:
+                end_idx = content.find("<section class='cta-banner'>")
+            if start_idx != -1 and end_idx != -1 and end_idx > start_idx:
+                content = content[:start_idx] + content[end_idx:]
+                print(f"[{fname}] Cleared old interlinking block for update.")
+
         # 2. Inject HTML Section before <section class="cta-banner">
-        if 'class="authority-grid"' not in content:
-            cta_idx = content.find('<section class="cta-banner">')
+        cta_idx = content.find('<section class="cta-banner">')
+        if cta_idx != -1:
+            content = content[:cta_idx] + html_content + content[cta_idx:]
+            print(f"[{fname}] Injected structural authority interlinking hubs.")
+        else:
+            cta_idx = content.find("<section class='cta-banner'>")
             if cta_idx != -1:
                 content = content[:cta_idx] + html_content + content[cta_idx:]
-                print(f"[{fname}] Injected structural authority interlinking hubs.")
-            else:
-                # Try with single quotes
-                cta_idx = content.find("<section class='cta-banner'>")
-                if cta_idx != -1:
-                    content = content[:cta_idx] + html_content + content[cta_idx:]
-                    print(f"[{fname}] Injected structural authority interlinking hubs (single quote).")
+                print(f"[{fname}] Injected structural authority interlinking hubs (single quote).")
 
         with open(fname, 'w', encoding='utf-8') as f:
             f.write(content)
