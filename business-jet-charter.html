@@ -487,7 +487,56 @@
         .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 100000; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); transition: all 0.3s; font-size: 30px; text-decoration: none; }
         .wa-float:hover { transform: scale(1.1); background: #128C7E; }
         .wa-float svg { width: 35px; height: 35px; fill: white; }
-    </style>
+    
+        /* Interlinking Hubs */
+        .authority-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 4rem 0;
+            padding: 3rem;
+            border-top: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
+            background: var(--glass);
+            border-radius: 20px;
+        }
+        .authority-col h3 {
+            font-size: 1.8rem;
+            color: var(--primary-gold);
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .authority-col p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+        .authority-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .authority-col ul li {
+            margin-bottom: 1rem;
+        }
+        .authority-col ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .authority-col ul li a:hover {
+            color: var(--primary-gold);
+        }
+        @media (max-width: 768px) {
+            .authority-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2rem;
+            }
+        }
+</style>
 
     <!-- Schema Markup recommendations -->
     <script type="application/ld+json">
@@ -1056,7 +1105,31 @@
         </section>
 
         <!-- 11. STRONG CLOSING CTA -->
-        <section class="cta-banner">
+        
+        <!-- Interlinking Yacht & Aviation Hubs -->
+        <div class="authority-grid">
+            <div class="authority-col">
+                <h3>✈️ Elite Aviation Authority Hub</h3>
+                <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.5rem;">Select your optimal charter procurement model or explore direct routes.</p>
+                <ul>
+                    <li><a href="https://eliteluxurybookings.com/luxury-private-jet-charter/">Luxury Private Jet Charter</a> – Elite Air Sourcing & VIP Concierge</li>
+                    <li><a href="https://eliteluxurybookings.com/private-jet-available-now/">Private Jet Available Now</a> – 2-to-4 Hour Rapid Tarmac Dispatch</li>
+                    <li><a href="https://eliteluxurybookings.com/business-jet-charter/">Business Jet Charter</a> – Premium Corporate Charter Flights</li>
+                    <li><a href="https://eliteluxurybookings.com/corporate-jet-charter/">Corporate Jet Charter</a> – Scaled Enterprise Fleet Sourcing</li>
+                </ul>
+            </div>
+            <div class="authority-col">
+                <h3>⚓ Private Yacht Authority Hub</h3>
+                <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.5rem;">Seamless maritime pairings for Amalfi Coast, Monaco, and French Riviera arrivals.</p>
+                <ul>
+                    <li><a href="https://eliteluxurybookings.com/amalfi-coast-yacht-rental/">Amalfi Coast Yacht Rental</a> – 7 Best Deals & Custom Capri Charters</li>
+                    <li><a href="https://eliteluxurybookings.com/cost-to-charter-superyacht-2026/">Superyacht Cost Guide</a> – Base Rates, APA, Vetting & Fees</li>
+                    <li><a href="https://eliteluxurybookings.com/best-mediterranean-yacht-destinations/">Top Mediterranean Destinations</a> – Summer Itinerary Authority</li>
+                    <li><a href="https://eliteluxurybookings.com/how-to-rent-superyacht-guide/">Superyacht Booking Guide</a> – Vetting Operators & Broker Tips</li>
+                </ul>
+            </div>
+        </div>
+<section class="cta-banner">
             <h2 class="serif gold-text" style="font-size: 3.5rem; border: none; padding:0; margin-top:0;">Request Elite Aviation Quote</h2>
             <p>Do not letcommercial aviation bottlenecks jeopardize your corporate milestones. Connect directly with our dispatch desk to coordinate off-market aircraft inventory, secure roadshow slots, or schedule an urgent flight.</p>
             <a href="#quote" class="btn-gold" style="display: inline-block; width: auto;">Initiate Jet Procurement</a>
