@@ -7,7 +7,8 @@ def interlink_aviation():
         'private-jet-available-now.html',
         'business-jet-charter.html',
         'corporate-jet-charter.html',
-        'private-aircraft-charter.html'
+        'private-aircraft-charter.html',
+        'premium-jet-charter.html'
     ]
 
     css_style = """
@@ -73,6 +74,7 @@ def interlink_aviation():
                     <li><a href="https://eliteluxurybookings.com/business-jet-charter/">Business Jet Charter</a> – Premium Corporate Charter Flights</li>
                     <li><a href="https://eliteluxurybookings.com/corporate-jet-charter/">Corporate Jet Charter</a> – Scaled Enterprise Fleet Sourcing</li>
                     <li><a href="https://eliteluxurybookings.com/private-aircraft-charter/">Private Aircraft Charter</a> – Global Jet Sourcing & Rentals</li>
+                    <li><a href="https://eliteluxurybookings.com/premium-jet-charter/">Premium Jet Charter</a> – VIP Jet Sourcing & Concierge</li>
                 </ul>
             </div>
             <div class="authority-col">
