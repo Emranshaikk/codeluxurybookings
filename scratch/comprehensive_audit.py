@@ -19,7 +19,7 @@ def comprehensive_audit():
         if filename in ['404.html', 'thank-you.html']: continue
         
         filepath = os.path.join(root_dir, filename)
-        with open(filepath, 'r', encoding='utf-8') as f:
+        with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
             content = f.read()
             
         # Check Global Nav

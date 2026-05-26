@@ -12,8 +12,6 @@ RewriteEngine On
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteRule ^(.*)$ https://eliteluxurybookings.com/$1 [L,R=301]
-
-
 # 0. Global Error Handling
 ErrorDocument 404 /404.html
 

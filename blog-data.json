@@ -1,5 +1,46 @@
 [
     {
+        "url": "/amalfi-coast-yacht-rental.html",
+        "category": "private yacht",
+        "label": "Charter Authority",
+        "title": "7 Best Amalfi Coast Yacht Rental Deals You Must Try in 2025",
+        "image": "/assets/amalfi_yacht_hero.png",
+        "excerpt": "Planning your dream Mediterranean escape? Discover the best Amalfi Coast yacht rental options, boat types, pricing tables, coves, and booking strategies.",
+        "link_text": "Read the Full Guide"
+    },
+    {
+        "url": "/corporate-jet-charter.html",
+        "category": "private jet",
+        "label": "Corporate Solutions",
+        "title": "Corporate Jet Charter: Elite Executive Private Jet Services",
+        "excerpt": "Maximize executive productivity, protect valuable capital, and control your schedule. Secure elite executive jet charter flights tailored for multinational corporations and UHNW leaders.",
+        "link_text": "Configure Fleet Solution"
+    },
+    {
+        "url": "/business-jet-charter.html",
+        "category": "private jet",
+        "label": "Corporate Solutions",
+        "title": "Business Jet Charter: Premium Private Jet Rental & Flights",
+        "excerpt": "Secure premium business jet charter services tailored for executives, UHNW individuals, and corporate groups. Request a bespoke private jet rental quote today.",
+        "link_text": "Request Jet Quote"
+    },
+    {
+        "url": "/private-jet-available-now.html",
+        "category": "private jet",
+        "label": "Aviation Sourcing",
+        "title": "Private Jet Available Now: Instant On-Demand VIP Flights",
+        "excerpt": "Avoid commercial flight friction. Source a standard safety-vetted private jet available now for immediate same-day departures and last-minute travel globally.",
+        "link_text": "Request Flight Quote"
+    },
+    {
+        "url": "/luxury-private-jet-charter.html",
+        "category": "private jet",
+        "label": "Luxury Aviation",
+        "title": "Luxury Private Jet Charter: Elite Air Sourcing & VIP Flights",
+        "excerpt": "Secure an elite luxury private jet charter today. Access premium executive travel, on-demand luxury private jet rental, and VIP concierge flight services globally.",
+        "link_text": "Request Sourcing Quote"
+    },
+    {
         "url": "/business-jet-charter-guide-tips-pricing.html",
         "category": "private jet",
         "label": "Aviation Authority",

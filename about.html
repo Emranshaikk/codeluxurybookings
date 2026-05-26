@@ -132,7 +132,7 @@
         .mobile-menu a { color: rgba(255, 255, 255, 0.8) !important; text-decoration: none !important; font-size: 1.1rem !important; text-transform: uppercase !important; letter-spacing: 2px !important; padding: 1.2rem 0 !important; border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important; }
         @media (max-width: 1024px) { .nav-links { display: none !important; } .nav-hamburger { display: flex !important; } }
         
-        body { padding-top: 72px !important; }
+        
         body:has(.top-intel-bar) { padding-top: 108px !important; }
         
         @media (max-width: 768px) {
@@ -192,19 +192,38 @@
 </head>
 
 <body>
-    <nav class="global-nav">
-        <div class="global-nav-inner">
-            <a href="https://eliteluxurybookings.com/" class="nav-brand">Elite Luxury <span class="gold-text">Bookings</span></a>
-            <ul class="nav-links">
-                <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
-                <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Yachts</a></li>
-                <li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/">Villas</a></li>
-                <li><a href="https://eliteluxurybookings.com/blog/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Blog</a></li>
-                <li><a href="https://eliteluxurybookings.com/contact/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Contact</a></li>
-
-                    </ul>
+    <!-- ELB_NAV_START -->
+<div class="top-intel-bar">
+    <div class="ticker-wrap">
+        <div class="ticker-content">
+            <strong>⚠️ Intelligence Alert:</strong> Strategic Procurement Windows Open for Summer 2026. <strong>Empty Leg Flights Available:</strong> <a href="https://wa.me/918801079030">Connect for Instant Procurement</a> <strong>⚠️ Global Inventory Update:</strong> Off-Market Assets Now Accessible via Elite Concierge.
         </div>
-    </nav>
+    </div>
+</div>
+
+<nav class="global-nav">
+    <div class="container global-nav-inner">
+        <a href="https://eliteluxurybookings.com/" class="nav-brand">Elite Luxury <span class="nav-gold">Bookings</span></a>
+        <ul class="nav-links">
+            <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
+            <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Yachts</a></li>
+            <li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/">Villas</a></li>
+            <li><a href="https://eliteluxurybookings.com/blog/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Blog</a></li>
+            <li><a href="https://eliteluxurybookings.com/contact/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Contact</a></li>
+        </ul>
+        <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</nav>
+<div class="mobile-menu" id="elbMobileMenu">
+    <a href="https://eliteluxurybookings.com/elite-private-jet-charter/">✈ Private Jets</a>
+    <a href="https://eliteluxurybookings.com/luxury-villa-rentals/">🏡 Luxury Villas</a>
+    <a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">⚓ Luxury Yachts</a>
+    <a href="https://eliteluxurybookings.com/blog/">📰 Blog</a>
+    <a href="https://eliteluxurybookings.com/contact/">📞 Contact</a>
+</div>
+<!-- ELB_NAV_END -->
 
     <main>
         <header class="about-hero">
