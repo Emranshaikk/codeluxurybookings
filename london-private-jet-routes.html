@@ -31,12 +31,18 @@
 
         .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; box-sizing: border-box; }
         .serif { font-family: 'Cormorant Garamond', serif; }
-        .gold-text { color: var(--primary-gold); }
+        .gold-text {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 400;
+        }
 
         /* Hero Split Screen Layout */
         .city-hero {
-            padding: 8rem 0 6rem;
-            background: linear-gradient(rgba(5, 5, 5, 0.8), #050505), url('/assets/london_jet_hero.png') center/cover;
+            padding: 10rem 0 6rem;
+            background: radial-gradient(circle at top, rgba(212, 175, 55, 0.05) 0%, var(--dark-bg) 80%);
             position: relative;
         }
 
