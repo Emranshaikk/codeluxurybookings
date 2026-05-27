@@ -22,20 +22,164 @@
             --primary-gold: #d4af37;
             --dark-bg: #050505;
             --glass: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --text-main: #FFFFFF;
+            --text-muted: rgba(255, 255, 255, 0.65);
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #AA7C11 100%);
         }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; box-sizing: border-box; }
         .serif { font-family: 'Cormorant Garamond', serif; }
         .gold-text { color: var(--primary-gold); }
 
-        /* Hero */
-        .city-hero { padding: 12rem 0 6rem; background: linear-gradient(rgba(0,0,0,0.7), #000), url('/assets/city-bg-london.png') center/cover; text-align: center; }
-        .city-hero h1 { font-size: 4.5rem; margin-bottom: 1.5rem; }
+        /* Hero Split Screen Layout */
+        .city-hero {
+            padding: 8rem 0 6rem;
+            background: linear-gradient(rgba(5, 5, 5, 0.8), #050505), url('/assets/london_jet_hero.png') center/cover;
+            position: relative;
+        }
+
+        .hero-split {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-split { grid-template-columns: 1fr; gap: 3rem; }
+        }
+
+        .hero-info h1 {
+            font-size: clamp(2.8rem, 4.5vw, 4.8rem);
+            line-height: 1.1;
+            margin: 0 0 2rem;
+            font-weight: 300;
+        }
+
+        .hero-info p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 3rem;
+            max-width: 680px;
+        }
+
+        .eyebrow {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: var(--primary-gold);
+            font-weight: 700;
+            display: block;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Lead Capture Panel styling */
+        .lead-panel {
+            background: rgba(15, 15, 15, 0.85);
+            backdrop-filter: blur(30px);
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            padding: 3.5rem;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+            position: relative;
+        }
+
+        .lead-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 10%;
+            right: 10%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
+        }
+
+        .lead-panel h2 {
+            font-size: 2.2rem;
+            margin: 0 0 0.5rem;
+            color: #fff;
+            text-align: center;
+        }
+
+        .lead-sub {
+            display: block;
+            text-align: center;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary-gold);
+            margin-bottom: 2.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1.8rem;
+        }
+
+        .form-group label {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+            margin-bottom: 0.6rem;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            background: rgba(255, 255, 255, 0.02);
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 0.8rem 0;
+            color: #fff;
+            font-size: 1.05rem;
+            outline: none;
+            transition: var(--transition);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            border-bottom-color: var(--primary-gold);
+            background: rgba(212, 175, 55, 0.02);
+        }
+
+        .btn {
+            padding: 1.3rem 2.5rem;
+            border-radius: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            border: none;
+        }
+
+        .btn-gold {
+            background: var(--gold-gradient);
+            color: #000 !important;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+        }
 
         /* Intro Section */
         .section-padding { padding: 8rem 0; }
         .intro-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center; }
+        @media (max-width: 1024px) {
+            .intro-grid { grid-template-columns: 1fr; gap: 3rem; }
+        }
         .glass-card { background: var(--glass); backdrop-filter: blur(20px); border: 1px solid var(--glass-border); padding: 3rem; border-radius: 32px; }
 
         /* Route Grid */
@@ -49,11 +193,12 @@
         .airport-tag { display: inline-block; padding: 0.25rem 0.75rem; background: rgba(212, 175, 55, 0.1); color: var(--primary-gold); border-radius: 100px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1rem; }
 
         /* CTA */
-        .cta-banner { background: var(--primary-gold); color: #000; padding: 4rem; border-radius: 40px; text-align: center; margin-top: 4rem; }
-        .btn-black { background: #000; color: #fff; padding: 1.2rem 3rem; border-radius: 100px; text-decoration: none; font-weight: 600; display: inline-block; margin-top: 2rem; }
+        .cta-banner { background: var(--gold-gradient); color: #000; padding: 4rem; border-radius: 40px; text-align: center; margin-top: 4rem; box-shadow: 0 15px 40px rgba(212,175,55,0.2); }
+        .btn-black { background: #000; color: #fff !important; padding: 1.2rem 3rem; border-radius: 12px; text-decoration: none; font-weight: 600; display: inline-block; margin-top: 2rem; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; transition: var(--transition); }
+        .btn-black:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
 
         /* Breadcrumbs */
-        .breadcrumbs { padding: 2rem 0; font-size: 0.85rem; color: var(--text-muted); }
+        .breadcrumbs { padding: 1rem 0; font-size: 0.85rem; color: var(--text-muted); }
         .breadcrumbs a { color: var(--primary-gold); text-decoration: none; }
 
         /* ===== MASTER FOOTER (INJECTED SITE-WIDE) ===== */
@@ -223,16 +368,94 @@
 
     <header class="city-hero">
         <div class="container">
-            <div class="breadcrumbs">
+            <div class="breadcrumbs" style="text-align: left; padding: 1rem 0;">
                 <a href="https://eliteluxurybookings.com/">Home</a> / <a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a> / <span class="gold-text">London Routes</span>
             </div>
-            <h1 class="serif">Private Jet Charter <br><span class="gold-text">from London</span></h1>
-            <p style="max-width: 600px; margin: 0 auto; color: var(--text-muted);">Access the finest fleet of private aircraft departing from London's premier executive terminals. Bespoke itineraries, instant sourcing, and unparalleled service.</p>
+            
+            <div class="hero-split" style="text-align: left;">
+                <div class="hero-info">
+                    <span class="eyebrow">London Sourcing Hub</span>
+                    <h1 class="serif" style="font-size: clamp(2.5rem, 4vw, 4.5rem); line-height: 1.1; margin: 0 0 1.5rem 0;">Private Jet Charter <br><span class="gold-text">from London</span></h1>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem;">Access the finest fleet of private aircraft departing from London's premier executive terminals (FBOs). Maximize your schedule velocity with 15-minute boarding, customized layouts, and direct off-market flight procurement managed 24/7 by our dedicated coordination desk.</p>
+                    
+                    <div style="display: flex; gap: 1.5rem; margin-top: 1rem;">
+                        <a href="#booking-lead-form" class="btn btn-gold" style="font-size: 0.85rem; padding: 1rem 2rem; border-radius: 8px;">Request London Sourcing</a>
+                    </div>
+                </div>
+
+                <!-- Interactive Sourcing Form -->
+                <div class="lead-panel" id="booking-lead-form">
+                    <h2 class="serif" style="font-size: 1.8rem; margin: 0 0 0.5rem; color: #fff;">London Sourcing</h2>
+                    <span class="lead-sub" style="font-size: 0.8rem; letter-spacing: 2px;">Real-Time Flight Coordination</span>
+                    
+                    <form id="leadForm" onsubmit="submitLead(event)" style="display: flex; flex-direction: column;">
+                        <input type="hidden" name="form_type" value="London Private Jet Routes Landing Page">
+                        <input type="hidden" name="_redirect" value="https://eliteluxurybookings.com/thank-you.html">
+                        <input type="hidden" name="_target" value="Inquiry: London Private Jet Routes">
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;" class="form-grid">
+                            <div class="form-group" style="margin-bottom: 1rem;">
+                                <label for="name" style="font-size: 0.7rem;">Full Name *</label>
+                                <input id="name" type="text" name="name" required placeholder="Lord Sterling" style="font-size: 0.95rem; padding: 0.5rem 0;">
+                            </div>
+                            <div class="form-group" style="margin-bottom: 1rem;">
+                                <label for="phone" style="font-size: 0.7rem;">Phone / WhatsApp *</label>
+                                <input id="phone" type="tel" name="phone" required placeholder="+44 7700 900077" style="font-size: 0.95rem; padding: 0.5rem 0;">
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 1rem;">
+                            <label for="email" style="font-size: 0.7rem;">Email Address *</label>
+                            <input id="email" type="email" name="email" required placeholder="sterling@holdingcorp.com" style="font-size: 0.95rem; padding: 0.5rem 0;">
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;" class="form-grid">
+                            <div class="form-group" style="margin-bottom: 1rem;">
+                                <label for="destination" style="font-size: 0.7rem;">Destination City/Country *</label>
+                                <input id="destination" type="text" name="destination" required placeholder="Nice, France (LFMN)" style="font-size: 0.95rem; padding: 0.5rem 0;">
+                            </div>
+                            <div class="form-group" style="margin-bottom: 1rem;">
+                                <label for="date" style="font-size: 0.7rem;">Departure Date & Time *</label>
+                                <input id="date" type="text" name="date" required placeholder="Immediate / Date" style="font-size: 0.95rem; padding: 0.5rem 0;">
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;" class="form-grid">
+                            <div class="form-group" style="margin-bottom: 1.2rem;">
+                                <label for="passengers" style="font-size: 0.7rem;">Passengers *</label>
+                                <select id="passengers" name="passengers" required style="font-size: 0.9rem; padding: 0.5rem 0; color: #fff; background: #111; border: none; border-bottom: 1px solid rgba(255,255,255,0.15);">
+                                    <option value="1-4">1 - 4 Passengers</option>
+                                    <option value="5-8">5 - 8 Passengers</option>
+                                    <option value="9-14">9 - 14 Passengers</option>
+                                    <option value="15+">15+ (State/Enterprise)</option>
+                                </select>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 1.2rem;">
+                                <label for="aircraft_preference" style="font-size: 0.7rem;">Aircraft Class *</label>
+                                <select id="aircraft_preference" name="aircraft_preference" required style="font-size: 0.9rem; padding: 0.5rem 0; color: #fff; background: #111; border: none; border-bottom: 1px solid rgba(255,255,255,0.15);">
+                                    <option value="light">Light Jet (Phenom 300E)</option>
+                                    <option value="midsize">Midsize Jet (Praetor 500)</option>
+                                    <option value="super_midsize">Super Midsize (Praetor 600)</option>
+                                    <option value="heavy">Heavy Jet (Challenger 650)</option>
+                                    <option value="ultra_long_range">Ultra Long Range (Global 7500)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-gold" style="padding: 1rem; border-radius: 8px; font-size: 0.85rem; width: 100%;">Get Instant London Quote</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </header>
 
     <section class="section-padding">
         <div class="container">
+            <!-- London Jet Tarmac Visual Asset -->
+            <div class="image-container-premium" style="margin-bottom: 5rem;">
+                <img src="/assets/london_jet_hero.png" alt="A high-fidelity ultra-premium private jet sitting elegantly on the tarmac at a London executive terminal FBO during twilight sunset" loading="lazy" style="width: 100%; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); object-fit: cover; aspect-ratio: 16/9; display: block;">
+            </div>
+            
             <div class="intro-grid">
                 <div>
                     <h2 class="serif" style="font-size: 2.5rem; margin-bottom: 2rem;">The London <span class="gold-text">Aviation Experience</span></h2>
@@ -379,6 +602,38 @@
                 b.classList.toggle('open'); 
                 document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
             } 
+        }
+
+        async function submitLead(event) {
+            event.preventDefault();
+            const form = event.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerText;
+            
+            submitBtn.innerText = "Securing Sourcing Slots...";
+            submitBtn.disabled = true;
+
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch('/submit-lead.php', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (response.ok) {
+                    window.location.href = formData.get('_redirect') || 'https://eliteluxurybookings.com/thank-you.html';
+                } else {
+                    alert('Logistics system error. Please contact coordination desk via WhatsApp.');
+                    submitBtn.innerText = originalBtnText;
+                    submitBtn.disabled = false;
+                }
+            } catch (error) {
+                console.error('Submission error:', error);
+                alert('Connection failure. Sourcing desk is offline. Please use standard email.');
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+            }
         }
     </script>
     <!-- WhatsApp Float -->
