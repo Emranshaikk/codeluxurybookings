@@ -217,7 +217,7 @@ print(f"  robots.txt:                 Updated (Google-Extended allowed)")
 if report['errors']:
     print(f"\n  ERRORS ({len(report['errors'])}):")
     for e in report['errors']:
-        print(f"    ✗ {e}")
+        print(f"    [X] {e}")
 else:
     print(f"\n  No errors encountered.")
 print("="*60)
