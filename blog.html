@@ -18,8 +18,11 @@
     <!-- Premium Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;600&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" media="all">
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;600&display=swap">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet" media="all">
     <link rel="preload" href="https://eliteluxurybookings.com/blog-data.json" as="fetch" crossorigin="anonymous">
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J56D1LJLFM"></script>
@@ -29,7 +32,8 @@
         gtag('js', new Date());
         gtag('config', 'G-J56D1LJLFM');
     </script>
-    <style>/* ELB_BLOG_DESIGN_2026 */
+    <style>
+        /* ELB_BLOG_DESIGN_2026 */
         :root {
             --primary-gold: #D4AF37;
             --deep-black: #050505;
@@ -54,13 +58,13 @@
 
         /* --- NAVIGATION --- */
 
-        
+
 
         .nav-gold {
             color: #D4AF37 !important;
         }
 
-        
+
 
         .nav-links a {
             color: rgba(255, 255, 255, 0.7) !important;
@@ -331,76 +335,423 @@
         }
 
         /* --- ELITE NAV & TICKER STANDARDIZATION --- */
-        .top-intel-bar { background: rgba(5, 5, 5, 0.98) !important; border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important; height: 36px !important; overflow: hidden !important; position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; z-index: 100000 !important; display: flex !important; align-items: center !important; }
-        .ticker-wrap { white-space: nowrap !important; overflow: hidden !important; width: 100% !important; }
-        .ticker-content { display: inline-block !important; white-space: nowrap !important; padding-left: 100% !important; animation: ticker-scroll 40s linear infinite !important; font-size: 0.72rem !important; letter-spacing: 2px !important; text-transform: uppercase !important; color: rgba(255, 255, 255, 0.9) !important; }
-        @keyframes ticker-scroll { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-200%, 0, 0); } }
-        .ticker-content strong { color: #D4AF37 !important; margin: 0 40px !important; }
-        .ticker-content a { color: #fff !important; text-decoration: underline !important; text-underline-offset: 4px !important; margin-left: 10px !important; font-weight: 600 !important; }
-        
-        .global-nav { position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; background: rgba(5, 5, 5, 0.98) !important; backdrop-filter: blur(24px) !important; border-bottom: 1px solid rgba(212, 175, 55, 0.2) !important; z-index: 99999 !important; transition: top 0.3s ease !important; }
-        .top-intel-bar ~ .global-nav { top: 36px !important; }
-        .global-nav-inner { display: flex !important; align-items: center !important; justify-content: space-between !important; height: 72px !important; gap: 1rem !important; max-width: 1400px !important; margin: 0 auto !important; padding: 0 2rem !important; box-sizing: border-box !important; }
-        .nav-brand { font-family: 'Cormorant Garamond', serif !important; font-size: 1.75rem !important; font-weight: 600 !important; color: #fff !important; text-decoration: none !important; }
-        .nav-gold { color: #D4AF37 !important; }
-        .nav-links { display: flex !important; align-items: center !important; gap: 0.25rem !important; list-style: none !important; flex: 1 !important; justify-content: center !important; margin: 0 !important; padding: 0 !important; }
-        .nav-links a { color: rgba(255, 255, 255, 0.7) !important; text-decoration: none !important; font-size: 0.82rem !important; text-transform: uppercase !important; letter-spacing: 1.5px !important; padding: 0.5rem 0.9rem !important; border-radius: 6px !important; transition: all 0.4s !important; font-family: 'Inter', sans-serif !important; }
-        .nav-links a:hover { color: #D4AF37 !important; }
-        .nav-hamburger { display: none !important; flex-direction: column !important; gap: 5px !important; cursor: pointer !important; padding: 0.5rem !important; z-index: 100001 !important; }
-        .nav-hamburger span { display: block !important; width: 24px !important; height: 2px !important; background: rgba(255, 255, 255, 0.8) !important; border-radius: 2px !important; transition: all 0.4s !important; }
-        .nav-hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px) !important; }
-        .nav-hamburger.open span:nth-child(2) { opacity: 0 !important; }
-        .nav-hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px) !important; }
-        .mobile-menu { display: none !important; position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; background: #050505 !important; padding: 72px 2rem 2rem !important; z-index: 100000 !important; flex-direction: column !important; gap: 0.5rem !important; overflow-y: auto !important; }
-        .mobile-menu.open { display: flex !important; }
-        .mobile-menu a { color: rgba(255, 255, 255, 0.8) !important; text-decoration: none !important; font-size: 1.1rem !important; text-transform: uppercase !important; letter-spacing: 2px !important; padding: 1.2rem 0 !important; border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important; }
-        @media (max-width: 1024px) { .nav-links { display: none !important; } .nav-hamburger { display: flex !important; } }
-        
-        
-        body:has(.top-intel-bar) { padding-top: 108px !important; }
-        
-        @media (max-width: 768px) {
-            .top-intel-bar { height: 32px !important; }
-            .top-intel-bar ~ .global-nav { top: 32px !important; }
-            body:has(.top-intel-bar) { padding-top: 104px !important; }
+        .top-intel-bar {
+            background: rgba(5, 5, 5, 0.98) !important;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important;
+            height: 36px !important;
+            overflow: hidden !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            z-index: 100000 !important;
+            display: flex !important;
+            align-items: center !important;
         }
+
+        .ticker-wrap {
+            white-space: nowrap !important;
+            overflow: hidden !important;
+            width: 100% !important;
+        }
+
+        .ticker-content {
+            display: inline-block !important;
+            white-space: nowrap !important;
+            padding-left: 100% !important;
+            animation: ticker-scroll 40s linear infinite !important;
+            font-size: 0.72rem !important;
+            letter-spacing: 2px !important;
+            text-transform: uppercase !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        @keyframes ticker-scroll {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                transform: translate3d(-200%, 0, 0);
+            }
+        }
+
+        .ticker-content strong {
+            color: #D4AF37 !important;
+            margin: 0 40px !important;
+        }
+
+        .ticker-content a {
+            color: #fff !important;
+            text-decoration: underline !important;
+            text-underline-offset: 4px !important;
+            margin-left: 10px !important;
+            font-weight: 600 !important;
+        }
+
+        .global-nav {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            background: rgba(5, 5, 5, 0.98) !important;
+            backdrop-filter: blur(24px) !important;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2) !important;
+            z-index: 99999 !important;
+            transition: top 0.3s ease !important;
+        }
+
+        .top-intel-bar~.global-nav {
+            top: 36px !important;
+        }
+
+        .global-nav-inner {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            height: 72px !important;
+            gap: 1rem !important;
+            max-width: 1400px !important;
+            margin: 0 auto !important;
+            padding: 0 2rem !important;
+            box-sizing: border-box !important;
+        }
+
+        .nav-brand {
+            font-family: 'Cormorant Garamond', serif !important;
+            font-size: 1.75rem !important;
+            font-weight: 600 !important;
+            color: #fff !important;
+            text-decoration: none !important;
+        }
+
+        .nav-gold {
+            color: #D4AF37 !important;
+        }
+
+        .nav-links {
+            display: flex !important;
+            align-items: center !important;
+            gap: 0.25rem !important;
+            list-style: none !important;
+            flex: 1 !important;
+            justify-content: center !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.7) !important;
+            text-decoration: none !important;
+            font-size: 0.82rem !important;
+            text-transform: uppercase !important;
+            letter-spacing: 1.5px !important;
+            padding: 0.5rem 0.9rem !important;
+            border-radius: 6px !important;
+            transition: all 0.4s !important;
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        .nav-links a:hover {
+            color: #D4AF37 !important;
+        }
+
+        .nav-hamburger {
+            display: none !important;
+            flex-direction: column !important;
+            gap: 5px !important;
+            cursor: pointer !important;
+            padding: 0.5rem !important;
+            z-index: 100001 !important;
+        }
+
+        .nav-hamburger span {
+            display: block !important;
+            width: 24px !important;
+            height: 2px !important;
+            background: rgba(255, 255, 255, 0.8) !important;
+            border-radius: 2px !important;
+            transition: all 0.4s !important;
+        }
+
+        .nav-hamburger.open span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px) !important;
+        }
+
+        .nav-hamburger.open span:nth-child(2) {
+            opacity: 0 !important;
+        }
+
+        .nav-hamburger.open span:nth-child(3) {
+            transform: rotate(-45deg) translate(4px, -4px) !important;
+        }
+
+        .mobile-menu {
+            display: none !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            background: #050505 !important;
+            padding: 72px 2rem 2rem !important;
+            z-index: 100000 !important;
+            flex-direction: column !important;
+            gap: 0.5rem !important;
+            overflow-y: auto !important;
+        }
+
+        .mobile-menu.open {
+            display: flex !important;
+        }
+
+        .mobile-menu a {
+            color: rgba(255, 255, 255, 0.8) !important;
+            text-decoration: none !important;
+            font-size: 1.1rem !important;
+            text-transform: uppercase !important;
+            letter-spacing: 2px !important;
+            padding: 1.2rem 0 !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+        }
+
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none !important;
+            }
+
+            .nav-hamburger {
+                display: flex !important;
+            }
+        }
+
+
+        body:has(.top-intel-bar) {
+            padding-top: 108px !important;
+        }
+
+        @media (max-width: 768px) {
+            .top-intel-bar {
+                height: 32px !important;
+            }
+
+            .top-intel-bar~.global-nav {
+                top: 32px !important;
+            }
+
+            body:has(.top-intel-bar) {
+                padding-top: 104px !important;
+            }
+        }
+
         /* --- END ELITE NAV & TICKER --- */
         /* ===== MASTER FOOTER (INJECTED SITE-WIDE) ===== */
-        .footer { background: #000 !important; padding: 5rem 0 3rem !important; border-top: 1px solid rgba(212, 175, 55, 0.1) !important; margin-top: 5rem !important; text-align: left !important; }
-        .footer-grid { display: grid !important; grid-template-columns: 2fr 1fr 1fr !important; gap: 4rem !important; padding-bottom: 4rem !important; border-bottom: 1px solid rgba(212, 175, 55, 0.1) !important; text-align: left !important; }
-        .footer-brand { text-align: left !important; }
-        .footer-brand h2 { font-family: 'Cormorant Garamond', serif !important; font-size: 2.2rem !important; margin-bottom: 1.5rem !important; color: #fff !important; text-align: left !important; }
-        .footer-brand h2 span.gold-text { background: var(--gold-gradient) !important; -webkit-background-clip: text !important; background-clip: text !important; -webkit-text-fill-color: transparent !important; }
-        .footer-brand p { font-family: 'Inter', sans-serif !important; font-size: 0.95rem !important; line-height: 1.8 !important; max-width: 380px !important; margin-bottom: 2rem !important; color: rgba(255, 255, 255, 0.7) !important; text-align: left !important; }
-        .footer-socials { display: flex !important; gap: 1rem !important; justify-content: flex-start !important; align-items: center !important; margin-top: 1.5rem !important; }
-        .footer-socials a { display: flex !important; align-items: center !important; justify-content: center !important; width: 40px !important; height: 40px !important; border: 1px solid rgba(255, 255, 255, 0.25) !important; border-radius: 50% !important; color: rgba(255, 255, 255, 0.8) !important; font-size: 1.1rem !important; text-decoration: none !important; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important; background: transparent !important; }
-        .footer-socials a:hover { color: #D4AF37 !important; border-color: #D4AF37 !important; background: rgba(212, 175, 55, 0.05) !important; transform: translateY(-2px) !important; }
-        .footer-col { text-align: left !important; }
-        .footer-col h4 { font-family: 'Inter', sans-serif !important; font-weight: 600 !important; color: #D4AF37 !important; text-transform: uppercase !important; letter-spacing: 2px !important; font-size: 0.9rem !important; margin-bottom: 2rem !important; text-align: left !important; }
-        .footer-col ul { list-style: none !important; padding: 0 !important; margin: 0 !important; text-align: left !important; }
-        .footer-col ul li { margin-bottom: 1.2rem !important; text-align: left !important; }
-        .footer-col ul li a { font-family: 'Inter', sans-serif !important; color: rgba(255, 255, 255, 0.85) !important; text-decoration: none !important; transition: color 0.3s ease !important; font-size: 0.95rem !important; font-weight: 400 !important; }
-        .footer-col ul li a:hover { color: #D4AF37 !important; }
-        .footer-bottom { display: flex !important; justify-content: space-between !important; align-items: center !important; padding-top: 3rem !important; color: rgba(255, 255, 255, 0.4) !important; font-size: 0.85rem !important; }
-        .footer-legal { display: flex !important; gap: 2rem !important; }
-        .footer-legal a { color: inherit !important; text-decoration: none !important; transition: color 0.3s ease !important; }
-        .footer-legal a:hover { color: #D4AF37 !important; }
-        @media (max-width: 992px) { 
-            .footer-grid { grid-template-columns: 1.5fr 1fr 1fr !important; gap: 3rem !important; } 
-            .footer-brand { grid-column: span 3 !important; margin-bottom: 2rem !important; } 
+        .footer {
+            background: #000 !important;
+            padding: 5rem 0 3rem !important;
+            border-top: 1px solid rgba(212, 175, 55, 0.1) !important;
+            margin-top: 5rem !important;
+            text-align: left !important;
         }
-        @media (max-width: 600px) { 
-            .footer-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; } 
-            .footer-brand { grid-column: span 1 !important; text-align: left !important; margin-bottom: 0 !important; } 
-            .footer-brand h2 { text-align: left !important; }
-            .footer-brand p { text-align: left !important; margin: 0 auto 2rem auto !important; }
-            .footer-socials { justify-content: flex-start !important; }
-            .footer-col { text-align: left !important; }
-            .footer-col h4 { text-align: left !important; margin-bottom: 1rem !important; }
-            .footer-col ul { text-align: left !important; }
-            .footer-col ul li { text-align: left !important; margin-bottom: 0.8rem !important; }
-            .footer-bottom { flex-direction: column !important; gap: 1.5rem !important; text-align: left !important; align-items: flex-start !important; } 
-            .footer-legal { justify-content: flex-start !important; width: 100% !important; }
+
+        .footer-grid {
+            display: grid !important;
+            grid-template-columns: 2fr 1fr 1fr !important;
+            gap: 4rem !important;
+            padding-bottom: 4rem !important;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1) !important;
+            text-align: left !important;
+        }
+
+        .footer-brand {
+            text-align: left !important;
+        }
+
+        .footer-brand h2 {
+            font-family: 'Cormorant Garamond', serif !important;
+            font-size: 2.2rem !important;
+            margin-bottom: 1.5rem !important;
+            color: #fff !important;
+            text-align: left !important;
+        }
+
+        .footer-brand h2 span.gold-text {
+            background: var(--gold-gradient) !important;
+            -webkit-background-clip: text !important;
+            background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+        }
+
+        .footer-brand p {
+            font-family: 'Inter', sans-serif !important;
+            font-size: 0.95rem !important;
+            line-height: 1.8 !important;
+            max-width: 380px !important;
+            margin-bottom: 2rem !important;
+            color: rgba(255, 255, 255, 0.7) !important;
+            text-align: left !important;
+        }
+
+        .footer-socials {
+            display: flex !important;
+            gap: 1rem !important;
+            justify-content: flex-start !important;
+            align-items: center !important;
+            margin-top: 1.5rem !important;
+        }
+
+        .footer-socials a {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 40px !important;
+            height: 40px !important;
+            border: 1px solid rgba(255, 255, 255, 0.25) !important;
+            border-radius: 50% !important;
+            color: rgba(255, 255, 255, 0.8) !important;
+            font-size: 1.1rem !important;
+            text-decoration: none !important;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            background: transparent !important;
+        }
+
+        .footer-socials a:hover {
+            color: #D4AF37 !important;
+            border-color: #D4AF37 !important;
+            background: rgba(212, 175, 55, 0.05) !important;
+            transform: translateY(-2px) !important;
+        }
+
+        .footer-col {
+            text-align: left !important;
+        }
+
+        .footer-col h4 {
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 600 !important;
+            color: #D4AF37 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 2px !important;
+            font-size: 0.9rem !important;
+            margin-bottom: 2rem !important;
+            text-align: left !important;
+        }
+
+        .footer-col ul {
+            list-style: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            text-align: left !important;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 1.2rem !important;
+            text-align: left !important;
+        }
+
+        .footer-col ul li a {
+            font-family: 'Inter', sans-serif !important;
+            color: rgba(255, 255, 255, 0.85) !important;
+            text-decoration: none !important;
+            transition: color 0.3s ease !important;
+            font-size: 0.95rem !important;
+            font-weight: 400 !important;
+        }
+
+        .footer-col ul li a:hover {
+            color: #D4AF37 !important;
+        }
+
+        .footer-bottom {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            padding-top: 3rem !important;
+            color: rgba(255, 255, 255, 0.4) !important;
+            font-size: 0.85rem !important;
+        }
+
+        .footer-legal {
+            display: flex !important;
+            gap: 2rem !important;
+        }
+
+        .footer-legal a {
+            color: inherit !important;
+            text-decoration: none !important;
+            transition: color 0.3s ease !important;
+        }
+
+        .footer-legal a:hover {
+            color: #D4AF37 !important;
+        }
+
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: 1.5fr 1fr 1fr !important;
+                gap: 3rem !important;
+            }
+
+            .footer-brand {
+                grid-column: span 3 !important;
+                margin-bottom: 2rem !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .footer-grid {
+                grid-template-columns: 1fr !important;
+                gap: 2.5rem !important;
+            }
+
+            .footer-brand {
+                grid-column: span 1 !important;
+                text-align: left !important;
+                margin-bottom: 0 !important;
+            }
+
+            .footer-brand h2 {
+                text-align: left !important;
+            }
+
+            .footer-brand p {
+                text-align: left !important;
+                margin: 0 auto 2rem auto !important;
+            }
+
+            .footer-socials {
+                justify-content: flex-start !important;
+            }
+
+            .footer-col {
+                text-align: left !important;
+            }
+
+            .footer-col h4 {
+                text-align: left !important;
+                margin-bottom: 1rem !important;
+            }
+
+            .footer-col ul {
+                text-align: left !important;
+            }
+
+            .footer-col ul li {
+                text-align: left !important;
+                margin-bottom: 0.8rem !important;
+            }
+
+            .footer-bottom {
+                flex-direction: column !important;
+                gap: 1.5rem !important;
+                text-align: left !important;
+                align-items: flex-start !important;
+            }
+
+            .footer-legal {
+                justify-content: flex-start !important;
+                width: 100% !important;
+            }
         }
     </style>
 
@@ -422,17 +773,18 @@
 
     <!-- Open Graph / Social Sharing -->
     <meta property="og:title" content="Elite Luxury Blog: Mastery in Private Jets, Yachts & Villas">
-    <meta property="og:description" content="Expert articles on private jet routes, luxury yacht charters, and exclusive villa travel. The global gold standard in luxury travel intel.">
+    <meta property="og:description"
+        content="Expert articles on private jet routes, luxury yacht charters, and exclusive villa travel. The global gold standard in luxury travel intel.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://eliteluxurybookings.com/blog/">
     <meta property="og:image" content="https://eliteluxurybookings.com/assets/elite_jet_master_hero.png">
     <meta property="og:site_name" content="Elite Luxury Bookings">
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
         })(window, document, "clarity", "script", "sia395rirl");
     </script>
     <link rel="stylesheet" href="/style.css">
@@ -448,37 +800,47 @@
 <body>
     <!-- NAVIGATION -->
     <!-- ELB_NAV_START -->
-<div class="top-intel-bar">
-    <div class="ticker-wrap">
-        <div class="ticker-content">
-            <strong>⚠️ Intelligence Alert:</strong> Strategic Procurement Windows Open for Summer 2026. <strong>Empty Leg Flights Available:</strong> <a href="https://wa.me/918801079030">Connect for Instant Procurement</a> <strong>⚠️ Global Inventory Update:</strong> Off-Market Assets Now Accessible via Elite Concierge.
+    <div class="top-intel-bar">
+        <div class="ticker-wrap">
+            <div class="ticker-content">
+                <strong>⚠️ Intelligence Alert:</strong> Strategic Procurement Windows Open for Summer 2026.
+                <strong>Empty Leg Flights Available:</strong> <a href="https://wa.me/918801079030">Connect for Instant
+                    Procurement</a> <strong>⚠️ Global Inventory Update:</strong> Off-Market Assets Now Accessible via
+                Elite Concierge.
+            </div>
         </div>
     </div>
-</div>
 
-<nav class="global-nav">
-    <div class="container global-nav-inner">
-        <a href="https://eliteluxurybookings.com/" class="nav-brand">Elite Luxury <span class="nav-gold">Bookings</span></a>
-        <ul class="nav-links">
-            <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
-            <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Yachts</a></li>
-            <li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/">Villas</a></li>
-            <li><a href="https://eliteluxurybookings.com/blog/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Blog</a></li>
-            <li><a href="https://eliteluxurybookings.com/contact/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Contact</a></li>
-        </ul>
-        <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()">
-            <span></span><span></span><span></span>
+    <nav class="global-nav">
+        <div class="container global-nav-inner">
+            <a href="https://eliteluxurybookings.com/" class="nav-brand">Elite Luxury <span
+                    class="nav-gold">Bookings</span></a>
+            <ul class="nav-links">
+                <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
+                <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Yachts</a></li>
+                <li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/">Villas</a></li>
+                <li><a href="https://eliteluxurybookings.com/blog/"
+                        style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;"
+                        onmouseover="this.style.color='#D4AF37'"
+                        onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Blog</a></li>
+                <li><a href="https://eliteluxurybookings.com/contact/"
+                        style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;"
+                        onmouseover="this.style.color='#D4AF37'"
+                        onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Contact</a></li>
+            </ul>
+            <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()">
+                <span></span><span></span><span></span>
+            </div>
         </div>
+    </nav>
+    <div class="mobile-menu" id="elbMobileMenu">
+        <a href="https://eliteluxurybookings.com/elite-private-jet-charter/">✈ Private Jets</a>
+        <a href="https://eliteluxurybookings.com/luxury-villa-rentals/">🏡 Luxury Villas</a>
+        <a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">⚓ Luxury Yachts</a>
+        <a href="https://eliteluxurybookings.com/blog/">📰 Blog</a>
+        <a href="https://eliteluxurybookings.com/contact/">📞 Contact</a>
     </div>
-</nav>
-<div class="mobile-menu" id="elbMobileMenu">
-    <a href="https://eliteluxurybookings.com/elite-private-jet-charter/">✈ Private Jets</a>
-    <a href="https://eliteluxurybookings.com/luxury-villa-rentals/">🏡 Luxury Villas</a>
-    <a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">⚓ Luxury Yachts</a>
-    <a href="https://eliteluxurybookings.com/blog/">📰 Blog</a>
-    <a href="https://eliteluxurybookings.com/contact/">📞 Contact</a>
-</div>
-<!-- ELB_NAV_END -->
+    <!-- ELB_NAV_END -->
     <main>
         <header class="blog-hero">
             <div class="container">
@@ -519,14 +881,21 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <h2>Elite Luxury <span class="gold-text">Bookings</span></h2>
-                    <p>Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
+                    <p>Curating world-class luxury experiences through our global partner network. Private Jets. Yachts.
+                        Villas.</p>
                     <div class="footer-socials">
-                        <a href="https://www.facebook.com/eliteluxurybookings" aria-label="Follow Elite Luxury Bookings on Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/eliteluxurybookings" aria-label="Follow Elite Luxury Bookings on Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/elite-luxury-bookings/" aria-label="Follow Elite Luxury Bookings on LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/eliteluxurybookings"
+                            aria-label="Follow Elite Luxury Bookings on Facebook" target="_blank" rel="noopener"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/eliteluxurybookings"
+                            aria-label="Follow Elite Luxury Bookings on Instagram" target="_blank" rel="noopener"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/elite-luxury-bookings/"
+                            aria-label="Follow Elite Luxury Bookings on LinkedIn" target="_blank" rel="noopener"><i
+                                class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer-col">
                     <h4>LUXURY SOURCING</h4>
                     <ul>
@@ -537,7 +906,7 @@
                         <li><a href="https://eliteluxurybookings.com/blog/">Blog</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-col">
                     <h4>THE BRAND</h4>
                     <ul>
@@ -548,7 +917,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2026 Elite Luxury Bookings. All rights reserved. Vetted Partner network operations.</p>
                 <div class="footer-legal">
@@ -558,7 +927,7 @@
             </div>
         </div>
     </footer>
-<script>
+    <script>
         let allPosts = [];
         let filteredPosts = [];
         let currentPage = 1;
@@ -626,7 +995,7 @@
                 a.href = item.url;
                 a.className = 'blog-card';
                 a.setAttribute('data-category', item.category);
-                
+
                 a.innerHTML = `
                     <div class="card-body">
                         <span class="card-label">${item.label}</span>
@@ -694,16 +1063,24 @@
         }
     </script>
 
-<script>
-        function toggleMobileMenu() { 
-            var m = document.getElementById('elbMobileMenu'), 
-                b = document.getElementById('navHamburger'); 
-            if (m && b) { 
-                m.classList.toggle('open'); 
-                b.classList.toggle('open'); 
+    <script>
+        function toggleMobileMenu() {
+            var m = document.getElementById('elbMobileMenu'),
+                b = document.getElementById('navHamburger');
+            if (m && b) {
+                m.classList.toggle('open');
+                b.classList.toggle('open');
                 document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
-            } 
+            }
         }
     </script>
+<!-- WhatsApp Float -->
+<a href="https://wa.me/918801079030" class="wa-float" target="_blank" rel="noopener" aria-label="Chat with Elite Luxury Bookings Concierge on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+    </svg>
+</a>
+
 </body>
+
 </html>

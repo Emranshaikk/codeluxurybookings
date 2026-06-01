@@ -18,6 +18,15 @@
             -webkit-font-smoothing: antialiased;
         }
 
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        a:hover {
+            color: var(--primary-gold);
+        }
+
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 80px;

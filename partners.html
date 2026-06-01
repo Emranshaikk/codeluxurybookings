@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Luxury Travel Network | Partners | Elite Luxury Bookings</title>
+    <meta name="description"
+        content="Our curated global network of elite partnerships across private aviation, superyacht charters, luxury villas, private islands, and bespoke lifestyle management.">
+    <link rel="canonical" href="https://eliteluxurybookings.com/partners/">
+
+    <!-- SEO Enhancements -->
+    <meta name="keywords"
+        content="elite travel network, private jet partnerships, luxury hotel partners, superyacht alliances, lifestyle management">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <!-- Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
+
+    <style>
+        /* --- GLOBAL LINK RESET --- */
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        a:hover {
+            color: #D4AF37;
+        }
+
+        :root {
+            --primary-gold: #D4AF37;
+            --deep-black: #050505;
+            --graphene: #111111;
+            --glass-bg: rgba(255, 255, 255, 0.02);
+            --glass-border: rgba(212, 175, 55, 0.15);
+            --text-main: #FFFFFF;
+            --text-muted: rgba(255, 255, 255, 0.7);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* --- BUTTONS FALLBACK & STYLING --- */
+        .btn {
+            display: inline-block;
+            padding: 1.2rem 2.5rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--primary-gold), #B8860B);
+            color: #000 !important;
+            border: none;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.15);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.25);
+            color: #000 !important;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary-gold) !important;
+            border: 1px solid var(--primary-gold);
+        }
+
+        .btn-outline:hover {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--primary-gold) !important;
+        }
+
+        .btn:active {
+            transform: scale(0.97);
+        }
+
+        /* --- WHATSAPP FLOAT FALLBACK & STYLING --- */
+        .wa-float {
+            position: fixed;
+            bottom: 40px;
+            right: 40px !important;
+            left: auto !important;
+            background: #25D366 !important;
+            color: #FFF !important;
+            width: 65px;
+            height: 65px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 35px;
+            box-shadow: 0px 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 100000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .wa-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 6px 25px rgba(37, 211, 102, 0.6);
+            color: #FFF !important;
+        }
+
+        .wa-float svg {
+            fill: #FFF !important;
+            width: 34px;
+            height: 34px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--deep-black);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .gold-text {
+            color: var(--primary-gold);
+        }
+
+        /* ===== MASTER FOOTER (INJECTED SITE-WIDE) ===== */
+        .footer {
+            background: #000 !important;
+            padding: 5rem 0 3rem !important;
+            border-top: 1px solid rgba(212, 175, 55, 0.1) !important;
+            margin-top: 5rem !important;
+            text-align: left !important;
+        }
+
+        .footer-grid {
+            display: grid !important;
+            grid-template-columns: 2fr 1fr 1fr !important;
+            gap: 4rem !important;
+            padding-bottom: 4rem !important;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1) !important;
+            text-align: left !important;
+        }
+
+        .footer-brand {
+            text-align: left !important;
+        }
+
+        .footer-brand h2 {
+            font-family: 'Cormorant Garamond', serif !important;
+            font-size: 2.2rem !important;
+            margin-bottom: 1.5rem !important;
+            color: #fff !important;
+            text-align: left !important;
+        }
+
+        .footer-brand p {
+            font-family: 'Inter', sans-serif !important;
+            font-size: 0.9rem !important;
+            line-height: 1.8 !important;
+            max-width: 380px !important;
+            margin-bottom: 2rem !important;
+            color: rgba(255, 255, 255, 0.7) !important;
+            text-align: left !important;
+        }
+
+        .footer-socials {
+            display: flex !important;
+            gap: 1.5rem !important;
+            justify-content: flex-start !important;
+        }
+
+        .footer-socials a {
+            color: rgba(255, 255, 255, 0.6) !important;
+            transition: 0.3s !important;
+            font-size: 1.5rem !important;
+        }
+
+        .footer-socials a:hover {
+            color: #D4AF37 !important;
+        }
+
+        .footer-col {
+            text-align: left !important;
+        }
+
+        .footer-col h4 {
+            color: #D4AF37 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 2px !important;
+            font-size: 0.9rem !important;
+            margin-bottom: 2rem !important;
+            text-align: left !important;
+        }
+
+        .footer-col ul {
+            list-style: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            text-align: left !important;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 1rem !important;
+            text-align: left !important;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255, 255, 255, 0.8) !important;
+            text-decoration: none !important;
+            transition: 0.3s !important;
+            font-size: 0.95rem !important;
+        }
+
+        .footer-col ul li a:hover {
+            color: #D4AF37 !important;
+            padding-left: 5px !important;
+        }
+
+        .footer-bottom {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            padding-top: 3rem !important;
+            color: rgba(255, 255, 255, 0.4) !important;
+            font-size: 0.85rem !important;
+        }
+
+        .footer-legal {
+            display: flex !important;
+            gap: 2rem !important;
+        }
+
+        .footer-legal a {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr !important;
+            }
+
+            .footer-brand {
+                grid-column: span 2 !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .footer-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .footer-brand {
+                grid-column: span 1 !important;
+                text-align: center !important;
+            }
+
+            .footer-brand h2 {
+                text-align: center !important;
+            }
+
+            .footer-brand p {
+                text-align: center !important;
+                margin: 0 auto 2rem auto !important;
+            }
+
+            .footer-socials {
+                justify-content: center !important;
+            }
+
+            .footer-col {
+                text-align: center !important;
+            }
+
+            .footer-col h4 {
+                text-align: center !important;
+            }
+
+            .footer-col ul {
+                text-align: center !important;
+            }
+
+            .footer-col ul li {
+                text-align: center !important;
+            }
+
+            .footer-bottom {
+                flex-direction: column !important;
+                gap: 2rem !important;
+                text-align: center !important;
+            }
+        }
+
+        /* --- ELITE NAV & TICKER STANDARDIZATION --- */
+        .top-intel-bar {
+            background: rgba(5, 5, 5, 0.98) !important;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important;
+            height: 36px !important;
+            overflow: hidden !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            z-index: 100000 !important;
+            display: flex !important;
+            align-items: center !important;
+        }
+
+        .ticker-wrap {
+            white-space: nowrap !important;
+            overflow: hidden !important;
+            width: 100% !important;
+        }
+
+        .ticker-content {
+            display: inline-block !important;
+            white-space: nowrap !important;
+            padding-left: 100% !important;
+            animation: ticker-scroll 40s linear infinite !important;
+            font-size: 0.72rem !important;
+            letter-spacing: 2px !important;
+            text-transform: uppercase !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        @keyframes ticker-scroll {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                transform: translate3d(-200%, 0, 0);
+            }
+        }
+
+        .ticker-content strong {
+            color: #D4AF37 !important;
+            margin: 0 40px !important;
+        }
+
+        .ticker-content a {
+            color: #fff !important;
+            text-decoration: underline !important;
+            text-underline-offset: 4px !important;
+            margin-left: 10px !important;
+            font-weight: 600 !important;
+        }
+
+        .global-nav {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            background: rgba(5, 5, 5, 0.98) !important;
+            backdrop-filter: blur(24px) !important;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2) !important;
+            z-index: 99999 !important;
+            transition: top 0.3s ease !important;
+        }
+
+        .top-intel-bar~.global-nav {
+            top: 36px !important;
+        }
+
+        .global-nav-inner {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            height: 72px !important;
+            gap: 1rem !important;
+            max-width: 1400px !important;
+            margin: 0 auto !important;
+            padding: 0 2rem !important;
+            box-sizing: border-box !important;
+        }
+
+        .nav-brand {
+            font-family: 'Cormorant Garamond', serif !important;
+            font-size: 1.75rem !important;
+            font-weight: 600 !important;
+            color: #fff !important;
+            text-decoration: none !important;
+        }
+
+        .nav-gold {
+            color: #D4AF37 !important;
+        }
+
+        .nav-links {
+            display: flex !important;
+            align-items: center !important;
+            gap: 0.25rem !important;
+            list-style: none !important;
+            flex: 1 !important;
+            justify-content: center !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.7) !important;
+            text-decoration: none !important;
+            font-size: 0.82rem !important;
+            text-transform: uppercase !important;
+            letter-spacing: 1.5px !important;
+            padding: 0.5rem 0.9rem !important;
+            border-radius: 6px !important;
+            transition: all 0.4s !important;
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        .nav-links a:hover {
+            color: #D4AF37 !important;
+        }
+
+        .nav-hamburger {
+            display: none !important;
+            flex-direction: column !important;
+            gap: 5px !important;
+            cursor: pointer !important;
+            padding: 0.5rem !important;
+            z-index: 100001 !important;
+        }
+
+        .nav-hamburger span {
+            display: block !important;
+            width: 24px !important;
+            height: 2px !important;
+            background: rgba(255, 255, 255, 0.8) !important;
+            border-radius: 2px !important;
+            transition: all 0.4s !important;
+        }
+
+        .nav-hamburger.open span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px) !important;
+        }
+
+        .nav-hamburger.open span:nth-child(2) {
+            opacity: 0 !important;
+        }
+
+        .nav-hamburger.open span:nth-child(3) {
+            transform: rotate(-45deg) translate(4px, -4px) !important;
+        }
+
+        .mobile-menu {
+            display: none !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            background: #050505 !important;
+            padding: 72px 2rem 2rem !important;
+            z-index: 100000 !important;
+            flex-direction: column !important;
+            gap: 0.5rem !important;
+            overflow-y: auto !important;
+        }
+
+        .mobile-menu.open {
+            display: flex !important;
+        }
+
+        .mobile-menu a {
+            color: rgba(255, 255, 255, 0.8) !important;
+            text-decoration: none !important;
+            font-size: 1.1rem !important;
+            text-transform: uppercase !important;
+            letter-spacing: 2px !important;
+            padding: 1.2rem 0 !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+        }
+
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none !important;
+            }
+
+            .nav-hamburger {
+                display: flex !important;
+            }
+        }
+
+        body:has(.top-intel-bar) {
+            padding-top: 108px !important;
+        }
+
+        @media (max-width: 768px) {
+            .top-intel-bar {
+                height: 32px !important;
+            }
+
+            .top-intel-bar~.global-nav {
+                top: 32px !important;
+            }
+
+            body:has(.top-intel-bar) {
+                padding-top: 104px !important;
+            }
+        }
+
+        /* --- HERO --- */
+        .partners-hero {
+            padding: 12rem 0 10rem;
+            text-align: center;
+            background: linear-gradient(rgba(5, 5, 5, 0.76), rgba(5, 5, 5, 0.86)), url('assets/executive_lounge_fbo.png') no-repeat center center/cover;
+        }
+
+        .partners-hero h1 {
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            font-size: 0.85rem;
+            color: var(--primary-gold);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* --- GRIDS & CARDS --- */
+        .partners-intro {
+            padding: 8rem 0;
+            background: var(--deep-black);
+        }
+
+        .intro-text-block {
+            max-width: 900px;
+            margin: 0 auto;
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            line-height: 1.9;
+        }
+
+        .featured-partners {
+            padding: 6rem 0;
+            background: rgba(5, 5, 5, 0.6);
+        }
+
+        .partner-card-spotlight {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 6rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            padding: 5rem 4rem;
+            border-radius: 24px;
+            align-items: center;
+            transition: var(--transition);
+            max-width: 1200px;
+            margin: 4rem auto 0 auto;
+        }
+
+        .partner-card-spotlight:hover {
+            border-color: var(--primary-gold);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .partner-logo-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            border-right: 1px solid rgba(212, 175, 55, 0.15);
+            padding-right: 5rem;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .partner-logo-box img {
+            max-height: 90px;
+            width: auto;
+            filter: brightness(0) invert(1);
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .partner-logo-box:hover img {
+            opacity: 1;
+            transform: scale(1.03);
+        }
+
+        .partner-bullet-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 2rem 0;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .partner-bullet-list li {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .partner-bullet-list li::before {
+            content: '🏝️';
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 0.85rem;
+        }
+
+        .ecosystem-section {
+            padding: 8rem 0;
+            background: var(--deep-black);
+        }
+
+        .ecosystem-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 5rem;
+        }
+
+        .ecosystem-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            padding: 4rem 3rem;
+            border-radius: 20px;
+            transition: var(--transition);
+        }
+
+        .ecosystem-card:hover {
+            border-color: var(--primary-gold);
+            transform: translateY(-5px);
+            background: rgba(212, 175, 55, 0.03);
+        }
+
+        .ecosystem-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            color: var(--primary-gold);
+        }
+
+        .ecosystem-card p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .why-partners {
+            padding: 8rem 0;
+            background: rgba(5, 5, 5, 0.8);
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .why-partners p {
+            max-width: 900px;
+            margin: 0 auto 2rem auto;
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            line-height: 1.9;
+        }
+
+        .partner-with-us {
+            padding: 8rem 0;
+            background: var(--deep-black);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .partner-types-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 5rem;
+        }
+
+        .partner-type-item {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: #fff;
+            letter-spacing: 1.5px;
+            transition: var(--transition);
+        }
+
+        .partner-type-item:hover {
+            border-color: var(--primary-gold);
+            color: var(--primary-gold);
+            transform: translateY(-3px);
+            background: rgba(212, 175, 55, 0.01);
+        }
+
+        .benefits-section {
+            padding: 8rem 0;
+            background: rgba(5, 5, 5, 0.6);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2.5rem;
+            margin-top: 5rem;
+        }
+
+        .benefit-card {
+            border-left: 2px solid var(--primary-gold);
+            padding: 1.5rem 0 1.5rem 2rem;
+            transition: var(--transition);
+        }
+
+        .benefit-card:hover {
+            transform: translateX(5px);
+        }
+
+        .benefit-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+            color: #fff;
+        }
+
+        .benefit-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .cta-section {
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.08) 0%, transparent 60%);
+            padding: 10rem 0;
+            text-align: center;
+        }
+
+        /* ===== MASTER FOOTER (INJECTED SITE-WIDE) ===== */
+        .footer {
+            background: #000 !important;
+            padding: 5rem 0 3rem !important;
+            border-top: 1px solid rgba(212, 175, 55, 0.1) !important;
+            margin-top: 5rem !important;
+            text-align: left !important;
+        }
+
+        .footer-grid {
+            display: grid !important;
+            grid-template-columns: 2fr 1fr 1fr !important;
+            gap: 4rem !important;
+            padding-bottom: 4rem !important;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1) !important;
+            text-align: left !important;
+        }
+
+        .footer-brand {
+            text-align: left !important;
+        }
+
+        .footer-brand h2 {
+            font-family: 'Cormorant Garamond', serif !important;
+            font-size: 2.2rem !important;
+            margin-bottom: 1.5rem !important;
+            color: #fff !important;
+            text-align: left !important;
+        }
+
+        .footer-brand p {
+            font-family: 'Inter', sans-serif !important;
+            font-size: 0.9rem !important;
+            line-height: 1.8 !important;
+            max-width: 380px !important;
+            margin-bottom: 2rem !important;
+            color: rgba(255, 255, 255, 0.7) !important;
+            text-align: left !important;
+        }
+
+        .footer-socials {
+            display: flex !important;
+            gap: 1.5rem !important;
+            justify-content: flex-start !important;
+        }
+
+        .footer-socials a {
+            color: rgba(255, 255, 255, 0.6) !important;
+            transition: 0.3s !important;
+            font-size: 1.5rem !important;
+        }
+
+        .footer-socials a:hover {
+            color: #D4AF37 !important;
+        }
+
+        .footer-col {
+            text-align: left !important;
+        }
+
+        .footer-col h4 {
+            color: #D4AF37 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 2px !important;
+            font-size: 0.9rem !important;
+            margin-bottom: 2rem !important;
+            text-align: left !important;
+        }
+
+        .footer-col ul {
+            list-style: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            text-align: left !important;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 1rem !important;
+            text-align: left !important;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255, 255, 255, 0.8) !important;
+            text-decoration: none !important;
+            transition: 0.3s !important;
+            font-size: 0.95rem !important;
+        }
+
+        .footer-col ul li a:hover {
+            color: #D4AF37 !important;
+            padding-left: 5px !important;
+        }
+
+        .footer-bottom {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            padding-top: 3rem !important;
+            color: rgba(255, 255, 255, 0.4) !important;
+            font-size: 0.85rem !important;
+        }
+
+        .footer-legal {
+            display: flex !important;
+            gap: 2rem !important;
+        }
+
+        .footer-legal a {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr !important;
+            }
+
+            .footer-brand {
+                grid-column: span 2 !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .footer-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .footer-brand {
+                grid-column: span 1 !important;
+                text-align: center !important;
+            }
+
+            .footer-brand h2 {
+                text-align: center !important;
+            }
+
+            .footer-brand p {
+                text-align: center !important;
+                margin: 0 auto 2rem auto !important;
+            }
+
+            .footer-socials {
+                justify-content: center !important;
+            }
+
+            .footer-col {
+                text-align: center !important;
+            }
+
+            .footer-col h4 {
+                text-align: center !important;
+            }
+
+            .footer-col ul {
+                text-align: center !important;
+            }
+
+            .footer-col ul li {
+                text-align: center !important;
+            }
+
+            .footer-bottom {
+                flex-direction: column !important;
+                gap: 2rem !important;
+                text-align: center !important;
+            }
+        }
+
+        /* --- RESPONSIVENESS OVERRIDES --- */
+        @media (max-width: 1100px) {
+            .partner-card-spotlight {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+                text-align: center;
+            }
+
+            .partner-logo-box {
+                border-right: none;
+                padding-right: 0;
+            }
+
+            .partner-bullet-list {
+                max-width: 500px;
+                margin: 2rem auto;
+            }
+
+            .partner-types-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .benefit-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 800px) {
+
+            .ecosystem-grid,
+            .partner-types-grid,
+            .benefit-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .partners-hero {
+                padding: 8rem 0 6rem;
+            }
+
+            .partners-hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J56D1LJLFM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-J56D1LJLFM');
+    </script>
+
+    <!-- Schema Markup: Organization & Person linking Shaik Imran -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Elite Luxury Bookings",
+      "url": "https://eliteluxurybookings.com",
+      "logo": "https://eliteluxurybookings.com/favicon.png",
+      "founder": {
+        "@type": "Person",
+        "name": "Shaik Imran",
+        "jobTitle": "Founder & Managing Director",
+        "image": "https://eliteluxurybookings.com/assets/shaik-imran.jpg"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+918801079030",
+        "contactType": "Concierge Customer Service",
+        "availableLanguage": "English"
+      }
+    }
+    </script>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "sia395rirl");
+    </script>
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@eliteluxuryb">
+    <meta name="twitter:title" content="Global Luxury Travel Network | Partners | Elite Luxury Bookings">
+    <meta name="twitter:description"
+        content="Access our curated global network of FBO operations, superyacht captains, and private island retreats.">
+    <meta name="twitter:image" content="https://eliteluxurybookings.com/assets/executive_lounge_fbo.png">
+    <meta property="og:image" content="https://eliteluxurybookings.com/assets/executive_lounge_fbo.png">
+    <meta property="og:title" content="Global Luxury Travel Network | Partners | Elite Luxury Bookings">
+    <meta property="og:description"
+        content="Our curated global network of elite partnerships across private aviation, superyacht charters, luxury villas, private islands, and bespoke lifestyle management.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eliteluxurybookings.com/partners/">
+    <meta property="og:site_name" content="Elite Luxury Bookings">
+</head>
+
+<body>
+    <!-- ELB_NAV_START -->
+    <div class="top-intel-bar">
+        <div class="ticker-wrap">
+            <div class="ticker-content">
+                <strong>⚠️ Intelligence Alert:</strong> Strategic Procurement Windows Open for Summer 2026.
+                <strong>Empty Leg Flights Available:</strong> <a href="https://wa.me/918801079030">Connect for Instant
+                    Procurement</a> <strong>⚠️ Global Inventory Update:</strong> Off-Market Assets Now Accessible via
+                Elite Concierge.
+            </div>
+        </div>
+    </div>
+
+    <nav class="global-nav">
+        <div class="container global-nav-inner">
+            <a href="https://eliteluxurybookings.com/" class="nav-brand">Elite Luxury <span
+                    class="nav-gold">Bookings</span></a>
+            <ul class="nav-links">
+                <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/"
+                        style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;"
+                        onmouseover="this.style.color='#D4AF37'"
+                        onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Private Jets</a></li>
+                <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/"
+                        style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;"
+                        onmouseover="this.style.color='#D4AF37'"
+                        onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Yachts</a></li>
+                <li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/"
+                        style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;"
+                        onmouseover="this.style.color='#D4AF37'"
+                        onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Villas</a></li>
+                <li><a href="https://eliteluxurybookings.com/blog/"
+                        style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;"
+                        onmouseover="this.style.color='#D4AF37'"
+                        onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Blog</a></li>
+                <li><a href="https://eliteluxurybookings.com/contact/"
+                        style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;"
+                        onmouseover="this.style.color='#D4AF37'"
+                        onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Contact</a></li>
+            </ul>
+            <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="elbMobileMenu">
+        <a href="https://eliteluxurybookings.com/elite-private-jet-charter/">✈ Private Jets</a>
+        <a href="https://eliteluxurybookings.com/luxury-villa-rentals/">🏡 Luxury Villas</a>
+        <a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">⚓ Luxury Yachts</a>
+        <a href="https://eliteluxurybookings.com/blog/">📰 Blog</a>
+        <a href="https://eliteluxurybookings.com/contact/">📞 Contact</a>
+    </div>
+    <!-- ELB_NAV_END -->
+
+    <main>
+        <!-- ================= PARTNERS HERO ================= -->
+        <section class="partners-hero">
+            <div class="container">
+                <span class="eyebrow">GLOBAL LUXURY TRAVEL NETWORK</span>
+                <h1 class="serif">Our Global <span class="gold-text">Partners</span></h1>
+                <p
+                    style="max-width: 850px; margin: 0 auto 3rem; color: var(--text-muted); font-size: 1.25rem; line-height: 1.8;">
+                    Building extraordinary, secure travel experiences through trusted, multi-sector alignments across
+                    private aviation, luxury hospitality, superyachts, and private island retreats.
+                </p>
+                <a href="https://eliteluxurybookings.com/contact/" class="btn btn-gold"
+                    style="padding: 1.5rem 4rem;">Become A Partner</a>
+            </div>
+        </section>
+
+        <!-- ================= INTRODUCTION ================= -->
+        <section class="partners-intro">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <span class="gold-text"
+                        style="font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">TRUSTED
+                        RELATIONSHIPS</span>
+                    <h2 class="serif" style="font-size: 3.5rem; font-weight: 300;">A Global Network Designed Around
+                        Luxury</h2>
+                </div>
+
+                <div class="intro-text-block">
+                    <p>At Elite Luxury Bookings, we believe that truly exceptional global travel is a collaborative
+                        engineering marvel built upon absolute alignment, mutual precision, and operational trust.</p>
+                    <p>Behind every transcontinental private jet charter, secure villa stay, custom yacht itinerary, and
+                        off-market island escape is a strictly vetted coordination grid of operators who share our
+                        uncompromising commitment to discretion, professionalism, and service excellence.</p>
+                    <p>Through strategic alignments across the luxury travel industry, we protect your corridors, secure
+                        your assets, and connect travelers with some of the world's most sought-after destinations.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FEATURED PARTNERS ================= -->
+        <section class="featured-partners">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <span class="gold-text"
+                        style="font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">FEATURED
+                        ALLIANCES</span>
+                    <h2 class="serif" style="font-size: 3.5rem; font-weight: 300;">Strategic Collaborations</h2>
+                </div>
+
+                <!-- SPOTLIGHT CARD: ISCA PRIVATE ISLAND -->
+                <div class="partner-card-spotlight">
+                    <!-- Left: Clickable Logo Frame -->
+                    <a href="https://iscaprivateisland.com/en" target="_blank" rel="noopener" class="partner-logo-box">
+                        <img src="assets/isca-logo.png" alt="ISCA Private Island Logo">
+                        <span
+                            style="font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: rgba(255,255,255,0.5); letter-spacing: 2px;">ISCAPRIVATEISLAND.COM</span>
+                    </a>
+
+                    <!-- Right: Narrative Content -->
+                    <div>
+                        <span class="gold-text"
+                            style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 0.5rem;">GLOBAL
+                            SPOTLIGHT</span>
+                        <h3 class="serif"
+                            style="font-size: 2.5rem; color: #fff; margin-bottom: 1rem; font-weight: 400;">ISCA Private
+                            Island</h3>
+                        <h4
+                            style="font-size: 0.95rem; text-transform: uppercase; color: var(--primary-gold); letter-spacing: 1.5px; margin-bottom: 1.5rem; font-weight: 600;">
+                            Exclusive Private Island Stays</h4>
+                        <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.8;">
+                            Elite Luxury Bookings works in active alignment with ISCA Private Island, establishing
+                            seamless, fully-vetted member access to premier private island environments accommodating a maximum of 12 guests, designed around
+                            complete physical isolation, luxurious accommodation, and custom-tailored wellness retreats.
+                        </p>
+
+                        <ul class="partner-bullet-list">
+                            <li>Private Island Buyouts (Max 12 Guests)</li>
+                            <li>Luxury Stays</li>
+                            <li>Romantic Family Escapes</li>
+                            <li>Executive Gatherings</li>
+                            <li>Wellness Retreats</li>
+                            <li>Tailor-Made Island Logistics</li>
+                        </ul>
+
+                        <a href="https://eliteluxurybookings.com/private-island-for-rent" class="btn btn-outline"
+                            style="padding: 1rem 2.5rem;">Explore Private Island Experiences</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= LUXURY ECOSYSTEM ================= -->
+        <section class="ecosystem-section">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <span class="gold-text"
+                        style="font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">GLOBAL
+                        ECOSYSTEM</span>
+                    <h2 class="serif" style="font-size: 3.5rem; font-weight: 300;">Ecosystem Coordination Across All
+                        Sectors</h2>
+                </div>
+
+                <div class="ecosystem-grid">
+                    <div class="ecosystem-card">
+                        <h3>Private Aviation</h3>
+                        <p>Access to trusted private aviation operators, certified flight crew decks, and strategic FBO
+                            charter specialists globally.</p>
+                    </div>
+
+                    <div class="ecosystem-card">
+                        <h3>Luxury Villa rentals</h3>
+                        <p>Curated access to off-market private villa estates, fully staffed sanctuaries, and secured
+                            residences worldwide.</p>
+                    </div>
+
+                    <div class="ecosystem-card">
+                        <h3>Yacht Charters</h3>
+                        <p>World-class superyacht experiences coordinated alongside vetted captains, maritime brokers,
+                            and crews.</p>
+                    </div>
+
+                    <div class="ecosystem-card">
+                        <h3>Private Islands</h3>
+                        <p>Complete sanctuary buyouts, remote private island escapes, and customized marine/air arrival
+                            arrangements.</p>
+                    </div>
+
+                    <div class="ecosystem-card">
+                        <h3>Luxury Hospitality</h3>
+                        <p>Direct alignments with ultra-premium boutique resorts, global 5-star hospitality names, and
+                            elite wellness clubs.</p>
+                    </div>
+
+                    <div class="ecosystem-card">
+                        <h3>Elite Concierge</h3>
+                        <p>Seamless lifestyle administrators, secure close protection teams, and dedicated executive
+                            transportation desks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= WHY PARTNERSHIPS MATTER ================= -->
+        <section class="why-partners">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <span class="gold-text"
+                        style="font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">OUR
+                        CORE COMMITMENT</span>
+                    <h2 class="serif" style="font-size: 3.5rem; font-weight: 300;">Built On Trust, Service & Excellence
+                    </h2>
+                </div>
+
+                <p>The elite lifestyle management industry is built upon absolute, uncompromised relationships.</p>
+                <p>Our clients trust us to manage complex multi-modal transits involving intricate flight deck
+                    logistics, close protection coordination, and substantial corporate investments.</p>
+                <p>That responsibility requires carefully vetted partnerships with organizations that share our values
+                    of discretion, operational reliability, and uncompromised service excellence.</p>
+                <p>Every alliance in our global network is developed with a strict focus on delivering seamless,
+                    exceptional journeys for travelers around the world.</p>
+            </div>
+        </section>
+
+        <!-- ================= PARTNER WITH US ================= -->
+        <section class="partner-with-us">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <span class="gold-text"
+                        style="font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">GROW
+                        TOGETHER</span>
+                    <h2 class="serif" style="font-size: 3.5rem; font-weight: 300;">Partner With Elite Luxury Bookings
+                    </h2>
+                </div>
+
+                <p
+                    style="text-align: center; color: var(--text-muted); max-width: 800px; margin: 0 auto 4rem auto; font-size: 1.15rem;">
+                    We welcome alignment inquiries from businesses serving UHNW travel demographics who share our vision
+                    of luxury, discretion, and operational excellence.
+                </p>
+
+                <div class="partner-types-grid">
+                    <div class="partner-type-item">Private Jet Operators</div>
+                    <div class="partner-type-item">Luxury Villa Providers</div>
+                    <div class="partner-type-item">Yacht Charter Companies</div>
+                    <div class="partner-type-item">Private Island Resorts</div>
+                    <div class="partner-type-item">Luxury Hotels & Resorts</div>
+                    <div class="partner-type-item">FBO Flight Coordinators</div>
+                    <div class="partner-type-item">Destinations Managers</div>
+                    <div class="partner-type-item">Concierge Networks</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= BENEFITS SECTION ================= -->
+        <section class="benefits-section">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <span class="gold-text"
+                        style="font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">ALLIANCE
+                        VALUES</span>
+                    <h2 class="serif" style="font-size: 3.5rem; font-weight: 300;">Why Work With Us</h2>
+                </div>
+
+                <div class="benefit-grid">
+                    <div class="benefit-card">
+                        <h3>Qualified Demographics</h3>
+                        <p>Establish direct connections with verified corporate families and luxury travelers actively
+                            seeking premium asset bookings.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <h3>Premium Exposure</h3>
+                        <p>Showcase your exclusive resorts, yachts, or aircraft models directly to a strictly selected
+                            UHNW audience.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <h3>Strategic Growth</h3>
+                        <p>Build long-term, non-disclosure-bound business alignments designed for mutual high-end
+                            success.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <h3>Global Access</h3>
+                        <p>Expand your company's visibility through our highly integrated international luxury travel
+                            network.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FINAL CTA ================= -->
+        <section class="cta-section">
+            <div class="container">
+                <span class="gold-text"
+                    style="font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">LET'S
+                    BUILD SOMETHING EXTRAORDINARY</span>
+                <h2 class="serif" style="font-size: 4rem; margin-bottom: 2rem; font-weight: 300;">Create Exceptional
+                    Experiences Together</h2>
+                <p
+                    style="color: var(--text-muted); max-width: 700px; margin: 0 auto 4rem auto; font-size: 1.25rem; line-height: 1.8;">
+                    Whether you operate an FBO private aviation network, a superyacht fleet, off-market estate
+                    portfolios, or specialized concierge brands, we welcome the opportunity to connect.
+                </p>
+                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://eliteluxurybookings.com/contact/" class="btn btn-gold"
+                        style="padding: 1.5rem 4rem;">Apply For Partnership</a>
+                    <a href="https://eliteluxurybookings.com/about/" class="btn btn-outline"
+                        style="padding: 1.5rem 4rem;">Learn About Our Mission</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Master Footer -->
+    <footer class="footer">
+        <div class="container" style="max-width: 1200px;">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>Elite Luxury <span class="gold-text">Bookings</span></h2>
+                    <p>Curating world-class luxury experiences through our global partner network. Private Jets. Yachts.
+                        Villas.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com/eliteluxurybookings"
+                            aria-label="Follow Elite Luxury Bookings on Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/eliteluxurybookings"
+                            aria-label="Follow Elite Luxury Bookings on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/elite-luxury-bookings/"
+                            aria-label="Follow Elite Luxury Bookings on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/eliteluxuryb" aria-label="Follow Elite Luxury Bookings on X (Twitter)"><i
+                                class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>SERVICES</h4>
+                    <ul>
+                        <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
+                        <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Luxury Yachts</a></li>
+                        <li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/">Luxury Villas</a></li>
+                        <li><a href="https://eliteluxurybookings.com/global-route-silo/">Route Directory</a></li>
+                        <li><a href="https://eliteluxurybookings.com/blog/">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>AUTHORITY</h4>
+                    <ul>
+                        <li><a href="https://eliteluxurybookings.com/about/">The Mission</a></li>
+                        <li><a href="https://eliteluxurybookings.com/privacy/">Privacy Protocol</a></li>
+                        <li><a href="https://eliteluxurybookings.com/terms/">Terms of Engagement</a></li>
+                        <li><a href="https://eliteluxurybookings.com/contact/">Connect</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Elite Luxury Bookings. All rights reserved. Global Authority in Luxury Procurement.</p>
+                <div class="footer-legal">
+                    <a href="https://eliteluxurybookings.com/privacy/">Privacy</a>
+                    <a href="https://eliteluxurybookings.com/terms/">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            var m = document.getElementById('elbMobileMenu'),
+                b = document.getElementById('navHamburger');
+            if (m && b) {
+                m.classList.toggle('open');
+                b.classList.toggle('open');
+                document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
+            }
+        }
+    </script>
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/918801079030" class="wa-float" target="_blank" rel="noopener"
+        aria-label="Chat with Elite Luxury Bookings Concierge on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" viewBox="0 0 16 16"
+            aria-hidden="true">
+            <path
+                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+        </svg>
+    </a>
+</body>
+
+</html>

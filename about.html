@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Mission: Global Authority in Elite Travel | Elite Luxury Bookings</title>
     <meta name="description"
@@ -18,9 +18,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/style.css">
 
-    <style>:root {
+    <style>
+        /* --- GLOBAL LINK RESET --- */
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        a:hover {
+            color: #D4AF37;
+        }
+
+        :root {
             --primary-gold: #D4AF37;
             --deep-black: #050505;
             --graphene: #111111;
@@ -30,6 +42,84 @@
             --text-muted: rgba(255, 255, 255, 0.7);
             --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
+        /* --- BUTTONS FALLBACK & STYLING --- */
+        .btn {
+            display: inline-block;
+            padding: 1.2rem 2.5rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--primary-gold), #B8860B);
+            color: #000 !important;
+            border: none;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.15);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.25);
+            color: #000 !important;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary-gold) !important;
+            border: 1px solid var(--primary-gold);
+        }
+
+        .btn-outline:hover {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--primary-gold) !important;
+        }
+
+        .btn:active {
+            transform: scale(0.97);
+        }
+
+        /* --- WHATSAPP FLOAT FALLBACK & STYLING --- */
+        .wa-float {
+            position: fixed;
+            bottom: 40px;
+            right: 40px !important;
+            left: auto !important;
+            background: #25D366 !important;
+            color: #FFF !important;
+            width: 65px;
+            height: 65px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 35px;
+            box-shadow: 0px 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 100000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .wa-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 6px 25px rgba(37, 211, 102, 0.6);
+            color: #FFF !important;
+        }
+
+        .wa-float svg {
+            fill: #FFF !important;
+            width: 34px;
+            height: 34px;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background: var(--deep-black);
@@ -40,46 +130,153 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
         .serif { font-family: 'Cormorant Garamond', serif; }
         .gold-text { color: var(--primary-gold); }
 
         /* --- NAVIGATION --- */
-
         .nav-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; font-weight: 600; color: #fff; text-decoration: none; }
         .nav-links { display: flex; list-style: none; gap: 2rem; }
         .nav-links a { color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; transition: 0.3s; }
         .nav-links a:hover { color: var(--primary-gold); }
 
         /* --- HERO --- */
-        .about-hero { padding: 10rem 0 6rem; text-align: center; background: radial-gradient(circle at center, rgba(212, 175, 55, 0.05) 0%, transparent 70%); }
+        .about-hero { 
+            padding: 12rem 0 10rem; 
+            text-align: center; 
+            background: linear-gradient(rgba(5, 5, 5, 0.76), rgba(5, 5, 5, 0.86)), url('assets/elite_jet_master_hero.png') no-repeat center center/cover; 
+        }
         .about-hero h1 { font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 300; line-height: 1.1; margin-bottom: 1.5rem; }
         .eyebrow { text-transform: uppercase; letter-spacing: 6px; font-size: 0.85rem; color: var(--primary-gold); font-weight: 700; margin-bottom: 1rem; display: block; }
 
-        /* --- CONTENT --- */
-        .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; margin: 6rem 0; align-items: center; }
-        .mission-text h2 { font-size: 3rem; margin-bottom: 2rem; font-weight: 300; }
-        .mission-text p { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 2rem; }
+        /* --- LAYOUT GRIDS --- */
+        .mission-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 6rem; margin: 6rem 0; align-items: center; }
+        .founder-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 6rem; align-items: center; margin: 6rem 0; }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin: 5rem 0; }
+        .benefit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin: 5rem 0; }
+        .explore-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1000px; margin: 4rem auto 0 auto; }
 
-        .stat-panel { background: var(--graphene); border: 1px solid var(--glass-border); padding: 4rem; border-radius: 40px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; text-align: center; margin-bottom: 10rem; }
-        .stat-item h3 { font-size: 3.5rem; color: var(--primary-gold); font-weight: 300; margin-bottom: 0.5rem; }
-        .stat-item p { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); }
-
-        .pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin-bottom: 10rem; }
-        .pillar-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); padding: 4rem 3rem; border-radius: 20px; transition: 0.4s; }
-        .pillar-card:hover { border-color: var(--primary-gold); transform: translateY(-10px); background: rgba(212,175,55,0.03); }
-        .pillar-card h4 { font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: 400; }
-        .pillar-card p { font-size: 1rem; color: var(--text-muted); }
-
-        .cta-section { background: var(--graphene); border-top: 1px solid var(--glass-border); padding: 8rem 0; text-align: center; }
-        .btn-gold { background: linear-gradient(135deg, #D4AF37, #B8860B); color: #000; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; padding: 1.5rem 3.5rem; border-radius: 12px; display: inline-block; text-decoration: none; transition: 0.4s; }
-
-        @media (max-width: 900px) {
-            .mission-grid, .pillar-grid, .stat-panel { grid-template-columns: 1fr; gap: 3rem; }
-            
+        /* --- CARDS & HOVERS --- */
+        .glass-card { 
+            background: var(--glass-bg); 
+            border: 1px solid var(--glass-border); 
+            padding: 4rem 3rem; 
+            border-radius: 20px; 
+            transition: var(--transition); 
+        }
+        .glass-card:hover { 
+            border-color: var(--primary-gold); 
+            transform: translateY(-8px); 
+            background: rgba(212, 175, 55, 0.03); 
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
         }
 
-            /* ===== MASTER FOOTER (INJECTED SITE-WIDE) ===== */
+        .benefit-card { 
+            border-left: 2px solid var(--primary-gold); 
+            padding-left: 2rem; 
+            transition: var(--transition);
+        }
+        .benefit-card:hover {
+            transform: translateX(5px);
+        }
+
+        /* --- FOUNDER PORTRAIT CONTAINER --- */
+        .portrait-frame {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 440px;
+        }
+        .portrait-frame::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            right: 15px;
+            bottom: 15px;
+            border: 1px solid var(--primary-gold);
+            z-index: 1;
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+        .portrait-frame:hover::before {
+            top: -8px;
+            left: -8px;
+            right: 8px;
+            bottom: 8px;
+        }
+        .portrait-img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            display: block;
+        }
+
+        /* --- TESTIMONIALS --- */
+        .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin: 4rem 0; }
+        .testimonial-card { background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.05); padding: 3rem; border-radius: 16px; position: relative; transition: var(--transition); }
+        .testimonial-card:hover { border-color: var(--primary-gold); background: rgba(212, 175, 55, 0.02); }
+        .testimonial-stars { color: var(--primary-gold); margin-bottom: 1.5rem; font-size: 0.9rem; }
+        .testimonial-text { color: var(--text-muted); font-size: 1rem; line-height: 1.7; font-style: italic; margin-bottom: 2rem; }
+        .testimonial-author { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; color: #fff; font-weight: 600; }
+        .testimonial-company { font-size: 0.75rem; text-transform: uppercase; color: var(--primary-gold); letter-spacing: 1.5px; margin-top: 0.25rem; }
+
+        /* --- TIMELINE --- */
+        .timeline-container { position: relative; max-width: 1000px; margin: 5rem auto; padding: 2rem 0; }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, var(--primary-gold), transparent);
+            transform: translateX(-50%);
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 5rem;
+            width: 50%;
+            padding: 0 4rem;
+            box-sizing: border-box;
+        }
+        .timeline-item.left { left: 0; text-align: right; }
+        .timeline-item.right { left: 50%; text-align: left; }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--deep-black);
+            border: 2px solid var(--primary-gold);
+            z-index: 10;
+        }
+        .timeline-item.left::after { right: -10px; }
+        .timeline-item.right::after { left: -10px; }
+
+        .timeline-year { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--primary-gold); font-weight: 300; margin-bottom: 0.5rem; }
+        .timeline-content { background: var(--glass-bg); border: 1px solid var(--glass-border); padding: 2.5rem 2rem; border-radius: 12px; transition: var(--transition); }
+        .timeline-content:hover { transform: translateY(-5px); border-color: var(--primary-gold); }
+
+        /* --- FAQ ACCORDION --- */
+        .faq-accordion { max-width: 1000px; margin: 4rem auto 0 auto; display: flex; flex-direction: column; gap: 1.5rem; }
+        .faq-item { background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; overflow: hidden; transition: var(--transition); }
+        .faq-header { padding: 2rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: var(--transition); }
+        .faq-header:hover { background: rgba(212, 175, 55, 0.02); }
+        .faq-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #fff; font-weight: 400; }
+        .faq-trigger { color: var(--primary-gold); font-size: 1.2rem; transition: var(--transition); }
+        .faq-content { padding: 0 2rem; max-height: 0; overflow: hidden; transition: all 0.4s ease; color: var(--text-muted); font-size: 1rem; line-height: 1.8; }
+        .faq-item.active { border-color: var(--primary-gold); }
+        .faq-item.active .faq-content { padding: 0 2rem 2rem 2rem; max-height: 300px; }
+        .faq-item.active .faq-trigger { transform: rotate(45deg); }
+
+        /* ===== MASTER FOOTER (INJECTED SITE-WIDE) ===== */
         .footer { background: #000 !important; padding: 5rem 0 3rem !important; border-top: 1px solid rgba(212, 175, 55, 0.1) !important; margin-top: 5rem !important; text-align: left !important; }
         .footer-grid { display: grid !important; grid-template-columns: 2fr 1fr 1fr !important; gap: 4rem !important; padding-bottom: 4rem !important; border-bottom: 1px solid rgba(212, 175, 55, 0.1) !important; text-align: left !important; }
         .footer-brand { text-align: left !important; }
@@ -113,7 +310,8 @@
             .footer-col ul li { text-align: center !important; }
             .footer-bottom { flex-direction: column !important; gap: 2rem !important; text-align: center !important; } 
         }
-            /* --- ELITE NAV & TICKER STANDARDIZATION --- */
+
+        /* --- ELITE NAV & TICKER STANDARDIZATION --- */
         .top-intel-bar { background: rgba(5, 5, 5, 0.98) !important; border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important; height: 36px !important; overflow: hidden !important; position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; z-index: 100000 !important; display: flex !important; align-items: center !important; }
         .ticker-wrap { white-space: nowrap !important; overflow: hidden !important; width: 100% !important; }
         .ticker-content { display: inline-block !important; white-space: nowrap !important; padding-left: 100% !important; animation: ticker-scroll 40s linear infinite !important; font-size: 0.72rem !important; letter-spacing: 2px !important; text-transform: uppercase !important; color: rgba(255, 255, 255, 0.9) !important; }
@@ -139,7 +337,6 @@
         .mobile-menu a { color: rgba(255, 255, 255, 0.8) !important; text-decoration: none !important; font-size: 1.1rem !important; text-transform: uppercase !important; letter-spacing: 2px !important; padding: 1.2rem 0 !important; border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important; }
         @media (max-width: 1024px) { .nav-links { display: none !important; } .nav-hamburger { display: flex !important; } }
         
-        
         body:has(.top-intel-bar) { padding-top: 108px !important; }
         
         @media (max-width: 768px) {
@@ -147,7 +344,19 @@
             .top-intel-bar ~ .global-nav { top: 32px !important; }
             body:has(.top-intel-bar) { padding-top: 104px !important; }
         }
-        /* --- END ELITE NAV & TICKER --- */
+
+        /* --- RESPONSIVENESS OVERRIDES --- */
+        @media (max-width: 1024px) {
+            .mission-grid, .founder-grid { grid-template-columns: 1fr; gap: 4rem; text-align: center; }
+            .services-grid, .benefit-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+            .portrait-frame { margin: 0 auto; }
+        }
+        @media (max-width: 768px) {
+            .services-grid, .benefit-grid, .explore-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .about-hero { padding: 8rem 0 6rem; }
+            .about-hero h1 { font-size: 2.8rem; }
+            .portrait-frame::before { display: none; }
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -160,6 +369,7 @@
         gtag('config', 'G-J56D1LJLFM');
     </script>
 
+    <!-- Schema Markup: Organization & Person linking Shaik Imran -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -167,12 +377,52 @@
       "name": "Elite Luxury Bookings",
       "url": "https://eliteluxurybookings.com",
       "logo": "https://eliteluxurybookings.com/favicon.png",
+      "founder": {
+        "@type": "Person",
+        "name": "Shaik Imran",
+        "jobTitle": "Founder & Managing Director",
+        "image": "https://eliteluxurybookings.com/assets/shaik-imran.jpg"
+      },
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+918801079030",
         "contactType": "Concierge Customer Service",
         "availableLanguage": "English"
       }
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does Elite Luxury Bookings secure client confidentiality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Confidentiality is central to our operations. We secure private flight manifests, coordinate close protection protocols, secure off-market transactions, and operate exclusively with trusted, non-disclosure-bound partners."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What luxury assets are covered under your procurement desk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our desk coordinates transcontinental private jet charters, off-market luxury villa rentals, elite superyacht charters, private island retreats, and bespoke ground concierge logistics globally."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the typical response protocol for urgent travel coordination?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our team operates on a strict 30-minute response protocol. For empty-leg flights, helicopter transfers, or FBO security clearances, your designated Senior Lifestyle Manager executes actions instantly."
+          }
+        }
+      ]
     }
     </script>
 <!-- Microsoft Clarity -->
@@ -194,7 +444,6 @@
     <meta property="og:description" content="The definitive mission of Elite Luxury Bookings. Engineering seamless global journeys across private aviation, maritime corridors, and exclusive estates.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://eliteluxurybookings.com/about/">
-    <meta property="og:image" content="https://eliteluxurybookings.com/assets/elite_jet_master_hero.png">
     <meta property="og:site_name" content="Elite Luxury Bookings">
 </head>
 
@@ -212,9 +461,9 @@
     <div class="container global-nav-inner">
         <a href="https://eliteluxurybookings.com/" class="nav-brand">Elite Luxury <span class="nav-gold">Bookings</span></a>
         <ul class="nav-links">
-            <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
-            <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Yachts</a></li>
-            <li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/">Villas</a></li>
+            <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Private Jets</a></li>
+            <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Yachts</a></li>
+            <li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Villas</a></li>
             <li><a href="https://eliteluxurybookings.com/blog/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Blog</a></li>
             <li><a href="https://eliteluxurybookings.com/contact/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Contact</a></li>
         </ul>
@@ -233,79 +482,353 @@
 <!-- ELB_NAV_END -->
 
     <main>
-        <header class="about-hero">
+        <!-- ================= ABOUT HERO ================= -->
+        <section class="about-hero">
             <div class="container">
-                <span class="eyebrow">Strategic Intelligence</span>
-                <h1 class="serif">The Global Authority in <br><span class="gold-text">Elite Procurement</span></h1>
-                <p style="max-width: 800px; margin: 0 auto; color: var(--text-muted); font-size: 1.3rem;">Engineering the world's most discrete and seamless travel ecosystems for the global 1%.</p>
+                <span class="eyebrow">GLOBAL LUXURY TRAVEL CONCIERGE</span>
+                <h1 class="serif">Luxury Procurement <br><span class="gold-text">Without Compromise</span></h1>
+                <p style="max-width: 800px; margin: 0 auto 3rem; color: var(--text-muted); font-size: 1.25rem; line-height: 1.8;">
+                    Elite Luxury Bookings connects discerning global citizens with private jet charters, 
+                    off-market luxury villas, superyacht charters, private island retreats, and elite lifestyle management.
+                </p>
+                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://eliteluxurybookings.com/contact/" class="btn btn-gold">Request Consultation</a>
+                    <a href="#services" class="btn btn-outline">Explore Services</a>
+                </div>
             </div>
-        </header>
+        </section>
 
         <div class="container">
+            <!-- ================= OUR STORY ================= -->
             <section class="mission-grid">
-                <div class="mission-text">
-                    <span class="gold-text" style="font-weight: 700; text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem;">The Mission Brief</span>
-                    <h2 class="serif">Beyond Logistics. <br>Mission Mastery.</h2>
-                    <p>Elite Luxury Bookings was founded on a single premise: that true luxury is defined by the absolute control of time and privacy. In an era of increasing travel volatility, we provide the strategic layer that ensures your journey remains uninterrupted.</p>
-                    <p>From high-security aviation corridors to off-market maritime procurement, our desk operates at the intersection of intelligence and hospitality.</p>
+                <div>
+                    <span class="gold-text" style="font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">OUR STORY</span>
+                    <h2 class="serif" style="font-size: 3rem; margin-bottom: 2rem; font-weight: 300; line-height: 1.2;">Every Extraordinary Journey <br>Begins With Absolute Trust</h2>
+                    <div style="color: var(--text-muted); font-size: 1.1rem; display: flex; flex-direction: column; gap: 1.5rem; line-height: 1.8;">
+                        <p>True luxury is defined by the absolute control of your time, privacy, and peace of mind.</p>
+                        <p>Yet, coordinating transcontinental flights, off-market villa estates, superyacht itineraries, and on-ground secure transit typically requires navigating a fragmented network of disconnected brokers.</p>
+                        <p><strong>Elite Luxury Bookings was established to eliminate that friction.</strong></p>
+                        <p>We provide a singular, highly integrated point of access to the world’s most secure and exceptional travel environments. Our team coordinates every asset with meticulous precision, ensuring your privacy, security, and preferences are protected at every corridor.</p>
+                    </div>
                 </div>
-                <div style="background: #111; border: 1px solid var(--glass-border); padding: 4rem; border-radius: 30px;">
-                    <h3 class="serif gold-text" style="font-size: 2rem; margin-bottom: 2rem;">The Command Center</h3>
-                    <ul style="list-style: none; color: var(--text-muted); font-size: 1.1rem; line-height: 2.5;">
-                        <li>🛡️ 24/7 Global Intelligence Monitoring</li>
-                        <li>✈️ Direct-to-Fleet Aviation Access</li>
-                        <li>⚓ Off-Market Maritime Portfolio</li>
-                        <li>🔐 Secure VIP Ground Coordination</li>
-                        <li>🌍 116+ Global Strategic Corridors</li>
+                
+                <!-- Command Center Glass Panel -->
+                <div class="glass-card">
+                    <h3 class="serif gold-text" style="font-size: 2rem; margin-bottom: 2rem; font-weight: 400;">Ecosystem Benchmarks</h3>
+                    <ul style="list-style: none; color: var(--text-muted); font-size: 1.05rem; line-height: 2.8; padding: 0;">
+                        <li>🛡️ 100% Discrete Asset Management</li>
+                        <li>✈️ Direct-to-Fleet Global Access</li>
+                        <li>⚓ Off-Market Superyacht Portfolios</li>
+                        <li>🔑 Elite Vetted Villa Security Protocols</li>
+                        <li>🌍 24/7 Command Desk Support</li>
                     </ul>
                 </div>
             </section>
 
-            <section class="stat-panel">
-                <div class="stat-item">
-                    <h3>2026</h3>
-                    <p>Ecosystem Benchmark</p>
-                </div>
-                <div class="stat-item">
-                    <h3>100%</h3>
-                    <p>Discrete Management</p>
-                </div>
-                <div class="stat-item">
-                    <h3>30m</h3>
-                    <p>Response Protocol</p>
+            <!-- ================= FOUNDER SECTION ================= -->
+            <section class="founder-section">
+                <div class="founder-grid">
+                    <div class="portrait-frame">
+                        <img src="assets/shaik-imran.jpg" 
+                             alt="SHAIK IMRAN, Founder & Managing Director of Elite Luxury Bookings" 
+                             class="portrait-img">
+                    </div>
+                    <div>
+                        <span class="gold-text" style="font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">FOUNDER & MANAGING DIRECTOR</span>
+                        <h2 class="serif" style="font-size: 3.5rem; margin-bottom: 2rem; font-weight: 300;">SHAIK IMRAN</h2>
+                        <div style="color: var(--text-muted); font-size: 1.1rem; display: flex; flex-direction: column; gap: 1.5rem; line-height: 1.8;">
+                            <p style="font-style: italic; color: #fff; font-size: 1.2rem; border-left: 2px solid var(--primary-gold); padding-left: 1.5rem; margin-bottom: 1rem;">
+                                "Elite Luxury Bookings was founded with a singular, resolute vision: to orchestrate extraordinary, 
+                                uninterrupted travel experiences for global leaders through trusted partnerships and absolute operational control."
+                            </p>
+                            <p>
+                                Driven by a dedication to world-class hospitality, high-end real estate economics, and secure aviation logistics, Shaik Imran recognized a growing demand for travel solutions designed entirely around privacy, flexibility, and individual asset procurement.
+                            </p>
+                            <p>
+                                Under his leadership, the brand has scaled globally through off-market alignments, serving elite corporate families, entrepreneurs, and high-net-worth clients who require highly personalized, responsive attention.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section class="pillar-grid">
-                <div class="pillar-card">
-                    <h4 class="serif gold-text">Aviation Excellence</h4>
-                    <p>Access to over 7,000 aircraft globally. From light jets for regional hops to ultra-long-range heavy jets for transcontinental missions, we manage every detail of the flight deck.</p>
+            <!-- ================= GROWTH TIMELINE ================= -->
+            <section style="padding: 4rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <span class="gold-text" style="font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">CHRONOLOGY</span>
+                    <h2 class="serif" style="font-size: 3.5rem; font-weight: 300;">The Architecture of Growth</h2>
                 </div>
-                <div class="pillar-card">
-                    <h4 class="serif gold-text">Maritime Authority</h4>
-                    <p>Specializing in the procurement of the world's most exclusive superyachts. Our maritime desk manages APA, staffing, and itinerary engineering across the Mediterranean and Caribbean.</p>
+                
+                <div class="timeline-container">
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2023</div>
+                            <h4 class="serif gold-text" style="font-size: 1.4rem; margin-bottom: 0.8rem; font-weight: 400;">The Genesis</h4>
+                            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Established Elite Luxury Bookings with a mission to build a premium, highly secure lifestyle management desk, addressing fragmented coordination in private mobility.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2024</div>
+                            <h4 class="serif gold-text" style="font-size: 1.4rem; margin-bottom: 0.8rem; font-weight: 400;">Strategic Alliances</h4>
+                            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Secured off-market partnerships with international private aircraft operators, Mediterranean superyacht fleets, and vetted private island estates.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2025</div>
+                            <h4 class="serif gold-text" style="font-size: 1.4rem; margin-bottom: 0.8rem; font-weight: 400;">Corridor Expansion</h4>
+                            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Scaled operational capability to cover 116+ global strategic travel corridors, securing flawless VIP support before, during, and after client transits.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2026</div>
+                            <h4 class="serif gold-text" style="font-size: 1.4rem; margin-bottom: 0.8rem; font-weight: 400;">The Unified Ecosystem</h4>
+                            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Pioneering our next-generation discrete travel platform, combining responsive digital procurement channels with absolute personal lifestyle watches.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="pillar-card">
-                    <h4 class="serif gold-text">Estate Intelligence</h4>
-                    <p>Curated access to off-market villas and private islands. Every property is vetted for high-security standards and 1:1 service ratios for the most discerning families.</p>
+            </section>
+
+            <!-- ================= SERVICES SECTION ================= -->
+            <section id="services" style="padding: 4rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <span class="gold-text" style="font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">WHAT WE OFFER</span>
+                    <h2 class="serif" style="font-size: 3.5rem; font-weight: 300;">Curated Luxury Procurement</h2>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="glass-card">
+                        <h3 class="serif gold-text" style="font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: 400;">Private Jet Charter</h3>
+                        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7;">
+                            Instant access to over 7,000 aircraft globally. From light regional jets to heavy, ultra-long-range aircraft, our desk coordinates every flight deck requirement.
+                        </p>
+                    </div>
+
+                    <div class="glass-card">
+                        <h3 class="serif gold-text" style="font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: 400;">Luxury Villa Rentals</h3>
+                        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7;">
+                            Exquisite, high-security estates and fully staffed mansions situated in the world's most desirable geographical corridors.
+                        </p>
+                    </div>
+
+                    <div class="glass-card">
+                        <h3 class="serif gold-text" style="font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: 400;">Luxury Yacht Charters</h3>
+                        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7;">
+                            Sail the Mediterranean, Caribbean, UAE, and the Maldives aboard state-of-the-art superyachts with customized crew support.
+                        </p>
+                    </div>
+
+                    <div class="glass-card">
+                        <h3 class="serif gold-text" style="font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: 400;">Private Island Escapes</h3>
+                        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7;">
+                            Ultra-exclusive retreats engineered for absolute, impenetrable privacy, custom-curated for premium confidentiality.
+                        </p>
+                    </div>
+
+                    <div class="glass-card">
+                        <h3 class="serif gold-text" style="font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: 400;">Empty Leg Flights</h3>
+                        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7;">
+                            Exclusive access to strategic relocation routing opportunities, providing exceptional value on premium flight logistics.
+                        </p>
+                    </div>
+
+                    <div class="glass-card">
+                        <h3 class="serif gold-text" style="font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: 400;">Bespoke Concierge</h3>
+                        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7;">
+                            24/7 lifestyle administration, close protection logistics, executive transfers, and bespoke itinerary coordination.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= TESTIMONIALS SECTION ================= -->
+            <section style="padding: 4rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <span class="gold-text" style="font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">TRUST VERIFIED</span>
+                    <h2 class="serif" style="font-size: 3.5rem; font-weight: 300;">Client & Partner Endorsements</h2>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+                        <p class="testimonial-text">
+                            "The coordination desk at Elite Luxury Bookings operates like a dedicated private family office. Every flight deck change and secure villa check-in has been engineered with absolute perfection and total discretion."
+                        </p>
+                        <div class="testimonial-author">Lord Christopher V.</div>
+                        <div class="testimonial-company">Single Family Office, London</div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+                        <p class="testimonial-text">
+                            "Having partnered with Shaik Imran's maritime team across multiple Mediterranean summer seasons, their execution is flawless. They navigate APA logistics, harbor permissions, and off-market charters with absolute authority."
+                        </p>
+                        <div class="testimonial-author">Captain H. Larsson</div>
+                        <div class="testimonial-company">MY Elysian Superyacht</div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+                        <p class="testimonial-text">
+                            "When managing complex multi-modal relocations for high-profile partners, there is no room for error. Elite Luxury Bookings provides the strategic security layer that ensures our transits remain entirely uninterrupted."
+                        </p>
+                        <div class="testimonial-author">Elena Rostova</div>
+                        <div class="testimonial-company">Executive Security Advisor</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= WHY ELITE LUXURY BOOKINGS ================= -->
+            <section style="padding: 4rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <span class="gold-text" style="font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">WHY CHOOSE US</span>
+                    <h2 class="serif" style="font-size: 3.5rem; font-weight: 300;">Engineered Around Discretion</h2>
+                </div>
+
+                <div class="benefit-grid">
+                    <div class="benefit-card">
+                        <h3 class="serif" style="font-size: 1.6rem; margin-bottom: 1rem; font-weight: 400;">Global Reach</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Strategic mobility networks operating seamlessly across six major continents.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <h3 class="serif" style="font-size: 1.6rem; margin-bottom: 1rem; font-weight: 400;">Trusted Partnerships</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Direct access to vetted fleet operators, estate managers, and private owners.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <h3 class="serif" style="font-size: 1.6rem; margin-bottom: 1rem; font-weight: 400;">Absolute Customization</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Every single service detail is tailored meticulously to your personal profile.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <h3 class="serif" style="font-size: 1.6rem; margin-bottom: 1rem; font-weight: 400;">Privacy First</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Strict corporate confidentiality protocols protect every flight manifest and guest list.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <h3 class="serif" style="font-size: 1.6rem; margin-bottom: 1rem; font-weight: 400;">Agile Relocation</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Aviation and maritime logistics that respond dynamically to schedule modifications.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <h3 class="serif" style="font-size: 1.6rem; margin-bottom: 1rem; font-weight: 400;">Dedicated Command</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">A designated Senior Lifestyle Manager is always on watch for your party.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= STRATEGIC ALLIANCES ================= -->
+            <section style="padding: 4rem 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
+                <div style="margin-bottom: 4rem;">
+                    <span class="gold-text" style="font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">GLOBAL ALIGNMENTS</span>
+                    <h2 class="serif" style="font-size: 3.5rem; font-weight: 300;">Strategic Procurement Alliances</h2>
+                </div>
+                <p style="color: var(--text-muted); max-width: 800px; margin: 0 auto 5rem auto; font-size: 1.15rem; line-height: 1.8;">
+                    Elite Luxury Bookings works in coordination with elite hospitality groups, private FBO operators, 
+                    superyacht brokers, and off-market asset management bureaus globally.
+                </p>
+                
+                <!-- Highly styled custom vector SVG brand marks -->
+                <div style="display: flex; gap: 6rem; justify-content: center; align-items: center; flex-wrap: wrap; margin-bottom: 2rem;">
+                    <a href="https://iscaprivateisland.com/en" target="_blank" rel="noopener" style="display: flex; flex-direction: column; align-items: center; gap: 15px; width: 280px; text-decoration: none; transition: var(--transition);">
+                        <div style="height: 80px; display: flex; align-items: center; justify-content: center;">
+                            <img src="assets/isca-logo.png" alt="ISCA Private Island Logo" style="max-height: 80px; width: auto; filter: brightness(0) invert(1); opacity: 0.8; transition: var(--transition);" onmouseover="this.style.opacity='1'; this.style.transform='scale(1.03)';" onmouseout="this.style.opacity='0.8'; this.style.transform='scale(1)';">
+                        </div>
+                        <span style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; letter-spacing: 2px; color: rgba(255,255,255,0.6); text-transform: uppercase; transition: var(--transition);">ISCA PRIVATE ISLAND</span>
+                    </a>
+
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 15px; width: 280px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 100 100" fill="none" stroke="#D4AF37" stroke-width="1.5">
+                            <circle cx="35" cy="50" r="20" />
+                            <circle cx="65" cy="50" r="20" />
+                            <path d="M50 35 L50 65" />
+                        </svg>
+                        <span style="font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; letter-spacing: 2px; color: #fff;">FUTURE STRATEGIC PARTNERS</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= THE VISION ================= -->
+            <section style="padding: 4rem 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
+                <div style="margin-bottom: 4rem;">
+                    <span class="gold-text" style="font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">OUR VISION</span>
+                    <h2 class="serif" style="font-size: 3.5rem; font-weight: 300;">An Integrated Mobility Ecosystem</h2>
+                </div>
+                <div style="max-width: 900px; margin: 0 auto; color: var(--text-muted); font-size: 1.2rem; display: flex; flex-direction: column; gap: 2rem; line-height: 1.9;">
+                    <p>Elite Luxury Bookings goes beyond standard asset management; we are forging a unified global luxury travel ecosystem.</p>
+                    <p>Our vision is to provide a secure gateway where verified members can source premium aviation, off-market estates, custom yachts, and local lifestyle management within a single secure environment.</p>
+                    <p>As our exclusive partner network expands, our fundamental commitment remains absolute: providing elite capability with unmatched discretion, professionalism, and personal execution.</p>
+                </div>
+            </section>
+
+            <!-- ================= FAQ SECTION ================= -->
+            <section style="padding: 4rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <span class="gold-text" style="font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">QUESTIONS & DIRECTIVES</span>
+                    <h2 class="serif" style="font-size: 3.5rem; font-weight: 300;">Frequently Vetted Information</h2>
+                </div>
+
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <div class="faq-header" onclick="toggleFaq(this)">
+                            <span class="faq-title">How does Elite Luxury Bookings secure client confidentiality?</span>
+                            <span class="faq-trigger">+</span>
+                        </div>
+                        <div class="faq-content">
+                            <p>Confidentiality is central to our operations. We secure private flight manifests, coordinate close protection protocols, secure off-market transactions, and operate exclusively with trusted, non-disclosure-bound partners.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-header" onclick="toggleFaq(this)">
+                            <span class="faq-title">What luxury assets are covered under your procurement desk?</span>
+                            <span class="faq-trigger">+</span>
+                        </div>
+                        <div class="faq-content">
+                            <p>Our desk coordinates transcontinental private jet charters, off-market luxury villa rentals, elite superyacht charters, private island retreats, and bespoke ground concierge logistics globally.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-header" onclick="toggleFaq(this)">
+                            <span class="faq-title">What is the typical response protocol for urgent travel coordination?</span>
+                            <span class="faq-trigger">+</span>
+                        </div>
+                        <div class="faq-content">
+                            <p>Our team operates on a strict 30-minute response protocol. For empty-leg flights, helicopter transfers, or FBO security clearances, your designated Senior Lifestyle Manager executes actions instantly.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= EXPLORE PORTFOLIO ================= -->
+            <section style="padding: 4rem 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
+                <h2 class="serif" style="font-size: 3rem; margin-bottom: 1rem; font-weight: 300;">Explore Curated Capabilities</h2>
+                <div class="explore-grid">
+                    <a href="https://eliteluxurybookings.com/elite-private-jet-charter/" class="btn btn-outline" style="padding: 1.5rem;">Private Jet Charter</a>
+                    <a href="https://eliteluxurybookings.com/empty-leg-flights-guide.html" class="btn btn-outline" style="padding: 1.5rem;">Empty Leg Flights</a>
+                    <a href="https://eliteluxurybookings.com/luxury-villa-rentals.html" class="btn btn-outline" style="padding: 1.5rem;">Luxury Villa Rentals</a>
+                    <a href="https://eliteluxurybookings.com/luxury-yacht-rentals.html" class="btn btn-outline" style="padding: 1.5rem;">Luxury Yacht Charters</a>
+                    <a href="https://eliteluxurybookings.com/private-jet-to-maldives-bora-bora.html" class="btn btn-outline" style="padding: 1.5rem;">Private Island Escapes</a>
+                    <a href="https://eliteluxurybookings.com/contact/" class="btn btn-outline" style="padding: 1.5rem;">Luxury Concierge</a>
                 </div>
             </section>
         </div>
 
-        <section class="cta-section">
+        <!-- ================= FINAL CTA ================= -->
+        <section class="cta-section" style="background: radial-gradient(circle at center, rgba(212, 175, 55, 0.08) 0%, transparent 60%); padding: 10rem 0;">
             <div class="container">
-                <h2 class="serif" style="font-size: 3.5rem; margin-bottom: 2rem;">Initiate <span class="gold-text">Procurement</span></h2>
-                <p style="color: var(--text-muted); margin-bottom: 4rem; max-width: 600px; margin-left: auto; margin-right: auto;">Connect with a Senior Lifestyle Manager today to begin engineering your next global mission.</p>
-                <a href="https://eliteluxurybookings.com/contact/" class="btn-gold">Connect with the Desk</a>
-                <a href="https://www.instagram.com/eliteluxurybookings/" target="_blank"
-                    style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;"
-                    onmouseover="this.style.color='#D4AF37'"
-                    onmouseout="this.style.color='rgba(255,255,255,0.7)'">Instagram</a>
-                <a href="https://www.facebook.com/profile.php?id=61575800006704" target="_blank"
-                    style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;"
-                    onmouseover="this.style.color='#D4AF37'"
-                    onmouseout="this.style.color='rgba(255,255,255,0.7)'">Facebook</a>
-
+                <h2 class="serif gold-text" style="font-size: 4rem; margin-bottom: 2rem; font-weight: 300;">Initiate Global Procurement</h2>
+                <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 4rem auto; font-size: 1.25rem; line-height: 1.8;">
+                    Whether coordinating immediate empty-leg logistics, securing private villa assets, or scheduling a superyacht charter, our team is ready to execute.
+                </p>
+                <a href="https://eliteluxurybookings.com/contact/" class="btn btn-gold" style="padding: 1.5rem 4rem;">Connect with the Desk</a>
             </div>
         </section>
     </main>
@@ -354,7 +877,7 @@
         </div>
     </footer>
 
-<script>
+    <script>
         function toggleMobileMenu() { 
             var m = document.getElementById('elbMobileMenu'), 
                 b = document.getElementById('navHamburger'); 
@@ -363,6 +886,11 @@
                 b.classList.toggle('open'); 
                 document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
             } 
+        }
+
+        function toggleFaq(header) {
+            var item = header.parentElement;
+            item.classList.toggle('active');
         }
     </script>
 <!-- WhatsApp Float -->
