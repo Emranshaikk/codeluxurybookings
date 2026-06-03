@@ -10,6 +10,7 @@ VILLA_SILO_BLOCK = """
             <a href="https://eliteluxurybookings.com/ultimate-luxury-villa-rental-guide-2026/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Villa Guide 2026</a>
             <a href="https://eliteluxurybookings.com/villa-vs-luxury-hotel-comparison/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Villa vs Hotel</a>
             <a href="https://eliteluxurybookings.com/how-to-book-luxury-villa-guide/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Booking Protocol</a>
+            <a href="https://eliteluxurybookings.com/private-island-honeymoon-rental/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Honeymoon Rentals</a>
             <a href="https://eliteluxurybookings.com/luxury-villa-rentals/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">View Portfolio</a>
         </div>
     </div>

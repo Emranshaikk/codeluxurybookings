@@ -130,7 +130,6 @@
             color: var(--text-main);
             line-height: 1.7;
             overflow-x: hidden;
-            padding-top: 108px !important;
         }
 
         * {
@@ -743,6 +742,74 @@
             fill: currentColor !important;
             display: block !important;
         }
+
+        /* ===== MASTER FOOTER (INJECTED SITE-WIDE) ===== */
+        .footer { background: #000 !important; padding: 5rem 0 3rem !important; border-top: 1px solid rgba(212, 175, 55, 0.1) !important; margin-top: 5rem !important; text-align: left !important; }
+        .footer-grid { display: grid !important; grid-template-columns: 2fr 1fr 1fr !important; gap: 4rem !important; padding-bottom: 4rem !important; border-bottom: 1px solid rgba(212, 175, 55, 0.1) !important; text-align: left !important; }
+        .footer-brand { text-align: left !important; }
+        .footer-brand h2 { font-family: 'Cormorant Garamond', serif !important; font-size: 2.2rem !important; margin-bottom: 1.5rem !important; color: #fff !important; text-align: left !important; }
+        .footer-brand p { font-family: 'Inter', sans-serif !important; font-size: 0.9rem !important; line-height: 1.8 !important; max-width: 380px !important; margin-bottom: 2rem !important; color: rgba(255, 255, 255, 0.7) !important; text-align: left !important; }
+        .footer-socials { display: flex !important; gap: 1.5rem !important; justify-content: flex-start !important; }
+        .footer-socials a { color: rgba(255, 255, 255, 0.6) !important; transition: 0.3s !important; font-size: 1.5rem !important; }
+        .footer-socials a:hover { color: #D4AF37 !important; }
+        .footer-col { text-align: left !important; }
+        .footer-col h4 { color: #D4AF37 !important; text-transform: uppercase !important; letter-spacing: 2px !important; font-size: 0.9rem !important; margin-bottom: 2rem !important; text-align: left !important; }
+        .footer-col ul { list-style: none !important; padding: 0 !important; margin: 0 !important; text-align: left !important; }
+        .footer-col ul li { margin-bottom: 1rem !important; text-align: left !important; }
+        .footer-col ul li a { color: rgba(255, 255, 255, 0.8) !important; text-decoration: none !important; transition: 0.3s !important; font-size: 0.95rem !important; }
+        .footer-col ul li a:hover { color: #D4AF37 !important; padding-left: 5px !important; }
+        .footer-bottom { display: flex !important; justify-content: space-between !important; align-items: center !important; padding-top: 3rem !important; color: rgba(255, 255, 255, 0.4) !important; font-size: 0.85rem !important; }
+        .footer-legal { display: flex !important; gap: 2rem !important; }
+        .footer-legal a { color: inherit !important; text-decoration: none !important; }
+        @media (max-width: 992px) { 
+            .footer-grid { grid-template-columns: 1fr 1fr !important; } 
+            .footer-brand { grid-column: span 2 !important; } 
+        }
+        @media (max-width: 600px) { 
+            .footer-grid { grid-template-columns: 1fr !important; } 
+            .footer-brand { grid-column: span 1 !important; text-align: center !important; } 
+            .footer-brand h2 { text-align: center !important; }
+            .footer-brand p { text-align: center !important; margin: 0 auto 2rem auto !important; }
+            .footer-socials { justify-content: center !important; }
+            .footer-col { text-align: center !important; }
+            .footer-col h4 { text-align: center !important; }
+            .footer-col ul { text-align: center !important; }
+            .footer-col ul li { text-align: center !important; }
+            .footer-bottom { flex-direction: column !important; gap: 2rem !important; text-align: center !important; } 
+        }
+            /* --- ELITE NAV & TICKER STANDARDIZATION --- */
+        .top-intel-bar { background: rgba(5, 5, 5, 0.98) !important; border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important; height: 36px !important; overflow: hidden !important; position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; z-index: 100000 !important; display: flex !important; align-items: center !important; }
+        .ticker-wrap { white-space: nowrap !important; overflow: hidden !important; width: 100% !important; }
+        .ticker-content { display: inline-block !important; white-space: nowrap !important; padding-left: 100% !important; animation: ticker-scroll 40s linear infinite !important; font-size: 0.72rem !important; letter-spacing: 2px !important; text-transform: uppercase !important; color: rgba(255, 255, 255, 0.9) !important; }
+        @keyframes ticker-scroll { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-200%, 0, 0); } }
+        .ticker-content strong { color: #D4AF37 !important; margin: 0 40px !important; }
+        .ticker-content a { color: #fff !important; text-decoration: underline !important; text-underline-offset: 4px !important; margin-left: 10px !important; font-weight: 600 !important; }
+        
+        .global-nav { position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; background: rgba(5, 5, 5, 0.98) !important; backdrop-filter: blur(24px) !important; border-bottom: 1px solid rgba(212, 175, 55, 0.2) !important; z-index: 99999 !important; transition: top 0.3s ease !important; }
+        .top-intel-bar ~ .global-nav { top: 36px !important; }
+        .global-nav-inner { display: flex !important; align-items: center !important; justify-content: space-between !important; height: 72px !important; gap: 1rem !important; max-width: 1400px !important; margin: 0 auto !important; padding: 0 2rem !important; box-sizing: border-box !important; }
+        .nav-brand { font-family: 'Cormorant Garamond', serif !important; font-size: 1.75rem !important; font-weight: 600 !important; color: #fff !important; text-decoration: none !important; }
+        .nav-gold { color: #D4AF37 !important; }
+        .nav-links { display: flex !important; align-items: center !important; gap: 0.25rem !important; list-style: none !important; flex: 1 !important; justify-content: center !important; margin: 0 !important; padding: 0 !important; }
+        .nav-links a { color: rgba(255, 255, 255, 0.7) !important; text-decoration: none !important; font-size: 0.82rem !important; text-transform: uppercase !important; letter-spacing: 1.5px !important; padding: 0.5rem 0.9rem !important; border-radius: 6px !important; transition: all 0.4s !important; font-family: 'Inter', sans-serif !important; }
+        .nav-links a:hover { color: #D4AF37 !important; }
+        .nav-hamburger { display: none !important; flex-direction: column !important; gap: 5px !important; cursor: pointer !important; padding: 0.5rem !important; z-index: 100001 !important; }
+        .nav-hamburger span { display: block !important; width: 24px !important; height: 2px !important; background: rgba(255, 255, 255, 0.8) !important; border-radius: 2px !important; transition: all 0.4s !important; }
+        .nav-hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px) !important; }
+        .nav-hamburger.open span:nth-child(2) { opacity: 0 !important; }
+        .nav-hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px) !important; }
+        .mobile-menu { display: none !important; position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; background: #050505 !important; padding: 72px 2rem 2rem !important; z-index: 100000 !important; flex-direction: column !important; gap: 0.5rem !important; overflow-y: auto !important; }
+        .mobile-menu.open { display: flex !important; }
+        .mobile-menu a { color: rgba(255, 255, 255, 0.8) !important; text-decoration: none !important; font-size: 1.1rem !important; text-transform: uppercase !important; letter-spacing: 2px !important; padding: 1.2rem 0 !important; border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important; }
+        @media (max-width: 1024px) { .nav-links { display: none !important; } .nav-hamburger { display: flex !important; } }
+
+        body:has(.top-intel-bar) { padding-top: 108px !important; }
+        
+        @media (max-width: 768px) {
+            .top-intel-bar { height: 32px !important; }
+            .top-intel-bar ~ .global-nav { top: 32px !important; }
+            body:has(.top-intel-bar) { padding-top: 104px !important; }
+        }
     </style>
 
 <!-- Yandex.Metrika counter -->
@@ -764,37 +831,37 @@
 <body>
 
     <!-- ELB_NAV_START -->
-    <div class="top-intel-bar">
-        <div class="ticker-wrap">
-            <div class="ticker-content">
-                <strong>⚠️ Intelligence Alert:</strong> Strategic Procurement Windows Open for Summer 2026. <strong>Empty Leg Flights Available:</strong> <a href="https://wa.me/918801079030">Connect for Instant Procurement</a> <strong>⚠️ Global Inventory Update:</strong> Off-Market Assets Now Accessible via Elite Concierge.
-            </div>
+<div class="top-intel-bar">
+    <div class="ticker-wrap">
+        <div class="ticker-content">
+            <strong>⚠️ Intelligence Alert:</strong> Strategic Procurement Windows Open for Summer 2026. <strong>Empty Leg Flights Available:</strong> <a href="https://wa.me/918801079030">Connect for Instant Procurement</a> <strong>⚠️ Global Inventory Update:</strong> Off-Market Assets Now Accessible via Elite Concierge.
         </div>
     </div>
+</div>
 
-    <nav class="global-nav">
-        <div class="container global-nav-inner">
-            <a href="https://eliteluxurybookings.com/" class="nav-brand">Elite Luxury <span class="nav-gold">Bookings</span></a>
-            <ul class="nav-links">
-                <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
-                <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Yachts</a></li>
-                <li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/">Villas</a></li>
-                <li><a href="https://eliteluxurybookings.com/blog/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Blog</a></li>
-                <li><a href="https://eliteluxurybookings.com/contact/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Contact</a></li>
-            </ul>
-            <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()">
-                <span></span><span></span><span></span>
-            </div>
+<nav class="global-nav">
+    <div class="container global-nav-inner">
+        <a href="https://eliteluxurybookings.com/" class="nav-brand">Elite Luxury <span class="nav-gold">Bookings</span></a>
+        <ul class="nav-links">
+            <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
+            <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Yachts</a></li>
+            <li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/">Villas</a></li>
+            <li><a href="https://eliteluxurybookings.com/blog/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Blog</a></li>
+            <li><a href="https://eliteluxurybookings.com/contact/" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'">Contact</a></li>
+        </ul>
+        <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()">
+            <span></span><span></span><span></span>
         </div>
-    </nav>
-    <div class="mobile-menu" id="elbMobileMenu">
-        <a href="https://eliteluxurybookings.com/elite-private-jet-charter/">✈ Private Jets</a>
-        <a href="https://eliteluxurybookings.com/luxury-villa-rentals/">🏡 Luxury Villas</a>
-        <a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">⚓ Luxury Yachts</a>
-        <a href="https://eliteluxurybookings.com/blog/">📰 Blog</a>
-        <a href="https://eliteluxurybookings.com/contact/">📞 Contact</a>
     </div>
-    <!-- ELB_NAV_END -->
+</nav>
+<div class="mobile-menu" id="elbMobileMenu">
+    <a href="https://eliteluxurybookings.com/elite-private-jet-charter/">✈ Private Jets</a>
+    <a href="https://eliteluxurybookings.com/luxury-villa-rentals/">🏡 Luxury Villas</a>
+    <a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">⚓ Luxury Yachts</a>
+    <a href="https://eliteluxurybookings.com/blog/">📰 Blog</a>
+    <a href="https://eliteluxurybookings.com/contact/">📞 Contact</a>
+</div>
+<!-- ELB_NAV_END -->
 
     <!-- 1. HERO SECTION -->
     <header class="island-hero">
@@ -1092,24 +1159,15 @@
                         </ul>
                         <p style="font-size: 0.95rem; font-style: italic; color: var(--primary-gold);">Ideal for: Eco-luxury travelers, conservationists, and royalty seeking absolute security and unique natural beauty.</p>
                     </div>
-                    <div class="image-frame" style="background-color: #111;">
-                        <!-- Placeholder visual styling inside frame -->
-                        <div style="padding: 2.5rem; text-align: center; color: var(--primary-gold);">
-                            <i class="fas fa-island-tropical" style="font-size: 3rem; margin-bottom: 1.5rem;"></i>
-                            <h4 class="serif" style="font-size: 1.5rem; color: #fff; margin-bottom: 0.5rem;">Seychelles Sanctuary</h4>
-                            <p style="font-size: 0.85rem; color: var(--text-muted);">Visual: Lush tropical forest meets pink granite boulders and turquoise sea</p>
-                        </div>
+                    <div class="image-frame">
+                        <img src="assets/seychelles_honeymoon.png" alt="Ultra-luxury tropical beachfront resort in Seychelles with pink granite boulders and turquoise Indian Ocean" loading="lazy">
                     </div>
                 </div>
 
                 <!-- FIJI -->
                 <div class="destination-block flipped">
-                    <div class="image-frame" style="background-color: #111;">
-                        <div style="padding: 2.5rem; text-align: center; color: var(--primary-gold);">
-                            <i class="fas fa-sun" style="font-size: 3rem; margin-bottom: 1.5rem;"></i>
-                            <h4 class="serif" style="font-size: 1.5rem; color: #fff; margin-bottom: 0.5rem;">Fiji Private Oasis</h4>
-                            <p style="font-size: 0.85rem; color: var(--text-muted);">Visual: Traditional Fijian bure on a private white-sand beach</p>
-                        </div>
+                    <div class="image-frame">
+                        <img src="assets/fiji_honeymoon.png" alt="A traditional Fijian luxury bure villa on a private white-sand beach under palm trees and blue skies" loading="lazy">
                     </div>
                     <div class="destination-text">
                         <span class="tag">Destination Spotlight</span>
@@ -1143,12 +1201,8 @@
                         </ul>
                         <p style="font-size: 0.95rem; font-style: italic; color: var(--primary-gold);">Ideal for: Lovers of classic romance, majestic scenery, and rich Polynesian sailing heritage.</p>
                     </div>
-                    <div class="image-frame" style="background-color: #111;">
-                        <div style="padding: 2.5rem; text-align: center; color: var(--primary-gold);">
-                            <i class="fas fa-ship" style="font-size: 3rem; margin-bottom: 1.5rem;"></i>
-                            <h4 class="serif" style="font-size: 1.5rem; color: #fff; margin-bottom: 0.5rem;">French Polynesia Motu</h4>
-                            <p style="font-size: 0.85rem; color: var(--text-muted);">Visual: Sandy islet in a vast lagoon with green mountains in the distance</p>
-                        </div>
+                    <div class="image-frame">
+                        <img src="assets/french_polynesia_honeymoon.png" alt="Bora Bora private island motu with shallow crystal-clear turquoise lagoon and green volcanic mountains" loading="lazy">
                     </div>
                 </div>
 
@@ -1189,23 +1243,15 @@
                         </ul>
                         <p style="font-size: 0.95rem; font-style: italic; color: var(--primary-gold);">Ideal for: Surf lovers, wellness couples, and creative souls looking for raw, unforced luxury.</p>
                     </div>
-                    <div class="image-frame" style="background-color: #111;">
-                        <div style="padding: 2.5rem; text-align: center; color: var(--primary-gold);">
-                            <i class="fas fa-dharmachakra" style="font-size: 3rem; margin-bottom: 1.5rem;"></i>
-                            <h4 class="serif" style="font-size: 1.5rem; color: #fff; margin-bottom: 0.5rem;">Indonesia Hidden Cay</h4>
-                            <p style="font-size: 0.85rem; color: var(--text-muted);">Visual: Thatch-roof ocean villa overlooking pristine jungle-fringed coast</p>
-                        </div>
+                    <div class="image-frame">
+                        <img src="assets/indonesia_honeymoon.png" alt="Luxury eco-masterpiece resort with a thatched-roof beachfront pool villa in Sumba Indonesia at sunset" loading="lazy">
                     </div>
                 </div>
 
                 <!-- THAILAND -->
                 <div class="destination-block flipped">
-                    <div class="image-frame" style="background-color: #111;">
-                        <div style="padding: 2.5rem; text-align: center; color: var(--primary-gold);">
-                            <i class="fas fa-gong" style="font-size: 3rem; margin-bottom: 1.5rem;"></i>
-                            <h4 class="serif" style="font-size: 1.5rem; color: #fff; margin-bottom: 0.5rem;">Thailand Private Island</h4>
-                            <p style="font-size: 0.85rem; color: var(--text-muted);">Visual: Wooden pool villa surrounded by tropical jungle and crystal sea</p>
-                        </div>
+                    <div class="image-frame">
+                        <img src="assets/thailand_honeymoon.png" alt="Luxury wooden pool villa overlooking the ocean and surrounded by lush green jungle in Koh Kood Thailand" loading="lazy">
                     </div>
                     <div class="destination-text">
                         <span class="tag">Destination Spotlight</span>
@@ -1348,12 +1394,8 @@
                 </div>
 
                 <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 4.5rem; align-items: center;">
-                    <div class="image-frame" style="background-color: #111;">
-                        <div style="padding: 2.5rem; text-align: center; color: var(--primary-gold);">
-                            <i class="fas fa-plane-departure" style="font-size: 4rem; margin-bottom: 2rem;"></i>
-                            <h4 class="serif" style="font-size: 1.8rem; color: #fff; margin-bottom: 0.8rem;">Discrete Aviation Access</h4>
-                            <p style="font-size: 0.95rem; color: var(--text-muted);">Visual: Ultra-luxury private jet parked on a tropical island runway</p>
-                        </div>
+                    <div class="image-frame">
+                        <img src="assets/honeymoon_jet.png" alt="An ultra-luxury private jet parked on a tropical island runway at sunset with a luxury couple walking towards it" loading="lazy">
                     </div>
                     <div>
                         <h3 class="serif" style="font-size: 2.2rem; margin-bottom: 1.5rem;">Frictionless, End-to-End Romance</h3>
@@ -1370,8 +1412,10 @@
                             <a href="private-island-for-rent.html" style="font-weight:600; color: var(--primary-gold); text-decoration: underline;">Islands for Rent</a> | 
                             <a href="luxury-private-island-rental.html" style="font-weight:600; color: var(--primary-gold); text-decoration: underline;">Luxury Islands</a> | 
                             <a href="caribbean-private-island-rental.html" style="font-weight:600; color: var(--primary-gold); text-decoration: underline;">Caribbean Islands</a> | 
+                            <a href="bahamas-private-island-rental.html" style="font-weight:600; color: var(--primary-gold); text-decoration: underline;">Bahamas Islands</a> | 
                             <a href="maldives-private-island-rental.html" style="font-weight:600; color: var(--primary-gold); text-decoration: underline;">Maldives Islands</a> | 
-                            <a href="https://eliteluxurybookings.com/all-inclusive-private-island-rental" style="font-weight:600; color: var(--primary-gold); text-decoration: underline;">All Inclusive Islands</a>
+                            <a href="exclusive-private-island-rental.html" style="font-weight:600; color: var(--primary-gold); text-decoration: underline;">Exclusive Islands</a> | 
+                            <a href="all-inclusive-private-island-rental.html" style="font-weight:600; color: var(--primary-gold); text-decoration: underline;">All Inclusive Islands</a>
                         </div>
                     </div>
                 </div>
