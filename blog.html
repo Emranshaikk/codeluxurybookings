@@ -923,8 +923,21 @@
             } else {
                 filteredPosts = allPosts.filter(item => {
                     const itemCat = item.category.toLowerCase();
-                    const isRoute = item.url.includes('-private-jet-cost');
-                    return itemCat.includes(category) || (category === 'private jet' && isRoute);
+                    const url = item.url.toLowerCase();
+                    
+                    if (category === 'private jet') {
+                        const isRoute = url.includes('-private-jet-cost') || url.includes('private-jet') || url.includes('aviation');
+                        return itemCat.includes('jet') || itemCat.includes('aviation') || itemCat.includes('aircraft') || isRoute || itemCat.includes('lifestyle');
+                    }
+                    if (category === 'private yacht') {
+                        const isYacht = url.includes('yacht') || url.includes('boat') || url.includes('catamaran');
+                        return itemCat.includes('yacht') || itemCat.includes('boat') || itemCat.includes('catamaran') || isYacht || itemCat.includes('lifestyle');
+                    }
+                    if (category === 'luxury villa') {
+                        const isVilla = url.includes('villa') || url.includes('island') || url.includes('estate');
+                        return itemCat.includes('villa') || itemCat.includes('island') || itemCat.includes('estate') || isVilla || itemCat.includes('lifestyle');
+                    }
+                    return itemCat.includes(category);
                 });
             }
 
