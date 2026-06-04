@@ -86,7 +86,7 @@
         "label": "Aviation Authority",
         "title": "7 Proven Business Jet Charter Tips to Fly Smarter",
         "image": "/assets/blog/luxury_jet_interior_business_charter.png",
-        "excerpt": "Discover the ultimate guide to business jet charter — top routes, pricing, buyer tips, and long-tail keywords that help you book private air travel with confidence.",
+        "excerpt": "Discover the ultimate guide to business jet charter \u2014 top routes, pricing, buyer tips, and long-tail keywords that help you book private air travel with confidence.",
         "link_text": "Read the Full Guide"
     },
     {
@@ -240,7 +240,7 @@
     },
     {
         "url": "/mykonos-yacht-charter-masterclass-2026.html",
-        "category": "yacht",
+        "category": "private yacht",
         "label": "Aegean Elite",
         "title": "Mykonos Yacht Charter Masterclass 2026: The Ultimate Cyclades Guide",
         "excerpt": "The definitive 1,500-word blueprint for Mykonos yacht charters in 2026. Discover weekly costs, the perfect 7-day Cyclades itinerary, and the most exclusive vessels in the Aegean.",
@@ -256,7 +256,7 @@
     },
     {
         "url": "/boat-trip-from-mallorca-to-formentera.html",
-        "category": "yacht",
+        "category": "private yacht",
         "label": "Maritime Elite",
         "title": "Boat Trip from Mallorca to Formentera: The 2026 Authority Guide",
         "excerpt": "The definitive 1,500-word guide to the ultimate crossing. Discover private yacht routes, costs, top beaches, and VIP club access for the Mediterranean's most exclusive route.",
@@ -264,7 +264,7 @@
     },
     {
         "url": "/mallorca-to-ibiza-private-boat.html",
-        "category": "yacht",
+        "category": "private yacht",
         "label": "Balearic Elite",
         "title": "Private Boat Mallorca to Ibiza: The Definitive 2026 Masterclass",
         "excerpt": "The absolute authority on Balearic crossings. A 1,500-word blueprint for Mallorca to Ibiza boat charters, featuring the Wajer 55, VIP Cala Jondal arrivals, and expert maritime intelligence.",
@@ -346,7 +346,7 @@
         "url": "/best-private-boat-charter-dubai.html",
         "category": "private yacht",
         "label": "Private Yacht",
-        "title": "7 Best Private Boat Charter in Dubai – Ultimate Guide 2025",
+        "title": "7 Best Private Boat Charter in Dubai \u2013 Ultimate Guide 2025",
         "excerpt": "Discover the 7 best private boat charter in Dubai. Compare prices, yacht\n                        types, routes & tips for an exclusive Dubai sea experience on the Arabian Gulf.",
         "link_text": "View Analysis"
     },
@@ -1493,5 +1493,93 @@
         "title": "Shanghai to Hong Kong Private Jet Charter | Ultra-Discrete Aviation",
         "excerpt": "Experience the ultimate Shanghai to Hong Kong Private Jet Charter. Elite luxury, bespoke coordination, and discrete terminal access. Request a tailored aviation quote.",
         "link_text": "View Pricing Analysis"
+    },
+    {
+        "url": "/all-inclusive-yacht-charter.html",
+        "category": "private yacht",
+        "label": "Charter Authority",
+        "title": "All Inclusive Yacht Charter",
+        "excerpt": "Book an all inclusive yacht charter. Experience the ultimate luxury with a private yacht rental, fully crewed with a private chef, meals, drinks, and water sports.",
+        "link_text": "Explore Yacht Fleet"
+    },
+    {
+        "url": "/global-route-silo.html",
+        "category": "private jet",
+        "label": "Aviation Authority",
+        "title": "Global Route Directory",
+        "excerpt": "Explore the full network of elite private jet charter routes. Direct connectivity between global luxury hubs.",
+        "link_text": "Configure Sourcing Solution"
+    },
+    {
+        "url": "/last-minute-yacht-charter.html",
+        "category": "private yacht",
+        "label": "Charter Authority",
+        "title": "Last Minute Yacht Charter",
+        "excerpt": "Secure a luxury last minute yacht charter immediately. Book private superyachts on short notice with crew, gourmet dining, and global operations. Inquire now.",
+        "link_text": "Explore Yacht Fleet"
+    },
+    {
+        "url": "/luxury-yacht-charter-caribbean.html",
+        "category": "private yacht",
+        "label": "Charter Authority",
+        "title": "Luxury Yacht Charter Caribbean",
+        "excerpt": "Book a luxury yacht charter in the Caribbean. Exclusive superyacht rentals with crew, private yacht vacations, & custom itineraries. Request a quote.",
+        "link_text": "Explore Yacht Fleet"
+    },
+    {
+        "url": "/luxury-yacht-charter-for-family-vacation.html",
+        "category": "private yacht",
+        "label": "Charter Authority",
+        "title": "Luxury Yacht Charter for Family Vacation",
+        "excerpt": "Book a luxury yacht charter for family vacations. Private yacht rentals with crew, customized family itineraries, child-friendly layouts, and quotes.",
+        "link_text": "Explore Yacht Fleet"
+    },
+    {
+        "url": "/luxury-yacht-rental-for-parties.html",
+        "category": "private yacht",
+        "label": "Charter Authority",
+        "title": "Luxury Yacht Rental for Parties",
+        "excerpt": "Book a luxury yacht rental for parties. Exclusive private party yacht charters, VIP events, birthday celebrations, and custom entertainment. Request a quote.",
+        "link_text": "Explore Yacht Fleet"
+    },
+    {
+        "url": "/private-yacht-vacation-package.html",
+        "category": "private yacht",
+        "label": "Charter Authority",
+        "title": "Private Yacht Vacation Package",
+        "excerpt": "Book the ultimate private yacht vacation package. Fully crewed charter escapes featuring private chefs, personalized itineraries, and watersports.",
+        "link_text": "Explore Yacht Fleet"
+    },
+    {
+        "url": "/yacht-charter-available-now.html",
+        "category": "private yacht",
+        "label": "Charter Authority",
+        "title": "Yacht Charter Available Now",
+        "excerpt": "Secure a luxury yacht charter available now. Book your private yacht charter immediately with crew, gourmet dining, and global operations. Request availability.",
+        "link_text": "Explore Yacht Fleet"
+    },
+    {
+        "url": "/yacht-charter-for-private-events.html",
+        "category": "private yacht",
+        "label": "Charter Authority",
+        "title": "Yacht Charter for Private Events",
+        "excerpt": "Book a luxury yacht charter for private events. Exquisite yacht venues for VIP celebrations, parties, and weddings. Request a custom event quote.",
+        "link_text": "Explore Yacht Fleet"
+    },
+    {
+        "url": "/yacht-charter-for-wedding.html",
+        "category": "private yacht",
+        "label": "Charter Authority",
+        "title": "Yacht Charter for Wedding",
+        "excerpt": "Book a luxury yacht charter for your wedding. Exclusive wedding yacht venues for ceremony & reception. Request availability and wedding quotes.",
+        "link_text": "Explore Yacht Fleet"
+    },
+    {
+        "url": "/yacht-charter-with-crew.html",
+        "category": "private yacht",
+        "label": "Charter Authority",
+        "title": "Yacht Charter With Crew",
+        "excerpt": "Book a yacht charter with crew. Experience the ultimate luxury yacht rental with a dedicated captain, private chef, stewardesses, and customizable global itineraries.",
+        "link_text": "Explore Yacht Fleet"
     }
 ]

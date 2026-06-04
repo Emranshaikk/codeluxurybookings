@@ -898,6 +898,24 @@
                 .then(data => {
                     allPosts = data;
 
+                    // Update dynamic counts in Category Hub
+                    const jetCount = data.filter(item => item.category === 'private jet' || item.category === 'lifestyle').length;
+                    const yachtCount = data.filter(item => item.category === 'private yacht' || item.category === 'lifestyle').length;
+                    const villaCount = data.filter(item => item.category === 'luxury villa' || item.category === 'lifestyle').length;
+
+                    const catBoxes = document.querySelectorAll('.cat-box');
+                    catBoxes.forEach(box => {
+                        const h3Text = box.querySelector('h3').innerText.toLowerCase();
+                        const span = box.querySelector('span');
+                        if (h3Text.includes('jet')) {
+                            span.innerText = `${jetCount} Routes & Guides`;
+                        } else if (h3Text.includes('yacht')) {
+                            span.innerText = `${yachtCount} Maritime Guides`;
+                        } else if (h3Text.includes('villa')) {
+                            span.innerText = `${villaCount} Estate Dossiers`;
+                        }
+                    });
+
                     const activeBtn = document.querySelector('.cat-box.active');
                     if (activeBtn) {
                         const catTitle = activeBtn.querySelector('h3');
@@ -923,21 +941,16 @@
             } else {
                 filteredPosts = allPosts.filter(item => {
                     const itemCat = item.category.toLowerCase();
-                    const url = item.url.toLowerCase();
-                    
                     if (category === 'private jet') {
-                        const isRoute = url.includes('-private-jet-cost') || url.includes('private-jet') || url.includes('aviation');
-                        return itemCat.includes('jet') || itemCat.includes('aviation') || itemCat.includes('aircraft') || isRoute || itemCat.includes('lifestyle');
+                        return itemCat === 'private jet' || itemCat === 'lifestyle';
                     }
                     if (category === 'private yacht') {
-                        const isYacht = url.includes('yacht') || url.includes('boat') || url.includes('catamaran');
-                        return itemCat.includes('yacht') || itemCat.includes('boat') || itemCat.includes('catamaran') || isYacht || itemCat.includes('lifestyle');
+                        return itemCat === 'private yacht' || itemCat === 'lifestyle';
                     }
                     if (category === 'luxury villa') {
-                        const isVilla = url.includes('villa') || url.includes('island') || url.includes('estate');
-                        return itemCat.includes('villa') || itemCat.includes('island') || itemCat.includes('estate') || isVilla || itemCat.includes('lifestyle');
+                        return itemCat === 'luxury villa' || itemCat === 'lifestyle';
                     }
-                    return itemCat.includes(category);
+                    return itemCat === category;
                 });
             }
 
@@ -1078,6 +1091,7 @@
                     </ul>
                 </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2026 Elite Luxury Bookings. All rights reserved. Global Authority in Luxury Procurement.</p>
                 <div class="footer-legal">

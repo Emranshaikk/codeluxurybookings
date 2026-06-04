@@ -1,0 +1,27 @@
+26: type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Elite Luxury Bookings","alternateName":"ELB","url":"https://eliteluxurybookings.com","logo":"https://eliteluxurybookings.com/favicon.png","sameAs":["https://www.facebook.com/eliteluxurybookings","https://www.instagram.com/eliteluxurybookings","https://www.linkedin.com/company/elite-luxury-bookings/","https://x.com/eliteluxuryb"],"contactPoint":{"@type":"ContactPoint","telephone":"+918801079030","contactType":"Concierge","availableLanguage":"English"}}</script>
+1321: /* ── INSTAGRAM STRIP (NEW) ── */
+1322: .instagram-section {
+1327: .instagram-header {
+1336: .instagram-handle {
+1346: .instagram-handle:hover {
+1350: .instagram-handle i {
+1354: .instagram-grid {
+1712: .instagram-grid {
+1750: .instagram-grid {
+1783: .instagram-grid {
+2431: 15. INSTAGRAM FEED (NEW)
+2433: <section class="instagram-section observe-fade">
+2435: <div class="instagram-header">
+2440: <a href="https://www.instagram.com/eliteluxurybookings" target="_blank" class="instagram-handle">
+2441: <i class="fab fa-instagram"></i>
+2445: <div class="instagram-grid">
+2446: <!-- Using Unsplash luxury travel images as placeholders — replace with your actual Instagram embed or API feed -->
+2450: <div class="ig-tile-overlay"><i class="fab fa-instagram"></i></div>
+2455: <div class="ig-tile-overlay"><i class="fab fa-instagram"></i></div>
+2460: <div class="ig-tile-overlay"><i class="fab fa-instagram"></i></div>
+2465: <div class="ig-tile-overlay"><i class="fab fa-instagram"></i></div>
+2470: <div class="ig-tile-overlay"><i class="fab fa-instagram"></i></div>
+2475: <div class="ig-tile-overlay"><i class="fab fa-instagram"></i></div>
+2479: <a href="https://www.instagram.com/eliteluxurybookings" target="_blank" class="btn btn-outline">View
+2480: Instagram →</a>
+2631: <a href="https://www.instagram.com/eliteluxurybookings"><i class="fab fa-instagram"></i></a>
