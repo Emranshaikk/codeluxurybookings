@@ -14,7 +14,8 @@
         "label": "Corporate Solutions",
         "title": "Corporate Jet Charter: Elite Executive Private Jet Services",
         "excerpt": "Maximize executive productivity, protect valuable capital, and control your schedule. Secure elite executive jet charter flights tailored for multinational corporations and UHNW leaders.",
-        "link_text": "Configure Fleet Solution"
+        "link_text": "Configure Fleet Solution",
+        "image": "/assets/hero-bg.png"
     },
     {
         "url": "/global-private-jet-charter.html",
@@ -22,7 +23,8 @@
         "label": "VIP Sourcing",
         "title": "Global Private Jet Charter: Elite Worldwide VIP Sourcing & Flights",
         "excerpt": "Maximize schedule sovereignty, bypass commercial terminal friction, and secure off-market aviation assets. Secure a bespoke global private jet charter globally.",
-        "link_text": "Request Sourcing Quote"
+        "link_text": "Request Sourcing Quote",
+        "image": "/assets/hero-bg.png"
     },
     {
         "url": "/business-jet-charter.html",
@@ -30,7 +32,8 @@
         "label": "Corporate Solutions",
         "title": "Business Jet Charter: Premium Private Jet Rental & Flights",
         "excerpt": "Secure premium business jet charter services tailored for executives, UHNW individuals, and corporate groups. Request a bespoke private jet rental quote today.",
-        "link_text": "Request Jet Quote"
+        "link_text": "Request Jet Quote",
+        "image": "/assets/hero-bg.png"
     },
     {
         "url": "/private-jet-available-now.html",
@@ -38,7 +41,8 @@
         "label": "Aviation Sourcing",
         "title": "Private Jet Available Now: Instant On-Demand VIP Flights",
         "excerpt": "Avoid commercial flight friction. Source a standard safety-vetted private jet available now for immediate same-day departures and last-minute travel globally.",
-        "link_text": "Request Flight Quote"
+        "link_text": "Request Flight Quote",
+        "image": "/assets/hero-bg.png"
     },
     {
         "url": "/luxury-private-jet-charter.html",
@@ -46,7 +50,8 @@
         "label": "Luxury Aviation",
         "title": "Luxury Private Jet Charter: Elite Air Sourcing & VIP Flights",
         "excerpt": "Secure an elite luxury private jet charter today. Access premium executive travel, on-demand luxury private jet rental, and VIP concierge flight services globally.",
-        "link_text": "Request Sourcing Quote"
+        "link_text": "Request Sourcing Quote",
+        "image": "/assets/hero-bg.png"
     },
     {
         "url": "/private-aircraft-charter.html",
@@ -54,7 +59,8 @@
         "label": "Aviation Sourcing",
         "title": "Private Aircraft Charter: Premium Jet Sourcing & Rentals",
         "excerpt": "Maximize C-suite scheduling velocity, preserve absolute board confidentiality, and secure off-market aviation assets. Secure a premium private aircraft charter globally.",
-        "link_text": "Request Aircraft Quote"
+        "link_text": "Request Aircraft Quote",
+        "image": "/assets/hero-bg.png"
     },
     {
         "url": "/premium-jet-charter.html",
@@ -62,7 +68,8 @@
         "label": "Luxury Aviation",
         "title": "Premium Jet Charter: Luxury Private Jet Sourcing & VIP Flights",
         "excerpt": "Maximize executive scheduling velocity, preserve absolute board confidentiality, and secure off-market aviation assets. Secure a bespoke premium jet charter globally.",
-        "link_text": "Request Premium Quote"
+        "link_text": "Request Premium Quote",
+        "image": "/assets/hero-bg.png"
     },
     {
         "url": "/private-aviation-service.html",
@@ -70,7 +77,8 @@
         "label": "VIP Sourcing",
         "title": "Private Aviation Service: Elite Global VIP Sourcing & Flights",
         "excerpt": "Maximize executive scheduling velocity, preserve absolute board confidentiality, and secure off-market aviation assets. Secure a bespoke private aviation service globally.",
-        "link_text": "Request Sourcing Quote"
+        "link_text": "Request Sourcing Quote",
+        "image": "/assets/hero-bg.png"
     },
     {
         "url": "/ultra-luxury-jet-charter.html",
@@ -78,7 +86,8 @@
         "label": "VIP Sourcing",
         "title": "Ultra Luxury Jet Charter: Global VIP Sourcing & Concierge",
         "excerpt": "Maximize schedule sovereignty, bypass commercial terminal friction, and secure off-market aviation assets. Secure a bespoke ultra luxury private jet charter globally.",
-        "link_text": "Request VIP Quote"
+        "link_text": "Request VIP Quote",
+        "image": "/assets/hero-bg.png"
     },
     {
         "url": "/business-jet-charter-guide-tips-pricing.html",
@@ -86,7 +95,7 @@
         "label": "Aviation Authority",
         "title": "7 Proven Business Jet Charter Tips to Fly Smarter",
         "image": "/assets/blog/luxury_jet_interior_business_charter.png",
-        "excerpt": "Discover the ultimate guide to business jet charter \u2014 top routes, pricing, buyer tips, and long-tail keywords that help you book private air travel with confidence.",
+        "excerpt": "Discover the ultimate guide to business jet charter — top routes, pricing, buyer tips, and long-tail keywords that help you book private air travel with confidence.",
         "link_text": "Read the Full Guide"
     },
     {
@@ -95,7 +104,8 @@
         "label": "Charter Authority",
         "title": "Ultimate Monaco to Amalfi Coast Superyacht Itinerary 2026",
         "excerpt": "The definitive Monaco to Amalfi Coast yacht itinerary. Discover the 7-day voyage through St. Tropez, Corsica, and Capri.",
-        "link_text": "Read the Itinerary"
+        "link_text": "Read the Itinerary",
+        "image": "/assets/monaco_amalfi_yacht_hero.png"
     },
     {
         "url": "/private-jet-to-maldives-bora-bora.html",
@@ -103,7 +113,8 @@
         "label": "Aviation Authority",
         "title": "Private Jet to the Maldives & Bora Bora: The Ultimate Long-Haul Guide",
         "excerpt": "Planning a private jet to the Maldives or Bora Bora? Discover ultra-long-range jet options, fuel stops, VIP transfers, and estimated costs.",
-        "link_text": "Read the ULR Guide"
+        "link_text": "Read the ULR Guide",
+        "image": "/assets/images/maldives-jet-view.png"
     },
     {
         "url": "/flying-pets-on-private-jets.html",
@@ -111,7 +122,8 @@
         "label": "Aviation Authority",
         "title": "Flying With Large Dogs on Private Jets: The Ultimate 2026 Guide",
         "excerpt": "Commercial airlines restrict large dogs, making private jets the only humane solution. Learn how to fly with pets in-cabin, necessary documentation, and costs.",
-        "link_text": "Read the Pet Guide"
+        "link_text": "Read the Pet Guide",
+        "image": "/assets/images/dog-private-jet.png"
     },
     {
         "url": "/heavy-jet-vs-light-jet-charter.html",
@@ -119,7 +131,8 @@
         "label": "Aviation Authority",
         "title": "Heavy Jet vs Light Jet Charter: Which is Right For You?",
         "excerpt": "Comparing a Heavy Jet vs a Light Jet for your next charter? Learn the differences in range, passenger capacity, cabin height, and cost.",
-        "link_text": "Compare Jet Classes"
+        "link_text": "Compare Jet Classes",
+        "image": "/assets/images/jet-class-comparison-hero.png"
     },
     {
         "url": "/empty-leg-flights-guide.html",
@@ -127,7 +140,8 @@
         "label": "Aviation Authority",
         "title": "The Ultimate Guide to Booking Empty Leg Private Jet Flights",
         "excerpt": "Discover how to book empty leg private jet flights for up to 75% off. Learn the secrets, risks, and strategies of flying private for less in 2026.",
-        "link_text": "Read the Empty Leg Guide"
+        "link_text": "Read the Empty Leg Guide",
+        "image": "/assets/images/empty-leg-mastery-hero.png"
     },
     {
         "url": "/private-jet-charter-cost-estimator.html",
@@ -135,7 +149,8 @@
         "label": "Financial Authority",
         "title": "Private Jet Charter Cost Estimator: True Hourly Rates for 2026",
         "excerpt": "Stop relying on inaccurate calculators. Discover the true private jet charter cost estimator for 2026, including hidden fees, hourly rates, and empty legs.",
-        "link_text": "Read the Cost Guide"
+        "link_text": "Read the Cost Guide",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/motor-yacht-vs-sailing-yacht-charter.html",
@@ -170,7 +185,8 @@
         "label": "Financial Authority",
         "title": "The True Cost to Charter a Sunreef Luxury Catamaran (2026 Guide)",
         "excerpt": "A detailed breakdown of the Sunreef catamaran charter price. Learn the true cost of renting a Sunreef 80, including APA, crew fees, and the new Eco series.",
-        "link_text": "Read the Financial Guide"
+        "link_text": "Read the Financial Guide",
+        "image": "/assets/images/sunreef_hero_bahamas.png"
     },
     {
         "url": "/luxury-crewed-catamaran-charter-caribbean.html",
@@ -178,7 +194,8 @@
         "label": "Catamaran Authority",
         "title": "The Ultimate Guide to Luxury Crewed Catamaran Charters in the Caribbean",
         "excerpt": "Discover why a luxury crewed catamaran charter in the Caribbean is the ultimate family vacation. Pricing, destinations, and why UHNW clients prefer catamarans.",
-        "link_text": "Read the Catamaran Guide"
+        "link_text": "Read the Catamaran Guide",
+        "image": "/assets/images/catamaran_hero_exumas.png"
     },
     {
         "url": "/vip-event-yacht-charters.html",
@@ -186,7 +203,8 @@
         "label": "Corporate Authority",
         "title": "The Ultimate Guide to VIP Event Yacht Charters",
         "excerpt": "Master the logistics of VIP event yacht charters. An elite guide to securing trackside superyachts for the Monaco Grand Prix, Cannes Film Festival, and Abu Dhabi F1.",
-        "link_text": "Read the Event Guide"
+        "link_text": "Read the Event Guide",
+        "image": "/assets/images/vip_hero_f1.png"
     },
     {
         "url": "/yacht-charter-vs-owning.html",
@@ -194,7 +212,8 @@
         "label": "Financial Authority",
         "title": "Yacht Charter vs. Owning: Why Billionaires Prefer Chartering",
         "excerpt": "An elite financial analysis of yacht charter vs owning. Discover why UHNW individuals and billionaires increasingly prefer chartering superyachts over outright ownership.",
-        "link_text": "Read the Financial Analysis"
+        "link_text": "Read the Financial Analysis",
+        "image": "/assets/images/superyacht-costs-hero.png"
     },
     {
         "url": "/top-5-luxury-yachts-under-100k.html",
@@ -220,7 +239,8 @@
         "label": "Authority Guide",
         "title": "The True Cost to Charter a Superyacht in 2026",
         "excerpt": "A 1,500-word masterclass on superyacht charter economics. Master the base rates, APA, crew gratuities, and hidden fees to charter with complete transparency.",
-        "link_text": "Read the Cost Guide"
+        "link_text": "Read the Cost Guide",
+        "image": "/assets/images/superyacht-costs-hero.png"
     },
     {
         "url": "/best-sailing-yacht-charter.html",
@@ -228,7 +248,8 @@
         "label": "Authority Guide",
         "title": "Sailing Yacht Charter 2026: The Ultimate Authority Guide",
         "excerpt": "A 2,500-word masterclass on sailing yacht charter. Explore the fleet, costs, destinations, and the rise of eco-luxury in 2026.",
-        "link_text": "Read the Guide"
+        "link_text": "Read the Guide",
+        "image": "/assets/images/best-sailing-yacht-charter.png"
     },
     {
         "url": "/guide-to-mediterranean-yacht-charter.html",
@@ -236,7 +257,8 @@
         "label": "Pillar Guide",
         "title": "The Authority Guide to Mediterranean Yacht Charter 2026",
         "excerpt": "The definitive 1,500-word blueprint for Mediterranean yachting. Explore costs, seasonal timing, elite fleet selection, and the world's most iconic itineraries.",
-        "link_text": "Read the Guide"
+        "link_text": "Read the Guide",
+        "image": "/assets/images/mediterranean-destinations-hero.png"
     },
     {
         "url": "/mykonos-yacht-charter-masterclass-2026.html",
@@ -244,7 +266,8 @@
         "label": "Aegean Elite",
         "title": "Mykonos Yacht Charter Masterclass 2026: The Ultimate Cyclades Guide",
         "excerpt": "The definitive 1,500-word blueprint for Mykonos yacht charters in 2026. Discover weekly costs, the perfect 7-day Cyclades itinerary, and the most exclusive vessels in the Aegean.",
-        "link_text": "Explore Mykonos Fleet"
+        "link_text": "Explore Mykonos Fleet",
+        "image": "/assets/images/mykonos-yacht-charter.png"
     },
     {
         "url": "/london-to-ibiza-private-jet-cost-guide.html",
@@ -252,7 +275,8 @@
         "label": "Ibiza Elite",
         "title": "London to Ibiza Private Jet Guide 2026: The Authority Cost Guide",
         "excerpt": "Master the elite crossing from London to Ibiza. A 1,500-word authority guide on 2026 charter costs, aircraft selection, and VIP terminal secrets for the Mediterranean's premier summer route.",
-        "link_text": "Plan Your Ibiza Arrival"
+        "link_text": "Plan Your Ibiza Arrival",
+        "image": "/assets/images/london-to-ibiza-private-jet.png"
     },
     {
         "url": "/boat-trip-from-mallorca-to-formentera.html",
@@ -260,7 +284,8 @@
         "label": "Maritime Elite",
         "title": "Boat Trip from Mallorca to Formentera: The 2026 Authority Guide",
         "excerpt": "The definitive 1,500-word guide to the ultimate crossing. Discover private yacht routes, costs, top beaches, and VIP club access for the Mediterranean's most exclusive route.",
-        "link_text": "Discover Formentera"
+        "link_text": "Discover Formentera",
+        "image": "/assets/boat_trip_mallorca_formentera_hero_2026.png"
     },
     {
         "url": "/mallorca-to-ibiza-private-boat.html",
@@ -268,7 +293,8 @@
         "label": "Balearic Elite",
         "title": "Private Boat Mallorca to Ibiza: The Definitive 2026 Masterclass",
         "excerpt": "The absolute authority on Balearic crossings. A 1,500-word blueprint for Mallorca to Ibiza boat charters, featuring the Wajer 55, VIP Cala Jondal arrivals, and expert maritime intelligence.",
-        "link_text": "Plan Your Crossing"
+        "link_text": "Plan Your Crossing",
+        "image": "/assets/mallorca_ibiza_boat_hero_2026.png"
     },
     {
         "url": "/luxury-experience-of-flying-private.html",
@@ -276,7 +302,8 @@
         "label": "Elite Experience",
         "title": "The Ultimate Luxury Experience of Flying Private 2026",
         "excerpt": "Discover the true luxury experience of flying private. A 1,500-word authority guide on elite aviation, bespoke jet interiors, and the pinnacle of luxury flying.",
-        "link_text": "Experience the Elite"
+        "link_text": "Experience the Elite",
+        "image": "/assets/luxury_private_jet_interior_experience_2026.png"
     },
     {
         "url": "/7-best-private-jet-charter-in-dubai.html",
@@ -284,7 +311,8 @@
         "label": "Dubai Elite",
         "title": "7 Best Private Jet Charter in Dubai 2026: The Authority Cost Guide",
         "excerpt": "Master the art of private jet charter in Dubai. A 1,500-word authority guide covering the top 7 operators, detailed cost analysis, and VIP terminal secrets for the 2026 season.",
-        "link_text": "Read the Cost Guide"
+        "link_text": "Read the Cost Guide",
+        "image": "/assets/dubai_elite_private_jet_charter_2026_authority.png"
     },
     {
         "url": "/private-jet-charter-to-monaco.html",
@@ -292,7 +320,8 @@
         "label": "Riviera Elite",
         "title": "Private Jet Charter to Monaco: The Ultimate 2026 Arrival Guide",
         "excerpt": "The definitive blueprint for reaching the Principality. A 1,500-word deep dive into Nice airport logistics, helicopter transfers, and VIP event arrival strategies.",
-        "link_text": "Plan Your Arrival"
+        "link_text": "Plan Your Arrival",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/private-jet-travel-with-pet.html",
@@ -300,7 +329,8 @@
         "label": "Family Guide",
         "title": "Private Jet Travel with Pets: The 2026 Authority Guide",
         "excerpt": "No member of the family left behind. A 1,500-word blueprint for stress-free pet travel, covering international regulations, cabin comfort, and 'no-crate' flying.",
-        "link_text": "Fly with Your Pet"
+        "link_text": "Fly with Your Pet",
+        "image": "/assets/pet_travel_jet_hero_2026.png"
     },
     {
         "url": "/private-jet-for-short-trips.html",
@@ -308,7 +338,8 @@
         "label": "Efficiency Guide",
         "title": "Private Jet for Short Trips: The 2026 Authority Guide",
         "excerpt": "Maximize your most precious resource. A 1,500-word blueprint for short-haul private aviation, featuring Very Light Jets (VLJs), turboprops, and regional airport hacks.",
-        "link_text": "Optimize Your Travel"
+        "link_text": "Optimize Your Travel",
+        "image": "/assets/short_trip_jet_hero_2026.png"
     },
     {
         "url": "/charter-yacht-in-montenegro.html",
@@ -316,7 +347,8 @@
         "label": "Adriatic Gem",
         "title": "Charter Yacht in Montenegro: The Ultimate 2026 Adriatic Guide",
         "excerpt": "Discover the rising star of the Mediterranean. A 1,500-word authority guide to Montenegro yacht charters, featuring the fjords of Kotor and the glitz of Porto Montenegro.",
-        "link_text": "Explore Montenegro"
+        "link_text": "Explore Montenegro",
+        "image": "/assets/montenegro_yacht_charter_hero_2026.png"
     },
     {
         "url": "/private-boat-trip-mallorca-to-formentera.html",
@@ -324,7 +356,8 @@
         "label": "Maritime Guide",
         "title": "Private Boat Trip Mallorca to Formentera: The 2026 Elite Guide",
         "excerpt": "Experience the crown jewel of Mediterranean yachting. A 1,500-word masterclass on the Mallorca to Formentera crossing, including costs, routes, and secret island spots.",
-        "link_text": "Explore the Route"
+        "link_text": "Explore the Route",
+        "image": "/assets/images/mallorca_formentera_hero_8k.png"
     },
     {
         "url": "/private-jet-charter-cost-guide-2026.html",
@@ -332,7 +365,8 @@
         "label": "Authority Guide",
         "title": "The True Cost of Private Jet Charter in 2026",
         "excerpt": "A 1,500-word masterclass on private aviation economics. Master 2026 pricing, empty leg strategies, and hidden fees for elite global travelers.",
-        "link_text": "Read the Full Guide"
+        "link_text": "Read the Full Guide",
+        "image": "/assets/private_jet_cost_hero_2026.png"
     },
     {
         "url": "/yacht-charter-mallorca-formentera.html",
@@ -340,15 +374,17 @@
         "label": "Private Yacht",
         "title": "7 Best Yacht Charter Mallorca to Formentera 2025",
         "excerpt": "Plan the ultimate yacht charter Mallorca to Formentera. Discover routes,\n                        costs, top boats & insider tips for the defining maritime experience of the Mediterranean.",
-        "link_text": "View Analysis"
+        "link_text": "View Analysis",
+        "image": "/assets/mallorca_formentera_hero.png"
     },
     {
         "url": "/best-private-boat-charter-dubai.html",
         "category": "private yacht",
         "label": "Private Yacht",
-        "title": "7 Best Private Boat Charter in Dubai \u2013 Ultimate Guide 2025",
+        "title": "7 Best Private Boat Charter in Dubai – Ultimate Guide 2025",
         "excerpt": "Discover the 7 best private boat charter in Dubai. Compare prices, yacht\n                        types, routes & tips for an exclusive Dubai sea experience on the Arabian Gulf.",
-        "link_text": "View Analysis"
+        "link_text": "View Analysis",
+        "image": "/assets/dubai_boat_charter_hero.jpg"
     },
     {
         "url": "/bareboat-charter-guide.html",
@@ -356,7 +392,8 @@
         "label": "Authority Guide",
         "title": "Bareboat Charter Guide 2026: The Master Strategy for Seafaring",
         "excerpt": "The absolute authority on self-drive yachting. A 1,500-word blueprint for bareboat chartering, covering licensing requirements, top global destinations, and expert navigation tips.",
-        "link_text": "Read the Guide"
+        "link_text": "Read the Guide",
+        "image": "/assets/images/bareboat-charter-hero.png"
     },
     {
         "url": "/boat-rental-mallorca-luxury.html",
@@ -364,7 +401,8 @@
         "label": "Balearic Elite",
         "title": "Luxury Boat Rentals in Mallorca: Elite Mediterranean Itineraries",
         "excerpt": "Discover the crown jewel of the Balearics. A 1,500-word authority guide to Mallorca boat rentals, featuring the best marinas, top calas, and luxury day-charter itineraries.",
-        "link_text": "Explore Mallorca"
+        "link_text": "Explore Mallorca",
+        "image": "/assets/images/mallorca-luxury-boat-rental-hero.png"
     },
     {
         "url": "/abudhabi-to-doha-private-jet-cost.html",
@@ -372,7 +410,8 @@
         "label": "Private Jet Route",
         "title": "Abu Dhabi to Doha: Private Jet Charter Cost Analysis (2026)",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "Pricing breakdown"
+        "link_text": "Pricing breakdown",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/london-to-dubai-private-jet-cost.html",
@@ -380,7 +419,8 @@
         "label": "Private Jet Route",
         "title": "London to Dubai: Direct Global Jet Connectivity & Costing",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "Pricing breakdown"
+        "link_text": "Pricing breakdown",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/newyork-to-london-private-jet-cost.html",
@@ -388,7 +428,8 @@
         "label": "Private Jet Route",
         "title": "New York to London Transatlantic: Private Jet Cost & Fleet Guide",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "Pricing breakdown"
+        "link_text": "Pricing breakdown",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/amsterdam-to-london-private-jet-cost.html",
@@ -396,7 +437,8 @@
         "label": "Private Jet Route",
         "title": "Amsterdam To London: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/aspen-to-miami-private-jet-cost.html",
@@ -404,7 +446,8 @@
         "label": "Private Jet Route",
         "title": "Aspen To Miami: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/aspen-to-newyork-private-jet-cost.html",
@@ -412,7 +455,8 @@
         "label": "Private Jet Route",
         "title": "Aspen To New York: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/bahamas-to-newyork-private-jet-cost.html",
@@ -420,7 +464,8 @@
         "label": "Private Jet Route",
         "title": "Bahamas To New York: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/bali-to-melbourne-private-jet-cost.html",
@@ -428,7 +473,8 @@
         "label": "Private Jet Route",
         "title": "Bali To Melbourne: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/bali-to-perth-private-jet-cost.html",
@@ -436,7 +482,8 @@
         "label": "Private Jet Route",
         "title": "Bali To Perth: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/barcelona-to-london-private-jet-cost.html",
@@ -444,7 +491,8 @@
         "label": "Private Jet Route",
         "title": "Barcelona To London: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/beijing-to-seoul-private-jet-cost.html",
@@ -452,7 +500,8 @@
         "label": "Private Jet Route",
         "title": "Beijing To Seoul: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/brisbane-to-sydney-private-jet-cost.html",
@@ -460,7 +509,8 @@
         "label": "Private Jet Route",
         "title": "Brisbane To Sydney: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/cabo-to-losangeles-private-jet-cost.html",
@@ -468,7 +518,8 @@
         "label": "Private Jet Route",
         "title": "Cabo To Los Angeles: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/cancun-to-dallas-private-jet-cost.html",
@@ -476,7 +527,8 @@
         "label": "Private Jet Route",
         "title": "Cancun To Dallas: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/chicago-to-losangeles-private-jet-cost.html",
@@ -484,7 +536,8 @@
         "label": "Private Jet Route",
         "title": "Chicago To Los Angeles: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/chicago-to-miami-private-jet-cost.html",
@@ -492,7 +545,8 @@
         "label": "Private Jet Route",
         "title": "Chicago To Miami: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/chicago-to-newyork-private-jet-cost.html",
@@ -500,7 +554,8 @@
         "label": "Private Jet Route",
         "title": "Chicago To New York: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/dallas-to-cancun-private-jet-cost.html",
@@ -508,7 +563,8 @@
         "label": "Private Jet Route",
         "title": "Dallas To Cancun: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/dallas-to-denver-private-jet-cost.html",
@@ -516,7 +572,8 @@
         "label": "Private Jet Route",
         "title": "Dallas To Denver: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/dallas-to-losangeles-private-jet-cost.html",
@@ -524,7 +581,8 @@
         "label": "Private Jet Route",
         "title": "Dallas To Los Angeles: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/dallas-to-newyork-private-jet-cost.html",
@@ -532,7 +590,8 @@
         "label": "Private Jet Route",
         "title": "Dallas To New York: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/denver-to-dallas-private-jet-cost.html",
@@ -540,7 +599,8 @@
         "label": "Private Jet Route",
         "title": "Denver To Dallas: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/doha-to-abudhabi-private-jet-cost.html",
@@ -548,7 +608,8 @@
         "label": "Private Jet Route",
         "title": "Doha To Abudhabi: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/dubai-to-london-private-jet-cost.html",
@@ -556,7 +617,8 @@
         "label": "Private Jet Route",
         "title": "Dubai To London: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/dubai-to-newyork-private-jet-cost.html",
@@ -564,7 +626,8 @@
         "label": "Private Jet Route",
         "title": "Dubai To New York: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/dubai-to-sydney-private-jet-cost.html",
@@ -572,7 +635,8 @@
         "label": "Private Jet Route",
         "title": "Dubai To Sydney: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/geneva-to-london-private-jet-cost.html",
@@ -580,7 +644,8 @@
         "label": "Private Jet Route",
         "title": "Geneva To London: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/goldcoast-to-sydney-private-jet-cost.html",
@@ -588,7 +653,8 @@
         "label": "Private Jet Route",
         "title": "Goldcoast To Sydney: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/hawaii-to-losangeles-private-jet-cost.html",
@@ -596,7 +662,8 @@
         "label": "Private Jet Route",
         "title": "Hawaii To Los Angeles: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/hongkong-to-singapore-private-jet-cost.html",
@@ -604,7 +671,8 @@
         "label": "Private Jet Route",
         "title": "Hongkong To Singapore: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis ."
+        "link_text": "View Pricing Analysis .",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/houston-to-miami-private-jet-cost.html",
@@ -612,7 +680,8 @@
         "label": "Private Jet Route",
         "title": "Houston To Miami: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis ."
+        "link_text": "View Pricing Analysis .",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/ibiza-to-london-private-jet-cost.html",
@@ -620,7 +689,8 @@
         "label": "Private Jet Route",
         "title": "Ibiza To London: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis ."
+        "link_text": "View Pricing Analysis .",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/lasvegas-to-losangeles-private-jet-cost.html",
@@ -628,7 +698,8 @@
         "label": "Private Jet Route",
         "title": "Las Vegas To Los Angeles: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis ."
+        "link_text": "View Pricing Analysis .",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/lasvegas-to-miami-private-jet-cost.html",
@@ -636,7 +707,8 @@
         "label": "Private Jet Route",
         "title": "Las Vegas To Miami: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis ."
+        "link_text": "View Pricing Analysis .",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/lasvegas-to-newyork-private-jet-cost.html",
@@ -644,7 +716,8 @@
         "label": "Private Jet Route",
         "title": "Las Vegas To New York: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/london-to-amsterdam-private-jet-cost.html",
@@ -652,7 +725,8 @@
         "label": "Private Jet Route",
         "title": "London To Amsterdam: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/london-to-barcelona-private-jet-cost.html",
@@ -660,7 +734,8 @@
         "label": "Private Jet Route",
         "title": "London To Barcelona: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/london-to-geneva-private-jet-cost.html",
@@ -668,7 +743,8 @@
         "label": "Private Jet Route",
         "title": "London To Geneva: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/london-to-ibiza-private-jet-cost.html",
@@ -676,7 +752,8 @@
         "label": "Private Jet Route",
         "title": "London To Ibiza: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/london-to-losangeles-private-jet-cost.html",
@@ -684,7 +761,8 @@
         "label": "Private Jet Route",
         "title": "London To Los Angeles: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/london-to-marrakesh-private-jet-cost.html",
@@ -692,7 +770,8 @@
         "label": "Private Jet Route",
         "title": "London To Marrakesh: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/london-to-miami-private-jet-cost.html",
@@ -700,7 +779,8 @@
         "label": "Private Jet Route",
         "title": "London To Miami: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/london-to-milan-private-jet-cost.html",
@@ -708,7 +788,8 @@
         "label": "Private Jet Route",
         "title": "London To Milan: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/london-to-mykonos-private-jet-cost.html",
@@ -716,7 +797,8 @@
         "label": "Private Jet Route",
         "title": "London To Mykonos: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/london-to-newyork-private-jet-cost.html",
@@ -724,7 +806,8 @@
         "label": "Private Jet Route",
         "title": "London To New York: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/london-to-nice-private-jet-cost.html",
@@ -732,7 +815,8 @@
         "label": "Private Jet Route",
         "title": "London To Nice: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/london-to-palma-private-jet-cost.html",
@@ -740,7 +824,8 @@
         "label": "Private Jet Route",
         "title": "London To Palma: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/london-to-paris-private-jet-cost.html",
@@ -748,7 +833,8 @@
         "label": "Private Jet Route",
         "title": "London To Paris: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/london-to-rome-private-jet-cost.html",
@@ -756,7 +842,8 @@
         "label": "Private Jet Route",
         "title": "London To Rome: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/london-to-sanfrancisco-private-jet-cost.html",
@@ -764,7 +851,8 @@
         "label": "Private Jet Route",
         "title": "London To San Francisco: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/london-to-santorini-private-jet-cost.html",
@@ -772,7 +860,8 @@
         "label": "Private Jet Route",
         "title": "London To Santorini: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/london-to-tokyo-private-jet-cost.html",
@@ -780,7 +869,8 @@
         "label": "Private Jet Route",
         "title": "London To Tokyo: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/losangeles-to-cabo-private-jet-cost.html",
@@ -788,7 +878,8 @@
         "label": "Private Jet Route",
         "title": "Los Angeles To Cabo: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/losangeles-to-chicago-private-jet-cost.html",
@@ -796,7 +887,8 @@
         "label": "Private Jet Route",
         "title": "Los Angeles To Chicago: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/losangeles-to-dallas-private-jet-cost.html",
@@ -804,7 +896,8 @@
         "label": "Private Jet Route",
         "title": "Los Angeles To Dallas: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/losangeles-to-hawaii-private-jet-cost.html",
@@ -812,7 +905,8 @@
         "label": "Private Jet Route",
         "title": "Los Angeles To Hawaii: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/losangeles-to-lasvegas-private-jet-cost.html",
@@ -820,7 +914,8 @@
         "label": "Private Jet Route",
         "title": "Los Angeles To Las Vegas: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/losangeles-to-london-private-jet-cost.html",
@@ -828,7 +923,8 @@
         "label": "Private Jet Route",
         "title": "Los Angeles To London: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/losangeles-to-miami-private-jet-cost.html",
@@ -836,7 +932,8 @@
         "label": "Private Jet Route",
         "title": "Los Angeles To Miami: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/losangeles-to-newyork-private-jet-cost.html",
@@ -844,7 +941,8 @@
         "label": "Private Jet Route",
         "title": "Los Angeles To New York: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/losangeles-to-sanfrancisco-private-jet-cost.html",
@@ -852,7 +950,8 @@
         "label": "Private Jet Route",
         "title": "Los Angeles To San Francisco: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/losangeles-to-tokyo-private-jet-cost.html",
@@ -860,7 +959,8 @@
         "label": "Private Jet Route",
         "title": "Los Angeles To Tokyo: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/maldives-to-riyadh-private-jet-cost.html",
@@ -868,7 +968,8 @@
         "label": "Private Jet Route",
         "title": "Maldives To Riyadh: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/marrakesh-to-london-private-jet-cost.html",
@@ -876,7 +977,8 @@
         "label": "Private Jet Route",
         "title": "Marrakesh To London: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/melbourne-to-bali-private-jet-cost.html",
@@ -884,7 +986,8 @@
         "label": "Private Jet Route",
         "title": "Melbourne To Bali: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/melbourne-to-sydney-private-jet-cost.html",
@@ -892,7 +995,8 @@
         "label": "Private Jet Route",
         "title": "Melbourne To Sydney: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/miami-to-aspen-private-jet-cost.html",
@@ -900,7 +1004,8 @@
         "label": "Private Jet Route",
         "title": "Miami To Aspen: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/miami-to-chicago-private-jet-cost.html",
@@ -908,7 +1013,8 @@
         "label": "Private Jet Route",
         "title": "Miami To Chicago: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/miami-to-houston-private-jet-cost.html",
@@ -916,7 +1022,8 @@
         "label": "Private Jet Route",
         "title": "Miami To Houston: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/miami-to-lasvegas-private-jet-cost.html",
@@ -924,7 +1031,8 @@
         "label": "Private Jet Route",
         "title": "Miami To Las Vegas: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/miami-to-london-private-jet-cost.html",
@@ -932,7 +1040,8 @@
         "label": "Private Jet Route",
         "title": "Miami To London: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/miami-to-losangeles-private-jet-cost.html",
@@ -940,7 +1049,8 @@
         "label": "Private Jet Route",
         "title": "Miami To Los Angeles: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/miami-to-newyork-private-jet-cost.html",
@@ -948,7 +1058,8 @@
         "label": "Private Jet Route",
         "title": "Miami To New York: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/miami-to-turksandcaicos-private-jet-cost.html",
@@ -956,7 +1067,8 @@
         "label": "Private Jet Route",
         "title": "Miami To Turksandcaicos: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/milan-to-london-private-jet-cost.html",
@@ -964,7 +1076,8 @@
         "label": "Private Jet Route",
         "title": "Milan To London: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/milan-to-mykonos-private-jet-cost.html",
@@ -972,7 +1085,8 @@
         "label": "Private Jet Route",
         "title": "Milan To Mykonos: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/mykonos-to-london-private-jet-cost.html",
@@ -980,7 +1094,8 @@
         "label": "Private Jet Route",
         "title": "Mykonos To London: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/mykonos-to-milan-private-jet-cost.html",
@@ -988,7 +1103,8 @@
         "label": "Private Jet Route",
         "title": "Mykonos To Milan: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/newyork-to-aspen-private-jet-cost.html",
@@ -996,7 +1112,8 @@
         "label": "Private Jet Route",
         "title": "New York To Aspen: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/newyork-to-bahamas-private-jet-cost.html",
@@ -1004,7 +1121,8 @@
         "label": "Private Jet Route",
         "title": "New York To Bahamas: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/newyork-to-chicago-private-jet-cost.html",
@@ -1012,7 +1130,8 @@
         "label": "Private Jet Route",
         "title": "New York To Chicago: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/newyork-to-dallas-private-jet-cost.html",
@@ -1020,7 +1139,8 @@
         "label": "Private Jet Route",
         "title": "New York To Dallas: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/newyork-to-dubai-private-jet-cost.html",
@@ -1028,7 +1148,8 @@
         "label": "Private Jet Route",
         "title": "New York To Dubai: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/newyork-to-lasvegas-private-jet-cost.html",
@@ -1036,7 +1157,8 @@
         "label": "Private Jet Route",
         "title": "New York To Las Vegas: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/newyork-to-losangeles-private-jet-cost.html",
@@ -1044,7 +1166,8 @@
         "label": "Private Jet Route",
         "title": "New York To Los Angeles: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/newyork-to-miami-private-jet-cost.html",
@@ -1052,7 +1175,8 @@
         "label": "Private Jet Route",
         "title": "New York To Miami: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/newyork-to-paris-private-jet-cost.html",
@@ -1060,7 +1184,8 @@
         "label": "Private Jet Route",
         "title": "New York To Paris: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/newyork-to-toronto-private-jet-cost.html",
@@ -1068,7 +1193,8 @@
         "label": "Private Jet Route",
         "title": "New York To Toronto: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/nice-to-london-private-jet-cost.html",
@@ -1076,7 +1202,8 @@
         "label": "Private Jet Route",
         "title": "Nice To London: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/palma-to-london-private-jet-cost.html",
@@ -1084,7 +1211,8 @@
         "label": "Private Jet Route",
         "title": "Palma To London: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/paris-to-dubai-private-jet-cost.html",
@@ -1092,7 +1220,8 @@
         "label": "Private Jet Route",
         "title": "Paris To Dubai: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/paris-to-london-private-jet-cost.html",
@@ -1100,7 +1229,8 @@
         "label": "Private Jet Route",
         "title": "Paris To London: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/paris-to-newyork-private-jet-cost.html",
@@ -1108,7 +1238,8 @@
         "label": "Private Jet Route",
         "title": "Paris To New York: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/perth-to-bali-private-jet-cost.html",
@@ -1116,7 +1247,8 @@
         "label": "Private Jet Route",
         "title": "Perth To Bali: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/perth-to-sydney-private-jet-cost.html",
@@ -1124,7 +1256,8 @@
         "label": "Private Jet Route",
         "title": "Perth To Sydney: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/riyadh-to-maldives-private-jet-cost.html",
@@ -1132,7 +1265,8 @@
         "label": "Private Jet Route",
         "title": "Riyadh To Maldives: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/rome-to-london-private-jet-cost.html",
@@ -1140,7 +1274,8 @@
         "label": "Private Jet Route",
         "title": "Rome To London: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/sanfrancisco-to-london-private-jet-cost.html",
@@ -1148,7 +1283,8 @@
         "label": "Private Jet Route",
         "title": "San Francisco To London: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/sanfrancisco-to-losangeles-private-jet-cost.html",
@@ -1156,7 +1292,8 @@
         "label": "Private Jet Route",
         "title": "San Francisco To Los Angeles: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/santorini-to-london-private-jet-cost.html",
@@ -1164,7 +1301,8 @@
         "label": "Private Jet Route",
         "title": "Santorini To London: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/seoul-to-beijing-private-jet-cost.html",
@@ -1172,7 +1310,8 @@
         "label": "Private Jet Route",
         "title": "Seoul To Beijing: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/singapore-to-hongkong-private-jet-cost.html",
@@ -1180,7 +1319,8 @@
         "label": "Private Jet Route",
         "title": "Singapore To Hongkong: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/singapore-to-sydney-private-jet-cost.html",
@@ -1188,7 +1328,8 @@
         "label": "Private Jet Route",
         "title": "Singapore To Sydney: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/sydney-to-brisbane-private-jet-cost.html",
@@ -1196,7 +1337,8 @@
         "label": "Private Jet Route",
         "title": "Sydney To Brisbane: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/sydney-to-dubai-private-jet-cost.html",
@@ -1204,7 +1346,8 @@
         "label": "Private Jet Route",
         "title": "Sydney To Dubai: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/sydney-to-goldcoast-private-jet-cost.html",
@@ -1212,7 +1355,8 @@
         "label": "Private Jet Route",
         "title": "Sydney To Goldcoast: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/sydney-to-melbourne-private-jet-cost.html",
@@ -1220,7 +1364,8 @@
         "label": "Private Jet Route",
         "title": "Sydney To Melbourne: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/sydney-to-perth-private-jet-cost.html",
@@ -1228,7 +1373,8 @@
         "label": "Private Jet Route",
         "title": "Sydney To Perth: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/sydney-to-singapore-private-jet-cost.html",
@@ -1236,7 +1382,8 @@
         "label": "Private Jet Route",
         "title": "Sydney To Singapore: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/tokyo-to-london-private-jet-cost.html",
@@ -1244,7 +1391,8 @@
         "label": "Private Jet Route",
         "title": "Tokyo To London: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/toronto-to-newyork-private-jet-cost.html",
@@ -1252,7 +1400,8 @@
         "label": "Private Jet Route",
         "title": "Toronto To New York: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/turksandcaicos-to-miami-private-jet-cost.html",
@@ -1260,7 +1409,8 @@
         "label": "Private Jet Route",
         "title": "Turks and Caicos To Miami: Private Jet Charter Cost Analysis",
         "excerpt": "Comprehensive technical analysis of aircraft availability, landing permits,\n                        and peak-season cost projections for this elite corridor.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/yacht-charter-apa-guide.html",
@@ -1268,7 +1418,8 @@
         "label": "Financial Authority",
         "title": "Yacht Charter APA Guide: The Ultimate Masterclass on Superyacht Economics",
         "excerpt": "What is APA in yacht charter? Learn everything about the Advance Provisioning Allowance, how it's calculated, and what it covers in this expert masterclass.",
-        "link_text": "Read the Masterclass"
+        "link_text": "Read the Masterclass",
+        "image": "/assets/images/yacht-apa-guide-hero.png"
     },
     {
         "url": "/catamaran-vs-monohull-comparison.html",
@@ -1276,7 +1427,8 @@
         "label": "Sailing Authority",
         "title": "Catamaran vs. Monohull Charter: Which is Better for Your Vacation?",
         "excerpt": "Choosing between a catamaran vs monohull for your yacht charter? Compare stability, interior space, privacy, and sailing performance in our comprehensive expert guide.",
-        "link_text": "Compare Sail Classes"
+        "link_text": "Compare Sail Classes",
+        "image": "/assets/images/catamaran_stability_hero.png"
     },
     {
         "url": "/how-to-rent-superyacht-guide.html",
@@ -1284,7 +1436,8 @@
         "label": "Logistics Authority",
         "title": "How to Rent a Superyacht: The Step-by-Step Charter Guide",
         "excerpt": "Learn how to rent a superyacht with our step-by-step charter guide. From choosing a broker to signing the MYBA contract and planning your preference sheets.",
-        "link_text": "Read the Step-by-Step Guide"
+        "link_text": "Read the Step-by-Step Guide",
+        "image": "/assets/images/superyacht-booking-guide-hero.png"
     },
     {
         "url": "/ultimate-luxury-villa-rental-guide-2026.html",
@@ -1292,7 +1445,8 @@
         "label": "Estate Authority",
         "title": "Luxury Villa Rental Guide 2026: The Master Blueprint for Private Estates",
         "excerpt": "The definitive guide to luxury villa rentals in 2026. Learn about privacy benchmarks, full-staffed estates, and the world's most exclusive destinations.",
-        "link_text": "Read the Master Guide"
+        "link_text": "Read the Master Guide",
+        "image": "/assets/images/villa-guide-2026-hero.png"
     },
     {
         "url": "/villa-vs-luxury-hotel-comparison.html",
@@ -1300,7 +1454,8 @@
         "label": "Privacy Analysis",
         "title": "Private Villa vs. Luxury Hotel: Why UHNW Travelers are Choosing Autonomy",
         "excerpt": "Comparing the benefits of private villa rentals vs 5-star hotels for 2026. Discover why UHNW travelers prioritize autonomy and private amenities.",
-        "link_text": "Compare Accommodations"
+        "link_text": "Compare Accommodations",
+        "image": "/assets/images/villa-vs-hotel-hero.png"
     },
     {
         "url": "/how-to-book-luxury-villa-guide.html",
@@ -1308,7 +1463,8 @@
         "label": "Booking Intelligence",
         "title": "How to Book a Luxury Villa: The Step-by-Step Security & Concierge Guide",
         "excerpt": "Learn the professional process of booking a luxury villa. From off-market vetting and security protocols to pre-stocking and on-site management.",
-        "link_text": "Read the Step-by-Step Guide"
+        "link_text": "Read the Step-by-Step Guide",
+        "image": "/assets/images/villa-booking-protocol-hero.png"
     },
     {
         "url": "/multi-modal-luxury-itinerary-2026.html",
@@ -1316,15 +1472,17 @@
         "label": "Integrated Strategy",
         "title": "The Seamless Silk Road: Combining Jet, Yacht & Villa for the Ultimate 2026 Journey",
         "excerpt": "Discover the art of the multi-modal luxury itinerary. Learn how to seamlessly integrate private jet travel, superyacht charters, and managed estate stays.",
-        "link_text": "Read the Integration Guide"
+        "link_text": "Read the Integration Guide",
+        "image": "/assets/images/multi-modal-luxury-hero.png"
     },
     {
         "url": "/all-inclusive-private-island-rental.html",
         "category": "luxury villa",
         "label": "Private Islands",
         "title": "All Inclusive Private Island Rental",
-        "excerpt": "Secure the world",
-        "link_text": "Inquire for Buyout"
+        "excerpt": "Secure the world's most exclusive all inclusive private island rentals. Bespoke island buyouts, Michelin-starred dining, luxury beachfront villas, and private aviation coordinated by Shaik Imran. Inquire today.",
+        "link_text": "Inquire for Buyout",
+        "image": "/assets/all_inclusive_private_island_hero.png"
     },
     {
         "url": "/bahamas-private-island-rental.html",
@@ -1332,15 +1490,17 @@
         "label": "Private Islands",
         "title": "Bahamas Private Island Rental | Exclusive Island Resorts & Cays",
         "excerpt": "Book the most exclusive Bahamas private island rentals. Vetted ultra-luxury island buyouts, beachfront estates, and private tropical resorts with bespoke aviation, yachting, and close protection. B...",
-        "link_text": "Inquire for Buyout"
+        "link_text": "Inquire for Buyout",
+        "image": "/assets/villa_master.png"
     },
     {
         "url": "/caribbean-private-island-rental.html",
         "category": "luxury villa",
         "label": "Private Islands",
         "title": "Caribbean Private Island Rental | Exclusive Island Resorts & Cays",
-        "excerpt": "Book the world",
-        "link_text": "Inquire for Buyout"
+        "excerpt": "Book the world's most exclusive Caribbean private island rentals. Vetted ultra-luxury island buyouts, beachfront estates, and private tropical resorts with bespoke aviation, yachting, and close protection. Book with Shaik Imran's desk.",
+        "link_text": "Inquire for Buyout",
+        "image": "/assets/villa_master.png"
     },
     {
         "url": "/dubai-private-jet-routes.html",
@@ -1348,7 +1508,8 @@
         "label": "Aviation Intelligence",
         "title": "Private Jet Charter from Dubai | Luxury Routes & Costs",
         "excerpt": "Discover premium private jet charter routes from Dubai. Instant pricing, airport guides, and luxury aircraft options for your next journey from Dubai.",
-        "link_text": "Explore Fleet Options"
+        "link_text": "Explore Fleet Options",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/elite-private-jet-charter.html",
@@ -1356,7 +1517,8 @@
         "label": "Aviation Intelligence",
         "title": "Elite Private Jet Charter | Global Aviation Intelligence",
         "excerpt": "width=device-width, initial-scale=1.0\" name=\"viewport\"/>\n  <title>\n   Elite Private Jet Charter | Global Aviation Intelligence | Elite Luxury Bookings\n  </title>\n  <meta content=\"Experience the pin...",
-        "link_text": "Explore Fleet Options"
+        "link_text": "Explore Fleet Options",
+        "image": "/assets/elite_private_jet_hero_2026_v2.png"
     },
     {
         "url": "/exclusive-private-island-rental.html",
@@ -1364,7 +1526,8 @@
         "label": "Private Islands",
         "title": "Exclusive Private Island Rental | Secluded Luxury Sanctuaries",
         "excerpt": "Book the ultimate exclusive private island rentals worldwide. Vetted ultra-luxury island buyouts, beachfront estates, and private tropical resorts with seaplane and yacht logistics. Book with Shaik...",
-        "link_text": "Inquire for Buyout"
+        "link_text": "Inquire for Buyout",
+        "image": "/assets/exclusive_island_hero.png"
     },
     {
         "url": "/hongkong-to-shanghai-private-jet-cost.html",
@@ -1372,7 +1535,8 @@
         "label": "Private Jet Route",
         "title": "Hong Kong to Shanghai Private Jet Charter | Ultra-Discrete Aviation",
         "excerpt": "Experience the ultimate Hong Kong to Shanghai Private Jet Charter. Elite luxury, bespoke coordination, and discrete terminal access. Request a tailored aviation quote.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/la-to-lasvegas-private-jet-cost.html",
@@ -1380,7 +1544,8 @@
         "label": "Private Jet Route",
         "title": "LA to Las Vegas Private Jet Charter | Ultra-Discrete Aviation",
         "excerpt": "Experience the ultimate LA to Las Vegas Private Jet Charter. Elite luxury, bespoke coordination, and discrete terminal access. Request a tailored aviation quote.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/lasvegas-to-la-private-jet-cost.html",
@@ -1388,7 +1553,8 @@
         "label": "Private Jet Route",
         "title": "Las Vegas to LA Private Jet Charter | Ultra-Discrete Aviation",
         "excerpt": "Experience the ultimate Las Vegas to LA Private Jet Charter. Elite luxury, bespoke coordination, and discrete terminal access. Request a tailored aviation quote.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/london-private-jet-routes.html",
@@ -1396,7 +1562,8 @@
         "label": "Aviation Intelligence",
         "title": "Private Jet Charter from London | Luxury Routes & Costs",
         "excerpt": "Discover premium private jet charter routes from London. Instant pricing, airport guides, and luxury aircraft options for your next journey from London.",
-        "link_text": "Explore Fleet Options"
+        "link_text": "Explore Fleet Options",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/los-angeles-to-san-francisco-private-jet.html",
@@ -1404,7 +1571,8 @@
         "label": "Aviation Intelligence",
         "title": "Los Angeles to San Francisco Private Jet Charter | Ultra-Discrete Aviation",
         "excerpt": "Experience the ultimate Los Angeles to San Francisco Private Jet Charter. Elite luxury, bespoke coordination, and discrete terminal access. Request a tailored aviation quote.",
-        "link_text": "Explore Fleet Options"
+        "link_text": "Explore Fleet Options",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/losangeles-private-jet-routes.html",
@@ -1412,23 +1580,26 @@
         "label": "Aviation Intelligence",
         "title": "Private Jet Charter from Los Angeles | Luxury Routes & Costs",
         "excerpt": "Discover premium private jet charter routes from Los Angeles. Instant pricing, airport guides, and luxury aircraft options for your next journey from Los Angeles.",
-        "link_text": "Explore Fleet Options"
+        "link_text": "Explore Fleet Options",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/luxury-private-island-rental.html",
         "category": "luxury villa",
         "label": "Private Islands",
         "title": "Luxury Private Island Rental | Exclusive Island Resorts & Buyouts",
-        "excerpt": "Rent the world",
-        "link_text": "Inquire for Buyout"
+        "excerpt": "Rent the world's most exclusive luxury private islands. Vetted ultra-luxury island buyouts, beachfront estates, and private tropical resorts with bespoke aviation, close protection, and Michelin dining. Book with Shaik Imran's managing desk.",
+        "link_text": "Inquire for Buyout",
+        "image": "/assets/villa_master.png"
     },
     {
         "url": "/luxury-villa-rentals.html",
         "category": "luxury villa",
         "label": "Estate Sourcing",
         "title": "Luxury Villa Rentals | Exclusive Private Estates",
-        "excerpt": "Access the world",
-        "link_text": "Explore Villa Collection"
+        "excerpt": "Access the world's most exclusive, off-market private villas and estates. Fully staffed sanctuaries in Ibiza, Mykonos, Saint-Tropez, and beyond.",
+        "link_text": "Explore Villa Collection",
+        "image": "/assets/luxury_villa_guide_hero.png"
     },
     {
         "url": "/luxury-yacht-rentals.html",
@@ -1436,7 +1607,8 @@
         "label": "Maritime Intelligence",
         "title": "Luxury Yacht Charters | Global Maritime Intelligence",
         "excerpt": "Access the pinnacle of maritime luxury. Global superyacht access, real-time fleet intelligence, and 24/7 maritime concierge. Book your luxury yacht.",
-        "link_text": "Explore Yacht Fleet"
+        "link_text": "Explore Yacht Fleet",
+        "image": "/assets/luxury_superyacht_hero.png"
     },
     {
         "url": "/maldives-private-island-rental.html",
@@ -1444,7 +1616,8 @@
         "label": "Private Islands",
         "title": "Maldives Private Island Rental | Exclusive Overwater Resorts",
         "excerpt": "Book the ultimate Maldives private island rentals. Vetted ultra-luxury overwater villa resorts, beachfront estates, and private tropical sanctuaries with private seaplanes, yachts, and Shaik Imran",
-        "link_text": "Inquire for Buyout"
+        "link_text": "Inquire for Buyout",
+        "image": "/assets/villa_master.png"
     },
     {
         "url": "/newyork-private-jet-routes.html",
@@ -1452,7 +1625,8 @@
         "label": "Aviation Intelligence",
         "title": "Private Jet Charter from New York | Luxury Routes & Costs",
         "excerpt": "Discover premium private jet charter routes from New York. Instant pricing, airport guides, and luxury aircraft options for your next journey from New York.",
-        "link_text": "Explore Fleet Options"
+        "link_text": "Explore Fleet Options",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/paris-private-jet-routes.html",
@@ -1460,15 +1634,17 @@
         "label": "Aviation Intelligence",
         "title": "Private Jet Charter from Paris | Luxury Routes & Costs",
         "excerpt": "Discover premium private jet charter routes from Paris. Instant pricing, airport guides, and luxury aircraft options for your next journey from Paris.",
-        "link_text": "Explore Fleet Options"
+        "link_text": "Explore Fleet Options",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/private-island-for-rent.html",
         "category": "luxury villa",
         "label": "Private Islands",
         "title": "Private Island for Rent | Exclusive Luxury Island Resorts Worldwide",
-        "excerpt": "Discover the world",
-        "link_text": "Inquire for Buyout"
+        "excerpt": "Discover the world's most exclusive private islands for rent. Vetted ultra-luxury island resorts, beachfront villas, and custom sanctuaries in Maldives, Fiji, Bahamas, and Caribbean. Book with absolute privacy and bespoke concierge support.",
+        "link_text": "Inquire for Buyout",
+        "image": "/assets/private_island_hero.png"
     },
     {
         "url": "/private-island-honeymoon-rental.html",
@@ -1476,7 +1652,8 @@
         "label": "Private Islands",
         "title": "Private Island Honeymoon Rental | Romantic Escapes",
         "excerpt": "Book the ultimate private island honeymoon rental. Secure an exclusive, fully managed tropical island getaway with absolute privacy, bespoke dining, and yachting.",
-        "link_text": "Inquire for Buyout"
+        "link_text": "Inquire for Buyout",
+        "image": "/assets/honeymoon_hero.png"
     },
     {
         "url": "/private-jet-booking-guide.html",
@@ -1484,7 +1661,8 @@
         "label": "Aviation Intelligence",
         "title": "Private Jet Charter Cost Guide & Instant Booking",
         "excerpt": "The definitive 2026 guide to private jet charter costs. Get instant all-inclusive quotes, access 7,000+ aircraft, and book your flight with the market",
-        "link_text": "Explore Fleet Options"
+        "link_text": "Explore Fleet Options",
+        "image": "/./assets/booking_guide_hero.png"
     },
     {
         "url": "/shanghai-to-hongkong-private-jet-cost.html",
@@ -1492,7 +1670,8 @@
         "label": "Private Jet Route",
         "title": "Shanghai to Hong Kong Private Jet Charter | Ultra-Discrete Aviation",
         "excerpt": "Experience the ultimate Shanghai to Hong Kong Private Jet Charter. Elite luxury, bespoke coordination, and discrete terminal access. Request a tailored aviation quote.",
-        "link_text": "View Pricing Analysis"
+        "link_text": "View Pricing Analysis",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/all-inclusive-yacht-charter.html",
@@ -1500,7 +1679,8 @@
         "label": "Charter Authority",
         "title": "All Inclusive Yacht Charter",
         "excerpt": "Book an all inclusive yacht charter. Experience the ultimate luxury with a private yacht rental, fully crewed with a private chef, meals, drinks, and water sports.",
-        "link_text": "Explore Yacht Fleet"
+        "link_text": "Explore Yacht Fleet",
+        "image": "/assets/hero-bg.png"
     },
     {
         "url": "/global-route-silo.html",
@@ -1508,7 +1688,8 @@
         "label": "Aviation Authority",
         "title": "Global Route Directory",
         "excerpt": "Explore the full network of elite private jet charter routes. Direct connectivity between global luxury hubs.",
-        "link_text": "Configure Sourcing Solution"
+        "link_text": "Configure Sourcing Solution",
+        "image": "/assets/elite_jet_master_hero.png"
     },
     {
         "url": "/last-minute-yacht-charter.html",
@@ -1516,7 +1697,8 @@
         "label": "Charter Authority",
         "title": "Last Minute Yacht Charter",
         "excerpt": "Secure a luxury last minute yacht charter immediately. Book private superyachts on short notice with crew, gourmet dining, and global operations. Inquire now.",
-        "link_text": "Explore Yacht Fleet"
+        "link_text": "Explore Yacht Fleet",
+        "image": "/assets/hero-bg.png"
     },
     {
         "url": "/luxury-yacht-charter-caribbean.html",
@@ -1524,7 +1706,8 @@
         "label": "Charter Authority",
         "title": "Luxury Yacht Charter Caribbean",
         "excerpt": "Book a luxury yacht charter in the Caribbean. Exclusive superyacht rentals with crew, private yacht vacations, & custom itineraries. Request a quote.",
-        "link_text": "Explore Yacht Fleet"
+        "link_text": "Explore Yacht Fleet",
+        "image": "/assets/caribbean_yacht_hero.png"
     },
     {
         "url": "/luxury-yacht-charter-for-family-vacation.html",
@@ -1532,7 +1715,8 @@
         "label": "Charter Authority",
         "title": "Luxury Yacht Charter for Family Vacation",
         "excerpt": "Book a luxury yacht charter for family vacations. Private yacht rentals with crew, customized family itineraries, child-friendly layouts, and quotes.",
-        "link_text": "Explore Yacht Fleet"
+        "link_text": "Explore Yacht Fleet",
+        "image": "/assets/private_yacht_vacation_hero.png"
     },
     {
         "url": "/luxury-yacht-rental-for-parties.html",
@@ -1540,7 +1724,8 @@
         "label": "Charter Authority",
         "title": "Luxury Yacht Rental for Parties",
         "excerpt": "Book a luxury yacht rental for parties. Exclusive private party yacht charters, VIP events, birthday celebrations, and custom entertainment. Request a quote.",
-        "link_text": "Explore Yacht Fleet"
+        "link_text": "Explore Yacht Fleet",
+        "image": "/assets/yacht_party_hero.png"
     },
     {
         "url": "/private-yacht-vacation-package.html",
@@ -1548,7 +1733,8 @@
         "label": "Charter Authority",
         "title": "Private Yacht Vacation Package",
         "excerpt": "Book the ultimate private yacht vacation package. Fully crewed charter escapes featuring private chefs, personalized itineraries, and watersports.",
-        "link_text": "Explore Yacht Fleet"
+        "link_text": "Explore Yacht Fleet",
+        "image": "/assets/hero-bg.png"
     },
     {
         "url": "/yacht-charter-available-now.html",
@@ -1556,7 +1742,8 @@
         "label": "Charter Authority",
         "title": "Yacht Charter Available Now",
         "excerpt": "Secure a luxury yacht charter available now. Book your private yacht charter immediately with crew, gourmet dining, and global operations. Request availability.",
-        "link_text": "Explore Yacht Fleet"
+        "link_text": "Explore Yacht Fleet",
+        "image": "/assets/hero-bg.png"
     },
     {
         "url": "/yacht-charter-for-private-events.html",
@@ -1564,7 +1751,8 @@
         "label": "Charter Authority",
         "title": "Yacht Charter for Private Events",
         "excerpt": "Book a luxury yacht charter for private events. Exquisite yacht venues for VIP celebrations, parties, and weddings. Request a custom event quote.",
-        "link_text": "Explore Yacht Fleet"
+        "link_text": "Explore Yacht Fleet",
+        "image": "/assets/hero-bg.png"
     },
     {
         "url": "/yacht-charter-for-wedding.html",
@@ -1572,7 +1760,8 @@
         "label": "Charter Authority",
         "title": "Yacht Charter for Wedding",
         "excerpt": "Book a luxury yacht charter for your wedding. Exclusive wedding yacht venues for ceremony & reception. Request availability and wedding quotes.",
-        "link_text": "Explore Yacht Fleet"
+        "link_text": "Explore Yacht Fleet",
+        "image": "/assets/hero-bg.png"
     },
     {
         "url": "/yacht-charter-with-crew.html",
@@ -1580,6 +1769,7 @@
         "label": "Charter Authority",
         "title": "Yacht Charter With Crew",
         "excerpt": "Book a yacht charter with crew. Experience the ultimate luxury yacht rental with a dedicated captain, private chef, stewardesses, and customizable global itineraries.",
-        "link_text": "Explore Yacht Fleet"
+        "link_text": "Explore Yacht Fleet",
+        "image": "/assets/hero-bg.png"
     }
 ]
