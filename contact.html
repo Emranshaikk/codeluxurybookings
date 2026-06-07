@@ -514,6 +514,7 @@
                                 <option value="luxury_villa">Luxury Villa Rental</option>
                                 <option value="yacht_charter">Yacht Charter</option>
                                 <option value="multi_modal">Multi-Modal Itinerary</option>
+                                <option value="partnership">Strategic Partnership</option>
                             </select>
                         </div>
 
@@ -607,7 +608,59 @@
             </div>
         </div>
     </footer>
-<script>
+    <script>
+        const endpoint = 'https://eliteluxurybookings.com/submit-lead.php';
+
+        // Auto-select interest from URL parameter
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const interestParam = params.get('interest');
+            if (interestParam) {
+                const selectEl = document.getElementById('interest');
+                const formTypeEl = document.querySelector('input[name="form_type"]');
+                
+                if (interestParam.toLowerCase() === 'partnership' || interestParam.toLowerCase() === 'partner') {
+                    if (selectEl) {
+                        selectEl.value = 'partnership';
+                    }
+                    if (formTypeEl) {
+                        formTypeEl.value = 'Partnership Inquiry';
+                    }
+                    // Update page heading/subtext to speak to partners
+                    const heading = document.querySelector('.page-hero h1');
+                    if (heading) {
+                        heading.innerHTML = 'Apply for Our <br><span class="gold-text">Strategic Partnership</span>';
+                    }
+                }
+            }
+        });
+
+        async function submitContact(event) {
+            event.preventDefault();
+            const form = event.target;
+            const btn = document.getElementById('submitBtn');
+            const originalBtnText = btn.innerText;
+            
+            btn.innerText = 'INITIATING...';
+            btn.disabled = true;
+            
+            const formData = new FormData(form);
+            try {
+                await fetch(endpoint, {
+                    method: 'POST',
+                    body: formData
+                });
+                document.getElementById('contactForm').style.display = 'none';
+                document.getElementById('formMsg').style.display = 'block';
+            } catch (error) {
+                console.error(error);
+                alert('Connection issue. Please connect directly with our concierge via WhatsApp.');
+            } finally {
+                btn.innerText = originalBtnText;
+                btn.disabled = false;
+            }
+        }
+
         function toggleMobileMenu() { 
             var m = document.getElementById('elbMobileMenu'), 
                 b = document.getElementById('navHamburger'); 
