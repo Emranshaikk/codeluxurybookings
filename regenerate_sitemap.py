@@ -23,7 +23,7 @@ PRIORITY_MAP = {
     'heavy-jet-vs-light-jet-charter': '0.85',
     'empty-leg-flights-guide': '0.85',
     'cost-to-charter-superyacht-2026': '0.85',
-    'ultimate-luxury-villa-rental-guide-2026': '0.85',
+    'ultimate-luxury-villa-rental-guide': '0.85',
 }
 
 # Excluded from sitemap (non-indexable pages)

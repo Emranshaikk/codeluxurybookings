@@ -26,7 +26,7 @@ FOOTER_BLOCK = """
                 <div class="intel-hub-card">
                     <h5>Villa Intelligence</h5>
                     <div class="intel-hub-links">
-                        <a href="https://eliteluxurybookings.com/ultimate-luxury-villa-rental-guide-2026/">Villa Guide 2026</a>
+                        <a href="https://eliteluxurybookings.com/ultimate-luxury-villa-rental-guide/">Villa Guide 2026</a>
                         <a href="https://eliteluxurybookings.com/how-to-book-luxury-villa-guide/">Booking Protocol</a>
                         <a href="https://eliteluxurybookings.com/villa-vs-luxury-hotel-comparison/">Villa vs Hotel</a>
                     </div>

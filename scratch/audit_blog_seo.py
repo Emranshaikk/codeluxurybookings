@@ -13,7 +13,7 @@ def audit_blog_seo():
         'motor-yacht-vs-sailing-yacht-charter.html',
         'multi-modal-luxury-itinerary-2026.html',
         'private-jet-charter-cost-guide-2026.html',
-        'ultimate-luxury-villa-rental-guide-2026.html',
+        'ultimate-luxury-villa-rental-guide.html',
         'villa-vs-luxury-hotel-comparison.html',
         'private-jet-charter-to-monaco.html'
     ]

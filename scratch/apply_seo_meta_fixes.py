@@ -14,7 +14,7 @@ def apply_seo_fixes():
         ),
         # Villa Guide 2026
         (
-            'ultimate-luxury-villa-rental-guide-2026.html',
+            'ultimate-luxury-villa-rental-guide.html',
             r'<meta name="description"\s+content="The definitive guide to luxury villa rentals in 2026\. Learn about privacy benchmarks, full-staffed estates, security protocols, and the world\'s most exclusive destinations\.">',
             '<meta name="description" content="The definitive 2026 guide to luxury villa rentals. Expert insights on privacy benchmarks, staffed estates, and security protocols for the discerning traveler.">'
         ),

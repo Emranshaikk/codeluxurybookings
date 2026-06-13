@@ -3352,7 +3352,7 @@ index cc7b4d9..2c6d10d 100644
 -                <div class="grid-3"
 -                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem;">
 +                <div class="hub-grid">
-                     <a href="https://eliteluxurybookings.com/ultimate-luxury-villa-rental-guide-2026/"
+                     <a href="https://eliteluxurybookings.com/ultimate-luxury-villa-rental-guide/"
 -                        style="text-decoration: none; color: inherit;">
 -                        <div class="glass-panel"
 -                            style="padding: 2.5rem; height: 100%; transition: var(--transition); border-color: rgba(212,175,55,0.1);">

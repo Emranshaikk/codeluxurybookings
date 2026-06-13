@@ -14,7 +14,7 @@ files_to_check = [
     # Villa files
     "how-to-book-luxury-villa-guide.html",
     "luxury-villa-rentals.html",
-    "ultimate-luxury-villa-rental-guide-2026.html",
+    "ultimate-luxury-villa-rental-guide.html",
     "villa-vs-luxury-hotel-comparison.html"
 ]
 
