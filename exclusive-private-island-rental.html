@@ -1177,7 +1177,6 @@
             .footer-bottom { flex-direction: column !important; gap: 2rem !important; text-align: center !important; } 
         }
 
-    
         /* Floating WhatsApp Button Override */
         .wa-float {
             position: fixed !important;
@@ -1729,7 +1728,6 @@
 
     <!-- Master Footer -->
 <!-- Interactive JS Scripts -->
-    
 
     <!-- WhatsApp Float Widget -->
     <a href="https://wa.me/918801079030" class="wa-float" target="_blank" rel="noopener"
@@ -1742,6 +1740,21 @@
     </a>
 
     <!-- Master Footer -->
+<script>
+        function handleInquirySubmit(event) {
+            event.preventDefault();
+            document.getElementById('islandRequestForm').style.display = 'none';
+            document.getElementById('formSuccessMessage').style.display = 'block';
+            if (typeof gtag === 'function') {
+                gtag('event', 'generate_lead', {
+                    'event_category': 'Engagement',
+                    'event_label': 'Private Island Procurement Inquiry'
+                });
+            }
+        }
+    </script>
+
+    <!-- Master Footer -->
 <footer class="footer">
         <div class="container" style="max-width: 1200px;">
             <div class="footer-grid">
@@ -1749,10 +1762,10 @@
                     <h2>Elite Luxury <span class="gold-text">Bookings</span></h2>
                     <p>Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
                     <div class="footer-socials">
-                        <a href="https://www.facebook.com/eliteluxurybookings"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/eliteluxurybookings"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/elite-luxury-bookings/"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://x.com/eliteluxuryb"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/eliteluxurybookings" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/eliteluxurybookings" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/elite-luxury-bookings/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/eliteluxuryb" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -1775,19 +1788,6 @@
                     </ul>
                 </div>
             </div>
-            
-            <!-- VILLA AUTHORITY SILO -->
-    <div style="max-width: 1200px; margin: 2rem auto 0; padding: 2rem 0 0; border-top: 1px solid rgba(212,175,55,0.1); text-align: center;">
-        <h4 class="serif gold-text" style="font-size: 1.4rem; margin-bottom: 1.5rem; letter-spacing: 2px;">Villa Authority</h4>
-        <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">
-            <a href="https://eliteluxurybookings.com/ultimate-luxury-villa-rental-guide/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Villa Guide 2026</a>
-            <a href="https://eliteluxurybookings.com/villa-vs-luxury-hotel-comparison/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Villa vs Hotel</a>
-            <a href="https://eliteluxurybookings.com/how-to-book-luxury-villa-guide/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Booking Protocol</a>
-            <a href="https://eliteluxurybookings.com/private-island-honeymoon-rental/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Honeymoon Rentals</a>
-            <a href="https://eliteluxurybookings.com/luxury-villa-rentals/" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">View Portfolio</a>
-        </div>
-    </div>
-    <!-- END VILLA AUTHORITY SILO -->
             <div class="footer-bottom">
                 <p>&copy; 2026 Elite Luxury Bookings. All rights reserved. Global Authority in Luxury Procurement.</p>
                 <div class="footer-legal">
@@ -1806,19 +1806,6 @@
                 b.classList.toggle('open'); 
                 document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
             } 
-        }
-    </script>
-    <script>
-        function handleInquirySubmit(event) {
-            event.preventDefault();
-            document.getElementById('islandRequestForm').style.display = 'none';
-            document.getElementById('formSuccessMessage').style.display = 'block';
-            if (typeof gtag === 'function') {
-                gtag('event', 'generate_lead', {
-                    'event_category': 'Engagement',
-                    'event_label': 'Private Island Procurement Inquiry'
-                });
-            }
         }
     </script>
 </body>
