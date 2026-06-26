@@ -1869,7 +1869,15 @@
     </a>
 
     <!-- Scripts -->
-                <script>
+                    <script>
+        function escapeHtml(text) {
+            if (!text) return '';
+            return text.toString()
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;");
+        }
+
         async function submitLead(event) {
             event.preventDefault();
             const form = event.target;
@@ -1886,7 +1894,7 @@
 
 `;
             const formType = formData.get('form_type') || formData.get('_target') || 'General Lead';
-            message += `<b>Source:</b> ${formType}
+            message += `<b>Source:</b> ${escapeHtml(formType)}
 
 `;
             
@@ -1909,7 +1917,7 @@
             for (const [key, label] of Object.entries(fields)) {
                 const val = formData.get(key);
                 if (val) {
-                    message += `<b>${label}:</b> ${val}
+                    message += `<b>${label}:</b> ${escapeHtml(val)}
 `;
                 }
             }
@@ -1917,7 +1925,7 @@
             for (const [key, val] of formData.entries()) {
                 if (!fields[key] && !['form_type', '_redirect', '_target', '_subject', '_cc'].includes(key) && val) {
                     const formattedKey = key.charAt(0).toUpperCase() + key.slice(1);
-                    message += `<b>${formattedKey}:</b> ${val}
+                    message += `<b>${formattedKey}:</b> ${escapeHtml(val)}
 `;
                 }
             }
