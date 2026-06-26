@@ -7,7 +7,7 @@
 // --- CONFIGURATION ---
 $TELEGRAM_TOKEN = '8274022771:AAHDPmDq6vfAttktCf1iOeNAwqSAuUFgP2g';
 $TELEGRAM_CHAT_ID = '5875175296'; 
-$BACKUP_EMAIL = 'contact@eliteluxurybookings.com';
+$BACKUP_EMAIL = 'contactshaikk@gmail.com';
 $LOG_FILE = 'lead_handler_errors.log';
 
 // --- SECURITY ---
