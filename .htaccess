@@ -34,17 +34,33 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([^/]+)/?$ $1.html [L]
 
-# 5. PHP Blocking Shield (Security First)
-# This forces the server to NEVER look for .php files, EXCEPT for our lead handler.
+# 5. PHP Handler Mapping (Forces the server to process PHP files)
+<IfModule mod_mime.c>
+    AddHandler application/x-httpd-php .php .php5 .phtml
+    AddType application/x-httpd-php .php .php5 .phtml
+</IfModule>
+
+# 6. PHP Blocking Shield (Security First)
+# This forces the server to NEVER serve .php files, EXCEPT for our lead handler.
 <FilesMatch "\.(php|php5|php4|php3|phtml|phps)$">
-    Order Deny,Allow
-    Deny from all
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order Deny,Allow
+        Deny from all
+    </IfModule>
 </FilesMatch>
 
 # EXCEPTION: Allow the specific Lead Handler script to run
 <Files "submit-lead.php">
-    Order Allow,Deny
-    Allow from all
+    <IfModule mod_authz_core.c>
+        Require all granted
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order Allow,Deny
+        Allow from all
+    </IfModule>
 </Files>
 
 # 6. Browser Caching
