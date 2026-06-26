@@ -71,6 +71,16 @@
             z-index: -1;
         }
 
+        .thank-you-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 120px);
+            padding: 3rem 1rem;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
         .thank-you-card {
             background: var(--glass);
             backdrop-filter: blur(20px);
@@ -83,6 +93,7 @@
             text-align: center;
             box-shadow: 0 40px 100px rgba(0,0,0,0.5);
             animation: fadeIn 1.2s ease-out;
+            margin: 0 auto;
         }
 
         @keyframes fadeIn {
@@ -340,50 +351,52 @@
 <!-- ELB_NAV_END -->
     <div class="bg-overlay"></div>
 
-    <div class="thank-you-card">
-        <div class="check-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
-            </svg>
-        </div>
-        
-        <h1 class="serif">Request <span class="gold-text">Confirmed</span></h1>
-        <p style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 4px; color: var(--primary-gold); margin-top: -1rem; margin-bottom: 1.5rem; font-weight: 700;">Private Client Desk Activated</p>
-        <p style="margin-bottom: 0.5rem;">Our operations team has been notified. You will receive your personalized itineraries and procurement options via WhatsApp/Email shortly.</p>
-        <p style="font-size: 0.95rem; margin-bottom: 1.5rem; color: #fff;">
-        👉 For fastest allocation, message us on WhatsApp now to finalize your booking.
-        </p>
-        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; opacity: 0.8;">⏱ Expected response time: 10–30 minutes</p>
-        
-        <div style="background: rgba(212, 175, 55, 0.05); border: 1px solid rgba(212, 175, 55, 0.2); padding: 2rem; border-radius: 20px; margin-bottom: 2.5rem;">
-            <p style="font-size: 1.1rem; color: #fff; margin-bottom: 1.5rem; font-weight: 600;">🚀 Want a faster response?</p>
-            <p style="font-size: 0.95rem; margin-bottom: 2rem;">Message our concierge directly on WhatsApp for immediate availability and priority service.</p>
-            <a href="https://wa.me/918801079030?text=Hi%2C%20I%20just%20submitted%20a%20request%20from%20your%20website.%20Need%20urgent%20assistance." class="btn btn-gold" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+    <div class="thank-you-container">
+        <div class="thank-you-card">
+            <div class="check-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
                 </svg>
-                👉 Chat on WhatsApp Now
-            </a>
-            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1rem;">
-            Trusted by HNW clients worldwide • 24/7 concierge desk
+            </div>
+            
+            <h1 class="serif">Request <span class="gold-text">Confirmed</span></h1>
+            <p style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 4px; color: var(--primary-gold); margin-top: -1rem; margin-bottom: 1.5rem; font-weight: 700;">Private Client Desk Activated</p>
+            <p style="margin-bottom: 0.5rem;">Our operations team has been notified. You will receive your personalized itineraries and procurement options via WhatsApp/Email shortly.</p>
+            <p style="font-size: 0.95rem; margin-bottom: 1.5rem; color: #fff;">
+            👉 For fastest allocation, message us on WhatsApp now to finalize your booking.
             </p>
-            <p style="color: #ff4d4d; font-size: 0.85rem; font-weight: 600; margin-top: 1.2rem; letter-spacing: 0.5px;">⚠️ High demand detected — limited availability for your request in the next few hours</p>
-        </div>
-
-        <a href="https://eliteluxurybookings.com/" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; border-bottom: 1px solid transparent; transition: 0.3s;" onmouseover="this.style.color='#fff'; this.style.borderBottomColor='var(--primary-gold)'" onmouseout="this.style.color='var(--text-muted)'; this.style.borderBottomColor='transparent'">Return to Homepage</a>
-
-        <div class="next-steps">
-            <div class="step">
-                <span>Phase 1</span>
-                <p>Aircraft Sourcing</p>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; opacity: 0.8;">⏱ Expected response time: 10–30 minutes</p>
+            
+            <div style="background: rgba(212, 175, 55, 0.05); border: 1px solid rgba(212, 175, 55, 0.2); padding: 2rem; border-radius: 20px; margin-bottom: 2.5rem;">
+                <p style="font-size: 1.1rem; color: #fff; margin-bottom: 1.5rem; font-weight: 600;">🚀 Want a faster response?</p>
+                <p style="font-size: 0.95rem; margin-bottom: 2rem;">Message our concierge directly on WhatsApp for immediate availability and priority service.</p>
+                <a href="https://wa.me/918801079030?text=Hi%2C%20I%20just%20submitted%20a%20request%20from%20your%20website.%20Need%20urgent%20assistance." class="btn btn-gold" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                    </svg>
+                    👉 Chat on WhatsApp Now
+                </a>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1rem;">
+                Trusted by HNW clients worldwide • 24/7 concierge desk
+                </p>
+                <p style="color: #ff4d4d; font-size: 0.85rem; font-weight: 600; margin-top: 1.2rem; letter-spacing: 0.5px;">⚠️ High demand detected — limited availability for your request in the next few hours</p>
             </div>
-            <div class="step">
-                <span>Phase 2</span>
-                <p>Price Analysis</p>
-            </div>
-            <div class="step">
-                <span>Phase 3</span>
-                <p>Itinerary Delivery</p>
+
+            <a href="https://eliteluxurybookings.com/" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; border-bottom: 1px solid transparent; transition: 0.3s;" onmouseover="this.style.color='#fff'; this.style.borderBottomColor='var(--primary-gold)'" onmouseout="this.style.color='var(--text-muted)'; this.style.borderBottomColor='transparent'">Return to Homepage</a>
+
+            <div class="next-steps">
+                <div class="step">
+                    <span>Phase 1</span>
+                    <p>Aircraft Sourcing</p>
+                </div>
+                <div class="step">
+                    <span>Phase 2</span>
+                    <p>Price Analysis</p>
+                </div>
+                <div class="step">
+                    <span>Phase 3</span>
+                    <p>Itinerary Delivery</p>
+                </div>
             </div>
         </div>
     </div>
