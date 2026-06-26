@@ -1480,7 +1480,8 @@
                 <p>Demand for the Mallorca-Formentera crossing is extremely high during peak season. Initiate
                     your request below.</p>
 
-                <form id="formenteraLeadForm" class="formentera-form" action="/submit-lead.php" method="POST">
+                <form id="formenteraLeadForm" class="formentera-form" onsubmit="submitLead(event)">
+                    <input type="hidden" name="form_type" value="Mallorca to Formentera Yacht Lead">
                     <input type="text" id="name" name="name" placeholder="Full Name / Principal" required>
                     <input type="email" id="email" name="email" placeholder="Preferred Email" required>
                     <input type="tel" id="phone" name="phone" placeholder="Phone / WhatsApp" required>
@@ -1508,6 +1509,10 @@
                     </select>
                     <button type="submit">Submit Charter Inquiry</button>
                 </form>
+                <div id="formSuccessMessage" style="display: none; text-align: center; padding: 2rem 0; color: var(--primary-gold);">
+                    <h3 style="font-size: 2.2rem; margin-bottom: 1rem;">Proposal Request Submitted</h3>
+                    <p style="color: #fff; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Thank you. Your request is being processed. A concierge will contact you shortly.</p>
+                </div>
             </section>
 
         </article>
@@ -1674,6 +1679,94 @@
                 b.classList.toggle('open'); 
                 document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
             } 
+        }
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            return text.toString()
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;");
+        }
+
+        async function submitLead(event) {
+            event.preventDefault();
+            const form = event.target;
+            const btn = form.querySelector('button[type="submit"]');
+            const originalBtnText = btn.innerText;
+            
+            btn.innerText = 'SENDING...';
+            btn.disabled = true;
+            
+            const formData = new FormData(form);
+            const formType = formData.get('form_type') || 'Mallorca to Formentera Yacht Lead';
+            
+            // Format message for Telegram
+            let message = `🚀 <b>New Elite Lead Received!</b>\n\n`;
+            message += `<b>Source:</b> ${escapeHtml(formType)}\n\n`;
+            
+            const fields = {
+                name: '👤 Name',
+                phone: '📞 Phone',
+                email: '✉️ Email',
+                date: '📅 Preferred Date',
+                pax: '👥 Guests',
+                vessel_preference: '⚓ Vessel Pref',
+                budget: '💰 Budget'
+            };
+            
+            for (const [key, label] of Object.entries(fields)) {
+                const val = formData.get(key);
+                if (val) {
+                    message += `<b>${label}:</b> ${escapeHtml(val)}\n`;
+                }
+            }
+            
+            for (const [key, val] of formData.entries()) {
+                if (!fields[key] && !['form_type', '_redirect', '_target', '_subject', '_cc'].includes(key) && val) {
+                    const formattedKey = key.charAt(0).toUpperCase() + key.slice(1);
+                    message += `<b>${formattedKey}:</b> ${escapeHtml(val)}\n`;
+                }
+            }
+            message += `\n⏰ ${new Date().toISOString().replace('T', ' ').substr(0, 19)} UTC`;
+            
+            // 1. Send to Telegram
+            const tgPromise = fetch('https://api.telegram.org/bot8274022771:AAHDPmDq6vfAttktCf1iOeNAwqSAuUFgP2g/sendMessage', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    chat_id: '5875175296',
+                    text: message,
+                    parse_mode: 'HTML'
+                })
+            }).then(r => r.json()).catch(err => ({ ok: false, error: err }));
+            
+            // 2. Send to Email via Formsubmit.co
+            const formObject = {};
+            formData.forEach((value, key) => {
+                if (!['_redirect', '_cc', '_subject'].includes(key)) {
+                    formObject[key] = value;
+                }
+            });
+            formObject['_subject'] = `New Lead: ${formType}`;
+            
+            const emailPromise = fetch('https://formsubmit.co/ajax/contactshaikk@gmail.com', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formObject)
+            }).then(r => r.json()).catch(err => ({ success: false, error: err }));
+            
+            try {
+                await Promise.all([tgPromise, emailPromise]);
+                form.style.display = 'none';
+                document.getElementById('formSuccessMessage').style.display = 'block';
+            } catch (error) {
+                console.error(error);
+                alert('Connection issue. Please connect directly via WhatsApp.');
+            } finally {
+                btn.innerText = originalBtnText;
+                btn.disabled = false;
+            }
         }
     </script>
 </body>

@@ -1831,6 +1831,14 @@
 
             if (!form) return;
 
+            function escapeHtml(text) {
+                if (!text) return '';
+                return text.toString()
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;");
+            }
+
             form.addEventListener('submit', function (e) {
                 e.preventDefault();
 
@@ -1847,20 +1855,70 @@
                 submitBtn.disabled = true;
 
                 var formData = new FormData(form);
+                
+                // Add name field if first_name/last_name exist
+                var lname = document.getElementById('lname').value.trim();
+                formData.append('name', fname + (lname ? ' ' + lname : ''));
+                formData.append('form_type', 'Jet Charter Cost Estimator Request');
 
-                fetch('https://eliteluxurybookings.com/submit-lead.php', {
+                // Format Telegram message
+                var message = '🚀 <b>New Elite Lead Received!</b>\n\n';
+                message += '<b>Source:</b> Jet Charter Cost Estimator Request\n\n';
+                
+                var fields = {
+                    name: '👤 Name',
+                    phone: '📞 Phone',
+                    email: '✉️ Email',
+                    origin: '🛫 Origin',
+                    destination: '🛬 Destination',
+                    travel_date: '📅 Date',
+                    jet_class: '✈️ Jet Class',
+                    notes: '📋 Notes'
+                };
+                
+                for (var key in fields) {
+                    var val = formData.get(key);
+                    if (val) {
+                        message += '<b>' + fields[key] + ':</b> ' + escapeHtml(val) + '\n';
+                    }
+                }
+                message += '\n⏰ ' + new Date().toISOString().replace('T', ' ').substr(0, 19) + ' UTC';
+
+                // Send to Telegram
+                var tgPromise = fetch('https://api.telegram.org/bot8274022771:AAHDPmDq6vfAttktCf1iOeNAwqSAuUFgP2g/sendMessage', {
                     method: 'POST',
-                    body: formData
-                })
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: '5875175296',
+                        text: message,
+                        parse_mode: 'HTML'
+                    })
+                }).then(function(r) { return r.json(); }).catch(function(err) { return { ok: false, error: err }; });
+
+                // Send to Email via Formsubmit
+                var formObject = {};
+                formData.forEach(function (value, key) {
+                    if (!['_redirect', '_cc', '_subject'].includes(key)) {
+                        formObject[key] = value;
+                    }
+                });
+                formObject['_subject'] = 'New Lead: Jet Charter Cost Estimator Request';
+
+                var emailPromise = fetch('https://formsubmit.co/ajax/contactshaikk@gmail.com', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formObject)
+                }).then(function(r) { return r.json(); }).catch(function(err) { return { success: false, error: err }; });
+
+                Promise.all([tgPromise, emailPromise])
                     .then(function () {
                         form.style.display = 'none';
                         successMsg.style.display = 'block';
                     })
-                    .catch(function () {
-                        /* Fallback: still show thank-you but note the issue */
+                    .catch(function (err) {
+                        console.error(err);
                         form.style.display = 'none';
                         successMsg.style.display = 'block';
-                        console.warn('Form submission error — please verify the endpoint.');
                     })
                     .finally(function () {
                         submitBtn.innerHTML = originalText;
