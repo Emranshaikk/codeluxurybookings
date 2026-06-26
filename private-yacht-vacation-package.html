@@ -1500,23 +1500,89 @@
 
     <!-- Master Footer -->
 <!-- Scripts -->
-    <script>
-        const endpoint = 'https://eliteluxurybookings.com/submit-lead.php';
+                <script>
         async function submitLead(event) {
             event.preventDefault();
-            const btn = event.target.querySelector('button[type="submit"]');
             const form = event.target;
+            const btn = form.querySelector('button[type="submit"]');
             const originalBtnText = btn.innerText;
-
+            
             btn.innerText = 'SECURELY SENDING...';
             btn.disabled = true;
-
+            
             const formData = new FormData(form);
+            
+            // Format message for Telegram
+            let message = `🚀 <b>New Elite Lead Received!</b>
+
+`;
+            const formType = formData.get('form_type') || formData.get('_target') || 'General Lead';
+            message += `<b>Source:</b> ${formType}
+
+`;
+            
+            const fields = {
+                name: '👤 Name',
+                phone: '📞 Phone',
+                email: '✉️ Email',
+                route: '🛫 Route',
+                departure: '🛫 Departure',
+                destination: '🛬 Destination',
+                date: '📅 Date',
+                passengers: '👥 Passengers',
+                service: '🛠️ Service',
+                requirements: '📋 Requirements',
+                message: '📝 Message',
+                budget: '💰 Budget',
+                whatsapp_pref: '💬 WhatsApp Pref'
+            };
+            
+            for (const [key, label] of Object.entries(fields)) {
+                const val = formData.get(key);
+                if (val) {
+                    message += `<b>${label}:</b> ${val}
+`;
+                }
+            }
+            
+            for (const [key, val] of formData.entries()) {
+                if (!fields[key] && !['form_type', '_redirect', '_target', '_subject', '_cc'].includes(key) && val) {
+                    const formattedKey = key.charAt(0).toUpperCase() + key.slice(1);
+                    message += `<b>${formattedKey}:</b> ${val}
+`;
+                }
+            }
+            message += `
+⏰ ${new Date().toISOString().replace('T', ' ').substr(0, 19)} UTC`;
+            
+            // 1. Send to Telegram
+            const tgPromise = fetch('https://api.telegram.org/bot8274022771:AAHDPmDq6vfAttktCf1iOeNAwqSAuUFgP2g/sendMessage', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    chat_id: '5875175296',
+                    text: message,
+                    parse_mode: 'HTML'
+                })
+            }).then(r => r.json()).catch(err => ({ ok: false, error: err }));
+            
+            // 2. Send to Email via Formsubmit.co
+            const formObject = {};
+            formData.forEach((value, key) => {
+                if (!['_redirect', '_cc', '_subject'].includes(key)) {
+                    formObject[key] = value;
+                }
+            });
+            formObject['_subject'] = formData.get('_subject') || `New Lead: ${formType}`;
+            
+            const emailPromise = fetch('https://formsubmit.co/ajax/contactshaikk@gmail.com', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formObject)
+            }).then(r => r.json()).catch(err => ({ success: false, error: err }));
+            
             try {
-                await fetch(endpoint, {
-                    method: 'POST',
-                    body: formData
-                });
+                await Promise.all([tgPromise, emailPromise]);
                 window.location.href = '/thank-you.html';
             } catch (error) {
                 console.error(error);
@@ -1525,21 +1591,6 @@
                 btn.innerText = originalBtnText;
                 btn.disabled = false;
             }
-        }
-
-        function toggleMobileMenu() {
-            var m = document.getElementById('elbMobileMenu'),
-                b = document.getElementById('navHamburger');
-            if (m && b) {
-                m.classList.toggle('open');
-                b.classList.toggle('open');
-                document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
-            }
-        }
-
-        function toggleFaq(button) {
-            const item = button.parentElement;
-            item.classList.toggle('active');
         }
     </script>
 
