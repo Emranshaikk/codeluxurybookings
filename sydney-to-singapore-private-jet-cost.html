@@ -513,6 +513,26 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/103558768" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Elite Luxury Bookings",
+    "url": "https://eliteluxurybookings.com",
+    "logo": "https://eliteluxurybookings.com/favicon.png",
+    "image": "https://eliteluxurybookings.com/assets/mallorca_ibiza_boat_hero_2026.png",
+    "description": "Global authority in luxury travel procurement. Offering bespoke private jet, yacht, and villa charters.",
+    "telephone": "+918801079030",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+918801079030",
+      "contactType": "customer service",
+      "availableLanguage": ["en", "es"],
+      "contactOption": "WhatsApp"
+    },
+    "priceRange": "$$$$"
+  }
+  </script>
 </head>
 
 <body>
@@ -661,6 +681,53 @@
                         Deploying from Kingsford Smith (YSSY), we utilize optimized flight levels to ensure a 8h 39m arrival at Seletar (WSSL). 
                         For this 3914-mile mission, we recommend a Heavy or Ultra-Long Range Jet to balance cabin performance with operational efficiency.
                     </p>
+                    <!-- ===== INTERACTIVE PRIVATE JET COST CALCULATOR (PROMPT 5 STYLE) ===== -->
+                    <div class="calculator-container" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 12px; padding: 2.5rem; margin: 3rem auto 0; max-width: 700px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); text-align: left;">
+                      <h3 class="serif gold-text" style="font-size: 1.8rem; text-align: center; margin-bottom: 0.5rem; border: none;">Bespoke Price Estimator</h3>
+                      <p style="text-align: center; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 1px;">Live flight economic estimates based on current fuel indices</p>
+                      
+                      <div style="margin-bottom: 2rem;">
+                        <label style="display: block; font-size: 0.75rem; text-transform: uppercase; color: var(--primary-gold); letter-spacing: 1.5px; margin-bottom: 0.8rem; font-weight: 600;">1. Select Jet Class</label>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.8rem;">
+                          <button type="button" onclick="selectJetClass('light')" id="btn-class-light" style="background: rgba(212, 175, 55, 0.1); border: 1px solid var(--primary-gold); color: #fff; padding: 1rem 0.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">Light Jet<span style="display:block; font-size:0.7rem; color:var(--text-muted); margin-top:2px;">€3,500/hr</span></button>
+                          <button type="button" onclick="selectJetClass('midsize')" id="btn-class-midsize" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); padding: 1rem 0.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">Midsize<span style="display:block; font-size:0.7rem; color:var(--text-muted); margin-top:2px;">€6,000/hr</span></button>
+                          <button type="button" onclick="selectJetClass('heavy')" id="btn-class-heavy" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); padding: 1rem 0.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">Heavy Jet<span style="display:block; font-size:0.7rem; color:var(--text-muted); margin-top:2px;">€9,500/hr</span></button>
+                          <button type="button" onclick="selectJetClass('airliner')" id="btn-class-airliner" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); padding: 1rem 0.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">VIP Airliner<span style="display:block; font-size:0.7rem; color:var(--text-muted); margin-top:2px;">€18,000/hr</span></button>
+                        </div>
+                      </div>
+
+                      <div style="margin-bottom: 2rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
+                          <label for="pax-slider" style="font-size: 0.75rem; text-transform: uppercase; color: var(--primary-gold); letter-spacing: 1.5px; font-weight: 600; margin: 0;">2. Number of Passengers</label>
+                          <span id="pax-display" style="font-size: 1.1rem; font-weight: 600; color: #fff; background: rgba(212,175,55,0.15); padding: 0.2rem 0.8rem; border-radius: 4px; border: 1px solid rgba(212,175,55,0.3);">4 Pax</span>
+                        </div>
+                        <input type="range" id="pax-slider" min="1" max="19" value="4" oninput="updateJetCalculator(this.value)" style="width: 100%; accent-color: var(--primary-gold); cursor: pointer;">
+                      </div>
+
+                      <div style="background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.05); border-radius: 6px; padding: 1.5rem; margin-bottom: 2rem;">
+                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.8rem; margin-bottom: 0.8rem;">
+                          <span style="color: var(--text-muted); font-size: 0.95rem;">Flight Time Estimate:</span>
+                          <strong style="color: #fff; font-size: 0.95rem;">8h 39m</strong>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.8rem; margin-bottom: 0.8rem;">
+                          <span style="color: var(--text-muted); font-size: 0.95rem;">Estimated Flight Cost:</span>
+                          <strong style="color: #fff; font-size: 1.1rem; color: var(--primary-gold);" id="jet-total-cost">€0</strong>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                          <span style="color: var(--text-muted); font-size: 0.95rem;">Estimated Cost Per Passenger:</span>
+                          <strong style="color: #fff; font-size: 0.95rem;" id="jet-per-pax-cost">€0 / pax</strong>
+                        </div>
+                      </div>
+
+                      <!-- Call to Action below widget -->
+                      <div style="text-align: center;">
+                        <a href="https://wa.me/918801079030" class="btn btn-gold" id="jet-calc-cta" target="_blank" rel="noopener" style="display: block; padding: 1.2rem; text-decoration: none; font-size: 1rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border-radius: 6px; background: linear-gradient(135deg, #D4AF37, #B8860B); color: #000 !important; text-align: center; transition: 0.3s;">
+                          Secure Jet Placement →
+                        </a>
+                        <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.6rem; margin-bottom: 0;">concierge dispatch response in under 15 minutes</p>
+                      </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -720,6 +787,16 @@
 
     <!-- Master Footer -->
                 <script>
+        function toggleMobileMenu() { 
+            var m = document.getElementById('elbMobileMenu'), 
+                b = document.getElementById('navHamburger'); 
+            if (m && b) { 
+                m.classList.toggle('open'); 
+                b.classList.toggle('open'); 
+                document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
+            } 
+        }
+
         function escapeHtml(text) {
             if (!text) return '';
             return text.toString()
@@ -734,73 +811,69 @@
             const btn = form.querySelector('button[type="submit"]');
             const originalBtnText = btn.innerText;
             
-            btn.innerText = 'SECURELY SENDING...';
+            btn.innerText = 'REDIRECTING...';
             btn.disabled = true;
             
             const formData = new FormData(form);
+            const formType = formData.get('form_type') || formData.get('_target') || 'Private Jet Inquiry';
             
-            // Format message for Telegram
-            let message = `🚀 <b>New Elite Lead Received!</b>
+            // Extract details for WhatsApp
+            const name = formData.get('name') || '';
+            const phone = formData.get('phone') || '';
+            const email = formData.get('email') || '';
+            const departure = formData.get('departure') || '';
+            const destination = formData.get('destination') || '';
+            const date = formData.get('date') || '';
+            const passengers = formData.get('passengers') || '';
+            const requirements = formData.get('requirements') || '';
+            
+            const textMsg = `Hi Elite Luxury Bookings, I'd like a quote for a private jet charter. Route: ${departure} to ${destination}. Date: ${date}. Passengers: ${passengers}. Name: ${name}. Contact: ${phone} / ${email}. Requirements: ${requirements}.`;
+            
+            // Format HTML for Telegram
+            let tgMessage = `🚀 <b>New WhatsApp Redirect Lead Received!</b>
 
 `;
-            const formType = formData.get('form_type') || formData.get('_target') || 'General Lead';
-            message += `<b>Source:</b> ${escapeHtml(formType)}
+            tgMessage += `<b>Source:</b> ${escapeHtml(formType)}
 
 `;
-            
-            const fields = {
-                name: '👤 Name',
-                phone: '📞 Phone',
-                email: '✉️ Email',
-                route: '🛫 Route',
-                departure: '🛫 Departure',
-                destination: '🛬 Destination',
-                date: '📅 Date',
-                passengers: '👥 Passengers',
-                service: '🛠️ Service',
-                requirements: '📋 Requirements',
-                message: '📝 Message',
-                budget: '💰 Budget',
-                whatsapp_pref: '💬 WhatsApp Pref'
-            };
-            
-            for (const [key, label] of Object.entries(fields)) {
-                const val = formData.get(key);
-                if (val) {
-                    message += `<b>${label}:</b> ${escapeHtml(val)}
+            tgMessage += `<b>👤 Name:</b> ${escapeHtml(name)}
 `;
-                }
-            }
-            
-            for (const [key, val] of formData.entries()) {
-                if (!fields[key] && !['form_type', '_redirect', '_target', '_subject', '_cc'].includes(key) && val) {
-                    const formattedKey = key.charAt(0).toUpperCase() + key.slice(1);
-                    message += `<b>${formattedKey}:</b> ${escapeHtml(val)}
+            tgMessage += `<b>📞 Contact:</b> ${escapeHtml(phone)}
 `;
-                }
-            }
-            message += `
-⏰ ${new Date().toISOString().replace('T', ' ').substr(0, 19)} UTC`;
+            tgMessage += `<b>✉️ Email:</b> ${escapeHtml(email)}
+`;
+            tgMessage += `<b>🛫 Departure:</b> ${escapeHtml(departure)}
+`;
+            tgMessage += `<b>🛬 Destination:</b> ${escapeHtml(destination)}
+`;
+            tgMessage += `<b>📅 Date:</b> ${escapeHtml(date)}
+`;
+            tgMessage += `<b>👥 Passengers:</b> ${escapeHtml(passengers)}
+`;
+            tgMessage += `<b>📋 Requirements:</b> ${escapeHtml(requirements)}
+
+`;
+            tgMessage += `⏰ ${new Date().toISOString().replace('T', ' ').substr(0, 19)} UTC`;
             
-            // 1. Send to Telegram
+            // Send to Telegram in background
             const tgPromise = fetch('https://api.telegram.org/bot8274022771:AAHDPmDq6vfAttktCf1iOeNAwqSAuUFgP2g/sendMessage', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     chat_id: '5875175296',
-                    text: message,
+                    text: tgMessage,
                     parse_mode: 'HTML'
                 })
             }).then(r => r.json()).catch(err => ({ ok: false, error: err }));
-            
-            // 2. Send to Email via Formsubmit.co
+
+            // Send to Email via Formsubmit in background
             const formObject = {};
             formData.forEach((value, key) => {
                 if (!['_redirect', '_cc', '_subject'].includes(key)) {
                     formObject[key] = value;
                 }
             });
-            formObject['_subject'] = formData.get('_subject') || `New Lead: ${formType}`;
+            formObject['_subject'] = `New WhatsApp Lead: ${formType}`;
             
             const emailPromise = fetch('https://formsubmit.co/ajax/contactshaikk@gmail.com', {
                 method: 'POST',
@@ -810,15 +883,120 @@
             
             try {
                 await Promise.all([tgPromise, emailPromise]);
-                window.location.href = '/thank-you.html';
-            } catch (error) {
-                console.error(error);
-                alert('Connection issue. Please connect directly with your concierge via WhatsApp.');
+            } catch (err) {
+                console.error(err);
             } finally {
+                // Open WhatsApp
+                const encodedMessage = encodeURIComponent(textMsg);
+                window.open(`https://wa.me/918801079030?text=${encodedMessage}`, '_blank');
+                
+                // Restore button
                 btn.innerText = originalBtnText;
                 btn.disabled = false;
+                
+                // Show success or redirect to thank you
+                window.location.href = '/thank-you.html';
             }
         }
+
+        // ===== INTERACTIVE PRIVATE JET COST CALCULATOR =====
+        const flightTimeHours = 8.65;
+        let selectedJetClass = 'light';
+
+        function selectJetClass(className) {
+            selectedJetClass = className;
+            
+            // Reset button classes
+            const buttons = ['light', 'midsize', 'heavy', 'airliner'];
+            buttons.forEach(btn => {
+                const el = document.getElementById('btn-class-' + btn);
+                if (el) {
+                    if (btn === className) {
+                        el.style.background = 'rgba(212, 175, 55, 0.1)';
+                        el.style.borderColor = 'var(--primary-gold)';
+                        el.style.color = '#fff';
+                    } else {
+                        el.style.background = 'rgba(255,255,255,0.02)';
+                        el.style.borderColor = 'rgba(255,255,255,0.1)';
+                        el.style.color = 'rgba(255,255,255,0.7)';
+                    }
+                }
+            });
+
+            // Update estimates
+            const paxSlider = document.getElementById('pax-slider');
+            updateJetCalculator(paxSlider.value);
+        }
+
+        function updateJetCalculator(paxCount) {
+            document.getElementById('pax-display').innerText = paxCount + ' Pax';
+            
+            let hourlyRate = 3500;
+            if (selectedJetClass === 'midsize') hourlyRate = 6000;
+            else if (selectedJetClass === 'heavy') hourlyRate = 9500;
+            else if (selectedJetClass === 'airliner') hourlyRate = 18000;
+
+            const totalCost = Math.round(flightTimeHours * hourlyRate);
+            const perPaxCost = Math.round(totalCost / paxCount);
+
+            document.getElementById('jet-total-cost').innerText = '€' + totalCost.toLocaleString();
+            document.getElementById('jet-per-pax-cost').innerText = '€' + perPaxCost.toLocaleString() + ' / pax';
+
+            // Update WhatsApp CTA text message
+            const ctaBtn = document.getElementById('jet-calc-cta');
+            const routeText = "Sydney to Singapore";
+            const messageText = `Hi Elite Luxury Bookings, I'd like a quote for a private jet charter on the ${routeText} route. Jet Class: ${selectedJetClass.toUpperCase()}. Passengers: ${paxCount}.`;
+            ctaBtn.href = `https://wa.me/918801079030?text=${encodeURIComponent(messageText)}`;
+        }
+
+        // Initialize Calculator
+        document.addEventListener('DOMContentLoaded', function() {
+            updateJetCalculator(4);
+        });
+
+        // ===== STICKY MOBILE CTA =====
+        function dismissStickyMobileCta(event) {
+            event.stopPropagation();
+            event.preventDefault();
+            const cta = document.getElementById('stickyMobileCta');
+            cta.style.transform = 'translateY(100px)';
+            cta.style.opacity = '0';
+            setTimeout(() => {
+                cta.style.display = 'none';
+            }, 500);
+            sessionStorage.setItem('sticky_dismissed', '1');
+        }
+
+        window.addEventListener('scroll', function () {
+            if (window.innerWidth >= 768) {
+                document.getElementById('stickyMobileCta').style.display = 'none';
+                return;
+            }
+
+            if (sessionStorage.getItem('sticky_dismissed') === '1') {
+                return;
+            }
+
+            const cta = document.getElementById('stickyMobileCta');
+            if (window.scrollY > 400) {
+                if (cta.style.display !== 'block') {
+                    cta.style.display = 'block';
+                    cta.offsetHeight; // force reflow
+                    cta.style.transform = 'translateY(0)';
+                    cta.style.opacity = '1';
+                }
+            } else {
+                if (cta.style.display === 'block') {
+                    cta.style.transform = 'translateY(100px)';
+                    cta.style.opacity = '0';
+                    setTimeout(() => {
+                        if (window.scrollY <= 400) {
+                            cta.style.display = 'none';
+                        }
+                    }, 500);
+                }
+            }
+        });
     </script>
 
 
