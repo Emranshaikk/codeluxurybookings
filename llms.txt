@@ -1,0 +1,16 @@
+# Elite Luxury Bookings
+
+Global authority in luxury travel procurement. Curating world-class luxury experiences through our global partner network, specializing in private aviation, maritime charter, and exclusive estate procurement.
+
+## Core Directories
+
+- [Private Jet Charter Guide](https://eliteluxurybookings.com/elite-private-jet-charter/) - Fleet options and routes
+- [Luxury Yacht Charters](https://eliteluxurybookings.com/luxury-yacht-rentals/) - Global charter fleet directory
+- [Exclusive Villa Rentals](https://eliteluxurybookings.com/luxury-villa-rentals/) - Ultra-luxury estate directory
+- [Global Travel Blog](https://eliteluxurybookings.com/blog/) - Luxury travel insights and industry guides
+
+## Operational Authority Guides
+
+- [Private Jet Cost Estimator](https://eliteluxurybookings.com/private-jet-charter-cost-estimator/) - Aviation pricing models
+- [Heavy Jet vs Light Jet Guide](https://eliteluxurybookings.com/heavy-jet-vs-light-jet-charter/) - Airframe class comparisons
+- [Empty Leg Repositioning Guide](https://eliteluxurybookings.com/empty-leg-flights-guide/) - Discounted luxury flight sourcing

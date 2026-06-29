@@ -1030,17 +1030,29 @@
             event.stopPropagation();
             event.preventDefault();
             const cta = document.getElementById('stickyMobileCta');
-            cta.style.transform = 'translateY(100px)';
-            cta.style.opacity = '0';
-            setTimeout(() => {
-                cta.style.display = 'none';
-            }, 500);
-            sessionStorage.setItem('sticky_dismissed', '1');
+            if (cta) {
+                cta.style.transform = 'translateY(100px)';
+                cta.style.opacity = '0';
+                cta.style.pointerEvents = 'none';
+                sessionStorage.setItem('sticky_dismissed', '1');
+            }
+        }
+
+        // Initialize sticky mobile CTA styles safely to prevent layout reflows on scroll
+        const initStickyCta = document.getElementById('stickyMobileCta');
+        if (initStickyCta) {
+            initStickyCta.style.display = 'block';
+            initStickyCta.style.pointerEvents = 'none';
         }
 
         window.addEventListener('scroll', function () {
+            const cta = document.getElementById('stickyMobileCta');
+            if (!cta) return;
+
             if (window.innerWidth >= 768) {
-                document.getElementById('stickyMobileCta').style.display = 'none';
+                cta.style.transform = 'translateY(100px)';
+                cta.style.opacity = '0';
+                cta.style.pointerEvents = 'none';
                 return;
             }
 
@@ -1048,24 +1060,14 @@
                 return;
             }
 
-            const cta = document.getElementById('stickyMobileCta');
             if (window.scrollY > 400) {
-                if (cta.style.display !== 'block') {
-                    cta.style.display = 'block';
-                    cta.offsetHeight; // force reflow
-                    cta.style.transform = 'translateY(0)';
-                    cta.style.opacity = '1';
-                }
+                cta.style.transform = 'translateY(0)';
+                cta.style.opacity = '1';
+                cta.style.pointerEvents = 'auto';
             } else {
-                if (cta.style.display === 'block') {
-                    cta.style.transform = 'translateY(100px)';
-                    cta.style.opacity = '0';
-                    setTimeout(() => {
-                        if (window.scrollY <= 400) {
-                            cta.style.display = 'none';
-                        }
-                    }, 500);
-                }
+                cta.style.transform = 'translateY(100px)';
+                cta.style.opacity = '0';
+                cta.style.pointerEvents = 'none';
             }
         });
     </script>
@@ -1088,10 +1090,10 @@
                     <h2>Elite Luxury <span class="gold-text">Bookings</span></h2>
                     <p>Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
                     <div class="footer-socials">
-                        <a href="https://www.facebook.com/eliteluxurybookings" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/eliteluxurybookings" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/elite-luxury-bookings/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://x.com/eliteluxuryb" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/eliteluxurybookings" target="_blank" rel="noopener noreferrer" aria-label="Follow Elite Luxury Bookings on Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/eliteluxurybookings" target="_blank" rel="noopener noreferrer" aria-label="Follow Elite Luxury Bookings on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/elite-luxury-bookings/" target="_blank" rel="noopener noreferrer" aria-label="Follow Elite Luxury Bookings on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/eliteluxuryb" target="_blank" rel="noopener noreferrer" aria-label="Follow Elite Luxury Bookings on X (Twitter)"><i class="fab fa-x-twitter"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">

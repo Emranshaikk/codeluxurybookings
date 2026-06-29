@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <link rel="preload" href="https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=1200&q=80" as="image">
+    <link rel="preload" href="https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=600&q=70" as="image" media="(max-width: 768px)">
+    <link rel="preload" href="https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=1200&q=80" as="image" media="(min-width: 769px)">
     <link rel="icon" type="image/png" href="/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -424,6 +425,12 @@
             background-size: cover;
             background-position: center 30%;
             z-index: 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero-bg {
+                background-image: url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=600&q=70');
+            }
         }
 
         .hero-bg::after {
@@ -3015,10 +3022,10 @@
                     <h2>Elite Luxury <span class="gold-text">Bookings</span></h2>
                     <p>Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
                     <div class="footer-socials">
-                        <a href="https://www.facebook.com/eliteluxurybookings" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/eliteluxurybookings" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/elite-luxury-bookings/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://x.com/eliteluxuryb" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/eliteluxurybookings" target="_blank" rel="noopener noreferrer" aria-label="Follow Elite Luxury Bookings on Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/eliteluxurybookings" target="_blank" rel="noopener noreferrer" aria-label="Follow Elite Luxury Bookings on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/elite-luxury-bookings/" target="_blank" rel="noopener noreferrer" aria-label="Follow Elite Luxury Bookings on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/eliteluxuryb" target="_blank" rel="noopener noreferrer" aria-label="Follow Elite Luxury Bookings on X (Twitter)"><i class="fab fa-x-twitter"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
