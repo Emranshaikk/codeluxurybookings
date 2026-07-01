@@ -1132,7 +1132,7 @@
             tgMessage += `⏰ ${new Date().toISOString().replace('T', ' ').substr(0, 19)} UTC`;
             
             // Send to Telegram in background
-            const tgPromise = fetch('https://api.telegram.org/bot8274022771:AAHDPmDq6vfAttktCf1iOeNAwqSAuUFgP2g/sendMessage', {
+            const tgPromise = fetch('/submit-lead.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
