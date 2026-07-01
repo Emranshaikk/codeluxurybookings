@@ -986,6 +986,60 @@
                 font-size: 2.8rem;
             }
         }
+    
+        /* --- ADVANCED MOBILE LAYOUT OPTIMIZATIONS --- */
+        @media (max-width: 768px) {
+            html, body {
+                overflow-x: hidden !important;
+                width: 100% !important;
+            }
+            .container {
+                padding: 0 1.25rem !important;
+            }
+            .tag-strip {
+                flex-wrap: wrap !important;
+                gap: 0.75rem 1.25rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            .tag-item {
+                font-size: 0.68rem !important;
+                white-space: nowrap !important;
+            }
+            #form-container, .glass-panel[style*="padding: 4rem"] {
+                padding: 2.5rem 1.5rem !important;
+                margin: 2rem auto !important;
+                border-radius: 20px !important;
+                box-shadow: 0 30px 60px rgba(0,0,0,0.8) !important;
+            }
+            #form-container form, .glass-panel[style*="padding: 4rem"] form {
+                gap: 1.75rem !important;
+            }
+            .form-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.25rem !important;
+            }
+            .calculator-container {
+                padding: 2rem 1.25rem !important;
+            }
+            .jet-selector {
+                flex-wrap: wrap !important;
+                gap: 0.5rem !important;
+            }
+            .jet-selector button {
+                padding: 0.7rem 0.75rem !important;
+                font-size: 0.75rem !important;
+                flex: 1 1 calc(50% - 0.5rem) !important;
+            }
+            .grid-2,
+            .grid-3,
+            .grid-4,
+            .safety-grid,
+            .routes-grid,
+            .stats-strip {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+        }
     </style>
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
