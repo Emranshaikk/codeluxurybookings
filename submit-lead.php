@@ -140,6 +140,42 @@ if (empty($rawText) || !empty($email) || !empty($name)) {
     curl_exec($ch_email);
     curl_close($ch_email);
 }
+// Secure Local CSV Backup (Enables lead recovery if Telegram/Email fails)
+$csv_file = 'leads_backup.csv';
+$file_exists = file_exists($csv_file);
+$fp = fopen($csv_file, 'a');
+if ($fp) {
+    if (!$file_exists) {
+        fputcsv($fp, [
+            'Date/Time (UTC)',
+            'Source IP',
+            'Inquiry Target',
+            'Name',
+            'Email',
+            'Phone/WhatsApp',
+            'Departure',
+            'Destination',
+            'Flight Date',
+            'Passengers',
+            'Requirements'
+        ]);
+    }
+    fputcsv($fp, [
+        date("Y-m-d H:i:s"),
+        $_SERVER['REMOTE_ADDR'],
+        $target,
+        $name,
+        $email,
+        $phone,
+        $departure,
+        $destination,
+        $date,
+        $passengers,
+        $requirements
+    ]);
+    fclose($fp);
+}
+
 
 if ($http_code === 200) {
     http_response_code(200);

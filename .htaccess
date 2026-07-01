@@ -63,6 +63,18 @@ RewriteRule ^([^/]+)/?$ $1.html [L]
     </IfModule>
 </Files>
 
+# 5.5. Block public access to CSV backups (Security & Privacy Protection)
+<Files "leads_backup.csv">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order Deny,Allow
+        Deny from all
+    </IfModule>
+</Files>
+
+
 # 6. Browser Caching
 <IfModule mod_expires.c>
     ExpiresActive On

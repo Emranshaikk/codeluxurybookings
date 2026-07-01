@@ -48,3 +48,7 @@
   - [x] Create server-side `submit-lead.php` relay endpoint with Telegram Bot Token + Chat ID
   - [x] Migrate all client-side exposed Telegram bot API requests to point to `/submit-lead.php` in 148 files
   - [x] Perform validation checks to verify complete token removal from client-side code
+
+- [x] **Section 7: Lead Recovery Backup**
+  - [x] Implement local CSV backup logging in `submit-lead.php` for lead recovery
+  - [x] Block public access to `leads_backup.csv` in `.htaccess` to preserve privacy
