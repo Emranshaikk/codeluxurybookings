@@ -52,3 +52,7 @@
 - [x] **Section 7: Lead Recovery Backup**
   - [x] Implement local CSV backup logging in `submit-lead.php` for lead recovery
   - [x] Block public access to `leads_backup.csv` in `.htaccess` to preserve privacy
+
+- [x] **Section 8: Calendly Integration Clean-up**
+  - [x] Remove Section 16 (Calendly Strip) containing the link `https://calendly.com/eliteluxurybookings` from `index.html`
+  - [x] Perform global search to verify zero remaining occurrences of `calendly.com`

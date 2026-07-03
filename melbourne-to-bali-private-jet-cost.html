@@ -27,14 +27,11 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="publisher" href="https://eliteluxurybookings.com/">
 
-    <!-- Premium Typography -->
+    <!-- Premium Typography (Standard stylesheet imports, no print swap) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap"
-        as="style">
-    <link rel="stylesheet" media="print" onload="this.media='all'"
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- ✅ FIX 3: BreadcrumbList Schema -->
     <script type="application/ld+json">
@@ -142,6 +139,38 @@
             "@type": "Answer",
             "text": "Yes. Melbourne to Bali is one of the most active private jet corridors in the Southern Hemisphere, generating frequent empty leg repositioning flights. These can cost 40–75% less than a standard charter. Availability is highest during peak season (July–October) when demand creates high volumes of repositioning flights."
           }
+        }
+      ]
+    }
+    </script>
+
+    <!-- ✅ FIX 18: HowTo Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to book a private jet from Melbourne to Bali",
+      "description": "Four steps to coordinate your private jet charter from Melbourne Essendon Fields to Bali WADD.",
+      "step": [
+        {
+          "@type": "HowToStep", "position": 1,
+          "name": "Choose your aircraft",
+          "text": "Select Light, Midsize, Super-Midsize, or Heavy jet based on group size and budget. Midsize+ jets complete the 2,736-mile route non-stop."
+        },
+        {
+          "@type": "HowToStep", "position": 2,
+          "name": "Submit your enquiry",
+          "text": "Complete our secure proposal form or contact our 24/7 concierge via WhatsApp with your travel dates and passenger count."
+        },
+        {
+          "@type": "HowToStep", "position": 3,
+          "name": "Receive your tailored proposal",
+          "text": "Review aircraft options, pricing in AUD, ARGUS certification status, and all-inclusive ground logistics at both YMEN and WADD."
+        },
+        {
+          "@type": "HowToStep", "position": 4,
+          "name": "Board at Essendon Fields VVIP terminal",
+          "text": "Arrive 15 minutes before departure at Essendon Fields (YMEN) for private security screening and direct tarmac boarding."
         }
       ]
     }
@@ -326,7 +355,7 @@
             gap: 1.5rem;
         }
 
-        /* ✅ NEW: Content sections shared styles */
+        /* Content sections shared styles */
         .content-section {
             max-width: 900px;
             margin: 0 auto;
@@ -355,7 +384,7 @@
             margin: 2.5rem 0 1rem;
         }
 
-        /* ✅ NEW: Quick Answer box */
+        /* Quick Answer box */
         .quick-answer {
             background: rgba(212, 175, 55, 0.05);
             border: 1px solid var(--primary-gold);
@@ -381,7 +410,7 @@
             margin: 0;
         }
 
-        /* ✅ NEW: Pricing table */
+        /* Pricing table */
         .pricing-table {
             width: 100%;
             border-collapse: collapse;
@@ -422,7 +451,7 @@
             font-size: 1rem !important;
         }
 
-        /* ✅ NEW: Luxury list */
+        /* Luxury list */
         .luxury-list-gold {
             list-style: none;
             padding: 0;
@@ -446,7 +475,7 @@
             font-weight: 700;
         }
 
-        /* ✅ NEW: Aircraft card grid */
+        /* Aircraft card grid */
         .aircraft-card {
             background: rgba(10, 10, 10, 0.85);
             border: 1px solid rgba(212, 175, 55, 0.2);
@@ -490,7 +519,7 @@
             line-height: 1.8;
         }
 
-        /* ✅ NEW: Trust section */
+        /* Trust section */
         .trust-section {
             background: rgba(212, 175, 55, 0.04);
             border: 1px solid rgba(212, 175, 55, 0.2);
@@ -559,7 +588,7 @@
             letter-spacing: 1px;
         }
 
-        /* ✅ NEW: Image gallery */
+        /* Image gallery */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -609,7 +638,7 @@
             letter-spacing: 1px;
         }
 
-        /* ✅ NEW: TOC */
+        /* TOC */
         .toc-box {
             background: rgba(212, 175, 55, 0.04);
             border: 1px solid rgba(212, 175, 55, 0.2);
@@ -649,7 +678,7 @@
             color: var(--primary-gold);
         }
 
-        /* ✅ NEW: FAQ section */
+        /* FAQ section */
         .faq-section {
             max-width: 900px;
             margin: 0 auto;
@@ -678,7 +707,7 @@
             font-size: 1rem;
         }
 
-        /* ✅ NEW: Sticky mobile CTA bar */
+        /* Sticky mobile CTA bar */
         .sticky-cta-bar {
             display: none;
             position: fixed;
@@ -790,7 +819,7 @@
             background: #128C7E;
         }
 
-        /* ✅ FIX 8: Clean top bar (replaces spammy ticker) */
+        /* Clean top bar */
         .top-intel-bar {
             background: rgba(5, 5, 5, 0.98) !important;
             border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important;
@@ -1202,43 +1231,7 @@
             }
         }
     
-        /* ===== MASTER FOOTER (INJECTED SITE-WIDE) ===== */
-        .footer { background: #000 !important; padding: 5rem 0 3rem !important; border-top: 1px solid rgba(212, 175, 55, 0.1) !important; margin-top: 5rem !important; text-align: left !important; }
-        .footer-grid { display: grid !important; grid-template-columns: 2fr 1fr 1fr !important; gap: 4rem !important; padding-bottom: 4rem !important; border-bottom: 1px solid rgba(212, 175, 55, 0.1) !important; text-align: left !important; }
-        .footer-brand { text-align: left !important; }
-        .footer-brand h2 { font-family: 'Cormorant Garamond', serif !important; font-size: 2.2rem !important; margin-bottom: 1.5rem !important; color: #fff !important; text-align: left !important; }
-        .footer-brand p { font-family: 'Inter', sans-serif !important; font-size: 0.9rem !important; line-height: 1.8 !important; max-width: 380px !important; margin-bottom: 2rem !important; color: rgba(255, 255, 255, 0.7) !important; text-align: left !important; }
-        .footer-socials { display: flex !important; gap: 1.5rem !important; justify-content: flex-start !important; }
-        .footer-socials a { color: rgba(255, 255, 255, 0.6) !important; transition: 0.3s !important; font-size: 1.5rem !important; }
-        .footer-socials a:hover { color: #D4AF37 !important; }
-        .footer-col { text-align: left !important; }
-        .footer-col h4 { color: #D4AF37 !important; text-transform: uppercase !important; letter-spacing: 2px !important; font-size: 0.9rem !important; margin-bottom: 2rem !important; text-align: left !important; }
-        .footer-col ul { list-style: none !important; padding: 0 !important; margin: 0 !important; text-align: left !important; }
-        .footer-col ul li { margin-bottom: 1rem !important; text-align: left !important; }
-        .footer-col ul li a { color: rgba(255, 255, 255, 0.8) !important; text-decoration: none !important; transition: 0.3s !important; font-size: 0.95rem !important; }
-        .footer-col ul li a:hover { color: #D4AF37 !important; padding-left: 5px !important; }
-        .footer-bottom { display: flex !important; justify-content: space-between !important; align-items: center !important; padding-top: 3rem !important; color: rgba(255, 255, 255, 0.4) !important; font-size: 0.85rem !important; }
-        .footer-legal { display: flex !important; gap: 2rem !important; }
-        .footer-legal a { color: inherit !important; text-decoration: none !important; }
-        @media (max-width: 992px) { 
-            .footer-grid { grid-template-columns: 1fr 1fr !important; } 
-            .footer-brand { grid-column: span 2 !important; } 
-        }
-        @media (max-width: 600px) { 
-            .footer-grid { grid-template-columns: 1fr !important; } 
-            .footer-brand { grid-column: span 1 !important; text-align: center !important; } 
-            .footer-brand h2 { text-align: center !important; }
-            .footer-brand p { text-align: center !important; margin: 0 auto 2rem auto !important; }
-            .footer-socials { justify-content: center !important; }
-            .footer-col { text-align: center !important; }
-            .footer-col h4 { text-align: center !important; }
-            .footer-col ul { text-align: center !important; }
-            .footer-col ul li { text-align: center !important; }
-            .footer-bottom { flex-direction: column !important; gap: 2rem !important; text-align: center !important; } 
-        }
-
-    
-        /* --- ADVANCED MOBILE LAYOUT OPTIMIZATIONS --- */
+        /* ADVANCED MOBILE LAYOUT OPTIMIZATIONS */
         @media (max-width: 768px) {
             html, body {
                 overflow-x: hidden !important;
@@ -1291,6 +1284,86 @@
                 gap: 2rem !important;
             }
         }
+
+        /* Related Routes Section CSS */
+        .routes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .route-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 2.5rem 2rem;
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .route-card:hover {
+            border-color: var(--primary-gold);
+            background: rgba(212, 175, 55, 0.03);
+            transform: translateY(-5px);
+        }
+
+        .route-card-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.75rem;
+            color: #fff;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .route-card-meta {
+            font-size: 0.8rem;
+            color: var(--primary-gold);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .route-card-link {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+            margin-top: auto;
+        }
+
+        .route-card:hover .route-card-link {
+            color: var(--primary-gold);
+        }
+
+        /* Stat Card Hover Lift */
+        .stat-card {
+            transition: var(--transition);
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-gold) !important;
+            background: rgba(212, 175, 55, 0.03) !important;
+        }
+
+        /* Nav links hover state override */
+        .nav-links a {
+            transition: var(--transition) !important;
+        }
+        .nav-links a:hover {
+            color: var(--primary-gold) !important;
+        }
     </style>
 
     <link rel="preload" href="/style.min.css" as="style">
@@ -1315,7 +1388,6 @@
     <script type="text/javascript">
         (function (c, l, a, r, i, t, y) { c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) }; t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i; y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y); })(window, document, "clarity", "script", "sia395rirl");
     </script>
-    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Yandex.Metrika -->
     <script type="text/javascript">
@@ -1349,10 +1421,17 @@
 
 <body>
 
-    <!-- ✅ FIX 10: Clean route-specific notice (replaces spammy ticker) -->
+    <!-- ✅ FIX 16: Skip link for accessibility -->
+    <a href="#main-content"
+       style="position:absolute; left:-9999px; top:0;
+              background:var(--primary-gold); color:#000;
+              padding:0.5rem 1rem; z-index:999999;"
+       onfocus="this.style.left='0'">Skip to content</a>
+
+    <!-- ✅ FIX 10: Clean route-specific notice -->
     <div class="top-intel-bar">
         <span>
-            <strong>✈ the Upcoming Summer:</strong>
+            <strong><i class="fas fa-plane" aria-hidden="true"></i> Strategic Procurement Windows Open for the Upcoming Summer:</strong>
             Limited July–October availability on Melbourne → Bali private jet corridors.
             <a href="https://wa.me/918801079030">Enquire Now →</a>
         </span>
@@ -1367,40 +1446,33 @@
                 <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
                 <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Yachts</a></li>
                 <li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/">Villas</a></li>
-                <li><a href="https://eliteluxurybookings.com/blog/"
-                        style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem;transition:color 0.3s;"
-                        onmouseover="this.style.color='#D4AF37'"
-                        onmouseout="this.style.color='rgba(255,255,255,0.85)'">Blog</a></li>
-                <li><a href="https://eliteluxurybookings.com/contact/"
-                        style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem;transition:color 0.3s;"
-                        onmouseover="this.style.color='#D4AF37'"
-                        onmouseout="this.style.color='rgba(255,255,255,0.85)'">Contact</a></li>
+                <li><a href="https://eliteluxurybookings.com/blog/">Blog</a></li>
+                <li><a href="https://eliteluxurybookings.com/contact/">Contact</a></li>
             </ul>
-            <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">
+            <div class="nav-hamburger" id="navHamburger" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </div>
         </div>
     </nav>
     <div class="mobile-menu" id="elbMobileMenu">
-        <a href="https://eliteluxurybookings.com/elite-private-jet-charter/">✈ Private Jets</a>
-        <a href="https://eliteluxurybookings.com/luxury-villa-rentals/">🏡 Luxury Villas</a>
-        <a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">⚓ Luxury Yachts</a>
-        <a href="https://eliteluxurybookings.com/blog/">📰 Blog</a>
-        <a href="https://eliteluxurybookings.com/contact/">📞 Contact</a>
+        <a href="https://eliteluxurybookings.com/elite-private-jet-charter/"><i class="fas fa-plane" aria-hidden="true"></i> Private Jets</a>
+        <a href="https://eliteluxurybookings.com/luxury-villa-rentals/"><i class="fas fa-home" aria-hidden="true"></i> Luxury Villas</a>
+        <a href="https://eliteluxurybookings.com/luxury-yacht-rentals/"><i class="fas fa-ship" aria-hidden="true"></i> Luxury Yachts</a>
+        <a href="https://eliteluxurybookings.com/blog/"><i class="fas fa-newspaper" aria-hidden="true"></i> Blog</a>
+        <a href="https://eliteluxurybookings.com/contact/"><i class="fas fa-phone" aria-hidden="true"></i> Contact</a>
     </div>
 
     <!-- Breadcrumb -->
     <div class="container"
         style="padding: 2rem 0; font-size: 0.8rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px;">
         <a href="https://eliteluxurybookings.com/" style="color: #d4af37; text-decoration: none;">Home</a> /
-        <a href="https://eliteluxurybookings.com/private-jet-booking-guide/"
-            style="color: #d4af37; text-decoration: none;">Private Jets</a> /
+        <a href="https://eliteluxurybookings.com/elite-private-jet-charter/" style="color: #d4af37; text-decoration: none;">Private Jet Charter</a> /
         <span style="color: rgba(255,255,255,0.6);">Melbourne to Bali Private Jet Cost</span>
     </div>
 
-    <main>
+    <main id="main-content">
 
-        <!-- ============================================================ HERO (unchanged layout, form stays here) -->
+        <!-- HERO -->
         <header class="hero" id="top">
             <div class="container">
                 <div class="tag-strip"
@@ -1421,7 +1493,7 @@
                     off-market aircraft access, and VVIP terminal coordination for your Bali crossing.
                 </p>
 
-                <!-- ✅ NEW: Hero image with focus keyword alt text -->
+                <!-- Hero image with focus keyword alt text -->
                 <div
                     style="max-width:900px;margin:0 auto 2rem;border-radius:24px;overflow:hidden;border:1px solid rgba(212,175,55,0.2);box-shadow:0 20px 60px rgba(0,0,0,0.6);">
                     <img src="/assets/private_jet_cost_hero_2026.png"
@@ -1430,21 +1502,36 @@
                         decoding="async" onerror="this.parentElement.style.display='none'" />
                 </div>
 
-                <div class="urgency-alert"
-                    style="background:rgba(255,77,77,0.05);border:1px solid rgba(255,77,77,0.3);padding:12px 20px;border-radius:12px;margin:0 auto 1.5rem;max-width:700px;display:flex;align-items:center;justify-content:center;gap:15px;">
+                <!-- ✅ FIX 11: Urgency Banner (date-driven gold/white styling) -->
+                <div class="urgency-alert" id="urgencyBanner"
+                    style="padding:12px 20px;border-radius:12px;margin:0 auto 1.5rem;max-width:700px;display:flex;align-items:center;justify-content:center;gap:15px;transition:var(--transition);">
                     <span style="position:relative;display:flex;height:12px;width:12px;">
-                        <span
-                            style="animation:ping 1.5s cubic-bezier(0,0,0.2,1) infinite;position:absolute;display:inline-flex;height:100%;width:100%;border-radius:50%;background-color:#ff4d4d;opacity:0.75;"></span>
-                        <span
-                            style="position:relative;display:inline-flex;border-radius:50%;height:12px;width:12px;background-color:#ff4d4d;"></span>
+                        <span id="urgencyPing"
+                            style="animation:ping 1.5s cubic-bezier(0,0,0.2,1) infinite;position:absolute;display:inline-flex;height:100%;width:100%;border-radius:50%;opacity:0.75;"></span>
+                        <span id="urgencyDot"
+                            style="position:relative;display:inline-flex;border-radius:50%;height:12px;width:12px;"></span>
                     </span>
-                    <span
-                        style="color:#ff4d4d;font-size:0.95rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;">Strategic
-                        Slot Alert: Peak Season Demand — Enquire Early</span>
+                    <span id="urgencyText"
+                        style="font-size:0.95rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;"></span>
                 </div>
 
-                <!-- ✅ LEAD FORM — position unchanged -->
-                <div class="glass-panel"
+                <!-- ✅ FIX 12: Success message element (positioned BEFORE form container) -->
+                <div id="form-success-message" style="display:none; text-align: center; padding:4rem 2rem; background:rgba(212,175,55,0.05); border:1px solid var(--primary-gold); border-radius:20px; margin:3rem auto; max-width:900px;">
+                  <h3 class="serif gold-text" style="font-size:2.5rem; margin-bottom:1rem; font-weight:300;">
+                    <i class="fas fa-check-circle" aria-hidden="true"></i>
+                    Proposal Request Received
+                  </h3>
+                  <p style="color:var(--text-main); font-size:1.1rem; line-height:1.8; margin-bottom:2rem;">
+                    Our concierge is checking Essendon Fields and WADD slot availability for your dates. Expect a personal response within 30 minutes.
+                  </p>
+                  <a href="https://wa.me/918801079030" target="_blank" rel="noopener" class="btn btn-gold">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                    Chat on WhatsApp Now
+                  </a>
+                </div>
+
+                <!-- ✅ LEAD FORM — ID added, inputs changed to reduce friction -->
+                <div class="glass-panel" id="form-container"
                     style="padding:4rem;border:1px solid var(--glass-border);background:rgba(10,10,10,0.9);border-radius:30px;box-shadow:0 50px 120px rgba(0,0,0,0.9);margin:3rem auto;max-width:900px;backdrop-filter:blur(30px);">
                     <div style="text-align:center;margin-bottom:4rem;">
                         <h2 class="serif gold-text" style="font-size:3.5rem;margin-bottom:1rem;font-weight:300;">Request Private Proposal</h2>
@@ -1454,62 +1541,53 @@
                         <div style="width:80px;height:1px;background:var(--primary-gold);margin:0 auto;opacity:0.4;">
                         </div>
                     </div>
-                    <form id="leadForm" onsubmit="submitLead(event)"
-                        style="display:flex;flex-direction:column;gap:2.5rem;">
+                    <form id="leadForm" style="display:flex;flex-direction:column;gap:2.5rem;">
                         <input type="hidden" name="_redirect" value="https://eliteluxurybookings.com/thank-you.html">
                         <input type="hidden" name="_target" value="Inquiry: melbourne-to-bali">
                         <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;" class="form-grid">
                             <div style="display:flex;flex-direction:column;gap:0.8rem;">
                                 <label for="name"
-                                    style="font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--primary-gold);">Full
-                                    Name *</label>
-                                <input id="name" type="text" name="name" required placeholder="John Doe"
+                                    style="font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--primary-gold);">Full Name *</label>
+                                <input id="name" type="text" name="name" required aria-required="true" placeholder="John Doe"
                                     style="background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,0.15);padding:1.2rem 0;color:#fff;font-size:1.15rem;outline:none;transition:border-color 0.4s;font-family:'Inter',sans-serif;">
                             </div>
                             <div style="display:flex;flex-direction:column;gap:0.8rem;">
                                 <label for="phone"
-                                    style="font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--primary-gold);">WhatsApp
-                                    / Phone *</label>
-                                <input id="phone" type="tel" name="phone" required placeholder="+61 400 000 000"
+                                    style="font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--primary-gold);">WhatsApp / Phone (Optional)</label>
+                                <input id="phone" type="tel" name="phone" placeholder="+61 400 000 000"
                                     style="background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,0.15);padding:1.2rem 0;color:#fff;font-size:1.15rem;outline:none;transition:border-color 0.4s;font-family:'Inter',sans-serif;">
                             </div>
                         </div>
                         <div style="display:flex;flex-direction:column;gap:0.8rem;">
                             <label for="email"
-                                style="font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--primary-gold);">Private
-                                Email *</label>
-                            <input id="email" type="email" name="email" required placeholder="client@exclusive.com"
+                                style="font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--primary-gold);">Private Email *</label>
+                            <input id="email" type="email" name="email" required aria-required="true" placeholder="client@exclusive.com"
                                 style="background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,0.15);padding:1.2rem 0;color:#fff;font-size:1.15rem;outline:none;transition:border-color 0.4s;font-family:'Inter',sans-serif;">
                         </div>
                         <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;" class="form-grid">
                             <div style="display:flex;flex-direction:column;gap:0.8rem;">
                                 <label for="departure"
-                                    style="font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--primary-gold);">Departure
-                                    City *</label>
-                                <input id="departure" type="text" name="departure" required placeholder="Melbourne"
+                                    style="font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--primary-gold);">Departure City</label>
+                                <input id="departure" type="text" name="departure" value="Melbourne (YMEN)" placeholder="Origin City"
                                     style="background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,0.15);padding:1.2rem 0;color:#fff;font-size:1.15rem;outline:none;transition:border-color 0.4s;font-family:'Inter',sans-serif;">
                             </div>
                             <div style="display:flex;flex-direction:column;gap:0.8rem;">
                                 <label for="destination"
-                                    style="font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--primary-gold);">Destination
-                                    City *</label>
-                                <input id="destination" type="text" name="destination" required
-                                    placeholder="Bali (WADD)"
+                                    style="font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--primary-gold);">Destination City</label>
+                                <input id="destination" type="text" name="destination" value="Bali (WADD)" placeholder="Arrival City"
                                     style="background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,0.15);padding:1.2rem 0;color:#fff;font-size:1.15rem;outline:none;transition:border-color 0.4s;font-family:'Inter',sans-serif;">
                             </div>
                         </div>
                         <div style="display:flex;flex-direction:column;gap:1rem;">
                             <label for="requirements"
-                                style="font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--primary-gold);">Aviation
-                                & Mission Requirements</label>
+                                style="font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--primary-gold);">Aviation & Mission Requirements</label>
                             <textarea id="requirements" name="requirements" rows="3"
                                 placeholder="Flight date, passenger count, aircraft preference, one-way or return..."
                                 style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);padding:1.5rem;color:#fff;font-size:1.1rem;outline:none;border-radius:12px;resize:none;transition:all 0.4s;font-family:'Inter',sans-serif;"></textarea>
                         </div>
                         <div style="text-align:center;margin-top:1rem;">
                             <button type="submit" class="btn btn-gold"
-                                style="width:100%;padding:1.8rem;font-size:1.25rem;border-radius:12px;font-weight:700;text-transform:uppercase;letter-spacing:5px;border:none;cursor:pointer;transition:all 0.4s;background:linear-gradient(135deg,#D4AF37,#B8860B);color:#000 !important;">Secure
-                                Private Proposal</button>
+                                style="width:100%;padding:1.8rem;font-size:1.25rem;border-radius:12px;font-weight:700;text-transform:uppercase;letter-spacing:5px;border:none;cursor:pointer;transition:all 0.4s;background:linear-gradient(135deg,#D4AF37,#B8860B);color:#000 !important;">Secure Private Proposal</button>
                             <p
                                 style="margin-top:2rem;color:var(--text-muted);font-size:0.85rem;letter-spacing:2px;opacity:0.7;">
                                 A dedicated concierge will respond personally within 30 minutes.</p>
@@ -1520,7 +1598,31 @@
             </div>
         </header>
 
-        <!-- ============================================================ QUICK ANSWER -->
+        <!-- ✅ FIX 20: Stats Strip (Social Proof) -->
+        <section style="padding: 2rem 0; background: rgba(5,5,5,0.8); border-top: 1px solid rgba(212,175,55,0.1); border-bottom: 1px solid rgba(212,175,55,0.1);">
+            <div class="container">
+                <div class="grid-4">
+                    <div class="stat-card" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(212,175,55,0.15); border-radius: 15px; padding: 2rem 1.5rem; text-align: center;">
+                        <div class="serif gold-text" style="font-size: 2.5rem; font-weight: 300; line-height: 1.2;">10,000+</div>
+                        <p style="color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 0.5rem;">Global Aircraft Network</p>
+                    </div>
+                    <div class="stat-card" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(212,175,55,0.15); border-radius: 15px; padding: 2rem 1.5rem; text-align: center;">
+                        <div class="serif gold-text" style="font-size: 2.5rem; font-weight: 300; line-height: 1.2;">4.9★</div>
+                        <p style="color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 0.5rem;">Average Client Rating</p>
+                    </div>
+                    <div class="stat-card" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(212,175,55,0.15); border-radius: 15px; padding: 2rem 1.5rem; text-align: center;">
+                        <div class="serif gold-text" style="font-size: 2.5rem; font-weight: 300; line-height: 1.2;">30 Min</div>
+                        <p style="color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 0.5rem;">Concierge Response Time</p>
+                    </div>
+                    <div class="stat-card" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(212,175,55,0.15); border-radius: 15px; padding: 2rem 1.5rem; text-align: center;">
+                        <div class="serif gold-text" style="font-size: 2.2rem; font-weight: 300; line-height: 1.4;">ARGUS</div>
+                        <p style="color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 0.5rem;">All Operators Verified</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK ANSWER -->
         <div class="container">
             <div class="quick-answer" id="quick-answer">
                 <h4>Quick Answer: Melbourne to Bali Private Jet Cost</h4>
@@ -1534,7 +1636,7 @@
             </div>
         </div>
 
-        <!-- ============================================================ TABLE OF CONTENTS -->
+        <!-- TABLE OF CONTENTS -->
         <div class="container">
             <div class="toc-box">
                 <h3>Table of Contents</h3>
@@ -1551,11 +1653,10 @@
             </div>
         </div>
 
-        <!-- ============================================================ FLIGHT STATS (expanded) -->
+        <!-- FLIGHT STATS -->
         <section class="section-padding" id="section-stats"
             style="background:rgba(255,255,255,0.02);border-top:1px solid var(--glass-border);">
             <div class="container">
-                <!-- ✅ FIX 12: Expanded stats box — added fuel stop, departure window, peak season -->
                 <div class="glass-panel"
                     style="padding:3rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:2rem;text-align:center;">
                     <div>
@@ -1596,7 +1697,6 @@
                     </div>
                 </div>
 
-                <!-- Corridor analysis paragraph with keyword usage -->
                 <div style="max-width:900px;margin:4rem auto 0;text-align:center;">
                     <h2 class="serif gold-text" style="font-size:2.5rem;margin-bottom:1.5rem;border:none;">Melbourne to Bali Corridor Analysis</h2>
                     <p style="line-height:1.8;color:var(--text-muted);font-size:1.1rem;">
@@ -1609,7 +1709,8 @@
                             (CASA)</a>, Essendon Fields handles the majority of executive charter movements in Victoria,
                         making it the optimal departure point for this route.
                     </p>
-                    <!-- ===== INTERACTIVE PRIVATE JET COST CALCULATOR (PROMPT 5 STYLE) ===== -->
+                    
+                    <!-- ===== INTERACTIVE PRIVATE JET COST CALCULATOR (CURRENCY WIRING FIXED TO A$) ===== -->
                     <div class="calculator-container" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 12px; padding: 2.5rem; margin: 3rem auto 0; max-width: 700px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); text-align: left;">
                       <h3 class="serif gold-text" style="font-size: 1.8rem; text-align: center; margin-bottom: 0.5rem; border: none;">Bespoke Price Estimator</h3>
                       <p style="text-align: center; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 1px;">Live flight economic estimates based on current fuel indices</p>
@@ -1617,10 +1718,10 @@
                       <div style="margin-bottom: 2rem;">
                         <label style="display: block; font-size: 0.75rem; text-transform: uppercase; color: var(--primary-gold); letter-spacing: 1.5px; margin-bottom: 0.8rem; font-weight: 600;">1. Select Jet Class</label>
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.8rem;">
-                          <button type="button" onclick="selectJetClass('light')" id="btn-class-light" style="background: rgba(212, 175, 55, 0.1); border: 1px solid var(--primary-gold); color: #fff; padding: 1rem 0.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">Light Jet<span style="display:block; font-size:0.7rem; color:var(--text-muted); margin-top:2px;">€3,500/hr</span></button>
-                          <button type="button" onclick="selectJetClass('midsize')" id="btn-class-midsize" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); padding: 1rem 0.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">Midsize<span style="display:block; font-size:0.7rem; color:var(--text-muted); margin-top:2px;">€6,000/hr</span></button>
-                          <button type="button" onclick="selectJetClass('heavy')" id="btn-class-heavy" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); padding: 1rem 0.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">Heavy Jet<span style="display:block; font-size:0.7rem; color:var(--text-muted); margin-top:2px;">€9,500/hr</span></button>
-                          <button type="button" onclick="selectJetClass('airliner')" id="btn-class-airliner" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); padding: 1rem 0.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">VIP Airliner<span style="display:block; font-size:0.7rem; color:var(--text-muted); margin-top:2px;">€18,000/hr</span></button>
+                          <button type="button" id="btn-class-light" style="background: rgba(212, 175, 55, 0.1); border: 1px solid var(--primary-gold); color: #fff; padding: 1rem 0.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">Light Jet<span style="display:block; font-size:0.7rem; color:var(--text-muted); margin-top:2px;">A$3,500/hr</span></button>
+                          <button type="button" id="btn-class-midsize" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); padding: 1rem 0.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">Midsize<span style="display:block; font-size:0.7rem; color:var(--text-muted); margin-top:2px;">A$6,000/hr</span></button>
+                          <button type="button" id="btn-class-heavy" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); padding: 1rem 0.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">Heavy Jet<span style="display:block; font-size:0.7rem; color:var(--text-muted); margin-top:2px;">A$9,500/hr</span></button>
+                          <button type="button" id="btn-class-airliner" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); padding: 1rem 0.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">VIP Airliner<span style="display:block; font-size:0.7rem; color:var(--text-muted); margin-top:2px;">A$18,000/hr</span></button>
                         </div>
                       </div>
 
@@ -1629,7 +1730,7 @@
                           <label for="pax-slider" style="font-size: 0.75rem; text-transform: uppercase; color: var(--primary-gold); letter-spacing: 1.5px; font-weight: 600; margin: 0;">2. Number of Passengers</label>
                           <span id="pax-display" style="font-size: 1.1rem; font-weight: 600; color: #fff; background: rgba(212,175,55,0.15); padding: 0.2rem 0.8rem; border-radius: 4px; border: 1px solid rgba(212,175,55,0.3);">4 Pax</span>
                         </div>
-                        <input type="range" id="pax-slider" min="1" max="19" value="4" oninput="updateJetCalculator(this.value)" style="width: 100%; accent-color: var(--primary-gold); cursor: pointer;">
+                        <input type="range" id="pax-slider" min="1" max="19" value="4" style="width: 100%; accent-color: var(--primary-gold); cursor: pointer;">
                       </div>
 
                       <div style="background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.05); border-radius: 6px; padding: 1.5rem; margin-bottom: 2rem;">
@@ -1639,11 +1740,11 @@
                         </div>
                         <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.8rem; margin-bottom: 0.8rem;">
                           <span style="color: var(--text-muted); font-size: 0.95rem;">Estimated Flight Cost:</span>
-                          <strong style="color: #fff; font-size: 1.1rem; color: var(--primary-gold);" id="jet-total-cost">€0</strong>
+                          <strong style="color: #fff; font-size: 1.1rem; color: var(--primary-gold);" id="jet-total-cost">A$0</strong>
                         </div>
                         <div style="display: flex; justify-content: space-between;">
                           <span style="color: var(--text-muted); font-size: 0.95rem;">Estimated Cost Per Passenger:</span>
-                          <strong style="color: #fff; font-size: 0.95rem;" id="jet-per-pax-cost">€0 / pax</strong>
+                          <strong style="color: #fff; font-size: 0.95rem;" id="jet-per-pax-cost">A$0 / pax</strong>
                         </div>
                       </div>
 
@@ -1660,11 +1761,10 @@
             </div>
         </section>
 
-        <!-- ============================================================ COST SECTION -->
+        <!-- COST SECTION -->
         <section class="section-padding" id="section-cost" style="border-top:1px solid rgba(255,255,255,0.05);">
             <div class="container">
                 <div class="content-section">
-                    <!-- ✅ FIX 13: H2 contains focus keyword -->
                     <h2>Melbourne to Bali Private Jet Cost: Price Guide</h2>
                     <p>
                         Understanding the <strong>Melbourne to Bali private jet cost</strong> requires looking at four
@@ -1677,7 +1777,6 @@
                         Australian ski-to-surf seasonal travel.
                     </p>
 
-                    <!-- ✅ FIX 14: Full pricing table by jet class -->
                     <table class="pricing-table">
                         <thead>
                             <tr>
@@ -1730,7 +1829,7 @@
             </div>
         </section>
 
-        <!-- ============================================================ WHAT'S INCLUDED -->
+        <!-- WHAT'S INCLUDED -->
         <section class="section-padding" id="section-included"
             style="background:rgba(212,175,55,0.03);border-top:1px solid var(--glass-border);">
             <div class="container">
@@ -1770,7 +1869,7 @@
             </div>
         </section>
 
-        <!-- ============================================================ BEST AIRCRAFT -->
+        <!-- BEST AIRCRAFT -->
         <section class="section-padding" id="section-aircraft" style="border-top:1px solid rgba(255,255,255,0.05);">
             <div class="container">
                 <div style="text-align:center;margin-bottom:3rem;">
@@ -1780,7 +1879,6 @@
                         recommends most frequently for a <strong>private jet Melbourne to Bali</strong> mission.</p>
                 </div>
 
-                <!-- ✅ FIX 15: Aircraft gallery with keyword alt text -->
                 <div class="gallery-grid" style="max-width:900px;margin:0 auto 3rem;">
                     <div class="gallery-item">
                         <img src="/assets/images/jet-cabin-modern.png"
@@ -1843,7 +1941,7 @@
             </div>
         </section>
 
-        <!-- ============================================================ TERMINALS -->
+        <!-- TERMINALS -->
         <section class="section-padding" id="section-terminals"
             style="background:rgba(212,175,55,0.03);border-top:1px solid var(--glass-border);">
             <div class="container">
@@ -1858,24 +1956,24 @@
                     <h3>Melbourne Departure Options</h3>
                     <ul class="luxury-list-gold">
                         <li><strong>Essendon Fields (YMEN) — Recommended:</strong> Melbourne's primary private aviation
-                            hub, 20 minutes from the CBD. Dedicated VVIP terminal with private security, lounge, and
-                            direct apron access. No public terminal contact.</li>
+                        hub, 20 minutes from the CBD. Dedicated VVIP terminal with private security, lounge, and
+                        direct apron access. No public terminal contact.</li>
                         <li><strong>Avalon Airport (YMAV):</strong> Alternative option south of Melbourne. Less
-                            congested, faster ground handling for ultra-large jets. Ideal if departing from the Surf
-                            Coast or Mornington Peninsula.</li>
+                        congested, faster ground handling for ultra-large jets. Ideal if departing from the Surf
+                        Coast or Mornington Peninsula.</li>
                         <li><strong>Melbourne Tullamarine (YMML):</strong> The major international airport. Private
-                            terminal available but less exclusive. Used when specific heavy jets require the longer
-                            runway.</li>
+                        terminal available but less exclusive. Used when specific heavy jets require the longer
+                        runway.</li>
                     </ul>
 
                     <h3>Bali Arrival Options</h3>
                     <ul class="luxury-list-gold">
                         <li><strong>Ngurah Rai VVIP Terminal (WADD) — Recommended:</strong> Bali's dedicated private
-                            aviation facility offers private customs, personal meet-and-greet, and direct limousine
-                            transfer to your villa. Zero public terminal exposure.</li>
+                        aviation facility offers private customs, personal meet-and-greet, and direct limousine
+                        transfer to your villa. Zero public terminal exposure.</li>
                         <li><strong>General Aviation Ramp:</strong> Available for smaller aircraft. Standard customs
-                            clearance. Less privacy but available during VVIP terminal capacity constraints in peak
-                            season.</li>
+                        clearance. Less privacy but available during VVIP terminal capacity constraints in peak
+                        season.</li>
                     </ul>
 
                     <p>
@@ -1888,7 +1986,7 @@
             </div>
         </section>
 
-        <!-- ============================================================ EMPTY LEGS -->
+        <!-- EMPTY LEGS -->
         <section class="section-padding" id="section-empty-legs" style="border-top:1px solid rgba(255,255,255,0.05);">
             <div class="container">
                 <div class="content-section">
@@ -1920,7 +2018,7 @@
             </div>
         </section>
 
-        <!-- ============================================================ TRUST SIGNALS -->
+        <!-- TRUST SIGNALS -->
         <section class="section-padding" id="section-trust"
             style="background:rgba(212,175,55,0.03);border-top:1px solid var(--glass-border);">
             <div class="container">
@@ -1946,21 +2044,47 @@
                             <p class="testimonial-text">"The Melbourne to Bali private jet cost was exactly what they
                                 quoted — no surprises. The Challenger 350 was immaculate and we were in our Seminyak
                                 villa within 20 minutes of landing."</p>
-                            <div class="testimonial-author">— Marcus T., Melbourne · August 2025</div>
+                            <!-- ✅ FIX 19: Testimonial Verified Badges -->
+                            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-top:1rem;">
+                                <div class="testimonial-author">— Marcus T., Melbourne · August 2025</div>
+                                <span style="background:rgba(212,175,55,0.1);
+                                  border:1px solid rgba(212,175,55,0.3);
+                                  color:var(--primary-gold); font-size:0.7rem;
+                                  padding:0.3rem 0.8rem; border-radius:20px;
+                                  text-transform:uppercase; letter-spacing:1px;
+                                  font-weight:600; display:inline-flex; align-items:center;
+                                  gap:0.4rem;">
+                                  <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                  Verified Charter Client
+                                </span>
+                            </div>
                         </div>
                         <div class="testimonial-card">
                             <div class="testimonial-stars">★★★★★</div>
                             <p class="testimonial-text">"We had a group of 9 and the Citation XLS+ was perfect. Elite
                                 Luxury Bookings arranged the VVIP terminal, customs clearance and villa transfer in one
                                 booking. Absolutely seamless."</p>
-                            <div class="testimonial-author">— Rachel & David K., Toorak · July 2025</div>
+                            <!-- ✅ FIX 19: Testimonial Verified Badges -->
+                            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-top:1rem;">
+                                <div class="testimonial-author">— Rachel & David K., Toorak · July 2025</div>
+                                <span style="background:rgba(212,175,55,0.1);
+                                  border:1px solid rgba(212,175,55,0.3);
+                                  color:var(--primary-gold); font-size:0.7rem;
+                                  padding:0.3rem 0.8rem; border-radius:20px;
+                                  text-transform:uppercase; letter-spacing:1px;
+                                  font-weight:600; display:inline-flex; align-items:center;
+                                  gap:0.4rem;">
+                                  <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                  Verified Charter Client
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================================ AUTHOR BIO -->
+        <!-- AUTHOR BIO -->
         <div class="container">
             <div class="author-bio-box">
                 <div class="author-avatar">
@@ -1973,7 +2097,7 @@
             </div>
         </div>
 
-        <!-- ============================================================ FAQ -->
+        <!-- FAQ -->
         <section class="section-padding" id="section-faq" style="border-top:1px solid rgba(255,255,255,0.05);">
             <div class="container">
                 <div style="text-align:center;margin-bottom:3rem;">
@@ -2051,10 +2175,60 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- ✅ FIX 15: Related Corridors Section -->
+                <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 3rem; margin-top: 4rem;">
+                    <h3 class="serif gold-text"
+                        style="text-align: center; font-size: 2.2rem; margin-bottom: 3rem; font-weight: 300;">Related Flight Corridors</h3>
+                    <div class="routes-grid">
+                        <a href="https://eliteluxurybookings.com/sydney-to-bali-private-jet-cost/" class="route-card">
+                            <div>
+                                <h4 class="route-card-title">Sydney to Bali</h4>
+                                <p class="route-card-meta">Distance: 2,393 Miles</p>
+                            </div>
+                            <span class="route-card-link">View Flight Cost →</span>
+                        </a>
+                        <a href="https://eliteluxurybookings.com/bali-to-singapore-private-jet-cost/" class="route-card">
+                            <div>
+                                <h4 class="route-card-title">Bali to Singapore</h4>
+                                <p class="route-card-meta">Distance: 860 Miles</p>
+                            </div>
+                            <span class="route-card-link">View Flight Cost →</span>
+                        </a>
+                        <a href="https://eliteluxurybookings.com/melbourne-to-sydney-private-jet-cost/" class="route-card">
+                            <div>
+                                <h4 class="route-card-title">Melbourne to Sydney</h4>
+                                <p class="route-card-meta">Distance: 440 Miles</p>
+                            </div>
+                            <span class="route-card-link">View Flight Cost →</span>
+                        </a>
+                        <a href="https://eliteluxurybookings.com/bali-to-hong-kong-private-jet-cost/" class="route-card">
+                            <div>
+                                <h4 class="route-card-title">Bali to Hong Kong</h4>
+                                <p class="route-card-meta">Distance: 2,040 Miles</p>
+                            </div>
+                            <span class="route-card-link">View Flight Cost →</span>
+                        </a>
+                        <a href="https://eliteluxurybookings.com/sydney-to-maldives-private-jet-cost/" class="route-card">
+                            <div>
+                                <h4 class="route-card-title">Sydney to Maldives</h4>
+                                <p class="route-card-meta">Distance: 4,510 Miles</p>
+                            </div>
+                            <span class="route-card-link">View Flight Cost →</span>
+                        </a>
+                        <a href="https://eliteluxurybookings.com/melbourne-to-singapore-private-jet-cost/" class="route-card">
+                            <div>
+                                <h4 class="route-card-title">Melbourne to Singapore</h4>
+                                <p class="route-card-meta">Distance: 3,760 Miles</p>
+                            </div>
+                            <span class="route-card-link">View Flight Cost →</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- ============================================================ AUTHORITY GUIDES (unchanged) -->
+        <!-- AUTHORITY GUIDES (unchanged) -->
         <section class="section-padding"
             style="background:rgba(212,175,55,0.05);border-top:1px solid var(--glass-border);">
             <div class="container">
@@ -2094,7 +2268,7 @@
             </div>
         </section>
 
-        <!-- ============================================================ HUB (unchanged) -->
+        <!-- HUB (unchanged) -->
         <section class="section-padding"
             style="border-top:1px solid rgba(255,255,255,0.05);background:rgba(0,0,0,0.5);">
             <div class="container">
@@ -2147,13 +2321,18 @@
 
     </main>
 
-    <!-- ✅ NEW: Sticky mobile CTA bar -->
-    <div class="sticky-cta-bar">
+    <!-- ✅ FIX 13: Sticky mobile CTA bar (ID mismatch resolved, tel/WhatsApp wired) -->
+    <div class="sticky-cta-bar" id="stickyMobileCta">
         <div class="sticky-cta-text">
-            <strong>Melbourne → Bali Private Jet</strong>
-            From A$28,000 · 6h 12m non-stop
+            <strong>Melbourne → Bali</strong>
+            from A$28,000
+            <a href="#top" style="display:block; font-size:0.7rem; color:var(--primary-gold); text-decoration:underline; margin-top:2px;">Prefer email? Request Quote</a>
         </div>
-        <a href="#top" class="btn-gold-sm">Get Quote →</a>
+        <div style="display:flex; gap:0.5rem; align-items:center;">
+            <a href="tel:+918801079030" class="btn-gold-sm" style="padding: 0.6rem 1rem; font-size: 0.75rem; background:transparent; border:1px solid var(--primary-gold); color:var(--primary-gold) !important; text-decoration:none;">Call</a>
+            <a href="https://wa.me/918801079030" target="_blank" rel="noopener" class="btn-gold-sm" style="padding: 0.6rem 1rem; font-size: 0.75rem; text-decoration:none;">WhatsApp</a>
+            <button id="closeStickyCta" style="background:transparent; border:none; color:rgba(255,255,255,0.4); font-size:1.5rem; cursor:pointer; padding-left:0.5rem; display:flex; align-items:center;" aria-label="Close sticky bar">&times;</button>
+        </div>
     </div>
 
     <!-- WhatsApp Float -->
@@ -2167,247 +2346,6 @@
     </a>
 
     <!-- MASTER FOOTER -->
-
-    <!-- Exit-Intent Popup Modal -->
-    <div id="exitIntentModal" class="exit-modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
-        <div class="exit-modal-overlay" onclick="closeExitModal()"></div>
-        <div class="exit-modal-container glass-panel">
-            <button class="exit-modal-close" onclick="closeExitModal()" aria-label="Close modal">&times;</button>
-            <div class="exit-modal-content">
-                <span class="gold-text serif" style="font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 0.5rem;">Off-Market Jet Inventory</span>
-                <h3 id="modalTitle" class="serif" style="font-size: 2.2rem; margin-bottom: 1rem; color: #fff;">Leaving So Soon?</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.8rem;">
-                    Receive an immediate off-market private proposal for your Melbourne to Bali flight. We have 3 empty legs repositioning this month with savings up to 60%.
-                </p>
-                <div style="display: flex; flex-direction: column; gap: 1rem;">
-                    <a href="https://wa.me/918801079030" class="btn btn-gold" style="width: 100%; text-align: center; font-size: 0.95rem; padding: 1rem; box-sizing: border-box;" target="_blank" rel="noopener">
-                        <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Connect via WhatsApp
-                    </a>
-                    <a href="#top" onclick="closeExitModal();" class="btn-gold-sm" style="width: 100%; text-align: center; background: transparent; border: 1px solid var(--primary-gold); color: var(--primary-gold) !important; font-size: 0.95rem; padding: 1rem; box-sizing: border-box;">
-                        Request Jet Proposal
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                    <script>
-        function toggleMobileMenu() { 
-            var m = document.getElementById('elbMobileMenu'), 
-                b = document.getElementById('navHamburger'); 
-            if (m && b) { 
-                m.classList.toggle('open'); 
-                b.classList.toggle('open'); 
-                document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
-            } 
-        }
-
-        function escapeHtml(text) {
-            if (!text) return '';
-            return text.toString()
-                .replace(/&/g, "&amp;")
-                .replace(/</g, "&lt;")
-                .replace(/>/g, "&gt;");
-        }
-
-        async function submitLead(event) {
-            event.preventDefault();
-            const form = event.target;
-            const btn = form.querySelector('button[type="submit"]');
-            const originalBtnText = btn.innerText;
-            
-            btn.innerText = 'REDIRECTING...';
-            btn.disabled = true;
-            
-            const formData = new FormData(form);
-            const formType = formData.get('form_type') || formData.get('_target') || 'Private Jet Inquiry';
-            
-            // Extract details for WhatsApp
-            const name = formData.get('name') || '';
-            const phone = formData.get('phone') || '';
-            const email = formData.get('email') || '';
-            const departure = formData.get('departure') || '';
-            const destination = formData.get('destination') || '';
-            const date = formData.get('date') || '';
-            const passengers = formData.get('passengers') || '';
-            const requirements = formData.get('requirements') || '';
-            
-            const textMsg = `Hi Elite Luxury Bookings, I'd like a quote for a private jet charter. Route: ${departure} to ${destination}. Date: ${date}. Passengers: ${passengers}. Name: ${name}. Contact: ${phone} / ${email}. Requirements: ${requirements}.`;
-            
-            // Format HTML for Telegram
-            let tgMessage = `🚀 <b>New WhatsApp Redirect Lead Received!</b>
-
-`;
-            tgMessage += `<b>Source:</b> ${escapeHtml(formType)}
-
-`;
-            tgMessage += `<b>👤 Name:</b> ${escapeHtml(name)}
-`;
-            tgMessage += `<b>📞 Contact:</b> ${escapeHtml(phone)}
-`;
-            tgMessage += `<b>✉️ Email:</b> ${escapeHtml(email)}
-`;
-            tgMessage += `<b>🛫 Departure:</b> ${escapeHtml(departure)}
-`;
-            tgMessage += `<b>🛬 Destination:</b> ${escapeHtml(destination)}
-`;
-            tgMessage += `<b>📅 Date:</b> ${escapeHtml(date)}
-`;
-            tgMessage += `<b>👥 Passengers:</b> ${escapeHtml(passengers)}
-`;
-            tgMessage += `<b>📋 Requirements:</b> ${escapeHtml(requirements)}
-
-`;
-            tgMessage += `⏰ ${new Date().toISOString().replace('T', ' ').substr(0, 19)} UTC`;
-            
-            // Send to Telegram in background
-            const tgPromise = fetch('/submit-lead.php', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    chat_id: '5875175296',
-                    text: tgMessage,
-                    parse_mode: 'HTML'
-                })
-            }).then(r => r.json()).catch(err => ({ ok: false, error: err }));
-
-            // Send to Email via Formsubmit in background
-            const formObject = {};
-            formData.forEach((value, key) => {
-                if (!['_redirect', '_cc', '_subject'].includes(key)) {
-                    formObject[key] = value;
-                }
-            });
-            formObject['_subject'] = `New WhatsApp Lead: ${formType}`;
-            
-            const emailPromise = fetch('https://formsubmit.co/ajax/contactshaikk@gmail.com', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formObject)
-            }).then(r => r.json()).catch(err => ({ success: false, error: err }));
-            
-            try {
-                await Promise.all([tgPromise, emailPromise]);
-            } catch (err) {
-                console.error(err);
-            } finally {
-                // Open WhatsApp
-                const encodedMessage = encodeURIComponent(textMsg);
-                window.open(`https://wa.me/918801079030?text=${encodedMessage}`, '_blank');
-                
-                // Restore button
-                btn.innerText = originalBtnText;
-                btn.disabled = false;
-                
-                // Show success or redirect to thank you
-                window.location.href = '/thank-you.html';
-            }
-        }
-
-        // ===== INTERACTIVE PRIVATE JET COST CALCULATOR =====
-        const flightTimeHours = 6.2;
-        let selectedJetClass = 'light';
-
-        function selectJetClass(className) {
-            selectedJetClass = className;
-            
-            // Reset button classes
-            const buttons = ['light', 'midsize', 'heavy', 'airliner'];
-            buttons.forEach(btn => {
-                const el = document.getElementById('btn-class-' + btn);
-                if (el) {
-                    if (btn === className) {
-                        el.style.background = 'rgba(212, 175, 55, 0.1)';
-                        el.style.borderColor = 'var(--primary-gold)';
-                        el.style.color = '#fff';
-                    } else {
-                        el.style.background = 'rgba(255,255,255,0.02)';
-                        el.style.borderColor = 'rgba(255,255,255,0.1)';
-                        el.style.color = 'rgba(255,255,255,0.7)';
-                    }
-                }
-            });
-
-            // Update estimates
-            const paxSlider = document.getElementById('pax-slider');
-            updateJetCalculator(paxSlider.value);
-        }
-
-        function updateJetCalculator(paxCount) {
-            document.getElementById('pax-display').innerText = paxCount + ' Pax';
-            
-            let hourlyRate = 3500;
-            if (selectedJetClass === 'midsize') hourlyRate = 6000;
-            else if (selectedJetClass === 'heavy') hourlyRate = 9500;
-            else if (selectedJetClass === 'airliner') hourlyRate = 18000;
-
-            const totalCost = Math.round(flightTimeHours * hourlyRate);
-            const perPaxCost = Math.round(totalCost / paxCount);
-
-            document.getElementById('jet-total-cost').innerText = '€' + totalCost.toLocaleString();
-            document.getElementById('jet-per-pax-cost').innerText = '€' + perPaxCost.toLocaleString() + ' / pax';
-
-            // Update WhatsApp CTA text message
-            const ctaBtn = document.getElementById('jet-calc-cta');
-            const routeText = "Melbourne to Bali";
-            const messageText = `Hi Elite Luxury Bookings, I'd like a quote for a private jet charter on the ${routeText} route. Jet Class: ${selectedJetClass.toUpperCase()}. Passengers: ${paxCount}.`;
-            ctaBtn.href = `https://wa.me/918801079030?text=${encodeURIComponent(messageText)}`;
-        }
-
-        // Initialize Calculator
-        document.addEventListener('DOMContentLoaded', function() {
-            updateJetCalculator(4);
-        });
-
-        // ===== STICKY MOBILE CTA =====
-        function dismissStickyMobileCta(event) {
-            event.stopPropagation();
-            event.preventDefault();
-            const cta = document.getElementById('stickyMobileCta');
-            if (cta) {
-                cta.style.transform = 'translateY(100px)';
-                cta.style.opacity = '0';
-                cta.style.pointerEvents = 'none';
-                sessionStorage.setItem('sticky_dismissed', '1');
-            }
-        }
-
-        // Initialize sticky mobile CTA styles safely to prevent layout reflows on scroll
-        const initStickyCta = document.getElementById('stickyMobileCta');
-        if (initStickyCta) {
-            initStickyCta.style.display = 'block';
-            initStickyCta.style.pointerEvents = 'none';
-        }
-
-        window.addEventListener('scroll', function () {
-            const cta = document.getElementById('stickyMobileCta');
-            if (!cta) return;
-
-            if (window.innerWidth >= 768) {
-                cta.style.transform = 'translateY(100px)';
-                cta.style.opacity = '0';
-                cta.style.pointerEvents = 'none';
-                return;
-            }
-
-            if (sessionStorage.getItem('sticky_dismissed') === '1') {
-                return;
-            }
-
-            if (window.scrollY > 400) {
-                cta.style.transform = 'translateY(0)';
-                cta.style.opacity = '1';
-                cta.style.pointerEvents = 'auto';
-            } else {
-                cta.style.transform = 'translateY(100px)';
-                cta.style.opacity = '0';
-                cta.style.pointerEvents = 'none';
-            }
-        });
-    </script>
-
-    <!-- Master Footer -->
-<!-- Master Footer -->
     <footer class="footer">
         <div class="container" style="max-width: 1200px;">
             <div class="footer-grid">
@@ -2451,17 +2389,336 @@
         </div>
     </footer>
 
+    <!-- ✅ FIX 8: Exit-Intent Popup Modal (Rebuilt using normal-flow faux viewport wrapper) -->
+    <div style="position:relative; min-height:500px; display:none;" id="exitIntentModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+        <div class="exit-modal-overlay" style="position:absolute; inset:0; background:rgba(0,0,0,0.85); display:flex; align-items:center; justify-content:center; border-radius:20px; z-index: 200000; backdrop-filter: blur(8px);">
+            <div class="exit-modal-container glass-panel" style="position: relative; background: rgba(10, 10, 10, 0.95); border: 1px solid var(--primary-gold); max-width: 480px; width: 100%; border-radius: 20px; padding: 3rem 2.5rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);">
+                <button class="exit-modal-close" aria-label="Close modal" style="position: absolute; top: 1rem; right: 1.5rem; background: transparent; border: none; color: rgba(255, 255, 255, 0.6); font-size: 2rem; cursor: pointer; transition: color 0.3s;">&times;</button>
+                <div class="exit-modal-content">
+                    <span class="gold-text serif" style="font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 0.5rem;">Off-Market Jet Inventory</span>
+                    <h3 id="modalTitle" class="serif" style="font-size: 2.2rem; margin-bottom: 1rem; color: #fff;">Leaving So Soon?</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.8rem;">
+                        Receive an immediate off-market private proposal for your Melbourne to Bali flight. We have 3 empty legs repositioning this month with savings up to 60%.
+                    </p>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <a href="https://wa.me/918801079030" class="btn btn-gold" style="width: 100%; text-align: center; font-size: 0.95rem; padding: 1rem; box-sizing: border-box;" target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Connect via WhatsApp
+                        </a>
+                        <button class="btn-gold-sm" style="width: 100%; text-align: center; background: transparent; border: 1px solid var(--primary-gold); color: var(--primary-gold) !important; font-size: 0.95rem; padding: 1rem; box-sizing: border-box; cursor: pointer; transition: 0.3s;" id="exitRequestProposal">
+                            Request Jet Proposal
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<script>
-        function toggleMobileMenu() { 
-            var m = document.getElementById('elbMobileMenu'), 
-                b = document.getElementById('navHamburger'); 
-            if (m && b) { 
-                m.classList.toggle('open'); 
-                b.classList.toggle('open'); 
-                document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
-            } 
-        }
+    <!-- ✅ SECTION 2: Consolidate ALL JS into a single script block (No globals, no inline onclick=) -->
+    <script>
+        (function() {
+            document.addEventListener('DOMContentLoaded', function() {
+                // a) Mobile menu toggle
+                const hamburger = document.getElementById('navHamburger');
+                const mobileMenu = document.getElementById('elbMobileMenu');
+                if (hamburger && mobileMenu) {
+                    hamburger.addEventListener('click', function() {
+                        const isOpen = mobileMenu.classList.toggle('open');
+                        hamburger.classList.toggle('open');
+                        document.body.style.overflow = isOpen ? 'hidden' : '';
+                        hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                    });
+                }
+
+                // b) FAQ accordion wiring
+                document.querySelectorAll('.faq-trigger').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const content = this.nextElementSibling;
+                        const icon = this.querySelector('.fa-chevron-down');
+                        const isOpen = content.style.display === 'block';
+                        
+                        document.querySelectorAll('.faq-content').forEach(c => {
+                            c.style.display = 'none';
+                        });
+                        document.querySelectorAll('.faq-trigger .fa-chevron-down').forEach(i => {
+                            i.style.transform = 'rotate(0deg)';
+                        });
+                        document.querySelectorAll('.faq-trigger').forEach(b => {
+                            b.setAttribute('aria-expanded', 'false');
+                        });
+                        
+                        if (!isOpen) {
+                            content.style.display = 'block';
+                            if (icon) icon.style.transform = 'rotate(180deg)';
+                            this.setAttribute('aria-expanded', 'true');
+                        }
+                    });
+                });
+
+                // c) Date-driven urgency banner logic
+                const month = new Date().getMonth();
+                const urgencyBanner = document.getElementById('urgencyBanner');
+                const urgencyPing = document.getElementById('urgencyPing');
+                const urgencyDot = document.getElementById('urgencyDot');
+                const urgencyText = document.getElementById('urgencyText');
+                if (urgencyBanner && urgencyPing && urgencyDot && urgencyText) {
+                    if (month >= 6 && month <= 9) { // July-Oct (6,7,8,9)
+                        urgencyBanner.style.border = '1px solid var(--primary-gold)';
+                        urgencyBanner.style.background = 'rgba(212,175,55,0.05)';
+                        urgencyPing.style.backgroundColor = 'var(--primary-gold)';
+                        urgencyDot.style.backgroundColor = 'var(--primary-gold)';
+                        urgencyText.style.color = 'var(--primary-gold)';
+                        urgencyText.textContent = "Peak Season · Melbourne to Bali Slots Filling Fast · Book 4–8 Weeks Ahead";
+                    } else {
+                        urgencyBanner.style.border = '1px solid rgba(255,255,255,0.15)';
+                        urgencyBanner.style.background = 'rgba(255,255,255,0.02)';
+                        urgencyPing.style.backgroundColor = '#ffffff';
+                        urgencyDot.style.backgroundColor = '#ffffff';
+                        urgencyText.style.color = '#ffffff';
+                        urgencyText.textContent = "Year-Round Availability · 30-Minute Concierge Response · Empty Legs Available";
+                    }
+                }
+
+                // d) Jet calculator (selectJetClass, updateJetCalculator)
+                const buttons = {
+                    light: document.getElementById('btn-class-light'),
+                    midsize: document.getElementById('btn-class-midsize'),
+                    heavy: document.getElementById('btn-class-heavy'),
+                    airliner: document.getElementById('btn-class-airliner')
+                };
+                const paxSlider = document.getElementById('pax-slider');
+                const paxDisplay = document.getElementById('pax-display');
+                const totalCostEl = document.getElementById('jet-total-cost');
+                const perPaxCostEl = document.getElementById('jet-per-pax-cost');
+                const calcCta = document.getElementById('jet-calc-cta');
+                
+                const flightTimeHours = 6.2;
+                let currentClass = 'light';
+
+                function updateJetCalculator(paxCount) {
+                    if (paxDisplay) paxDisplay.innerText = paxCount + ' Pax';
+                    
+                    let hourlyRate = 3500;
+                    if (currentClass === 'midsize') hourlyRate = 6000;
+                    else if (currentClass === 'heavy') hourlyRate = 9500;
+                    else if (currentClass === 'airliner') hourlyRate = 18000;
+
+                    const totalCost = Math.round(flightTimeHours * hourlyRate);
+                    const perPaxCost = Math.round(totalCost / paxCount);
+
+                    if (totalCostEl) totalCostEl.innerText = 'A$' + totalCost.toLocaleString();
+                    if (perPaxCostEl) perPaxCostEl.innerText = 'A$' + perPaxCost.toLocaleString() + ' / pax';
+
+                    if (calcCta) {
+                        const messageText = `Hi Elite Luxury Bookings, I'd like a quote for a private jet charter on the Melbourne to Bali route. Jet Class: ${currentClass.toUpperCase()}. Passengers: ${paxCount}.`;
+                        calcCta.href = `https://wa.me/918801079030?text=${encodeURIComponent(messageText)}`;
+                    }
+                }
+
+                function selectJetClass(className) {
+                    currentClass = className;
+                    Object.keys(buttons).forEach(key => {
+                        const el = buttons[key];
+                        if (el) {
+                            if (key === className) {
+                                el.style.background = 'rgba(212, 175, 55, 0.1)';
+                                el.style.borderColor = 'var(--primary-gold)';
+                                el.style.color = '#fff';
+                            } else {
+                                el.style.background = 'rgba(255,255,255,0.02)';
+                                el.style.borderColor = 'rgba(255,255,255,0.1)';
+                                el.style.color = 'rgba(255,255,255,0.7)';
+                            }
+                        }
+                    });
+                    if (paxSlider) updateJetCalculator(paxSlider.value);
+                }
+
+                Object.keys(buttons).forEach(key => {
+                    const el = buttons[key];
+                    if (el) {
+                        el.addEventListener('click', function() {
+                            selectJetClass(key);
+                        });
+                    }
+                });
+
+                if (paxSlider) {
+                    paxSlider.addEventListener('input', function() {
+                        updateJetCalculator(this.value);
+                    });
+                }
+
+                // Initial calculator setup
+                selectJetClass('light');
+
+                // e) Form submission (FormData client-side POST only to /submit-lead.php, no Telegram calls)
+                const form = document.getElementById('leadForm');
+                const formContainer = document.getElementById('form-container');
+                const successMessage = document.getElementById('form-success-message');
+
+                if (form) {
+                    form.addEventListener('submit', async function(event) {
+                        event.preventDefault();
+                        
+                        const submitBtn = form.querySelector('button[type="submit"]');
+                        const originalBtnText = submitBtn ? submitBtn.innerText : 'Secure Private Proposal';
+                        
+                        if (submitBtn) {
+                            submitBtn.innerText = 'REDIRECTING...';
+                            submitBtn.disabled = true;
+                        }
+                        
+                        const formData = new FormData(form);
+                        const name = formData.get('name') || '';
+                        const phone = formData.get('phone') || '';
+                        const email = formData.get('email') || '';
+                        const departure = formData.get('departure') || 'Melbourne (YMEN)';
+                        const destination = formData.get('destination') || 'Bali (WADD)';
+                        const requirements = formData.get('requirements') || '';
+                        
+                        const textMsg = `Hi Elite Luxury Bookings, I'd like a quote for a private jet charter. Route: ${departure} to ${destination}. Name: ${name}. Contact: ${phone} / ${email}. Requirements: ${requirements}.`;
+                        
+                        try {
+                            await fetch('/submit-lead.php', {
+                                method: 'POST',
+                                body: formData
+                            });
+                        } catch (err) {
+                            console.error('Lead submission network error, opening WhatsApp regardless:', err);
+                        } finally {
+                            if (formContainer) formContainer.style.display = 'none';
+                            if (successMessage) {
+                                successMessage.style.display = 'block';
+                                successMessage.scrollIntoView({ behavior: 'smooth' });
+                            }
+                            
+                            window.open(`https://wa.me/918801079030?text=${encodeURIComponent(textMsg)}`, '_blank');
+                            
+                            if (submitBtn) {
+                                submitBtn.innerText = originalBtnText;
+                                submitBtn.disabled = false;
+                            }
+                        }
+                    });
+                }
+
+                // f) Sticky mobile CTA
+                const stickyBar = document.getElementById('stickyMobileCta');
+                const closeStickyBtn = document.getElementById('closeStickyCta');
+                const waFloatBubble = document.querySelector('.wa-float');
+
+                function adjustWaFloat() {
+                    if (!waFloatBubble) return;
+                    const isStickyVisible = stickyBar && (stickyBar.style.opacity === '1') && window.innerWidth < 768;
+                    if (isStickyVisible) {
+                        waFloatBubble.style.setProperty('bottom', '90px', 'important');
+                    } else {
+                        waFloatBubble.style.setProperty('bottom', '30px', 'important');
+                    }
+                }
+
+                if (stickyBar) {
+                    stickyBar.style.display = 'block';
+                    stickyBar.style.transform = 'translateY(100px)';
+                    stickyBar.style.opacity = '0';
+                    stickyBar.style.pointerEvents = 'none';
+                    stickyBar.style.transition = 'transform 0.4s ease, opacity 0.4s ease';
+                }
+
+                window.addEventListener('scroll', function() {
+                    if (!stickyBar) return;
+                    
+                    if (window.innerWidth >= 768) {
+                        stickyBar.style.transform = 'translateY(100px)';
+                        stickyBar.style.opacity = '0';
+                        stickyBar.style.pointerEvents = 'none';
+                        adjustWaFloat();
+                        return;
+                    }
+                    
+                    if (sessionStorage.getItem('sticky_dismissed') === '1') {
+                        adjustWaFloat();
+                        return;
+                    }
+                    
+                    if (window.scrollY > 400) {
+                        stickyBar.style.transform = 'translateY(0px)';
+                        stickyBar.style.opacity = '1';
+                        stickyBar.style.pointerEvents = 'auto';
+                    } else {
+                        stickyBar.style.transform = 'translateY(100px)';
+                        stickyBar.style.opacity = '0';
+                        stickyBar.style.pointerEvents = 'none';
+                    }
+                    adjustWaFloat();
+                });
+
+                if (closeStickyBtn) {
+                    closeStickyBtn.addEventListener('click', function(event) {
+                        event.stopPropagation();
+                        event.preventDefault();
+                        if (stickyBar) {
+                            stickyBar.style.transform = 'translateY(100px)';
+                            stickyBar.style.opacity = '0';
+                            stickyBar.style.pointerEvents = 'none';
+                        }
+                        sessionStorage.setItem('sticky_dismissed', '1');
+                        adjustWaFloat();
+                    });
+                }
+
+                // g) Exit intent modal logic
+                const exitModal = document.getElementById('exitIntentModal');
+                if (exitModal) {
+                    const exitCloseBtn = exitModal.querySelector('.exit-modal-close');
+                    const exitOverlay = exitModal.querySelector('.exit-modal-overlay');
+                    const exitRequestBtn = document.getElementById('exitRequestProposal');
+                    
+                    function showExitModal() {
+                        if (sessionStorage.getItem('exit_modal_shown') === '1') return;
+                        exitModal.style.display = 'block';
+                        exitModal.setAttribute('aria-hidden', 'false');
+                        sessionStorage.setItem('exit_modal_shown', '1');
+                    }
+                    
+                    function closeExitModal() {
+                        exitModal.style.display = 'none';
+                        exitModal.setAttribute('aria-hidden', 'true');
+                    }
+                    
+                    document.addEventListener('mouseleave', function(event) {
+                        if (event.clientY < 0) {
+                            showExitModal();
+                        }
+                    });
+                    
+                    if (exitCloseBtn) {
+                        exitCloseBtn.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            closeExitModal();
+                        });
+                    }
+                    
+                    if (exitOverlay) {
+                        exitOverlay.addEventListener('click', function(event) {
+                            if (event.target === exitOverlay) {
+                                closeExitModal();
+                            }
+                        });
+                    }
+                    
+                    if (exitRequestBtn) {
+                        exitRequestBtn.addEventListener('click', function(e) {
+                            closeExitModal();
+                            const topElement = document.getElementById('top');
+                            if (topElement) {
+                                topElement.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        });
+                    }
+                }
+            });
+        })();
     </script>
 </body>
 
