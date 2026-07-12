@@ -103,18 +103,66 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How much does a private jet cost Aspen to Miami?",
+          "name": "What is the flight time between Aspen and Miami?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We provide tailored quotes based on aircraft availability and specific travel requirements. Investments vary by aircraft class and mission profile."
+            "text": "The average flight time for a non-stop flight from Aspen (KASE) to Miami (KOPF) is 4 hours and 14 minutes, covering a great-circle distance of 1,799 miles. Ground speeds vary depending on altitude and headwinds."
           }
         },
         {
           "@type": "Question",
-          "name": "Which airport is prioritized for Miami charters?",
+          "name": "Which Miami airport is best for private jet arrivals?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The primary terminal for Miami is Opa-Locka (KOPF), optimized for rapid clearance and absolute privacy."
+            "text": "Miami Opa-Locka Executive Airport (KOPF) is the preferred arrival hub. It is specifically designed for private aviation, has less congestion than Miami International (KMIA), and offers faster ground transfers to downtown Miami, Bal Harbour, and South Beach."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why are morning departures recommended from Aspen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aspen (KASE) is a high-altitude airport (7,820 ft). During warm afternoons, the air density decreases, reducing aircraft performance and takeoff lift. Cool morning temperatures provide denser air, which allows jets to take off safely without weight penalties."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a Light Jet fly non-stop from Aspen to Miami?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, advanced light jets such as the Phenom 300 can make the flight non-stop under optimal wind conditions. However, if the jet is fully loaded with passengers and heavy ski bags, a refueling stop may be required to maintain safety margins."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are pets allowed in the cabin on Aspen to Miami flights?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, all flights coordinated by Elite Luxury Bookings are pet-friendly. Pets travel inside the main cabin at your side rather than in the cargo hold. Please notify our team when booking so we can arrange suitable amenities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much luggage can I bring on my flight?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Luggage capacity depends on the aircraft class. Midsize and Super Midsize jets feature spacious external cargo compartments that easily accommodate multiple sets of skis, boot bags, and heavy luxury luggage, whereas light jets have tighter volume limits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if KASE is closed due to winter weather?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In the event of heavy snow or low visibility closing Aspen, flights are typically diverted to Rifle Garfield County Airport (KRIL) or Eagle County Regional (KEGE). Ground transportation is coordinated from the diversion airport to your final destination in Aspen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How far in advance should I book KASE departure slots?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For peak winter holidays (Christmas/New Year) and summer events (Food & Wine), slots should be booked 3 to 5 weeks in advance. During low season, slots can often be secured within 48 to 72 hours."
           }
         }
       ]
@@ -554,6 +602,317 @@
                 gap: 2rem !important;
             }
         }
+
+        /* FAQ Accordion Styling */
+        .faq-accordion {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .faq-item {
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            background: rgba(255,255,255,0.01);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .faq-item:hover {
+            border-color: rgba(212,175,55,0.3);
+            background: rgba(255,255,255,0.02);
+        }
+        .faq-trigger {
+            width: 100%;
+            background: transparent;
+            border: none;
+            color: #fff;
+            text-align: left;
+            padding: 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            outline: none;
+        }
+        .faq-trigger .fa-chevron-down {
+            color: var(--primary-gold);
+            transition: transform 0.3s ease;
+        }
+        .faq-content {
+            display: none;
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            font-size: 0.98rem;
+            border-top: 1px solid rgba(255,255,255,0.03);
+        }
+
+        /* Related Routes Grid */
+        .routes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .route-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        .route-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-gold);
+            background: rgba(212,175,55,0.04);
+        }
+        .route-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+        .route-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        .route-card .learn-more {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary-gold);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Quick Answer Box */
+        .quick-answer-box {
+            background: rgba(212,175,55,0.03);
+            border: 1px solid rgba(212,175,55,0.25);
+            border-left: 4px solid var(--primary-gold);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+        .quick-answer-box h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--primary-gold);
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        .quick-answer-box p {
+            margin: 0;
+            color: #fff;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        /* Table of Contents */
+        .toc-box {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+        .toc-box h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem 2rem;
+        }
+        @media (max-width: 768px) {
+            .toc-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        .toc-list li a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .toc-list li a:hover {
+            color: var(--primary-gold);
+        }
+
+        /* Safety Cards Grid */
+        .safety-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .safety-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+        .safety-card i {
+            font-size: 2rem;
+            color: var(--primary-gold);
+            margin-bottom: 1rem;
+        }
+        .safety-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .safety-card p {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Exit Intent Modal */
+        .exit-modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.85);
+            z-index: 1000000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(8px);
+        }
+        .exit-modal-box {
+            background: #0d0d0d;
+            border: 1px solid rgba(212,175,55,0.3);
+            border-radius: 24px;
+            padding: 3.5rem;
+            max-width: 550px;
+            width: 90%;
+            position: relative;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.8);
+        }
+        .exit-modal-box .close-btn {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            color: rgba(255,255,255,0.4);
+            font-size: 1.6rem;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .exit-modal-box .close-btn:hover {
+            color: #fff;
+        }
+        .exit-modal-box h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            color: var(--primary-gold);
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        .exit-modal-box p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Articles Styling */
+        article h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            color: var(--primary-gold);
+            margin-top: 4rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(212,175,55,0.15);
+            padding-bottom: 0.5rem;
+            border-top: none;
+        }
+        article h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: #fff;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        article p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--text-muted);
+            margin-bottom: 1.8rem;
+        }
+        article ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1.8rem;
+        }
+        article ul li {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 0.8rem;
+        }
+
+        /* Generic Table Wrapper for Responsive Styling */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin: 2.5rem 0;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .premium-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            min-width: 600px;
+        }
+        .premium-table th {
+            background: rgba(212,175,55,0.08);
+            color: var(--primary-gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.85rem;
+            padding: 1.2rem 1.5rem;
+            border-bottom: 2px solid rgba(212,175,55,0.25);
+        }
+        .premium-table td {
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 1rem;
+            color: rgba(255,255,255,0.9);
+        }
+        .premium-table tr:last-child td {
+            border-bottom: none;
+        }
+        .premium-table tr:hover td {
+            background: rgba(255,255,255,0.01);
+        }
     </style>
     <link rel="preload" href="/style.min.css" as="style">
     <link rel="stylesheet" href="/style.min.css">
@@ -654,8 +1013,8 @@
 
     <div class="container" style="padding: 2rem 0; font-size: 0.8rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px;">
         <a href="https://eliteluxurybookings.com/" style="color: #d4af37; text-decoration: none;">Home</a> / 
-        <a href="https://eliteluxurybookings.com/private-jet-booking-guide/" style="color: #d4af37; text-decoration: none;">Private Jets</a> / 
-        <span style="color: rgba(255,255,255,0.6);">Aspen to Miami Private Jet Charter</span>
+        <a href="https://eliteluxurybookings.com/elite-private-jet-charter/" style="color: #d4af37; text-decoration: none;">Private Jet Charter</a> / 
+        <span style="color: rgba(255,255,255,0.6);">Aspen to Miami Private Jet Cost</span>
     </div>
 
     <main>
@@ -675,17 +1034,16 @@
                     style="text-align: center; max-width: 800px; margin: 0 auto 3rem; color: var(--text-muted); line-height: 1.6;">
                 Elevate your journey from Aspen to Miami with unparalleled privacy and bespoke concierge services. Our elite aviation partners ensure that every aspect of your flight is executed with flawless precision.</p>
 
-                <div class="urgency-alert"
-                    style="background: rgba(255, 77, 77, 0.05); border: 1px solid rgba(255, 77, 77, 0.3); padding: 12px 20px; border-radius: 12px; margin: 2rem auto 1.5rem; max-width: 700px; display: flex; align-items: center; justify-content: center; gap: 15px; animation: fadeIn 1s ease-out;">
+                <!-- Dynamic Urgency Alert Banner -->
+                <div id="dynamicUrgencyBanner" class="urgency-alert"
+                    style="background: rgba(212,175,55,0.03); border: 1px solid rgba(212,175,55,0.3); padding: 12px 20px; border-radius: 12px; margin: 2rem auto 1.5rem; max-width: 700px; display: flex; align-items: center; justify-content: center; gap: 15px; animation: fadeIn 1s ease-out;">
                     <span style="position: relative; display: flex; height: 12px; width: 12px;">
-                        <span
-                            style="animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite; position: absolute; display: inline-flex; height: 100%; width: 100%; border-radius: 50%; background-color: #ff4d4d; opacity: 0.75;"></span>
-                        <span
-                            style="position: relative; display: inline-flex; border-radius: 50%; height: 12px; width: 12px; background-color: #ff4d4d;"></span>
+                        <span style="animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite; position: absolute; display: inline-flex; height: 100%; width: 100%; border-radius: 50%; background-color: var(--primary-gold); opacity: 0.75;"></span>
+                        <span style="position: relative; display: inline-flex; border-radius: 50%; height: 12px; width: 12px; background-color: var(--primary-gold);"></span>
                     </span>
-                    <span
-                        style="color: #ff4d4d; font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Strategic
-                        Slot Alert: Peak Season Demand - Inquire Early</span>
+                    <span id="bannerText" style="color: var(--primary-gold); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                        Checking slot availability at KASE...
+                    </span>
                 </div>
 
                 <div class="glass-panel"
@@ -700,67 +1058,83 @@
                         </div>
                     </div>
 
-                    <form id="leadForm" onsubmit="submitLead(event)"
-                        style="display: flex; flex-direction: column; gap: 2.5rem;">
-                        <input type="hidden" name="_redirect" value="https://eliteluxurybookings.com/thank-you.html">
-                        <input type="hidden" name="_target" value="Inquiry: aspen-to-miami">
+                    <!-- Secure Submission Form -->
+                    <form id="leadForm" style="display: flex; flex-direction: column; gap: 2.5rem;">
+                        <input type="hidden" name="form_type" value="Aspen to Miami Route Quote Form">
+                        <input type="hidden" name="_target" value="Inquiry: Aspen to Miami Route">
+                        
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;" class="form-grid">
                             <div style="display: flex; flex-direction: column; gap: 0.8rem;">
-                                <label for="name"
-                                    style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold);">Full
-                                    Name *</label>
-                                <input id="name" type="text" name="name" required placeholder="John Doe"
+                                <label for="name" style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold);">Full Name *</label>
+                                <input id="name" type="text" name="name" required aria-required="true" placeholder="Hon. John Doe"
                                     style="background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 1.2rem 0; color: #fff; font-size: 1.15rem; outline: none; transition: border-color 0.4s; font-family: 'Inter', sans-serif;">
                             </div>
                             <div style="display: flex; flex-direction: column; gap: 0.8rem;">
-                                <label for="phone"
-                                    style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold);">WhatsApp
-                                    / Phone *</label>
-                                <input id="phone" type="tel" name="phone" required placeholder="+1 234 567 8900"
+                                <label for="email" style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold);">Private Email *</label>
+                                <input id="email" type="email" name="email" required aria-required="true" placeholder="client@eliteluxurybookings.com"
                                     style="background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 1.2rem 0; color: #fff; font-size: 1.15rem; outline: none; transition: border-color 0.4s; font-family: 'Inter', sans-serif;">
                             </div>
                         </div>
-                        <div style="display: flex; flex-direction: column; gap: 0.8rem;">
-                            <label for="email"
-                                style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold);">Private
-                                Email *</label>
-                            <input id="email" type="email" name="email" required placeholder="contactshaikk@gmail.com"
-                                style="background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 1.2rem 0; color: #fff; font-size: 1.15rem; outline: none; transition: border-color 0.4s; font-family: 'Inter', sans-serif;">
-                        </div>
+                        
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;" class="form-grid">
                             <div style="display: flex; flex-direction: column; gap: 0.8rem;">
-                                <label for="departure"
-                                    style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold);">Departure
-                                    City *</label>
-                                <input id="departure" type="text" name="departure" required placeholder="Origin City"
+                                <label for="phone" style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold);">WhatsApp / Phone (Optional)</label>
+                                <input id="phone" type="tel" name="phone" placeholder="+1 234 567 8900"
                                     style="background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 1.2rem 0; color: #fff; font-size: 1.15rem; outline: none; transition: border-color 0.4s; font-family: 'Inter', sans-serif;">
                             </div>
                             <div style="display: flex; flex-direction: column; gap: 0.8rem;">
-                                <label for="destination"
-                                    style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold);">Destination
-                                    City *</label>
-                                <input id="destination" type="text" name="destination" required
-                                    placeholder="Arrival City"
+                                <label for="departure" style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold);">Departure City</label>
+                                <input id="departure" type="text" name="departure" value="Aspen (KASE)"
                                     style="background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 1.2rem 0; color: #fff; font-size: 1.15rem; outline: none; transition: border-color 0.4s; font-family: 'Inter', sans-serif;">
                             </div>
                         </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;" class="form-grid">
+                            <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+                                <label for="destination" style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold);">Destination City</label>
+                                <input id="destination" type="text" name="destination" value="Miami (KMIA)"
+                                    style="background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 1.2rem 0; color: #fff; font-size: 1.15rem; outline: none; transition: border-color 0.4s; font-family: 'Inter', sans-serif;">
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+                                <label for="service" style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold);">Service Type</label>
+                                <select id="service" name="service" style="background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 1.2rem 0; color: #fff; font-size: 1.15rem; outline: none; font-family: 'Inter', sans-serif;">
+                                    <option value="Private Jet" style="background: #050505; color: #fff;">Private Jet Charter</option>
+                                    <option value="Yacht" style="background: #050505; color: #fff;">Luxury Yacht Charter</option>
+                                    <option value="Villa" style="background: #050505; color: #fff;">Exclusive Villa Rental</option>
+                                    <option value="Multi-Service" style="background: #050505; color: #fff;">Multi-Service Concierge</option>
+                                </select>
+                            </div>
+                        </div>
+
                         <div style="display: flex; flex-direction: column; gap: 1rem;">
-                            <label for="requirements"
-                                style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold);">Aviation
-                                & Mission Requirements</label>
+                            <label for="requirements" style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold);">Aviation & Mission Requirements</label>
                             <textarea id="requirements" name="requirements" rows="3"
                                 placeholder="Flight date, passenger count, or aircraft preference..."
                                 style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); padding: 1.5rem; color: #fff; font-size: 1.1rem; outline: none; border-radius: 12px; resize: none; transition: all 0.4s; font-family: 'Inter', sans-serif;"></textarea>
                         </div>
+
                         <div style="text-align: center; margin-top: 1rem;">
-                            <button type="submit" class="btn btn-gold"
-                                style="width: 100%; padding: 1.8rem; font-size: 1.25rem; border-radius: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 5px; border: none; cursor: pointer; transition: all 0.4s; background: linear-gradient(135deg, #D4AF37, #B8860B); color: #000 !important;">Secure
-                                Private Proposal</button>
-                            <p
-                                style="margin-top: 2rem; color: var(--text-muted); font-size: 0.85rem; letter-spacing: 2px; opacity: 0.7;">
-                                A dedicated concierge will respond personally within 30 minutes.</p>
+                            <button type="submit" id="submitBtn" class="btn btn-gold" style="width: 100%; padding: 1.8rem; font-size: 1.25rem; border-radius: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; background: linear-gradient(135deg, #D4AF37, #B8860B); color: #000 !important; border: none; cursor: pointer;">
+                                Secure Private Proposal
+                            </button>
+                            <p style="margin-top: 2rem; color: var(--text-muted); font-size: 0.85rem; letter-spacing: 2px; opacity: 0.7;">
+                                A senior concierge will respond personally within 30 minutes.
+                            </p>
                         </div>
                     </form>
+
+                    <!-- Inline Success Message -->
+                    <div id="form-success-message" style="display:none; text-align:center; padding:4rem 2rem; background:rgba(212,175,55,0.05); border:1px solid var(--primary-gold); border-radius:20px; margin:3rem auto; max-width:900px;">
+                        <h3 class="serif gold-text" style="font-size:2.5rem; margin-bottom:1rem; font-weight:300;">
+                            <i class="fas fa-check-circle" aria-hidden="true"></i> Proposal Request Received
+                        </h3>
+                        <p style="color:var(--text-main); font-size:1.1rem; line-height:1.8; margin-bottom:2rem;">
+                            Our concierge is checking KASE slot availability and KASE-certified operator options for your dates. Expect a response within 15 minutes.
+                        </p>
+                        <a href="https://wa.me/918801079030" target="_blank" rel="noopener" class="btn btn-gold" style="text-decoration:none; display:inline-block; padding: 1rem 2rem; font-weight: 700; background: linear-gradient(135deg, #D4AF37, #B8860B); color:#000 !important; border-radius:8px;">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i> Chat on WhatsApp Now
+                        </a>
+                    </div>
                 </div>
 
             </div>
@@ -801,10 +1175,10 @@
                       <div style="margin-bottom: 2rem;">
                         <label style="display: block; font-size: 0.75rem; text-transform: uppercase; color: var(--primary-gold); letter-spacing: 1.5px; margin-bottom: 0.8rem; font-weight: 600;">1. Select Jet Class</label>
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.8rem;">
-                          <button type="button" onclick="selectJetClass('light')" id="btn-class-light" style="background: rgba(212, 175, 55, 0.1); border: 1px solid var(--primary-gold); color: #fff; padding: 1rem 0.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">Light Jet<span style="display:block; font-size:0.7rem; color:var(--text-muted); margin-top:2px;">€3,500/hr</span></button>
-                          <button type="button" onclick="selectJetClass('midsize')" id="btn-class-midsize" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); padding: 1rem 0.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">Midsize<span style="display:block; font-size:0.7rem; color:var(--text-muted); margin-top:2px;">€6,000/hr</span></button>
-                          <button type="button" onclick="selectJetClass('heavy')" id="btn-class-heavy" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); padding: 1rem 0.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">Heavy Jet<span style="display:block; font-size:0.7rem; color:var(--text-muted); margin-top:2px;">€9,500/hr</span></button>
-                          <button type="button" onclick="selectJetClass('airliner')" id="btn-class-airliner" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); padding: 1rem 0.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">VIP Airliner<span style="display:block; font-size:0.7rem; color:var(--text-muted); margin-top:2px;">€18,000/hr</span></button>
+                          <button type="button" id="btn-class-light" style="background: rgba(212, 175, 55, 0.1); border: 1px solid var(--primary-gold); color: #fff; padding: 1rem 0.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">Light Jet<span style="display:block; font-size:0.7rem; color:var(--text-muted); margin-top:2px;">$3,500/hr</span></button>
+                          <button type="button" id="btn-class-midsize" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); padding: 1rem 0.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">Midsize<span style="display:block; font-size:0.7rem; color:var(--text-muted); margin-top:2px;">$6,000/hr</span></button>
+                          <button type="button" id="btn-class-heavy" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); padding: 1rem 0.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">Heavy Jet<span style="display:block; font-size:0.7rem; color:var(--text-muted); margin-top:2px;">$9,500/hr</span></button>
+                          <button type="button" id="btn-class-airliner" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); padding: 1rem 0.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">VIP Airliner<span style="display:block; font-size:0.7rem; color:var(--text-muted); margin-top:2px;">$18,000/hr</span></button>
                         </div>
                       </div>
 
@@ -813,7 +1187,7 @@
                           <label for="pax-slider" style="font-size: 0.75rem; text-transform: uppercase; color: var(--primary-gold); letter-spacing: 1.5px; font-weight: 600; margin: 0;">2. Number of Passengers</label>
                           <span id="pax-display" style="font-size: 1.1rem; font-weight: 600; color: #fff; background: rgba(212,175,55,0.15); padding: 0.2rem 0.8rem; border-radius: 4px; border: 1px solid rgba(212,175,55,0.3);">4 Pax</span>
                         </div>
-                        <input type="range" id="pax-slider" min="1" max="19" value="4" oninput="updateJetCalculator(this.value)" style="width: 100%; accent-color: var(--primary-gold); cursor: pointer;">
+                        <input type="range" id="pax-slider" min="1" max="19" value="4" style="width: 100%; accent-color: var(--primary-gold); cursor: pointer;">
                       </div>
 
                       <div style="background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.05); border-radius: 6px; padding: 1.5rem; margin-bottom: 2rem;">
@@ -823,11 +1197,11 @@
                         </div>
                         <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.8rem; margin-bottom: 0.8rem;">
                           <span style="color: var(--text-muted); font-size: 0.95rem;">Estimated Flight Cost:</span>
-                          <strong style="color: #fff; font-size: 1.1rem; color: var(--primary-gold);" id="jet-total-cost">€0</strong>
+                          <strong style="color: #fff; font-size: 1.1rem; color: var(--primary-gold);" id="jet-total-cost">$0</strong>
                         </div>
                         <div style="display: flex; justify-content: space-between;">
                           <span style="color: var(--text-muted); font-size: 0.95rem;">Estimated Cost Per Passenger:</span>
-                          <strong style="color: #fff; font-size: 0.95rem;" id="jet-per-pax-cost">€0 / pax</strong>
+                          <strong style="color: #fff; font-size: 0.95rem;" id="jet-per-pax-cost">$0 / pax</strong>
                         </div>
                       </div>
 
@@ -843,7 +1217,304 @@
                 </div>
             </div>
         </section>
-    
+
+        <!-- Premium Editorial Article & Silo Authority Content -->
+        <section class="section-padding" style="background: #080808; border-top: 1px solid var(--glass-border);">
+            <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 0 1.5rem;">
+                <article>
+                    
+                    <!-- Quick Answer Summary Box -->
+                    <div class="quick-answer-box">
+                        <h3>Aspen to Miami Flight Summary</h3>
+                        <p>
+                            A private jet charter from Aspen (KASE) to Miami (typically Opa-Locka, KOPF) covers approximately **1,799 miles** and takes **4 hours 14 minutes** in mid-flight. One-way charter prices range from **$15,500** for a Light Jet to over **$52,000** for a heavy intercontinental aircraft. Flights departing Aspen require certified crews, slot coordination, and strict attention to visual morning departure curfews.
+                        </p>
+                    </div>
+
+                    <!-- Table of Contents -->
+                    <div class="toc-box">
+                        <h3>In This Guide</h3>
+                        <ul class="toc-list">
+                            <li><a href="#price-guide">1. Aspen to Miami Private Jet Pricing</a></li>
+                            <li><a href="#kase-specialist">2. Why KASE Demands a Specialist Operator</a></li>
+                            <li><a href="#miami-terminals">3. Miami FBO Terminal Comparison</a></li>
+                            <li><a href="#luggage-pets">4. Ski Gear, Bags & Pet Transport</a></li>
+                            <li><a href="#seasonal-demand">5. Peak Season & Slot Sourcing</a></li>
+                            <li><a href="#empty-legs">6. Empty Leg Flight Procurement</a></li>
+                            <li><a href="#safety-standards">7. Safety Ratings & Operator Audits</a></li>
+                            <li><a href="#faq-section">8. Frequently Asked Questions</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 1. Cost & Price Guide -->
+                    <h2 id="price-guide">1. Aspen to Miami Private Jet Cost: 2026 Price Guide</h2>
+                    <p>
+                        The one-way cost to fly from Aspen to Miami by private jet varies significantly based on aircraft size, cabin capacity, fuel prices, and scheduling. Light jets offer the most economical entry point but may require a fuel stop depending on payload and wind factors. Midsize and Super Midsize jets are the preferred classes for this route, providing non-stop range, high-altitude performance, and spacious standing cabins.
+                    </p>
+                    <p>
+                        Below is an estimate of typical charter rates for the Aspen-to-Miami corridor based on jet class:
+                    </p>
+
+                    <div class="table-responsive">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Jet Class</th>
+                                    <th>Example Aircraft</th>
+                                    <th>Seats</th>
+                                    <th>Est. Hourly Rate</th>
+                                    <th>Est. One-Way Cost</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Light Jet</strong></td>
+                                    <td>Phenom 300, Citation CJ3+</td>
+                                    <td>6 - 7</td>
+                                    <td>$3,500</td>
+                                    <td>$15,500 - $18,500</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Midsize Jet</strong></td>
+                                    <td>Learjet 60XR, Hawker 800XP</td>
+                                    <td>7 - 8</td>
+                                    <td>$6,000</td>
+                                    <td>$24,500 - $28,000</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Super Midsize</strong></td>
+                                    <td>Challenger 350, Citation Sovereign</td>
+                                    <td>8 - 9</td>
+                                    <td>$8,500</td>
+                                    <td>$35,000 - $39,000</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Heavy Jet</strong></td>
+                                    <td>Gulfstream G450, Challenger 605</td>
+                                    <td>10 - 14</td>
+                                    <td>$12,500</td>
+                                    <td>$52,000 - $59,500</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>
+                        <em>Note: The pricing above represents industry average base charter rates. Total invoice figures will fluctuate based on federal excise taxes, airport landing fees, catering choices, de-icing during winter months, and crew overnight stays.</em>
+                    </p>
+
+                    <!-- 2. KASE Specialist Operator -->
+                    <h2 id="kase-specialist">2. Why Aspen-Pitkin (KASE) Outbound Flights Require Specialized Crews</h2>
+                    <p>
+                        Departing from Aspen-Pitkin County Airport (KASE) is one of the most operationally challenging flight environments in North America. Situated in a mountain valley at an elevation of **7,820 feet**, the airport is surrounded by steep mountain ridges that exceed 14,000 feet. This unique geography means that visual flight margins are thin, and weather systems can create unpredictable mountain waves and downdrafts.
+                    </p>
+                    <p>
+                        To operate safely out of Aspen, pilots must hold specialized high-altitude airport training certifications. In addition, aircraft performance is strictly limited by the "hot-and-high" atmospheric conditions. Warm summer afternoons reduce air density, which limits the engine thrust and wing lift. Consequently, aircraft departing in the afternoon are often subject to weight penalties, meaning they cannot take off with a full load of passengers and fuel. 
+                    </p>
+                    <p>
+                        To mitigate these risks and avoid passenger weight offloads, Elite Luxury Bookings coordinates with flight operators who employ KASE-certified crews and schedules departures during the cooler morning hours (before 10:00 AM) when the air is denser and engine efficiency is at its peak.
+                    </p>
+
+                    <!-- 3. Miami Terminals -->
+                    <h2 id="miami-terminals">3. Miami FBO Terminal Comparison: Opa-Locka vs. Miami International</h2>
+                    <p>
+                        When arriving in South Florida, private jet flyers can choose from three main general aviation facilities. Selecting the right airport determines not only ground transit times to your final destination but also handling efficiency and total landing fees:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Miami Opa-Locka Executive Airport (KOPF):</strong> Located 20 minutes north of downtown Miami and close to Bal Harbour and Aventura. KOPF is the premier hub for private aviation in South Florida. It features three state-of-the-art FBO terminals managed by Signature Flight Support and Atlantic Aviation, ensuring rapid tarmac processing and high confidentiality.
+                        </li>
+                        <li>
+                            <strong>Miami International Airport (KMIA):</strong> Best suited for passengers connecting to scheduled commercial first-class international flights. FBO operations are handled primarily by Signature Flight Support. However, due to heavy commercial airline congestion, private jets may experience holding patterns and taxi delays.
+                        </li>
+                        <li>
+                            <strong>Fort Lauderdale-Hollywood International (KFLL):</strong> Located further north, serving as an excellent entry point for clients traveling to Fort Lauderdale, Hollywood, or the northern beaches of Miami-Dade county.
+                        </li>
+                    </ul>
+
+                    <!-- 4. Luggage & Pets -->
+                    <h2 id="luggage-pets">4. Ski Gear, Bags & Pet Transport Logistics</h2>
+                    <p>
+                        Traveling between Aspen and Miami involves contrasting climates, requiring passengers to carry bulky winter clothing and ski equipment along with beach gear. Ski bags and boot bags occupy significant baggage cargo space and weight. Light jets may run out of baggage volume when fully loaded with winter sports gear. For party sizes larger than 4 carrying full winter equipment, a Midsize or Super Midsize jet with an external baggage compartment is highly recommended.
+                    </p>
+                    <p>
+                        For clients flying with domestic pets, private aviation offers the only stress-free solution. Dogs and cats are welcome inside the cabin, allowing them to travel comfortably at your side. Aspen flights routinely carry dogs accustomed to mountain activities. Our concierge coordinates pet hydration, ensures the operator is notified of animal manifests, and verifies that the selected cabin layout has sufficient space for pet bedding.
+                    </p>
+
+                    <!-- 5. Seasonal Demand -->
+                    <h2 id="seasonal-demand">5. Peak Season & Slot Sourcing</h2>
+                    <p>
+                        The corridor between Aspen and Miami exhibits massive seasonal peaks. During the winter ski season (especially Christmas, New Year, President's Day, and spring break), aircraft availability is severely constrained. KASE operates on a strict reservation slot system for arrivals and departures. Securing a slot during peak winter weekends requires booking 3 to 5 weeks in advance.
+                    </p>
+                    <p>
+                        Similarly, major Miami events like Art Basel, the Miami Grand Prix, and international boat shows trigger a surge in private aviation traffic heading south. During these high-demand windows, hangar space at KOPF is limited, and fuel surcharges may apply. Elite Luxury Bookings utilizes our off-market partner network to source repositioning aircraft and lock in slots before general availability closes.
+                    </p>
+
+                    <!-- 6. Empty Legs -->
+                    <h2 id="empty-legs">6. Empty Leg Flight Procurement</h2>
+                    <p>
+                        For travelers with flexible schedules, empty leg flights represent an exceptional value. These occur when an aircraft needs to fly empty to reposition for its next charter client (for example, a Miami-based jet that flies empty to Aspen to pick up a passenger). Sourcing an empty leg on the KASE to KOPF corridor can lead to savings of 50% to 75% off standard charter prices.
+                    </p>
+                    <p>
+                        However, empty leg bookings require flexibility. Since the flight is dependent on the primary charter client's schedule, the departure time can shift or the flight can be canceled altogether if the primary client changes their itinerary. Contact our concierge desk to be added to our real-time empty leg database for immediate dispatch notifications.
+                    </p>
+
+                    <!-- 7. Safety Standards -->
+                    <h2 id="safety-standards">7. Safety Ratings & Operator Audits</h2>
+                    <p>
+                        Elite Luxury Bookings operates strictly as a broker and does not own or operate aircraft. We work exclusively with certified air carriers holding valid FAA Part 135 certificates. To ensure maximum safety, every operator in our network must undergo rigorous third-party audits by independent bodies such as ARGUS and Wyvern. We verify crew background checks, flight hours, aircraft maintenance histories, and liability insurance coverage before presenting any charter options to our clients.
+                    </p>
+
+                    <!-- 8. FAQ Accordion -->
+                    <h2 id="faq-section">8. Frequently Asked Questions</h2>
+                    <div class="faq-accordion">
+                        
+                        <div class="faq-item">
+                            <button class="faq-trigger" aria-expanded="false">
+                                What is the flight time between Aspen and Miami?
+                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-content">
+                                <p>The average flight time for a non-stop flight from Aspen (KASE) to Miami (KOPF) is 4 hours and 14 minutes, covering a great-circle distance of 1,799 miles. Ground speeds vary depending on altitude and headwinds.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-trigger" aria-expanded="false">
+                                Which Miami airport is best for private jet arrivals?
+                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-content">
+                                <p>Miami Opa-Locka Executive Airport (KOPF) is the preferred arrival hub. It is specifically designed for private aviation, has less congestion than Miami International (KMIA), and offers faster ground transfers to downtown Miami, Bal Harbour, and South Beach.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-trigger" aria-expanded="false">
+                                Why are morning departures recommended from Aspen?
+                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-content">
+                                <p>Aspen (KASE) is a high-altitude airport (7,820 ft). During warm afternoons, the air density decreases, reducing aircraft performance and takeoff lift. Cool morning temperatures provide denser air, which allows jets to take off safely without weight penalties.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-trigger" aria-expanded="false">
+                                Can a Light Jet fly non-stop from Aspen to Miami?
+                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-content">
+                                <p>Yes, advanced light jets such as the Phenom 300 can make the flight non-stop under optimal wind conditions. However, if the jet is fully loaded with passengers and heavy ski bags, a refueling stop may be required to maintain safety margins.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-trigger" aria-expanded="false">
+                                Are pets allowed in the cabin on Aspen to Miami flights?
+                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-content">
+                                <p>Yes, all flights coordinated by Elite Luxury Bookings are pet-friendly. Pets travel inside the main cabin at your side rather than in the cargo hold. Please notify our team when booking so we can arrange suitable amenities.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-trigger" aria-expanded="false">
+                                How much luggage can I bring on my flight?
+                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-content">
+                                <p>Luggage capacity depends on the aircraft class. Midsize and Super Midsize jets feature spacious external cargo compartments that easily accommodate multiple sets of skis, boot bags, and heavy luxury luggage, whereas light jets have tighter volume limits.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-trigger" aria-expanded="false">
+                                What happens if KASE is closed due to winter weather?
+                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-content">
+                                <p>In the event of heavy snow or low visibility closing Aspen, flights are typically diverted to Rifle Garfield County Airport (KRIL) or Eagle County Regional (KEGE). Ground transportation is coordinated from the diversion airport to your final destination in Aspen.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-trigger" aria-expanded="false">
+                                How far in advance should I book KASE departure slots?
+                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-content">
+                                <p>For peak winter holidays (Christmas/New Year) and summer events (Food & Wine), slots should be booked 3 to 5 weeks in advance. During low season, slots can often be secured within 48 to 72 hours.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </article>
+            </div>
+        </section>
+
+        <!-- Related Corridors & Silo Linking -->
+        <section class="section-padding" style="background: rgba(255,255,255,0.01); border-top: 1px solid var(--glass-border);">
+            <div class="container">
+                <h2 class="serif gold-text" style="font-size: 2.5rem; text-align: center; margin-bottom: 1.5rem; border: none;">Related Luxury Corridors</h2>
+                <p style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto 3rem; font-size: 1rem;">
+                    Browse alternative private aviation routes and strategic booking channels.
+                </p>
+                
+                <div class="routes-grid">
+                    <a href="https://eliteluxurybookings.com/aspen-to-newyork-private-jet-cost/" class="route-card">
+                        <div>
+                            <h4>Aspen to New York</h4>
+                            <p>Direct returns to Teterboro (KTEB) with mountain-certified crews.</p>
+                        </div>
+                        <span class="learn-more">Explore Route <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                    </a>
+                    
+                    <a href="https://eliteluxurybookings.com/newyork-to-aspen-private-jet-cost/" class="route-card">
+                        <div>
+                            <h4>New York to Aspen</h4>
+                            <p>Procure winter ski weekend charters with guaranteed visual slots.</p>
+                        </div>
+                        <span class="learn-more">Explore Route <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                    </a>
+                    
+                    <a href="https://eliteluxurybookings.com/losangeles-to-miami-private-jet-cost/" class="route-card">
+                        <div>
+                            <h4>Los Angeles to Miami</h4>
+                            <p>Transcontinental coast-to-coast flights arriving directly in Opa-Locka.</p>
+                        </div>
+                        <span class="learn-more">Explore Route <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                    </a>
+
+                    <a href="https://eliteluxurybookings.com/miami-to-aspen-private-jet-cost/" class="route-card">
+                        <div>
+                            <h4>Miami to Aspen</h4>
+                            <p>Direct routes to the mountains. Avoid afternoon weight restrictions.</p>
+                        </div>
+                        <span class="learn-more">Explore Route <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                    </a>
+
+                    <a href="https://eliteluxurybookings.com/london-to-miami-private-jet-cost/" class="route-card">
+                        <div>
+                            <h4>London to Miami</h4>
+                            <p>Intercontinental heavy jet travel crossing the Atlantic with VIP service.</p>
+                        </div>
+                        <span class="learn-more">Explore Route <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                    </a>
+
+                    <a href="https://eliteluxurybookings.com/private-jet-charter-cost-estimator/" class="route-card">
+                        <div>
+                            <h4>Cost Estimator Guide</h4>
+                            <p>Compare standard charter rates, flight hours, and hidden fees.</p>
+                        </div>
+                        <span class="learn-more">View Estimator <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aviation Authority Guides Section -->
         <section class="section-padding" style="background: rgba(212, 175, 55, 0.05); border-top: 1px solid var(--glass-border);">
             <div class="container">
                 <h2 class="serif gold-text" style="font-size: 2.5rem; text-align: center; margin-bottom: 3rem; border: none;">Aviation Authority & Guides</h2>
@@ -898,236 +1569,12 @@
     </main>
 
     <!-- Master Footer -->
-                <script>
-        function toggleMobileMenu() { 
-            var m = document.getElementById('elbMobileMenu'), 
-                b = document.getElementById('navHamburger'); 
-            if (m && b) { 
-                m.classList.toggle('open'); 
-                b.classList.toggle('open'); 
-                document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
-            } 
-        }
-
-        function escapeHtml(text) {
-            if (!text) return '';
-            return text.toString()
-                .replace(/&/g, "&amp;")
-                .replace(/</g, "&lt;")
-                .replace(/>/g, "&gt;");
-        }
-
-        async function submitLead(event) {
-            event.preventDefault();
-            const form = event.target;
-            const btn = form.querySelector('button[type="submit"]');
-            const originalBtnText = btn.innerText;
-            
-            btn.innerText = 'REDIRECTING...';
-            btn.disabled = true;
-            
-            const formData = new FormData(form);
-            const formType = formData.get('form_type') || formData.get('_target') || 'Private Jet Inquiry';
-            
-            // Extract details for WhatsApp
-            const name = formData.get('name') || '';
-            const phone = formData.get('phone') || '';
-            const email = formData.get('email') || '';
-            const departure = formData.get('departure') || '';
-            const destination = formData.get('destination') || '';
-            const date = formData.get('date') || '';
-            const passengers = formData.get('passengers') || '';
-            const requirements = formData.get('requirements') || '';
-            
-            const textMsg = `Hi Elite Luxury Bookings, I'd like a quote for a private jet charter. Route: ${departure} to ${destination}. Date: ${date}. Passengers: ${passengers}. Name: ${name}. Contact: ${phone} / ${email}. Requirements: ${requirements}.`;
-            
-            // Format HTML for Telegram
-            let tgMessage = `🚀 <b>New WhatsApp Redirect Lead Received!</b>
-
-`;
-            tgMessage += `<b>Source:</b> ${escapeHtml(formType)}
-
-`;
-            tgMessage += `<b>👤 Name:</b> ${escapeHtml(name)}
-`;
-            tgMessage += `<b>📞 Contact:</b> ${escapeHtml(phone)}
-`;
-            tgMessage += `<b>✉️ Email:</b> ${escapeHtml(email)}
-`;
-            tgMessage += `<b>🛫 Departure:</b> ${escapeHtml(departure)}
-`;
-            tgMessage += `<b>🛬 Destination:</b> ${escapeHtml(destination)}
-`;
-            tgMessage += `<b>📅 Date:</b> ${escapeHtml(date)}
-`;
-            tgMessage += `<b>👥 Passengers:</b> ${escapeHtml(passengers)}
-`;
-            tgMessage += `<b>📋 Requirements:</b> ${escapeHtml(requirements)}
-
-`;
-            tgMessage += `⏰ ${new Date().toISOString().replace('T', ' ').substr(0, 19)} UTC`;
-            
-            // Send to Telegram in background
-            const tgPromise = fetch('/submit-lead.php', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    chat_id: '5875175296',
-                    text: tgMessage,
-                    parse_mode: 'HTML'
-                })
-            }).then(r => r.json()).catch(err => ({ ok: false, error: err }));
-
-            // Send to Email via Formsubmit in background
-            const formObject = {};
-            formData.forEach((value, key) => {
-                if (!['_redirect', '_cc', '_subject'].includes(key)) {
-                    formObject[key] = value;
-                }
-            });
-            formObject['_subject'] = `New WhatsApp Lead: ${formType}`;
-            
-            const emailPromise = fetch('https://formsubmit.co/ajax/contactshaikk@gmail.com', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formObject)
-            }).then(r => r.json()).catch(err => ({ success: false, error: err }));
-            
-            try {
-                await Promise.all([tgPromise, emailPromise]);
-            } catch (err) {
-                console.error(err);
-            } finally {
-                // Open WhatsApp
-                const encodedMessage = encodeURIComponent(textMsg);
-                window.open(`https://wa.me/918801079030?text=${encodedMessage}`, '_blank');
-                
-                // Restore button
-                btn.innerText = originalBtnText;
-                btn.disabled = false;
-                
-                // Show success or redirect to thank you
-                window.location.href = '/thank-you.html';
-            }
-        }
-
-        // ===== INTERACTIVE PRIVATE JET COST CALCULATOR =====
-        const flightTimeHours = 4.23;
-        let selectedJetClass = 'light';
-
-        function selectJetClass(className) {
-            selectedJetClass = className;
-            
-            // Reset button classes
-            const buttons = ['light', 'midsize', 'heavy', 'airliner'];
-            buttons.forEach(btn => {
-                const el = document.getElementById('btn-class-' + btn);
-                if (el) {
-                    if (btn === className) {
-                        el.style.background = 'rgba(212, 175, 55, 0.1)';
-                        el.style.borderColor = 'var(--primary-gold)';
-                        el.style.color = '#fff';
-                    } else {
-                        el.style.background = 'rgba(255,255,255,0.02)';
-                        el.style.borderColor = 'rgba(255,255,255,0.1)';
-                        el.style.color = 'rgba(255,255,255,0.7)';
-                    }
-                }
-            });
-
-            // Update estimates
-            const paxSlider = document.getElementById('pax-slider');
-            updateJetCalculator(paxSlider.value);
-        }
-
-        function updateJetCalculator(paxCount) {
-            document.getElementById('pax-display').innerText = paxCount + ' Pax';
-            
-            let hourlyRate = 3500;
-            if (selectedJetClass === 'midsize') hourlyRate = 6000;
-            else if (selectedJetClass === 'heavy') hourlyRate = 9500;
-            else if (selectedJetClass === 'airliner') hourlyRate = 18000;
-
-            const totalCost = Math.round(flightTimeHours * hourlyRate);
-            const perPaxCost = Math.round(totalCost / paxCount);
-
-            document.getElementById('jet-total-cost').innerText = '€' + totalCost.toLocaleString();
-            document.getElementById('jet-per-pax-cost').innerText = '€' + perPaxCost.toLocaleString() + ' / pax';
-
-            // Update WhatsApp CTA text message
-            const ctaBtn = document.getElementById('jet-calc-cta');
-            const routeText = "Aspen to Miami";
-            const messageText = `Hi Elite Luxury Bookings, I'd like a quote for a private jet charter on the ${routeText} route. Jet Class: ${selectedJetClass.toUpperCase()}. Passengers: ${paxCount}.`;
-            ctaBtn.href = `https://wa.me/918801079030?text=${encodeURIComponent(messageText)}`;
-        }
-
-        // Initialize Calculator
-        document.addEventListener('DOMContentLoaded', function() {
-            updateJetCalculator(4);
-        });
-
-        // ===== STICKY MOBILE CTA =====
-        function dismissStickyMobileCta(event) {
-            event.stopPropagation();
-            event.preventDefault();
-            const cta = document.getElementById('stickyMobileCta');
-            if (cta) {
-                cta.style.transform = 'translateY(100px)';
-                cta.style.opacity = '0';
-                cta.style.pointerEvents = 'none';
-                sessionStorage.setItem('sticky_dismissed', '1');
-            }
-        }
-
-        // Initialize sticky mobile CTA styles safely to prevent layout reflows on scroll
-        const initStickyCta = document.getElementById('stickyMobileCta');
-        if (initStickyCta) {
-            initStickyCta.style.display = 'block';
-            initStickyCta.style.pointerEvents = 'none';
-        }
-
-        window.addEventListener('scroll', function () {
-            const cta = document.getElementById('stickyMobileCta');
-            if (!cta) return;
-
-            if (window.innerWidth >= 768) {
-                cta.style.transform = 'translateY(100px)';
-                cta.style.opacity = '0';
-                cta.style.pointerEvents = 'none';
-                return;
-            }
-
-            if (sessionStorage.getItem('sticky_dismissed') === '1') {
-                return;
-            }
-
-            if (window.scrollY > 400) {
-                cta.style.transform = 'translateY(0)';
-                cta.style.opacity = '1';
-                cta.style.pointerEvents = 'auto';
-            } else {
-                cta.style.transform = 'translateY(100px)';
-                cta.style.opacity = '0';
-                cta.style.pointerEvents = 'none';
-            }
-        });
-    </script>
-
-<!-- WhatsApp Float -->
-<a href="https://wa.me/918801079030" class="wa-float" target="_blank" rel="noopener" aria-label="Chat with Elite Luxury Bookings Concierge on WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-    </svg>
-</a>
-
-    <!-- Master Footer -->
-<!-- Master Footer -->
     <footer class="footer">
         <div class="container" style="max-width: 1200px;">
             <div class="footer-grid">
                 <div class="footer-brand">
                     <h2>Elite Luxury <span class="gold-text">Bookings</span></h2>
-                    <p>Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
+                    <p>Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Vills.</p>
                     <div class="footer-socials">
                         <a href="https://www.facebook.com/eliteluxurybookings" target="_blank" rel="noopener noreferrer" aria-label="Follow Elite Luxury Bookings on Facebook"><i class="fab fa-facebook"></i></a>
                         <a href="https://www.instagram.com/eliteluxurybookings" target="_blank" rel="noopener noreferrer" aria-label="Follow Elite Luxury Bookings on Instagram"><i class="fab fa-instagram"></i></a>
@@ -1165,17 +1612,385 @@
         </div>
     </footer>
 
+    <!-- Exit Intent Modal Box -->
+    <div id="exitIntentModal" class="exit-modal-overlay" aria-hidden="true" role="dialog">
+        <div class="exit-modal-box">
+            <button id="exitClose" class="close-btn" aria-label="Close modal">&times;</button>
+            <h3>Confidential Sourcing Desk</h3>
+            <p>
+                Before leaving, check direct slot availability for high-altitude Aspen departures to Miami. We coordinate off-market empty legs and KASE-certified operator clearances.
+            </p>
+            <a href="https://wa.me/918801079030" target="_blank" rel="noopener" class="btn btn-gold" style="width: 100%; text-decoration: none; text-align: center;">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i> Direct Concierge Clearance
+            </a>
+        </div>
+    </div>
 
-<script>
-        function toggleMobileMenu() { 
-            var m = document.getElementById('elbMobileMenu'), 
-                b = document.getElementById('navHamburger'); 
-            if (m && b) { 
-                m.classList.toggle('open'); 
-                b.classList.toggle('open'); 
-                document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
-            } 
-        }
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-mobile-cta" id="stickyMobileCta"
+      style="position:fixed; bottom:0; left:0; right:0;
+      background:rgba(5,5,5,0.98); backdrop-filter:blur(20px);
+      border-top:1px solid rgba(212,175,55,0.2); z-index:9999;
+      padding:1rem 1.25rem; display:none;
+      justify-content:space-between; align-items:center;
+      gap:0.75rem; transform:translateY(100px); opacity:0;
+      transition:all 0.4s ease;">
+      <a href="tel:+918801079030" style="flex:1; text-align:center;
+        padding:0.9rem; border-radius:8px; font-size:0.8rem;
+        text-transform:uppercase; letter-spacing:1.5px;
+        font-weight:700; background:transparent;
+        border:1px solid var(--primary-gold);
+        color:var(--primary-gold) !important;
+        text-decoration:none; display:inline-flex;
+        align-items:center; justify-content:center; gap:0.5rem;">
+        <i class="fas fa-phone" aria-hidden="true"></i>
+        Call Concierge
+      </a>
+      <a href="https://wa.me/918801079030" target="_blank"
+        rel="noopener" style="flex:1; text-align:center;
+        padding:0.9rem; border-radius:8px; font-size:0.8rem;
+        text-transform:uppercase; letter-spacing:1.5px;
+        font-weight:700; background:#25D366;
+        border:1px solid #25D366; color:#fff !important;
+        text-decoration:none; display:inline-flex;
+        align-items:center; justify-content:center; gap:0.5rem;">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        WhatsApp Quote
+      </a>
+      <button id="stickyClose" aria-label="Dismiss" style="
+        background:transparent; border:none;
+        color:rgba(255,255,255,0.5); font-size:1.4rem;
+        cursor:pointer; padding:0.3rem;">
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <!-- WhatsApp Float Icon -->
+    <a href="https://wa.me/918801079030" id="whatsappFloat" class="wa-float" target="_blank" rel="noopener" aria-label="Chat with Elite Luxury Bookings Concierge on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+        </svg>
+    </a>
+
+    <!-- Unified JavaScript Engine -->
+    <script>
+        (function() {
+            document.addEventListener('DOMContentLoaded', function() {
+                
+                // --- 1. CALCULATOR INITIALISATION ---
+                const flightTimeHours = 4.23;
+                let currentJetClass = 'midsize';
+
+                // Hourly pricing index
+                const pricingRates = {
+                    light: 3500,
+                    midsize: 6000,
+                    heavy: 9500,
+                    airliner: 18000
+                };
+
+                const classButtons = {
+                    light: document.getElementById('btn-class-light'),
+                    midsize: document.getElementById('btn-class-midsize'),
+                    heavy: document.getElementById('btn-class-heavy'),
+                    airliner: document.getElementById('btn-class-airliner')
+                };
+
+                const totalCostEl = document.getElementById('jet-total-cost');
+                const perPaxCostEl = document.getElementById('jet-per-pax-cost');
+                const paxSlider = document.getElementById('pax-slider');
+                const paxDisplay = document.getElementById('pax-display');
+                const calcCta = document.getElementById('jet-calc-cta');
+
+                function updateJetCalculator(paxCount) {
+                    paxDisplay.innerText = paxCount + ' Pax';
+                    const hourlyRate = pricingRates[currentJetClass] || 6000;
+                    const totalCost = Math.round(flightTimeHours * hourlyRate);
+                    const perPaxCost = Math.round(totalCost / paxCount);
+
+                    totalCostEl.innerText = '$' + totalCost.toLocaleString();
+                    perPaxCostEl.innerText = '$' + perPaxCost.toLocaleString() + ' / pax';
+
+                    // Update WhatsApp CTA text parameters
+                    const messageText = `Hi Elite Luxury Bookings, I would like to request a private jet charter proposal for the Aspen to Miami route. Class: ${currentJetClass.toUpperCase()}. Passenger Count: ${paxCount}.`;
+                    calcCta.href = `https://wa.me/918801079030?text=${encodeURIComponent(messageText)}`;
+                }
+
+                function selectJetClass(className) {
+                    currentJetClass = className;
+                    
+                    // Toggle active classes on selector buttons
+                    for (const [key, btn] of Object.entries(classButtons)) {
+                        if (btn) {
+                            if (key === className) {
+                                btn.style.background = 'rgba(212, 175, 55, 0.1)';
+                                btn.style.borderColor = 'var(--primary-gold)';
+                                btn.style.color = '#fff';
+                            } else {
+                                btn.style.background = 'rgba(255,255,255,0.02)';
+                                btn.style.borderColor = 'rgba(255,255,255,0.1)';
+                                btn.style.color = 'rgba(255,255,255,0.7)';
+                            }
+                        }
+                    }
+                    updateJetCalculator(paxSlider.value);
+                }
+
+                // Attach event listeners to calculator components
+                for (const [key, btn] of Object.entries(classButtons)) {
+                    if (btn) {
+                        btn.addEventListener('click', function() {
+                            selectJetClass(key);
+                        });
+                    }
+                }
+
+                paxSlider.addEventListener('input', function() {
+                    updateJetCalculator(this.value);
+                });
+
+                // Run init calculator sequence
+                selectJetClass('midsize');
+                updateJetCalculator(4);
+
+                // --- 2. NAVIGATION MOBILE TOGGLE ---
+                const navHamburger = document.getElementById('navHamburger');
+                const elbMobileMenu = document.getElementById('elbMobileMenu');
+
+                if (navHamburger && elbMobileMenu) {
+                    navHamburger.addEventListener('click', function() {
+                        this.classList.toggle('open');
+                        elbMobileMenu.classList.toggle('open');
+                        document.body.style.overflow = elbMobileMenu.classList.contains('open') ? 'hidden' : '';
+                    });
+                }
+
+                // Close mobile menu on clicking any link
+                document.querySelectorAll('#elbMobileMenu a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        if (navHamburger) navHamburger.classList.remove('open');
+                        if (elbMobileMenu) elbMobileMenu.classList.remove('open');
+                        document.body.style.overflow = '';
+                    });
+                });
+
+                // --- 3. FAQ ACCORDION WIRING ---
+                document.querySelectorAll('.faq-trigger').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const content = this.nextElementSibling;
+                        const icon = this.querySelector('.fa-chevron-down');
+                        const isOpen = content.style.display === 'block';
+                        
+                        // Close all accordions
+                        document.querySelectorAll('.faq-content').forEach(c => { c.style.display = 'none'; });
+                        document.querySelectorAll('.faq-trigger').forEach(b => {
+                            b.setAttribute('aria-expanded', 'false');
+                            const i = b.querySelector('.fa-chevron-down');
+                            if (i) i.style.transform = 'rotate(0deg)';
+                        });
+
+                        // Open selected accordion if it was closed
+                        if (!isOpen) {
+                            content.style.display = 'block';
+                            if (icon) icon.style.transform = 'rotate(180deg)';
+                            this.setAttribute('aria-expanded', 'true');
+                        }
+                    });
+                });
+
+                // --- 4. DATE-DRIVEN URGENCY BANNER ---
+                const bannerText = document.getElementById('bannerText');
+                if (bannerText) {
+                    const currentMonth = new Date().getMonth(); // 0-indexed: 0=Jan, 11=Dec
+                    let urgencyMessage = "";
+                    
+                    if ([11, 0, 1, 2].includes(currentMonth)) {
+                        urgencyMessage = "Peak Ski Season · KASE Return Slots Filling Fast · Book 3–5 Weeks Ahead";
+                    } else if ([5, 6, 7].includes(currentMonth)) {
+                        urgencyMessage = "Summer Festival Season · Food & Wine & Jazz Aspen · Morning KASE Departures Essential";
+                    } else {
+                        urgencyMessage = "Shoulder Season · Best KASE Availability · Empty Legs Active on KASE–KOPF";
+                    }
+                    bannerText.innerText = urgencyMessage;
+                }
+
+                // --- 5. SECURE FORM SUBMISSION ---
+                const leadForm = document.getElementById('leadForm');
+                const formSuccessMessage = document.getElementById('form-success-message');
+
+                function escapeHtml(text) {
+                    if (!text) return '';
+                    return text.toString()
+                        .replace(/&/g, "&amp;")
+                        .replace(/</g, "&lt;")
+                        .replace(/>/g, "&gt;");
+                }
+
+                if (leadForm) {
+                    leadForm.addEventListener('submit', async function(event) {
+                        event.preventDefault();
+                        const btn = document.getElementById('submitBtn');
+                        const originalBtnText = btn ? btn.innerText : 'Secure Private Proposal';
+
+                        if (btn) {
+                            btn.innerText = 'REDIRECTING...';
+                            btn.disabled = true;
+                        }
+
+                        const formData = new FormData(leadForm);
+                        const formType = formData.get('form_type') || 'Aspen to Miami Route Quote Form';
+
+                        const name = formData.get('name') || '';
+                        const email = formData.get('email') || '';
+                        const phone = formData.get('phone') || '';
+                        const departure = formData.get('departure') || 'Aspen (KASE)';
+                        const destination = formData.get('destination') || 'Miami (KMIA)';
+                        const service = formData.get('service') || 'Private Jet';
+                        const requirements = formData.get('requirements') || '';
+
+                        const textMsg = `Hi Elite Luxury Bookings, I'd like a quote for a private jet charter. Route: ${departure} to ${destination}. Service: ${service}. Name: ${name}. Contact: ${phone} / ${email}. Requirements: ${requirements}.`;
+
+                        // Compile Telegram Message
+                        let tgMessage = `🚀 <b>New Aspen Route Lead Received!</b>\n\n`;
+                        tgMessage += `<b>Source:</b> ${escapeHtml(formType)}\n\n`;
+                        tgMessage += `<b>👤 Name:</b> ${escapeHtml(name)}\n`;
+                        tgMessage += `<b>✉️ Email:</b> ${escapeHtml(email)}\n`;
+                        tgMessage += `<b>📞 Contact:</b> ${escapeHtml(phone)}\n`;
+                        tgMessage += `<b>🛫 Departure:</b> ${escapeHtml(departure)}\n`;
+                        tgMessage += `<b>🛬 Destination:</b> ${escapeHtml(destination)}\n`;
+                        tgMessage += `<b>💼 Service:</b> ${escapeHtml(service)}\n`;
+                        tgMessage += `<b>📋 Requirements:</b> ${escapeHtml(requirements)}\n\n`;
+                        tgMessage += `⏰ ${new Date().toISOString().replace('T', ' ').substr(0, 19)} UTC`;
+
+                        // Send Lead via submit-lead.php (which posts to Telegram internally on server)
+                        const serverPromise = fetch('/submit-lead.php', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                text: tgMessage
+                            })
+                        }).then(r => r.json()).catch(err => ({ ok: false, error: err }));
+
+                        // Send Lead via Formsubmit.co
+                        const formObject = {};
+                        formData.forEach((value, key) => {
+                            formObject[key] = value;
+                        });
+                        formObject['_subject'] = `New Route Lead: ${formType}`;
+
+                        const emailPromise = fetch('https://formsubmit.co/ajax/contactshaikk@gmail.com', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(formObject)
+                        }).then(r => r.json()).catch(err => ({ success: false, error: err }));
+
+                        try {
+                            await Promise.all([serverPromise, emailPromise]);
+                        } catch (err) {
+                            console.error(err);
+                        } finally {
+                            // Show success state
+                            leadForm.style.display = 'none';
+                            if (formSuccessMessage) formSuccessMessage.style.display = 'block';
+
+                            // Open WhatsApp
+                            const encodedMessage = encodeURIComponent(textMsg);
+                            window.open(`https://wa.me/918801079030?text=${encodedMessage}`, '_blank');
+
+                            if (btn) {
+                                btn.innerText = originalBtnText;
+                                btn.disabled = false;
+                            }
+                        }
+                    });
+                }
+
+                // --- 6. STICKY MOBILE CTA ---
+                const stickyMobileCta = document.getElementById('stickyMobileCta');
+                const whatsappFloat = document.getElementById('whatsappFloat');
+                const stickyClose = document.getElementById('stickyClose');
+
+                if (stickyMobileCta) {
+                    stickyMobileCta.style.display = 'flex';
+                    stickyMobileCta.style.pointerEvents = 'none';
+                }
+
+                if (stickyClose) {
+                    stickyClose.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        if (stickyMobileCta) {
+                            stickyMobileCta.style.transform = 'translateY(100px)';
+                            stickyMobileCta.style.opacity = '0';
+                            stickyMobileCta.style.pointerEvents = 'none';
+                        }
+                        sessionStorage.setItem('sticky_dismissed', '1');
+                        if (whatsappFloat) whatsappFloat.style.bottom = '30px';
+                    });
+                }
+
+                window.addEventListener('scroll', function() {
+                    if (!stickyMobileCta) return;
+
+                    if (window.innerWidth >= 768) {
+                        stickyMobileCta.style.transform = 'translateY(100px)';
+                        stickyMobileCta.style.opacity = '0';
+                        stickyMobileCta.style.pointerEvents = 'none';
+                        if (whatsappFloat) whatsappFloat.style.bottom = '30px';
+                        return;
+                    }
+
+                    if (sessionStorage.getItem('sticky_dismissed') === '1') {
+                        return;
+                    }
+
+                    if (window.scrollY > 400) {
+                        stickyMobileCta.style.transform = 'translateY(0)';
+                        stickyMobileCta.style.opacity = '1';
+                        stickyMobileCta.style.pointerEvents = 'auto';
+                        if (whatsappFloat) whatsappFloat.style.bottom = '90px';
+                    } else {
+                        stickyMobileCta.style.transform = 'translateY(100px)';
+                        stickyMobileCta.style.opacity = '0';
+                        stickyMobileCta.style.pointerEvents = 'none';
+                        if (whatsappFloat) whatsappFloat.style.bottom = '30px';
+                    }
+                });
+
+                // --- 7. EXIT INTENT MODAL ---
+                const exitIntentModal = document.getElementById('exitIntentModal');
+                const exitClose = document.getElementById('exitClose');
+
+                if (exitIntentModal) {
+                    document.addEventListener('mouseleave', function(e) {
+                        // Trigger only when user moves mouse out of top of viewport (exit intent)
+                        if (e.clientY < 20) {
+                            if (sessionStorage.getItem('exit_modal_shown') !== '1') {
+                                exitIntentModal.style.display = 'flex';
+                                exitIntentModal.setAttribute('aria-hidden', 'false');
+                                sessionStorage.setItem('exit_modal_shown', '1');
+                            }
+                        }
+                    });
+                }
+
+                if (exitClose && exitIntentModal) {
+                    exitClose.addEventListener('click', function() {
+                        exitIntentModal.style.display = 'none';
+                        exitIntentModal.setAttribute('aria-hidden', 'true');
+                    });
+                    
+                    // Close exit modal on clicking background
+                    exitIntentModal.addEventListener('click', function(e) {
+                        if (e.target === exitIntentModal) {
+                            exitIntentModal.style.display = 'none';
+                            exitIntentModal.setAttribute('aria-hidden', 'true');
+                        }
+                    });
+                }
+
+            });
+        })();
     </script>
 </body>
 </html>
