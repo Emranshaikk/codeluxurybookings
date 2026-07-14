@@ -279,15 +279,6 @@
         "image": "/assets/images/london-to-ibiza-private-jet.png"
     },
     {
-        "url": "/boat-trip-from-mallorca-to-formentera.html",
-        "category": "private yacht",
-        "label": "Maritime Elite",
-        "title": "Boat Trip from Mallorca to Formentera: The 2026 Authority Guide",
-        "excerpt": "The definitive 1,500-word guide to the ultimate crossing. Discover private yacht routes, costs, top beaches, and VIP club access for the Mediterranean's most exclusive route.",
-        "link_text": "Discover Formentera",
-        "image": "/assets/boat_trip_mallorca_formentera_hero_2026.png"
-    },
-    {
         "url": "/mallorca-to-ibiza-private-boat.html",
         "category": "private yacht",
         "label": "Balearic Elite",
@@ -351,11 +342,11 @@
         "image": "/assets/montenegro_yacht_charter_hero_2026.png"
     },
     {
-        "url": "/private-boat-trip-mallorca-to-formentera.html",
+        "url": "/private-boat-trip-mallorca-to-formentera/",
         "category": "private yacht",
         "label": "Maritime Guide",
-        "title": "Private Boat Trip Mallorca to Formentera: The 2026 Elite Guide",
-        "excerpt": "Experience the crown jewel of Mediterranean yachting. A 1,500-word masterclass on the Mallorca to Formentera crossing, including costs, routes, and secret island spots.",
+        "title": "Private Boat Trip Mallorca to Formentera: The Elite Guide",
+        "excerpt": "Experience the crown jewel of Mediterranean yachting. A comprehensive masterclass on the Mallorca to Formentera crossing, including costs, routes, and secret island spots.",
         "link_text": "Explore the Route",
         "image": "/assets/images/mallorca_formentera_hero_8k.png"
     },
@@ -367,15 +358,6 @@
         "excerpt": "A 1,500-word masterclass on private aviation economics. Master 2026 pricing, empty leg strategies, and hidden fees for elite global travelers.",
         "link_text": "Read the Full Guide",
         "image": "/assets/private_jet_cost_hero_2026.png"
-    },
-    {
-        "url": "/yacht-charter-mallorca-formentera.html",
-        "category": "private yacht",
-        "label": "Private Yacht",
-        "title": "7 Best Yacht Charter Mallorca to Formentera 2025",
-        "excerpt": "Plan the ultimate yacht charter Mallorca to Formentera. Discover routes,\n                        costs, top boats & insider tips for the defining maritime experience of the Mediterranean.",
-        "link_text": "View Analysis",
-        "image": "/assets/mallorca_formentera_hero.png"
     },
     {
         "url": "/best-private-boat-charter-dubai.html",

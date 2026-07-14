@@ -12,6 +12,16 @@ RewriteEngine On
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteRule ^(.*)$ https://eliteluxurybookings.com/$1 [L,R=301]
+
+# Consolidation Redirects: Mallorca to Formentera Private Boat Trip
+RewriteRule ^boat-trip-from-mallorca-to-formentera(\.html)?/?$ https://eliteluxurybookings.com/private-boat-trip-mallorca-to-formentera/ [R=301,NC,L]
+RewriteRule ^mallorca-to-formentera-private-boat-cost(\.html)?/?$ https://eliteluxurybookings.com/private-boat-trip-mallorca-to-formentera/ [R=301,NC,L]
+RewriteRule ^yacht-charter-mallorca-formentera(\.html)?/?$ https://eliteluxurybookings.com/private-boat-trip-mallorca-to-formentera/ [R=301,NC,L]
+
+# 301 redirects for GSC missing/deleted pages
+RewriteRule ^different-types-of-private-jets-which-one-is-right-for-you(\.html)?/?$ https://eliteluxurybookings.com/types-of-private-jets/ [R=301,NC,L]
+RewriteRule ^private-jet-empty-leg-deals(\.html)?/?$ https://eliteluxurybookings.com/empty-leg-flights-guide/ [R=301,NC,L]
+
 # 0. Global Error Handling
 ErrorDocument 404 https://eliteluxurybookings.com/
 
