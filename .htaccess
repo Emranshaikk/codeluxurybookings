@@ -36,6 +36,10 @@ RewriteRule ^(.*)$ %{REQUEST_URI}/ [L,R=301]
 
 # 2. Redirect /page.html to /page/ (Clean SEO Migration)
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
+RewriteCond %{REQUEST_URI} !^/zohoverify/
+RewriteCond %{REQUEST_URI} !^/zohoverify\.html
+RewriteCond %{REQUEST_URI} !^/verifyforzoho\.html
+RewriteCond %{REQUEST_URI} !^/zoho-domain-verification\.html
 RewriteRule ^(.*)\.html$ /$1/ [R=301,L]
 
 # 3. Handle Root Index requests

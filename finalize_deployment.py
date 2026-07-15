@@ -63,7 +63,7 @@ report = {
     "errors": []
 }
 
-SKIP_FILES = {'_template_blog_master.html', '_template_master.html'}
+SKIP_FILES = {'_template_blog_master.html', '_template_master.html', 'zohoverify.html', 'verifyforzoho.html', 'zoho-domain-verification.html'}
 
 html_files = [f for f in os.listdir('.') if f.endswith('.html') and f not in SKIP_FILES]
 report['total_files'] = len(html_files)
