@@ -116,26 +116,6 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Aspen to New York Private Jet Cost",
-      "description": "Exclusive return aviation route from Aspen to New York with Light, Midsize, and Heavy jet options.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Elite Luxury Bookings"
-      },
-      "offers": {
-        "@type": "AggregateOffer",
-        "lowPrice": "18000",
-        "highPrice": "75000",
-        "priceCurrency": "USD",
-        "offerCount": "4"
-      }
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
         {
@@ -947,16 +927,9 @@
                 </p>
 
                 <!-- Dynamic Urgency Alert Banner -->
-                <div id="dynamicUrgencyBanner" class="urgency-alert"
-                    style="background: rgba(212,175,55,0.03); border: 1px solid rgba(212,175,55,0.3); padding: 12px 20px; border-radius: 12px; margin: 2rem auto 1.5rem; max-width: 700px; display: flex; align-items: center; justify-content: center; gap: 15px; animation: fadeIn 1s ease-out;">
-                    <span style="position: relative; display: flex; height: 12px; width: 12px;">
-                        <span style="animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite; position: absolute; display: inline-flex; height: 100%; width: 100%; border-radius: 50%; background-color: var(--primary-gold); opacity: 0.75;"></span>
-                        <span style="position: relative; display: inline-flex; border-radius: 50%; height: 12px; width: 12px; background-color: var(--primary-gold);"></span>
-                    </span>
-                    <span id="bannerText" style="color: var(--primary-gold); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
-                        Checking slot availability at KASE...
-                    </span>
-                </div>
+                <div class="availability-status" style="border: 1px solid rgba(212, 175, 55, 0.25); background: rgba(212, 175, 55, 0.02); padding: 12px 20px; border-radius: 12px; margin: 0 auto 1.5rem; max-width: 700px; display: flex; align-items: center; justify-content: center; gap: 12px;">
+                <span style="color: var(--primary-gold); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">✨ Route Status: High-Availability Executive Corridors Open. Inquire for guaranteed slots.</span>
+            </div>
 
                 <div class="glass-panel"
                     style="padding: 4rem; border: 1px solid var(--glass-border); background: rgba(10, 10, 10, 0.95); border-radius: 30px; box-shadow: 0 50px 120px rgba(0,0,0,0.9); margin: 3rem auto; max-width: 900px; backdrop-filter: blur(30px);">
@@ -1143,7 +1116,8 @@
                                 <span style="color: var(--text-muted); font-size: 0.95rem;">Estimated Flight Cost:</span>
                                 <strong style="color: #fff; font-size: 1.1rem; color: var(--primary-gold);" id="jet-total-cost">$0</strong>
                             </div>
-                            <div style="display: flex; justify-content: space-between;">
+                            <div id="range-warning" style="display: none; margin-top: 1rem; padding: 0.8rem; background: rgba(255,77,77,0.08); border: 1px solid rgba(255,77,77,0.3); border-radius: 6px; color: #ff4d4d; font-size: 0.85rem; font-weight: 500; text-align: center;"></div>
+                        <div style="display: flex; justify-content: space-between;">
                                 <span style="color: var(--text-muted); font-size: 0.95rem;">Estimated Cost Per Passenger:</span>
                                 <strong style="color: #fff; font-size: 0.95rem;" id="jet-per-pax-cost">$0 / pax</strong>
                             </div>
@@ -1804,7 +1778,7 @@
                         });
                         formObject['_subject'] = `New Route Lead: ${formType}`;
 
-                        const emailPromise = fetch('https://formsubmit.co/ajax/contactshaikk@gmail.com', {
+                        const emailPromise = fetch('/submit-lead.php', {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify(formObject)

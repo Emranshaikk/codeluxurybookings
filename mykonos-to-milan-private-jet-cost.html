@@ -79,26 +79,6 @@
     </script>
 
     <!-- Product Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Mykonos to Milan Private Jet Cost",
-      "description": "Exclusive return aviation route from Mykonos to Milan with Light, Midsize, and Heavy jet options.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Elite Luxury Bookings"
-      },
-      "offers": {
-        "@type": "AggregateOffer",
-        "lowPrice": "14500",
-        "highPrice": "32000",
-        "priceCurrency": "USD",
-        "offerCount": "3"
-      }
-    }
-    </script>
-
     <!-- FAQPage Schema -->
     <script type="application/ld+json">
     {
@@ -210,27 +190,6 @@
     </script>
 
     <!-- LocalBusiness Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Elite Luxury Bookings",
-      "url": "https://eliteluxurybookings.com",
-      "logo": "https://eliteluxurybookings.com/favicon.png",
-      "image": "https://eliteluxurybookings.com/assets/mallorca_ibiza_boat_hero_2026.png",
-      "description": "Global authority in luxury travel procurement. Offering bespoke private jet, yacht, and villa charters.",
-      "telephone": "+918801079030",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+918801079030",
-        "contactType": "customer service",
-        "availableLanguage": ["en", "es"],
-        "contactOption": "WhatsApp"
-      },
-      "priceRange": "$$$$"
-    }
-    </script>
-
     <style>
         :root {
             --primary-gold: #D4AF37;
@@ -1454,13 +1413,9 @@
                 </p>
 
                 <!-- Dynamic Date-Driven Urgency Banner -->
-                <div class="urgency-alert" id="urgency-banner" role="status">
-                    <span class="urgency-dot">
-                        <span class="urgency-dot-pulse"></span>
-                        <span class="urgency-dot-core"></span>
-                    </span>
-                    <span class="urgency-text" id="urgency-text">Loading Availability...</span>
-                </div>
+                <div class="availability-status" style="border: 1px solid rgba(212, 175, 55, 0.25); background: rgba(212, 175, 55, 0.02); padding: 12px 20px; border-radius: 12px; margin: 0 auto 1.5rem; max-width: 700px; display: flex; align-items: center; justify-content: center; gap: 12px;">
+                <span style="color: var(--primary-gold); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">✨ Route Status: High-Availability Executive Corridors Open. Inquire for guaranteed slots.</span>
+            </div>
 
                 <!-- Form Success Message -->
                 <div id="form-success-message"
@@ -1695,7 +1650,8 @@
                                 <strong style="color: var(--primary-gold); font-size: 1.25rem;"
                                     id="jet-total-cost">$0</strong>
                             </div>
-                            <div style="display: flex; justify-content: space-between;">
+                            <div id="range-warning" style="display: none; margin-top: 1rem; padding: 0.8rem; background: rgba(255,77,77,0.08); border: 1px solid rgba(255,77,77,0.3); border-radius: 6px; color: #ff4d4d; font-size: 0.85rem; font-weight: 500; text-align: center;"></div>
+                        <div style="display: flex; justify-content: space-between;">
                                 <span style="color: var(--text-muted); font-size: 1rem;">Estimated Cost Per
                                     Passenger:</span>
                                 <strong style="color: #fff; font-size: 1rem;" id="jet-per-pax-cost">$0 / pax</strong>
@@ -1985,7 +1941,7 @@
                             Navigate the comprehensive list of routes using our <a
                                 href="https://eliteluxurybookings.com/global-route-silo/">Global Route Silo</a>
                             directory, or consult our <a
-                                href="https://eliteluxurybookings.com/private-jet-booking-guide/">Master Private Jet
+                                href="https://eliteluxurybookings.com/elite-private-jet-charter/">Master Private Jet
                                 Booking Guide</a>.
                         </div>
                     </li>
@@ -2177,7 +2133,7 @@
                                     style="color: #d4af37; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem;"><i
                                         class="fas fa-plane-arrival"></i> Empty Leg Booking Guide</a></li>
                             <li style="margin-bottom: 1.2rem;"><a
-                                    href="https://eliteluxurybookings.com/private-jet-booking-guide/"
+                                    href="https://eliteluxurybookings.com/elite-private-jet-charter/"
                                     style="color: #d4af37; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem;"><i
                                         class="fas fa-book"></i> Master Private Jet Guide</a></li>
                             <li style="margin-bottom: 1rem;"><a href="https://eliteluxurybookings.com/types-of-private-jets/" style="color: #d4af37; text-decoration: none; font-weight: 600;">✈️ Types of Private Jets</a></li>

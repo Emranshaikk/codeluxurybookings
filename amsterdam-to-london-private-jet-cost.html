@@ -75,26 +75,6 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Amsterdam to London Private Jet Cost",
-      "description": "Exclusive return aviation route from Amsterdam to London with Light, Midsize, and Heavy jet options.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Elite Luxury Bookings"
-      },
-      "offers": {
-        "@type": "AggregateOffer",
-        "lowPrice": "4500",
-        "highPrice": "25000",
-        "priceCurrency": "EUR",
-        "offerCount": "3"
-      }
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
         {
@@ -224,27 +204,6 @@
         "@type": "WebPage",
         "@id": "https://eliteluxurybookings.com/amsterdam-to-london-private-jet-cost/"
       }
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Elite Luxury Bookings",
-      "url": "https://eliteluxurybookings.com",
-      "logo": "https://eliteluxurybookings.com/favicon.png",
-      "image": "https://eliteluxurybookings.com/assets/mallorca_ibiza_boat_hero_2026.png",
-      "description": "Global authority in luxury travel procurement. Offering bespoke private jet, yacht, and villa charters.",
-      "telephone": "+918801079030",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+918801079030",
-        "contactType": "customer service",
-        "availableLanguage": ["en", "es"],
-        "contactOption": "WhatsApp"
-      },
-      "priceRange": "$$$$"
     }
     </script>
 
@@ -1131,17 +1090,9 @@
                     Bypass commercial congestion and Eurostar delays. Our exclusive jet charter network guarantees absolute discretion and world-class luxury as you transition smoothly from Amsterdam to London.</p>
 
                 <!-- Gold Urgency Banner (Managed via JS date logic) -->
-                <div class="urgency-alert" id="urgencyBanner"
-                    style="background: rgba(212,175,55,0.03); border: 1px solid rgba(212,175,55,0.3); padding: 12px 20px; border-radius: 12px; margin: 2rem auto 1.5rem; max-width: 700px; display: flex; align-items: center; justify-content: center; gap: 15px; animation: fadeIn 1s ease-out;">
-                    <span style="position: relative; display: flex; height: 12px; width: 12px;">
-                        <span id="urgencyPing"
-                            style="animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite; position: absolute; display: inline-flex; height: 100%; width: 100%; border-radius: 50%; background-color: var(--primary-gold); opacity: 0.75;"></span>
-                        <span id="urgencyDot"
-                            style="position: relative; display: inline-flex; border-radius: 50%; height: 12px; width: 12px; background-color: var(--primary-gold);"></span>
-                    </span>
-                    <span id="urgencyText"
-                        style="color: var(--primary-gold); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Year-Round Service · 30-Minute Concierge Response · Same-Day Dispatch Available</span>
-                </div>
+                <div class="availability-status" style="border: 1px solid rgba(212, 175, 55, 0.25); background: rgba(212, 175, 55, 0.02); padding: 12px 20px; border-radius: 12px; margin: 0 auto 1.5rem; max-width: 700px; display: flex; align-items: center; justify-content: center; gap: 12px;">
+                <span style="color: var(--primary-gold); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">✨ Route Status: High-Availability Executive Corridors Open. Inquire for guaranteed slots.</span>
+            </div>
 
                 <!-- Form Success State Box -->
                 <div id="form-success-message" style="display:none; text-align: center; padding:4rem 2rem; background:rgba(212,175,55,0.05); border:1px solid var(--primary-gold); border-radius:20px; margin:3rem auto; max-width:900px;">
@@ -1177,7 +1128,7 @@
                         </div>
                         <div style="display: flex; flex-direction: column; gap: 0.8rem;">
                             <label for="email" style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold);">Private Email *</label>
-                            <input id="email" type="email" name="email" required aria-required="true" placeholder="contactshaikk@gmail.com" style="background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 1.2rem 0; color: #fff; font-size: 1.15rem; outline: none; transition: border-color 0.4s; font-family: 'Inter', sans-serif;">
+                            <input id="email" type="email" name="email" required aria-required="true" placeholder="john@example.com" style="background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 1.2rem 0; color: #fff; font-size: 1.15rem; outline: none; transition: border-color 0.4s; font-family: 'Inter', sans-serif;">
                         </div>
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;" class="form-grid">
                             <div style="display: flex; flex-direction: column; gap: 0.8rem;">
@@ -1288,6 +1239,7 @@
                           <span style="color: var(--text-muted); font-size: 0.95rem;">Estimated Flight Cost:</span>
                           <strong style="color: #fff; font-size: 1.1rem; color: var(--primary-gold);" id="jet-total-cost">€0</strong>
                         </div>
+                        <div id="range-warning" style="display: none; margin-top: 1rem; padding: 0.8rem; background: rgba(255,77,77,0.08); border: 1px solid rgba(255,77,77,0.3); border-radius: 6px; color: #ff4d4d; font-size: 0.85rem; font-weight: 500; text-align: center;"></div>
                         <div style="display: flex; justify-content: space-between;">
                           <span style="color: var(--text-muted); font-size: 0.95rem;">Estimated Cost Per Passenger:</span>
                           <strong style="color: #fff; font-size: 0.95rem;" id="jet-per-pax-cost">€0 / pax</strong>
@@ -1724,7 +1676,7 @@
                             <li style="margin-bottom: 1rem;"><a href="https://eliteluxurybookings.com/private-jet-charter-cost-estimator/" style="color: #d4af37; text-decoration: none; font-weight: 600;"><i class="fas fa-coins" aria-hidden="true" style="margin-right: 8px;"></i> Private Jet Cost Estimator</a></li>
                             <li style="margin-bottom: 1rem;"><a href="https://eliteluxurybookings.com/heavy-jet-vs-light-jet-charter/" style="color: #d4af37; text-decoration: none; font-weight: 600;"><i class="fas fa-plane" aria-hidden="true" style="margin-right: 8px;"></i> Heavy vs Light Jet Comparison</a></li>
                             <li style="margin-bottom: 1rem;"><a href="https://eliteluxurybookings.com/empty-leg-flights-guide/" style="color: #d4af37; text-decoration: none; font-weight: 600;"><i class="fas fa-plane-arrival" aria-hidden="true" style="margin-right: 8px;"></i> Empty Leg Booking Guide</a></li>
-                            <li style="margin-bottom: 1rem;"><a href="https://eliteluxurybookings.com/private-jet-booking-guide/" style="color: #d4af37; text-decoration: none; font-weight: 600;"><i class="fas fa-book" aria-hidden="true" style="margin-right: 8px;"></i> Master Private Jet Guide</a></li>
+                            <li style="margin-bottom: 1rem;"><a href="https://eliteluxurybookings.com/elite-private-jet-charter/" style="color: #d4af37; text-decoration: none; font-weight: 600;"><i class="fas fa-book" aria-hidden="true" style="margin-right: 8px;"></i> Master Private Jet Guide</a></li>
                             <li style="margin-bottom: 1rem;"><a href="https://eliteluxurybookings.com/types-of-private-jets/" style="color: #d4af37; text-decoration: none; font-weight: 600;">✈️ Types of Private Jets</a></li>
                             <li style="margin-bottom: 1rem;"><a href="https://eliteluxurybookings.com/london-to-newyork-private-jet-cost/" style="color: #d4af37; text-decoration: none; font-weight: 600;">✈️ London to New York Private Jet Cost</a></li>
                             <li style="margin-bottom: 1rem;"><a href="https://eliteluxurybookings.com/newyork-to-miami-private-jet-cost/" style="color: #d4af37; text-decoration: none; font-weight: 600;">✈️ New York to Miami Private Jet Cost</a></li>

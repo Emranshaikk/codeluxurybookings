@@ -1,0 +1,1055 @@
+[
+  {
+    "filename": "abudhabi-to-doha-private-jet-cost.html",
+    "origin": "abudhabi",
+    "destination": "doha",
+    "stated_dist": 184.0,
+    "real_dist": 187.1224708078881,
+    "stated_time": "0h 53m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "amsterdam-to-london-private-jet-cost.html",
+    "origin": "amsterdam",
+    "destination": "london",
+    "stated_dist": 212.0,
+    "real_dist": 222.383462477672,
+    "stated_time": "0h 56m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "aspen-to-miami-private-jet-cost.html",
+    "origin": "aspen",
+    "destination": "miami",
+    "stated_dist": 1799.0,
+    "real_dist": 1797.8813427431828,
+    "stated_time": "4h 14m",
+    "optimal_class": "Midsize Jet"
+  },
+  {
+    "filename": "aspen-to-newyork-private-jet-cost.html",
+    "origin": "aspen",
+    "destination": "newyork",
+    "stated_dist": 1730.0,
+    "real_dist": 1730.9761315942364,
+    "stated_time": "4h 6m",
+    "optimal_class": "N/A"
+  },
+  {
+    "filename": "bahamas-to-newyork-private-jet-cost.html",
+    "origin": "bahamas",
+    "destination": "newyork",
+    "stated_dist": 5385.0,
+    "real_dist": 1100.7623347166323,
+    "stated_time": "11h 43m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "bali-to-melbourne-private-jet-cost.html",
+    "origin": "bali",
+    "destination": "melbourne",
+    "stated_dist": 2736.0,
+    "real_dist": 2751.635109718888,
+    "stated_time": "6h 12m",
+    "optimal_class": "Midsize Jet"
+  },
+  {
+    "filename": "bali-to-perth-private-jet-cost.html",
+    "origin": "bali",
+    "destination": "perth",
+    "stated_dist": 1603.0,
+    "real_dist": 1627.1155279088098,
+    "stated_time": "3h 50m",
+    "optimal_class": "Midsize Jet"
+  },
+  {
+    "filename": "barcelona-to-london-private-jet-cost.html",
+    "origin": "barcelona",
+    "destination": "london",
+    "stated_dist": 712.0,
+    "real_dist": 707.8238179101696,
+    "stated_time": "1h 59m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "beijing-to-seoul-private-jet-cost.html",
+    "origin": "beijing",
+    "destination": "seoul",
+    "stated_dist": 575.0,
+    "real_dist": 591.7556096157684,
+    "stated_time": "1h 41m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "brisbane-to-sydney-private-jet-cost.html",
+    "origin": "brisbane",
+    "destination": "sydney",
+    "stated_dist": 454.0,
+    "real_dist": 455.0841707207748,
+    "stated_time": "1h 26m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "cabo-to-losangeles-private-jet-cost.html",
+    "origin": "cabo",
+    "destination": "losangeles",
+    "stated_dist": 922.0,
+    "real_dist": 921.3725325735697,
+    "stated_time": "2h 25m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "cancun-to-dallas-private-jet-cost.html",
+    "origin": "cancun",
+    "destination": "dallas",
+    "stated_dist": 1015.0,
+    "real_dist": 1008.2834032426866,
+    "stated_time": "2h 36m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "chicago-to-losangeles-private-jet-cost.html",
+    "origin": "chicago",
+    "destination": "losangeles",
+    "stated_dist": 1742.0,
+    "real_dist": 1742.326542428723,
+    "stated_time": "4h 7m",
+    "optimal_class": "Midsize Jet"
+  },
+  {
+    "filename": "chicago-to-miami-private-jet-cost.html",
+    "origin": "chicago",
+    "destination": "miami",
+    "stated_dist": 1189.0,
+    "real_dist": 1191.3744154703018,
+    "stated_time": "2h 58m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "chicago-to-newyork-private-jet-cost.html",
+    "origin": "chicago",
+    "destination": "newyork",
+    "stated_dist": 709.0,
+    "real_dist": 711.0375600845707,
+    "stated_time": "N/A",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "dallas-to-cancun-private-jet-cost.html",
+    "origin": "dallas",
+    "destination": "cancun",
+    "stated_dist": 1015.0,
+    "real_dist": 1008.2834032426866,
+    "stated_time": "2h 36m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "dallas-to-denver-private-jet-cost.html",
+    "origin": "dallas",
+    "destination": "denver",
+    "stated_dist": 6613.0,
+    "real_dist": 662.5804221590242,
+    "stated_time": "14h 16m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "dallas-to-losangeles-private-jet-cost.html",
+    "origin": "dallas",
+    "destination": "losangeles",
+    "stated_dist": 1236.0,
+    "real_dist": 1237.7775078007367,
+    "stated_time": "3h 04m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "dallas-to-newyork-private-jet-cost.html",
+    "origin": "dallas",
+    "destination": "newyork",
+    "stated_dist": 1373.0,
+    "real_dist": 1370.5906307363555,
+    "stated_time": "3h 21m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "denver-to-dallas-private-jet-cost.html",
+    "origin": "denver",
+    "destination": "dallas",
+    "stated_dist": 6613.0,
+    "real_dist": 662.5804221590242,
+    "stated_time": "14h 16m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "doha-to-abudhabi-private-jet-cost.html",
+    "origin": "doha",
+    "destination": "abudhabi",
+    "stated_dist": 184.0,
+    "real_dist": 187.1224708078881,
+    "stated_time": "0h 53m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "dubai-to-london-private-jet-cost.html",
+    "origin": "dubai",
+    "destination": "london",
+    "stated_dist": 3402.0,
+    "real_dist": 3401.0694670236735,
+    "stated_time": "7h 35m",
+    "optimal_class": "Heavy Jet"
+  },
+  {
+    "filename": "dubai-to-newyork-private-jet-cost.html",
+    "origin": "dubai",
+    "destination": "newyork",
+    "stated_dist": 6841.0,
+    "real_dist": 6840.17639187069,
+    "stated_time": "14h 45m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "dubai-to-sydney-private-jet-cost.html",
+    "origin": "dubai",
+    "destination": "sydney",
+    "stated_dist": 7483.0,
+    "real_dist": 7487.310859133601,
+    "stated_time": "16h 5m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "geneva-to-london-private-jet-cost.html",
+    "origin": "geneva",
+    "destination": "london",
+    "stated_dist": 462.0,
+    "real_dist": 463.89059945649103,
+    "stated_time": "1h 27m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "goldcoast-to-sydney-private-jet-cost.html",
+    "origin": "goldcoast",
+    "destination": "sydney",
+    "stated_dist": 416.0,
+    "real_dist": 424.6388921146143,
+    "stated_time": "1h 22m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "hawaii-to-losangeles-private-jet-cost.html",
+    "origin": "hawaii",
+    "destination": "losangeles",
+    "stated_dist": 7812.0,
+    "real_dist": 2560.03385691045,
+    "stated_time": "16h 46m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "hongkong-to-shanghai-private-jet-cost.html",
+    "origin": "hongkong",
+    "destination": "shanghai",
+    "stated_dist": 758.0,
+    "real_dist": 762.4498514911068,
+    "stated_time": "2h 4m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "hongkong-to-singapore-private-jet-cost.html",
+    "origin": "hongkong",
+    "destination": "singapore",
+    "stated_dist": 1607.0,
+    "real_dist": 1606.966946202482,
+    "stated_time": "3h 50m",
+    "optimal_class": "Midsize Jet"
+  },
+  {
+    "filename": "houston-to-miami-private-jet-cost.html",
+    "origin": "houston",
+    "destination": "miami",
+    "stated_dist": 5608.0,
+    "real_dist": 967.358038474521,
+    "stated_time": "12h 11m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "ibiza-to-london-private-jet-cost.html",
+    "origin": "ibiza",
+    "destination": "london",
+    "stated_dist": 880.0,
+    "real_dist": 873.8374999777529,
+    "stated_time": "2h 19m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "la-to-lasvegas-private-jet-cost.html",
+    "origin": "la",
+    "destination": "lasvegas",
+    "stated_dist": 7603.0,
+    "real_dist": 228.49634840748993,
+    "stated_time": "16h 20m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "lasvegas-to-la-private-jet-cost.html",
+    "origin": "lasvegas",
+    "destination": "la",
+    "stated_dist": 7603.0,
+    "real_dist": 228.49634840748993,
+    "stated_time": "16h 20m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "lasvegas-to-losangeles-private-jet-cost.html",
+    "origin": "lasvegas",
+    "destination": "losangeles",
+    "stated_dist": 227.0,
+    "real_dist": 228.49634840748993,
+    "stated_time": "0h 58m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "lasvegas-to-miami-private-jet-cost.html",
+    "origin": "lasvegas",
+    "destination": "miami",
+    "stated_dist": 2176.0,
+    "real_dist": 2177.9917928130403,
+    "stated_time": "5h 1m",
+    "optimal_class": "Midsize Jet"
+  },
+  {
+    "filename": "lasvegas-to-newyork-private-jet-cost.html",
+    "origin": "lasvegas",
+    "destination": "newyork",
+    "stated_dist": 2227.0,
+    "real_dist": 2227.51492953447,
+    "stated_time": "5h 8m",
+    "optimal_class": "Midsize Jet"
+  },
+  {
+    "filename": "london-to-amsterdam-private-jet-cost.html",
+    "origin": "london",
+    "destination": "amsterdam",
+    "stated_dist": 212.0,
+    "real_dist": 222.383462477672,
+    "stated_time": "0h 56m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "london-to-barcelona-private-jet-cost.html",
+    "origin": "london",
+    "destination": "barcelona",
+    "stated_dist": 712.0,
+    "real_dist": 707.8238179101696,
+    "stated_time": "1h 59m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "london-to-dubai-private-jet-cost.html",
+    "origin": "london",
+    "destination": "dubai",
+    "stated_dist": 3402.0,
+    "real_dist": 3401.0694670236735,
+    "stated_time": "7h 35m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "london-to-geneva-private-jet-cost.html",
+    "origin": "london",
+    "destination": "geneva",
+    "stated_dist": 462.0,
+    "real_dist": 463.89059945649103,
+    "stated_time": "1h 27m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "london-to-ibiza-private-jet-cost-guide.html",
+    "origin": "london",
+    "destination": "ibiza",
+    "stated_dist": 0.0,
+    "real_dist": 873.8374999777529,
+    "stated_time": "N/A",
+    "optimal_class": "N/A"
+  },
+  {
+    "filename": "london-to-ibiza-private-jet-cost.html",
+    "origin": "london",
+    "destination": "ibiza",
+    "stated_dist": 880.0,
+    "real_dist": 873.8374999777529,
+    "stated_time": "2h 19m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "london-to-losangeles-private-jet-cost.html",
+    "origin": "london",
+    "destination": "losangeles",
+    "stated_dist": 5442.0,
+    "real_dist": 5440.539718752685,
+    "stated_time": "11h 50m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "london-to-marrakesh-private-jet-cost.html",
+    "origin": "london",
+    "destination": "marrakesh",
+    "stated_dist": 1432.0,
+    "real_dist": 1430.1926272820535,
+    "stated_time": "3h 29m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "london-to-miami-private-jet-cost.html",
+    "origin": "london",
+    "destination": "miami",
+    "stated_dist": 4432.0,
+    "real_dist": 4428.493306518638,
+    "stated_time": "9h 43m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "london-to-milan-private-jet-cost.html",
+    "origin": "london",
+    "destination": "milan",
+    "stated_dist": 599.0,
+    "real_dist": 596.1499978739191,
+    "stated_time": "1h 44m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "london-to-mykonos-private-jet-cost.html",
+    "origin": "london",
+    "destination": "mykonos",
+    "stated_dist": 1574.0,
+    "real_dist": 1573.370695327557,
+    "stated_time": "3h 46m",
+    "optimal_class": "Midsize Jet"
+  },
+  {
+    "filename": "london-to-newyork-private-jet-cost.html",
+    "origin": "london",
+    "destination": "newyork",
+    "stated_dist": 3462.0,
+    "real_dist": 3461.2141838246157,
+    "stated_time": "7h 42m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "london-to-nice-private-jet-cost.html",
+    "origin": "london",
+    "destination": "nice",
+    "stated_dist": 637.0,
+    "real_dist": 638.5979662204046,
+    "stated_time": "1h 49m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "london-to-palma-private-jet-cost.html",
+    "origin": "london",
+    "destination": "palma",
+    "stated_dist": 840.0,
+    "real_dist": 835.553832466393,
+    "stated_time": "2h 15m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "london-to-paris-private-jet-cost.html",
+    "origin": "london",
+    "destination": "paris",
+    "stated_dist": 216.0,
+    "real_dist": 213.47821875343206,
+    "stated_time": "0h 57m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "london-to-rome-private-jet-cost.html",
+    "origin": "london",
+    "destination": "rome",
+    "stated_dist": 890.0,
+    "real_dist": 890.9203325396305,
+    "stated_time": "2h 21m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "london-to-sanfrancisco-private-jet-cost.html",
+    "origin": "london",
+    "destination": "sanfrancisco",
+    "stated_dist": 5358.0,
+    "real_dist": 5354.061402294437,
+    "stated_time": "11h 39m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "london-to-santorini-private-jet-cost.html",
+    "origin": "london",
+    "destination": "santorini",
+    "stated_dist": 1628.0,
+    "real_dist": 1631.591403610216,
+    "stated_time": "3h 53m",
+    "optimal_class": "Midsize Jet"
+  },
+  {
+    "filename": "london-to-tokyo-private-jet-cost.html",
+    "origin": "london",
+    "destination": "tokyo",
+    "stated_dist": 5945.0,
+    "real_dist": 5939.480890715637,
+    "stated_time": "12h 53m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "losangeles-to-cabo-private-jet-cost.html",
+    "origin": "losangeles",
+    "destination": "cabo",
+    "stated_dist": 922.0,
+    "real_dist": 921.3725325735697,
+    "stated_time": "2h 25m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "losangeles-to-chicago-private-jet-cost.html",
+    "origin": "losangeles",
+    "destination": "chicago",
+    "stated_dist": 1742.0,
+    "real_dist": 1742.326542428723,
+    "stated_time": "4h 7m",
+    "optimal_class": "Midsize Jet"
+  },
+  {
+    "filename": "losangeles-to-dallas-private-jet-cost.html",
+    "origin": "losangeles",
+    "destination": "dallas",
+    "stated_dist": 1236.0,
+    "real_dist": 1237.7775078007367,
+    "stated_time": "3h 4m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "losangeles-to-hawaii-private-jet-cost.html",
+    "origin": "losangeles",
+    "destination": "hawaii",
+    "stated_dist": 7812.0,
+    "real_dist": 2560.03385691045,
+    "stated_time": "16h 46m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "losangeles-to-lasvegas-private-jet-cost.html",
+    "origin": "losangeles",
+    "destination": "lasvegas",
+    "stated_dist": 227.0,
+    "real_dist": 228.49634840748993,
+    "stated_time": "0h 58m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "losangeles-to-london-private-jet-cost.html",
+    "origin": "losangeles",
+    "destination": "london",
+    "stated_dist": 5442.0,
+    "real_dist": 5440.539718752685,
+    "stated_time": "11h 50m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "losangeles-to-miami-private-jet-cost.html",
+    "origin": "losangeles",
+    "destination": "miami",
+    "stated_dist": 2334.0,
+    "real_dist": 2335.617096835367,
+    "stated_time": "5h 21m",
+    "optimal_class": "Midsize Jet"
+  },
+  {
+    "filename": "losangeles-to-newyork-private-jet-cost.html",
+    "origin": "losangeles",
+    "destination": "newyork",
+    "stated_dist": 2445.0,
+    "real_dist": 2445.586606929677,
+    "stated_time": "5h 35m",
+    "optimal_class": "Midsize Jet"
+  },
+  {
+    "filename": "losangeles-to-sanfrancisco-private-jet-cost.html",
+    "origin": "losangeles",
+    "destination": "sanfrancisco",
+    "stated_dist": 347.0,
+    "real_dist": 347.42529280666724,
+    "stated_time": "1h 13m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "losangeles-to-tokyo-private-jet-cost.html",
+    "origin": "losangeles",
+    "destination": "tokyo",
+    "stated_dist": 5485.0,
+    "real_dist": 5480.1779589961425,
+    "stated_time": "11h 55m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "maldives-to-riyadh-private-jet-cost.html",
+    "origin": "maldives",
+    "destination": "riyadh",
+    "stated_dist": 3560.0,
+    "real_dist": 2308.5611220994138,
+    "stated_time": "7h 55m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "marrakesh-to-london-private-jet-cost.html",
+    "origin": "marrakesh",
+    "destination": "london",
+    "stated_dist": 1432.0,
+    "real_dist": 1430.1926272820535,
+    "stated_time": "3h 29m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "melbourne-to-bali-private-jet-cost.html",
+    "origin": "melbourne",
+    "destination": "bali",
+    "stated_dist": 2736.0,
+    "real_dist": 2751.635109718888,
+    "stated_time": "6h 12m",
+    "optimal_class": "Midsize / Super-Mid"
+  },
+  {
+    "filename": "melbourne-to-sydney-private-jet-cost.html",
+    "origin": "melbourne",
+    "destination": "sydney",
+    "stated_dist": 448.0,
+    "real_dist": 443.3082264440166,
+    "stated_time": "1h 26m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "miami-to-aspen-private-jet-cost.html",
+    "origin": "miami",
+    "destination": "aspen",
+    "stated_dist": 1799.0,
+    "real_dist": 1797.8813427431828,
+    "stated_time": "4h 14m",
+    "optimal_class": "Midsize Jet"
+  },
+  {
+    "filename": "miami-to-chicago-private-jet-cost.html",
+    "origin": "miami",
+    "destination": "chicago",
+    "stated_dist": 1189.0,
+    "real_dist": 1191.3744154703018,
+    "stated_time": "2h 58m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "miami-to-houston-private-jet-cost.html",
+    "origin": "miami",
+    "destination": "houston",
+    "stated_dist": 5608.0,
+    "real_dist": 967.358038474521,
+    "stated_time": "12h 11m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "miami-to-lasvegas-private-jet-cost.html",
+    "origin": "miami",
+    "destination": "lasvegas",
+    "stated_dist": 2176.0,
+    "real_dist": 2177.9917928130403,
+    "stated_time": "5h 1m",
+    "optimal_class": "Midsize Jet"
+  },
+  {
+    "filename": "miami-to-london-private-jet-cost.html",
+    "origin": "miami",
+    "destination": "london",
+    "stated_dist": 4432.0,
+    "real_dist": 4428.493306518638,
+    "stated_time": "9h 43m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "miami-to-losangeles-private-jet-cost.html",
+    "origin": "miami",
+    "destination": "losangeles",
+    "stated_dist": 2334.0,
+    "real_dist": 2335.617096835367,
+    "stated_time": "5h 21m",
+    "optimal_class": "Midsize Jet"
+  },
+  {
+    "filename": "miami-to-newyork-private-jet-cost.html",
+    "origin": "miami",
+    "destination": "newyork",
+    "stated_dist": 1095.0,
+    "real_dist": 1092.358640373665,
+    "stated_time": "2h 46m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "miami-to-turksandcaicos-private-jet-cost.html",
+    "origin": "miami",
+    "destination": "turksandcaicos",
+    "stated_dist": 576.0,
+    "real_dist": 601.1273262922215,
+    "stated_time": "1h 42m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "milan-to-london-private-jet-cost.html",
+    "origin": "milan",
+    "destination": "london",
+    "stated_dist": 599.0,
+    "real_dist": 596.1499978739191,
+    "stated_time": "1h 44m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "milan-to-mykonos-private-jet-cost.html",
+    "origin": "milan",
+    "destination": "mykonos",
+    "stated_dist": 998.0,
+    "real_dist": 999.7954565671123,
+    "stated_time": "2h 34m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "mykonos-to-london-private-jet-cost.html",
+    "origin": "mykonos",
+    "destination": "london",
+    "stated_dist": 1574.0,
+    "real_dist": 1573.370695327557,
+    "stated_time": "3h 46m",
+    "optimal_class": "Midsize Jet"
+  },
+  {
+    "filename": "mykonos-to-milan-private-jet-cost.html",
+    "origin": "mykonos",
+    "destination": "milan",
+    "stated_dist": 998.0,
+    "real_dist": 999.7954565671123,
+    "stated_time": "2h 34m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "newyork-to-aspen-private-jet-cost.html",
+    "origin": "newyork",
+    "destination": "aspen",
+    "stated_dist": 1730.0,
+    "real_dist": 1730.9761315942364,
+    "stated_time": "4h 6m",
+    "optimal_class": "Midsize Jet"
+  },
+  {
+    "filename": "newyork-to-bahamas-private-jet-cost.html",
+    "origin": "newyork",
+    "destination": "bahamas",
+    "stated_dist": 5385.0,
+    "real_dist": 1100.7623347166323,
+    "stated_time": "11h 43m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "newyork-to-chicago-private-jet-cost.html",
+    "origin": "newyork",
+    "destination": "chicago",
+    "stated_dist": 709.0,
+    "real_dist": 711.0375600845707,
+    "stated_time": "1h 58m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "newyork-to-dallas-private-jet-cost.html",
+    "origin": "newyork",
+    "destination": "dallas",
+    "stated_dist": 1373.0,
+    "real_dist": 1370.5906307363555,
+    "stated_time": "3h 21m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "newyork-to-dubai-private-jet-cost.html",
+    "origin": "newyork",
+    "destination": "dubai",
+    "stated_dist": 6841.0,
+    "real_dist": 6840.17639187069,
+    "stated_time": "14h 45m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "newyork-to-lasvegas-private-jet-cost.html",
+    "origin": "newyork",
+    "destination": "lasvegas",
+    "stated_dist": 2227.0,
+    "real_dist": 2227.51492953447,
+    "stated_time": "5h 8m",
+    "optimal_class": "Midsize Jet"
+  },
+  {
+    "filename": "newyork-to-london-private-jet-cost.html",
+    "origin": "newyork",
+    "destination": "london",
+    "stated_dist": 3462.0,
+    "real_dist": 3461.2141838246157,
+    "stated_time": "6h 50m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "newyork-to-losangeles-private-jet-cost.html",
+    "origin": "newyork",
+    "destination": "losangeles",
+    "stated_dist": 2445.0,
+    "real_dist": 2445.586606929677,
+    "stated_time": "5h 35m",
+    "optimal_class": "Midsize Jet"
+  },
+  {
+    "filename": "newyork-to-miami-private-jet-cost.html",
+    "origin": "newyork",
+    "destination": "miami",
+    "stated_dist": 1095.0,
+    "real_dist": 1092.358640373665,
+    "stated_time": "2h 46m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "newyork-to-paris-private-jet-cost.html",
+    "origin": "newyork",
+    "destination": "paris",
+    "stated_dist": 3628.0,
+    "real_dist": 3627.1337764975256,
+    "stated_time": "8h 3m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "newyork-to-toronto-private-jet-cost.html",
+    "origin": "newyork",
+    "destination": "toronto",
+    "stated_dist": 337.0,
+    "real_dist": 342.0337207592342,
+    "stated_time": "1h 12m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "nice-to-london-private-jet-cost.html",
+    "origin": "nice",
+    "destination": "london",
+    "stated_dist": 637.0,
+    "real_dist": 638.5979662204046,
+    "stated_time": "1h 49m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "palma-to-london-private-jet-cost.html",
+    "origin": "palma",
+    "destination": "london",
+    "stated_dist": 840.0,
+    "real_dist": 835.553832466393,
+    "stated_time": "2h 15m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "paris-to-dubai-private-jet-cost.html",
+    "origin": "paris",
+    "destination": "dubai",
+    "stated_dist": 3261.0,
+    "real_dist": 3260.1988505326867,
+    "stated_time": "7h 17m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "paris-to-london-private-jet-cost.html",
+    "origin": "paris",
+    "destination": "london",
+    "stated_dist": 216.0,
+    "real_dist": 213.47821875343206,
+    "stated_time": "0h 57m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "paris-to-newyork-private-jet-cost.html",
+    "origin": "paris",
+    "destination": "newyork",
+    "stated_dist": 3628.0,
+    "real_dist": 3627.1337764975256,
+    "stated_time": "8h 3m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "perth-to-bali-private-jet-cost.html",
+    "origin": "perth",
+    "destination": "bali",
+    "stated_dist": 1603.0,
+    "real_dist": 1627.1155279088098,
+    "stated_time": "3h 50m",
+    "optimal_class": "Midsize Jet"
+  },
+  {
+    "filename": "perth-to-sydney-private-jet-cost.html",
+    "origin": "perth",
+    "destination": "sydney",
+    "stated_dist": 2048.0,
+    "real_dist": 2044.6919766464464,
+    "stated_time": "4h 46m",
+    "optimal_class": "Midsize Jet"
+  },
+  {
+    "filename": "riyadh-to-maldives-private-jet-cost.html",
+    "origin": "riyadh",
+    "destination": "maldives",
+    "stated_dist": 3560.0,
+    "real_dist": 2308.5611220994138,
+    "stated_time": "7h 55m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "rome-to-london-private-jet-cost.html",
+    "origin": "rome",
+    "destination": "london",
+    "stated_dist": 890.0,
+    "real_dist": 890.9203325396305,
+    "stated_time": "2h 21m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "sanfrancisco-to-london-private-jet-cost.html",
+    "origin": "sanfrancisco",
+    "destination": "london",
+    "stated_dist": 5358.0,
+    "real_dist": 5354.061402294437,
+    "stated_time": "11h 39m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "sanfrancisco-to-losangeles-private-jet-cost.html",
+    "origin": "sanfrancisco",
+    "destination": "losangeles",
+    "stated_dist": 347.0,
+    "real_dist": 347.42529280666724,
+    "stated_time": "1h 13m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "santorini-to-london-private-jet-cost.html",
+    "origin": "santorini",
+    "destination": "london",
+    "stated_dist": 1628.0,
+    "real_dist": 1631.591403610216,
+    "stated_time": "3h 53m",
+    "optimal_class": "Midsize Jet"
+  },
+  {
+    "filename": "seoul-to-beijing-private-jet-cost.html",
+    "origin": "seoul",
+    "destination": "beijing",
+    "stated_dist": 575.0,
+    "real_dist": 591.7556096157684,
+    "stated_time": "1h 41m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "shanghai-to-hongkong-private-jet-cost.html",
+    "origin": "shanghai",
+    "destination": "hongkong",
+    "stated_dist": 758.0,
+    "real_dist": 762.4498514911068,
+    "stated_time": "2h 4m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "singapore-to-hongkong-private-jet-cost.html",
+    "origin": "singapore",
+    "destination": "hongkong",
+    "stated_dist": 1607.0,
+    "real_dist": 1606.966946202482,
+    "stated_time": "3h 50m",
+    "optimal_class": "Midsize Jet"
+  },
+  {
+    "filename": "singapore-to-sydney-private-jet-cost.html",
+    "origin": "singapore",
+    "destination": "sydney",
+    "stated_dist": 3914.0,
+    "real_dist": 3918.5662094135,
+    "stated_time": "8h 39m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "sydney-to-brisbane-private-jet-cost.html",
+    "origin": "sydney",
+    "destination": "brisbane",
+    "stated_dist": 454.0,
+    "real_dist": 455.0841707207748,
+    "stated_time": "1h 26m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "sydney-to-dubai-private-jet-cost.html",
+    "origin": "sydney",
+    "destination": "dubai",
+    "stated_dist": 7483.0,
+    "real_dist": 7487.310859133601,
+    "stated_time": "16h 5m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "sydney-to-goldcoast-private-jet-cost.html",
+    "origin": "sydney",
+    "destination": "goldcoast",
+    "stated_dist": 416.0,
+    "real_dist": 424.6388921146143,
+    "stated_time": "1h 22m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "sydney-to-melbourne-private-jet-cost.html",
+    "origin": "sydney",
+    "destination": "melbourne",
+    "stated_dist": 448.0,
+    "real_dist": 443.3082264440166,
+    "stated_time": "1h 26m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "sydney-to-perth-private-jet-cost.html",
+    "origin": "sydney",
+    "destination": "perth",
+    "stated_dist": 2048.0,
+    "real_dist": 2044.6919766464464,
+    "stated_time": "4h 46m",
+    "optimal_class": "Midsize Jet"
+  },
+  {
+    "filename": "sydney-to-singapore-private-jet-cost.html",
+    "origin": "sydney",
+    "destination": "singapore",
+    "stated_dist": 3914.0,
+    "real_dist": 3918.5662094135,
+    "stated_time": "8h 39m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "tokyo-to-london-private-jet-cost.html",
+    "origin": "tokyo",
+    "destination": "london",
+    "stated_dist": 5945.0,
+    "real_dist": 5939.480890715637,
+    "stated_time": "12h 53m",
+    "optimal_class": "Heavy or Ultra-Long Range Jet"
+  },
+  {
+    "filename": "toronto-to-newyork-private-jet-cost.html",
+    "origin": "toronto",
+    "destination": "newyork",
+    "stated_dist": 337.0,
+    "real_dist": 342.0337207592342,
+    "stated_time": "1h 12m",
+    "optimal_class": "Light Jet"
+  },
+  {
+    "filename": "turksandcaicos-to-miami-private-jet-cost.html",
+    "origin": "turksandcaicos",
+    "destination": "miami",
+    "stated_dist": 576.0,
+    "real_dist": 601.1273262922215,
+    "stated_time": "1h 42m",
+    "optimal_class": "Light Jet"
+  }
+]
