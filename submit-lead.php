@@ -117,7 +117,7 @@ curl_close($ch);
 
 // Send secure backup notification to FormSubmit if not raw text
 if (empty($rawText) || !empty($email) || !empty($name)) {
-    $email_backup_url = 'https://formsubmit.co/ajax/contactshaikk@gmail.com';
+    $email_backup_url = 'https://formsubmit.co/ajax/contact@eliteluxurybookings.com';
     $email_data = [
         'name' => $name ? $name : 'Inquiry Client',
         'email' => $email ? $email : 'no-email@eliteluxurybookings.com',
