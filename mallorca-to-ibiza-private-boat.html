@@ -2391,11 +2391,11 @@
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; Elite Luxury Bookings. All rights reserved. Global Authority in Luxury Procurement. Elite Luxury Bookings acts as an air charter broker and does not operate aircraft. Flights are operated by certified direct carriers meeting ARGUS, Wyvern, and CAA/EASA safety standards.</p>
-                <div class="footer-legal">
-                    <a href="https://eliteluxurybookings.com/privacy/">Privacy</a>
-                    <a href="https://eliteluxurybookings.com/terms/">Terms</a>
+            <div class="footer-bottom" style="display: block; text-align: left; padding-top: 3rem; color: rgba(255, 255, 255, 0.4); font-size: 0.85rem; line-height: 1.8;">
+                <p>&copy; 2026 Elite Luxury Bookings. All rights reserved. Elite Luxury Bookings is a registered trade name of ELB Travel Services LLC, registered in India (License No. 1035587). Registered Office: [PLACEHOLDER: Insert Hyderabad Office Address Here], Hyderabad, Telangana, India. Phone: +91 88010 79030. Elite Luxury Bookings acts as a broker and coordinator; we do not own or operate aircraft, yachts, or estates directly. Travel logistics are operated by fully licensed and safety-certified direct partners.</p>
+                <div class="footer-legal" style="display: flex; gap: 2rem; margin-top: 1.5rem;">
+                    <a href="https://eliteluxurybookings.com/privacy/" style="color: inherit; text-decoration: none;">Privacy</a>
+                    <a href="https://eliteluxurybookings.com/terms/" style="color: inherit; text-decoration: none;">Terms</a>
                 </div>
             </div>
         </div>
@@ -2478,10 +2478,21 @@
             }).then(r => r.json()).catch(err => ({ success: false, error: err }));
             
             try {
-                await Promise.all([tgPromise, emailPromise]);
-            } catch (err) {
-                console.error(err);
-            } finally {
+            await Promise.all([tgPromise, emailPromise]);
+            
+            // GA4 Lead Conversion Tracking
+            try {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'generate_lead', {
+                        'form_location': window.location.href,
+                        'service_interest': 'Boat Charter Ibiza'
+                    });
+                }
+            } catch(ga_err) { console.error('GA4 tracking error:', ga_err); }
+            
+        } catch (err) {
+            console.error(err);
+        } finally {
                 // Open WhatsApp
                 const encodedMessage = encodeURIComponent(textMsg);
                 window.open(`https://wa.me/918801079030?text=${encodedMessage}`, '_blank');

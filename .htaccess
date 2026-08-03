@@ -15,10 +15,24 @@ RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteRule ^(.*)$ https://eliteluxurybookings.com/$1 [L,R=301]
 
-# Consolidation Redirects: Mallorca to Formentera Private Boat Trip
+# Consolidation Redirects: Mallorca to Formentera Private Boat Trip (Cluster A)
 RewriteRule ^boat-trip-from-mallorca-to-formentera(\.html)?/?$ https://eliteluxurybookings.com/private-boat-trip-mallorca-to-formentera/ [R=301,NC,L]
+RewriteRule ^yacht-charter-mallorca-to-formentera(\.html)?/?$ https://eliteluxurybookings.com/private-boat-trip-mallorca-to-formentera/ [R=301,NC,L]
 RewriteRule ^mallorca-to-formentera-private-boat-cost(\.html)?/?$ https://eliteluxurybookings.com/private-boat-trip-mallorca-to-formentera/ [R=301,NC,L]
 RewriteRule ^yacht-charter-mallorca-formentera(\.html)?/?$ https://eliteluxurybookings.com/private-boat-trip-mallorca-to-formentera/ [R=301,NC,L]
+RewriteRule ^luxury-yacht-rentals/boat-trip-from-mallorca-to-formentera(\.html)?/?$ https://eliteluxurybookings.com/private-boat-trip-mallorca-to-formentera/ [R=301,NC,L]
+
+# Consolidation Redirects: Mallorca to Ibiza Private Boat (Cluster B)
+RewriteRule ^mallorca-to-ibiza-private-boat-charter(\.html)?/?$ https://eliteluxurybookings.com/mallorca-to-ibiza-private-boat/ [R=301,NC,L]
+RewriteRule ^luxury-yacht-rentals/mallorca-to-ibiza-private-boat(\.html)?/?$ https://eliteluxurybookings.com/mallorca-to-ibiza-private-boat/ [R=301,NC,L]
+RewriteRule ^private-yacht-from-ibiza-to-mallorca(\.html)?/?$ https://eliteluxurybookings.com/mallorca-to-ibiza-private-boat/ [R=301,NC,L]
+
+# Critical Redirects to Resolve Loop/404 Issues
+RewriteRule ^luxury-private-jets/?$ https://eliteluxurybookings.com/elite-private-jet-charter/ [R=301,NC,L]
+RewriteRule ^blogs/?$ https://eliteluxurybookings.com/blog/ [R=301,NC,L]
+RewriteRule ^our-services/?$ https://eliteluxurybookings.com/ [R=301,NC,L]
+RewriteRule ^how-private-jet-flight-bookings-work/?$ https://eliteluxurybookings.com/private-jet-booking-guide/ [R=301,NC,L]
+RewriteRule ^luxury-yacht-re/?$ https://eliteluxurybookings.com/luxury-yacht-rentals/ [R=301,NC,L]
 
 # 301 redirects for GSC missing/deleted pages
 RewriteRule ^different-types-of-private-jets-which-one-is-right-for-you(\.html)?/?$ https://eliteluxurybookings.com/types-of-private-jets/ [R=301,NC,L]

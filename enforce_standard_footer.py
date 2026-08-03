@@ -74,11 +74,11 @@ FOOTER_HTML = """
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Elite Luxury Bookings. All rights reserved. Global Authority in Luxury Procurement.</p>
-                <div class="footer-legal">
-                    <a href="https://eliteluxurybookings.com/privacy/">Privacy</a>
-                    <a href="https://eliteluxurybookings.com/terms/">Terms</a>
+            <div class="footer-bottom" style="display: block; text-align: left; padding-top: 3rem; color: rgba(255, 255, 255, 0.4); font-size: 0.85rem; line-height: 1.8;">
+                <p>&copy; 2026 Elite Luxury Bookings. All rights reserved. Elite Luxury Bookings is a registered trade name of ELB Travel Services LLC, registered in India (License No. 1035587). Registered Office: [PLACEHOLDER: Insert Hyderabad Office Address Here], Hyderabad, Telangana, India. Phone: +91 88010 79030. Elite Luxury Bookings acts as a broker and coordinator; we do not own or operate aircraft, yachts, or estates directly. Travel logistics are operated by fully licensed and safety-certified direct partners.</p>
+                <div class="footer-legal" style="display: flex; gap: 2rem; margin-top: 1.5rem;">
+                    <a href="https://eliteluxurybookings.com/privacy/" style="color: inherit; text-decoration: none;">Privacy</a>
+                    <a href="https://eliteluxurybookings.com/terms/" style="color: inherit; text-decoration: none;">Terms</a>
                 </div>
             </div>
         </div>
