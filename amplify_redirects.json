@@ -1,0 +1,62 @@
+[
+  {
+    "source": "/luxury-private-jets",
+    "target": "/elite-private-jet-charter/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/luxury-private-jets/",
+    "target": "/elite-private-jet-charter/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/luxury-private-yachts",
+    "target": "/luxury-yacht-rentals/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/luxury-private-yachts/",
+    "target": "/luxury-yacht-rentals/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/blogs",
+    "target": "/blog/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/blogs/",
+    "target": "/blog/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/our-services",
+    "target": "/elite-private-jet-charter/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/our-services/",
+    "target": "/elite-private-jet-charter/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/how-private-jet-flight-bookings-work",
+    "target": "/elite-private-jet-charter/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/how-private-jet-flight-bookings-work/",
+    "target": "/elite-private-jet-charter/",
+    "status": "301",
+    "condition": null
+  }
+]
