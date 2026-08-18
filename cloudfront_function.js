@@ -54,12 +54,14 @@ function handler(event) {
     if (!redirectUrl) {
         if (cleanUri === "/luxury-private-jets") {
             redirectUrl = "https://eliteluxurybookings.com/elite-private-jet-charter/";
+        } else if (cleanUri === "/luxury-private-yachts") {
+            redirectUrl = "https://eliteluxurybookings.com/luxury-yacht-rentals/";
         } else if (cleanUri === "/blogs") {
             redirectUrl = "https://eliteluxurybookings.com/blog/";
         } else if (cleanUri === "/our-services") {
-            redirectUrl = "https://eliteluxurybookings.com/";
+            redirectUrl = "https://eliteluxurybookings.com/elite-private-jet-charter/";
         } else if (cleanUri === "/how-private-jet-flight-bookings-work") {
-            redirectUrl = "https://eliteluxurybookings.com/private-jet-booking-guide/";
+            redirectUrl = "https://eliteluxurybookings.com/elite-private-jet-charter/";
         } else if (cleanUri === "/luxury-yacht-re") {
             redirectUrl = "https://eliteluxurybookings.com/luxury-yacht-rentals/";
         }

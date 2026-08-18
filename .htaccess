@@ -29,9 +29,10 @@ RewriteRule ^private-yacht-from-ibiza-to-mallorca(\.html)?/?$ https://eliteluxur
 
 # Critical Redirects to Resolve Loop/404 Issues
 RewriteRule ^luxury-private-jets/?$ https://eliteluxurybookings.com/elite-private-jet-charter/ [R=301,NC,L]
+RewriteRule ^luxury-private-yachts/?$ https://eliteluxurybookings.com/luxury-yacht-rentals/ [R=301,NC,L]
 RewriteRule ^blogs/?$ https://eliteluxurybookings.com/blog/ [R=301,NC,L]
-RewriteRule ^our-services/?$ https://eliteluxurybookings.com/ [R=301,NC,L]
-RewriteRule ^how-private-jet-flight-bookings-work/?$ https://eliteluxurybookings.com/private-jet-booking-guide/ [R=301,NC,L]
+RewriteRule ^our-services/?$ https://eliteluxurybookings.com/elite-private-jet-charter/ [R=301,NC,L]
+RewriteRule ^how-private-jet-flight-bookings-work/?$ https://eliteluxurybookings.com/elite-private-jet-charter/ [R=301,NC,L]
 RewriteRule ^luxury-yacht-re/?$ https://eliteluxurybookings.com/luxury-yacht-rentals/ [R=301,NC,L]
 
 # 301 redirects for GSC missing/deleted pages

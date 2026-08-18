@@ -90,7 +90,17 @@
         </Condition>
         <Redirect>
             <HostName>eliteluxurybookings.com</HostName>
-            <ReplaceKeyPrefixWith>elite-private-jet-charter/</ReplaceKeyPrefixWith>
+            <ReplaceKeyWith>elite-private-jet-charter/</ReplaceKeyWith>
+            <HttpRedirectCode>301</HttpRedirectCode>
+        </Redirect>
+    </RoutingRule>
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>luxury-private-yachts</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <HostName>eliteluxurybookings.com</HostName>
+            <ReplaceKeyWith>luxury-yacht-rentals/</ReplaceKeyWith>
             <HttpRedirectCode>301</HttpRedirectCode>
         </Redirect>
     </RoutingRule>
@@ -100,7 +110,7 @@
         </Condition>
         <Redirect>
             <HostName>eliteluxurybookings.com</HostName>
-            <ReplaceKeyPrefixWith>blog/</ReplaceKeyPrefixWith>
+            <ReplaceKeyWith>blog/</ReplaceKeyWith>
             <HttpRedirectCode>301</HttpRedirectCode>
         </Redirect>
     </RoutingRule>
@@ -110,7 +120,7 @@
         </Condition>
         <Redirect>
             <HostName>eliteluxurybookings.com</HostName>
-            <ReplaceKeyPrefixWith></ReplaceKeyPrefixWith>
+            <ReplaceKeyWith>elite-private-jet-charter/</ReplaceKeyWith>
             <HttpRedirectCode>301</HttpRedirectCode>
         </Redirect>
     </RoutingRule>
@@ -120,7 +130,7 @@
         </Condition>
         <Redirect>
             <HostName>eliteluxurybookings.com</HostName>
-            <ReplaceKeyPrefixWith>private-jet-booking-guide/</ReplaceKeyPrefixWith>
+            <ReplaceKeyWith>elite-private-jet-charter/</ReplaceKeyWith>
             <HttpRedirectCode>301</HttpRedirectCode>
         </Redirect>
     </RoutingRule>
@@ -130,7 +140,7 @@
         </Condition>
         <Redirect>
             <HostName>eliteluxurybookings.com</HostName>
-            <ReplaceKeyPrefixWith>luxury-yacht-rentals/</ReplaceKeyPrefixWith>
+            <ReplaceKeyWith>luxury-yacht-rentals/</ReplaceKeyWith>
             <HttpRedirectCode>301</HttpRedirectCode>
         </Redirect>
     </RoutingRule>
