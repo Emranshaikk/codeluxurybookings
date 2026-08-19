@@ -968,5 +968,76 @@
         }
     }
     </script>
+
+    <!-- Interactive Jet Calculator JS Logic -->
+    <script>
+        (function () {
+            const flightTimeHours = 3.35;
+            let currentJetClass = 'light';
+
+            const jetData = {
+                light: { rate: 3500, label: 'Light Jet', buttonId: 'btn-class-light' },
+                midsize: { rate: 6000, label: 'Midsize', buttonId: 'btn-class-midsize' },
+                heavy: { rate: 9500, label: 'Heavy Jet', buttonId: 'btn-class-heavy' },
+                airliner: { rate: 18000, label: 'VIP Airliner', buttonId: 'btn-class-airliner' }
+            };
+
+            window.selectJetClass = function(className) {
+                currentJetClass = className;
+                Object.keys(jetData).forEach(key => {
+                    const btn = document.getElementById(jetData[key].buttonId);
+                    if (btn) {
+                        if (key === className) {
+                            btn.style.background = 'rgba(212, 175, 55, 0.1)';
+                            btn.style.borderColor = 'var(--primary-gold)';
+                            btn.style.color = '#fff';
+                        } else {
+                            btn.style.background = 'rgba(255,255,255,0.02)';
+                            btn.style.borderColor = 'rgba(255,255,255,0.1)';
+                            btn.style.color = 'rgba(255,255,255,0.7)';
+                        }
+                    }
+                });
+                window.updateJetCalculator();
+            };
+
+            window.updateJetCalculator = function() {
+                const paxSlider = document.getElementById('pax-slider');
+                const paxDisplay = document.getElementById('pax-display');
+                if (!paxSlider || !paxDisplay) return;
+                const paxCount = parseInt(paxSlider.value, 10);
+                paxDisplay.textContent = paxCount + ' Pax';
+
+                const data = jetData[currentJetClass];
+                const totalCost = Math.round(flightTimeHours * data.rate);
+                const perPaxCost = Math.round(totalCost / paxCount);
+
+                const costDisplay = document.getElementById('jet-total-cost');
+                const perPaxDisplay = document.getElementById('jet-per-pax-cost');
+                if (costDisplay) {
+                    const isEuro = costDisplay.textContent.includes('€') || (perPaxDisplay && perPaxDisplay.textContent.includes('€'));
+                    const symbol = isEuro ? '€' : '$';
+                    costDisplay.textContent = symbol + totalCost.toLocaleString();
+                    if (perPaxDisplay) perPaxDisplay.textContent = symbol + perPaxCost.toLocaleString() + ' / pax';
+                }
+
+                const ctaBtn = document.getElementById('jet-calc-cta');
+                if (ctaBtn) {
+                    const routeText = document.title.split('Private Jet')[0].trim();
+                    const messageText = `Hi Elite Luxury Bookings, I'd like a quote for a private jet charter on the ${routeText} route. Jet Class: ${data.label.toUpperCase()}. Passengers: ${paxCount}.`;
+                    ctaBtn.href = `https://wa.me/918801079030?text=${encodeURIComponent(messageText)}`;
+                }
+            };
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const paxSliderEl = document.getElementById('pax-slider');
+                if (paxSliderEl) {
+                    paxSliderEl.addEventListener('input', window.updateJetCalculator);
+                }
+                window.selectJetClass('light');
+            });
+        })();
+    </script>
+
 </body>
 </html>
