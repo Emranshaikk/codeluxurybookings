@@ -58,5 +58,101 @@
     "target": "/elite-private-jet-charter/",
     "status": "301",
     "condition": null
+  },
+  {
+    "source": "/boat-trip-from-mallorca-to-formentera",
+    "target": "/private-boat-trip-mallorca-to-formentera/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/boat-trip-from-mallorca-to-formentera/",
+    "target": "/private-boat-trip-mallorca-to-formentera/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/yacht-charter-mallorca-to-formentera",
+    "target": "/private-boat-trip-mallorca-to-formentera/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/yacht-charter-mallorca-to-formentera/",
+    "target": "/private-boat-trip-mallorca-to-formentera/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/mallorca-to-formentera-private-boat-cost",
+    "target": "/private-boat-trip-mallorca-to-formentera/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/mallorca-to-formentera-private-boat-cost/",
+    "target": "/private-boat-trip-mallorca-to-formentera/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/yacht-charter-mallorca-formentera",
+    "target": "/private-boat-trip-mallorca-to-formentera/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/yacht-charter-mallorca-formentera/",
+    "target": "/private-boat-trip-mallorca-to-formentera/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/luxury-yacht-rentals/boat-trip-from-mallorca-to-formentera",
+    "target": "/private-boat-trip-mallorca-to-formentera/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/luxury-yacht-rentals/boat-trip-from-mallorca-to-formentera/",
+    "target": "/private-boat-trip-mallorca-to-formentera/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/mallorca-to-ibiza-private-boat-charter",
+    "target": "/mallorca-to-ibiza-private-boat/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/mallorca-to-ibiza-private-boat-charter/",
+    "target": "/mallorca-to-ibiza-private-boat/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/luxury-yacht-rentals/mallorca-to-ibiza-private-boat",
+    "target": "/mallorca-to-ibiza-private-boat/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/luxury-yacht-rentals/mallorca-to-ibiza-private-boat/",
+    "target": "/mallorca-to-ibiza-private-boat/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/private-yacht-from-ibiza-to-mallorca",
+    "target": "/mallorca-to-ibiza-private-boat/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/private-yacht-from-ibiza-to-mallorca/",
+    "target": "/mallorca-to-ibiza-private-boat/",
+    "status": "301",
+    "condition": null
   }
 ]
