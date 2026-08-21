@@ -39,6 +39,7 @@ RewriteRule ^luxury-yacht-re/?$ https://eliteluxurybookings.com/luxury-yacht-ren
 RewriteRule ^different-types-of-private-jets-which-one-is-right-for-you(\.html)?/?$ https://eliteluxurybookings.com/types-of-private-jets/ [R=301,NC,L]
 RewriteRule ^private-jet-empty-leg-deals(\.html)?/?$ https://eliteluxurybookings.com/empty-leg-flights-guide/ [R=301,NC,L]
 RewriteRule ^private-jet-charter-cost-guide-2026(\.html)?/?$ https://eliteluxurybookings.com/private-jet-charter-cost-estimator/ [R=301,NC,L]
+RewriteRule ^sitemap\.html$ https://eliteluxurybookings.com/ [R=301,NC,L]
 
 # 0. Global Error Handling
 ErrorDocument 404 https://eliteluxurybookings.com/

@@ -64,6 +64,10 @@ function handler(event) {
             redirectUrl = "https://eliteluxurybookings.com/elite-private-jet-charter/";
         } else if (cleanUri === "/luxury-yacht-re") {
             redirectUrl = "https://eliteluxurybookings.com/luxury-yacht-rentals/";
+        } else if (cleanUri === "/private-jet-charter-cost-guide-2026.html") {
+            redirectUrl = "https://eliteluxurybookings.com/private-jet-charter-cost-estimator/";
+        } else if (cleanUri === "/sitemap.html") {
+            redirectUrl = "https://eliteluxurybookings.com/";
         }
     }
     

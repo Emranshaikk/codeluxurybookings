@@ -1,5 +1,131 @@
 [
   {
+    "source": "/zohoverify.html",
+    "target": "/zohoverify.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/verifyforzoho.html",
+    "target": "/verifyforzoho.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/zoho-domain-verification.html",
+    "target": "/zoho-domain-verification.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/private-jet-charter-cost-estimator.html",
+    "target": "/private-jet-charter-cost-estimator/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/caribbean-private-island-rental.html",
+    "target": "/caribbean-private-island-rental/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/all-inclusive-private-island-rental.html",
+    "target": "/all-inclusive-private-island-rental/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/top-5-luxury-yachts-under-100k.html",
+    "target": "/top-5-luxury-yachts-under-100k/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/best-mediterranean-yacht-destinations.html",
+    "target": "/best-mediterranean-yacht-destinations/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/elite-private-jet-charter.html",
+    "target": "/elite-private-jet-charter/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/sitemap.html",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/private-jet-charter-to-monaco.html",
+    "target": "/private-jet-charter-to-monaco/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/luxury-private-island-rental.html",
+    "target": "/luxury-private-island-rental/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/private-island-honeymoon-rental.html",
+    "target": "/private-island-honeymoon-rental/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/private-jet-charter-cost-guide-2026.html",
+    "target": "/private-jet-charter-cost-estimator/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/vip-event-yacht-charters.html",
+    "target": "/vip-event-yacht-charters/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/blog.html",
+    "target": "/blog/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/monaco-to-amalfi-yacht-itinerary.html",
+    "target": "/monaco-to-amalfi-yacht-itinerary/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/business-jet-charter-guide-tips-pricing.html",
+    "target": "/business-jet-charter-guide-tips-pricing/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/yacht-charter-vs-owning.html",
+    "target": "/yacht-charter-vs-owning/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/private-jet-travel-with-pet.html",
+    "target": "/private-jet-travel-with-pet/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/<*>.html",
+    "target": "/<*>/",
+    "status": "301",
+    "condition": null
+  },
+  {
     "source": "/luxury-private-jets",
     "target": "/elite-private-jet-charter/",
     "status": "301",
