@@ -336,10 +336,11 @@
 
         /* --- HERO HEADER --- */
         .hero {
-            padding: 8rem 0 4rem;
+            padding: 9rem 0 6rem;
             text-align: center;
-            background: radial-gradient(circle at top, rgba(212, 175, 55, 0.08) 0%, transparent 60%);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            background: linear-gradient(180deg, rgba(5,5,5,0.7) 0%, rgba(5,5,5,0.9) 100%), url('/assets/monaco_superyacht_hero.jpg') center/cover no-repeat;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            position: relative;
         }
         .hero-meta {
             font-size: 0.85rem;
@@ -572,14 +573,60 @@
             background-repeat: no-repeat;
             background-position: right 10px center;
             background-size: 1em;
+            padding-right: 2.5rem;
+            color: #ffffff;
+        }
+        select.form-control option {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            padding: 12px;
         }
         textarea.form-control {
             background: rgba(255,255,255,0.02);
             border: 1px solid rgba(255,255,255,0.1);
             padding: 1.2rem;
             border-radius: 10px;
-            resize: none;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
+            outline: none;
+            transition: var(--transition);
         }
+
+        /* ===== STANDARD MASTER FOOTER ===== */
+        .footer { background: #000 !important; padding: 5rem 0 3rem !important; border-top: 1px solid rgba(212, 175, 55, 0.1) !important; margin-top: 5rem !important; text-align: left !important; }
+        .footer-grid { display: grid !important; grid-template-columns: 2fr 1fr 1fr !important; gap: 4rem !important; padding-bottom: 4rem !important; border-bottom: 1px solid rgba(212, 175, 55, 0.1) !important; text-align: left !important; }
+        .footer-brand { text-align: left !important; }
+        .footer-brand h2 { font-family: 'Cormorant Garamond', serif !important; font-size: 2.2rem !important; margin-bottom: 1.5rem !important; color: #fff !important; text-align: left !important; }
+        .footer-brand p { font-family: 'Inter', sans-serif !important; font-size: 0.9rem !important; line-height: 1.8 !important; max-width: 380px !important; margin-bottom: 2rem !important; color: rgba(255, 255, 255, 0.7) !important; text-align: left !important; }
+        .footer-socials { display: flex !important; gap: 1.5rem !important; justify-content: flex-start !important; }
+        .footer-socials a { color: rgba(255, 255, 255, 0.6) !important; transition: 0.3s !important; font-size: 1.5rem !important; }
+        .footer-socials a:hover { color: #D4AF37 !important; }
+        .footer-col { text-align: left !important; }
+        .footer-col h4 { color: #D4AF37 !important; text-transform: uppercase !important; letter-spacing: 2px !important; font-size: 0.9rem !important; margin-bottom: 2rem !important; text-align: left !important; }
+        .footer-col ul { list-style: none !important; padding: 0 !important; margin: 0 !important; text-align: left !important; }
+        .footer-col ul li { margin-bottom: 1rem !important; text-align: left !important; }
+        .footer-col ul li a { color: rgba(255, 255, 255, 0.8) !important; text-decoration: none !important; transition: 0.3s !important; font-size: 0.95rem !important; }
+        .footer-col ul li a:hover { color: #D4AF37 !important; padding-left: 5px !important; }
+        .footer-bottom { display: flex !important; justify-content: space-between !important; align-items: center !important; padding-top: 3rem !important; color: rgba(255, 255, 255, 0.4) !important; font-size: 0.85rem !important; }
+        .footer-legal { display: flex !important; gap: 2rem !important; }
+        .footer-legal a { color: inherit !important; text-decoration: none !important; }
+        @media (max-width: 992px) { 
+            .footer-grid { grid-template-columns: 1fr 1fr !important; } 
+            .footer-brand { grid-column: span 2 !important; } 
+        }
+        @media (max-width: 600px) { 
+            .footer-grid { grid-template-columns: 1fr !important; } 
+            .footer-brand { grid-column: span 1 !important; text-align: center !important; } 
+            .footer-brand h2 { text-align: center !important; }
+            .footer-brand p { text-align: center !important; margin: 0 auto 2rem auto !important; }
+            .footer-socials { justify-content: center !important; }
+            .footer-col { text-align: center !important; }
+            .footer-col h4 { text-align: center !important; }
+            .footer-col ul { text-align: center !important; }
+            .footer-col ul li { text-align: center !important; }
+            .footer-bottom { flex-direction: column !important; gap: 2rem !important; text-align: center !important; } 
+        } 
         textarea.form-control:focus {
             border-color: var(--primary-gold);
             box-shadow: none;
@@ -865,6 +912,10 @@
             <p>
                 The table below details typical base rates and estimates total outlays (including local taxes and provisioning expenses) for a single-day luxury boat rental Monaco experience.
             </p>
+
+            <div style="margin: 3.5rem 0; border-radius: 20px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+                <img src="/assets/monaco_day_yacht.jpg" alt="Monaco Luxury Day Charter Yacht on the Mediterranean" style="width: 100%; height: auto; display: block; object-fit: cover;" loading="lazy">
+            </div>
             
             <div class="table-responsive">
                 <table class="pricing-table">
@@ -1119,12 +1170,13 @@
                             <input class="form-control" id="phone" name="phone" placeholder="+44 7700 900077" required="" type="tel"/>
                         </div>
                         <div class="form-group">
-                            <label for="charter_type">Charter Type</label>
-                            <select class="form-control" id="charter_type" name="service">
-                                <option value="Yacht Day Charter" selected="">Monaco Day Charter</option>
-                                <option value="Yacht Weekly Charter">Monaco Weekly Charter</option>
-                                <option value="Yacht Grand Prix Charter">Monaco Grand Prix Charter</option>
-                                <option value="Yacht Itinerary">Multi-Destination Cruise</option>
+                            <label for="charter_type">Charter Type *</label>
+                            <select class="form-control" id="charter_type" name="service" required>
+                                <option value="" disabled selected style="color: rgba(255,255,255,0.4);">Select Charter Type...</option>
+                                <option value="Monaco Day Charter">Monaco Day Charter</option>
+                                <option value="Monaco Weekly Charter">Monaco Weekly Charter</option>
+                                <option value="Monaco Grand Prix Charter">Monaco Grand Prix Charter</option>
+                                <option value="Multi-Destination Cruise">Multi-Destination Cruise</option>
                             </select>
                         </div>
                     </div>
@@ -1206,10 +1258,11 @@
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom" style="display: block; text-align: left; padding-top: 3rem; color: rgba(255, 255, 255, 0.4); font-size: 0.85rem; line-height: 1.8;">
-                <div class="footer-legal" style="display: flex; gap: 2rem; margin-top: 1.5rem;">
-                    <a href="https://eliteluxurybookings.com/privacy/" style="color: inherit; text-decoration: none;">Privacy</a>
-                    <a href="https://eliteluxurybookings.com/terms/" style="color: inherit; text-decoration: none;">Terms</a>
+            <div class="footer-bottom">
+                <div>© 2026 Elite Luxury Bookings. All Rights Reserved.</div>
+                <div class="footer-legal">
+                    <a href="https://eliteluxurybookings.com/privacy/">Privacy</a>
+                    <a href="https://eliteluxurybookings.com/terms/">Terms</a>
                 </div>
             </div>
         </div>
