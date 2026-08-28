@@ -23,6 +23,9 @@
             text-decoration: none;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
+        a:visited {
+            color: inherit;
+        }
         a:hover {
             color: var(--primary-gold);
         }
@@ -1369,51 +1372,98 @@ body:has(.top-intel-bar) {
 .authority-toc a:hover {
     color: var(--primary-gold);
     padding-left: 5px;
-}
-
-/* Related Intelligence Silo */
+.related-Posts,
+.related-posts,
 .related-intelligence {
-    margin-top: 8rem;
-    padding-top: 5rem;
+    margin-top: 6rem;
     border-top: 1px solid var(--glass-border);
+    padding-top: 4rem;
 }
 
 .related-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-    margin-top: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
 }
 
 .related-card {
-    background: rgba(15, 15, 15, 0.6);
+    background: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
     padding: 2.5rem;
     transition: var(--transition);
-    text-decoration: none;
+    text-decoration: none !important;
     display: block;
+    color: var(--text-main) !important;
+}
+
+.related-card:visited {
+    color: var(--text-main) !important;
 }
 
 .related-card:hover {
     border-color: var(--primary-gold);
     transform: translateY(-5px);
-    background: rgba(212, 175, 55, 0.03);
+    background: rgba(212, 175, 55, 0.04);
+    color: var(--text-main) !important;
 }
 
 .related-card h4 {
-    color: var(--primary-gold);
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
+    color: var(--primary-gold) !important;
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    transition: var(--transition);
+}
+
+.related-card:hover h4 {
+    color: #fff !important;
 }
 
 .related-card p {
-    color: var(--text-muted);
+    color: var(--text-muted) !important;
     font-size: 0.95rem;
     line-height: 1.6;
+    margin-bottom: 0;
 }
 
-/* Blog Typography Polish */
+/* Master Footer Link Protection */
+.footer-col ul li a,
+.footer-col ul li a:visited {
+    color: rgba(255, 255, 255, 0.8) !important;
+    text-decoration: none !important;
+    transition: 0.3s !important;
+    font-size: 0.95rem !important;
+}
+
+.footer-col ul li a:hover {
+    color: var(--primary-gold) !important;
+    padding-left: 5px !important;
+}
+
+.footer-legal a,
+.footer-legal a:visited {
+    color: rgba(255, 255, 255, 0.5) !important;
+    text-decoration: none !important;
+    transition: 0.3s !important;
+}
+
+.footer-legal a:hover {
+    color: var(--primary-gold) !important;
+}
+
+.footer-socials a,
+.footer-socials a:visited {
+    color: rgba(255, 255, 255, 0.6) !important;
+    transition: 0.3s !important;
+    font-size: 1.5rem !important;
+}
+
+.footer-socials a:hover {
+    color: var(--primary-gold) !important;
+}
+
+/* Blog Typography & Link Polish */
 .blog-content {
     font-size: 1.15rem;
     line-height: 1.9;
@@ -1441,6 +1491,24 @@ body:has(.top-intel-bar) {
 
 .blog-content strong {
     color: #fff;
+}
+
+.blog-content a:not(.btn):not(.btn-gold):not(.related-card):not(.wa-float),
+article a:not(.btn):not(.btn-gold):not(.related-card):not(.wa-float) {
+    color: var(--primary-gold) !important;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 500;
+}
+
+.blog-content a:not(.btn):not(.btn-gold):not(.related-card):not(.wa-float):visited,
+article a:not(.btn):not(.btn-gold):not(.related-card):not(.wa-float):visited {
+    color: var(--primary-gold) !important;
+}
+
+.blog-content a:not(.btn):not(.btn-gold):not(.related-card):not(.wa-float):hover,
+article a:not(.btn):not(.btn-gold):not(.related-card):not(.wa-float):hover {
+    color: #FFFFFF !important;
 }
 
 @media (max-width: 768px) {

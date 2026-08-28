@@ -52,6 +52,20 @@
             -webkit-font-smoothing: antialiased;
         }
 
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:visited {
+            color: inherit;
+        }
+
+        a:hover {
+            color: var(--primary-gold);
+        }
+
         html {
             scroll-behavior: smooth;
         }
@@ -740,6 +754,114 @@
             }
         }
 
+        .footer-col ul li a,
+        .footer-col ul li a:visited {
+            color: rgba(255, 255, 255, 0.8) !important;
+            text-decoration: none !important;
+            transition: 0.3s !important;
+            font-size: 0.95rem !important;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-gold) !important;
+            padding-left: 5px !important;
+        }
+
+        .footer-legal a,
+        .footer-legal a:visited {
+            color: rgba(255, 255, 255, 0.5) !important;
+            text-decoration: none !important;
+            transition: 0.3s !important;
+        }
+
+        .footer-legal a:hover {
+            color: var(--primary-gold) !important;
+        }
+
+        .footer-socials a,
+        .footer-socials a:visited {
+            color: rgba(255, 255, 255, 0.6) !important;
+            transition: 0.3s !important;
+            font-size: 1.5rem !important;
+        }
+
+        .footer-socials a:hover {
+            color: var(--primary-gold) !important;
+        }
+
+        /* Related Posts Cards */
+        .related-Posts,
+        .related-posts,
+        .related-intelligence {
+            margin-top: 6rem;
+            border-top: 1px solid var(--glass-border);
+            padding-top: 4rem;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .related-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            transition: var(--transition);
+            text-decoration: none !important;
+            display: block;
+            color: var(--text-main) !important;
+        }
+
+        .related-card:visited {
+            color: var(--text-main) !important;
+        }
+
+        .related-card:hover {
+            border-color: var(--primary-gold);
+            transform: translateY(-5px);
+            background: rgba(212, 175, 55, 0.04);
+            color: var(--text-main) !important;
+        }
+
+        .related-card h4 {
+            color: var(--primary-gold) !important;
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+            transition: var(--transition);
+        }
+
+        .related-card:hover h4 {
+            color: #fff !important;
+        }
+
+        .related-card p {
+            color: var(--text-muted) !important;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .blog-content a:not(.btn):not(.btn-gold):not(.related-card):not(.wa-float),
+        article a:not(.btn):not(.btn-gold):not(.related-card):not(.wa-float) {
+            color: var(--primary-gold) !important;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .blog-content a:not(.btn):not(.btn-gold):not(.related-card):not(.wa-float):visited,
+        article a:not(.btn):not(.btn-gold):not(.related-card):not(.wa-float):visited {
+            color: var(--primary-gold) !important;
+        }
+
+        .blog-content a:not(.btn):not(.btn-gold):not(.related-card):not(.wa-float):hover,
+        article a:not(.btn):not(.btn-gold):not(.related-card):not(.wa-float):hover {
+            color: #FFFFFF !important;
+        }
+
         /* Sticky Floating CTA Bar Styles */
         .sticky-cta-bar {
             position: fixed;
@@ -998,6 +1120,53 @@
                 gap: 2rem !important;
             }
         }
+
+        /* --- WHATSAPP FLOAT FALLBACK & STYLING --- */
+        .wa-float {
+            position: fixed;
+            bottom: 40px;
+            right: 40px !important;
+            left: auto !important;
+            background: #25D366 !important;
+            color: #FFF !important;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0px 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 100000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .wa-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 6px 25px rgba(37, 211, 102, 0.6);
+            color: #FFF !important;
+        }
+
+        .wa-float svg {
+            fill: #FFF !important;
+            width: 32px;
+            height: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .wa-float {
+                bottom: 80px;
+                right: 20px !important;
+                width: 50px;
+                height: 50px;
+            }
+            .wa-float svg {
+                width: 26px;
+                height: 26px;
+            }
+        }
     </style>
 <script type="application/ld+json">
     {
@@ -1179,7 +1348,7 @@
 <div><img alt="" src="https://mc.yandex.ru/watch/103558768" style="position:absolute; left:-9999px;"/></div>
 </noscript>
 <!-- /Yandex.Metrika counter -->
-</link></link></meta></meta></meta></head>
+</head>
 <body>
 <!-- ELB_NAV_START -->
 <div class="top-intel-bar">
@@ -1651,69 +1820,75 @@
 </main>
 <!-- Sticky Floating CTA Bar -->
 <div class="sticky-cta-bar">
-<div class="sticky-cta-container">
-<span class="sticky-cta-text">Available 24/7 for immediate bookings</span>
-<div class="sticky-cta-buttons">
-<a class="sticky-btn whatsapp-btn" href="https://wa.me/918801079030" onclick="if(typeof gtag==='function'){gtag('event','whatsapp_click',{'page_location':window.location.href});}" rel="noopener" target="_blank">
-<i class="fab fa-whatsapp"></i> WhatsApp Us
-                </a>
-<a class="sticky-btn call-btn" href="tel:+918801079030">
-<i class="fas fa-phone-alt"></i> Call Concierge
-                </a>
+    <div class="sticky-cta-container">
+        <span class="sticky-cta-text">Available 24/7 for immediate bookings</span>
+        <div class="sticky-cta-buttons">
+            <a class="sticky-btn whatsapp-btn" href="https://wa.me/918801079030" onclick="if(typeof gtag==='function'){gtag('event','whatsapp_click',{'page_location':window.location.href});}" rel="noopener" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp Us
+            </a>
+            <a class="sticky-btn call-btn" href="tel:+918801079030">
+                <i class="fas fa-phone-alt"></i> Call Concierge
+            </a>
+        </div>
+    </div>
+</div>
+
 <!-- Master Footer -->
 <footer class="footer">
-<div class="container" style="max-width: 1200px;">
-<div class="footer-grid">
-<div class="footer-brand">
-<h2>Elite Luxury <span class="gold-text">Bookings</span></h2>
-<p>Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
-<div class="footer-socials">
-<a href="https://www.facebook.com/eliteluxurybookings" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook"></i></a>
-<a href="https://www.instagram.com/eliteluxurybookings" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="https://www.linkedin.com/company/elite-luxury-bookings/" rel="noopener noreferrer" target="_blank"><i class="fab fa-linkedin"></i></a>
-<a href="https://x.com/eliteluxuryb" rel="noopener noreferrer" target="_blank"><i class="fab fa-x-twitter"></i></a>
-</div>
-</div>
-<div class="footer-col">
-<h4>SERVICES</h4>
-<ul>
-<li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
-<li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Luxury Yachts</a></li>
-<li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/">Luxury Villas</a></li>
-<li><a href="https://eliteluxurybookings.com/global-route-silo/">Route Directory</a></li>
-<li><a href="https://eliteluxurybookings.com/blog/">Blog</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h4>AUTHORITY</h4>
-<ul>
-<li><a href="https://eliteluxurybookings.com/about/">The Mission</a></li>
-<li><a href="https://eliteluxurybookings.com/privacy/">Privacy Protocol</a></li>
-<li><a href="https://eliteluxurybookings.com/terms/">Terms of Engagement</a></li>
-<li><a href="https://eliteluxurybookings.com/contact/">Connect</a></li>
-</ul>
-</div>
-</div>
-<div class="footer-bottom" style="display: block; text-align: left; padding-top: 3rem; color: rgba(255, 255, 255, 0.4); font-size: 0.85rem; line-height: 1.8;">
-<div class="footer-legal" style="display: flex; gap: 2rem; margin-top: 1.5rem;">
-<a href="https://eliteluxurybookings.com/privacy/" style="color: inherit; text-decoration: none;">Privacy</a>
-<a href="https://eliteluxurybookings.com/terms/" style="color: inherit; text-decoration: none;">Terms</a>
-</div>
-</div>
-</div>
+    <div class="container" style="max-width: 1200px;">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>Elite Luxury <span class="gold-text">Bookings</span></h2>
+                <p>Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/eliteluxurybookings" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/eliteluxurybookings" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/elite-luxury-bookings/" rel="noopener noreferrer" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/eliteluxuryb" rel="noopener noreferrer" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>SERVICES</h4>
+                <ul>
+                    <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
+                    <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Luxury Yachts</a></li>
+                    <li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/">Luxury Villas</a></li>
+                    <li><a href="https://eliteluxurybookings.com/global-route-silo/">Route Directory</a></li>
+                    <li><a href="https://eliteluxurybookings.com/blog/">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>AUTHORITY</h4>
+                <ul>
+                    <li><a href="https://eliteluxurybookings.com/about/">The Mission</a></li>
+                    <li><a href="https://eliteluxurybookings.com/privacy/">Privacy Protocol</a></li>
+                    <li><a href="https://eliteluxurybookings.com/terms/">Terms of Engagement</a></li>
+                    <li><a href="https://eliteluxurybookings.com/contact/">Connect</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom" style="display: block; text-align: left; padding-top: 3rem; color: rgba(255, 255, 255, 0.4); font-size: 0.85rem; line-height: 1.8;">
+            <div class="footer-legal" style="display: flex; gap: 2rem; margin-top: 1.5rem;">
+                <a href="https://eliteluxurybookings.com/privacy/" style="color: inherit; text-decoration: none;">Privacy</a>
+                <a href="https://eliteluxurybookings.com/terms/" style="color: inherit; text-decoration: none;">Terms</a>
+            </div>
+        </div>
+    </div>
 </footer>
+
 <script>
-        function toggleMobileMenu() { 
-            var m = document.getElementById('elbMobileMenu'), 
-                b = document.getElementById('navHamburger'); 
-            if (m && b) { 
-                m.classList.toggle('open'); 
-                b.classList.toggle('open'); 
-                document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
-            } 
-        }
-    </script>
-</div></div></div><!-- WhatsApp Float -->
+    function toggleMobileMenu() { 
+        var m = document.getElementById('elbMobileMenu'), 
+            b = document.getElementById('navHamburger'); 
+        if (m && b) { 
+            m.classList.toggle('open'); 
+            b.classList.toggle('open'); 
+            document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
+        } 
+    }
+</script>
+
+<!-- WhatsApp Float -->
 <a href="https://wa.me/918801079030" class="wa-float" target="_blank" rel="noopener" aria-label="Chat with Elite Luxury Bookings Concierge on WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
         <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>

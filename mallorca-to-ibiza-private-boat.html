@@ -1022,7 +1022,7 @@
       gap: 1.5rem;
     }
 
-    .related-card {
+    .related-card, .related-card:visited {
       background: rgba(255, 255, 255, 0.02);
       border: 1px solid rgba(212, 175, 55, 0.1);
       border-radius: var(--radius-sm);
@@ -1198,7 +1198,7 @@
       gap: 1.5rem !important;
     }
 
-    .footer-socials a {
+    .footer-socials a, .footer-socials a:visited {
       color: rgba(255, 255, 255, 0.6) !important;
       transition: 0.3s !important;
       font-size: 1.4rem !important;
@@ -1226,7 +1226,7 @@
       margin-bottom: 1rem !important;
     }
 
-    .footer-col ul li a {
+    .footer-col ul li a, .footer-col ul li a:visited {
       color: rgba(255, 255, 255, 0.75) !important;
       text-decoration: none !important;
       transition: 0.3s !important;
@@ -1252,10 +1252,11 @@
       gap: 2rem !important;
     }
 
-    .footer-legal a {
+    .footer-legal a, .footer-legal a:visited {
       color: inherit !important;
       text-decoration: none !important;
     }
+        a:visited { color: inherit; }
 
     @media (max-width:992px) {
       .footer-grid {

@@ -183,6 +183,7 @@
             text-decoration: none;
             transition: var(--transition);
         }
+        a:visited { color: inherit; }
 
         a:hover {
             color: var(--primary-gold);
@@ -1048,7 +1049,7 @@
             justify-content: flex-start !important;
         }
 
-        .footer-socials a {
+        .footer-socials a, .footer-socials a:visited {
             color: rgba(255, 255, 255, 0.6) !important;
             transition: 0.3s !important;
             font-size: 1.5rem !important;
@@ -1083,7 +1084,7 @@
             text-align: left !important;
         }
 
-        .footer-col ul li a {
+        .footer-col ul li a, .footer-col ul li a:visited {
             color: rgba(255, 255, 255, 0.8) !important;
             text-decoration: none !important;
             transition: 0.3s !important;
@@ -1109,7 +1110,7 @@
             gap: 2rem !important;
         }
 
-        .footer-legal a {
+        .footer-legal a, .footer-legal a:visited {
             color: inherit !important;
             text-decoration: none !important;
         }
