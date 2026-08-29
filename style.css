@@ -1372,6 +1372,8 @@ body:has(.top-intel-bar) {
 .authority-toc a:hover {
     color: var(--primary-gold);
     padding-left: 5px;
+}
+
 .related-Posts,
 .related-posts,
 .related-intelligence {
