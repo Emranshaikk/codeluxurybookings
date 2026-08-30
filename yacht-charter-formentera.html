@@ -205,9 +205,7 @@
 </section>
 <!-- ELB_CONTENT_HUB_END -->
 <!-- ELB_FOOTER_END -->
-<script>
-        const endpoint = 'https://formspree.io/f/xwvwanlj';
-
+    <script>
         async function submitLead(event) {
             event.preventDefault();
             const btn = document.getElementById('submitBtn');
@@ -218,24 +216,40 @@
             btn.disabled = true;
 
             const formData = new FormData(form);
-            const data = {};
+            const data = {
+                _subject: 'New Lead: Yacht Charter Formentera',
+                _template: 'table',
+                source: 'Yacht Charter Formentera'
+            };
             formData.forEach((value, key) => data[key] = value);
-            
-            / Add Page Context
-            data['Source_Keyword'] = "Yacht Charter Formentera";
 
             try {
-                await fetch(endpoint, {
-                    method: 'POST', mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: new URLSearchParams(data).toString()
+                const res = await fetch('https://formsubmit.co/ajax/contactshaikk@gmail.com', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(data)
                 });
+
+                if (typeof gtag === 'function') {
+                    gtag('event', 'generate_lead', {
+                        'form_location': window.location.href,
+                        'service_interest': 'Yacht Charter Formentera'
+                    });
+                }
 
                 form.style.display = 'none';
                 msg.style.display = 'block';
+
+                setTimeout(() => {
+                    const waMsg = 'Hi Elite Luxury Bookings, I just submitted an inquiry for a Formentera yacht charter.';
+                    window.open(`https://wa.me/918801079030?text=${encodeURIComponent(waMsg)}`, '_blank');
+                }, 1200);
             } catch (error) {
                 console.error(error);
-                alert('Connection issue. Please connect directly with your concierge via WhatsApp.');
+                window.location.href = 'https://wa.me/918801079030?text=Hi%20Elite%20Luxury%20Bookings%2C%20I%20would%20like%20to%20inquire%20about%20a%20Formentera%20yacht%20charter.';
             } finally {
                 btn.innerText = 'Secure My Private Proposal';
                 btn.disabled = false;

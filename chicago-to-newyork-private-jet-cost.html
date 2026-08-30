@@ -1819,49 +1819,57 @@
                 .replace(/>/g, "&gt;");
         }
 
-        async function submitLead(event) {
+                async function submitLead(event) {
             event.preventDefault();
             const form = event.target;
             const btn = form.querySelector('button[type="submit"]');
-            const originalBtnText = btn.innerText;
             
             btn.innerText = 'SECURELY SENDING...';
             btn.disabled = true;
             
             const formData = new FormData(form);
-            
-            // Format message for Telegram
-            let message = `🚀 <b>New Elite Lead Received!</b>
-
-`;
             const formType = formData.get('form_type') || formData.get('_target') || 'General Lead';
-            message += `<b>Source:</b> ${escapeHtml(formType)}
-
-`;
             
-            const fields = {
-                name: '👤 Name',
-                phone: '📞 Phone',
-                email: '✉️ Email',
-                route: '🛫 Route',
-                departure: '🛫 Departure',
-                destination: '🛬 Destination',
-                date: '📅 Date',
-                passengers: '👥 Passengers',
-                service: '🛠️ Service',
-                requirements: '📋 Requirements',
-                message: '📝 Message',
-                budget: '💰 Budget',
-                whatsapp_pref: '💬 WhatsApp Pref'
-            };
-            
-            for (const [key, label] of Object.entries(fields)) {
-                const val = formData.get(key);
-                if (val) {
-                    message += `<b>${label}:</b> ${escapeHtml(val)}
-`;
+            const formObject = {};
+            formData.forEach((value, key) => {
+                if (!['_redirect', '_cc', '_subject'].includes(key)) {
+                    formObject[key] = value;
                 }
+            });
+            formObject['_subject'] = formData.get('_subject') || `New Lead: ${formType}`;
+            formObject['_template'] = 'table';
+            
+            try {
+                const res = await fetch('https://formsubmit.co/ajax/contactshaikk@gmail.com', {
+                    method: 'POST',
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(formObject)
+                });
+                
+                if (typeof gtag === 'function') {
+                    gtag('event', 'generate_lead', {
+                        'form_location': window.location.href,
+                        'service_interest': formType
+                    });
+                }
+                
+                btn.innerText = 'PROPOSAL REQUESTED ✓';
+                btn.style.background = '#25D366';
+                btn.style.color = '#fff';
+                form.reset();
+                
+                setTimeout(() => {
+                    const waMsg = `Hi Elite Luxury Bookings, I just submitted an inquiry for ${formType}.`;
+                    window.open(`https://wa.me/918801079030?text=${encodeURIComponent(waMsg)}`, '_blank');
+                }, 1200);
+            } catch (err) {
+                console.error('Submission error:', err);
+                window.location.href = 'https://wa.me/918801079030?text=Hi%20Elite%20Luxury%20Bookings%2C%20I%20would%20like%20to%20request%20a%20private%20charter%20proposal.';
             }
+        }
             
             for (const [key, val] of formData.entries()) {
                 if (!fields[key] && !['form_type', '_redirect', '_target', '_subject', '_cc'].includes(key) && val) {
