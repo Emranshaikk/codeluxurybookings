@@ -458,7 +458,7 @@
 </div>
 <div style="display: flex; flex-direction: column; gap: 0.8rem;">
 <label for="email" style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-gold);">Private Email *</label>
-<input id="email" name="email" placeholder="contactshaikk@gmail.com" required="" style="background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 1.2rem 0; color: #fff; font-size: 1.15rem; outline: none; font-family: 'Inter', sans-serif;" type="email"/>
+<input id="email" name="email" placeholder="client@familyoffice.com" required="" style="background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 1.2rem 0; color: #fff; font-size: 1.15rem; outline: none; font-family: 'Inter', sans-serif;" type="email"/>
 </div>
 <div class="form-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
 <div style="display: flex; flex-direction: column; gap: 0.8rem;">
@@ -625,7 +625,7 @@
             });
             formObject['_subject'] = formData.get('_subject') || `New Lead: ${formType}`;
             
-            const emailPromise = fetch('https://formsubmit.co/ajax/contactshaikk@gmail.com', {
+            const emailPromise = fetch('https://formsubmit.co/ajax/contact@eliteluxurybookings.com', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formObject)

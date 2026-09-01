@@ -626,7 +626,7 @@
 </div>
 <div class="form-group">
 <label for="email">Private Email *</label>
-<input class="form-control" id="email" name="email" placeholder="contactshaikk@gmail.com" required="" type="email"/>
+<input class="form-control" id="email" name="email" placeholder="client@familyoffice.com" required="" type="email"/>
 </div>
 <div class="form-group">
 <label for="whatsapp">WhatsApp Number *</label>
@@ -800,7 +800,7 @@
             });
             formObject['_subject'] = formData.get('_subject') || `New Lead: ${formType}`;
             
-            const emailPromise = fetch('https://formsubmit.co/ajax/contactshaikk@gmail.com', {
+            const emailPromise = fetch('https://formsubmit.co/ajax/contact@eliteluxurybookings.com', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formObject)
