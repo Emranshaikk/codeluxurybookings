@@ -6,7 +6,7 @@
         </Condition>
         <Redirect>
             <HostName>eliteluxurybookings.com</HostName>
-            <ReplaceKeyPrefixWith>private-boat-trip-mallorca-to-formentera/</ReplaceKeyPrefixWith>
+            <ReplaceKeyWith>private-boat-trip-mallorca-to-formentera/</ReplaceKeyWith>
             <HttpRedirectCode>301</HttpRedirectCode>
         </Redirect>
     </RoutingRule>
@@ -16,7 +16,7 @@
         </Condition>
         <Redirect>
             <HostName>eliteluxurybookings.com</HostName>
-            <ReplaceKeyPrefixWith>private-boat-trip-mallorca-to-formentera/</ReplaceKeyPrefixWith>
+            <ReplaceKeyWith>private-boat-trip-mallorca-to-formentera/</ReplaceKeyWith>
             <HttpRedirectCode>301</HttpRedirectCode>
         </Redirect>
     </RoutingRule>
@@ -26,7 +26,7 @@
         </Condition>
         <Redirect>
             <HostName>eliteluxurybookings.com</HostName>
-            <ReplaceKeyPrefixWith>private-boat-trip-mallorca-to-formentera/</ReplaceKeyPrefixWith>
+            <ReplaceKeyWith>private-boat-trip-mallorca-to-formentera/</ReplaceKeyWith>
             <HttpRedirectCode>301</HttpRedirectCode>
         </Redirect>
     </RoutingRule>
@@ -36,7 +36,7 @@
         </Condition>
         <Redirect>
             <HostName>eliteluxurybookings.com</HostName>
-            <ReplaceKeyPrefixWith>private-boat-trip-mallorca-to-formentera/</ReplaceKeyPrefixWith>
+            <ReplaceKeyWith>private-boat-trip-mallorca-to-formentera/</ReplaceKeyWith>
             <HttpRedirectCode>301</HttpRedirectCode>
         </Redirect>
     </RoutingRule>
@@ -46,7 +46,7 @@
         </Condition>
         <Redirect>
             <HostName>eliteluxurybookings.com</HostName>
-            <ReplaceKeyPrefixWith>private-boat-trip-mallorca-to-formentera/</ReplaceKeyPrefixWith>
+            <ReplaceKeyWith>private-boat-trip-mallorca-to-formentera/</ReplaceKeyWith>
             <HttpRedirectCode>301</HttpRedirectCode>
         </Redirect>
     </RoutingRule>
@@ -58,7 +58,7 @@
         </Condition>
         <Redirect>
             <HostName>eliteluxurybookings.com</HostName>
-            <ReplaceKeyPrefixWith>mallorca-to-ibiza-private-boat/</ReplaceKeyPrefixWith>
+            <ReplaceKeyWith>mallorca-to-ibiza-private-boat/</ReplaceKeyWith>
             <HttpRedirectCode>301</HttpRedirectCode>
         </Redirect>
     </RoutingRule>
@@ -68,7 +68,7 @@
         </Condition>
         <Redirect>
             <HostName>eliteluxurybookings.com</HostName>
-            <ReplaceKeyPrefixWith>mallorca-to-ibiza-private-boat/</ReplaceKeyPrefixWith>
+            <ReplaceKeyWith>mallorca-to-ibiza-private-boat/</ReplaceKeyWith>
             <HttpRedirectCode>301</HttpRedirectCode>
         </Redirect>
     </RoutingRule>
@@ -78,7 +78,7 @@
         </Condition>
         <Redirect>
             <HostName>eliteluxurybookings.com</HostName>
-            <ReplaceKeyPrefixWith>mallorca-to-ibiza-private-boat/</ReplaceKeyPrefixWith>
+            <ReplaceKeyWith>mallorca-to-ibiza-private-boat/</ReplaceKeyWith>
             <HttpRedirectCode>301</HttpRedirectCode>
         </Redirect>
     </RoutingRule>
