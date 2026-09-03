@@ -28,6 +28,7 @@ RewriteRule ^luxury-yacht-rentals/mallorca-to-ibiza-private-boat(\.html)?/?$ htt
 RewriteRule ^private-yacht-from-ibiza-to-mallorca(\.html)?/?$ https://eliteluxurybookings.com/mallorca-to-ibiza-private-boat/ [R=301,NC,L]
 
 # Critical Redirects to Resolve Loop/404 Issues
+RewriteRule ^mykonos-yacht-charter-masterclass-2026(\.html)?/?$ https://eliteluxurybookings.com/mykonos-yacht-charter/ [R=301,NC,L]
 RewriteRule ^luxury-private-jets/?$ https://eliteluxurybookings.com/elite-private-jet-charter/ [R=301,NC,L]
 RewriteRule ^luxury-private-yachts/?$ https://eliteluxurybookings.com/luxury-yacht-rentals/ [R=301,NC,L]
 RewriteRule ^blogs/?$ https://eliteluxurybookings.com/blog/ [R=301,NC,L]

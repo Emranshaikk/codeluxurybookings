@@ -280,5 +280,23 @@
     "target": "/private-boat-trip-mallorca-to-formentera/",
     "status": "301",
     "condition": null
+  },
+  {
+    "source": "/mykonos-yacht-charter-masterclass-2026",
+    "target": "/mykonos-yacht-charter/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/mykonos-yacht-charter-masterclass-2026/",
+    "target": "/mykonos-yacht-charter/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/mykonos-yacht-charter-masterclass-2026.html",
+    "target": "/mykonos-yacht-charter/",
+    "status": "301",
+    "condition": null
   }
 ]

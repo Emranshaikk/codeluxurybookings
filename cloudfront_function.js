@@ -52,7 +52,9 @@ function handler(event) {
     
     // --- Redirect Loops / Critical Fixes ---
     if (!redirectUrl) {
-        if (cleanUri === "/luxury-private-jets") {
+        if (cleanUri === "/mykonos-yacht-charter-masterclass-2026" || cleanUri === "/mykonos-yacht-charter-masterclass-2026.html") {
+            redirectUrl = "https://eliteluxurybookings.com/mykonos-yacht-charter/";
+        } else if (cleanUri === "/luxury-private-jets") {
             redirectUrl = "https://eliteluxurybookings.com/elite-private-jet-charter/";
         } else if (cleanUri === "/luxury-private-yachts") {
             redirectUrl = "https://eliteluxurybookings.com/luxury-yacht-rentals/";

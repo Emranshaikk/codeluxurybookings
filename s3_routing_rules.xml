@@ -316,4 +316,14 @@
             <HttpRedirectCode>301</HttpRedirectCode>
         </Redirect>
     </RoutingRule>
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>mykonos-yacht-charter-masterclass-2026</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <HostName>eliteluxurybookings.com</HostName>
+            <ReplaceKeyWith>mykonos-yacht-charter/</ReplaceKeyWith>
+            <HttpRedirectCode>301</HttpRedirectCode>
+        </Redirect>
+    </RoutingRule>
 </RoutingRules>
