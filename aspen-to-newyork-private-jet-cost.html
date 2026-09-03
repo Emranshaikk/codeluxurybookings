@@ -905,7 +905,7 @@
                 </p>
 <!-- Dynamic Urgency Alert Banner -->
 <div class="availability-status" style="border: 1px solid rgba(212, 175, 55, 0.25); background: rgba(212, 175, 55, 0.02); padding: 12px 20px; border-radius: 12px; margin: 0 auto 1.5rem; max-width: 700px; display: flex; align-items: center; justify-content: center; gap: 12px;">
-<span style="color: var(--primary-gold); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">✨ Route Status: High-Availability Executive Corridors Open. Inquire for guaranteed slots.</span>
+<span style="color: var(--primary-gold); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">✈️ Executive charter aircraft available for this route — inquire for current scheduling.</span>
 </div>
 <div class="glass-panel" style="padding: 4rem; border: 1px solid var(--glass-border); background: rgba(10, 10, 10, 0.95); border-radius: 30px; box-shadow: 0 50px 120px rgba(0,0,0,0.9); margin: 3rem auto; max-width: 900px; backdrop-filter: blur(30px);">
 <div style="text-align: center; margin-bottom: 3rem;">
@@ -1051,6 +1051,10 @@
 <button id="btn-class-heavy" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); padding: 1rem 0.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;" type="button">
                                     Heavy Jet
                                     <span style="display:block; font-size:0.7rem; color:var(--text-muted); margin-top:2px;">$19,000/hr</span>
+</button>
+<button id="btn-class-ultra" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); padding: 1rem 0.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;" type="button">
+                                    Ultra Long Range
+                                    <span style="display:block; font-size:0.7rem; color:var(--text-muted); margin-top:2px;">$24,000/hr</span>
 </button>
 </div>
 </div>
@@ -1471,14 +1475,16 @@
                     light: 4500,
                     midsize: 7000,
                     supermid: 11000,
-                    heavy: 19000
+                    heavy: 19000,
+                    ultra: 24000
                 };
 
                 const classButtons = {
                     light: document.getElementById('btn-class-light'),
                     midsize: document.getElementById('btn-class-midsize'),
                     supermid: document.getElementById('btn-class-supermid'),
-                    heavy: document.getElementById('btn-class-heavy')
+                    heavy: document.getElementById('btn-class-heavy'),
+                    ultra: document.getElementById('btn-class-ultra')
                 };
 
                 const totalCostEl = document.getElementById('jet-total-cost');
