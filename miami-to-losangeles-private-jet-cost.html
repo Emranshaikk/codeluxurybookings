@@ -687,7 +687,7 @@
 </div>
 <div>
 <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem; color: var(--primary-gold); margin-bottom: 0.5rem;">Optimal Class</p>
-<h3 class="serif" style="font-size: 1.2rem;">Midsize Jet</h3>
+<h3 class="serif" style="font-size: 1.2rem;">Heavy Jet</h3>
 </div>
 </div>
 <div style="max-width: 800px; margin: 4rem auto 0; text-align: center;">
@@ -695,7 +695,7 @@
 <p style="line-height: 1.8; color: var(--text-muted); font-size: 1.1rem;">
                         The Miami to Los Angeles route is a critical corridor for our clients requiring rapid transit between major global hubs. 
                         Deploying from Opa-Locka (KOPF), we utilize optimized flight levels to ensure a 5h 21m arrival at Van Nuys (KVNY). 
-                        For this 2334-mile mission, we recommend a Midsize Jet to balance cabin performance with operational efficiency.
+                        For this 2334-mile mission, we recommend a Heavy Jet to balance cabin performance with operational efficiency.
                     </p>
 <!-- ===== INTERACTIVE PRIVATE JET COST CALCULATOR (PROMPT 5 STYLE) ===== -->
 <div class="calculator-container" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 12px; padding: 2.5rem; margin: 3rem auto 0; max-width: 700px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); text-align: left;">
@@ -843,7 +843,7 @@
 <a href="https://eliteluxurybookings.com/privacy/" style="color: inherit; text-decoration: none;">Privacy</a>
 <a href="https://eliteluxurybookings.com/terms/" style="color: inherit; text-decoration: none;">Terms</a>
 
-<a href="https://eliteluxurybookings.com/global-route-silo/" style="color: inherit; text-decoration: none; opacity: 0.5;">Flight Index</a>
+<a href="https://eliteluxurybookings.com/route-directory/" style="color: inherit; text-decoration: none; opacity: 0.5;">Flight Index</a>
 </div>
 </div>
 </div>
@@ -975,7 +975,7 @@
     <script>
         (function () {
             const flightTimeHours = 5.35;
-            let currentJetClass = 'light';
+            let currentJetClass = 'heavy';
 
             const jetData = {
                 light: { rate: 3500, label: 'Light Jet', buttonId: 'btn-class-light' },
@@ -1046,7 +1046,7 @@
                 if (paxSliderEl) {
                     paxSliderEl.addEventListener('input', window.updateJetCalculator);
                 }
-                window.selectJetClass('light');
+                window.selectJetClass('heavy');
             });
         })();
     </script>
