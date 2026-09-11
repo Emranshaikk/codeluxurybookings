@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<link href="/favicon.png" rel="icon" type="image/png"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Privacy Protocol | Elite Luxury Bookings</title>
-<meta content="The privacy and data protection protocols for Elite Luxury Bookings. Ensuring absolute discretion for all client mission intelligence." name="description"/>
-<link href="https://eliteluxurybookings.com/privacy/" rel="canonical"/>
-<meta content="noindex, follow" name="robots"/>
-<!-- Premium Typography -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&amp;family=Inter:wght@300;400;600&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link href="/style.min.css" rel="stylesheet"/>
-<style>:root {
+    <meta charset="utf-8" />
+    <link href="/favicon.png" rel="icon" type="image/png" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Privacy Protocol | Elite Luxury Bookings</title>
+    <meta
+        content="The privacy and data protection protocols for Elite Luxury Bookings. Ensuring absolute discretion for all client mission intelligence."
+        name="description" />
+    <link href="https://eliteluxurybookings.com/privacy/" rel="canonical" />
+    <meta content="noindex, follow" name="robots" />
+    <!-- Premium Typography -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&amp;family=Inter:wght@300;400;600&amp;display=swap"
+        media="print" onload="this.media='all'" rel="stylesheet" />
+    <link href="/style.min.css" rel="stylesheet" />
+    <style>
+        :root {
             --primary-gold: #D4AF37;
             --deep-black: #050505;
             --graphene: #111111;
             --text-main: #FFFFFF;
             --text-muted: rgba(255, 255, 255, 0.7);
         }
+
         body {
             font-family: 'Inter', sans-serif;
             background: var(--deep-black);
@@ -29,123 +36,563 @@
             overflow-x: hidden;
         }
 
-        .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
-        .serif { font-family: 'Cormorant Garamond', serif; }
-        .gold-text { color: var(--primary-gold); }
-
-            /* ===== MASTER FOOTER (INJECTED SITE-WIDE) ===== */
-        .footer { background: #000 !important; padding: 5rem 0 3rem !important; border-top: 1px solid rgba(212, 175, 55, 0.1) !important; margin-top: 5rem !important; text-align: left !important; }
-        .footer-grid { display: grid !important; grid-template-columns: 2fr 1fr 1fr !important; gap: 4rem !important; padding-bottom: 4rem !important; border-bottom: 1px solid rgba(212, 175, 55, 0.1) !important; text-align: left !important; }
-        .footer-brand { text-align: left !important; }
-        .footer-brand h2 { font-family: 'Cormorant Garamond', serif !important; font-size: 2.2rem !important; margin-bottom: 1.5rem !important; color: #fff !important; text-align: left !important; }
-        .footer-brand p { font-family: 'Inter', sans-serif !important; font-size: 0.9rem !important; line-height: 1.8 !important; max-width: 380px !important; margin-bottom: 2rem !important; color: rgba(255, 255, 255, 0.7) !important; text-align: left !important; }
-        .footer-socials { display: flex !important; gap: 1.5rem !important; justify-content: flex-start !important; }
-        .footer-socials a, .footer-socials a:visited { color: rgba(255, 255, 255, 0.6) !important; transition: 0.3s !important; font-size: 1.5rem !important; }
-        .footer-socials a:hover { color: #D4AF37 !important; }
-        .footer-col { text-align: left !important; }
-        .footer-col h4 { color: #D4AF37 !important; text-transform: uppercase !important; letter-spacing: 2px !important; font-size: 0.9rem !important; margin-bottom: 2rem !important; text-align: left !important; }
-        .footer-col ul { list-style: none !important; padding: 0 !important; margin: 0 !important; text-align: left !important; }
-        .footer-col ul li { margin-bottom: 1rem !important; text-align: left !important; }
-        .footer-col ul li a, .footer-col ul li a:visited { color: rgba(255, 255, 255, 0.8) !important; text-decoration: none !important; transition: 0.3s !important; font-size: 0.95rem !important; }
-        .footer-col ul li a:hover { color: #D4AF37 !important; padding-left: 5px !important; }
-        .footer-bottom { display: flex !important; justify-content: space-between !important; align-items: center !important; padding-top: 3rem !important; color: rgba(255, 255, 255, 0.4) !important; font-size: 0.85rem !important; }
-        .footer-legal { display: flex !important; gap: 2rem !important; }
-        .footer-legal a, .footer-legal a:visited { color: inherit !important; text-decoration: none !important; }
-        a:visited { color: inherit; }
-        @media (max-width: 992px) { 
-            .footer-grid { grid-template-columns: 1fr 1fr !important; } 
-            .footer-brand { grid-column: span 2 !important; } 
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
-        @media (max-width: 600px) { 
-            .footer-grid { grid-template-columns: 1fr !important; } 
-            .footer-brand { grid-column: span 1 !important; text-align: center !important; } 
-            .footer-brand h2 { text-align: center !important; }
-            .footer-brand p { text-align: center !important; margin: 0 auto 2rem auto !important; }
-            .footer-socials { justify-content: center !important; }
-            .footer-col { text-align: center !important; }
-            .footer-col h4 { text-align: center !important; }
-            .footer-col ul { text-align: center !important; }
-            .footer-col ul li { text-align: center !important; }
-            .footer-bottom { flex-direction: column !important; gap: 2rem !important; text-align: center !important; } 
-        }
-            /* --- ELITE NAV & TICKER STANDARDIZATION --- */
-        .top-intel-bar { background: rgba(5, 5, 5, 0.98) !important; border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important; height: 36px !important; overflow: hidden !important; position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; z-index: 100000 !important; display: flex !important; align-items: center !important; }
-        .ticker-wrap { white-space: nowrap !important; overflow: hidden !important; width: 100% !important; }
-        .ticker-content { display: inline-block !important; white-space: nowrap !important; padding-left: 100% !important; animation: ticker-scroll 40s linear infinite !important; font-size: 0.72rem !important; letter-spacing: 2px !important; text-transform: uppercase !important; color: rgba(255, 255, 255, 0.9) !important; }
-        @keyframes ticker-scroll { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-200%, 0, 0); } }
-        .ticker-content strong { color: #D4AF37 !important; margin: 0 40px !important; }
-        .ticker-content a { color: #fff !important; text-decoration: underline !important; text-underline-offset: 4px !important; margin-left: 10px !important; font-weight: 600 !important; }
-        
-        .global-nav { position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; background: rgba(5, 5, 5, 0.98) !important; backdrop-filter: blur(24px) !important; border-bottom: 1px solid rgba(212, 175, 55, 0.2) !important; z-index: 99999 !important; transition: top 0.3s ease !important; }
-        .top-intel-bar ~ .global-nav { top: 36px !important; }
-        .global-nav-inner { display: flex !important; align-items: center !important; justify-content: space-between !important; height: 72px !important; gap: 1rem !important; max-width: 1400px !important; margin: 0 auto !important; padding: 0 2rem !important; box-sizing: border-box !important; }
-        .nav-brand { font-family: 'Cormorant Garamond', serif !important; font-size: 1.75rem !important; font-weight: 600 !important; color: #fff !important; text-decoration: none !important; }
-        .nav-gold { color: #D4AF37 !important; }
-        .nav-links { display: flex !important; align-items: center !important; gap: 0.25rem !important; list-style: none !important; flex: 1 !important; justify-content: center !important; margin: 0 !important; padding: 0 !important; }
-        .nav-links a { color: rgba(255, 255, 255, 0.7) !important; text-decoration: none !important; font-size: 0.82rem !important; text-transform: uppercase !important; letter-spacing: 1.5px !important; padding: 0.5rem 0.9rem !important; border-radius: 6px !important; transition: all 0.4s !important; font-family: 'Inter', sans-serif !important; }
-        .nav-links a:hover { color: #D4AF37 !important; }
-        .nav-hamburger { display: none !important; flex-direction: column !important; gap: 5px !important; cursor: pointer !important; padding: 0.5rem !important; z-index: 100001 !important; }
-        .nav-hamburger span { display: block !important; width: 24px !important; height: 2px !important; background: rgba(255, 255, 255, 0.8) !important; border-radius: 2px !important; transition: all 0.4s !important; }
-        .nav-hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px) !important; }
-        .nav-hamburger.open span:nth-child(2) { opacity: 0 !important; }
-        .nav-hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px) !important; }
-        .mobile-menu { display: none !important; position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; background: #050505 !important; padding: 72px 2rem 2rem !important; z-index: 100000 !important; flex-direction: column !important; gap: 0.5rem !important; overflow-y: auto !important; }
-        .mobile-menu.open { display: flex !important; }
-        .mobile-menu a { color: rgba(255, 255, 255, 0.8) !important; text-decoration: none !important; font-size: 1.1rem !important; text-transform: uppercase !important; letter-spacing: 2px !important; padding: 1.2rem 0 !important; border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important; }
-        @media (max-width: 1024px) { .nav-links { display: none !important; } .nav-hamburger { display: flex !important; } }
 
-        body:has(.top-intel-bar) { padding-top: 108px !important; }
-        
+        .serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .gold-text {
+            color: var(--primary-gold);
+        }
+
+        .content-section {
+            margin-bottom: 3rem;
+        }
+
+        .content-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.85rem;
+            color: #fff;
+            margin-bottom: 1.25rem;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding-bottom: 0.5rem;
+        }
+
+        .content-section h3 {
+            font-size: 1.15rem;
+            color: var(--primary-gold);
+            margin: 1.5rem 0 0.75rem 0;
+            font-weight: 600;
+        }
+
+        .content-section p, .content-section li {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .content-section ul, .content-section ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .legal-notice-box {
+            background: rgba(212, 175, 55, 0.06);
+            border-left: 3px solid var(--primary-gold);
+            padding: 1.25rem 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .legal-notice-box p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .legal-flag {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            color: #e6c875;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.15rem 0.5rem;
+            border-radius: 3px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin: 0 0.25rem;
+        }
+
+        .legal-table-wrap {
+            overflow-x: auto;
+            margin: 1.5rem 0 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 6px;
+        }
+
+        .legal-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            text-align: left;
+        }
+
+        .legal-table th {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--primary-gold);
+            padding: 0.9rem 1rem;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+
+        .legal-table td {
+            padding: 0.9rem 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+            color: rgba(255, 255, 255, 0.8);
+            vertical-align: top;
+            line-height: 1.6;
+        }
+
+        .legal-table tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* ===== MASTER FOOTER (INJECTED SITE-WIDE) ===== */
+        .footer {
+            background: #000 !important;
+            padding: 5rem 0 3rem !important;
+            border-top: 1px solid rgba(212, 175, 55, 0.1) !important;
+            margin-top: 5rem !important;
+            text-align: left !important;
+        }
+
+        .footer-grid {
+            display: grid !important;
+            grid-template-columns: 2fr 1fr 1fr !important;
+            gap: 4rem !important;
+            padding-bottom: 4rem !important;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1) !important;
+            text-align: left !important;
+        }
+
+        .footer-brand {
+            text-align: left !important;
+        }
+
+        .footer-brand h2 {
+            font-family: 'Cormorant Garamond', serif !important;
+            font-size: 2.2rem !important;
+            margin-bottom: 1.5rem !important;
+            color: #fff !important;
+            text-align: left !important;
+        }
+
+        .footer-brand p {
+            font-family: 'Inter', sans-serif !important;
+            font-size: 0.9rem !important;
+            line-height: 1.8 !important;
+            max-width: 380px !important;
+            margin-bottom: 2rem !important;
+            color: rgba(255, 255, 255, 0.7) !important;
+            text-align: left !important;
+        }
+
+        .footer-socials {
+            display: flex !important;
+            gap: 1.5rem !important;
+            justify-content: flex-start !important;
+        }
+
+        .footer-socials a,
+        .footer-socials a:visited {
+            color: rgba(255, 255, 255, 0.6) !important;
+            transition: 0.3s !important;
+            font-size: 1.5rem !important;
+        }
+
+        .footer-socials a:hover {
+            color: #D4AF37 !important;
+        }
+
+        .footer-col {
+            text-align: left !important;
+        }
+
+        .footer-col h4 {
+            color: #D4AF37 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 2px !important;
+            font-size: 0.9rem !important;
+            margin-bottom: 2rem !important;
+            text-align: left !important;
+        }
+
+        .footer-col ul {
+            list-style: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            text-align: left !important;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 1rem !important;
+            text-align: left !important;
+        }
+
+        .footer-col ul li a,
+        .footer-col ul li a:visited {
+            color: rgba(255, 255, 255, 0.8) !important;
+            text-decoration: none !important;
+            transition: 0.3s !important;
+            font-size: 0.95rem !important;
+        }
+
+        .footer-col ul li a:hover {
+            color: #D4AF37 !important;
+            padding-left: 5px !important;
+        }
+
+        .footer-bottom {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            padding-top: 3rem !important;
+            color: rgba(255, 255, 255, 0.4) !important;
+            font-size: 0.85rem !important;
+        }
+
+        .footer-legal {
+            display: flex !important;
+            gap: 2rem !important;
+        }
+
+        .footer-legal a,
+        .footer-legal a:visited {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+
+        a:visited {
+            color: inherit;
+        }
+
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr !important;
+            }
+
+            .footer-brand {
+                grid-column: span 2 !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .footer-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .footer-brand {
+                grid-column: span 1 !important;
+                text-align: center !important;
+            }
+
+            .footer-brand h2 {
+                text-align: center !important;
+            }
+
+            .footer-brand p {
+                text-align: center !important;
+                margin: 0 auto 2rem auto !important;
+            }
+
+            .footer-socials {
+                justify-content: center !important;
+            }
+
+            .footer-col {
+                text-align: center !important;
+            }
+
+            .footer-col h4 {
+                text-align: center !important;
+            }
+
+            .footer-col ul {
+                text-align: center !important;
+            }
+
+            .footer-col ul li {
+                text-align: center !important;
+            }
+
+            .footer-bottom {
+                flex-direction: column !important;
+                gap: 2rem !important;
+                text-align: center !important;
+            }
+        }
+
+        /* --- ELITE NAV & TICKER STANDARDIZATION --- */
+        .top-intel-bar {
+            background: rgba(5, 5, 5, 0.98) !important;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important;
+            height: 36px !important;
+            overflow: hidden !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            z-index: 100000 !important;
+            display: flex !important;
+            align-items: center !important;
+        }
+
+        .ticker-wrap {
+            white-space: nowrap !important;
+            overflow: hidden !important;
+            width: 100% !important;
+        }
+
+        .ticker-content {
+            display: inline-block !important;
+            white-space: nowrap !important;
+            padding-left: 100% !important;
+            animation: ticker-scroll 40s linear infinite !important;
+            font-size: 0.72rem !important;
+            letter-spacing: 2px !important;
+            text-transform: uppercase !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        @keyframes ticker-scroll {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                transform: translate3d(-200%, 0, 0);
+            }
+        }
+
+        .ticker-content strong {
+            color: #D4AF37 !important;
+            margin: 0 40px !important;
+        }
+
+        .ticker-content a {
+            color: #fff !important;
+            text-decoration: underline !important;
+            text-underline-offset: 4px !important;
+            margin-left: 10px !important;
+            font-weight: 600 !important;
+        }
+
+        .global-nav {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            background: rgba(5, 5, 5, 0.98) !important;
+            backdrop-filter: blur(24px) !important;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2) !important;
+            z-index: 99999 !important;
+            transition: top 0.3s ease !important;
+        }
+
+        .top-intel-bar~.global-nav {
+            top: 36px !important;
+        }
+
+        .global-nav-inner {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            height: 72px !important;
+            gap: 1rem !important;
+            max-width: 1400px !important;
+            margin: 0 auto !important;
+            padding: 0 2rem !important;
+            box-sizing: border-box !important;
+        }
+
+        .nav-brand {
+            font-family: 'Cormorant Garamond', serif !important;
+            font-size: 1.75rem !important;
+            font-weight: 600 !important;
+            color: #fff !important;
+            text-decoration: none !important;
+        }
+
+        .nav-gold {
+            color: #D4AF37 !important;
+        }
+
+        .nav-links {
+            display: flex !important;
+            align-items: center !important;
+            gap: 0.25rem !important;
+            list-style: none !important;
+            flex: 1 !important;
+            justify-content: center !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.7) !important;
+            text-decoration: none !important;
+            font-size: 0.82rem !important;
+            text-transform: uppercase !important;
+            letter-spacing: 1.5px !important;
+            padding: 0.5rem 0.9rem !important;
+            border-radius: 6px !important;
+            transition: all 0.4s !important;
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        .nav-links a:hover {
+            color: #D4AF37 !important;
+        }
+
+        .nav-hamburger {
+            display: none !important;
+            flex-direction: column !important;
+            gap: 5px !important;
+            cursor: pointer !important;
+            padding: 0.5rem !important;
+            z-index: 100001 !important;
+        }
+
+        .nav-hamburger span {
+            display: block !important;
+            width: 24px !important;
+            height: 2px !important;
+            background: rgba(255, 255, 255, 0.8) !important;
+            border-radius: 2px !important;
+            transition: all 0.4s !important;
+        }
+
+        .nav-hamburger.open span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px) !important;
+        }
+
+        .nav-hamburger.open span:nth-child(2) {
+            opacity: 0 !important;
+        }
+
+        .nav-hamburger.open span:nth-child(3) {
+            transform: rotate(-45deg) translate(4px, -4px) !important;
+        }
+
+        .mobile-menu {
+            display: none !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            background: #050505 !important;
+            padding: 72px 2rem 2rem !important;
+            z-index: 100000 !important;
+            flex-direction: column !important;
+            gap: 0.5rem !important;
+            overflow-y: auto !important;
+        }
+
+        .mobile-menu.open {
+            display: flex !important;
+        }
+
+        .mobile-menu a {
+            color: rgba(255, 255, 255, 0.8) !important;
+            text-decoration: none !important;
+            font-size: 1.1rem !important;
+            text-transform: uppercase !important;
+            letter-spacing: 2px !important;
+            padding: 1.2rem 0 !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+        }
+
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none !important;
+            }
+
+            .nav-hamburger {
+                display: flex !important;
+            }
+        }
+
+        body:has(.top-intel-bar) {
+            padding-top: 108px !important;
+        }
+
         @media (max-width: 768px) {
-            .top-intel-bar { height: 32px !important; }
-            .top-intel-bar ~ .global-nav { top: 32px !important; }
-            body:has(.top-intel-bar) { padding-top: 104px !important; }
+            .top-intel-bar {
+                height: 32px !important;
+            }
+
+            .top-intel-bar~.global-nav {
+                top: 32px !important;
+            }
+
+            body:has(.top-intel-bar) {
+                padding-top: 104px !important;
+            }
         }
+
         /* --- END ELITE NAV & TICKER --- */
-    
+
         /* --- ADVANCED MOBILE LAYOUT OPTIMIZATIONS --- */
         @media (max-width: 768px) {
-            html, body {
+
+            html,
+            body {
                 overflow-x: hidden !important;
                 width: 100% !important;
             }
+
             .container {
                 padding: 0 1.25rem !important;
             }
+
             .tag-strip {
                 flex-wrap: wrap !important;
                 gap: 0.75rem 1.25rem !important;
                 margin-bottom: 1.5rem !important;
             }
+
             .tag-item {
                 font-size: 0.68rem !important;
                 white-space: nowrap !important;
             }
-            #form-container, .glass-panel[style*="padding: 4rem"] {
+
+            #form-container,
+            .glass-panel[style*="padding: 4rem"] {
                 padding: 2.5rem 1.5rem !important;
                 margin: 2rem auto !important;
                 border-radius: 20px !important;
-                box-shadow: 0 30px 60px rgba(0,0,0,0.8) !important;
+                box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8) !important;
             }
-            #form-container form, .glass-panel[style*="padding: 4rem"] form {
+
+            #form-container form,
+            .glass-panel[style*="padding: 4rem"] form {
                 gap: 1.75rem !important;
             }
+
             .form-grid {
                 grid-template-columns: 1fr !important;
                 gap: 1.25rem !important;
             }
+
             .calculator-container {
                 padding: 2rem 1.25rem !important;
             }
+
             .jet-selector {
                 flex-wrap: wrap !important;
                 gap: 0.5rem !important;
             }
+
             .jet-selector button {
                 padding: 0.7rem 0.75rem !important;
                 font-size: 0.75rem !important;
                 flex: 1 1 calc(50% - 0.5rem) !important;
             }
+
             .grid-2,
             .grid-3,
             .grid-4,
@@ -157,16 +604,17 @@
             }
         }
     </style>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<!-- Google Analytics -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-J56D1LJLFM"></script>
-<script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print"
+        onload="this.media='all'" rel="stylesheet" />
+    <!-- Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-J56D1LJLFM"></script>
+    <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-J56D1LJLFM');
     </script>
-<script type="application/ld+json">
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -181,169 +629,441 @@
       }
     }
     </script>
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "sia395rirl");
-</script>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="@eliteluxuryb" name="twitter:site"/>
-<meta content="Privacy Protocol | Elite Luxury Bookings" name="twitter:title"/>
-<meta content="The privacy and data protection protocols for Elite Luxury Bookings. Ensuring absolute discretion for all client mission intelligence." name="twitter:description"/>
-<meta content="https://eliteluxurybookings.com/assets/elite_jet_master_hero.png" name="twitter:image"/>
-<meta content="https://eliteluxurybookings.com/assets/elite_jet_master_hero.png" property="og:image"/>
-<meta content="Privacy Protocol | Elite Luxury Bookings" property="og:title"/>
-<meta content="The privacy and data protection protocols for Elite Luxury Bookings. Ensuring absolute discretion for all client mission intelligence." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://eliteluxurybookings.com/privacy/" property="og:url"/>
-<meta content="https://eliteluxurybookings.com/assets/elite_jet_master_hero.png" property="og:image"/>
-<meta content="Elite Luxury Bookings" property="og:site_name"/>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=103558768', 'ym');
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "sia395rirl");
+    </script>
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="@eliteluxuryb" name="twitter:site" />
+    <meta content="Privacy Protocol | Elite Luxury Bookings" name="twitter:title" />
+    <meta
+        content="The privacy and data protection protocols for Elite Luxury Bookings. Ensuring absolute discretion for all client mission intelligence."
+        name="twitter:description" />
+    <meta content="https://eliteluxurybookings.com/assets/elite_jet_master_hero.png" name="twitter:image" />
+    <meta content="https://eliteluxurybookings.com/assets/elite_jet_master_hero.png" property="og:image" />
+    <meta content="Privacy Protocol | Elite Luxury Bookings" property="og:title" />
+    <meta
+        content="The privacy and data protection protocols for Elite Luxury Bookings. Ensuring absolute discretion for all client mission intelligence."
+        property="og:description" />
+    <meta content="website" property="og:type" />
+    <meta content="https://eliteluxurybookings.com/privacy/" property="og:url" />
+    <meta content="https://eliteluxurybookings.com/assets/elite_jet_master_hero.png" property="og:image" />
+    <meta content="Elite Luxury Bookings" property="og:site_name" />
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=103558768', 'ym');
 
-    ym(103558768, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img alt="" src="https://mc.yandex.ru/watch/103558768" style="position:absolute; left:-9999px;"/></div></noscript>
-<!-- /Yandex.Metrika counter -->
+        ym(103558768, 'init', { ssr: true, webvisor: true, clickmap: true, ecommerce: "dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce: true, trackLinks: true });
+    </script>
+    <noscript>
+        <div><img alt="" src="https://mc.yandex.ru/watch/103558768" style="position:absolute; left:-9999px;" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
-<body>
-<!-- ELB_NAV_START -->
-<div class="top-intel-bar">
-<div class="ticker-wrap">
-<div class="ticker-content">
-<strong>⚠️ Intelligence Alert:</strong> Strategic Procurement Windows Open for the Upcoming Summer. <strong>Empty Leg Flights Available:</strong> <a href="https://wa.me/918801079030" onclick="if(typeof gtag==='function'){gtag('event','whatsapp_click',{'page_location':window.location.href});}">Connect for Instant Procurement</a> <strong>⚠️ Global Inventory Update:</strong> Off-Market Assets Now Accessible via Elite Concierge.
-        </div>
-</div>
-</div>
-<nav class="global-nav">
-<div class="container global-nav-inner">
-<a class="nav-brand" href="https://eliteluxurybookings.com/">Elite Luxury <span class="nav-gold">Bookings</span></a>
-<ul class="nav-links">
-<li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
-<li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Yachts</a></li>
-<li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/">Villas</a></li>
-<li><a href="https://eliteluxurybookings.com/blog/" onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'" onmouseover="this.style.color='#D4AF37'" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;">Blog</a></li>
-<li><a href="https://eliteluxurybookings.com/contact/" onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'" onmouseover="this.style.color='#D4AF37'" style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;">Contact</a></li>
-</ul>
-<div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()">
-<span></span><span></span><span></span>
-</div>
-</div>
-</nav>
-<div class="mobile-menu" id="elbMobileMenu">
-<a href="https://eliteluxurybookings.com/elite-private-jet-charter/">✈ Private Jets</a>
-<a href="https://eliteluxurybookings.com/luxury-villa-rentals/">🏡 Luxury Villas</a>
-<a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">⚓ Luxury Yachts</a>
-<a href="https://eliteluxurybookings.com/blog/">📰 Blog</a>
-<a href="https://eliteluxurybookings.com/contact/">📞 Contact</a>
-</div>
-<!-- ELB_NAV_END -->
-<main class="container">
-<header>
-<h1 class="serif">Privacy <span class="gold-text">Protocol</span></h1>
-<p style="color: var(--text-muted); margin-top: 1rem;">Effective Date: May 2026</p>
-</header>
-<article>
-<div class="content-section">
-<h2>1. Commitment to Discretion</h2>
-<p>At Elite Luxury Bookings, we understand that privacy is the ultimate luxury. This protocol outlines how we manage and protect the sensitive mission intelligence you provide during the procurement of aviation, maritime, and estate services.</p>
-</div>
-<div class="content-section">
-<h2>2. Data Collection &amp; Intelligence</h2>
-<p>We only collect data essential for the safe and secure coordination of your travel requirements. This includes:</p>
-<ul style="list-style: disc; margin-left: 2rem; color: var(--text-muted); margin-bottom: 1.5rem;">
-<li>Personal identification for FBO and maritime manifests.</li>
-<li>Secure communication details (WhatsApp, Signal, or encrypted email).</li>
-<li>Specific mission requirements (itineraries, security preferences, dietary needs).</li>
-</ul>
-</div>
-<div class="content-section">
-<h2>3. Security Standards</h2>
-<p>All client data is encrypted and stored in secure environments. We employ industry-standard protocols to prevent unauthorized access. For high-profile individuals, we coordinate with private security teams to ensure data handling meets your specific NDA requirements.</p>
-</div>
-<div class="content-section">
-<h2>4. Third-Party Coordination</h2>
-<p>To execute your journey, we share essential data with vetted partners (aircraft operators, yacht owners, estate managers). These partners are bound by strict confidentiality agreements and only receive the intelligence necessary to fulfill their specific role in your mission.</p>
-</div>
-<div class="content-section">
-<h2>5. Your Rights</h2>
-<p>You maintain full control over your data. You may request the immediate deletion of your mission records upon completion of your travel, subject to legal and regulatory aviation requirements.</p>
-</div>
-<div class="content-section">
-<h2>6. Contact the Protocol Officer</h2>
-<p>For questions regarding your privacy or to request data removal, please contact our desk at: contact@eliteluxurybookings.com</p>
-</div>
-</article>
-</main>
-<!-- Master Footer -->
-<!-- WhatsApp Float -->
-<a aria-label="Chat with Elite Luxury Bookings Concierge on WhatsApp" class="wa-float" href="https://wa.me/918801079030" onclick="if(typeof gtag==='function'){gtag('event','whatsapp_click',{'page_location':window.location.href});}" rel="noopener" target="_blank">
-<svg aria-hidden="true" fill="currentColor" height="34" viewbox="0 0 16 16" width="34" xmlns="http://www.w3.org/2000/svg">
-<path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
-</svg>
-</a>
-<!-- Master Footer -->
-<footer class="footer">
-<div class="container" style="max-width: 1200px;">
-<div class="footer-grid">
-<div class="footer-brand">
-<h2>Elite Luxury <span class="gold-text">Bookings</span></h2>
-<p>Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
-<div class="footer-socials">
-<a href="https://www.facebook.com/eliteluxurybookings" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook"></i></a>
-<a href="https://www.instagram.com/eliteluxurybookings" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="https://www.linkedin.com/company/elite-luxury-bookings/" rel="noopener noreferrer" target="_blank"><i class="fab fa-linkedin"></i></a>
-<a href="https://x.com/eliteluxuryb" rel="noopener noreferrer" target="_blank"><i class="fab fa-x-twitter"></i></a>
-</div>
-</div>
-<div class="footer-col">
-<h4>SERVICES</h4>
-<ul>
-<li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
-<li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Luxury Yachts</a></li>
-<li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/">Luxury Villas</a></li>
-<li><a href="https://eliteluxurybookings.com/blog/">Blog</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h4>AUTHORITY</h4>
-<ul>
-<li><a href="https://eliteluxurybookings.com/about/">The Mission</a></li>
-<li><a href="https://eliteluxurybookings.com/privacy/">Privacy Protocol</a></li>
-<li><a href="https://eliteluxurybookings.com/terms/">Terms of Engagement</a></li>
-<li><a href="https://eliteluxurybookings.com/contact/">Connect</a></li>
-</ul>
-</div>
-</div>
-<div class="footer-bottom" style="display: block; text-align: left; padding-top: 3rem; color: rgba(255, 255, 255, 0.4); font-size: 0.85rem; line-height: 1.8;">
-<div class="footer-legal" style="display: flex; gap: 2rem; margin-top: 1.5rem;">
-<a href="https://eliteluxurybookings.com/privacy/" style="color: inherit; text-decoration: none;">Privacy</a>
-<a href="https://eliteluxurybookings.com/terms/" style="color: inherit; text-decoration: none;">Terms</a>
 
-<!-- <a href="https://eliteluxurybookings.com/route-directory/" style="color: inherit; text-decoration: none; opacity: 0.5;">Flight Index</a> -->
-</div>
-</div>
-</div>
-</footer>
-<script>
-        function toggleMobileMenu() { 
-            var m = document.getElementById('elbMobileMenu'), 
-                b = document.getElementById('navHamburger'); 
-            if (m && b) { 
-                m.classList.toggle('open'); 
-                b.classList.toggle('open'); 
+<body>
+    <!-- ELB_NAV_START -->
+    <div class="top-intel-bar">
+        <div class="ticker-wrap">
+            <div class="ticker-content">
+                <strong>⚠️ Intelligence Alert:</strong> Strategic Procurement Windows Open for the Upcoming Summer.
+                <strong>Empty Leg Flights Available:</strong> <a href="https://wa.me/918801079030"
+                    onclick="if(typeof gtag==='function'){gtag('event','whatsapp_click',{'page_location':window.location.href});}">Connect
+                    for Instant Procurement</a> <strong>⚠️ Global Inventory Update:</strong> Off-Market Assets Now
+                Accessible via Elite Concierge.
+            </div>
+        </div>
+    </div>
+    <nav class="global-nav">
+        <div class="container global-nav-inner">
+            <a class="nav-brand" href="https://eliteluxurybookings.com/">Elite Luxury <span
+                    class="nav-gold">Bookings</span></a>
+            <ul class="nav-links">
+                <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
+                <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Yachts</a></li>
+                <li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/">Villas</a></li>
+                <li><a href="https://eliteluxurybookings.com/blog/"
+                        onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'"
+                        onmouseover="this.style.color='#D4AF37'"
+                        style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;">Blog</a>
+                </li>
+                <li><a href="https://eliteluxurybookings.com/contact/"
+                        onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'"
+                        onmouseover="this.style.color='#D4AF37'"
+                        style="color: rgba(255, 255, 255, 0.85); text-decoration:none; font-size:0.9rem; transition:color 0.3s;">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="elbMobileMenu">
+        <a href="https://eliteluxurybookings.com/elite-private-jet-charter/">✈ Private Jets</a>
+        <a href="https://eliteluxurybookings.com/luxury-villa-rentals/">🏡 Luxury Villas</a>
+        <a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">⚓ Luxury Yachts</a>
+        <a href="https://eliteluxurybookings.com/blog/">📰 Blog</a>
+        <a href="https://eliteluxurybookings.com/contact/">📞 Contact</a>
+    </div>
+    <!-- ELB_NAV_END -->
+    <main class="container">
+        <header>
+            <h1 class="serif">Privacy <span class="gold-text">Protocol</span></h1>
+            <p style="color: var(--text-muted); margin-top: 1rem;">Effective Date: May 2026</p>
+        </header>
+        <article>
+            <div class="legal-notice-box">
+                <p><strong>Regulatory &amp; Legal Notice:</strong> This Privacy Protocol outlines the data processing activities of Elite Luxury Bookings in compliance with the General Data Protection Regulation (Regulation (EU) 2016/679 - "EU GDPR"), the UK Data Protection Act 2018 / UK GDPR, and the California Consumer Privacy Act (CCPA/CPRA). Highlighted entries marked with <span class="legal-flag">LEGAL REVIEW NEEDED</span> designate jurisdiction-specific corporate identifiers, statutory numbers, or retention windows requiring confirmation by qualified legal counsel prior to formal publication.</p>
+            </div>
+
+            <!-- 1. Introduction & Commitment to Discretion -->
+            <div class="content-section">
+                <h2>1. Commitment to Discretion &amp; Scope</h2>
+                <p>At Elite Luxury Bookings, discretion is the cornerstone of our enterprise. As a premier luxury concierge brokerage coordinating bespoke private aviation charter, superyacht charter, and luxury villa leases across the European Union, the United Kingdom, and internationally, we treat the safeguarding of client personal data with uncompromising rigor.</p>
+                <p>This Privacy Protocol ("Policy") sets out transparently, intelligibly, and unambiguously how we collect, process, store, disclose, and protect personal data when you engage with our concierge desk, communicate with our brokers, visit our website (<a href="https://eliteluxurybookings.com" style="color: var(--primary-gold); text-decoration: none;">eliteluxurybookings.com</a>), or contract our charter and estate services.</p>
+                <p>In accordance with GDPR Article 12, this Policy ensures that while our high standards of discretion are preserved, all legal rights, obligations, and processing operations are set forth in clear, accessible language.</p>
+            </div>
+
+            <!-- 2. Identity of the Data Controller -->
+            <div class="content-section">
+                <h2>2. Identity of the Data Controller</h2>
+                <p>The legal entity responsible as the Data Controller for the personal data processed under this Policy is:</p>
+                <ul>
+                    <li><strong>Legal Entity Name:</strong> Elite Luxury Bookings Ltd. <span class="legal-flag">LEGAL REVIEW NEEDED: Confirm exact incorporated name, e.g. Elite Luxury Bookings SARL / Ltd / LLC</span></li>
+                    <li><strong>Company Registration / Identifier:</strong> <span class="legal-flag">LEGAL REVIEW NEEDED: Insert official registered company/SIREN/Companies House number</span></li>
+                    <li><strong>Registered Corporate Address:</strong> <span class="legal-flag">LEGAL REVIEW NEEDED: Insert physical registered business address, e.g., 27 Avenue Georges Gallice, 06160 Juan-les-Pins / Antibes, France OR London, UK</span></li>
+                    <li><strong>Jurisdiction of Incorporation:</strong> <span class="legal-flag">LEGAL REVIEW NEEDED: France / England &amp; Wales / Monaco</span></li>
+                    <li><strong>Data Protection Contact:</strong> <a href="mailto:contact@eliteluxurybookings.com" style="color: var(--primary-gold); text-decoration: none;">contact@eliteluxurybookings.com</a> (Alt: <a href="mailto:contactshaikk@gmail.com" style="color: var(--primary-gold); text-decoration: none;">contactshaikk@gmail.com</a>)</li>
+                    <li><strong>Physical Response Channel:</strong> Data Privacy Desk, Elite Luxury Bookings, <span class="legal-flag">LEGAL REVIEW NEEDED: Insert physical postal response address</span></li>
+                </ul>
+            </div>
+
+            <!-- 3. Personal Data We Collect -->
+            <div class="content-section">
+                <h2>3. Personal Data We Collect</h2>
+                <p>We collect only the personal information strictly necessary to coordinate high-value private charter and hospitality missions:</p>
+                <ol>
+                    <li><strong>Identity &amp; Manifest Data:</strong> Full legal name, date of birth, nationality, passport copy/number, expiration date, issuing country, national identity card details, visa documentation, and emergency contact details. This data is statutory for aviation General Declarations (GenDec) and maritime IMO passenger lists.</li>
+                    <li><strong>Contact &amp; Encrypted Communication Records:</strong> Email address, mobile telephone number, corporate address, messaging handles (including WhatsApp and Signal accounts), and historical communication logs with our concierge team.</li>
+                    <li><strong>Mission Logistics &amp; Travel Preferences:</strong> Flight routes, maritime itineraries, embarkation/disembarkation ports, villa reservation dates, passenger manifests, luggage specifications, bespoke in-flight/on-board catering requests, ground transfer arrangements, and close protection/security details.</li>
+                    <li><strong>Special Category Data (Health &amp; Dietary):</strong> Medical mobility assistance requirements and dietary preferences that may infer religious beliefs or physiological conditions. This information is processed strictly upon your explicit consent or in emergency vital interests.</li>
+                    <li><strong>Financial &amp; Transaction Information:</strong> Bank account identifiers (IBAN/BIC/SWIFT), wire transfer receipts, billing addresses, VAT/tax identifiers, and corporate escrow settlement records. Elite Luxury Bookings does not store unencrypted credit card primary account numbers (PANs).</li>
+                    <li><strong>Technical &amp; Browsing Intelligence:</strong> IP address, browser type, operating system, geolocation indicators, referrer URLs, and behavioral interaction data collected automatically via secure digital cookies.</li>
+                </ol>
+            </div>
+
+            <!-- 4. Lawful Bases for Processing -->
+            <div class="content-section">
+                <h2>4. Lawful Bases for Processing (GDPR Article 6 &amp; Article 9)</h2>
+                <p>In accordance with GDPR Article 6, every processing activity conducted by Elite Luxury Bookings is anchored to a specific lawful basis:</p>
+                <div class="legal-table-wrap">
+                    <table class="legal-table">
+                        <thead>
+                            <tr>
+                                <th>Data Category</th>
+                                <th>Purpose of Processing</th>
+                                <th>Lawful Basis (GDPR Art. 6)</th>
+                                <th>Special Category Basis (Art. 9)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Identity &amp; Manifest Data</strong> (Passports, IDs, Passenger Manifests)</td>
+                                <td>Arranging flight clearances, FBO handling, customs &amp; border security filing, port authority clearances, maritime safety compliance.</td>
+                                <td><strong>Performance of a Contract</strong> (Art. 6(1)(b)) &amp; <strong>Legal Obligation</strong> (Art. 6(1)(c)) under civil aviation and maritime safety statutes.</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Contact Data</strong> (Email, Phone, WhatsApp, Signal)</td>
+                                <td>Managing inquiries, delivering mission quotes, 24/7 flight/yacht operational updates, contract administration.</td>
+                                <td><strong>Performance of a Contract</strong> (Art. 6(1)(b)) &amp; <strong>Legitimate Interests</strong> (Art. 6(1)(f)) in providing premium client communication.</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mission Logistics &amp; Specifications</strong></td>
+                                <td>Aircraft selection, yacht berth allocation, villa lease execution, VIP catering, ground transfers.</td>
+                                <td><strong>Performance of a Contract</strong> (Art. 6(1)(b)).</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Dietary &amp; Medical Assistance Data</strong></td>
+                                <td>Customized catering, wheelchair or physical accessibility, on-board emergency preparedness.</td>
+                                <td><strong>Performance of a Contract</strong> (Art. 6(1)(b)).</td>
+                                <td><strong>Explicit Consent</strong> (Art. 9(2)(a)) or <strong>Vital Interests</strong> (Art. 9(2)(c)) in medical emergencies.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Financial &amp; Transaction Records</strong></td>
+                                <td>Invoicing, fiscal accounting, Anti-Money Laundering (AML) verifications, fraud prevention.</td>
+                                <td><strong>Legal Obligation</strong> (Art. 6(1)(c)) &amp; <strong>Contract Performance</strong> (Art. 6(1)(b)).</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Website Analytics &amp; Cookies</strong></td>
+                                <td>Digital infrastructure security, site performance monitoring, user experience optimization.</td>
+                                <td><strong>Consent</strong> (Art. 6(1)(a)) via cookie consent management banner.</td>
+                                <td>N/A</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 5. Third-Party Coordination & Sharing -->
+            <div class="content-section">
+                <h2>5. Third-Party Sharing &amp; Operational Partners</h2>
+                <p>Elite Luxury Bookings acts as an intermediary luxury broker. To execute contracted travel and hospitality missions, essential client data must be disclosed to verified third-party partners:</p>
+                <ul>
+                    <li><strong>Licensed Air Carriers &amp; Vessel Operators:</strong> Commercial aircraft operators (AOC holders), superyacht owners, and management companies who require official passenger manifests for flight clearances, maritime navigation permits, and insurance coverage.</li>
+                    <li><strong>Fixed Base Operators (FBOs) &amp; Port Authorities:</strong> Private airport terminal handlers, customs and border control agencies, harbor masters, and civil aviation security officials under international ICAO and IMO/SOLAS mandates.</li>
+                    <li><strong>Estate Managers &amp; Villa Hosts:</strong> Property owners and luxury estate management companies for guest registration, security clearance, arrival logistics, and tenancy documentation.</li>
+                    <li><strong>VIP Ground Transportation &amp; Close Protection:</strong> Vetted executive chauffeur companies, licensed private security details, helicopter transfer providers, and bespoke provisioning suppliers.</li>
+                    <li><strong>Technology &amp; Cloud Infrastructure Hosts:</strong> Encrypted communications platforms (WhatsApp/Meta, Signal), secure cloud storage facilities, and accounting software vendors.</li>
+                </ul>
+                <div class="legal-notice-box">
+                    <p><strong>Confidentiality Safeguards:</strong> All external commercial partners and aviation/maritime operators are bound by strict non-disclosure agreements (NDAs) and Data Processing Agreements (DPAs) requiring enterprise-grade security standards and restricting processing strictly to the designated mission scope.</p>
+                </div>
+            </div>
+
+            <!-- 6. International Data Transfers -->
+            <div class="content-section">
+                <h2>6. International Data Transfers (Cross-Border Data Flows)</h2>
+                <p>Given the international nature of private charter, personal data may be transferred to and stored in jurisdictions outside the European Economic Area (EEA) and the United Kingdom (e.g., when organizing private flights or yacht charters operating in or through the United States, the Caribbean, the UAE, or Asia-Pacific).</p>
+                <p>Where personal data is transferred to a country that has not received a formal Adequacy Decision from the European Commission or UK Government, Elite Luxury Bookings implements rigorous contractual safeguards:</p>
+                <ul>
+                    <li><strong>Standard Contractual Clauses (SCCs):</strong> We incorporate the European Commission’s Standard Contractual Clauses (Implementing Decision (EU) 2021/914) and the UK International Data Transfer Addendum into our agreements with international processors.</li>
+                    <li><strong>U.S. Data Processing &amp; Communication Tools:</strong> Communications routed via WhatsApp are operated by WhatsApp LLC / Meta Platforms, Inc. Transfers to Meta’s U.S. data infrastructure are governed by Meta’s Data Privacy Framework certification and Standard Contractual Clauses <span class="legal-flag">LEGAL REVIEW NEEDED: Confirm formal reliance on EU-US Data Privacy Framework vs. SCCs</span>. Clients seeking zero-knowledge communication may request Signal or PGP-encrypted channels.</li>
+                    <li><strong>Specific Derogations (GDPR Art. 49(1)(b)):</strong> Transfers strictly necessary for the performance of a contract concluded in your interest (e.g., filing flight manifests directly with destination civil aviation authorities).</li>
+                </ul>
+            </div>
+
+            <!-- 7. Data Retention Schedule -->
+            <div class="content-section">
+                <h2>7. Data Retention Schedule</h2>
+                <p>In accordance with the GDPR principle of storage limitation (Article 5(1)(e)), personal data is retained only for the duration necessary to fulfill the operational, legal, and regulatory purposes for which it was gathered:</p>
+                <div class="legal-table-wrap">
+                    <table class="legal-table">
+                        <thead>
+                            <tr>
+                                <th>Record Type</th>
+                                <th>Retention Period</th>
+                                <th>Statutory / Operational Justification</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Flight Manifests &amp; FBO Filings</strong></td>
+                                <td><strong>5 Years</strong> post-flight completion</td>
+                                <td>Civil aviation security compliance, air accident investigation readiness, and border control audits. <span class="legal-flag">LEGAL REVIEW NEEDED: Confirm DGAC / CAA statutory requirement</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Maritime Manifests &amp; Crew Lists</strong></td>
+                                <td><strong>3 Years</strong> post-charter completion</td>
+                                <td>Port state control requirements, flag state maritime safety logs, and SOLAS conventions. <span class="legal-flag">LEGAL REVIEW NEEDED: Confirm flag state / Port Authority requirement</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Invoices, Contracts &amp; Tax Records</strong></td>
+                                <td><strong>7 to 10 Years</strong> post-financial year end</td>
+                                <td>Statutory commercial code, tax audit, and Anti-Money Laundering (AML) retention rules (e.g., 10 years under French Commercial Code Art. L123-22; 7 years under UK HMRC rules). <span class="legal-flag">LEGAL REVIEW NEEDED</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Inquiries &amp; Uncompleted Quotes</strong></td>
+                                <td><strong>12 Months</strong> from quote date</td>
+                                <td>Legitimate commercial interest in revisiting past quotes upon client return; permanently purged thereafter.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Encrypted Chat Transcripts (WhatsApp/Signal)</strong></td>
+                                <td><strong>6 Months</strong> post-charter completion</td>
+                                <td>Operational dispute resolution and concierge continuity, followed by irreversible deletion.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Web Analytics &amp; Session Logs</strong></td>
+                                <td><strong>14 Months</strong></td>
+                                <td>Standard Google Analytics / telemetry retention window for traffic evaluation and cybersecurity monitoring. <span class="legal-flag">LEGAL REVIEW NEEDED</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Upon expiration of the applicable retention schedule, records are securely destroyed or permanently anonymized using cryptographic data sanitization standards.</p>
+            </div>
+
+            <!-- 8. Cookies & Tracking Technologies -->
+            <div class="content-section">
+                <h2>8. Cookies, Tracking Technologies &amp; Analytics</h2>
+                <p>Our website uses first-party and third-party cookies and tracking scripts to ensure digital security, facilitate page navigation, and analyze visitor interactions:</p>
+                <ul>
+                    <li><strong>Strictly Necessary Cookies:</strong> Essential for website routing, session security, and mobile navigation. These cookies cannot be deactivated.</li>
+                    <li><strong>Google Analytics 4 (GA4):</strong> Measurement ID <code>G-J56D1LJLFM</code>. Evaluates aggregate visitor traffic, session duration, and route conversion events. IP anonymization protocols are enforced.</li>
+                    <li><strong>Microsoft Clarity:</strong> Tracking ID <code>sia395rirl</code>. Generates anonymized behavioral heatmaps and session interaction diagnostics to improve interface performance.</li>
+                    <li><strong>Yandex.Metrika:</strong> Tag ID <code>103558768</code>. Provides web analytics, click maps, and traffic source validation.</li>
+                </ul>
+                <p><strong>Managing Cookies:</strong> When visiting our website, you may manage your tracking preferences via our consent banner. You may also block or delete cookies via your browser settings; however, disabling certain cookies may affect website functionality.</p>
+            </div>
+
+            <!-- 9. Your Data Subject Rights -->
+            <div class="content-section">
+                <h2>9. Your Data Subject Rights (GDPR &amp; UK GDPR)</h2>
+                <p>Under Chapter III of the GDPR (Articles 15 through 22), you hold enforceable legal rights regarding your personal information:</p>
+                <ul>
+                    <li><strong>Right of Access (Art. 15):</strong> Obtain confirmation as to whether your personal data is being processed, along with a structured copy of that data and detailed processing information.</li>
+                    <li><strong>Right to Rectification (Art. 16):</strong> Request the immediate correction of inaccurate or incomplete personal data.</li>
+                    <li><strong>Right to Erasure ("Right to be Forgotten", Art. 17):</strong> Request the permanent deletion of your personal records where data is no longer necessary, or where processing was based on withdrawn consent, subject to mandatory civil aviation, maritime, or fiscal retention laws.</li>
+                    <li><strong>Right to Restriction of Processing (Art. 18):</strong> Restrict the processing of your data while its accuracy or the lawfulness of processing is being verified.</li>
+                    <li><strong>Right to Data Portability (Art. 20):</strong> Receive your personal data in a structured, commonly used, and machine-readable format (e.g., CSV/JSON), or request transmission to another controller where technically feasible.</li>
+                    <li><strong>Right to Object (Art. 21):</strong> Object at any time to data processing based on legitimate interests or direct marketing.</li>
+                    <li><strong>Right to Withdraw Consent (Art. 7(3)):</strong> Withdraw consent at any time where processing was grounded in consent, without affecting the lawfulness of prior processing.</li>
+                </ul>
+                <div class="legal-notice-box">
+                    <p><strong>How to Exercise Your Rights:</strong> Submit your request by email to <a href="mailto:contact@eliteluxurybookings.com" style="color: var(--primary-gold); text-decoration: none;">contact@eliteluxurybookings.com</a> with the subject line <em>"Data Subject Rights Request"</em>. We verify identity and respond within <strong>one calendar month (30 days)</strong> without fee, unless requests are manifestly unfounded or excessive.</p>
+                </div>
+            </div>
+
+            <!-- 10. California Privacy Rights (CCPA / CPRA) -->
+            <div class="content-section">
+                <h2>10. California Privacy Rights (CCPA / CPRA Notice)</h2>
+                <p><em>This section applies solely to residents of the State of California under the California Consumer Privacy Act, as amended by the California Privacy Rights Act (CCPA/CPRA).</em></p>
+                <ul>
+                    <li><strong>Categories of Personal Information Collected:</strong> Real names, passport numbers, email addresses, telephone numbers, financial details, travel itinerary details, and browsing telemetry.</li>
+                    <li><strong>Commercial Purposes:</strong> Delivering luxury charter brokerage, verifying passenger identity for flight manifests, and processing contract settlements.</li>
+                    <li><strong>No Sale or Sharing of Personal Data:</strong> Elite Luxury Bookings <strong>does not sell</strong> personal information, nor do we "share" personal information for cross-context behavioral advertising as defined under the CCPA/CPRA.</li>
+                    <li><strong>California Consumer Rights:</strong> California residents have the right to request disclosure of personal data collected, request deletion, request correction of inaccurate data, and limit the use of sensitive personal information. We do not discriminate against any client for exercising these rights.</li>
+                </ul>
+            </div>
+
+            <!-- 11. Security Standards & Breach Notification Protocol -->
+            <div class="content-section">
+                <h2>11. Security Standards &amp; Breach Notification Protocol</h2>
+                <p>Elite Luxury Bookings implements rigorous technical, organizational, and physical safeguards:</p>
+                <ul>
+                    <li><strong>Cryptographic Security:</strong> AES-256 encryption at rest and TLS 1.3 protocol encryption in transit across all digital communication and administrative channels.</li>
+                    <li><strong>Access Governance:</strong> Role-based access control (RBAC) and the Principle of Least Privilege (PoLP); access to sensitive passport and manifest files is restricted solely to assigned mission coordinators.</li>
+                    <li><strong>Binding Confidentiality:</strong> All staff, brokers, and operational contractors are bound by comprehensive confidentiality deeds containing strict non-disclosure obligations.</li>
+                </ul>
+                <p><strong>Personal Data Breach Protocol (GDPR Art. 33 &amp; 34):</strong></p>
+                <ol>
+                    <li>In the event of a personal data breach, we will notify the competent supervisory authority within <strong>72 hours</strong> of becoming aware of the incident, in accordance with GDPR Article 33.</li>
+                    <li>Where the breach is likely to result in a high risk to your personal rights and freedoms, we will notify you directly and without undue delay, outlining the nature of the breach, likely consequences, and remediation measures undertaken.</li>
+                </ol>
+            </div>
+
+            <!-- 12. Supervisory Authority & Right to Lodge a Complaint -->
+            <div class="content-section">
+                <h2>12. Supervisory Authority &amp; Right to Lodge a Complaint</h2>
+                <p>If you consider that our processing of your personal data infringes the GDPR or applicable data privacy laws, you have the right to lodge a complaint with a competent supervisory authority:</p>
+                <ul>
+                    <li><strong>Lead Authority in France:</strong><br>
+                        <strong>Commission Nationale de l'Informatique et des Libertés (CNIL)</strong><br>
+                        3 Place de Fontenoy, TSA 80715, 75334 Paris Cedex 07, France<br>
+                        Website: <a href="https://www.cnil.fr" rel="noopener noreferrer" style="color: var(--primary-gold); text-decoration: none;" target="_blank">www.cnil.fr</a> <span class="legal-flag">LEGAL REVIEW NEEDED: Confirm lead EU authority</span>
+                    </li>
+                    <li><strong>Supervisory Authority in the United Kingdom:</strong><br>
+                        <strong>Information Commissioner’s Office (ICO)</strong><br>
+                        Wycliffe House, Water Lane, Wilmslow, Cheshire SK9 5AF, United Kingdom<br>
+                        Website: <a href="https://www.ico.org.uk" rel="noopener noreferrer" style="color: var(--primary-gold); text-decoration: none;" target="_blank">www.ico.org.uk</a>
+                    </li>
+                    <li><strong>Other Jurisdictions:</strong> You may lodge a complaint with the supervisory authority of the EU Member State of your habitual residence, place of work, or place of the alleged infringement.</li>
+                </ul>
+            </div>
+
+            <!-- 13. Governing Law & Dispute Resolution -->
+            <div class="content-section">
+                <h2>13. Governing Law &amp; Dispute Resolution</h2>
+                <p>This Policy and any disputes or claims arising out of or in connection with it shall be governed by and construed in accordance with the laws of <strong>France</strong> <span class="legal-flag">LEGAL REVIEW NEEDED: Confirm governing law, e.g. France / England &amp; Wales</span>. Any dispute relating to data privacy that cannot be resolved amicably shall be submitted to the exclusive jurisdiction of the competent courts of <strong>Grasse / Nice, France</strong> <span class="legal-flag">LEGAL REVIEW NEEDED: Confirm judicial venue</span>.</p>
+            </div>
+
+            <!-- 14. Contact & Data Privacy Desk -->
+            <div class="content-section">
+                <h2>14. Contact &amp; Data Privacy Desk</h2>
+                <p>For questions regarding this Privacy Protocol, to exercise your data subject rights, or to discuss custom non-disclosure agreements (NDAs) for high-profile missions, please contact our compliance desk:</p>
+                <ul>
+                    <li><strong>Direct Privacy Desk Email:</strong> <a href="mailto:contact@eliteluxurybookings.com" style="color: var(--primary-gold); text-decoration: none;">contact@eliteluxurybookings.com</a></li>
+                    <li><strong>Alternate Administrative Email:</strong> <a href="mailto:contactshaikk@gmail.com" style="color: var(--primary-gold); text-decoration: none;">contactshaikk@gmail.com</a></li>
+                    <li><strong>Dedicated WhatsApp Concierge Line:</strong> <a href="https://wa.me/918801079030" style="color: var(--primary-gold); text-decoration: none;" target="_blank">+91 88010 79030</a> <span class="legal-flag">LEGAL REVIEW NEEDED: Confirm corporate desk line</span></li>
+                    <li><strong>Physical Response Channel:</strong><br>
+                        Attn: Data Privacy &amp; Protocol Desk<br>
+                        Elite Luxury Bookings Ltd.<br>
+                        <span class="legal-flag">LEGAL REVIEW NEEDED: Insert complete physical corporate mailing address</span>
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <!-- Master Footer -->
+    <footer class="footer">
+        <div class="container" style="max-width: 1200px;">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>Elite Luxury <span class="gold-text">Bookings</span></h2>
+                    <p>Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com/eliteluxurybookings" rel="noopener noreferrer"
+                            target="_blank" aria-label="Follow Elite Luxury Bookings on Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/eliteluxurybookings" rel="noopener noreferrer"
+                            target="_blank" aria-label="Follow Elite Luxury Bookings on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/elite-luxury-bookings/" rel="noopener noreferrer"
+                            target="_blank" aria-label="Connect with Elite Luxury Bookings on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>SERVICES</h4>
+                    <ul>
+                        <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
+                        <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Luxury Yachts</a></li>
+                        <li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/">Luxury Villas</a></li>
+                        <li><a href="https://eliteluxurybookings.com/blog/">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>AUTHORITY</h4>
+                    <ul>
+                        <li><a href="https://eliteluxurybookings.com/about/">The Mission</a></li>
+                        <li><a href="https://eliteluxurybookings.com/privacy/">Privacy Protocol</a></li>
+                        <li><a href="https://eliteluxurybookings.com/terms/">Terms of Engagement</a></li>
+                        <li><a href="https://eliteluxurybookings.com/contact/">Connect</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="https://eliteluxurybookings.com/privacy/">Privacy</a>
+                    <a href="https://eliteluxurybookings.com/terms/">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a aria-label="Chat with Elite Luxury Bookings Concierge on WhatsApp" class="wa-float"
+        href="https://wa.me/918801079030"
+        onclick="if(typeof gtag==='function'){gtag('event','whatsapp_click',{'page_location':window.location.href});}"
+        rel="noopener" target="_blank">
+        <svg aria-hidden="true" fill="currentColor" height="34" viewbox="0 0 16 16" width="34"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z">
+            </path>
+        </svg>
+    </a>
+    <script>
+        function toggleMobileMenu() {
+            var m = document.getElementById('elbMobileMenu'),
+                b = document.getElementById('navHamburger');
+            if (m && b) {
+                m.classList.toggle('open');
+                b.classList.toggle('open');
                 document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
-            } 
+            }
         }
     </script>
 </body>
+
 </html>

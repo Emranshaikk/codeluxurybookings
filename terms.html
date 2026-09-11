@@ -33,6 +33,106 @@
         .serif { font-family: 'Cormorant Garamond', serif; }
         .gold-text { color: var(--primary-gold); }
 
+        .content-section {
+            margin-bottom: 3rem;
+        }
+
+        .content-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.85rem;
+            color: #fff;
+            margin-bottom: 1.25rem;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding-bottom: 0.5rem;
+        }
+
+        .content-section h3 {
+            font-size: 1.15rem;
+            color: var(--primary-gold);
+            margin: 1.5rem 0 0.75rem 0;
+            font-weight: 600;
+        }
+
+        .content-section p, .content-section li {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .content-section ul, .content-section ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .legal-notice-box {
+            background: rgba(212, 175, 55, 0.06);
+            border-left: 3px solid var(--primary-gold);
+            padding: 1.25rem 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .legal-notice-box p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .legal-flag {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            color: #e6c875;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.15rem 0.5rem;
+            border-radius: 3px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin: 0 0.25rem;
+        }
+
+        .legal-table-wrap {
+            overflow-x: auto;
+            margin: 1.5rem 0 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 6px;
+        }
+
+        .legal-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            text-align: left;
+        }
+
+        .legal-table th {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--primary-gold);
+            padding: 0.9rem 1rem;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+
+        .legal-table td {
+            padding: 0.9rem 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+            color: rgba(255, 255, 255, 0.8);
+            vertical-align: top;
+            line-height: 1.6;
+        }
+
+        .legal-table tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
             /* ===== MASTER FOOTER (INJECTED SITE-WIDE) ===== */
         .footer { background: #000 !important; padding: 5rem 0 3rem !important; border-top: 1px solid rgba(212, 175, 55, 0.1) !important; margin-top: 5rem !important; text-align: left !important; }
         .footer-grid { display: grid !important; grid-template-columns: 2fr 1fr 1fr !important; gap: 4rem !important; padding-bottom: 4rem !important; border-bottom: 1px solid rgba(212, 175, 55, 0.1) !important; text-align: left !important; }
@@ -252,83 +352,271 @@
 <h1 class="serif">Terms of <span class="gold-text">Engagement</span></h1>
 <p style="color: var(--text-muted); margin-top: 1rem;">Effective Date: May 2026</p>
 </header>
-<article>
-<div class="content-section">
-<h2>1. Service Definition</h2>
-<p>Elite Luxury Bookings acts as a strategic intermediary and concierge service. We coordinate and engineer travel missions on behalf of our clients. We are not aircraft operators, maritime carriers, or hotel operators; we procure these services from vetted third-party providers.</p>
-</div>
-<div class="content-section">
-<h2>2. Procurement &amp; Payments</h2>
-<p>All service engagements require clear, written authorization. Payments for aviation and maritime charters must be settled in full prior to departure as per the specific charter agreement provided during the procurement process.</p>
-</div>
-<div class="content-section">
-<h2>3. Cancellations &amp; Modifications</h2>
-<p>Due to the high-demand nature of elite travel assets, cancellation policies are governed by the specific operator or estate manager. Elite Luxury Bookings will advocate for the most favorable terms for our clients, but we are bound by the primary provider's legal framework.</p>
-</div>
-<div class="content-section">
-<h2>4. Liability &amp; Responsibility</h2>
-<p>While we only work with vetted, certified, and insured global partners, Elite Luxury Bookings is not liable for the operational performance of third-party aircraft, yachts, or villas. We provide 24/7 oversight to manage any issues that arise during your mission.</p>
-</div>
-<div class="content-section">
-<h2>5. Governing Law</h2>
-<p>These terms of engagement are governed by the laws of the jurisdiction in which the service contract is executed. Any disputes will be managed through discrete arbitration to protect client privacy.</p>
-</div>
-<div class="content-section">
-<h2>6. Modification of Terms</h2>
-<p>Elite Luxury Bookings reserves the right to modify these terms as the global regulatory environment for elite travel evolves. Continued engagement of our services constitutes acceptance of these terms.</p>
-</div>
-</article>
-</main>
-<!-- Master Footer -->
-<!-- WhatsApp Float -->
-<a aria-label="Chat with Elite Luxury Bookings Concierge on WhatsApp" class="wa-float" href="https://wa.me/918801079030" onclick="if(typeof gtag==='function'){gtag('event','whatsapp_click',{'page_location':window.location.href});}" rel="noopener" target="_blank">
-<svg aria-hidden="true" fill="currentColor" height="34" viewbox="0 0 16 16" width="34" xmlns="http://www.w3.org/2000/svg">
-<path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
-</svg>
-</a>
-<!-- Master Footer -->
-<footer class="footer">
-<div class="container" style="max-width: 1200px;">
-<div class="footer-grid">
-<div class="footer-brand">
-<h2>Elite Luxury <span class="gold-text">Bookings</span></h2>
-<p>Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
-<div class="footer-socials">
-<a href="https://www.facebook.com/eliteluxurybookings" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook"></i></a>
-<a href="https://www.instagram.com/eliteluxurybookings" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="https://www.linkedin.com/company/elite-luxury-bookings/" rel="noopener noreferrer" target="_blank"><i class="fab fa-linkedin"></i></a>
-<a href="https://x.com/eliteluxuryb" rel="noopener noreferrer" target="_blank"><i class="fab fa-x-twitter"></i></a>
-</div>
-</div>
-<div class="footer-col">
-<h4>SERVICES</h4>
-<ul>
-<li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
-<li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Luxury Yachts</a></li>
-<li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/">Luxury Villas</a></li>
-<li><a href="https://eliteluxurybookings.com/blog/">Blog</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h4>AUTHORITY</h4>
-<ul>
-<li><a href="https://eliteluxurybookings.com/about/">The Mission</a></li>
-<li><a href="https://eliteluxurybookings.com/privacy/">Privacy Protocol</a></li>
-<li><a href="https://eliteluxurybookings.com/terms/">Terms of Engagement</a></li>
-<li><a href="https://eliteluxurybookings.com/contact/">Connect</a></li>
-</ul>
-</div>
-</div>
-<div class="footer-bottom" style="display: block; text-align: left; padding-top: 3rem; color: rgba(255, 255, 255, 0.4); font-size: 0.85rem; line-height: 1.8;">
-<div class="footer-legal" style="display: flex; gap: 2rem; margin-top: 1.5rem;">
-<a href="https://eliteluxurybookings.com/privacy/" style="color: inherit; text-decoration: none;">Privacy</a>
-<a href="https://eliteluxurybookings.com/terms/" style="color: inherit; text-decoration: none;">Terms</a>
+        <article>
+            <div class="legal-notice-box">
+                <p><strong>Commercial &amp; Legal Notice:</strong> This document constitutes the master Terms of Engagement governing all concierge, brokerage, and procurement services provided by Elite Luxury Bookings. Entries designated with <span class="legal-flag">LEGAL REVIEW NEEDED</span> denote jurisdiction-specific particulars, liability figures, insurance disclosures, or arbitration mechanics requiring confirmation by qualified commercial counsel prior to contractual execution.</p>
+            </div>
 
-<!-- <a href="https://eliteluxurybookings.com/route-directory/" style="color: inherit; text-decoration: none; opacity: 0.5;">Flight Index</a> -->
-</div>
-</div>
-</div>
-</footer>
+            <!-- 1. Definitions & Interpretation -->
+            <div class="content-section">
+                <h2>1. Definitions &amp; Interpretation</h2>
+                <p>In these Terms of Engagement ("Terms"), the following capitalized expressions have the specific legal meanings set forth below:</p>
+                <ul>
+                    <li><strong>"Broker" / "Concierge" / "ELB":</strong> Elite Luxury Bookings Ltd., acting solely as an independent concierge and intermediary broker.</li>
+                    <li><strong>"Client":</strong> The individual, corporate entity, family office, or principal on whose behalf a travel or hospitality mission is procured, together with all authorized traveling passengers or guests.</li>
+                    <li><strong>"Mission":</strong> Any bespoke private aviation flight, superyacht charter, luxury villa tenancy, executive ground transport, or associated VIP concierge service arranged under these Terms.</li>
+                    <li><strong>"Procurement":</strong> The brokerage, sourcing, introduction, negotiation, and coordination services performed by ELB to secure travel assets from third-party Operators.</li>
+                    <li><strong>"Operator":</strong> The independent third-party licensed air carrier (AOC holder), yacht owner, charter management company, villa proprietor, or ground transport provider who directly owns, operates, or controls the travel asset.</li>
+                    <li><strong>"Charter Agreement":</strong> The direct contractual agreement executed between the Client (or ELB as agent for the Client) and the Operator, governing the operational carriage or lease (e.g., standard MYBA Charter Agreement, EBAA/FAA private air charter contract, or luxury villa lease).</li>
+                    <li><strong>"Concierge Fee":</strong> The remuneration payable to ELB for procurement and mission coordination, whether charged as a distinct concierge fee, retainer, or operator commission.</li>
+                    <li><strong>"Operator Charter Funds":</strong> The total charter price, flight cost, security deposit, and Advance Provisioning Allowance (APA) required by the Operator to perform the Mission.</li>
+                </ul>
+            </div>
+
+            <!-- 2. Legal Entity & Status as Intermediary Broker -->
+            <div class="content-section">
+                <h2>2. Contracting Entity &amp; Intermediary Status</h2>
+                <p>The contracting entity under these Terms is:</p>
+                <ul>
+                    <li><strong>Company Name:</strong> Elite Luxury Bookings Ltd. <span class="legal-flag">LEGAL REVIEW NEEDED: Confirm registered corporate name, e.g. Elite Luxury Bookings Ltd / SARL / LLC</span></li>
+                    <li><strong>Company Identifier:</strong> <span class="legal-flag">LEGAL REVIEW NEEDED: Insert official company registration number / SIREN / Companies House number</span></li>
+                    <li><strong>Registered Office:</strong> <span class="legal-flag">LEGAL REVIEW NEEDED: Insert registered business address, e.g., 27 Avenue Georges Gallice, 06160 Juan-les-Pins / Antibes, France OR London, UK</span></li>
+                    <li><strong>Jurisdiction of Incorporation:</strong> <span class="legal-flag">LEGAL REVIEW NEEDED: France / England &amp; Wales / Delaware</span></li>
+                </ul>
+                <div class="legal-notice-box">
+                    <p><strong>EXPRESS DISCLAIMER OF OPERATOR STATUS:</strong> Elite Luxury Bookings acts exclusively as a strategic intermediary and concierge broker. ELB is <strong>not</strong> an Air Carrier, does not possess an Air Operator Certificate (AOC), does not own or operate aircraft, is not a maritime vessel owner or commercial carrier, and is not a hotelier or residential landlord. All transportation and accommodation services are performed exclusively by licensed, insured, and independent third-party Operators.</p>
+                </div>
+            </div>
+
+            <!-- 3. Concierge Procurement Protocol & Contractual Architecture -->
+            <div class="content-section">
+                <h2>3. Procurement Protocol &amp; Contractual Structure</h2>
+                <p>All Mission bookings operate under a two-tier contractual architecture:</p>
+                <ol>
+                    <li><strong>The Engagement Contract:</strong> Governed by these Terms between the Client and ELB, regulating our brokerage, sourcing, operational oversight, and concierge representation.</li>
+                    <li><strong>The Operating Contract:</strong> Governed by the Operator’s Charter Agreement between the Client and the Operator, regulating flight safety, maritime navigation, luggage allowances, on-board rules, and primary cancellation terms.</li>
+                </ol>
+                <p><strong>Authorization:</strong> A Mission is deemed formally commissioned only upon receipt of the Client's written authorization (via signed quote, electronic confirmation, or verified secure messaging exchange) accompanied by cleared funds in accordance with Section 4.</p>
+            </div>
+
+            <!-- 4. Remuneration, Fee Structures & Payment Terms -->
+            <div class="content-section">
+                <h2>4. Remuneration, Fee Structures &amp; Payment Mechanics</h2>
+                <p>The financial mechanics of each Mission are structured as follows:</p>
+                <ul>
+                    <li><strong>Fee Structure:</strong> ELB receives compensation via an agreed fixed Concierge Fee, an hourly procurement retainer, or a brokerage commission paid by the Operator <span class="legal-flag">LEGAL REVIEW NEEDED: Specify standard commercial commission structure, e.g. 5%–10% or flat concierge fee</span>. All applicable concierge fees will be itemized in the Mission quotation.</li>
+                    <li><strong>Operator Charter Funds:</strong> All Operator Charter Funds must be paid strictly in accordance with the payment milestones stipulated in the Operator's Charter Agreement. Full cleared payment must be received prior to aircraft departure, yacht embarkation, or villa check-in.</li>
+                    <li><strong>Advance Provisioning Allowance (APA):</strong> For yacht charters, APA funds (typically 30% to 40% of the base charter fee) cover fuel, provisioning, berthing dues, and custom requests. The yacht captain accounts for all APA disbursements; any unspent balance is returned to the Client upon disembarkation.</li>
+                    <li><strong>Currencies &amp; Settlement:</strong> Payments are accepted in Euros (€), British Pounds (£), or US Dollars ($) via bank wire transfer or pre-authorized corporate credit card. Credit card settlements may be subject to a non-refundable merchant processing surcharge <span class="legal-flag">LEGAL REVIEW NEEDED: Confirm credit card surcharge policy under EU Payment Services Directive (PSD2)</span>.</li>
+                    <li><strong>Late Settlement:</strong> Failure to provide cleared funds within specified deadlines constitutes a material breach, entitling ELB and the Operator to cancel the Mission with full forfeiture of deposits.</li>
+                </ul>
+            </div>
+
+            <!-- 5. Client Obligations & Travel Warranties -->
+            <div class="content-section">
+                <h2>5. Client Obligations, Travel Documentation &amp; Warranties</h2>
+                <p>The Client expressly represents, warrants, and covenants that:</p>
+                <ol>
+                    <li><strong>Accuracy of Manifest Intelligence:</strong> The Client shall provide complete, accurate, and lawful passport, visa, and manifest data for all traveling passengers and guests within statutory deadlines (typically at least 24 hours prior to departure for private aviation).</li>
+                    <li><strong>Immigration &amp; Border Compliance:</strong> The Client and all passengers hold valid passports, transit visas, entry visas, health certificates, and customs declarations required by the arrival, transit, and departure jurisdictions.</li>
+                    <li><strong>Biosecurity &amp; Pets:</strong> Carriage of animals on private aircraft or yachts must be pre-authorized in writing and comply strictly with destination pet passport and biosecurity regulations (e.g., DEFRA in the UK, EU Pet Travel Scheme).</li>
+                    <li><strong>Safety &amp; On-Board Discipline:</strong> The Client and all guests shall comply unconditionally with all safety briefings, legal instructions, and commands issued by the aircraft Pilot-in-Command (PIC), yacht Captain, or estate management. The PIC and yacht Captain possess sole and absolute statutory authority over the operation and safety of the asset.</li>
+                    <li><strong>Indemnification for Fines:</strong> If the Client or any guest fails to provide valid documentation, carries prohibited items, or violates border/customs laws, the Client shall fully indemnify ELB, the Operator, and handling agents against all resulting fines, detention costs, aircraft immobilization penalties, or civil enforcement sanctions.</li>
+                </ol>
+            </div>
+
+            <!-- 6. Cancellations, Modifications & Refund Policy -->
+            <div class="content-section">
+                <h2>6. Cancellations, Modifications &amp; Refund Policy</h2>
+                <p>Cancellation and modification rights are bifurcated between ELB's Concierge Fee and the Operator Charter Funds:</p>
+                <div class="legal-table-wrap">
+                    <table class="legal-table">
+                        <thead>
+                            <tr>
+                                <th>Payment Category</th>
+                                <th>Cancellation &amp; Refund Terms</th>
+                                <th>Governing Framework</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>ELB Concierge / Procurement Fee</strong></td>
+                                <td><strong>100% Non-Refundable</strong> once Mission sourcing, negotiation, or flight coordination has commenced. Reflects professional concierge hours, partner allocations, and administrative resources expended.</td>
+                                <td>Elite Luxury Bookings Terms of Engagement</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Operator Charter Funds</strong> (Aircraft Charter, Yacht Hire, Villa Lease)</td>
+                                <td>Governed strictly and exclusively by the cancellation schedule of the third-party Operator’s contract (e.g., standard MYBA scale: forfeiture of first deposit if cancelled &gt;30 days prior; forfeiture of total charter fee if cancelled &lt;30 days prior).</td>
+                                <td>Third-Party Operator Charter Agreement</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Advance Provisioning Allowance (APA)</strong></td>
+                                <td>Refundable to the Client minus any non-recoverable out-of-pocket expenses already incurred by the captain/operator for specialized provisioning, pre-purchased fuel, or non-refundable berth deposits.</td>
+                                <td>Yacht Captain’s Verified Accounting</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><strong>Mission Modifications:</strong> Schedule changes, routing adjustments, or guest substitutions requested by the Client are subject to asset availability, operator approval, and any supplemental operational charges (e.g., de-icing, re-positioning, international slot amendment fees, or additional flight hours).</p>
+            </div>
+
+            <!-- 7. Force Majeure & Operational Disruptions -->
+            <div class="content-section">
+                <h2>7. Force Majeure &amp; Operational Disruptions</h2>
+                <p>Neither ELB nor the Operator shall be held in breach or liable for delays, diversions, curtailments, or cancellations resulting directly or indirectly from a <strong>Force Majeure Event</strong>, including but not limited to:</p>
+                <ul>
+                    <li>Severe weather phenomena, volcanic ash clouds, meteorological hazards, and sea state conditions rendering travel unsafe in the sole judgment of the Captain or Pilot-in-Command;</li>
+                    <li>Air Traffic Control (ATC) strikes, industrial actions, ground handler shortages, and airspace slot cancellations;</li>
+                    <li>Sudden mechanical malfunction or avionics/propulsion unserviceability occurring without operator negligence;</li>
+                    <li>Armed conflict, hostilities, civil unrest, piracy, acts of terrorism, geopolitical sanctions, and port blockades;</li>
+                    <li>National or international health emergencies, epidemics, pandemics, quarantine restrictions, and emergency border closures.</li>
+                </ul>
+                <div class="legal-notice-box">
+                    <p><strong>Re-Procurement Protocol:</strong> In the event of a Force Majeure cancellation or mechanical unserviceability, ELB will exercise commercial best efforts to source a comparable replacement aircraft, vessel, or property. Any rate difference between the original charter price and the replacement asset shall be the financial responsibility of the Client.</p>
+                </div>
+            </div>
+
+            <!-- 8. Limitation of Liability & Consequential Loss Exclusion -->
+            <div class="content-section">
+                <h2>8. Limitation of Liability &amp; Exclusion of Damages</h2>
+                <p>The following provisions govern the maximum financial exposure of Elite Luxury Bookings under all legal theories (including contract, tort, negligence, or breach of statutory duty):</p>
+                <ol>
+                    <li><strong>Financial Cap on Liability:</strong> The aggregate cumulative liability of Elite Luxury Bookings arising out of or in connection with any Mission shall be strictly limited to a sum equal to <strong>one times (1x) the net Concierge Fee actually received and retained by ELB</strong> for the specific Mission in question <span class="legal-flag">LEGAL REVIEW NEEDED: Confirm liability cap multiple, e.g. 100% or 200% of Concierge Fee, or fixed cap of €25,000 / £20,000</span>. In no event shall ELB's liability be calculated against the gross value of the underlying charter asset.</li>
+                    <li><strong>Total Exclusion of Consequential Damages:</strong> To the fullest extent permitted by applicable law, ELB shall not be liable to the Client or any third party for any:
+                        <ul style="margin-top: 0.5rem;">
+                            <li>Loss of profits, revenue, contracts, anticipated savings, or commercial opportunities;</li>
+                            <li>Loss of business reputation, goodwill, or personal standing;</li>
+                            <li>Cost of substitute travel arrangements or accommodations, except as expressly agreed in writing;</li>
+                            <li>Indirect, incidental, punitive, special, or consequential damages of any nature whatsoever, regardless of whether ELB was advised of the possibility of such loss.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Acts and Omissions of Operators:</strong> Because Operators are independent contractors, ELB accepts no liability for personal injury, illness, property damage, baggage loss, flight delays, vessel groundings, or service deficiencies caused by the acts, omissions, or negligence of Operators or their crews.</li>
+                    <li><strong>Mandatory Statutory Carve-Out:</strong> Nothing in these Terms shall limit or exclude ELB's liability for death or personal injury resulting from ELB's gross negligence, fraudulent misrepresentation, or any other liability that cannot be excluded under governing mandatory law.</li>
+                </ol>
+            </div>
+
+            <!-- 9. Insurance Disclosures & Client Insurance Requirements -->
+            <div class="content-section">
+                <h2>9. Insurance Disclosures &amp; Client Insurance Requirements</h2>
+                <p>The parties acknowledge their respective insurance obligations as follows:</p>
+                <ul>
+                    <li><strong>Broker Insurance:</strong> Elite Luxury Bookings maintains professional indemnity and errors &amp; omissions insurance with a reputable international underwriter in the amount of €2,000,000 <span class="legal-flag">LEGAL REVIEW NEEDED: Confirm exact PI / E&amp;O coverage figure and policy underwriter</span>.</li>
+                    <li><strong>Operator Insurance:</strong> All aviation AOC holders and commercial yacht operators contracted through ELB are contractually required to maintain third-party liability, passenger liability, and hull insurance compliant with international civil aviation conventions (e.g., Montreal Convention 1999) and maritime conventions.</li>
+                    <li><strong>MANDATORY CLIENT INSURANCE REQUIREMENT:</strong> Because charter assets operate in complex international domains, the Client is strongly advised and contractually expected to maintain comprehensive international travel insurance, personal trip cancellation and curtailment insurance, medical insurance with high-limit aero-medical evacuation coverage, and baggage/valuables insurance.</li>
+                </ul>
+            </div>
+
+            <!-- 10. Confidentiality & Mission Discretion -->
+            <div class="content-section">
+                <h2>10. Confidentiality &amp; Mutual Discretion</h2>
+                <p>Given the ultra-high-net-worth and executive profile of our clientele:</p>
+                <ul>
+                    <li>ELB shall hold all client identities, mission itineraries, travel dates, passenger manifests, and private affairs in strict confidence, disclosing them only to necessary operational partners under binding confidentiality covenants in accordance with our <a href="https://eliteluxurybookings.com/privacy/" style="color: var(--primary-gold); text-decoration: none;">Privacy Protocol</a>.</li>
+                    <li>The Client agrees not to disclose the specific negotiated commercial terms, rates, or proprietary logistics frameworks provided by ELB to third parties without prior written consent.</li>
+                </ul>
+            </div>
+
+            <!-- 11. Consumer Protection Statutory Carve-Out -->
+            <div class="content-section">
+                <h2>11. Statutory Consumer Protection Carve-Out</h2>
+                <p>Where the Client enters into these Terms as a natural person acting for purposes which are wholly or mainly outside that individual's trade, business, craft, or profession (a "Consumer"):</p>
+                <div class="legal-notice-box">
+                    <p>Nothing in these Terms shall operate to exclude, restrict, or modify any statutory rights conferred upon the Consumer under mandatory consumer protection legislation (such as the EU Consumer Rights Directive 2011/83/EU, the UK Consumer Rights Act 2015, or national civil codes). If any clause of these Terms is deemed unenforceable against a Consumer under such mandatory statutes, that clause shall be severed or modified only to the minimum extent necessary, without affecting the remainder of the Terms.</p>
+                </div>
+            </div>
+
+            <!-- 12. Dispute Resolution & International Arbitration -->
+            <div class="content-section">
+                <h2>12. Dispute Resolution &amp; International Arbitration</h2>
+                <p>Any dispute, controversy, or claim arising out of, relating to, or in connection with these Terms or any Mission, including any question regarding its existence, validity, interpretation, breach, or termination, shall be resolved exclusively through final and binding arbitration:</p>
+                <ul>
+                    <li><strong>Arbitration Body &amp; Rules:</strong> The arbitration shall be conducted in accordance with the Rules of Arbitration of the International Chamber of Commerce (ICC) <span class="legal-flag">LEGAL REVIEW NEEDED: Confirm preferred arbitral institution, e.g. ICC or LCIA</span>.</li>
+                    <li><strong>Seat &amp; Venue:</strong> The legal seat and place of arbitration shall be <strong>Paris, France</strong> (or <strong>London, United Kingdom</strong>) <span class="legal-flag">LEGAL REVIEW NEEDED: Confirm seat city</span>.</li>
+                    <li><strong>Language:</strong> The arbitration proceedings, submissions, and award shall be conducted in the <strong>English language</strong>.</li>
+                    <li><strong>Tribunal Composition:</strong> The dispute shall be determined by a single independent arbitrator appointed in accordance with the said Rules.</li>
+                    <li><strong>Costs &amp; Fees:</strong> The arbitrator shall have the authority to award the costs of the arbitration, including reasonable attorneys' fees and expenses, to the prevailing party.</li>
+                    <li><strong>Confidentiality of Proceedings:</strong> All aspects of the arbitration, including evidence, briefs, witness testimony, and the award, shall remain strictly confidential.</li>
+                    <li><strong>Interim Injunctive Relief:</strong> Nothing in this Section shall prevent either party from seeking urgent interim, provisional, or conservatory relief before a court of competent jurisdiction to protect intellectual property or preserve confidential data.</li>
+                </ul>
+            </div>
+
+            <!-- 13. Governing Law & Jurisdiction -->
+            <div class="content-section">
+                <h2>13. Governing Law</h2>
+                <p>These Terms of Engagement, each Mission authorization, and any dispute or claim arising out of or in connection with them (including non-contractual disputes or claims) shall be governed by, and construed exclusively in accordance with, the substantive laws of <strong>France</strong> <span class="legal-flag">LEGAL REVIEW NEEDED: Confirm choice of law, e.g. France / England &amp; Wales</span>, without giving effect to any conflict of law principles that would result in the application of the laws of another jurisdiction.</p>
+            </div>
+
+            <!-- 14. Miscellaneous & General Boilerplate -->
+            <div class="content-section">
+                <h2>14. Miscellaneous &amp; General Provisions</h2>
+                <ul>
+                    <li><strong>Entire Agreement:</strong> These Terms, together with the specific written Mission Quote and the applicable Operator Charter Agreement, constitute the entire agreement between the parties and supersede all prior representations, communications, or understandings.</li>
+                    <li><strong>Amendments &amp; Notice of Updates:</strong> ELB reserves the right to amend these Terms to reflect evolving regulatory frameworks. Any changes shall be published on our website. For clients with active or recurring Mission engagements, material changes will be notified by email at least <strong>thirty (30) days prior</strong> to taking effect.</li>
+                    <li><strong>Severability:</strong> If any provision or part-provision of these Terms is held to be invalid, illegal, or unenforceable, it shall be modified to the minimum extent necessary to make it valid and enforceable, and the validity of the remaining provisions shall not be impaired.</li>
+                    <li><strong>No Waiver:</strong> No failure or delay by ELB in exercising any right or remedy provided under these Terms or by law shall constitute a waiver of that or any other right.</li>
+                    <li><strong>Third-Party Rights:</strong> Except as expressly provided for Operators and indemnified parties, these Terms do not confer any rights on any third party pursuant to the Contracts (Rights of Third Parties) Act 1999 or equivalent civil law principles.</li>
+                    <li><strong>Notices:</strong> Formal legal notices under these Terms must be sent in writing to <a href="mailto:contact@eliteluxurybookings.com" style="color: var(--primary-gold); text-decoration: none;">contact@eliteluxurybookings.com</a> or to the registered corporate office address set out in Section 2.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <!-- Master Footer -->
+    <footer class="footer">
+        <div class="container" style="max-width: 1200px;">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>Elite Luxury <span class="gold-text">Bookings</span></h2>
+                    <p>Curating world-class luxury experiences through our global partner network. Private Jets. Yachts. Villas.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com/eliteluxurybookings" rel="noopener noreferrer"
+                            target="_blank" aria-label="Follow Elite Luxury Bookings on Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/eliteluxurybookings" rel="noopener noreferrer"
+                            target="_blank" aria-label="Follow Elite Luxury Bookings on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/elite-luxury-bookings/" rel="noopener noreferrer"
+                            target="_blank" aria-label="Connect with Elite Luxury Bookings on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>SERVICES</h4>
+                    <ul>
+                        <li><a href="https://eliteluxurybookings.com/elite-private-jet-charter/">Private Jets</a></li>
+                        <li><a href="https://eliteluxurybookings.com/luxury-yacht-rentals/">Luxury Yachts</a></li>
+                        <li><a href="https://eliteluxurybookings.com/luxury-villa-rentals/">Luxury Villas</a></li>
+                        <li><a href="https://eliteluxurybookings.com/blog/">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>AUTHORITY</h4>
+                    <ul>
+                        <li><a href="https://eliteluxurybookings.com/about/">The Mission</a></li>
+                        <li><a href="https://eliteluxurybookings.com/privacy/">Privacy Protocol</a></li>
+                        <li><a href="https://eliteluxurybookings.com/terms/">Terms of Engagement</a></li>
+                        <li><a href="https://eliteluxurybookings.com/contact/">Connect</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="https://eliteluxurybookings.com/privacy/">Privacy</a>
+                    <a href="https://eliteluxurybookings.com/terms/">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a aria-label="Chat with Elite Luxury Bookings Concierge on WhatsApp" class="wa-float"
+        href="https://wa.me/918801079030"
+        onclick="if(typeof gtag==='function'){gtag('event','whatsapp_click',{'page_location':window.location.href});}"
+        rel="noopener" target="_blank">
+        <svg aria-hidden="true" fill="currentColor" height="34" viewbox="0 0 16 16" width="34"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z">
+            </path>
+        </svg>
+    </a>
 <script>
         function toggleMobileMenu() { 
             var m = document.getElementById('elbMobileMenu'), 
