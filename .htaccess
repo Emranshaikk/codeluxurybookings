@@ -41,6 +41,7 @@ RewriteRule ^different-types-of-private-jets-which-one-is-right-for-you(\.html)?
 RewriteRule ^private-jet-empty-leg-deals(\.html)?/?$ https://eliteluxurybookings.com/empty-leg-flights-guide/ [R=301,NC,L]
 RewriteRule ^private-jet-charter-cost-guide-2026(\.html)?/?$ https://eliteluxurybookings.com/private-jet-charter-cost-estimator/ [R=301,NC,L]
 RewriteRule ^sitemap\.html$ https://eliteluxurybookings.com/ [R=301,NC,L]
+RewriteRule ^global-route-silo(\.html)?/?$ https://eliteluxurybookings.com/route-directory/ [R=301,NC,L]
 
 # 0. Global Error Handling
 ErrorDocument 404 https://eliteluxurybookings.com/

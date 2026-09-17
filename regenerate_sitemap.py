@@ -24,12 +24,14 @@ PRIORITY_MAP = {
     'empty-leg-flights-guide': '0.85',
     'cost-to-charter-superyacht-2026': '0.85',
     'ultimate-luxury-villa-rental-guide': '0.85',
+    'route-directory': '0.90',
 }
 
 # Excluded from sitemap (non-indexable pages)
 EXCLUDE = {
     '_template_blog_master', '_template_master',
-    '404', 'thank-you', 'test_bot', 'global-route-silo'
+    '404', 'thank-you', 'test_bot', 'global-route-silo',
+    'old_blog', 'verifyforzoho', 'zoho-domain-verification', 'zohoverify'
 }
 
 html_files = [f.replace('.html', '') for f in os.listdir('.') 
